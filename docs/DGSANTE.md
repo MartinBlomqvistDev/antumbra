@@ -120,6 +120,12 @@ rättslig grund, allt med stycknummer. Ingen NLP behövs för kopplingarna, bara
 parsning. Åtgärdsplanen sluter kedjan med medlemsstatens egna åtaganden och
 tidsfrister, och uppföljande revisioner bedömer om åtgärderna vidtogs.
 
+**Men mallen ovan är verifierad på en rapport, och gäller inte hela korpusen.**
+Se avsnittet om citatgrafens omfattning nedan; korsreferenserna börjar 2014 och
+blir aldrig heltäckande. Rapporternas avsnittsnumrering skiljer sig dessutom
+mellan eror: rekommendationerna ligger under rubrik 9 i de äldre rapporterna
+och under rubrik 8 från omkring 2007.
+
 ## Två format
 
 4 568 rapporter har referensformatet `2024-8071`. **122 rapporter från 2024 till
@@ -241,8 +247,63 @@ namnger minst en bilaga dokumentet i **831 av 1 034 fall, alltså 80 procent.**
 Den siffran, inte 45 procent, är den som ska stå i metoden, och parsningen
 ska sätta ihop bilagorna per revision innan den läser dem.
 
+## Citatgrafen: vad den faktiskt täcker
+
+Kört 2026-08-02 med `pipeline/07_parse_recommendations.py` över samtliga
+2 940 engelska EU-27-rapporter. Resultat i `data/dgsante_recommendations.jsonl`
+(en rad per rekommendation) och `data/dgsante_report_parse.jsonl` (en rad per
+rapport med utfallet).
+
+**8 365 rekommendationer ur 1 699 rapporter, 27 länder.**
+
+| Utfall per rapport | Antal |
+| --- | --- |
+| Parsad till rekommendationer | 1 699 |
+| Avsnitt hittat men inga poster | 909 |
+| Inget rekommendationsavsnitt | 315 |
+| Rapporten säger att den saknar rekommendation | 17 |
+
+De 17 sista är ett **äkta nollresultat, inte ett parsningsfel**, och hålls
+isär i utdatat just därför.
+
+**Korsreferenserna är den knappa resursen.** Bara 489 av 2 940 rapporter, 17
+procent, skriver ut vilken slutsats en rekommendation vilar på. Praktiken
+börjar 2014 och blir aldrig heltäckande:
+
+| År | Rapporter | Med korsreferenser |
+| --- | --- | --- |
+| före 2014 | 2 043 | 0 |
+| 2014 | 113 | 17 |
+| 2015 | 112 | 47 |
+| 2016 | 110 | 46 |
+| 2017 | 103 | 36 |
+| 2018 | 109 | 53 |
+| 2019 | 93 | 48 |
+| 2020 | 53 | 35 |
+| 2021 | 88 | 47 |
+| 2022 | 74 | 39 |
+| 2023 | 71 | 42 |
+| 2024 | 82 | 50 |
+| CT-formatet | 83 | 29 |
+
+**Grafen omfattar 1 133 rekommendationer med 1 450 kanter till slutsatser och
+3 221 kanter till iakttagelser.** Det är storleksordningen som ska stå i
+metoden, inte 4 690 och inte 8 365.
+
+**Parserns täckning mäts på den delmängd som bär grafen:** av de 489
+rapporterna parsas 441, alltså **90 procent**. Testsviten fäller om andelen
+faller under 85 procent.
+
+Kända begränsningar, utskrivna i stället för utjämnade: 909 rapporter har ett
+rekommendationsavsnitt vars numrering inte går att följa, oftast tvåspaltiga
+tabeller där sidnummer och radnummer blandas med rekommendationsnumren. 167
+rekommendationer bär flaggan `multiple_reference_blocks`, vilket betyder att
+flera rekommendationer runnit ihop till ett block och att länkarna tillhör den
+första av dem.
+
 ## Nästa steg
 
 1. Sätt ihop bilagorna per revision före parsning, enligt avsnittet ovan.
-2. Designa parsningen av citatgrafen mot verklig korpus, alltså kopplingen
-   iakttagelse till slutsats till rekommendation till åtgärdsplan.
+2. Parsa iakttagelser och slutsatser ur avsnitt 5 och 6, så att kanterna får
+   noder att peka på; i dag är grafen kanter mot stycknummer.
+3. Koppla åtgärdsplanerna till rekommendationerna och slut kedjan.

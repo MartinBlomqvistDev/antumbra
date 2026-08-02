@@ -72,6 +72,18 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
+**Citatgrafen är mycket mindre än korpusen.** Verifierat 2026-08-02 genom att
+parsa samtliga 2 940 engelska EU-27-rapporter. **8 365 rekommendationer ur
+1 699 rapporter**, men bara **489 rapporter, 17 procent, skriver ut vilken
+slutsats en rekommendation vilar på.** Praktiken börjar **2014**; före det
+finns noll korsreferenser. Grafen omfattar 1 133 rekommendationer, 1 450
+kanter till slutsatser och 3 221 till iakttagelser. Det är storleksordningen
+som gäller, inte 4 690 och inte 8 365. 17 rapporter skriver att de saknar
+rekommendation, vilket är ett nollresultat och inte ett parsningsfel.
+Mallen i `docs/DGSANTE.md` var verifierad på en rapport och gäller inte alla
+eror: rekommendationerna ligger under rubrik 9 i äldre rapporter och rubrik 8
+från omkring 2007. Parsern täcker 90 procent av de rapporter som bär grafen.
+
 **De numrerade bilagorna är sidor, inte dokument.** Verifierat 2026-08-02 mot
 OCR-texten: 41 procent av de skannade bilagorna inleds med ett faxhuvud, och
 bilagorna till en revision från den äldre eran är sidorna i en och samma
