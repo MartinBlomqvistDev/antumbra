@@ -1,5 +1,9 @@
 # Antumbra
 
+[![CI](https://github.com/MartinBlomqvistDev/antumbra/actions/workflows/ci.yml/badge.svg)](https://github.com/MartinBlomqvistDev/antumbra/actions/workflows/ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
+
 *Att göra tillsynen mätbar.*
 
 Antumbra är halvskuggans yttre zon: platsen man ställer sig på när något skymmer

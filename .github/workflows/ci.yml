@@ -18,8 +18,8 @@ jobs:
     name: Lint, format and types
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -37,8 +37,8 @@ jobs:
       matrix:
         python-version: ["3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
@@ -56,7 +56,7 @@ jobs:
     # The pipeline depends on two public endpoints. A silent change upstream
     # would otherwise surface only on the next harvest.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: DG SANTE search form
         run: |
           code=$(curl -sS -o /dev/null -w '%{http_code}' -L \
