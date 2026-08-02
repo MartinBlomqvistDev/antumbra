@@ -301,9 +301,54 @@ rekommendationer bär flaggan `multiple_reference_blocks`, vilket betyder att
 flera rekommendationer runnit ihop till ett block och att länkarna tillhör den
 första av dem.
 
+## Noderna: styckena som citeras
+
+Kört 2026-08-02 med `pipeline/08_parse_paragraphs.py`. Rapporternas stycken är
+löpnumrerade genom hela dokumentet, och steg 08 läser dem så att kanterna från
+steg 07 får något att peka på.
+
+**75 460 stycken ur 2 689 rapporter.** Den fulla styckekorpusen är 66 MB och
+ligger i `.gitignore`; den återskapas genom att köra steget. Det som committas
+är `data/dgsante_graph.jsonl`: **en rad per kant med det citerade stycket
+bredvid**, alltså den slutna kedjan och 3,4 MB.
+
+**4 208 av 4 671 citerade stycknummer resolverar, alltså 90 procent.**
+
+Tre fel i vägen dit är värda att minnas, eftersom de alla gav tyst dataförlust:
+
+- **Innehållsförteckningen startade numreringen.** Raderna `1. INTRODUCTION
+  .... 1` ser ut som numrerade stycken. De åt upp numren 1 och 2, varefter
+  brödtextens riktiga stycke 1 inte längre fortsatte sekvensen. Medianrapporten
+  slutade på stycke 12.
+- **Ett krav på obruten följd kapade resten.** Textextraktion tappar enstaka
+  stycken vid sid- och spaltbrytningar, och ett tappat stycke kastade allt
+  efter det. Sekvensen tillåter nu hopp om högst tre.
+- Tillsammans lyfte de resolveringen **från 26 till 90 procent**.
+
+## Två oberoende läsningar, och var de inte håller med varandra
+
+Klassningen av ett stycke som iakttagelse eller slutsats görs på den rubrik
+som gäller där stycket står, aldrig på avsnittet: avsnitt 5 heter "FINDINGS
+AND CONCLUSIONS" och rymmer båda. Att läsa hela avsnitt 5 som iakttagelser var
+en karaktärisering, och **rapporternas egna citat motsade den.**
+
+Det ger ett ovanligt starkt kvalitetsmått: rubriken och citatet är två
+oberoende källor om samma stycke.
+
+| Kanten citerar | Träffar rubrikklass | Motsäger | Omärkt | Resolverar inte |
+| --- | --- | --- | --- | --- |
+| slutsats (1 450) | 65 % | 21 % | 12 % | 2 % |
+| iakttagelse (3 221) | 53 % | 9 % | 25 % | 13 % |
+
+**Oenigheten reconcilieras inte.** Båda läsningarna ligger kvar i varje rad,
+tillsammans med rubriken som avgjorde, så att den som granskar ser var de
+skiljer sig. Rapporternas citat är den starkare källan; rubrikklassningen är
+en heuristik och redovisas som en sådan.
+
 ## Nästa steg
 
 1. Sätt ihop bilagorna per revision före parsning, enligt avsnittet ovan.
-2. Parsa iakttagelser och slutsatser ur avsnitt 5 och 6, så att kanterna får
-   noder att peka på; i dag är grafen kanter mot stycknummer.
-3. Koppla åtgärdsplanerna till rekommendationerna och slut kedjan.
+2. Koppla åtgärdsplanerna till rekommendationerna och slut kedjan hela vägen
+   från iakttagelse till åtagande.
+3. Ta reda på varför 13 procent av de iakttagelse-citerade numren inte
+   resolverar; hypotesen är stycken som tappats vid spaltbrytning.

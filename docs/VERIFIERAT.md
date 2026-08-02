@@ -72,6 +72,20 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
+**Citatgrafen är sluten till 90 procent.** Verifierat 2026-08-02 med
+`pipeline/08_parse_paragraphs.py`: 75 460 numrerade stycken ur 2 689
+rapporter, och **4 208 av 4 671 citerade stycknummer resolverar till ett
+faktiskt stycke**. Den slutna kedjan ligger i `data/dgsante_graph.jsonl`;
+den fulla styckekorpusen är 66 MB, gitignorerad och återskapbar.
+Styckenumreringen löper genom hela dokumentet, inte per avsnitt.
+
+**Klassningen iakttagelse eller slutsats görs på rubriken, inte på avsnittet.**
+Avsnitt 5 heter "FINDINGS AND CONCLUSIONS" och rymmer båda. Rubrikklassningen
+och rapportens eget citat är två oberoende läsningar och de är oense om en
+verklig minoritet: av de kanter som citerar en slutsats träffar 65 procent ett
+stycke under en slutsatsrubrik, 21 procent motsäger och 12 procent är omärkta.
+Oenigheten redovisas per rad i stället för att jämkas ihop.
+
 **Citatgrafen är mycket mindre än korpusen.** Verifierat 2026-08-02 genom att
 parsa samtliga 2 940 engelska EU-27-rapporter. **8 365 rekommendationer ur
 1 699 rapporter**, men bara **489 rapporter, 17 procent, skriver ut vilken

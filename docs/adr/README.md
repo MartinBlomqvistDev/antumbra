@@ -16,3 +16,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0007](0007-klassning-pa-dokumentets-egna-ord.md) | Bilagor klassas på dokumentets egna ord | beslutad |
 | [0008](0008-ocr-med-konfidens-per-fil.md) | OCR med konfidens per fil | beslutad |
 | [0009](0009-citatgrafen-parsas-bokstavligt.md) | Citatgrafen parsas bokstavligt | beslutad |
+| [0010](0010-tva-lasningar-av-samma-stycke.md) | Två läsningar av samma stycke | beslutad |
