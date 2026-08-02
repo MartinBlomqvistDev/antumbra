@@ -140,6 +140,64 @@ class TestSplittingTheSection:
         assert [n for n, _ in items] == [1]
 
 
+class TestTheTwoColumnTable:
+    """The layout that the action plans exposed as systematically misparsed.
+
+    The left column holds only the numbers. Over a page break the numbers of
+    the next page are emitted in a run of their own, away from the text they
+    belong to, and reading the section line by line found one recommendation
+    where the report has five.
+    """
+
+    TABLE = (
+        "N°.     Recommendation\n"
+        "    1.  To register operators being final users of oils in bags of up\n"
+        "\n"
+        "        10\n"
+        "\n"
+        "N°.     Recommendation\n"
+        "    2.\n"
+        "    3.  to 50 kg, as required by Article 23 of Regulation 1069/2009.\n"
+        "\n"
+        "        To approve the plant manufacturing oils as required by Article\n"
+        "        24 of Regulation 1069/2009.\n"
+        "\n"
+        "        To ensure that commercial documents accompany the oils sold to\n"
+        "        operators being final users, as required by Article 21.\n"
+    )
+
+    def test_the_numbers_are_paired_with_their_own_text(self):
+        rows = parser.split_table(self.TABLE)
+        assert [n for n, _ in rows] == [1, 2, 3]
+        assert "To approve the plant" in rows[1][1]
+
+    def test_a_recommendation_broken_over_a_page_is_joined_back(self):
+        rows = parser.split_table(self.TABLE)
+        assert "To register operators" in rows[0][1]
+        assert "Article 23 of Regulation 1069/2009" in rows[0][1]
+
+    def test_the_repeated_header_does_not_reach_the_text(self):
+        for _, text in parser.split_table(self.TABLE):
+            assert "Recommendation" not in text
+            assert "N°" not in text
+
+    def test_columns_that_do_not_line_up_are_left_alone(self):
+        """Pairing on a mismatch would invent recommendations."""
+        body = (
+            "    1.  To register operators being final users of oils in bags.\n"
+            "    2.\n"
+            "    3.\n"
+        )
+        assert parser.pair_columns(body, 8) == []
+
+    def test_prose_without_a_table_header_is_not_treated_as_one(self):
+        section = (
+            "The CA should:\n"
+            "1. Ensure that official controls are planned as required by law.\n"
+        )
+        assert parser.split_table(section) == []
+
+
 class TestAnHonestZero:
     def test_a_report_stating_no_recommendation_is_recognised(self):
         assert parser.NO_RECOMMENDATION.search(

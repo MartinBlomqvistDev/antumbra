@@ -32,8 +32,8 @@
 {"ref": "2011-8882", "country": "France", "plan_path": "pdf/dgsante/annexes/2011-8882_6592.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2011-8883", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2011-8883_6767.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2011-8915", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2011-8915_6662.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2011-8917", "country": "France", "plan_path": "pdf/dgsante/annexes/2011-8917_6643.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2011-8917", "country": "France", "plan_path": "pdf/dgsante/annexes/2011-8917_6859.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2011-8917", "country": "France", "plan_path": "pdf/dgsante/annexes/2011-8917_6643.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2011-8917", "country": "France", "plan_path": "pdf/dgsante/annexes/2011-8917_6859.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2011-8920", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2011-8920_6651.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2011-8924", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2011-8924_6534.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2011-8930", "country": "Slovenia", "plan_path": "pdf/dgsante/annexes/2011-8930_6555.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -78,19 +78,19 @@
 {"ref": "2012-6281", "country": "France", "plan_path": "pdf/dgsante/annexes/2012-6281_6935.pdf", "report_parsed": false, "responses": 8, "outcome": "parsed"}
 {"ref": "2012-6282", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6282_7113.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6284", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2012-6284_7157.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
-{"ref": "2012-6285", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2012-6285_6803.pdf", "report_parsed": false, "responses": 13, "outcome": "parsed"}
+{"ref": "2012-6285", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2012-6285_6803.pdf", "report_parsed": true, "responses": 13, "outcome": "parsed"}
 {"ref": "2012-6287", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6287_7132.pdf", "report_parsed": true, "responses": 13, "outcome": "parsed"}
 {"ref": "2012-6288", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6288_7030.pdf", "report_parsed": true, "responses": 15, "outcome": "parsed"}
 {"ref": "2012-6288", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6288_7403.pdf", "report_parsed": true, "responses": 15, "outcome": "parsed"}
 {"ref": "2012-6290", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6290_6883.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2012-6290", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6290_7172.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2012-6293", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6293_6933.pdf", "report_parsed": true, "responses": 15, "outcome": "parsed"}
-{"ref": "2012-6294", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6294_7049.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
-{"ref": "2012-6294", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6294_7333.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
+{"ref": "2012-6294", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6294_7049.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
+{"ref": "2012-6294", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6294_7333.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6295", "country": "Slovenia", "plan_path": "pdf/dgsante/annexes/2012-6295_7031.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6297", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6297_7199.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6298", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2012-6298_7226.pdf", "report_parsed": false, "responses": 17, "outcome": "parsed"}
-{"ref": "2012-6298", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2012-6298_7382.pdf", "report_parsed": false, "responses": 17, "outcome": "parsed"}
+{"ref": "2012-6298", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2012-6298_7226.pdf", "report_parsed": true, "responses": 17, "outcome": "parsed"}
+{"ref": "2012-6298", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2012-6298_7382.pdf", "report_parsed": true, "responses": 17, "outcome": "parsed"}
 {"ref": "2012-6303", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6303_7213.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6304", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6304_6775.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2012-6304", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6304_7114.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
@@ -122,7 +122,7 @@
 {"ref": "2012-6346", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6346_6768.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6353", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6353_7178.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6354", "country": "France", "plan_path": "pdf/dgsante/annexes/2012-6354_7169.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6355", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6355_8940.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
+{"ref": "2012-6355", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6355_8940.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2012-6356", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6356_7122.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6357", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2012-6357_6689.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6358", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2012-6358_7094.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -151,9 +151,9 @@
 {"ref": "2012-6402", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2012-6402_7057.pdf", "report_parsed": true, "responses": 10, "outcome": "parsed"}
 {"ref": "2012-6430", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2012-6430_7074.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6431", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2012-6431_7021.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6437", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2012-6437_7095.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2012-6437", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2012-6437_7095.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6438", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6438_6929.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
-{"ref": "2012-6439", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2012-6439_7037.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
+{"ref": "2012-6439", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2012-6439_7037.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6440", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2012-6440_7040.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6442", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6442_7182.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
 {"ref": "2012-6446", "country": "France", "plan_path": "pdf/dgsante/annexes/2012-6446_7203.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
@@ -167,28 +167,28 @@
 {"ref": "2012-6473", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2012-6473_6819.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6474", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2012-6474_6666.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2012-6474", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2012-6474_6667.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
-{"ref": "2012-6475", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6475_6820.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
+{"ref": "2012-6475", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6475_6820.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2012-6476", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6476_6902.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2012-6476", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6476_7079.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2012-6477", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6477_6714.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6477", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6477_6862.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6478", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2012-6478_6951.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6480", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2012-6480_6868.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
-{"ref": "2012-6481", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6481_6953.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6482", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6482_7043.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2012-6481", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2012-6481_6953.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2012-6482", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6482_7043.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2012-6483", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2012-6483_7078.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6483", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2012-6483_7434.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6484", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6484_7064.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6484", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6484_7177.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2012-6487", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2012-6487_7076.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6960.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
-{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6962.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6963.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6960.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
+{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6962.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2012-6491", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6491_6963.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6492", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6492_7173.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6492", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6492_7175.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6492", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6492_7218.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2012-6493", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2012-6493_7073.pdf", "report_parsed": false, "responses": 8, "outcome": "parsed"}
-{"ref": "2012-6495", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6495_6705.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
+{"ref": "2012-6495", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2012-6495_6705.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6496", "country": "Luxembourg", "plan_path": "pdf/dgsante/annexes/2012-6496_6708.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6496", "country": "Luxembourg", "plan_path": "pdf/dgsante/annexes/2012-6496_6912.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6498", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2012-6498_6836.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -197,8 +197,8 @@
 {"ref": "2012-6500", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2012-6500_6988.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6501", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6501_6799.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6501", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6501_6865.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
-{"ref": "2012-6504", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6504_6925.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
-{"ref": "2012-6504", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6504_7002.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
+{"ref": "2012-6504", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6504_6925.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
+{"ref": "2012-6504", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2012-6504_7002.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2012-6505", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2012-6505_6793.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2012-6507", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2012-6507_6807.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2012-6507", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2012-6507_6858.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
@@ -225,7 +225,7 @@
 {"ref": "2012-6528", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6528_7020.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6529", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2012-6529_6786.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2012-6529", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2012-6529_6811.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
-{"ref": "2012-6530", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6530_7287.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
+{"ref": "2012-6530", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2012-6530_7287.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2012-6531", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2012-6531_6676.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2012-6542", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2012-6542_7274.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2012-6545", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2012-6545_7000.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
@@ -239,7 +239,7 @@
 {"ref": "2012-6602", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6602_7167.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2012-6602", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2012-6602_7204.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2012-6811", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2012-6811_7263.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
-{"ref": "2013-6635", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2013-6635_7315.pdf", "report_parsed": false, "responses": 7, "outcome": "parsed"}
+{"ref": "2013-6635", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2013-6635_7315.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6637", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6637_7270.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
 {"ref": "2013-6637", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6637_7271.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6637", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6637_7527.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
@@ -247,8 +247,8 @@
 {"ref": "2013-6640", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6640_7378.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6640", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6640_7692.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6645", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2013-6645_7635.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2013-6647", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6647_7514.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2013-6647", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6647_7810.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2013-6647", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6647_7514.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
+{"ref": "2013-6647", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6647_7810.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6649", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6649_7265.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6649", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2013-6649_7478.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2013-6650", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2013-6650_7474.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
@@ -271,7 +271,7 @@
 {"ref": "2013-6661", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6661_7691.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6662", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2013-6662_7376.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2013-6663", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2013-6663_7642.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
-{"ref": "2013-6664", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6664_7959.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
+{"ref": "2013-6664", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6664_7959.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2013-6665", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6665_7670.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6665", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6665_7897.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6667", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2013-6667_7591.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -284,7 +284,7 @@
 {"ref": "2013-6672", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6672_7931.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6674", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2013-6674_7702.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2013-6686", "country": "Denmark", "plan_path": "pdf/dgsante/annexes/2013-6686_7319.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
-{"ref": "2013-6689", "country": "France", "plan_path": "pdf/dgsante/annexes/2013-6689_7677.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2013-6689", "country": "France", "plan_path": "pdf/dgsante/annexes/2013-6689_7677.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6691", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2013-6691_7452.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2013-6693", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2013-6693_7716.pdf", "report_parsed": true, "responses": 9, "outcome": "parsed"}
 {"ref": "2013-6695", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2013-6695_7676.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
@@ -292,8 +292,8 @@
 {"ref": "2013-6737", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2013-6737_7242.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6740", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2013-6740_7241.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6740", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2013-6740_7307.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
-{"ref": "2013-6747", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6747_7564.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2013-6747", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6747_7568.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2013-6747", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6747_7564.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
+{"ref": "2013-6747", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2013-6747_7568.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6748", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2013-6748_7654.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2013-6749", "country": "Denmark", "plan_path": "pdf/dgsante/annexes/2013-6749_7583.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6749", "country": "Denmark", "plan_path": "pdf/dgsante/annexes/2013-6749_7656.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
@@ -308,8 +308,8 @@
 {"ref": "2013-6758", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2013-6758_7328.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2013-6759", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2013-6759_8371.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2013-6760", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2013-6760_7326.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
-{"ref": "2013-6761", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2013-6761_7229.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
-{"ref": "2013-6761", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2013-6761_7360.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
+{"ref": "2013-6761", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2013-6761_7229.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
+{"ref": "2013-6761", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2013-6761_7360.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2013-6764", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2013-6764_7443.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6767", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2013-6767_7520.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2013-6767", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2013-6767_7613.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
@@ -338,9 +338,9 @@
 {"ref": "2013-6819", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6819_7480.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2013-6820", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2013-6820_7493.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2013-6825", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2013-6825_7502.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
-{"ref": "2013-6843", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2013-6843_7240.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
-{"ref": "2013-6845", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2013-6845_7221.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
-{"ref": "2013-6845", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2013-6845_7381.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
+{"ref": "2013-6843", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2013-6843_7240.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
+{"ref": "2013-6845", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2013-6845_7221.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
+{"ref": "2013-6845", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2013-6845_7381.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2013-6860", "country": "Malta", "plan_path": "pdf/dgsante/annexes/2013-6860_7346.pdf", "report_parsed": false, "responses": 9, "outcome": "parsed"}
 {"ref": "2013-6861", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2013-6861_7361.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
 {"ref": "2013-6862", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2013-6862_7338.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
@@ -364,8 +364,8 @@
 {"ref": "2013-6882", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2013-6882_7535.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6883", "country": "Slovenia", "plan_path": "pdf/dgsante/annexes/2013-6883_7529.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2013-6883", "country": "Slovenia", "plan_path": "pdf/dgsante/annexes/2013-6883_7530.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
-{"ref": "2013-6884", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2013-6884_7627.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2013-6884", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2013-6884_7628.pdf", "report_parsed": false, "responses": 10, "outcome": "parsed"}
+{"ref": "2013-6884", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2013-6884_7627.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2013-6884", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2013-6884_7628.pdf", "report_parsed": true, "responses": 10, "outcome": "parsed"}
 {"ref": "2013-6889", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2013-6889_7657.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2013-6891", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2013-6891_7582.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2013-6893", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2013-6893_7461.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
@@ -411,7 +411,7 @@
 {"ref": "2014-7026", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2014-7026_8013.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2014-7027", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2014-7027_8021.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
 {"ref": "2014-7027", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2014-7027_8148.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
-{"ref": "2014-7028", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2014-7028_7767.pdf", "report_parsed": false, "responses": 7, "outcome": "parsed"}
+{"ref": "2014-7028", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2014-7028_7767.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2014-7037", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2014-7037_7779.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2014-7038", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2014-7038_7865.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2014-7039", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2014-7039_7926.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
@@ -448,8 +448,8 @@
 {"ref": "2014-7099", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2014-7099_8230.pdf", "report_parsed": false, "responses": 10, "outcome": "parsed"}
 {"ref": "2014-7101", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2014-7101_8160.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7102", "country": "Slovenia", "plan_path": "pdf/dgsante/annexes/2014-7102_7917.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
-{"ref": "2014-7105", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2014-7105_8248.pdf", "report_parsed": false, "responses": 8, "outcome": "parsed"}
-{"ref": "2014-7106", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2014-7106_7961.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
+{"ref": "2014-7105", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2014-7105_8248.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
+{"ref": "2014-7106", "country": "Lithuania", "plan_path": "pdf/dgsante/annexes/2014-7106_7961.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2014-7109", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2014-7109_8036.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2014-7127", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2014-7127_8107.pdf", "report_parsed": false, "responses": 21, "outcome": "parsed"}
 {"ref": "2014-7128", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2014-7128_8058.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
@@ -463,7 +463,7 @@
 {"ref": "2014-7154", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2014-7154_7764.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7155", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2014-7155_7867.pdf", "report_parsed": true, "responses": 12, "outcome": "parsed"}
 {"ref": "2014-7157", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2014-7157_7684.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
-{"ref": "2014-7161", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2014-7161_7972.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2014-7161", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2014-7161_7972.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2014-7166", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2014-7166_7689.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
 {"ref": "2014-7166", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2014-7166_7960.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
 {"ref": "2014-7168", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2014-7168_7697.pdf", "report_parsed": false, "responses": 8, "outcome": "parsed"}
@@ -472,14 +472,14 @@
 {"ref": "2014-7171", "country": "Cyprus", "plan_path": "pdf/dgsante/annexes/2014-7171_8232.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7172", "country": "France", "plan_path": "pdf/dgsante/annexes/2014-7172_7987.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7172", "country": "France", "plan_path": "pdf/dgsante/annexes/2014-7172_8071.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2014-7179", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2014-7179_7786.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2014-7179", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2014-7179_7990.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2014-7179", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2014-7179_7786.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
+{"ref": "2014-7179", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2014-7179_7990.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2014-7181", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2014-7181_7819.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7181", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2014-7181_7988.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2014-7182", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2014-7182_7844.pdf", "report_parsed": false, "responses": 15, "outcome": "parsed"}
-{"ref": "2014-7182", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2014-7182_7895.pdf", "report_parsed": false, "responses": 15, "outcome": "parsed"}
-{"ref": "2014-7183", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2014-7183_7846.pdf", "report_parsed": false, "responses": 8, "outcome": "parsed"}
-{"ref": "2014-7183", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2014-7183_8097.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2014-7182", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2014-7182_7844.pdf", "report_parsed": true, "responses": 15, "outcome": "parsed"}
+{"ref": "2014-7182", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2014-7182_7895.pdf", "report_parsed": true, "responses": 15, "outcome": "parsed"}
+{"ref": "2014-7183", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2014-7183_7846.pdf", "report_parsed": true, "responses": 8, "outcome": "parsed"}
+{"ref": "2014-7183", "country": "Slovakia", "plan_path": "pdf/dgsante/annexes/2014-7183_8097.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2014-7184", "country": "Denmark", "plan_path": "pdf/dgsante/annexes/2014-7184_7945.pdf", "report_parsed": true, "responses": 10, "outcome": "parsed"}
 {"ref": "2014-7184", "country": "Denmark", "plan_path": "pdf/dgsante/annexes/2014-7184_8096.pdf", "report_parsed": true, "responses": 10, "outcome": "parsed"}
 {"ref": "2014-7187", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2014-7187_7976.pdf", "report_parsed": false, "responses": 2, "outcome": "parsed"}
@@ -512,8 +512,8 @@
 {"ref": "2014-7250", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2014-7250_8108.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2014-7260", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2014-7260_7687.pdf", "report_parsed": true, "responses": 10, "outcome": "parsed"}
 {"ref": "2014-7264", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2014-7264_7699.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2014-7275", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2014-7275_7836.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2014-7275", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2014-7275_7837.pdf", "report_parsed": false, "responses": 7, "outcome": "parsed"}
+{"ref": "2014-7275", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2014-7275_7836.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2014-7275", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2014-7275_7837.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2014-7292", "country": "Latvia", "plan_path": "pdf/dgsante/annexes/2014-7292_7727.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2014-7293", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2014-7293_7749.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2014-7294", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2014-7294_7996.pdf", "report_parsed": true, "responses": 11, "outcome": "parsed"}
@@ -568,7 +568,7 @@
 {"ref": "2015-7442", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2015-7442_8574.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2015-7443", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2015-7443_8478.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2015-7444", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2015-7444_8446.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
-{"ref": "2015-7450", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2015-7450_8454.pdf", "report_parsed": false, "responses": 1, "outcome": "parsed"}
+{"ref": "2015-7450", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2015-7450_8454.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2015-7451", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2015-7451_8241.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2015-7452", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2015-7452_8198.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2015-7453", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2015-7453_8299.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -592,7 +592,7 @@
 {"ref": "2015-7491", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2015-7491_9280.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2015-7501", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2015-7501_8292.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2015-7505", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2015-7505_8530.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
-{"ref": "2015-7506", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2015-7506_8376.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2015-7506", "country": "Romania", "plan_path": "pdf/dgsante/annexes/2015-7506_8376.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2015-7508", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2015-7508_8456.pdf", "report_parsed": false, "responses": 7, "outcome": "parsed"}
 {"ref": "2015-7510", "country": "Croatia", "plan_path": "pdf/dgsante/annexes/2015-7510_8032.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2015-7511", "country": "Belgium", "plan_path": "pdf/dgsante/annexes/2015-7511_8143.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
@@ -663,7 +663,7 @@
 {"ref": "2016-8749", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2016-8749_8922.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2016-8750", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2016-8750_8547.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2016-8751", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2016-8751_8526.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
-{"ref": "2016-8753", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2016-8753_8486.pdf", "report_parsed": false, "responses": 0, "outcome": "layout_not_recognised"}
+{"ref": "2016-8753", "country": "Czech Republic", "plan_path": "pdf/dgsante/annexes/2016-8753_8486.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2016-8760", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2016-8760_8449.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2016-8760", "country": "Ireland", "plan_path": "pdf/dgsante/annexes/2016-8760_8514.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2016-8771", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2016-8771_9719.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
@@ -765,13 +765,13 @@
 {"ref": "2017-6126", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2017-6126_9061.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2017-6140", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2017-6140_9078.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2017-6140", "country": "Austria", "plan_path": "pdf/dgsante/annexes/2017-6140_9231.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
-{"ref": "2017-6141", "country": "France", "plan_path": "pdf/dgsante/annexes/2017-6141_8875.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
-{"ref": "2017-6141", "country": "France", "plan_path": "pdf/dgsante/annexes/2017-6141_9053.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
+{"ref": "2017-6141", "country": "France", "plan_path": "pdf/dgsante/annexes/2017-6141_8875.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
+{"ref": "2017-6141", "country": "France", "plan_path": "pdf/dgsante/annexes/2017-6141_9053.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2017-6143", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2017-6143_8864.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2017-6143", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2017-6143_8865.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2017-6143", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2017-6143_8946.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
 {"ref": "2017-6144", "country": "France", "plan_path": "pdf/dgsante/annexes/2017-6144_8955.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
-{"ref": "2017-6145", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2017-6145_8984.pdf", "report_parsed": false, "responses": 3, "outcome": "parsed"}
+{"ref": "2017-6145", "country": "Greece", "plan_path": "pdf/dgsante/annexes/2017-6145_8984.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2017-6146", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2017-6146_9064.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2017-6146", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2017-6146_9093.pdf", "report_parsed": true, "responses": 1, "outcome": "parsed"}
 {"ref": "2017-6164", "country": "Poland", "plan_path": "pdf/dgsante/annexes/2017-6164_8869.pdf", "report_parsed": true, "responses": 4, "outcome": "parsed"}
@@ -828,7 +828,7 @@
 {"ref": "2018-6339", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2018-6339_9443.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2018-6343", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2018-6343_9192.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2018-6344", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2018-6344_9176.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
-{"ref": "2018-6362", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2018-6362_9422.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
+{"ref": "2018-6362", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2018-6362_9422.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2018-6363", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2018-6363_9320.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2018-6363", "country": "Hungary", "plan_path": "pdf/dgsante/annexes/2018-6363_9350.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2018-6364", "country": "Bulgaria", "plan_path": "pdf/dgsante/annexes/2018-6364_9411.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -884,8 +884,8 @@
 {"ref": "2018-6478", "country": "Germany", "plan_path": "pdf/dgsante/annexes/2018-6478_9421.pdf", "report_parsed": true, "responses": 3, "outcome": "parsed"}
 {"ref": "2018-6479", "country": "Estonia", "plan_path": "pdf/dgsante/annexes/2018-6479_9075.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
 {"ref": "2018-6480", "country": "Finland", "plan_path": "pdf/dgsante/annexes/2018-6480_9122.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}
-{"ref": "2018-6481", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2018-6481_9345.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
-{"ref": "2018-6481", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2018-6481_9365.pdf", "report_parsed": false, "responses": 5, "outcome": "parsed"}
+{"ref": "2018-6481", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2018-6481_9345.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
+{"ref": "2018-6481", "country": "Netherlands", "plan_path": "pdf/dgsante/annexes/2018-6481_9365.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2018-6482", "country": "Sweden", "plan_path": "pdf/dgsante/annexes/2018-6482_9210.pdf", "report_parsed": false, "responses": 4, "outcome": "parsed"}
 {"ref": "2018-6483", "country": "France", "plan_path": "pdf/dgsante/annexes/2018-6483_9484.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2018-6484", "country": "Spain", "plan_path": "pdf/dgsante/annexes/2018-6484_9267.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
@@ -1151,7 +1151,7 @@
 {"ref": "2021-7276", "country": "France", "plan_path": "pdf/dgsante/annexes/2021-7276_10534.pdf", "report_parsed": false, "responses": 7, "outcome": "parsed"}
 {"ref": "2021-7278", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2021-7278_10082.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
 {"ref": "2021-7278", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2021-7278_10148.pdf", "report_parsed": true, "responses": 5, "outcome": "parsed"}
-{"ref": "2021-7279", "country": "France", "plan_path": "pdf/dgsante/annexes/2021-7279_10229.pdf", "report_parsed": false, "responses": 6, "outcome": "parsed"}
+{"ref": "2021-7279", "country": "France", "plan_path": "pdf/dgsante/annexes/2021-7279_10229.pdf", "report_parsed": true, "responses": 6, "outcome": "parsed"}
 {"ref": "2021-7280", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2021-7280_10116.pdf", "report_parsed": true, "responses": 7, "outcome": "parsed"}
 {"ref": "2021-7280", "country": "Italy", "plan_path": "pdf/dgsante/annexes/2021-7280_10208.pdf", "report_parsed": true, "responses": 0, "outcome": "layout_not_recognised"}
 {"ref": "2021-7281", "country": "Portugal", "plan_path": "pdf/dgsante/annexes/2021-7281_10232.pdf", "report_parsed": true, "responses": 2, "outcome": "parsed"}

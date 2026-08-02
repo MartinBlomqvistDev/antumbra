@@ -55,7 +55,8 @@ NO_RECOMMENDATION = re.compile(
 # Where the sections after the recommendations begin, used to stop reading.
 TAIL = re.compile(
     r"^\s*(?:ANNEX\b|APPENDIX\b|\d{1,2}[.\s)]*\s*ANNEX\b"
-    r"|Legal Reference\b|TABLE OF CONTENTS\b)",
+    r"|Legal Reference\b|TABLE OF CONTENTS\b"
+    r"|The competent authority.{0,3}s response to the recommendations)",
     re.M | re.I,
 )
 
@@ -82,6 +83,30 @@ MAX_SECTION_CHARS = 25_000
 # or the list is silently cut short at the first range, which loses edges of
 # the graph with nothing to show that anything went missing.
 NOISE = re.compile(r"\s*\d{0,3}\s*No\.?\s+Recommendation\s*", re.I)
+
+# Many reports lay the recommendations out as a two-column table whose left
+# column holds nothing but the numbers. Across a page break the layout engine
+# emits the numbers of the next page in a run of their own, separated from the
+# text they belong to, and reading the section line by line then finds one
+# recommendation where there are five. The action plans, which restate each
+# recommendation, showed this on 134 reports.
+TABLE_HEADER = re.compile(
+    r"^[ \t]*N\S{0,3}[ \t]{2,}(Recommendation)[ \t]*$", re.M | re.I
+)
+
+# A page number left behind between the rows of such a table.
+PAGE_NUMBER = re.compile(r"^[ \t]*\d{1,3}[ \t]*$", re.M)
+
+MIN_BLOCK_LETTERS = 20
+
+# A block holding nothing but the cross-reference line belongs to the
+# recommendation above it. Counted on its own it becomes a recommendation
+# whose text is "Recommendation based on conclusion 84" and whose actual
+# wording has been dropped.
+REFERENCE_ONLY = re.compile(
+    r"^\W*(?:the\s+)?recommendations?\s+(?:is\s+)?based on|^\W*associated finding",
+    re.I,
+)
 
 DASHES = "-" + chr(0x2013)  # hyphen-minus and en dash; the reports use both
 RANGE = re.compile(rf"(\d{{1,3}})\s*[{DASHES}]\s*(\d{{1,3}})|(\d{{1,3}})")
@@ -157,6 +182,89 @@ def numbers(blob: str) -> list[int]:
     return found
 
 
+def split_table(section: str) -> list[tuple[int, str]]:
+    """Read a two-column recommendations table, or return nothing.
+
+    The left column carries the numbers and the right the text. They are read
+    apart and then paired in order. A recommendation broken over a page ends
+    without a full stop, and its continuation is joined back on; where the
+    number count and the text count still disagree the table is left alone
+    rather than paired on a guess.
+
+    Args:
+        section: Text of the recommendations section.
+
+    Returns:
+        One (number, text) pair per row, or an empty list.
+    """
+    header = TABLE_HEADER.search(section)
+    if header is None:
+        return []
+    body = section[header.end() :]
+    body = TABLE_HEADER.sub("", body)
+    body = PAGE_NUMBER.sub("", body)
+
+    # Where the text column starts. The header's spacing does not always line
+    # up with the body, and the body's indentation is not always uniform, so
+    # both are offered and the one that pairs consistently is taken.
+    indents = [
+        len(line) - len(line.lstrip())
+        for line in body.splitlines()
+        if len(line.strip()) > 30 and not re.match(r"^\s*\d{1,2}\.", line)
+    ]
+    candidates = []
+    if indents:
+        candidates.append(max(set(indents), key=indents.count))
+    candidates.append(header.group(0).lower().index("recommendation"))
+
+    for gutter in dict.fromkeys(c for c in candidates if c >= 2):
+        paired = pair_columns(body, gutter)
+        if paired:
+            return paired
+    return []
+
+
+def pair_columns(body: str, gutter: int) -> list[tuple[int, str]]:
+    """Pair the numbers of the left column with the texts of the right.
+
+    Args:
+        body: The table below its header.
+        gutter: Column where the text column starts.
+
+    Returns:
+        One (number, text) pair per row, or an empty list when the two
+        columns do not line up and pairing would be a guess.
+    """
+    numbers_seen: list[int] = []
+    right_lines: list[str] = []
+    for line in body.splitlines():
+        for found in re.findall(r"\b(\d{1,2})\s*\.", line[:gutter]):
+            value = int(found)
+            if not numbers_seen or value == numbers_seen[-1] + 1:
+                numbers_seen.append(value)
+        right_lines.append(line[gutter:])
+
+    blocks: list[str] = []
+    for chunk in re.split(r"\n\s*\n", "\n".join(right_lines)):
+        text = " ".join(chunk.split())
+        if sum(c.isalpha() for c in text) < MIN_BLOCK_LETTERS:
+            continue
+        # A recommendation broken over a page ends mid-sentence; its
+        # continuation is joined back on rather than counted as a new one.
+        # The same goes for a block that is only a cross-reference line.
+        if blocks and (
+            REFERENCE_ONLY.match(text)
+            or not blocks[-1].rstrip().endswith((".", ":", ";"))
+        ):
+            blocks[-1] = f"{blocks[-1]} {text}"
+        else:
+            blocks.append(text)
+
+    if not numbers_seen or numbers_seen[0] != 1 or len(numbers_seen) != len(blocks):
+        return []
+    return list(zip(numbers_seen, blocks, strict=True))
+
+
 def split_items(section: str) -> list[tuple[int, str]]:
     """Split a section into numbered recommendations.
 
@@ -226,7 +334,10 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
     # look fine on the totals.
     graph = bool(CONCLUSIONS.search(section))
 
-    items = split_items(section)
+    items = split_table(section)
+    method = "two_column_table" if items else "numbered_lines"
+    if not items:
+        items = split_items(section)
     if not items:
         return (
             {
@@ -263,6 +374,7 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
                 # into one block. Where that happened the links belong to the
                 # first of them; the flag says so rather than hiding it.
                 "multiple_reference_blocks": len(CONCLUSIONS.findall(body)) > 1,
+                "parse_method": method,
             }
         )
     linked = sum(1 for r in rows if r["based_on_conclusions"])
