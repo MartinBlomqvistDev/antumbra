@@ -8,8 +8,11 @@ konfigurationen i `pyproject.toml` ska passera utan anmärkning.
 ```bash
 pip install -e ".[dev]"
 ruff check .
+ruff format --check .
 pytest
 ```
+
+Alla tre grindarna körs i CI; kör dem lokalt före varje commit.
 
 **All kod skrivs på engelska**: klasser, fält, enum-medlemmar och enum-värden,
 docstrings och kommentarer, filnamn och strängar. Svenska förvaltningstermer
