@@ -390,10 +390,29 @@ class TestActionPlansAnswerRealRecommendations:
         assert with_text / len(action_plans) >= 0.8
 
     def test_a_confirmed_link_really_does_have_matching_text(self, action_plans):
+        """Confirmation rests on containment, not on a symmetric ratio.
+
+        The plans are two-column tables whose response column bleeds words
+        into the restatement. A symmetric ratio punished that heavily even
+        where every word of the recommendation was present, so what is
+        measured is how much of the report's wording the plan holds.
+        """
         for row in action_plans:
             if row["link_confirmed_by_text"]:
-                assert row["text_similarity"] >= 0.6
+                assert row["text_containment"] >= 0.6
                 assert row["restated_recommendation"]
+
+    def test_a_plan_in_another_language_is_marked_as_such(self, action_plans):
+        """A translated plan cannot be confirmed by comparing wording.
+
+        Counting it as a failed match would blame the parser for a
+        translation, so the language is recorded and reported apart.
+        """
+        judged = [r for r in action_plans if r["restated_reads_as_english"] is not None]
+        assert judged
+        foreign = [r for r in judged if r["restated_reads_as_english"] is False]
+        assert foreign, "no plan was found in another language, which is implausible"
+        assert len(foreign) / len(judged) < 0.2
 
 
 class TestTheWarehouseDescribesWhatWasBuilt:

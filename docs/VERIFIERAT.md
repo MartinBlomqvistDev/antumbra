@@ -77,7 +77,12 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
 för 1 084 EU-27-revisioner, 1 068 av dem läses, och de ger 5 710 svar som
 täcker 3 248 av 10 039 parsade rekommendationer i 844 revisioner. Länken vilar
 inte på ett delat nummer: planen återger rekommendationens lydelse och den
-jämförs med rapportens, vilket bekräftar 1 981 av svaren, 61 procent.
+jämförs med rapportens. Måttet är hur mycket av rapportens lydelse som
+återfinns i planen, inte hur lika texterna är i sin helhet: planerna är
+tvåspaltiga och svarskolumnen läcker in ord, vilket ett symmetriskt mått
+straffar hårt trots att varje ord finns där. **2 747 av 3 140 jämförbara svar,
+87 procent, bekräftas.** 108 svar är inte jämförbara därför att planen är
+skriven på ett annat språk än rapporten.
 
 **Låg textlikhet pekar på fel i rapportparsningen, inte på fel länk.** Använt
 som facit 2026-08-02 och det gav ett mätt resultat: 134 rapporter, mest 2011
@@ -98,7 +103,7 @@ osynligt för parsern. Efter rättningen skriver **671 rapporter i stället för
 
 **Citatgrafen är sluten till 96 procent.** Verifierat 2026-08-02 med
 `pipeline/08_parse_paragraphs.py`: 81 292 numrerade stycken ur 2 724
-rapporter, och **7 472 av 7 807 citerade stycknummer resolverar till ett
+rapporter, och **7 472 av 7 806 citerade stycknummer resolverar till ett
 faktiskt stycke**. Den slutna kedjan ligger i `data/dgsante_graph.jsonl`;
 den fulla styckekorpusen är 66 MB, gitignorerad och återskapbar.
 Styckenumreringen löper genom hela dokumentet, inte per avsnitt.

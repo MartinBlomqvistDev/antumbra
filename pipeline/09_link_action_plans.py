@@ -47,6 +47,18 @@ RESPONSE_COLUMN = re.compile(
 # A row opens with the recommendation number at the start of a line.
 ROW = re.compile(r"^[ \t\f]{0,8}(\d{1,2})[.)]?[ \t]+(?=\S)", re.M)
 
+# Some member states answer in their own language while the report is in
+# English. Such a plan cannot be confirmed by comparing wording, and counting
+# it as a failed match would blame the parser for a translation. The share of
+# very common English words separates the two cases well enough to say which
+# is which; it is recorded, not used to alter the comparison.
+ENGLISH_MARKERS = frozenset(
+    "the of to and in that for is are be with by on as it not this which "
+    "shall should ensure carried out official controls".split()
+)
+MIN_WORDS_TO_JUDGE_LANGUAGE = 8
+ENGLISH_SHARE = 0.12
+
 MIN_ROW_LETTERS = 30
 GUTTER_MIN_WIDTH = 3
 GUTTER_MIN_SHARE = 0.9
@@ -139,6 +151,23 @@ def split_rows(table: str) -> list[tuple[int, str]]:
     return rows
 
 
+def reads_as_english(text: str) -> bool | None:
+    """Whether a passage reads as English.
+
+    Args:
+        text: The recommendation as the member state restated it.
+
+    Returns:
+        True or False, or None where there are too few words to judge.
+    """
+    words = re.findall(r"[a-zA-Z]+", text.lower())
+    if len(words) < MIN_WORDS_TO_JUDGE_LANGUAGE:
+        return None
+    return sum(1 for word in words if word in ENGLISH_MARKERS) / len(words) >= (
+        ENGLISH_SHARE
+    )
+
+
 def similarity(left: str, right: str) -> float:
     """How alike two passages are, ignoring case and spacing."""
     if not left or not right:
@@ -146,6 +175,32 @@ def similarity(left: str, right: str) -> float:
     return difflib.SequenceMatcher(
         None, " ".join(left.lower().split()), " ".join(right.lower().split())
     ).ratio()
+
+
+def containment(needle: str, haystack: str) -> float:
+    """How much of one passage is found inside another.
+
+    The question this layer asks is whether the plan restates the report's
+    recommendation, not whether the two strings are the same length. The
+    plans are two-column tables and the response column bleeds words into the
+    restatement, which a symmetric ratio punishes heavily even where every
+    word of the recommendation is present. Measuring containment asks the
+    question that was meant.
+
+    Args:
+        needle: The recommendation as the report words it.
+        haystack: The recommendation as the plan restates it.
+
+    Returns:
+        The share of the needle matched inside the haystack, 0 to 1.
+    """
+    if not needle or not haystack:
+        return 0.0
+    left = " ".join(needle.lower().split())
+    right = " ".join(haystack.lower().split())
+    matcher = difflib.SequenceMatcher(None, left, right)
+    matched = sum(block.size for block in matcher.get_matching_blocks())
+    return matched / len(left)
 
 
 def parse_plan(record: dict, expected: dict[int, str]) -> list[dict]:
@@ -187,7 +242,9 @@ def parse_plan(record: dict, expected: dict[int, str]) -> list[dict]:
         restated = re.sub(r"^\d{1,2}[.)]?\s*", "", restated)
         if not response:
             response, restated = restated, ""
-        score = similarity(restated, expected.get(number, ""))
+        reported = expected.get(number, "")
+        score = similarity(restated, reported)
+        held = containment(reported, restated)
         out.append(
             {
                 "ref": record["ref"],
@@ -202,7 +259,9 @@ def parse_plan(record: dict, expected: dict[int, str]) -> list[dict]:
                 # renumbered, so the texts have to agree as well.
                 "recommendation_in_report": number in expected,
                 "text_similarity": round(score, 2),
-                "link_confirmed_by_text": score >= MATCH_THRESHOLD,
+                "text_containment": round(held, 2),
+                "restated_reads_as_english": reads_as_english(restated),
+                "link_confirmed_by_text": held >= MATCH_THRESHOLD,
             }
         )
     return out
@@ -259,10 +318,19 @@ def main() -> int:
         (r["ref"], r["recommendation"]) for r in rows if r["link_confirmed_by_text"]
     }
     known = {(ref, number) for ref, items in by_report.items() for number in items}
+    foreign = {
+        (r["ref"], r["recommendation"])
+        for r in rows
+        if r["restated_reads_as_english"] is False
+    }
+    comparable = (answered & known) - foreign
     print(f"{len(rows)} responses from {len({r['plan_path'] for r in rows})} plans")
     print(f"audits with a linked plan: {len({r['ref'] for r in rows})}")
     print(f"recommendations answered: {len(answered & known)} of {len(known)}")
-    print(f"  of those, confirmed by matching text: {len(confirmed & known)}")
+    print(f"  written in another language, so not comparable: {len(foreign & known)}")
+    print(
+        f"  confirmed by matching text: {len(confirmed & known)} of {len(comparable)}"
+    )
     return 0
 
 

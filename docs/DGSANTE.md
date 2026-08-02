@@ -313,7 +313,7 @@ ligger i `.gitignore`; den återskapas genom att köra steget. Det som committas
 är `data/dgsante_graph.jsonl`: **en rad per kant med det citerade stycket
 bredvid**, alltså den slutna kedjan och 3,4 MB.
 
-**7 472 av 7 807 citerade stycknummer resolverar, alltså 96 procent.**
+**7 472 av 7 806 citerade stycknummer resolverar, alltså 96 procent.**
 
 Tre fel i vägen dit är värda att minnas, eftersom de alla gav tyst dataförlust:
 
@@ -360,15 +360,32 @@ revisioner.** Resterande planer har en layout som inte känns igen och
 registreras som sådana i `data/dgsante_plan_parse.jsonl`; de gissas inte.
 
 **Länken vilar inte på ett delat nummer.** Planen återger rekommendationens
-lydelse, och den jämförs med rapportens egen. 1 981 av de 3 248 svaren,
-61 procent, bekräftas av att texterna stämmer överens.
+lydelse, och den jämförs med rapportens egen.
 
-| Likhet mellan planens och rapportens lydelse | Rader |
+**Måttet är hur mycket av rapportens lydelse som återfinns i planen**, inte hur
+lika de två texterna är i sin helhet. Skälet är mätt: planerna är tvåspaltiga
+tabeller, och svarskolumnen läcker in ord mitt i den återgivna rekommendationen
+("To align the system of supervision of the facilities with the MINISTERIO DE
+SANIDAD, SERVICIOS requirements laid down in Article 4.6"). Ett symmetriskt
+likhetsmått straffar sådana inskott hårt trots att varje ord i rekommendationen
+finns där. 136 länkar som det gamla måttet underkände visade sig vid handläsning
+vara korrekta, och alla sex i stickprovet var samma rekommendation.
+
+**2 747 av 3 140 jämförbara svar, 87 procent, bekräftas av texten.** 108 svar
+räknas inte som jämförbara därför att **planen är skriven på ett annat språk**
+än rapporten; en översättning kan inte bekräftas genom att jämföra ordalydelse,
+och att räkna den som en missad matchning vore att skylla en översättning på
+parsern.
+
+| Andel av rapportens lydelse som finns i planen | Rader |
 | --- | --- |
-| 0,9 till 1,0 | 1 076 |
-| 0,6 till 0,9 | 1 321 |
-| 0,1 till 0,6 | 1 565 |
-| under 0,1 | 128 |
+| 0,9 till 1,0 | 3 003 |
+| 0,6 till 0,9 | 574 |
+| 0,3 till 0,6 | 209 |
+| under 0,3 | 304 |
+
+Räknat per rapport föll antalet utan en enda bekräftad rad **från 186 till
+118**, varav 15 har en plan på annat språk.
 
 **Låg likhet betyder oftast att rapportparsningen är fel, inte länken.**
 Stickprov i det lägsta skiktet visar planer som återger en korrekt
@@ -402,14 +419,21 @@ Effekten är mätt mot planerna, inte uppskattad:
 | Citerade stycknummer som resolverar | 90 % | 96 % |
 | Rapporter där varje rad är fel | 134 | 50 |
 
+**Ett tredje fel, i mitt eget brusfilter.** Filtret som tar bort tabellens
+upprepade rubrik matchade `No. Recommendation` men inte `N°. Recommendation`,
+samma miss som redan rättats på annat håll. Rubriken låg därför kvar mitt i
+rekommendationstexten: "...to verify the 17 N°. Recommendation 2. 3.
+effectiveness of...".
+
 **Sidbrytningen dolde en tredjedel av grafen.** Den andra rättningen kom ur
 samma facit och var enklare än väntat: `pdftotext` skriver ett **form feed**
 först på varje sidas första rad, och alla radankrade mönster i steg 07 till 09
 tillät bara blanksteg och tabb där. Varje rubrik, post, tabell och stycke som
 öppnade en sida var därmed osynligt. Elva mönster rättade; se tabellen ovan.
 
-**Kvarvarande fel:** 50 rapporter där varje rad avviker från planens lydelse,
-mot 134 före rättningarna.
+**Kvarvarande:** 118 rapporter utan en enda bekräftad rad, mot 186 innan
+måttet byttes. 15 av dem har en plan på annat språk. Resten är i huvudsak
+spaltläckage i planen som är kraftigare än containment-tröskeln tål.
 
 ## Dimensionsmodellen
 
@@ -422,7 +446,7 @@ hur dokumenten läser; modellen är format efter hur frågorna ställs.
 | `dim_audit` | 4 690 | en revision |
 | `dim_paragraph` | 81 292 | ett numrerat stycke |
 | `fact_recommendation` | 10 067 | en rekommendation |
-| `fact_citation` | 7 807 | en kant i citatgrafen |
+| `fact_citation` | 7 806 | en kant i citatgrafen |
 | `fact_commitment` | 5 710 | ett svar i en åtgärdsplan |
 
 `dim_country` och `dim_audit` är konformerade: alla tre faktatabeller hänger på
@@ -454,7 +478,8 @@ Nollan för 2025 är inget fel: åtgärdsplanerna för de nyaste revisionerna ä
 
 ## Nästa steg
 
-1. Rätta de 50 rapporter som ännu avviker helt från planernas lydelse.
+1. Förbättra kolumndelningen i steg 09; kvarvarande avvikelser är
+   spaltläckage i planen, inte fel länkar.
 2. Sätt ihop bilagorna per revision före parsning, enligt avsnittet om
    bilagorna som sidor.
 3. Ta reda på varför 6 procent av de iakttagelse-citerade numren inte

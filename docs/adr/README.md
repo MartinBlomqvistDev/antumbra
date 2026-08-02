@@ -19,3 +19,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0010](0010-tva-lasningar-av-samma-stycke.md) | Två läsningar av samma stycke | beslutad |
 | [0011](0011-planerna-som-facit-mot-rapportparsningen.md) | Planerna som facit mot rapportparsningen | beslutad |
 | [0012](0012-dimensionsmodellen-byggs-lokalt-forst.md) | Dimensionsmodellen byggs lokalt först | beslutad |
+| [0013](0013-containment-i-stallet-for-likhet.md) | Länken mäts som containment, inte likhet | beslutad |

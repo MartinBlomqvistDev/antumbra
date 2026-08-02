@@ -103,6 +103,60 @@ class TestComparingTheTexts:
         assert parser.similarity("", "To ensure that officials are trained") == 0.0
 
 
+class TestMeasuringHowMuchTheTextsShare:
+    """Containment answers the question the symmetric ratio could not."""
+
+    REPORT = (
+        "To align the system of supervision of the facilities with the "
+        "requirements laid down in Article 4.6 of the Regulation."
+    )
+    BLED = (
+        "To align the system of supervision of the facilities with the "
+        "MINISTERIO DE SANIDAD, SERVICIOS requirements laid down in "
+        "Article 4.6 of the Regulation."
+    )
+
+    def test_words_bled_in_from_the_other_column_do_not_hide_a_match(self):
+        assert parser.containment(self.REPORT, self.BLED) > 0.9
+
+    def test_the_symmetric_ratio_is_what_the_bleed_defeated(self):
+        """Kept as a test so the reason for the change stays visible."""
+        assert parser.similarity(self.REPORT, self.BLED) < parser.containment(
+            self.REPORT, self.BLED
+        )
+
+    def test_an_unrelated_recommendation_is_not_contained(self):
+        other = (
+            "Ensure that laboratories involved in official controls are "
+            "accredited as set out in Article 37 of the Regulation."
+        )
+        assert parser.containment(self.REPORT, other) < 0.6
+
+    def test_an_empty_side_contains_nothing(self):
+        assert parser.containment("", self.BLED) == 0.0
+        assert parser.containment(self.REPORT, "") == 0.0
+
+
+class TestJudgingTheLanguage:
+    def test_an_english_restatement_is_recognised(self):
+        assert parser.reads_as_english(
+            "To ensure that the competent authority carries out official "
+            "controls in line with the requirements of the Regulation."
+        )
+
+    def test_a_restatement_in_another_language_is_recognised(self):
+        assert (
+            parser.reads_as_english(
+                "Veiller à ce que la mise en oeuvre des plans fondés sur les "
+                "principes HACCP chez les exploitants soit évaluée."
+            )
+            is False
+        )
+
+    def test_too_few_words_to_judge(self):
+        assert parser.reads_as_english("Action plan") is None
+
+
 class TestSplittingRows:
     def test_rows_are_split_on_numbering_that_counts_up(self):
         table = (

@@ -150,7 +150,7 @@
     },
     {
       "table": "fact_citation",
-      "rows": 7807,
+      "rows": 7806,
       "columns": [
         {
           "name": "recommendation_key",
@@ -221,7 +221,7 @@
     "recommendations": 10067,
     "recommendations_stating_their_basis": 2004,
     "recommendations_answered": 3248,
-    "citations": 7807,
+    "citations": 7806,
     "citations_resolved": 7472,
     "commitments": 5710
   }

@@ -82,7 +82,11 @@ MAX_SECTION_CHARS = 25_000
 # ranges: "29-31, 50 and 71". The hyphen has to be inside the captured class
 # or the list is silently cut short at the first range, which loses edges of
 # the graph with nothing to show that anything went missing.
-NOISE = re.compile(r"\s*\d{0,3}\s*No\.?\s+Recommendation\s*", re.I)
+# The repeated table header, which lands inside an item when the table runs
+# over a page. The number sign is written "No.", "N°." or "Nº." depending on
+# the report, and matching only the first form left the other two in the text:
+# "...to verify the 17 N°. Recommendation 2. 3. effectiveness of...".
+NOISE = re.compile(r"\s*\d{0,3}\s*N\S{0,3}\s+Recommendation\s*(?:\d{1,2}\.\s*)*", re.I)
 
 # Many reports lay the recommendations out as a two-column table whose left
 # column holds nothing but the numbers. Across a page break the layout engine
