@@ -100,12 +100,14 @@ python pipeline/06_ocr_annexes.py          # OCR på det som är skannat
 python pipeline/07_parse_recommendations.py  # rekommendationer och citatgrafens kanter
 python pipeline/08_parse_paragraphs.py     # de citerade styckena, grafens noder
 python pipeline/09_link_action_plans.py    # åtagandena kopplade till rekommendationerna
+python pipeline/10_build_warehouse.py      # stjärnschemat i Parquet
 ```
 
 Stegen skriver till `data/`. De som tar tid är återupptagbara och hoppar över
 det som redan hämtats, så en avbruten körning startas om utan att arbetet görs
 på nytt. Steg 03 laddar ned 2,2 GB till `pdf/`, som aldrig committas. Steg 06
-kräver Tesseract som binär plus `pip install -e ".[ocr]"`.
+kräver Tesseract som binär plus `pip install -e ".[ocr]"`, och steg 10 kräver
+`pip install -e ".[warehouse]"`.
 
 Kvalitetskontroll:
 

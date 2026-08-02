@@ -411,6 +411,47 @@ tillät bara blanksteg och tabb där. Varje rubrik, post, tabell och stycke som
 **Kvarvarande fel:** 50 rapporter där varje rad avviker från planens lydelse,
 mot 134 före rättningarna.
 
+## Dimensionsmodellen
+
+Byggd med `pipeline/10_build_warehouse.py`. Det parsade lagret är format efter
+hur dokumenten läser; modellen är format efter hur frågorna ställs.
+
+| Tabell | Rader | Kornighet |
+| --- | --- | --- |
+| `dim_country` | 165 | ett land |
+| `dim_audit` | 4 690 | en revision |
+| `dim_paragraph` | 81 292 | ett numrerat stycke |
+| `fact_recommendation` | 10 067 | en rekommendation |
+| `fact_citation` | 7 807 | en kant i citatgrafen |
+| `fact_commitment` | 5 710 | ett svar i en åtgärdsplan |
+
+`dim_country` och `dim_audit` är konformerade: alla tre faktatabeller hänger på
+dem, så en fråga kan gå från land till åtagande utan omvägar.
+
+**Parquet-filerna är en byggartefakt** och ligger i `.gitignore`. Det som
+committas är `data/dgsante_warehouse_manifest.json`, som beskriver varje tabell,
+varje kolumn och varje radantal, så modellens form går att granska och testa i
+CI utan binärerna.
+
+**En olöst kant är fortfarande en rad.** Kanter som inte kunde knytas till ett
+stycke behåller en tom styckenyckel i stället för att tas bort, och 1 453 svar i
+åtgärdsplanerna saknar rekommendationsnyckel därför att numret inte finns i den
+parsade rapporten. Att kasta dem hade fått modellen att se bättre ut än den är.
+
+En fråga modellen gör möjlig, EU-27 från 2014, andel rekommendationer som anger
+sin grund och andel som besvarats:
+
+| År | Rekommendationer | Anger grund | Besvarade |
+| --- | --- | --- | --- |
+| 2015 | 303 | 75 % | 80 % |
+| 2018 | 273 | 86 % | 67 % |
+| 2021 | 283 | 80 % | 71 % |
+| 2024 | 201 | 86 % | 50 % |
+| 2025 | 140 | 81 % | 0 % |
+
+Nollan för 2025 är inget fel: åtgärdsplanerna för de nyaste revisionerna är
+ännu inte publicerade.
+
 ## Nästa steg
 
 1. Rätta de 50 rapporter som ännu avviker helt från planernas lydelse.
