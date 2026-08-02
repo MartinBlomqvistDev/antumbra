@@ -80,11 +80,14 @@ _failed = 0
 
 
 def extension(headers: dict[str, str], payload: bytes) -> str:
-    """Pick a file extension from Content-Disposition, defaulting to pdf.
+    """Pick a file extension by sniffing the payload and the headers.
+
+    Most documents are PDF, but some older annexes were uploaded as
+    Word-exported HTML; a dead id answers 404, so any 200 body is content.
 
     Args:
         headers: Response headers of the download.
-        payload: First bytes of the response body.
+        payload: Response body.
 
     Returns:
         A lowercase extension without the dot.
@@ -93,7 +96,12 @@ def extension(headers: dict[str, str], payload: bytes) -> str:
         return "pdf"
     disposition = headers.get("Content-Disposition", "")
     m = re.search(r'filename="?[^"]*\.(\w{1,5})"?', disposition)
-    return m.group(1).lower() if m else "pdf"
+    if m:
+        return m.group(1).lower()
+    head = payload.lstrip()[:10].lower()
+    if head.startswith((b"<!doctype", b"<html")):
+        return "html"
+    return "bin"
 
 
 def fetch(url: str) -> tuple[dict[str, str], bytes]:
@@ -123,9 +131,6 @@ def work(task: tuple[str, Path, str]) -> None:
         headers, payload = fetch(url)
         if not payload:
             raise RuntimeError("empty response body")
-        stripped = payload.lstrip()
-        if stripped.startswith((b"<!DOCTYPE", b"<html", b"<HTML")):
-            raise RuntimeError("HTML error page instead of a document")
         target = directory / f"{stem}.{extension(headers, payload)}"
         part = target.with_suffix(target.suffix + ".part")
         part.write_bytes(payload)
