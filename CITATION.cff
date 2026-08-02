@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Antumbra: making supervision measurable"
+message: "If you use this dataset or method, please cite it."
+type: dataset
+authors:
+  - family-names: Blomqvist
+    given-names: Martin
+    email: cm.blomqvist@gmail.com
+repository-code: "https://github.com/MartinBlomqvistDev/antumbra"
+abstract: >-
+  Sweden publishes the conditions it imposes on large livestock installations
+  but discloses the outcome of its own inspections in redacted form, to varying
+  degrees between county administrative boards. The responsible agency reports a
+  51 percentage point spread between counties in the share of inspections
+  finding deficiencies, and states that the difference cannot be read out of the
+  statistics. Antumbra measures that gap using the authorities' own records, and
+  compares it against the European Commission's audits of member state control
+  systems.
+keywords:
+  - public administration
+  - transparency
+  - freedom of information
+  - official controls
+  - animal welfare
+  - open data
+license: AGPL-3.0-or-later

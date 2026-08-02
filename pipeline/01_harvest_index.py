@@ -39,7 +39,8 @@ def harvest_year(opener: urllib.request.OpenerDirector, year: int) -> list[dict]
     session cookie the opener carries.
     """
     page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
-    token = re.search(r'name="report_search\[_token\]"[^>]*value="([^"]+)"', page).group(1)
+    token_pattern = r'name="report_search\[_token\]"[^>]*value="([^"]+)"'
+    token = re.search(token_pattern, page).group(1)
     data = urllib.parse.urlencode(
         {
             "report_search[_token]": token,
@@ -48,9 +49,8 @@ def harvest_year(opener: urllib.request.OpenerDirector, year: int) -> list[dict]
             "report_search[basic][searchBasic]": "",
         }
     ).encode()
-    html = opener.open(urllib.request.Request(URL, data=data), timeout=120).read().decode(
-        "utf-8", "replace"
-    )
+    request = urllib.request.Request(URL, data=data)
+    html = opener.open(request, timeout=120).read().decode("utf-8", "replace")
 
     rows: list[dict] = []
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S):
@@ -71,6 +71,7 @@ def harvest_year(opener: urllib.request.OpenerDirector, year: int) -> list[dict]
 
 
 def main() -> int:
+    """Parse arguments, harvest every year in range and write the index."""
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--from", dest="start", type=int, default=1998)
     ap.add_argument("--to", dest="end", type=int, default=2027)
@@ -87,7 +88,7 @@ def main() -> int:
             rows = harvest_year(opener, year)
             all_rows.extend(rows)
             print(f"{year} {len(rows)}", flush=True)
-        except Exception as exc:  # noqa: BLE001 - one bad year must not stop the run
+        except Exception as exc:
             print(f"{year} FAILED {exc}", flush=True)
 
     OUT.parent.mkdir(exist_ok=True)

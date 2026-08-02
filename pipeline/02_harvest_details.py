@@ -25,6 +25,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from html import unescape
 from pathlib import Path
+from typing import TextIO
 
 ROOT = Path(__file__).resolve().parent.parent
 INDEX = ROOT / "data" / "dgsante_index.json"
@@ -103,18 +104,18 @@ def fetch(detail_id: str) -> str:
         try:
             with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
                 return r.read().decode("utf-8", "replace")
-        except Exception as exc:  # noqa: BLE001 - retry on anything transient
+        except Exception as exc:
             last = exc
             time.sleep(2 * (attempt + 1))
     raise RuntimeError(f"{detail_id}: {last}")
 
 
-def work(row: dict, fh) -> None:
+def work(row: dict, fh: TextIO) -> None:
     """Fetch, parse and append one audit; failures are recorded, not raised."""
     global _done
     try:
         rec = {**row, **parse(fetch(row["detail_id"])), "error": None}
-    except Exception as exc:  # noqa: BLE001 - record and continue
+    except Exception as exc:
         rec = {**row, "error": str(exc)[:200]}
     with _lock:
         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
@@ -126,6 +127,7 @@ def work(row: dict, fh) -> None:
 
 
 def main() -> int:
+    """Read the index, fetch every unharvested detail page and append results."""
     rows = json.loads(INDEX.read_text(encoding="utf-8"))
     seen: set[str] = set()
     if OUT.exists():
@@ -138,7 +140,10 @@ def main() -> int:
                 seen.add(r["detail_id"])
 
     todo = [r for r in rows if r["detail_id"] not in seen]
-    print(f"total {len(rows)}, already done {len(seen)}, to fetch {len(todo)}", flush=True)
+    print(
+        f"total {len(rows)}, already done {len(seen)}, to fetch {len(todo)}",
+        flush=True,
+    )
 
     with open(OUT, "a", encoding="utf-8") as fh, ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(lambda r: work(r, fh), todo))

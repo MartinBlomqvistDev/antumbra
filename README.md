@@ -86,13 +86,26 @@ Kräver Python 3.12. Skörden av DG SANTE använder enbart standardbiblioteket;
 `pydantic` behövs för datakontrakten.
 
 ```bash
-pip install -r requirements.txt
+pip install -e ".[dev]"
 python pipeline/01_harvest_index.py      # en sökning per år, 1998 till 2027
 python pipeline/02_harvest_details.py    # en detaljsida per revision, återupptagbar
 ```
 
-Båda skriver till `data/`. Steg 02 hoppar över det som redan hämtats, så ett
-avbrutet körning startas om utan att göra om arbetet.
+Båda skriver till `data/`. Steg 02 hoppar över det som redan hämtats, så en
+avbruten körning startas om utan att arbetet görs på nytt.
+
+Kvalitetskontroll:
+
+```bash
+ruff check . && ruff format --check .
+pytest
+```
+
+Testsviten bär tre garantier utöver vanliga enhetstester: den genererade
+schemamodulen måste stämma med sitt designdokument, siffrorna i dokumentationen
+måste hålla mot datafilerna, och inga personuppgifter får finnas i repot. Samma
+kontroller körs i CI vid varje push, tillsammans med en kontroll av att
+källorna uppströms fortfarande svarar.
 
 ## Struktur
 
@@ -101,9 +114,11 @@ docs/VERIFIERAT.md     kontrollerade fakta med datum och källa
 docs/BEGARANMALL.md    tre begäranmallar, rättslig motivering, protokoll
 docs/VILLKORSSCHEMA.md datakontrakt med motivering och verifieringskontroller
 docs/DGSANTE.md        jämförelselagrets korpus, struktur och volym
+CONTRIBUTING.md        kodstandard, commit-konvention, vad som aldrig committas
 data/                  härledda dataset, ingen råtext och inga PDF:er
 src/                   datakontrakt (Pydantic v2)
 pipeline/              numrerade steg, körs i ordning
+tests/                 enhetstester och repo-invarianter
 ```
 
 ## Status

@@ -1,0 +1,56 @@
+[project]
+name = "antumbra"
+version = "0.1.0"
+description = "Measuring whether Swedish animal welfare supervision is equivalent across counties and open to external scrutiny"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "Martin Blomqvist", email = "cm.blomqvist@gmail.com" }]
+keywords = ["public administration", "transparency", "official controls", "animal welfare", "open data"]
+
+# The DG SANTE harvest uses only the standard library. Pydantic carries the
+# data contracts.
+dependencies = ["pydantic>=2.12"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Repository = "https://github.com/MartinBlomqvistDev/antumbra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # import sorting
+    "N",        # pep8-naming
+    "D",        # pydocstyle
+    "UP",       # pyupgrade
+    "B",        # bugbear
+    "ANN",      # missing type annotations
+    "RUF",
+]
+ignore = [
+    "D203",     # conflicts with D211
+    "D213",     # conflicts with D212
+    "ANN401",   # allow typing.Any where a file handle is passed through
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Pipeline steps are numbered, which is not a valid module name; that is
+# deliberate and matches the numbered-pipeline convention used across the
+# project. Tests do not need docstrings on every assertion helper.
+"pipeline/*" = ["N999"]
+"tests/*" = ["D100", "D101", "D102", "D103", "ANN001", "ANN003", "ANN201"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

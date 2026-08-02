@@ -2,7 +2,7 @@
 
 Datastruktur för ett villkor i korpusen om 237 miljötillståndsbeslut för stora
 gris- och fjäderfäanläggningar, 2013 till 2026. Designad 2026-08-01 mot fyra
-beslut i fulltext: Lidfarm 2017 (MPD Västra Götaland), Motala 2021 2021
+beslut i fulltext: Lidfarm 2017 (MPD Västra Götaland), Motala 2021
 (MPD Östergötland), Stora Markie 2022 (MPD Skåne), SweHatch 2026 (MPD Skåne,
 dnr 26665-2025, beslutsdatum 2026-06-04).
 
@@ -43,40 +43,40 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-
 # ----------------------------------------------------------------------
 # Controlled vocabularies
 # ----------------------------------------------------------------------
 
+
 class DecisionType(StrEnum):
     """Document type per the Jordbruksverket listing and the decision's own heading."""
 
-    PERMIT = "permit"                        # tillstand
-    AMENDMENT = "amendment"                  # andringstillstand
-    EXTENSION = "extension"                  # forlangning av igangsattningstid
-    COURT_RULING = "court_ruling"            # dom, MMD/MOD
-    FINAL_CONDITIONS = "final_conditions"    # slutliga villkor
-    COMMENCEMENT = "commencement"            # igangsattningsbeslut
-    REVOCATION = "revocation"                # upphavande
+    PERMIT = "permit"  # tillstand
+    AMENDMENT = "amendment"  # andringstillstand
+    EXTENSION = "extension"  # forlangning av igangsattningstid
+    COURT_RULING = "court_ruling"  # dom, MMD/MOD
+    FINAL_CONDITIONS = "final_conditions"  # slutliga villkor
+    COMMENCEMENT = "commencement"  # igangsattningsbeslut
+    REVOCATION = "revocation"  # upphavande
     UNKNOWN = "unknown"
 
 
 class ConditionType(StrEnum):
-    """Controlled condition typology, derived from headings observed in the corpus sample.
+    """Controlled condition typology, from headings observed in the corpus.
 
     The vocabulary is additive: new members may be appended, existing
     members never change meaning. An unseen heading is classed OTHER and
     flagged for manual review; the verbatim heading is kept on the row.
     """
 
-    GENERAL = "general"                      # the general condition (allmant)
-    MANURE = "manure"                        # storage, handling, contracts, analysis
-    WATER = "water"                          # stormwater, wash and rinse water
-    AIR = "air"                              # ammonia, odour, dust, flue gases
-    CHEMICALS_WASTE = "chemicals_waste"      # chemical products, waste, ash
+    GENERAL = "general"  # the general condition (allmant)
+    MANURE = "manure"  # storage, handling, contracts, analysis
+    WATER = "water"  # stormwater, wash and rinse water
+    AIR = "air"  # ammonia, odour, dust, flue gases
+    CHEMICALS_WASTE = "chemicals_waste"  # chemical products, waste, ash
     NOISE = "noise"
-    MONITORING = "monitoring"                # monitoring programme, measurement
-    DECOMMISSIONING = "decommissioning"      # avveckling
+    MONITORING = "monitoring"  # monitoring programme, measurement
+    DECOMMISSIONING = "decommissioning"  # avveckling
     OTHER = "other"
 
 
@@ -85,22 +85,24 @@ class ValidityStatus(StrEnum):
 
     IN_FORCE = "in_force"
     SUPERSEDED = "superseded"
-    REVOKED = "revoked"        # set aside by ruling or revocation decision
-    LAPSED = "lapsed"          # permit never taken into use
+    REVOKED = "revoked"  # set aside by ruling or revocation decision
+    LAPSED = "lapsed"  # permit never taken into use
     UNKNOWN = "unknown"
 
 
 class DateSource(StrEnum):
     """How a validity date was determined. Drives reliability filtering."""
 
-    EXPLICIT = "explicit"                        # date stated in the decision text
+    EXPLICIT = "explicit"  # date stated in the decision text
     PROXY_DECISION_DATE = "proxy_decision_date"
-    DERIVED_LINK = "derived_link"                # via DecisionLink to a later decision
+    DERIVED_LINK = "derived_link"  # via DecisionLink to a later decision
     MANUAL = "manual"
     UNKNOWN = "unknown"
 
 
 class ExtractionMethod(StrEnum):
+    """How the text of a source document was obtained."""
+
     PDFTOTEXT = "pdftotext"
     OCR = "ocr"
     MANUAL = "manual"
@@ -124,6 +126,8 @@ class MatchMethod(StrEnum):
 
 
 class Operator(StrEnum):
+    """Comparison a quantified requirement expresses."""
+
     AT_MOST = "<="
     AT_LEAST = ">="
     EXACT = "=="
@@ -151,6 +155,7 @@ class Species(StrEnum):
 # ----------------------------------------------------------------------
 # Provenance
 # ----------------------------------------------------------------------
+
 
 class Extraction(BaseModel):
     """Provenance for one extracted row.
@@ -190,6 +195,7 @@ class Extraction(BaseModel):
 # ----------------------------------------------------------------------
 # Quantified requirement (sub-grain, nested in Condition)
 # ----------------------------------------------------------------------
+
 
 class QuantifiedRequirement(BaseModel):
     """One measurable requirement inside a condition.
@@ -231,6 +237,7 @@ class QuantifiedRequirement(BaseModel):
 # ----------------------------------------------------------------------
 # Core tables
 # ----------------------------------------------------------------------
+
 
 class Condition(BaseModel):
     """One numbered condition in one decision. The dataset's grain.
@@ -281,16 +288,14 @@ class Condition(BaseModel):
     extraction: Extraction
 
     @model_validator(mode="after")
-    def _check_interval(self) -> "Condition":
+    def _check_interval(self) -> Condition:
         """Rejects rows with an inverted validity interval."""
         if (
             self.valid_from is not None
             and self.valid_to is not None
             and self.valid_to < self.valid_from
         ):
-            raise ValueError(
-                f"{self.condition_id}: valid_to precedes valid_from"
-            )
+            raise ValueError(f"{self.condition_id}: valid_to precedes valid_from")
         return self
 
 
@@ -477,7 +482,7 @@ Rubriker som faktiskt förekommer:
 | Beslut | Rubriker över villkoren |
 | --- | --- |
 | Lidfarm 2017 | Inga villkor alls; förlängningsbeslut |
-| Motala 2021 2021 | Allmänt; Gödselhantering m.m.; Utsläpp till luft; Kemikalie- och avfallsfrågor; Buller; Övrigt |
+| Motala 2021 | Allmänt; Gödselhantering m.m.; Utsläpp till luft; Kemikalie- och avfallsfrågor; Buller; Övrigt |
 | Stora Markie 2022 | Allmänt; Omhändertagande av dagvatten; Lagring och hantering av gödsel; Utsläpp av ammoniak och luktande ämnen; Kemiska produkter och avfall; Buller; Kontroll av verksamheten; Avveckling |
 | SweHatch 2026 | Inga rubriker; villkor 1 till 13 löper numrerade utan mellanrubriker (s. 1 till 4) |
 
