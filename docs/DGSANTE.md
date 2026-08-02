@@ -254,48 +254,48 @@ Kört 2026-08-02 med `pipeline/07_parse_recommendations.py` över samtliga
 (en rad per rekommendation) och `data/dgsante_report_parse.jsonl` (en rad per
 rapport med utfallet).
 
-**9 343 rekommendationer ur 1 774 rapporter, 27 länder.** 2 414 av dem lästes
+**10 067 rekommendationer ur 1 979 rapporter, 27 länder.** 3 420 av dem lästes
 ur tvåspaltiga tabeller, se avsnittet om planerna som facit nedan.
 
 | Utfall per rapport | Antal |
 | --- | --- |
-| Parsad till rekommendationer | 1 774 |
-| Avsnitt hittat men inga poster | 834 |
-| Inget rekommendationsavsnitt | 315 |
-| Rapporten säger att den saknar rekommendation | 17 |
+| Parsad till rekommendationer | 1 979 |
+| Avsnitt hittat men inga poster | 645 |
+| Inget rekommendationsavsnitt | 297 |
+| Rapporten säger att den saknar rekommendation | 19 |
 
-De 17 sista är ett **äkta nollresultat, inte ett parsningsfel**, och hålls
+De 19 sista är ett **äkta nollresultat, inte ett parsningsfel**, och hålls
 isär i utdatat just därför.
 
-**Korsreferenserna är den knappa resursen.** Bara 489 av 2 940 rapporter, 17
+**Korsreferenserna är den knappa resursen.** Bara 671 av 2 940 rapporter, 23
 procent, skriver ut vilken slutsats en rekommendation vilar på. Praktiken
 börjar 2014 och blir aldrig heltäckande:
 
 | År | Rapporter | Med korsreferenser |
 | --- | --- | --- |
-| före 2014 | 2 043 | 0 |
-| 2014 | 113 | 17 |
-| 2015 | 112 | 47 |
-| 2016 | 110 | 46 |
-| 2017 | 103 | 36 |
-| 2018 | 109 | 53 |
-| 2019 | 93 | 48 |
-| 2020 | 53 | 35 |
-| 2021 | 88 | 47 |
-| 2022 | 74 | 39 |
-| 2023 | 71 | 42 |
-| 2024 | 82 | 50 |
-| CT-formatet | 83 | 29 |
+| före 2014 | 1 849 | 0 |
+| 2014 | 113 | 23 |
+| 2015 | 112 | 72 |
+| 2016 | 110 | 60 |
+| 2017 | 103 | 52 |
+| 2018 | 109 | 76 |
+| 2019 | 93 | 65 |
+| 2020 | 53 | 42 |
+| 2021 | 88 | 66 |
+| 2022 | 74 | 56 |
+| 2023 | 71 | 53 |
+| 2024 | 82 | 59 |
+| CT-formatet | 83 | 47 |
 
-**Grafen omfattar 1 232 rekommendationer med 1 574 kanter till slutsatser och
-3 342 kanter till iakttagelser.** Det är storleksordningen som ska stå i
-metoden, inte 4 690 och inte 9 343.
+**Grafen omfattar 2 004 rekommendationer med 2 607 kanter till slutsatser och
+5 201 kanter till iakttagelser.** Det är storleksordningen som ska stå i
+metoden, inte 4 690 och inte 10 067.
 
-**Parserns täckning mäts på den delmängd som bär grafen:** av de 489
-rapporterna parsas 446, alltså **91 procent**. Testsviten fäller om andelen
+**Parserns täckning mäts på den delmängd som bär grafen:** av de 671
+rapporterna parsas 634, alltså **94 procent**. Testsviten fäller om andelen
 faller under 85 procent.
 
-Kända begränsningar, utskrivna i stället för utjämnade: 834 rapporter har ett
+Kända begränsningar, utskrivna i stället för utjämnade: 645 rapporter har ett
 rekommendationsavsnitt vars numrering inte går att följa, oftast tvåspaltiga
 tabeller där sidnummer och radnummer blandas med rekommendationsnumren. 167
 rekommendationer bär flaggan `multiple_reference_blocks`, vilket betyder att
@@ -308,12 +308,12 @@ Kört 2026-08-02 med `pipeline/08_parse_paragraphs.py`. Rapporternas stycken är
 löpnumrerade genom hela dokumentet, och steg 08 läser dem så att kanterna från
 steg 07 får något att peka på.
 
-**75 460 stycken ur 2 689 rapporter.** Den fulla styckekorpusen är 66 MB och
+**81 292 stycken ur 2 724 rapporter.** Den fulla styckekorpusen är 66 MB och
 ligger i `.gitignore`; den återskapas genom att köra steget. Det som committas
 är `data/dgsante_graph.jsonl`: **en rad per kant med det citerade stycket
 bredvid**, alltså den slutna kedjan och 3,4 MB.
 
-**4 424 av 4 916 citerade stycknummer resolverar, alltså 90 procent.**
+**7 472 av 7 807 citerade stycknummer resolverar, alltså 96 procent.**
 
 Tre fel i vägen dit är värda att minnas, eftersom de alla gav tyst dataförlust:
 
@@ -338,8 +338,8 @@ oberoende källor om samma stycke.
 
 | Kanten citerar | Träffar rubrikklass | Motsäger | Omärkt | Resolverar inte |
 | --- | --- | --- | --- | --- |
-| slutsats (1 574) | 64 % | 22 % | 11 % | 3 % |
-| iakttagelse (3 342) | 54 % | 8 % | 24 % | 14 % |
+| slutsats (2 606) | 78 % | 13 % | 8 % | 1 % |
+| iakttagelse (5 201) | 67 % | 8 % | 19 % | 6 % |
 
 **Oenigheten reconcilieras inte.** Båda läsningarna ligger kvar i varje rad,
 tillsammans med rubriken som avgjorde, så att den som granskar ser var de
@@ -354,21 +354,21 @@ staten återger den, och den åtgärd staten åtar sig. Kolumnerna delas på den
 position rubrikraden anger, eftersom en rad annars blandar kommissionens ord
 med medlemsstatens.
 
-**1 459 planer finns för 1 084 revisioner.** Av dem läses 1 066, och de ger
-**5 652 svar som täcker 2 636 av 9 315 parsade rekommendationer i 844
+**1 459 planer finns för 1 084 revisioner.** Av dem läses 1 068, och de ger
+**5 710 svar som täcker 3 248 av 10 039 parsade rekommendationer i 844
 revisioner.** Resterande planer har en layout som inte känns igen och
 registreras som sådana i `data/dgsante_plan_parse.jsonl`; de gissas inte.
 
 **Länken vilar inte på ett delat nummer.** Planen återger rekommendationens
-lydelse, och den jämförs med rapportens egen. 1 353 av de 2 636 svaren,
-51 procent, bekräftas av att texterna stämmer överens.
+lydelse, och den jämförs med rapportens egen. 1 981 av de 3 248 svaren,
+61 procent, bekräftas av att texterna stämmer överens.
 
 | Likhet mellan planens och rapportens lydelse | Rader |
 | --- | --- |
-| 0,9 till 1,0 | 723 |
-| 0,6 till 0,9 | 933 |
-| 0,1 till 0,6 | 1 210 |
-| under 0,1 | 470 |
+| 0,9 till 1,0 | 1 076 |
+| 0,6 till 0,9 | 1 321 |
+| 0,1 till 0,6 | 1 565 |
+| under 0,1 | 128 |
 
 **Låg likhet betyder oftast att rapportparsningen är fel, inte länken.**
 Stickprov i det lägsta skiktet visar planer som återger en korrekt
@@ -394,20 +394,27 @@ Effekten är mätt mot planerna, inte uppskattad:
 
 | Mått | Före | Efter |
 | --- | --- | --- |
-| Rekommendationer | 8 365 | 9 343 |
-| Rapporter med parsade poster | 1 699 | 1 774 |
-| Länkar bekräftade av matchande text | 956 | 1 353 |
-| Rader med likhet 0,9 eller högre | 459 | 723 |
-| Rapporter där varje rad är fel | 134 | 119 |
+| Rekommendationer | 8 365 | 10 067 |
+| Rapporter med parsade poster | 1 699 | 1 979 |
+| Rapporter som skriver ut korsreferenser | 489 | 671 |
+| Länkar bekräftade av matchande text | 956 | 1 981 |
+| Rader med likhet 0,9 eller högre | 459 | 1 076 |
+| Citerade stycknummer som resolverar | 90 % | 96 % |
+| Rapporter där varje rad är fel | 134 | 50 |
 
-**Kvarvarande fel är av annat slag.** Stickprov i de 119 återstående visar
-numrerade fotnoter som ser ut som rekommendationer, alltså att fel textparti
-lästs som avsnittet. Det är nästa uppgift, och planerna är facit även där.
+**Sidbrytningen dolde en tredjedel av grafen.** Den andra rättningen kom ur
+samma facit och var enklare än väntat: `pdftotext` skriver ett **form feed**
+först på varje sidas första rad, och alla radankrade mönster i steg 07 till 09
+tillät bara blanksteg och tabb där. Varje rubrik, post, tabell och stycke som
+öppnade en sida var därmed osynligt. Elva mönster rättade; se tabellen ovan.
+
+**Kvarvarande fel:** 50 rapporter där varje rad avviker från planens lydelse,
+mot 134 före rättningarna.
 
 ## Nästa steg
 
-1. Rätta de 119 rapporter där numrerade fotnoter läses som rekommendationer.
+1. Rätta de 50 rapporter som ännu avviker helt från planernas lydelse.
 2. Sätt ihop bilagorna per revision före parsning, enligt avsnittet om
    bilagorna som sidor.
-3. Ta reda på varför 13 procent av de iakttagelse-citerade numren inte
+3. Ta reda på varför 6 procent av de iakttagelse-citerade numren inte
    resolverar; hypotesen är stycken som tappats vid spaltbrytning.

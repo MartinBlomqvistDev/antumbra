@@ -26,10 +26,15 @@ oberoende källa är det enda som fäller tysta fel.
 
 ## Konsekvenser
 
-Rättningen av tvåspaltiga tabeller gav 978 fler rekommendationer och lyfte
-antalet textbekräftade länkar från 956 till 1 353. Kvar står 119 rapporter
-där numrerade fotnoter läses som rekommendationer; de är kända, räknade och
-utskrivna i `docs/DGSANTE.md` i stället för utjämnade.
+Facit gav två rättningar. Den första läser tvåspaltiga tabeller kolumnvis.
+Den andra kom ur samma mätning: sidbrytningens form feed gjorde varje rubrik,
+post och stycke som öppnade en sida osynlig för elva radankrade mönster i steg
+07 till 09.
+
+Tillsammans: 10 067 rekommendationer i stället för 8 365, 1 981 textbekräftade
+länkar i stället för 956, och grafens resolvering 96 procent i stället för 90.
+Kvar står 50 rapporter som avviker helt från planernas lydelse; de är kända,
+räknade och utskrivna i `docs/DGSANTE.md` i stället för utjämnade.
 
 Enhetstesterna i `tests/test_recommendation_parser.py` bevakar tabellfallet
 utan att korpusen behöver finnas, inklusive regeln att kolumner som inte går
