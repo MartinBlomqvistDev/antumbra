@@ -90,6 +90,20 @@ def annex_classes() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def recommendations() -> list[dict]:
+    """One record per recommendation parsed out of a report."""
+    path = ROOT / "data" / "dgsante_recommendations.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def report_parse() -> list[dict]:
+    """One record per report with the outcome of parsing it."""
+    path = ROOT / "data" / "dgsante_report_parse.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def ocr_index() -> list[dict]:
     """One record per annex put through OCR."""
     path = ROOT / "data" / "dgsante_ocr_index.jsonl"
@@ -227,6 +241,64 @@ class TestAnnexClassificationHoldsAgainstHandReading:
     def test_action_plans_stay_a_small_minority(self, annex_classes):
         plans = sum(1 for r in annex_classes if r["class"] in self.RESPONSES)
         assert plans / len(annex_classes) < 0.10
+
+
+class TestTheCitationGraphIsWhatTheReportsSay:
+    """Parsed recommendations must stay tied to the documents they came from.
+
+    The graph is the analytic payload of the DG SANTE layer, so the numbers
+    quoted about its size have to hold, and an audit that made no
+    recommendation has to stay visible as a zero rather than a gap.
+    """
+
+    def test_every_report_has_an_outcome(self, manifest, report_parse):
+        reports = {m["path"] for m in manifest if m["kind"] == "report"}
+        assert {r["path"] for r in report_parse} == reports
+        assert len(report_parse) == 2940
+
+    def test_recommendations_belong_to_parsed_reports(
+        self, recommendations, report_parse
+    ):
+        parsed = {r["ref"] for r in report_parse if r["outcome"] == "parsed"}
+        assert {r["ref"] for r in recommendations} <= parsed
+        assert len(recommendations) > 8000
+
+    def test_numbering_runs_from_one_without_gaps(self, recommendations):
+        """Grouped by file, not by audit: 15 audits have two English reports.
+
+        Where an audit was reissued, both files carry their own numbering
+        from one, so grouping by reference would look like a gap.
+        """
+        by_file: dict[str, list[int]] = {}
+        for row in recommendations:
+            by_file.setdefault(row["path"], []).append(row["number"])
+        for path, found in by_file.items():
+            assert found == list(range(1, len(found) + 1)), path
+
+    def test_no_recommendation_is_empty(self, recommendations):
+        assert all(len(r["text"]) >= 40 for r in recommendations)
+
+    def test_cross_references_are_paragraph_numbers_not_citations(
+        self, recommendations
+    ):
+        """Article and regulation numbers must never enter the graph.
+
+        A regulation is cited as "2017/625", and a pattern that read digits
+        greedily once turned that into edges numbered 201, 7 and 625.
+        """
+        for row in recommendations:
+            for number in row["based_on_conclusions"] + row["associated_findings"]:
+                assert 1 <= number <= 300, row["ref"]
+            assert len(row["based_on_conclusions"]) <= 10
+
+    def test_an_audit_without_recommendations_stays_visible(self, report_parse):
+        stated = [r for r in report_parse if r["outcome"] == "states_no_recommendation"]
+        assert stated, "an explicit zero must never be folded into a parse failure"
+
+    def test_recall_on_the_reports_that_carry_the_graph(self, report_parse):
+        stating = [r for r in report_parse if r.get("section_states_links")]
+        parsed = [r for r in stating if r["outcome"] == "parsed"]
+        assert len(parsed) / len(stating) >= 0.85
 
 
 class TestOcrIndexIsHonestAboutQuality:
