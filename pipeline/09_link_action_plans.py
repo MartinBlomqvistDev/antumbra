@@ -222,9 +222,14 @@ def parse_plan(record: dict, expected: dict[int, str]) -> list[dict]:
     header_line = header.group(0)
     table = text[header.end() :]
 
-    # Where the response column starts, read off the header itself. Some
-    # plans have only a number and a response, and then there is no left
-    # column to compare against the report.
+    # Where the response column starts, read off the header itself; the body's
+    # blank channel is the fallback where the header names only one column.
+    #
+    # Letting the report's own wording pick between the two was tried and
+    # measured on 180 plans: it made the split worse, 0.678 against 0.695 mean
+    # containment. Choosing per plan overfits, since a plan whose numbering
+    # has drifted rewards whichever split happens to capture more characters.
+    # The negative result is recorded here rather than the idea repeated.
     gutter = None
     after_recommendation = header_line.lower().find("recommendation")
     if after_recommendation != -1:

@@ -90,7 +90,7 @@ till 2013, hade rekommendationerna i en tvåspaltig tabell vars vänsterkolumn
 bara innehåller numren, och vid sidbrytning skildes numren från sin text.
 Radvis läsning fann då **en** rekommendation där rapporten har fem. Efter att
 steg 07 läser sådana tabeller kolumnvis, och efter en andra rättning ur samma
-facit (se nedan) steg rekommendationerna från 8 365 till 10 067, textbekräftade
+facit (se nedan) steg rekommendationerna från 8 365 till 11 829, textbekräftade
 länkar från 956 till 1 981, och rapporter där varje rad är fel föll från 134
 till 50.
 
@@ -116,16 +116,18 @@ stycke under en slutsatsrubrik, 13 procent motsäger och 8 procent är omärkta.
 Oenigheten redovisas per rad i stället för att jämkas ihop.
 
 **Citatgrafen är mycket mindre än korpusen.** Verifierat 2026-08-02 genom att
-parsa samtliga 2 940 engelska EU-27-rapporter. **10 067 rekommendationer ur
-1 979 rapporter**, men bara **671 rapporter, 23 procent, skriver ut vilken
+parsa samtliga 2 940 engelska EU-27-rapporter. **11 829 rekommendationer ur
+2 312 rapporter**, men bara **671 rapporter, 23 procent, skriver ut vilken
 slutsats en rekommendation vilar på.** Praktiken börjar **2014**; före det
 finns noll korsreferenser. Grafen omfattar 2 004 rekommendationer, 2 607
 kanter till slutsatser och 5 201 till iakttagelser. Det är storleksordningen
-som gäller, inte 4 690 och inte 10 067. 19 rapporter skriver att de saknar
+som gäller, inte 4 690 och inte 11 829. 19 rapporter skriver att de saknar
 rekommendation, vilket är ett nollresultat och inte ett parsningsfel.
 Mallen i `docs/DGSANTE.md` var verifierad på en rapport och gäller inte alla
 eror: rekommendationerna ligger under rubrik 9 i äldre rapporter och rubrik 8
-från omkring 2007. Parsern täcker 94 procent av de rapporter som bär grafen.
+från omkring 2007, och de äldre numrerar rekommendationerna hierarkiskt
+("7.1.1") i stället för flackt. Parsern läser tre layouter och täcker 94
+procent av de rapporter som bär grafen, 88 procent av alla med ett avsnitt.
 
 **De numrerade bilagorna är sidor, inte dokument.** Verifierat 2026-08-02 mot
 OCR-texten: 41 procent av de skannade bilagorna inleds med ett faxhuvud, och

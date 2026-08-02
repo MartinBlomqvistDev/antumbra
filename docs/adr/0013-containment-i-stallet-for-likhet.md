@@ -42,3 +42,11 @@ inläckta ord ger lågt symmetriskt värde och högt containment-värde.
 Måttet kan i princip överskatta korta och generiska rekommendationer. Därför
 prövades det mot handläst stickprov innan det byttes, och tröskeln lämnades
 oförändrad på 0,6.
+
+**Ett nollresultat, 2026-08-03.** Eftersom containment mäter hur väl en
+uppdelning återger rapporten låg det nära till hands att låta måttet välja
+mellan de två möjliga kolumnrännorna i steg 09. Mätt på 180 planer blev det
+**sämre**: 0,678 mot 0,695 i genomsnittlig containment. Att välja per plan
+överanpassar, eftersom en plan vars numrering glidit belönar den uppdelning som
+råkar fånga flest tecken. Ändringen återställdes och resultatet står som
+kommentar i koden, så att idén inte prövas om i tron att den är oprövad.

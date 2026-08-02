@@ -78,10 +78,6 @@ MIN_ITEM_LETTERS = 40
 # not recognised the cap stops the parser from swallowing the whole document.
 MAX_SECTION_CHARS = 25_000
 
-# The reference lists are written as "31", "17 and 18", "6, 42" and also as
-# ranges: "29-31, 50 and 71". The hyphen has to be inside the captured class
-# or the list is silently cut short at the first range, which loses edges of
-# the graph with nothing to show that anything went missing.
 # The repeated table header, which lands inside an item when the table runs
 # over a page. The number sign is written "No.", "N°." or "Nº." depending on
 # the report, and matching only the first form left the other two in the text:
@@ -102,6 +98,14 @@ TABLE_HEADER = re.compile(
 PAGE_NUMBER = re.compile(r"^[ \t\f]*\d{1,3}[ \t\f]*$", re.M)
 
 MIN_BLOCK_LETTERS = 20
+
+# The older reports number their recommendations inside the section's own
+# hierarchy: "9.1. To the competent authorities of Italy" opens the block and
+# "9.1.1", "9.1.2" are the recommendations under it. 337 reports are written
+# this way, and a parser that only knows flat numbering reads none of them.
+HIERARCHICAL = re.compile(
+    r"^[ \t\f]{0,16}(\d{1,2}(?:\.\d{1,2}){1,3})\.?[ \t]+(?=[A-Z(])", re.M
+)
 
 # No report numbers its paragraphs beyond this. A reference above it comes
 # from a typo or a doubled digit in the source: one report cites "conclusions
@@ -190,6 +194,55 @@ def numbers(blob: str) -> list[int]:
         else:
             found.extend((start, stop))
     return found
+
+
+def split_hierarchical(section: str) -> list[tuple[int, str, str]]:
+    """Read recommendations numbered inside the section's own hierarchy.
+
+    The level that carries the recommendations is the one whose last
+    component counts up from one, and where several levels do, the one with
+    most entries wins. The document's own label is kept beside a sequential
+    number so the two numbering schemes do not have to be reconciled.
+
+    Args:
+        section: Text of the recommendations section.
+
+    Returns:
+        One (sequential number, label, text) triple per recommendation.
+    """
+    marks = [(m.start(), m.end(), m.group(1)) for m in HIERARCHICAL.finditer(section)]
+    if len(marks) < 2:
+        return []
+
+    by_depth: dict[int, list[tuple[int, int, str]]] = {}
+    for start, end, label in marks:
+        by_depth.setdefault(label.count("."), []).append((start, end, label))
+
+    # The recommendations are the leaves, so the deepest level that yields a
+    # run of at least two wins. Taking the level with most entries instead
+    # would read "9.1 To the competent authorities of Italy" as one of them.
+    best: list[tuple[int, int, str]] = []
+    for depth in sorted(by_depth, reverse=True):
+        kept: list[tuple[int, int, str]] = []
+        expected = 1
+        for start, end, label in by_depth[depth]:
+            tail = label.rsplit(".", 1)[-1]
+            if tail.isdigit() and int(tail) == expected:
+                kept.append((start, end, label))
+                expected += 1
+        if len(kept) >= 2:
+            best = kept
+            break
+    if len(best) < 2:
+        return []
+
+    items: list[tuple[int, str, str]] = []
+    for index, (_, end, label) in enumerate(best):
+        stop = best[index + 1][0] if index + 1 < len(best) else len(section)
+        body = " ".join(section[end:stop].split())
+        if sum(c.isalpha() for c in body) >= MIN_ITEM_LETTERS:
+            items.append((len(items) + 1, label, body))
+    return items if len(items) >= 2 else []
 
 
 def in_range(number: int) -> bool:
@@ -349,10 +402,18 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
     # look fine on the totals.
     graph = bool(CONCLUSIONS.search(section))
 
-    items = split_table(section)
-    method = "two_column_table" if items else "numbered_lines"
-    if not items:
-        items = split_items(section)
+    labelled = [(number, str(number), body) for number, body in split_table(section)]
+    method = "two_column_table"
+    if not labelled:
+        labelled = [
+            (number, str(number), body) for number, body in split_items(section)
+        ]
+        method = "numbered_lines"
+    if not labelled:
+        labelled = split_hierarchical(section)
+        method = "hierarchical"
+    items = [(number, body) for number, _, body in labelled]
+    labels = {number: label for number, label, _ in labelled}
     if not items:
         return (
             {
@@ -382,6 +443,7 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
             {
                 **base,
                 "number": number,
+                "number_label": labels[number],
                 "text": " ".join(body.split()),
                 "legal_basis": (
                     " ".join(legal_match.group(1).split())[:400]

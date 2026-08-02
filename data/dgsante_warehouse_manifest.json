@@ -96,7 +96,7 @@
     },
     {
       "table": "fact_recommendation",
-      "rows": 10067,
+      "rows": 11829,
       "columns": [
         {
           "name": "recommendation_key",
@@ -218,7 +218,7 @@
     }
   ],
   "measures": {
-    "recommendations": 10067,
+    "recommendations": 11829,
     "recommendations_stating_their_basis": 2004,
     "recommendations_answered": 3248,
     "citations": 7806,

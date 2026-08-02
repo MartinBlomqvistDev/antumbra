@@ -198,6 +198,43 @@ class TestTheTwoColumnTable:
         assert parser.split_table(section) == []
 
 
+class TestHierarchicalNumbering:
+    """The older reports number recommendations inside the section hierarchy.
+
+    A parser that only knew flat numbering read none of the 337 reports
+    written this way, and their sections were recorded as holding no items.
+    """
+
+    SECTION = (
+        "7.1. To the Competent Authorities of Croatia:\n"
+        "7.1.1. To define the role of the Veterinary Stations and of the\n"
+        "       authorised veterinary inspectors within the export plants.\n"
+        "7.1.2. To take action to rectify structural and hygienic deficiencies\n"
+        "       seen in some of the plants that the mission visited.\n"
+        "7.1.3. To ensure that the approval procedure is applied consistently\n"
+        "       across all of the establishments concerned.\n"
+    )
+
+    def test_the_leaves_are_the_recommendations(self):
+        items = parser.split_hierarchical(self.SECTION)
+        assert [n for n, _, _ in items] == [1, 2, 3]
+        assert [label for _, label, _ in items] == ["7.1.1", "7.1.2", "7.1.3"]
+
+    def test_the_heading_above_them_is_not_counted(self):
+        for _, label, text in parser.split_hierarchical(self.SECTION):
+            assert label != "7.1"
+            assert "To the Competent Authorities" not in text
+
+    def test_the_documents_own_label_is_kept(self):
+        items = parser.split_hierarchical(self.SECTION)
+        assert items[1][1] == "7.1.2"
+        assert "rectify structural" in items[1][2]
+
+    def test_a_single_entry_is_not_a_list(self):
+        section = "8.1. To the competent authorities of Spain, action is needed.\n"
+        assert parser.split_hierarchical(section) == []
+
+
 class TestAPageBreakDoesNotHideAnything:
     """A form feed sits at the head of the first line of every page.
 

@@ -36,6 +36,11 @@ länkar i stället för 956, och grafens resolvering 96 procent i stället för 
 Kvar står 50 rapporter som avviker helt från planernas lydelse; de är kända,
 räknade och utskrivna i `docs/DGSANTE.md` i stället för utjämnade.
 
+**Tillägg 2026-08-03:** en tredje parsväg lades till för de äldre rapporternas
+hierarkiska numrering ("7.1.1" i stället för "1."), som 337 rapporter använder.
+Talen ovan gäller före den ändringen; aktuella tal står i `docs/DGSANTE.md`.
+Rekommendationerna är nu 11 829 ur 2 312 rapporter.
+
 Enhetstesterna i `tests/test_recommendation_parser.py` bevakar tabellfallet
 utan att korpusen behöver finnas, inklusive regeln att kolumner som inte går
 ihop lämnas oparsade i stället för att paras på en gissning.
