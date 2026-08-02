@@ -1,0 +1,41 @@
+# Source documents. Fetched by the pipeline; they do not belong in git.
+# Jordbruksverket file names contain the names of natural persons. They are
+# never committed: keeping them out is far easier than scrubbing history later.
+pdf/
+raw/
+ocr/
+*.pdf
+
+# Internal working files. They stay on disk but never in the repository:
+# they describe why the project exists in career terms, how it is framed for
+# different audiences, and which tooling is used. None of that belongs in a
+# public research record.
+CLAUDE.md
+STATUS.md
+
+# Large derived files
+data/*.parquet
+data/*.duckdb
+*.pbix
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+service-account*.json
+
+# Editors and OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

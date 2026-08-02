@@ -1,0 +1,2 @@
+# Data contracts. The DG SANTE harvest itself uses only the standard library.
+pydantic>=2.12
