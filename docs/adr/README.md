@@ -13,3 +13,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0004](0004-proveniensmanifest-i-stallet-for-dokument.md) | Proveniensmanifest i stället för committade dokument | beslutad |
 | [0005](0005-privat-repo-tills-datainsamlingen-ar-stangd.md) | Privat repo tills datainsamlingen är stängd | beslutad |
 | [0006](0006-bigquery-dbt-och-dimensionsmodell.md) | BigQuery, dbt och dimensionsmodell | beslutad |
+| [0007](0007-klassning-pa-dokumentets-egna-ord.md) | Bilagor klassas på dokumentets egna ord | beslutad |
