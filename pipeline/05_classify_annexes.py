@@ -28,6 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "dgsante_manifest.jsonl"
 OUT = ROOT / "data" / "dgsante_annex_classes.jsonl"
+OCR_DIR = ROOT / "ocr" / "dgsante"
 
 IMAGE_FORMATS = {".gif", ".jpg", ".jpeg", ".tif", ".tiff"}
 MIN_CHARS = 40
@@ -232,12 +233,22 @@ def html_text(path: Path) -> str:
 
 
 def extract(path: Path) -> str:
-    """Extract whatever text a downloaded annex carries."""
+    """Extract whatever text a downloaded annex carries.
+
+    A scanned annex has no text of its own. When step 06 has read one, its
+    output is used here instead, so that re-running this step reclassifies
+    what OCR made readable.
+    """
     suffix = path.suffix.lower()
     if suffix == ".pdf":
-        return pdf_text(path)
-    if suffix in {".html", ".htm"}:
+        text = pdf_text(path)
+        if text.strip():
+            return text
+    elif suffix in {".html", ".htm"}:
         return html_text(path)
+    sidecar = OCR_DIR / (path.stem + ".txt")
+    if sidecar.exists():
+        return sidecar.read_text(encoding="utf-8", errors="replace")
     return ""
 
 

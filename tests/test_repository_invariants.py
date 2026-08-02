@@ -90,6 +90,13 @@ def annex_classes() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def ocr_index() -> list[dict]:
+    """One record per annex put through OCR."""
+    path = ROOT / "data" / "dgsante_ocr_index.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def annex_labels() -> list[dict]:
     """Hand-read classes for the held-out samples."""
     path = ROOT / "data" / "dgsante_annex_labels.jsonl"
@@ -220,6 +227,28 @@ class TestAnnexClassificationHoldsAgainstHandReading:
     def test_action_plans_stay_a_small_minority(self, annex_classes):
         plans = sum(1 for r in annex_classes if r["class"] in self.RESPONSES)
         assert plans / len(annex_classes) < 0.10
+
+
+class TestOcrIndexIsHonestAboutQuality:
+    """OCR output is evidence of varying quality, and says so per file."""
+
+    def test_every_ocr_record_belongs_to_a_known_annex(self, annex_classes, ocr_index):
+        known = {r["path"] for r in annex_classes}
+        assert {r["path"] for r in ocr_index} <= known
+        assert len(ocr_index) == 1018
+
+    def test_confidence_is_recorded_and_plausible(self, ocr_index):
+        readable = [r for r in ocr_index if not r["error"]]
+        assert readable
+        assert all(0.0 <= r["mean_confidence"] <= 100.0 for r in readable)
+        assert all(r["words"] > 0 for r in readable)
+
+    def test_an_unreadable_file_is_reported_not_hidden(self, ocr_index):
+        for record in ocr_index:
+            if record["error"]:
+                assert record["words"] == 0
+            else:
+                assert record["text_path"]
 
 
 class TestManifestCoversTheDownloadedCorpus:

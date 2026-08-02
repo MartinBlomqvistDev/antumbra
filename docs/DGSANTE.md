@@ -170,13 +170,14 @@ klassningen vilar på. Resultat i `data/dgsante_annex_classes.jsonl`.
 
 | Klass | Antal |
 | --- | --- |
-| Kräver OCR (ingen textremsa) | 1 018 |
-| Kommentarer på rapportutkastet | 577 |
-| Oklassad text | 189 |
+| Oklassad text | 882 |
+| Kommentarer på rapportutkastet | 808 |
+| Korrespondens | 155 |
 | Åtgärdsplan | 89 |
-| Korrespondens | 86 |
 | Redovisning av vidtagna åtgärder | 13 |
-| Lagtext | 1 |
+| Kräver OCR | 13 |
+| Lagtext | 11 |
+| Datatabell | 2 |
 | Kräver konvertering (äldre Word) | 1 |
 
 **Svaret på frågan är nej: de numrerade bilagorna är inte åtgärdsplaner.** De
@@ -200,9 +201,48 @@ ett försiktigt fel; **noll dokument klassades som plan utan att vara det.**
 Gränsfallet som återstår är brev som bifogar kommentarer: brevet och dess
 innehåll är olika saker och klassningen väljer innehållet.
 
+## OCR på de skannade bilagorna
+
+Kört 2026-08-02 med `pipeline/06_ocr_annexes.py`: Tesseract 5.4 i
+medlemsstatens språk plus engelska, 21 språkpaket. **1 017 av 1 018 lästa,
+1 886 sidor, 568 905 ord.** Konfidens per fil i `data/dgsante_ocr_index.jsonl`;
+texten ligger under `ocr/`, som är gitignorerad.
+
+| Genomsnittlig ordkonfidens | Filer |
+| --- | --- |
+| 90 och över | 277 |
+| 80 till 89 | 438 |
+| 70 till 79 | 178 |
+| 50 till 69 | 99 |
+| under 50 | 24 |
+
+**Två filer går inte att läsa, och båda är trasiga hos kommissionen, inte hos
+oss.** `annex/download/2603` är en avkortad GIF som avkodar till en helsvart
+sida; den nedladdade filen är byte-identisk med vad servern levererar, så
+skadan finns i källan. `annex/download/3339` heter `.pdf` men innehåller ett
+OLE-dokument från Office.
+
+**OCR avslöjade inga nya åtgärdsplaner.** Bland de 1 017 nylästa filerna finns
+noll dokument som namnger sig som plan. Slutsatsen ovan står alltså kvar efter
+att materialet lästs, inte bara efter att det räknats.
+
+## Bilagorna är sidor, inte dokument
+
+Klassningen träffar bara 45 procent av filerna, och det beror inte i första
+hand på OCR-kvaliteten: även bland filer med konfidens över 90 klassas bara
+41 procent. Förklaringen syns i texten. **41 procent av de OCR-lästa
+bilagorna inleds med ett faxhuvud**, och de numrerade bilagorna till en
+revision från den äldre eran är i regel **sidorna i en och samma faxade
+inlaga**, inte separata dokument. Bara sida ett bär rubriken som säger vad
+inlagan är; sida fyra fortsätter mitt i en mening.
+
+**Rätt analysenhet är därför revisionen, inte filen.** Räknat per revision
+namnger minst en bilaga dokumentet i **831 av 1 034 fall, alltså 80 procent.**
+Den siffran, inte 45 procent, är den som ska stå i metoden, och parsningen
+ska sätta ihop bilagorna per revision innan den läser dem.
+
 ## Nästa steg
 
-1. **OCR på 1 018 bilagor**, varav 838 skannade GIF-sidor. Ingen OCR-motor är
-   installerad lokalt per 2026-08-02.
+1. Sätt ihop bilagorna per revision före parsning, enligt avsnittet ovan.
 2. Designa parsningen av citatgrafen mot verklig korpus, alltså kopplingen
    iakttagelse till slutsats till rekommendation till åtgärdsplan.

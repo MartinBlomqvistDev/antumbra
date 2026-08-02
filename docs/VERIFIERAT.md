@@ -72,6 +72,22 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
+**De numrerade bilagorna är sidor, inte dokument.** Verifierat 2026-08-02 mot
+OCR-texten: 41 procent av de skannade bilagorna inleds med ett faxhuvud, och
+bilagorna till en revision från den äldre eran är sidorna i en och samma
+faxade inlaga. Bara sida ett bär rubrik. Klassning per fil träffar därför 45
+procent, medan minst en bilaga namnger dokumentet i **831 av 1 034 revisioner,
+alltså 80 procent**. Analysenheten är revisionen, inte filen.
+
+**OCR kört på 1 017 av 1 018 filer**, 1 886 sidor, 568 905 ord, med Tesseract
+5.4 i medlemsstatens språk plus engelska. Konfidens per fil i
+`data/dgsante_ocr_index.jsonl`; 715 filer ligger på 80 eller över, 123 under
+70. **Två filer är trasiga hos kommissionen:** `annex/download/2603` är en
+avkortad GIF som avkodar till en svart sida och är byte-identisk med vad
+servern levererar, och `annex/download/3339` heter `.pdf` men är ett
+OLE-dokument från Office. OCR-text används för klassning och sökning, aldrig
+för ordagranna citat; citat hämtas ur källdokumentet med sidhänvisning.
+
 **De numrerade bilagorna är inte åtgärdsplaner.** Verifierat 2026-08-02 genom
 att öppna samtliga 1 974 i EU-27, se `docs/DGSANTE.md` för fördelningen. De är
 i huvudsak medlemsstaternas kommentarer på rapportutkastet. Åtgärdsplaner är
@@ -79,6 +95,8 @@ i huvudsak medlemsstaternas kommentarer på rapportutkastet. Åtgärdsplaner är
 `ec.europa.eu/food/fvo/ap/` svarar **404**; planerna är alltså borta från
 kommissionens webb. Klassningen träffar 85 procent mot 40 handlästa bilagor
 (`data/dgsante_annex_labels.jsonl`), med noll dokument felaktigt kallade plan.
+**Slutsatsen står kvar efter OCR:** bland de 1 017 nylästa filerna namnger sig
+noll som åtgärdsplan.
 
 ---
 
