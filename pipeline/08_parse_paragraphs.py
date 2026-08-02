@@ -41,12 +41,14 @@ GRAPH_TEXT_CHARS = 700
 
 # A numbered paragraph. Indentation varies with the layout, so it is not
 # pinned; what is required is a capital opening, which keeps table cells,
-# figures and legal article numbers out.
-PARAGRAPH = re.compile(r"^[ \t]{0,24}(\d{1,3})\.[ \t]+(?=[A-Z(\"'])", re.M)
+# figures and legal article numbers out. The form feed is in the class
+# because a page break puts one at the head of the line, and without it every
+# heading and paragraph that opens a page is invisible to the parser.
+PARAGRAPH = re.compile(r"^[ \t\f]{0,24}(\d{1,3})\.[ \t]+(?=[A-Z(\"'])", re.M)
 
 # A top-level section heading, used to say which section a paragraph sits in.
 SECTION = re.compile(
-    r"^[ \t]{0,12}(\d{1,2})[.\s]{1,4}([A-Z][A-Z \-&/,']{4,60})[ \t]*$", re.M
+    r"^[ \t\f]{0,12}(\d{1,2})[.\s]{1,4}([A-Z][A-Z \-&/,']{4,60})[ \t]*$", re.M
 )
 
 # Section 5 is titled "FINDINGS AND CONCLUSIONS" and holds both, so the
@@ -57,7 +59,7 @@ SECTION = re.compile(
 # instead, then labelled every paragraph in section 5 a finding by default,
 # which the reports' own citations contradicted.
 LABEL_HEADING = re.compile(
-    r"^[ \t]{0,24}((?:overall[ \t]+)?(?:findings?|conclusions?)\b[^\n]{0,60})[ \t]*$",
+    r"^[ \t\f]{0,24}((?:overall[ \t]+)?(?:findings?|conclusions?)\b[^\n]{0,60})[ \t]*$",
     re.M | re.I,
 )
 
@@ -66,7 +68,7 @@ LABEL_HEADING = re.compile(
 # heading. Without it a "Conclusions on ..." heading kept labelling paragraphs
 # in the sub-sections that followed, and the reports' own citations showed it.
 SUBSECTION = re.compile(
-    r"^[ \t]{0,16}\d{1,2}\.\d{1,2}\.?[ \t]+([A-Za-z][^\n]{3,70})[ \t]*$", re.M
+    r"^[ \t\f]{0,16}\d{1,2}\.\d{1,2}\.?[ \t]+([A-Za-z][^\n]{3,70})[ \t]*$", re.M
 )
 
 CONCLUSION_WORD = re.compile(r"^\s*(?:overall\s+)?conclusions?\b", re.I)

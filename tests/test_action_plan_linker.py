@@ -64,6 +64,20 @@ class TestFindingTheGutter:
         assert parser.find_gutter(lines) is None
 
 
+class TestAPageBreakDoesNotHideAnything:
+    """The form feed that opens each page must not mask a row or a header."""
+
+    def test_a_table_header_at_the_top_of_a_page_is_found(self):
+        assert parser.HEADER.search("\fN°  Recommendation   Action Proposed\n")
+
+    def test_a_row_at_the_top_of_a_page_opens_a_row(self):
+        table = (
+            "1   To ensure that officials are appropriately trained in sampling.\n"
+            "\f2   To ensure that the database is operational and holds movements.\n"
+        )
+        assert [n for n, _ in parser.split_rows(table)] == [1, 2]
+
+
 class TestComparingTheTexts:
     def test_the_same_wording_scores_high(self):
         report = (

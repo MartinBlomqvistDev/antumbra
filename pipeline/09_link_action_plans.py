@@ -37,7 +37,7 @@ OUT_PLANS = ROOT / "data" / "dgsante_plan_parse.jsonl"
 # column begins from the header is far more reliable than guessing a gutter
 # from the body, where a short answer can leave a whole column blank.
 HEADER = re.compile(
-    r"^[ \t]*N[^\n]{0,4}\s+(?:Recommendation|Competent Authority Response)[^\n]*$",
+    r"^[ \t\f]*N[^\n]{0,4}\s+(?:Recommendation|Competent Authority Response)[^\n]*$",
     re.M | re.I,
 )
 RESPONSE_COLUMN = re.compile(
@@ -45,7 +45,7 @@ RESPONSE_COLUMN = re.compile(
 )
 
 # A row opens with the recommendation number at the start of a line.
-ROW = re.compile(r"^[ \t]{0,8}(\d{1,2})[.)]?[ \t]+(?=\S)", re.M)
+ROW = re.compile(r"^[ \t\f]{0,8}(\d{1,2})[.)]?[ \t]+(?=\S)", re.M)
 
 MIN_ROW_LETTERS = 30
 GUTTER_MIN_WIDTH = 3

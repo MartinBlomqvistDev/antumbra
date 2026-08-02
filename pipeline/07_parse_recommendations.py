@@ -37,10 +37,10 @@ OUT_REPORTS = ROOT / "data" / "dgsante_report_parse.jsonl"
 # page number, so a heading may not contain dots or digits after its own
 # number; without that the parser reads the contents page as the section.
 HEADING = re.compile(
-    r"^[ \t]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b[^\n.\d]*$", re.M | re.I
+    r"^[ \t\f]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b[^\n.\d]*$", re.M | re.I
 )
 HEADING_LOOSE = re.compile(
-    r"^[ \t]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b.*$", re.M | re.I
+    r"^[ \t\f]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b.*$", re.M | re.I
 )
 
 # An audit that found nothing worth recommending says so in plain words. This
@@ -66,7 +66,7 @@ TAIL = re.compile(
 # What follows must read like the start of a sentence: page numbers, table
 # cells and footnote markers also begin a line with a digit, and without this
 # they split a recommendation in two.
-ITEM = re.compile(r"^[ \t]*\(?(\d{1,2})[).]?[ \t]*(?=\n[ \t]*[A-Z(]|[A-Z(])", re.M)
+ITEM = re.compile(r"^[ \t\f]*\(?(\d{1,2})[).]?[ \t]*(?=\n[ \t\f]*[A-Z(]|[A-Z(])", re.M)
 
 # A recommendation carries at least this many letters. Anything shorter is a
 # stray number that happened to fall in sequence. The bar is deliberately low:
@@ -91,13 +91,19 @@ NOISE = re.compile(r"\s*\d{0,3}\s*No\.?\s+Recommendation\s*", re.I)
 # recommendation where there are five. The action plans, which restate each
 # recommendation, showed this on 134 reports.
 TABLE_HEADER = re.compile(
-    r"^[ \t]*N\S{0,3}[ \t]{2,}(Recommendation)[ \t]*$", re.M | re.I
+    r"^[ \t\f]*N\S{0,3}[ \t]{2,}(Recommendation)[ \t]*$", re.M | re.I
 )
 
 # A page number left behind between the rows of such a table.
-PAGE_NUMBER = re.compile(r"^[ \t]*\d{1,3}[ \t]*$", re.M)
+PAGE_NUMBER = re.compile(r"^[ \t\f]*\d{1,3}[ \t\f]*$", re.M)
 
 MIN_BLOCK_LETTERS = 20
+
+# No report numbers its paragraphs beyond this. A reference above it comes
+# from a typo or a doubled digit in the source: one report cites "conclusions
+# 35 and 5050". Such a number is dropped rather than admitted to the graph,
+# and the row is flagged so the loss is visible instead of silent.
+MAX_PARAGRAPH_REFERENCE = 300
 
 # A block holding nothing but the cross-reference line belongs to the
 # recommendation above it. Counted on its own it becomes a recommendation
@@ -180,6 +186,11 @@ def numbers(blob: str) -> list[int]:
         else:
             found.extend((start, stop))
     return found
+
+
+def in_range(number: int) -> bool:
+    """Whether a cited number can be a paragraph of a report."""
+    return 1 <= number <= MAX_PARAGRAPH_REFERENCE
 
 
 def split_table(section: str) -> list[tuple[int, str]]:
@@ -354,6 +365,15 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
         conclusion_match = CONCLUSIONS.search(body)
         finding_match = FINDINGS.search(body)
         legal_match = LEGAL_BASIS.search(body)
+        cited_conclusions = (
+            numbers(conclusion_match.group(1)) if conclusion_match else []
+        )
+        cited_findings = numbers(finding_match.group(1)) if finding_match else []
+        kept_conclusions = [n for n in cited_conclusions if in_range(n)]
+        kept_findings = [n for n in cited_findings if in_range(n)]
+        dropped = (len(cited_conclusions) - len(kept_conclusions)) + (
+            len(cited_findings) - len(kept_findings)
+        )
         rows.append(
             {
                 **base,
@@ -364,12 +384,9 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
                     if legal_match
                     else None
                 ),
-                "based_on_conclusions": (
-                    numbers(conclusion_match.group(1)) if conclusion_match else []
-                ),
-                "associated_findings": (
-                    numbers(finding_match.group(1)) if finding_match else []
-                ),
+                "based_on_conclusions": kept_conclusions,
+                "associated_findings": kept_findings,
+                "references_out_of_range": dropped,
                 # Two-column layouts sometimes run several recommendations
                 # into one block. Where that happened the links belong to the
                 # first of them; the flag says so rather than hiding it.

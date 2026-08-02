@@ -198,6 +198,34 @@ class TestTheTwoColumnTable:
         assert parser.split_table(section) == []
 
 
+class TestAPageBreakDoesNotHideAnything:
+    """A form feed sits at the head of the first line of every page.
+
+    Anchoring on spaces and tabs alone made every heading, item and table
+    that opened a page invisible. It cost about a third of the citation
+    graph, and nothing in the output showed it.
+    """
+
+    def test_a_heading_at_the_top_of_a_page_is_found(self):
+        text = "some closing text\n\f8 RECOMMENDATIONS\n\nThe CA should act.\n"
+        assert parser.HEADING.search(text)
+
+    def test_an_item_at_the_top_of_a_page_opens_a_recommendation(self):
+        section = (
+            "1. Ensure that official controls are carried out on a risk basis\n"
+            "   and that results are recorded in the national database.\n"
+            "\f2. Ensure that laboratories are accredited as set out in the\n"
+            "   Regulation on official controls.\n"
+        )
+        assert [n for n, _ in parser.split_items(section)] == [1, 2]
+
+    def test_a_table_header_at_the_top_of_a_page_is_recognised(self):
+        assert parser.TABLE_HEADER.search("\fN°.     Recommendation\n")
+
+    def test_a_page_number_after_a_page_break_is_stripped(self):
+        assert parser.PAGE_NUMBER.search("\f   21   \n")
+
+
 class TestAnHonestZero:
     def test_a_report_stating_no_recommendation_is_recognised(self):
         assert parser.NO_RECOMMENDATION.search(

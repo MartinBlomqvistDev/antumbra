@@ -69,6 +69,22 @@ class TestSplittingParagraphs:
         assert [n for _, n, _ in parser.split_paragraphs(text)] == [1]
 
 
+class TestAPageBreakDoesNotHideAnything:
+    """The form feed that opens each page must not mask a paragraph."""
+
+    def test_a_paragraph_at_the_top_of_a_page_is_read(self):
+        text = (
+            "    1. The competent authority has been designated in line with\n"
+            "       the requirements of the Regulation and coordinates work.\n"
+            "\f    2. The audit team examined a number of approval files and\n"
+            "       noted that only part of the procedure had been applied.\n"
+        )
+        assert [n for _, n, _ in parser.split_paragraphs(text)] == [1, 2]
+
+    def test_a_section_heading_at_the_top_of_a_page_is_read(self):
+        assert parser.SECTION.search("\f5 FINDINGS AND CONCLUSIONS\n")
+
+
 class TestLabellingParagraphs:
     def test_a_conclusions_heading_labels_what_follows(self):
         assert parser.kind_of("FINDINGS AND CONCLUSIONS", "Conclusions on listing") == (
