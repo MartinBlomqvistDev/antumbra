@@ -72,6 +72,14 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
+**De numrerade bilagorna är inte åtgärdsplaner.** Verifierat 2026-08-02 genom
+att öppna samtliga 1 974 i EU-27, se `docs/DGSANTE.md` för fördelningen. De är
+i huvudsak medlemsstaternas kommentarer på rapportutkastet. Åtgärdsplaner är
+89 av 1 974, och 86 av dem är HTML-stubbar vars länkmål under
+`ec.europa.eu/food/fvo/ap/` svarar **404**; planerna är alltså borta från
+kommissionens webb. Klassningen träffar 85 procent mot 40 handlästa bilagor
+(`data/dgsante_annex_labels.jsonl`), med noll dokument felaktigt kallade plan.
+
 ---
 
 ## Verksamhetskoder, miljöprövningsförordningen (2013:251)
@@ -152,8 +160,15 @@ offentlighetsprincipen och räknar. **Rutten fungerar, det är bevisat.**
   djurskyddslagen minst en gång, 11 hade aldrig haft en brist.
 - 2022: 83 av 88 kontrollerade slakterier, över 900 konstaterade brister.
 - Slaktstatistik 2024: 117 881 540 landdjur.
-- Djurens Rätt gör motsvarande årligen i Kycklingkartläggningen på Kronfågel,
-  Guldfågeln, Torsåsens och Atria. 2024: minst 56 000 kycklingar.
+- Djurens Rätt begär årligen ut kontrollrapporterna från djurskyddskontroller
+  på de fyra stora kycklingslakterierna (Kronfågel, Guldfågeln, Torsåsens
+  Fågelprodukter och Atria) och sammanställer dem i Kycklingkartläggningen.
+  Deras egen slutsats för 2024 är att **minst 56 000 kycklingar** utsattes för
+  behandling som ledde till smärta, stress eller tidig död fram till slakt.
+  Talet är alltså deras bedömning av antal drabbade djur, inte antal
+  kontroller, anläggningar eller granskade rapporter. Sekundärkälla
+  (djurensratt.se); underlaget är inte publicerat, och talet ska inte
+  återanvändas som datapunkt, bara som precedens. Se regeln nedan.
 
 **Båda publicerar slutsatser och siffror, aldrig underlaget.** Ingen
 nedladdningsbar data, ingen metodbeskrivning, ingen baseline.

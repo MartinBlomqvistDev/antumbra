@@ -47,6 +47,11 @@ EU27 = {
 }
 
 
+def tracked_under_pdf() -> list[Path]:
+    """Tracked files under pdf/, which must always be empty."""
+    return [p for p in tracked_files() if p.as_posix().find("/pdf/") != -1]
+
+
 def tracked_files() -> list[Path]:
     """List files under version control, or every file when git is absent."""
     result = subprocess.run(
@@ -74,6 +79,20 @@ def details() -> list[dict]:
 def manifest() -> list[dict]:
     """One record per downloaded corpus file."""
     path = ROOT / "data" / "dgsante_manifest.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def annex_classes() -> list[dict]:
+    """One record per numbered annex from the older era."""
+    path = ROOT / "data" / "dgsante_annex_classes.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def annex_labels() -> list[dict]:
+    """Hand-read classes for the held-out samples."""
+    path = ROOT / "data" / "dgsante_annex_labels.jsonl"
     return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
 
 
@@ -152,6 +171,57 @@ class TestDocumentationMatchesData:
         assert sum(1 for r in index if re.fullmatch(r"\d{4}-\d{4}", r["ref"])) == 4568
 
 
+class TestAnnexClassificationHoldsAgainstHandReading:
+    """The numbered annexes are classified, and the call is checkable.
+
+    The claim these guard is the one the project would be attacked on: that
+    the numbered annexes are overwhelmingly member state comments and only
+    rarely action plans. A classifier that quietly drifted into counting
+    mentions of a plan as a plan would invert that finding.
+    """
+
+    RESPONSES: ClassVar[set[str]] = {"action_plan", "actions_taken_response"}
+    AGREEMENT_FLOOR = 0.80
+
+    def test_every_numbered_annex_is_accounted_for(self, manifest, annex_classes):
+        numbered = {
+            m["path"]
+            for m in manifest
+            if m["kind"] == "annex" and str(m.get("title", "")).strip().isdigit()
+        }
+        assert {r["path"] for r in annex_classes} == numbered
+        assert len(annex_classes) == 1974
+
+    def test_a_classified_annex_always_quotes_its_evidence(self, annex_classes):
+        undecided = {"unclassified_text", "needs_ocr", "needs_conversion"}
+        classified = [r for r in annex_classes if r["class"] not in undecided]
+        assert classified
+        assert all(r["evidence"].strip() for r in classified)
+        assert all(r["method"] for r in annex_classes)
+
+    def test_agreement_with_hand_read_labels(self, annex_classes, annex_labels):
+        predicted = {r["path"]: r["class"] for r in annex_classes}
+        assert {r["path"] for r in annex_labels} <= set(predicted)
+        agreed = sum(1 for r in annex_labels if predicted[r["path"]] == r["label"])
+        assert agreed / len(annex_labels) >= self.AGREEMENT_FLOOR
+
+    def test_no_document_is_called_a_plan_that_is_not_one(
+        self, annex_classes, annex_labels
+    ):
+        predicted = {r["path"]: r["class"] for r in annex_classes}
+        wrong = [
+            r["path"]
+            for r in annex_labels
+            if predicted[r["path"]] in self.RESPONSES
+            and r["label"] not in self.RESPONSES
+        ]
+        assert not wrong, f"classified as a plan or response but is not: {wrong}"
+
+    def test_action_plans_stay_a_small_minority(self, annex_classes):
+        plans = sum(1 for r in annex_classes if r["class"] in self.RESPONSES)
+        assert plans / len(annex_classes) < 0.10
+
+
 class TestManifestCoversTheDownloadedCorpus:
     """The committed manifest must mirror the EU-27 subset of the details.
 
@@ -184,6 +254,10 @@ class TestManifestCoversTheDownloadedCorpus:
         assert len(manifest) == 7963
         assert sum(1 for m in manifest if m["kind"] == "report") == 2940
         assert sum(1 for m in manifest if m["kind"] == "annex") == 5023
+
+    def test_manifest_is_the_only_committed_trace_of_the_corpus(self, manifest):
+        assert all(m["path"].startswith("pdf/") for m in manifest)
+        assert not (ROOT / "pdf").exists() or not tracked_under_pdf()
 
     def test_every_row_is_hashed_and_nonempty(self, manifest):
         assert all(re.fullmatch(r"[0-9a-f]{64}", m["sha256"]) for m in manifest)

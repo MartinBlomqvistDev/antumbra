@@ -84,7 +84,8 @@ mellan 60 och 180 om året.
 revisioner från 2011 och framåt.** Före det finns den inte.
 
 De 2 904 numrerade bilagorna från den äldre eran är av okänt slag och **måste
-öppnas för att klassas**; räkna dem inte som åtgärdsplaner.
+öppnas för att klassas**; räkna dem inte som åtgärdsplaner. Klassningen är
+gjord för EU-27-delmängden, se nedan, och bekräftar varningen.
 
 Titeln på åtgärdsplaner varierar: "Action plan", "Action Plan", "CA Action
 Plan", "Updated action plan", "Competent Authority response to the report
@@ -160,9 +161,48 @@ Ett dött fil-id svarar HTTP 404, så varje 200-svar är dokumentinnehåll.
 GIF-filerna är inskannade A4-sidor från den äldre eran (stickprov 816x1153
 pixlar) och kräver OCR. HTML-filerna är Word-exporterade äldre bilagor.
 
+## De numrerade bilagorna, klassade
+
+1 974 av de numrerade bilagorna ligger i EU-27 och är nedladdade. Varje fil
+öppnades av `pipeline/05_classify_annexes.py`, som klassar dokumentet på hur
+det **presenterar sig själv** i sina inledande tecken och sparar det citat
+klassningen vilar på. Resultat i `data/dgsante_annex_classes.jsonl`.
+
+| Klass | Antal |
+| --- | --- |
+| Kräver OCR (ingen textremsa) | 1 018 |
+| Kommentarer på rapportutkastet | 577 |
+| Oklassad text | 189 |
+| Åtgärdsplan | 89 |
+| Korrespondens | 86 |
+| Redovisning av vidtagna åtgärder | 13 |
+| Lagtext | 1 |
+| Kräver konvertering (äldre Word) | 1 |
+
+**Svaret på frågan är nej: de numrerade bilagorna är inte åtgärdsplaner.** De
+är i huvudsak medlemsstaternas kommentarer på rapportutkastet, plus brev som
+följer med dem. Åtgärdsplaner utgör 89 av 1 974, alltså 4,5 procent, och 86 av
+dem är inte planer utan **HTML-stubbar som pekar på en plan** via gamla
+adresser under `ec.europa.eu/food/fvo/ap/`. De adresserna svarar 404 i dag,
+verifierat 2026-08-02: **själva planen är borta, bara pekaren finns kvar.**
+
+"Redovisning av vidtagna åtgärder" hålls isär från "åtgärdsplan" därför att
+dokumenten själva gör det; flera skriver uttryckligen att planen kommer senare.
+Att slå ihop dem skulle överdriva hur ofta kedjan rekommendation till åtagande
+faktiskt sluts.
+
+**Träffsäkerhet.** Klassningen mättes mot 40 bilagor som lästes för hand, i
+stickprov dragna **efter** att reglerna skrivits och aldrig använda för att
+justera dem: **34 av 40 rätt, 85 procent.** Facit ligger i
+`data/dgsante_annex_labels.jsonl` och kontrolleras av testsviten. Fem av de sex
+avvikelserna är dokument som lämnats oklassade fast de går att klassa, alltså
+ett försiktigt fel; **noll dokument klassades som plan utan att vara det.**
+Gränsfallet som återstår är brev som bifogar kommentarer: brevet och dess
+innehåll är olika saker och klassningen väljer innehållet.
+
 ## Nästa steg
 
-1. Klassa de 2 904 numrerade äldre bilagorna genom stickprov; 838 av dem är
-   skannade GIF-sidor som kräver OCR.
+1. **OCR på 1 018 bilagor**, varav 838 skannade GIF-sidor. Ingen OCR-motor är
+   installerad lokalt per 2026-08-02.
 2. Designa parsningen av citatgrafen mot verklig korpus, alltså kopplingen
    iakttagelse till slutsats till rekommendation till åtgärdsplan.
