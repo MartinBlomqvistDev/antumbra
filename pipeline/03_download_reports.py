@@ -138,9 +138,7 @@ def work(task: tuple[str, Path, str]) -> None:
         if error:
             _failed += 1
             with open(ERRORS, "a", encoding="utf-8") as fh:
-                fh.write(
-                    json.dumps({"url": url, "stem": stem, "error": error}) + "\n"
-                )
+                fh.write(json.dumps({"url": url, "stem": stem, "error": error}) + "\n")
         if _done % 250 == 0:
             print(f"{_done} done, {_failed} failed", flush=True)
     time.sleep(DELAY)
