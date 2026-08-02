@@ -70,6 +70,13 @@ def details() -> list[dict]:
     return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
 
 
+@pytest.fixture(scope="module")
+def manifest() -> list[dict]:
+    """One record per downloaded corpus file."""
+    path = ROOT / "data" / "dgsante_manifest.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
 class TestSchemaIsInSyncWithItsDocument:
     """src/schema.py is generated from the code block in the design document."""
 
@@ -143,3 +150,42 @@ class TestDocumentationMatchesData:
     def test_two_reference_formats(self, index):
         assert sum(1 for r in index if r["ref"].startswith("CT-")) == 122
         assert sum(1 for r in index if re.fullmatch(r"\d{4}-\d{4}", r["ref"])) == 4568
+
+
+class TestManifestCoversTheDownloadedCorpus:
+    """The committed manifest must mirror the EU-27 subset of the details.
+
+    The corpus itself lives outside version control, so the manifest is the
+    only guard CI has that the download was complete and attributable.
+    """
+
+    @staticmethod
+    def expected_stems(details) -> tuple[set[str], set[str]]:
+        reports: set[str] = set()
+        annexes: set[str] = set()
+        for rec in details:
+            if rec["country"] not in EU27:
+                continue
+            for report in rec["reports"]:
+                if report["language"] == "English":
+                    reports.add(f"{rec['ref']}_{report['id']}_en")
+            for annex in rec["annexes"]:
+                annexes.add(f"{rec['ref']}_{annex['id']}")
+        return reports, annexes
+
+    def test_manifest_matches_the_details_exactly(self, details, manifest):
+        reports, annexes = self.expected_stems(details)
+        got_reports = {Path(m["path"]).stem for m in manifest if m["kind"] == "report"}
+        got_annexes = {Path(m["path"]).stem for m in manifest if m["kind"] == "annex"}
+        assert got_reports == reports
+        assert got_annexes == annexes
+
+    def test_headline_counts_hold(self, manifest):
+        assert len(manifest) == 7963
+        assert sum(1 for m in manifest if m["kind"] == "report") == 2940
+        assert sum(1 for m in manifest if m["kind"] == "annex") == 5023
+
+    def test_every_row_is_hashed_and_nonempty(self, manifest):
+        assert all(re.fullmatch(r"[0-9a-f]{64}", m["sha256"]) for m in manifest)
+        assert all(m["bytes"] > 0 for m in manifest)
+        assert all(m["kind"] in {"report", "annex"} for m in manifest)

@@ -56,6 +56,24 @@ Inte stor data i volym, men **hela populationen, inte ett urval.**
 
 ---
 
+## DG SANTE-korpusen: nedladdningen
+
+Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`.
+
+- **Komplett: 7 963 av 7 963 filer, noll fel.** EU-27, engelska rapporter
+  (2 940) plus samtliga bilagor (5 023), 2,2 GB på disk.
+- Ett ogiltigt fil-id ger **HTTP 404**. Nedladdningsendpointen svarar aldrig
+  200 med en felsida, så varje 200-svar är dokumentinnehåll.
+- Allt är inte PDF: 838 bilagor är GIF och 6 är jpg/tif, samtliga med
+  numrerade titlar, alltså den äldre oklassade eran. Stickprov visar
+  inskannade A4-sidor, 816x1153 pixlar. **OCR krävs för bildformaten.**
+  87 bilagor är Word-exporterad HTML.
+- Proveniensmanifest med sha256, källänk och hämtdatum per fil:
+  `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
+  spikat mot detaljdatat av invarianttesterna.
+
+---
+
 ## Verksamhetskoder, miljöprövningsförordningen (2013:251)
 
 Verifierat ordagrant 2026-08-02.

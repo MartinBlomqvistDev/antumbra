@@ -137,10 +137,32 @@ tvingas in i samma parser.
 **Ladda ned engelska plus bilagor, alltså cirka 3,3 GB.** Franska och tyska
 tillför ingenting. PDF:erna ligger i `.gitignore` och committas aldrig.
 
+## Nedladdad korpus
+
+Hämtad 2026-08-02 med `pipeline/03_download_reports.py`: EU-27, engelska
+rapporter plus samtliga bilagor. **7 963 filer, 2,2 GB: 2 940 rapporter och
+5 023 bilagor, noll fel.** Proveniensmanifest med sha256, källänk, storlek
+och hämtdatum per fil i `data/dgsante_manifest.jsonl`, byggt av
+`pipeline/04_build_manifest.py`; dokumenten själva ligger utanför git.
+
+Allt är inte PDF:
+
+| Format | Antal |
+| --- | --- |
+| pdf | 7 025 |
+| gif | 838 |
+| html/htm | 87 |
+| doc/docx | 7 |
+| jpg | 5 |
+| tif | 1 |
+
+Ett dött fil-id svarar HTTP 404, så varje 200-svar är dokumentinnehåll.
+GIF-filerna är inskannade A4-sidor från den äldre eran (stickprov 816x1153
+pixlar) och kräver OCR. HTML-filerna är Word-exporterade äldre bilagor.
+
 ## Nästa steg
 
-1. Ladda ned engelska rapporter och åtgärdsplaner för EU-27, alltså den
-   delmängd som bär analysen.
-2. Klassa de 2 904 numrerade äldre bilagorna genom stickprov.
-3. Designa parsningen av citatgrafen mot verklig korpus, alltså kopplingen
+1. Klassa de 2 904 numrerade äldre bilagorna genom stickprov; 838 av dem är
+   skannade GIF-sidor som kräver OCR.
+2. Designa parsningen av citatgrafen mot verklig korpus, alltså kopplingen
    iakttagelse till slutsats till rekommendation till åtgärdsplan.
