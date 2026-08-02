@@ -13,7 +13,10 @@ ocr/
 CLAUDE.md
 STATUS.md
 
-# Large derived files
+# Large derived files. The full paragraph corpus is 66 MB and is regenerated
+# by pipeline/08_parse_paragraphs.py; the citation graph derived from it is
+# committed instead, since that is the part worth reviewing.
+data/dgsante_paragraphs.jsonl
 data/*.parquet
 data/*.duckdb
 *.pbix

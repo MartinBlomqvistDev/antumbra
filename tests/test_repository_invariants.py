@@ -97,6 +97,13 @@ def recommendations() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def graph() -> list[dict]:
+    """One record per citation edge, with the paragraph it points at."""
+    path = ROOT / "data" / "dgsante_graph.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def report_parse() -> list[dict]:
     """One record per report with the outcome of parsing it."""
     path = ROOT / "data" / "dgsante_report_parse.jsonl"
@@ -299,6 +306,45 @@ class TestTheCitationGraphIsWhatTheReportsSay:
         stating = [r for r in report_parse if r.get("section_states_links")]
         parsed = [r for r in stating if r["outcome"] == "parsed"]
         assert len(parsed) / len(stating) >= 0.85
+
+
+class TestTheGraphClosesOntoRealParagraphs:
+    """Every edge must name a paragraph, and say when it cannot find one."""
+
+    def test_every_edge_belongs_to_a_parsed_recommendation(
+        self, graph, recommendations
+    ):
+        known = {(r["path"], r["number"]) for r in recommendations}
+        assert {(e["path"], e["recommendation"]) for e in graph} <= known
+
+    def test_edge_counts_match_the_recommendations(self, graph, recommendations):
+        expected = sum(
+            len(r["based_on_conclusions"]) + len(r["associated_findings"])
+            for r in recommendations
+        )
+        assert len(graph) == expected
+
+    def test_an_unresolved_edge_carries_no_invented_paragraph(self, graph):
+        for edge in graph:
+            if edge["resolved"]:
+                assert edge["paragraph_text"]
+            else:
+                assert edge["paragraph_text"] is None
+                assert edge["paragraph_kind"] is None
+
+    def test_most_cited_paragraphs_resolve(self, graph):
+        resolved = sum(1 for e in graph if e["resolved"])
+        assert resolved / len(graph) >= 0.85
+
+    def test_the_two_readings_agree_more_often_than_not(self, graph):
+        """The paragraph's heading and the citation are separate evidence.
+
+        They disagree on a real minority of edges, which is recorded rather
+        than reconciled; this guards the rate against silent decay.
+        """
+        cited = [e for e in graph if e["resolved"] and e["cites"] == "conclusion"]
+        agreeing = sum(1 for e in cited if e["paragraph_kind"] == "conclusion")
+        assert agreeing / len(cited) >= 0.55
 
 
 class TestOcrIndexIsHonestAboutQuality:
