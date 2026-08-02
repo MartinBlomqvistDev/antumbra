@@ -254,12 +254,13 @@ Kört 2026-08-02 med `pipeline/07_parse_recommendations.py` över samtliga
 (en rad per rekommendation) och `data/dgsante_report_parse.jsonl` (en rad per
 rapport med utfallet).
 
-**8 365 rekommendationer ur 1 699 rapporter, 27 länder.**
+**9 343 rekommendationer ur 1 774 rapporter, 27 länder.** 2 414 av dem lästes
+ur tvåspaltiga tabeller, se avsnittet om planerna som facit nedan.
 
 | Utfall per rapport | Antal |
 | --- | --- |
-| Parsad till rekommendationer | 1 699 |
-| Avsnitt hittat men inga poster | 909 |
+| Parsad till rekommendationer | 1 774 |
+| Avsnitt hittat men inga poster | 834 |
 | Inget rekommendationsavsnitt | 315 |
 | Rapporten säger att den saknar rekommendation | 17 |
 
@@ -286,15 +287,15 @@ börjar 2014 och blir aldrig heltäckande:
 | 2024 | 82 | 50 |
 | CT-formatet | 83 | 29 |
 
-**Grafen omfattar 1 133 rekommendationer med 1 450 kanter till slutsatser och
-3 221 kanter till iakttagelser.** Det är storleksordningen som ska stå i
-metoden, inte 4 690 och inte 8 365.
+**Grafen omfattar 1 232 rekommendationer med 1 574 kanter till slutsatser och
+3 342 kanter till iakttagelser.** Det är storleksordningen som ska stå i
+metoden, inte 4 690 och inte 9 343.
 
 **Parserns täckning mäts på den delmängd som bär grafen:** av de 489
-rapporterna parsas 441, alltså **90 procent**. Testsviten fäller om andelen
+rapporterna parsas 446, alltså **91 procent**. Testsviten fäller om andelen
 faller under 85 procent.
 
-Kända begränsningar, utskrivna i stället för utjämnade: 909 rapporter har ett
+Kända begränsningar, utskrivna i stället för utjämnade: 834 rapporter har ett
 rekommendationsavsnitt vars numrering inte går att följa, oftast tvåspaltiga
 tabeller där sidnummer och radnummer blandas med rekommendationsnumren. 167
 rekommendationer bär flaggan `multiple_reference_blocks`, vilket betyder att
@@ -312,7 +313,7 @@ ligger i `.gitignore`; den återskapas genom att köra steget. Det som committas
 är `data/dgsante_graph.jsonl`: **en rad per kant med det citerade stycket
 bredvid**, alltså den slutna kedjan och 3,4 MB.
 
-**4 208 av 4 671 citerade stycknummer resolverar, alltså 90 procent.**
+**4 424 av 4 916 citerade stycknummer resolverar, alltså 90 procent.**
 
 Tre fel i vägen dit är värda att minnas, eftersom de alla gav tyst dataförlust:
 
@@ -337,8 +338,8 @@ oberoende källor om samma stycke.
 
 | Kanten citerar | Träffar rubrikklass | Motsäger | Omärkt | Resolverar inte |
 | --- | --- | --- | --- | --- |
-| slutsats (1 450) | 65 % | 21 % | 12 % | 2 % |
-| iakttagelse (3 221) | 53 % | 9 % | 25 % | 13 % |
+| slutsats (1 574) | 64 % | 22 % | 11 % | 3 % |
+| iakttagelse (3 342) | 54 % | 8 % | 24 % | 14 % |
 
 **Oenigheten reconcilieras inte.** Båda läsningarna ligger kvar i varje rad,
 tillsammans med rubriken som avgjorde, så att den som granskar ser var de
@@ -354,20 +355,20 @@ position rubrikraden anger, eftersom en rad annars blandar kommissionens ord
 med medlemsstatens.
 
 **1 459 planer finns för 1 084 revisioner.** Av dem läses 1 066, och de ger
-**5 652 svar som täcker 2 125 av 8 337 parsade rekommendationer i 844
+**5 652 svar som täcker 2 636 av 9 315 parsade rekommendationer i 844
 revisioner.** Resterande planer har en layout som inte känns igen och
 registreras som sådana i `data/dgsante_plan_parse.jsonl`; de gissas inte.
 
 **Länken vilar inte på ett delat nummer.** Planen återger rekommendationens
-lydelse, och den jämförs med rapportens egen. 956 av de 2 125 svaren,
-45 procent, bekräftas av att texterna stämmer överens.
+lydelse, och den jämförs med rapportens egen. 1 353 av de 2 636 svaren,
+51 procent, bekräftas av att texterna stämmer överens.
 
 | Likhet mellan planens och rapportens lydelse | Rader |
 | --- | --- |
-| 0,9 till 1,0 | 459 |
-| 0,6 till 0,9 | 704 |
-| 0,1 till 0,6 | 1 056 |
-| under 0,1 | 443 |
+| 0,9 till 1,0 | 723 |
+| 0,6 till 0,9 | 933 |
+| 0,1 till 0,6 | 1 210 |
+| under 0,1 | 470 |
 
 **Låg likhet betyder oftast att rapportparsningen är fel, inte länken.**
 Stickprov i det lägsta skiktet visar planer som återger en korrekt
@@ -377,10 +378,35 @@ spaltläckage i extraktionen. **Åtgärdsplanerna är därmed också ett
 felfinnarverktyg för rapportparsningen**, och det är nästa uppgift att använda
 dem så.
 
+## Planerna som facit: ett mätt fel i rapportparsningen
+
+Åtgärdsplanerna återger rekommendationerna, och den återgivningen kan användas
+som facit mot rapportparsningen. Gjort 2026-08-02, och det pekade ut ett enda
+mönster bakom 134 systematiskt felparsade rapporter, mest 2011 till 2013.
+
+**Rekommendationerna står i en tvåspaltig tabell vars vänsterkolumn bara
+innehåller numren.** Vid en sidbrytning skriver textextraktionen ut nästa sidas
+nummer i en egen klump, skild från texten de hör till, och radvis läsning fann
+då en rekommendation där rapporten har fem. Steg 07 läser numera sådana
+tabeller kolumnvis och fogar ihop en rekommendation som brutits över en sida.
+
+Effekten är mätt mot planerna, inte uppskattad:
+
+| Mått | Före | Efter |
+| --- | --- | --- |
+| Rekommendationer | 8 365 | 9 343 |
+| Rapporter med parsade poster | 1 699 | 1 774 |
+| Länkar bekräftade av matchande text | 956 | 1 353 |
+| Rader med likhet 0,9 eller högre | 459 | 723 |
+| Rapporter där varje rad är fel | 134 | 119 |
+
+**Kvarvarande fel är av annat slag.** Stickprov i de 119 återstående visar
+numrerade fotnoter som ser ut som rekommendationer, alltså att fel textparti
+lästs som avsnittet. Det är nästa uppgift, och planerna är facit även där.
+
 ## Nästa steg
 
-1. Använd de 443 raderna med likhet under 0,1 för att hitta och rätta fel i
-   rapportparsningen i steg 07.
+1. Rätta de 119 rapporter där numrerade fotnoter läses som rekommendationer.
 2. Sätt ihop bilagorna per revision före parsning, enligt avsnittet om
    bilagorna som sidor.
 3. Ta reda på varför 13 procent av de iakttagelse-citerade numren inte

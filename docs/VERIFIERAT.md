@@ -72,21 +72,26 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
-**Kedjan når fram till åtagandet för 2 125 rekommendationer.** Verifierat
+**Kedjan når fram till åtagandet för 2 636 rekommendationer.** Verifierat
 2026-08-02 med `pipeline/09_link_action_plans.py`: 1 459 åtgärdsplaner finns
 för 1 084 EU-27-revisioner, 1 066 av dem läses, och de ger 5 652 svar som
-täcker 2 125 av 8 337 parsade rekommendationer i 844 revisioner. Länken vilar
+täcker 2 636 av 9 315 parsade rekommendationer i 844 revisioner. Länken vilar
 inte på ett delat nummer: planen återger rekommendationens lydelse och den
-jämförs med rapportens, vilket bekräftar 956 av svaren, 45 procent.
+jämförs med rapportens, vilket bekräftar 1 353 av svaren, 51 procent.
 
-**Låg textlikhet pekar på fel i rapportparsningen, inte på fel länk.**
-Stickprov i skiktet under 0,1 visar planer som återger korrekta
-rekommendationer medan rapportsidan innehåller förkortningslistor. De 443
-raderna är alltså en arbetslista för att rätta steg 07.
+**Låg textlikhet pekar på fel i rapportparsningen, inte på fel länk.** Använt
+som facit 2026-08-02 och det gav ett mätt resultat: 134 rapporter, mest 2011
+till 2013, hade rekommendationerna i en tvåspaltig tabell vars vänsterkolumn
+bara innehåller numren, och vid sidbrytning skildes numren från sin text.
+Radvis läsning fann då **en** rekommendation där rapporten har fem. Efter att
+steg 07 läser sådana tabeller kolumnvis: rekommendationerna steg från 8 365
+till 9 343, textbekräftade länkar från 956 till 1 353, och rapporter där varje
+rad är fel föll från 134 till 119. De kvarvarande 119 beror på numrerade
+fotnoter som läses som rekommendationer.
 
 **Citatgrafen är sluten till 90 procent.** Verifierat 2026-08-02 med
 `pipeline/08_parse_paragraphs.py`: 75 460 numrerade stycken ur 2 689
-rapporter, och **4 208 av 4 671 citerade stycknummer resolverar till ett
+rapporter, och **4 424 av 4 916 citerade stycknummer resolverar till ett
 faktiskt stycke**. Den slutna kedjan ligger i `data/dgsante_graph.jsonl`;
 den fulla styckekorpusen är 66 MB, gitignorerad och återskapbar.
 Styckenumreringen löper genom hela dokumentet, inte per avsnitt.
@@ -94,21 +99,21 @@ Styckenumreringen löper genom hela dokumentet, inte per avsnitt.
 **Klassningen iakttagelse eller slutsats görs på rubriken, inte på avsnittet.**
 Avsnitt 5 heter "FINDINGS AND CONCLUSIONS" och rymmer båda. Rubrikklassningen
 och rapportens eget citat är två oberoende läsningar och de är oense om en
-verklig minoritet: av de kanter som citerar en slutsats träffar 65 procent ett
-stycke under en slutsatsrubrik, 21 procent motsäger och 12 procent är omärkta.
+verklig minoritet: av de kanter som citerar en slutsats träffar 64 procent ett
+stycke under en slutsatsrubrik, 22 procent motsäger och 11 procent är omärkta.
 Oenigheten redovisas per rad i stället för att jämkas ihop.
 
 **Citatgrafen är mycket mindre än korpusen.** Verifierat 2026-08-02 genom att
-parsa samtliga 2 940 engelska EU-27-rapporter. **8 365 rekommendationer ur
-1 699 rapporter**, men bara **489 rapporter, 17 procent, skriver ut vilken
+parsa samtliga 2 940 engelska EU-27-rapporter. **9 343 rekommendationer ur
+1 774 rapporter**, men bara **489 rapporter, 17 procent, skriver ut vilken
 slutsats en rekommendation vilar på.** Praktiken börjar **2014**; före det
-finns noll korsreferenser. Grafen omfattar 1 133 rekommendationer, 1 450
-kanter till slutsatser och 3 221 till iakttagelser. Det är storleksordningen
-som gäller, inte 4 690 och inte 8 365. 17 rapporter skriver att de saknar
+finns noll korsreferenser. Grafen omfattar 1 232 rekommendationer, 1 574
+kanter till slutsatser och 3 342 till iakttagelser. Det är storleksordningen
+som gäller, inte 4 690 och inte 9 343. 17 rapporter skriver att de saknar
 rekommendation, vilket är ett nollresultat och inte ett parsningsfel.
 Mallen i `docs/DGSANTE.md` var verifierad på en rapport och gäller inte alla
 eror: rekommendationerna ligger under rubrik 9 i äldre rapporter och rubrik 8
-från omkring 2007. Parsern täcker 90 procent av de rapporter som bär grafen.
+från omkring 2007. Parsern täcker 91 procent av de rapporter som bär grafen.
 
 **De numrerade bilagorna är sidor, inte dokument.** Verifierat 2026-08-02 mot
 OCR-texten: 41 procent av de skannade bilagorna inleds med ett faxhuvud, och

@@ -91,12 +91,21 @@ Kräver Python 3.12. Skörden av DG SANTE använder enbart standardbiblioteket;
 
 ```bash
 pip install -e ".[dev]"
-python pipeline/01_harvest_index.py      # en sökning per år, 1998 till 2027
-python pipeline/02_harvest_details.py    # en detaljsida per revision, återupptagbar
+python pipeline/01_harvest_index.py        # en sökning per år, 1998 till 2027
+python pipeline/02_harvest_details.py      # en detaljsida per revision
+python pipeline/03_download_reports.py     # EU-27, engelska rapporter och bilagor
+python pipeline/04_build_manifest.py       # sha256 och källänk per fil
+python pipeline/05_classify_annexes.py     # bilagorna klassade på egna ord
+python pipeline/06_ocr_annexes.py          # OCR på det som är skannat
+python pipeline/07_parse_recommendations.py  # rekommendationer och citatgrafens kanter
+python pipeline/08_parse_paragraphs.py     # de citerade styckena, grafens noder
+python pipeline/09_link_action_plans.py    # åtagandena kopplade till rekommendationerna
 ```
 
-Båda skriver till `data/`. Steg 02 hoppar över det som redan hämtats, så en
-avbruten körning startas om utan att arbetet görs på nytt.
+Stegen skriver till `data/`. De som tar tid är återupptagbara och hoppar över
+det som redan hämtats, så en avbruten körning startas om utan att arbetet görs
+på nytt. Steg 03 laddar ned 2,2 GB till `pdf/`, som aldrig committas. Steg 06
+kräver Tesseract som binär plus `pip install -e ".[ocr]"`.
 
 Kvalitetskontroll:
 
@@ -118,6 +127,7 @@ docs/VERIFIERAT.md     kontrollerade fakta med datum och källa
 docs/BEGARANMALL.md    tre begäranmallar, rättslig motivering, protokoll
 docs/VILLKORSSCHEMA.md datakontrakt med motivering och verifieringskontroller
 docs/DGSANTE.md        jämförelselagrets korpus, struktur och volym
+docs/adr/              daterade beslut om avgränsningar och metod
 CONTRIBUTING.md        kodstandard, commit-konvention, vad som aldrig committas
 data/                  härledda dataset, ingen råtext och inga PDF:er
 src/                   datakontrakt (Pydantic v2)
