@@ -72,6 +72,18 @@ Verifierat 2026-08-02 med faktiska anrop; volymer och format i `docs/DGSANTE.md`
   `data/dgsante_manifest.jsonl`, byggt av `pipeline/04_build_manifest.py`,
   spikat mot detaljdatat av invarianttesterna.
 
+**Kedjan når fram till åtagandet för 2 125 rekommendationer.** Verifierat
+2026-08-02 med `pipeline/09_link_action_plans.py`: 1 459 åtgärdsplaner finns
+för 1 084 EU-27-revisioner, 1 066 av dem läses, och de ger 5 652 svar som
+täcker 2 125 av 8 337 parsade rekommendationer i 844 revisioner. Länken vilar
+inte på ett delat nummer: planen återger rekommendationens lydelse och den
+jämförs med rapportens, vilket bekräftar 956 av svaren, 45 procent.
+
+**Låg textlikhet pekar på fel i rapportparsningen, inte på fel länk.**
+Stickprov i skiktet under 0,1 visar planer som återger korrekta
+rekommendationer medan rapportsidan innehåller förkortningslistor. De 443
+raderna är alltså en arbetslista för att rätta steg 07.
+
 **Citatgrafen är sluten till 90 procent.** Verifierat 2026-08-02 med
 `pipeline/08_parse_paragraphs.py`: 75 460 numrerade stycken ur 2 689
 rapporter, och **4 208 av 4 671 citerade stycknummer resolverar till ett

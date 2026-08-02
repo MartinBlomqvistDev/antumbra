@@ -345,10 +345,43 @@ tillsammans med rubriken som avgjorde, så att den som granskar ser var de
 skiljer sig. Rapporternas citat är den starkare källan; rubrikklassningen är
 en heuristik och redovisas som en sådan.
 
+## Åtagandena: åtgärdsplanerna kopplade till rekommendationerna
+
+Kört 2026-08-02 med `pipeline/09_link_action_plans.py`. En medlemsstat svarar
+på en revision med en tabell: rekommendationens nummer, rekommendationen som
+staten återger den, och den åtgärd staten åtar sig. Kolumnerna delas på den
+position rubrikraden anger, eftersom en rad annars blandar kommissionens ord
+med medlemsstatens.
+
+**1 459 planer finns för 1 084 revisioner.** Av dem läses 1 066, och de ger
+**5 652 svar som täcker 2 125 av 8 337 parsade rekommendationer i 844
+revisioner.** Resterande planer har en layout som inte känns igen och
+registreras som sådana i `data/dgsante_plan_parse.jsonl`; de gissas inte.
+
+**Länken vilar inte på ett delat nummer.** Planen återger rekommendationens
+lydelse, och den jämförs med rapportens egen. 956 av de 2 125 svaren,
+45 procent, bekräftas av att texterna stämmer överens.
+
+| Likhet mellan planens och rapportens lydelse | Rader |
+| --- | --- |
+| 0,9 till 1,0 | 459 |
+| 0,6 till 0,9 | 704 |
+| 0,1 till 0,6 | 1 056 |
+| under 0,1 | 443 |
+
+**Låg likhet betyder oftast att rapportparsningen är fel, inte länken.**
+Stickprov i det lägsta skiktet visar planer som återger en korrekt
+rekommendation medan rapportsidan innehåller förkortningslistor eller
+bakgrundstext, alltså fel från steg 07. Mittskiktet är korrekta länkar med
+spaltläckage i extraktionen. **Åtgärdsplanerna är därmed också ett
+felfinnarverktyg för rapportparsningen**, och det är nästa uppgift att använda
+dem så.
+
 ## Nästa steg
 
-1. Sätt ihop bilagorna per revision före parsning, enligt avsnittet ovan.
-2. Koppla åtgärdsplanerna till rekommendationerna och slut kedjan hela vägen
-   från iakttagelse till åtagande.
+1. Använd de 443 raderna med likhet under 0,1 för att hitta och rätta fel i
+   rapportparsningen i steg 07.
+2. Sätt ihop bilagorna per revision före parsning, enligt avsnittet om
+   bilagorna som sidor.
 3. Ta reda på varför 13 procent av de iakttagelse-citerade numren inte
    resolverar; hypotesen är stycken som tappats vid spaltbrytning.
