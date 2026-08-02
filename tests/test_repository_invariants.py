@@ -111,6 +111,12 @@ def warehouse() -> dict:
 
 
 @pytest.fixture(scope="module")
+def dashboard() -> str:
+    """The generated dashboard page."""
+    return (ROOT / "docs" / "dashboard.html").read_text("utf-8")
+
+
+@pytest.fixture(scope="module")
 def graph() -> list[dict]:
     """One record per citation edge, with the paragraph it points at."""
     path = ROOT / "data" / "dgsante_graph.jsonl"
@@ -467,6 +473,35 @@ class TestTheWarehouseDescribesWhatWasBuilt:
         """
         measures = warehouse["measures"]
         assert measures["citations"] > measures["citations_resolved"]
+
+
+class TestTheDashboardSaysWhatTheDataSays:
+    """The published page is generated, so its figures must still hold.
+
+    A dashboard that drifts from its source is worse than none: it is the
+    surface a reader trusts without being able to check it.
+    """
+
+    def test_the_page_is_present_and_self_contained(self, dashboard):
+        assert "<svg" in dashboard
+        for forbidden in ("http://", "https://cdn", "<script src", '<link rel="style'):
+            assert forbidden not in dashboard, forbidden
+
+    def test_the_headline_figures_come_from_the_warehouse(self, dashboard, warehouse):
+        measures = warehouse["measures"]
+        for value in (measures["recommendations"], measures["citations"]):
+            assert f"{value:,}".replace(",", chr(0x2009)) in dashboard
+
+    def test_every_chart_has_a_table_view(self, dashboard):
+        assert dashboard.count("<svg") == dashboard.count("Visa som tabell")
+
+    def test_the_limitations_are_on_the_page(self, dashboard):
+        assert "Vad sidan inte visar" in dashboard
+        assert "inget betyg" in dashboard
+
+    def test_both_themes_are_declared(self, dashboard):
+        assert "prefers-color-scheme: dark" in dashboard
+        assert 'data-theme="dark"' in dashboard
 
 
 class TestOcrIndexIsHonestAboutQuality:

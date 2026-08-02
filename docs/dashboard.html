@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antumbra: kommissionens revisioner av medlemsstaternas kontrollsystem</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-1: #fcfcfb; --plane: #f9f9f7;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --series-1: #2a78d6; --series-2: #eb6834;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1: #1a1a19; --plane: #0d0d0d;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5; --series-2: #d95926;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1: #1a1a19; --plane: #0d0d0d;
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --series-1: #3987e5; --series-2: #d95926;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 32px 20px 64px;
+  background: var(--plane); color: var(--text-primary);
+  font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 19px; margin: 44px 0 4px; }
+p.lede { color: var(--text-secondary); margin: 0 0 28px; max-width: 62ch; }
+p.note { color: var(--text-secondary); font-size: 14px; max-width: 68ch; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px; margin-top: 14px; overflow-x: auto;
+}
+.hero { font-size: 56px; font-weight: 600; line-height: 1; margin: 0; }
+.hero-label { color: var(--text-secondary); margin: 6px 0 0; }
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,
+  minmax(190px, 1fr)); margin-top: 22px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px; }
+.tile-label { margin: 0; color: var(--text-secondary); font-size: 13px; }
+.tile-value { margin: 4px 0 2px; font-size: 26px; font-weight: 600; }
+.tile-note { margin: 0; color: var(--muted); font-size: 13px; }
+.chart { width: 100%; height: auto; display: block; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.bar { fill: var(--series-1); }
+.bar-square { fill: var(--series-1); }
+.line { fill: none; stroke-width: 2; stroke-linejoin: round;
+  stroke-linecap: round; }
+.dot { stroke: var(--surface-1); stroke-width: 2; }
+.label { fill: var(--text-secondary); font-size: 12px; }
+.value { fill: var(--text-primary); font-size: 12px; font-weight: 600; }
+.tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.mark { cursor: default; outline: none; }
+.mark:hover .bar, .mark:focus-visible .bar { opacity: 0.82; }
+.mark:focus-visible .dot { stroke: var(--text-primary); }
+.legend { display: flex; gap: 18px; margin-bottom: 8px; font-size: 13px;
+  color: var(--text-secondary); }
+.key { display: inline-flex; align-items: center; gap: 7px; }
+.swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.table-view { margin-top: 12px; }
+.table-view summary { cursor: pointer; color: var(--text-secondary);
+  font-size: 14px; }
+table { border-collapse: collapse; margin-top: 10px; font-size: 14px;
+  font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 16px 5px 0;
+  border-bottom: 1px solid var(--border); }
+th { color: var(--text-secondary); font-weight: 600; }
+#tip {
+  position: fixed; pointer-events: none; opacity: 0; transition: opacity .1s;
+  background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 7px; padding: 6px 10px;
+  font-size: 13px; box-shadow: 0 2px 10px rgba(0,0,0,.14); max-width: 280px;
+}
+footer { margin-top: 52px; color: var(--muted); font-size: 13px; }
+button.theme { background: var(--surface-1); color: var(--text-secondary);
+  border: 1px solid var(--border); border-radius: 7px; padding: 5px 11px;
+  font: inherit; font-size: 13px; cursor: pointer; float: right; }
+</style></head>
+<body>
+<main>
+<button class="theme" id="theme">Byt ljust och mörkt</button>
+<h1>Kommissionens revisioner av medlemsstaternas kontrollsystem</h1>
+<p class="lede">Samma revisor, samma rättsliga grund och samma rapportmall för
+alla medlemsstater, alltså jämförbara till sin konstruktion. Sidan visar vad
+korpusen innehåller och hur långt kedjan från iakttagelse till åtagande går att
+följa i data.</p>
+
+<p class="hero">11 829</p>
+<p class="hero-label">rekommendationer utlästa ur revisionsrapporterna</p>
+<div class="tiles"><div class="tile"><p class="tile-label">Revisioner i korpusen</p><p class="tile-value">4 690</p><p class="tile-note">1998 till 2027</p></div><div class="tile"><p class="tile-label">Rapporter lästa</p><p class="tile-value">2 312</p><p class="tile-note">av 2 940 engelska EU-27-rapporter</p></div><div class="tile"><p class="tile-label">Kanter i citatgrafen</p><p class="tile-value">7 806</p><p class="tile-note">96% pekar på ett funnet stycke</p></div><div class="tile"><p class="tile-label">Åtaganden i åtgärdsplaner</p><p class="tile-value">5 710</p><p class="tile-note">27% av rekommendationerna besvarade</p></div></div>
+
+<h2>Rekommendationer per land</h2>
+<p class="note">EU-27. Volymen följer i stort hur ofta ett land reviderats, inte
+hur väl dess kontrollsystem fungerar; antalet rekommendationer är ett mått på
+granskningens omfattning, inte ett betyg.</p>
+<div class="card"><svg class="chart" viewBox="0 0 610 736" role="img" aria-labelledby="countries-title"><title id="countries-title">Rekommendationer per land i EU-27</title><line class="grid" x1="132.0" y1="0" x2="132.0" y2="702"/><text class="tick" x="132.0" y="718" text-anchor="middle">0</text><line class="grid" x1="246.0" y1="0" x2="246.0" y2="702"/><text class="tick" x="246.0" y="718" text-anchor="middle">250</text><line class="grid" x1="360.0" y1="0" x2="360.0" y2="702"/><text class="tick" x="360.0" y="718" text-anchor="middle">500</text><line class="grid" x1="474.0" y1="0" x2="474.0" y2="702"/><text class="tick" x="474.0" y="718" text-anchor="middle">750</text><g class="mark" tabindex="0" role="listitem" data-tip="Italy: 921 rekommendationer, 22% besvarade"><text class="label" x="124" y="17.0" text-anchor="end">Italy</text><rect class="bar" x="132" y="6.0" width="420.0" height="12" rx="4"/><rect class="bar-square" x="132" y="6.0" width="4" height="12"/><text class="value" x="560.0" y="17.0">921</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Greece: 843 rekommendationer, 17% besvarade"><text class="label" x="124" y="43.0" text-anchor="end">Greece</text><rect class="bar" x="132" y="32.0" width="384.4" height="12" rx="4"/><rect class="bar-square" x="132" y="32.0" width="4" height="12"/><text class="value" x="524.4" y="43.0">843</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Spain: 780 rekommendationer, 26% besvarade"><text class="label" x="124" y="69.0" text-anchor="end">Spain</text><rect class="bar" x="132" y="58.0" width="355.7" height="12" rx="4"/><rect class="bar-square" x="132" y="58.0" width="4" height="12"/><text class="value" x="495.7" y="69.0">780</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Portugal: 717 rekommendationer, 25% besvarade"><text class="label" x="124" y="95.0" text-anchor="end">Portugal</text><rect class="bar" x="132" y="84.0" width="327.0" height="12" rx="4"/><rect class="bar-square" x="132" y="84.0" width="4" height="12"/><text class="value" x="467.0" y="95.0">717</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Germany: 636 rekommendationer, 26% besvarade"><text class="label" x="124" y="121.0" text-anchor="end">Germany</text><rect class="bar" x="132" y="110.0" width="290.0" height="12" rx="4"/><rect class="bar-square" x="132" y="110.0" width="4" height="12"/><text class="value" x="430.0" y="121.0">636</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Poland: 621 rekommendationer, 31% besvarade"><text class="label" x="124" y="147.0" text-anchor="end">Poland</text><rect class="bar" x="132" y="136.0" width="283.2" height="12" rx="4"/><rect class="bar-square" x="132" y="136.0" width="4" height="12"/><text class="value" x="423.2" y="147.0">621</text></g><g class="mark" tabindex="0" role="listitem" data-tip="France: 589 rekommendationer, 24% besvarade"><text class="label" x="124" y="173.0" text-anchor="end">France</text><rect class="bar" x="132" y="162.0" width="268.6" height="12" rx="4"/><rect class="bar-square" x="132" y="162.0" width="4" height="12"/><text class="value" x="408.6" y="173.0">589</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Bulgaria: 524 rekommendationer, 43% besvarade"><text class="label" x="124" y="199.0" text-anchor="end">Bulgaria</text><rect class="bar" x="132" y="188.0" width="239.0" height="12" rx="4"/><rect class="bar-square" x="132" y="188.0" width="4" height="12"/><text class="value" x="379.0" y="199.0">524</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Romania: 511 rekommendationer, 33% besvarade"><text class="label" x="124" y="225.0" text-anchor="end">Romania</text><rect class="bar" x="132" y="214.0" width="233.0" height="12" rx="4"/><rect class="bar-square" x="132" y="214.0" width="4" height="12"/><text class="value" x="373.0" y="225.0">511</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Netherlands: 500 rekommendationer, 28% besvarade"><text class="label" x="124" y="251.0" text-anchor="end">Netherlands</text><rect class="bar" x="132" y="240.0" width="228.0" height="12" rx="4"/><rect class="bar-square" x="132" y="240.0" width="4" height="12"/><text class="value" x="368.0" y="251.0">500</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Hungary: 450 rekommendationer, 37% besvarade"><text class="label" x="124" y="277.0" text-anchor="end">Hungary</text><rect class="bar" x="132" y="266.0" width="205.2" height="12" rx="4"/><rect class="bar-square" x="132" y="266.0" width="4" height="12"/><text class="value" x="345.2" y="277.0">450</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Belgium: 430 rekommendationer, 29% besvarade"><text class="label" x="124" y="303.0" text-anchor="end">Belgium</text><rect class="bar" x="132" y="292.0" width="196.1" height="12" rx="4"/><rect class="bar-square" x="132" y="292.0" width="4" height="12"/><text class="value" x="336.1" y="303.0">430</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Ireland: 414 rekommendationer, 28% besvarade"><text class="label" x="124" y="329.0" text-anchor="end">Ireland</text><rect class="bar" x="132" y="318.0" width="188.8" height="12" rx="4"/><rect class="bar-square" x="132" y="318.0" width="4" height="12"/><text class="value" x="328.8" y="329.0">414</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Sweden: 371 rekommendationer, 33% besvarade"><text class="label" x="124" y="355.0" text-anchor="end">Sweden</text><rect class="bar" x="132" y="344.0" width="169.2" height="12" rx="4"/><rect class="bar-square" x="132" y="344.0" width="4" height="12"/><text class="value" x="309.2" y="355.0">371</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Denmark: 358 rekommendationer, 30% besvarade"><text class="label" x="124" y="381.0" text-anchor="end">Denmark</text><rect class="bar" x="132" y="370.0" width="163.3" height="12" rx="4"/><rect class="bar-square" x="132" y="370.0" width="4" height="12"/><text class="value" x="303.3" y="381.0">358</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Czech Republic: 351 rekommendationer, 24% besvarade"><text class="label" x="124" y="407.0" text-anchor="end">Czech Republic</text><rect class="bar" x="132" y="396.0" width="160.1" height="12" rx="4"/><rect class="bar-square" x="132" y="396.0" width="4" height="12"/><text class="value" x="300.1" y="407.0">351</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Finland: 318 rekommendationer, 24% besvarade"><text class="label" x="124" y="433.0" text-anchor="end">Finland</text><rect class="bar" x="132" y="422.0" width="145.0" height="12" rx="4"/><rect class="bar-square" x="132" y="422.0" width="4" height="12"/><text class="value" x="285.0" y="433.0">318</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Austria: 301 rekommendationer, 19% besvarade"><text class="label" x="124" y="459.0" text-anchor="end">Austria</text><rect class="bar" x="132" y="448.0" width="137.3" height="12" rx="4"/><rect class="bar-square" x="132" y="448.0" width="4" height="12"/><text class="value" x="277.3" y="459.0">301</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Slovakia: 295 rekommendationer, 33% besvarade"><text class="label" x="124" y="485.0" text-anchor="end">Slovakia</text><rect class="bar" x="132" y="474.0" width="134.5" height="12" rx="4"/><rect class="bar-square" x="132" y="474.0" width="4" height="12"/><text class="value" x="274.5" y="485.0">295</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Lithuania: 290 rekommendationer, 30% besvarade"><text class="label" x="124" y="511.0" text-anchor="end">Lithuania</text><rect class="bar" x="132" y="500.0" width="132.2" height="12" rx="4"/><rect class="bar-square" x="132" y="500.0" width="4" height="12"/><text class="value" x="272.2" y="511.0">290</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Slovenia: 260 rekommendationer, 20% besvarade"><text class="label" x="124" y="537.0" text-anchor="end">Slovenia</text><rect class="bar" x="132" y="526.0" width="118.6" height="12" rx="4"/><rect class="bar-square" x="132" y="526.0" width="4" height="12"/><text class="value" x="258.6" y="537.0">260</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Cyprus: 259 rekommendationer, 20% besvarade"><text class="label" x="124" y="563.0" text-anchor="end">Cyprus</text><rect class="bar" x="132" y="552.0" width="118.1" height="12" rx="4"/><rect class="bar-square" x="132" y="552.0" width="4" height="12"/><text class="value" x="258.1" y="563.0">259</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Estonia: 234 rekommendationer, 44% besvarade"><text class="label" x="124" y="589.0" text-anchor="end">Estonia</text><rect class="bar" x="132" y="578.0" width="106.7" height="12" rx="4"/><rect class="bar-square" x="132" y="578.0" width="4" height="12"/><text class="value" x="246.7" y="589.0">234</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Latvia: 230 rekommendationer, 23% besvarade"><text class="label" x="124" y="615.0" text-anchor="end">Latvia</text><rect class="bar" x="132" y="604.0" width="104.9" height="12" rx="4"/><rect class="bar-square" x="132" y="604.0" width="4" height="12"/><text class="value" x="244.9" y="615.0">230</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Luxembourg: 222 rekommendationer, 18% besvarade"><text class="label" x="124" y="641.0" text-anchor="end">Luxembourg</text><rect class="bar" x="132" y="630.0" width="101.2" height="12" rx="4"/><rect class="bar-square" x="132" y="630.0" width="4" height="12"/><text class="value" x="241.2" y="641.0">222</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Malta: 222 rekommendationer, 38% besvarade"><text class="label" x="124" y="667.0" text-anchor="end">Malta</text><rect class="bar" x="132" y="656.0" width="101.2" height="12" rx="4"/><rect class="bar-square" x="132" y="656.0" width="4" height="12"/><text class="value" x="241.2" y="667.0">222</text></g><g class="mark" tabindex="0" role="listitem" data-tip="Croatia: 182 rekommendationer, 43% besvarade"><text class="label" x="124" y="693.0" text-anchor="end">Croatia</text><rect class="bar" x="132" y="682.0" width="83.0" height="12" rx="4"/><rect class="bar-square" x="132" y="682.0" width="4" height="12"/><text class="value" x="223.0" y="693.0">182</text></g></svg><details class="table-view"><summary>Visa som tabell</summary><table id="country-table"><thead><tr><th>Land</th><th>Rekommendationer</th><th>Anger sin grund</th><th>Besvarade</th></tr></thead><tbody><tr><td>Italy</td><td>921</td><td>14%</td><td>22%</td></tr><tr><td>Greece</td><td>843</td><td>13%</td><td>17%</td></tr><tr><td>Spain</td><td>780</td><td>16%</td><td>26%</td></tr><tr><td>Portugal</td><td>717</td><td>8%</td><td>25%</td></tr><tr><td>Germany</td><td>636</td><td>12%</td><td>26%</td></tr><tr><td>Poland</td><td>621</td><td>19%</td><td>31%</td></tr><tr><td>France</td><td>589</td><td>21%</td><td>24%</td></tr><tr><td>Bulgaria</td><td>524</td><td>25%</td><td>43%</td></tr><tr><td>Romania</td><td>511</td><td>25%</td><td>33%</td></tr><tr><td>Netherlands</td><td>500</td><td>14%</td><td>28%</td></tr><tr><td>Hungary</td><td>450</td><td>13%</td><td>37%</td></tr><tr><td>Belgium</td><td>430</td><td>16%</td><td>29%</td></tr><tr><td>Ireland</td><td>414</td><td>18%</td><td>28%</td></tr><tr><td>Sweden</td><td>371</td><td>19%</td><td>33%</td></tr><tr><td>Denmark</td><td>358</td><td>19%</td><td>30%</td></tr><tr><td>Czech Republic</td><td>351</td><td>17%</td><td>24%</td></tr><tr><td>Finland</td><td>318</td><td>18%</td><td>24%</td></tr><tr><td>Austria</td><td>301</td><td>12%</td><td>19%</td></tr><tr><td>Slovakia</td><td>295</td><td>27%</td><td>33%</td></tr><tr><td>Lithuania</td><td>290</td><td>20%</td><td>30%</td></tr><tr><td>Slovenia</td><td>260</td><td>17%</td><td>20%</td></tr><tr><td>Cyprus</td><td>259</td><td>14%</td><td>20%</td></tr><tr><td>Estonia</td><td>234</td><td>19%</td><td>44%</td></tr><tr><td>Latvia</td><td>230</td><td>16%</td><td>23%</td></tr><tr><td>Luxembourg</td><td>222</td><td>14%</td><td>18%</td></tr><tr><td>Malta</td><td>222</td><td>30%</td><td>38%</td></tr><tr><td>Croatia</td><td>182</td><td>36%</td><td>43%</td></tr></tbody></table></details></div>
+
+<h2>Hur långt kedjan går att följa, 2014 till 2024</h2>
+<p class="note">Två andelar per år. <em>Anger sin grund</em> är de
+rekommendationer som skriver ut vilken slutsats de vilar på, vilket är det som
+gör citatgrafen möjlig. <em>Besvarade i plan</em> är de som återfinns i
+medlemsstatens åtgärdsplan. De två senaste åren utelämnas: deras åtgärdsplaner
+är ännu inte publicerade, och en nolla där vore en eftersläpning och inte ett
+resultat.</p>
+<div class="card"><div class="legend"><span class="key"><span class="swatch" style="background:var(--series-1)"></span>Anger sin grund</span><span class="key"><span class="swatch" style="background:var(--series-2)"></span>Besvarade i plan</span></div><svg class="chart" viewBox="0 0 620 250" role="img" aria-labelledby="years-title"><title id="years-title">Andel rekommendationer som anger sin grund och som besvarats, EU-27</title><line class="grid" x1="34" y1="216.0" x2="528" y2="216.0"/><text class="tick" x="26" y="220.0" text-anchor="end">0%</text><line class="grid" x1="34" y1="166.0" x2="528" y2="166.0"/><text class="tick" x="26" y="170.0" text-anchor="end">25%</text><line class="grid" x1="34" y1="116.0" x2="528" y2="116.0"/><text class="tick" x="26" y="120.0" text-anchor="end">50%</text><line class="grid" x1="34" y1="66.0" x2="528" y2="66.0"/><text class="tick" x="26" y="70.0" text-anchor="end">75%</text><line class="grid" x1="34" y1="16.0" x2="528" y2="16.0"/><text class="tick" x="26" y="20.0" text-anchor="end">100%</text><text class="tick" x="34.0" y="238" text-anchor="middle">2014</text><text class="tick" x="132.8" y="238" text-anchor="middle">2016</text><text class="tick" x="231.6" y="238" text-anchor="middle">2018</text><text class="tick" x="330.4" y="238" text-anchor="middle">2020</text><text class="tick" x="429.2" y="238" text-anchor="middle">2022</text><text class="tick" x="528.0" y="238" text-anchor="middle">2024</text><path class="line" d="M34.0 193.1 L83.4 65.5 L132.8 56.8 L182.2 41.3 L231.6 43.8 L281.0 81.2 L330.4 67.6 L379.8 56.3 L429.2 46.6 L478.6 71.4 L528.0 44.9" stroke="var(--series-1)"/><g class="mark" tabindex="0" data-tip="2014, Anger sin grund: 11%"><circle class="dot" cx="34.0" cy="193.1" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2015, Anger sin grund: 75%"><circle class="dot" cx="83.4" cy="65.5" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2016, Anger sin grund: 80%"><circle class="dot" cx="132.8" cy="56.8" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2017, Anger sin grund: 87%"><circle class="dot" cx="182.2" cy="41.3" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2018, Anger sin grund: 86%"><circle class="dot" cx="231.6" cy="43.8" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2019, Anger sin grund: 67%"><circle class="dot" cx="281.0" cy="81.2" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2020, Anger sin grund: 74%"><circle class="dot" cx="330.4" cy="67.6" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2021, Anger sin grund: 80%"><circle class="dot" cx="379.8" cy="56.3" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2022, Anger sin grund: 85%"><circle class="dot" cx="429.2" cy="46.6" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2023, Anger sin grund: 72%"><circle class="dot" cx="478.6" cy="71.4" r="4" fill="var(--series-1)"/></g><g class="mark" tabindex="0" data-tip="2024, Anger sin grund: 86%"><circle class="dot" cx="528.0" cy="44.9" r="4" fill="var(--series-1)"/></g><text class="value" x="538.0" y="48.9">86%</text><path class="line" d="M34.0 44.0 L83.4 55.6 L132.8 78.1 L182.2 80.4 L231.6 81.2 L281.0 75.2 L330.4 80.2 L379.8 74.0 L429.2 55.5 L478.6 73.9 L528.0 116.5" stroke="var(--series-2)"/><g class="mark" tabindex="0" data-tip="2014, Besvarade i plan: 86%"><circle class="dot" cx="34.0" cy="44.0" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2015, Besvarade i plan: 80%"><circle class="dot" cx="83.4" cy="55.6" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2016, Besvarade i plan: 69%"><circle class="dot" cx="132.8" cy="78.1" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2017, Besvarade i plan: 68%"><circle class="dot" cx="182.2" cy="80.4" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2018, Besvarade i plan: 67%"><circle class="dot" cx="231.6" cy="81.2" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2019, Besvarade i plan: 70%"><circle class="dot" cx="281.0" cy="75.2" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2020, Besvarade i plan: 68%"><circle class="dot" cx="330.4" cy="80.2" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2021, Besvarade i plan: 71%"><circle class="dot" cx="379.8" cy="74.0" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2022, Besvarade i plan: 80%"><circle class="dot" cx="429.2" cy="55.5" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2023, Besvarade i plan: 71%"><circle class="dot" cx="478.6" cy="73.9" r="4" fill="var(--series-2)"/></g><g class="mark" tabindex="0" data-tip="2024, Besvarade i plan: 50%"><circle class="dot" cx="528.0" cy="116.5" r="4" fill="var(--series-2)"/></g><text class="value" x="538.0" y="120.5">50%</text></svg><details class="table-view"><summary>Visa som tabell</summary><table id="year-table"><thead><tr><th>År</th><th>Rekommendationer</th><th>Anger sin grund</th><th>Besvarade</th></tr></thead><tbody><tr><td>2014</td><td>436</td><td>11%</td><td>86%</td></tr><tr><td>2015</td><td>303</td><td>75%</td><td>80%</td></tr><tr><td>2016</td><td>206</td><td>80%</td><td>69%</td></tr><tr><td>2017</td><td>174</td><td>87%</td><td>68%</td></tr><tr><td>2018</td><td>273</td><td>86%</td><td>67%</td></tr><tr><td>2019</td><td>233</td><td>67%</td><td>70%</td></tr><tr><td>2020</td><td>159</td><td>74%</td><td>68%</td></tr><tr><td>2021</td><td>283</td><td>80%</td><td>71%</td></tr><tr><td>2022</td><td>248</td><td>85%</td><td>80%</td></tr><tr><td>2023</td><td>242</td><td>72%</td><td>71%</td></tr><tr><td>2024</td><td>201</td><td>86%</td><td>50%</td></tr></tbody></table></details></div>
+
+<h2>Citatgrafen</h2>
+<p class="note">2 004 rekommendationer, 17% av alla, skriver ut
+vilken slutsats de vilar på. Praktiken börjar 2014; före det finns inga
+korsreferenser alls. 7 472 av kanterna, 96%, pekar på ett
+stycke som faktiskt gick att hitta i rapporten.</p>
+<p class="note">Styckets egen rubrik och rapportens citat är två oberoende
+läsningar av samma stycke. De är eniga i 88% av de fall där båda
+säger något. Oenigheten redovisas rad för rad i datat i stället för att jämkas
+ihop, eftersom avvikelsen mellan två läsningar är det bästa kvalitetsmått
+lagret har.</p>
+
+<h2>Vad sidan inte visar</h2>
+<p class="note">Redovisas här och inte i en fotnot, eftersom det avgör hur
+siffrorna får läsas.</p>
+<p class="note"><strong>Korsreferenserna är en delmängd.</strong> Bara knappt en
+fjärdedel av rapporterna skriver ut vilken slutsats en rekommendation vilar på.
+Att beskriva hela korpusen som en graf vore en överdrift.</p>
+<p class="note"><strong>Antalet rekommendationer är inget betyg.</strong> Det
+speglar hur mycket som granskats, inte hur väl ett kontrollsystem fungerar. Ett
+land med många revisioner får många rekommendationer.</p>
+<p class="note"><strong>Parsningen är inte fullständig.</strong> Rapporter vars
+numrering inte går att följa lämnas oparsade i stället för att gissas, och
+antalet står i projektets dokumentation. Det som inte gick att läsa är räknat,
+inte utjämnat.</p>
+<p class="note"><strong>Åtgärdsplaner saknas för de nyaste revisionerna</strong>
+och för allt före 2011, då praktiken inte fanns.</p>
+
+<footer>
+Källa: Europeiska kommissionen, generaldirektoratet för hälsa och
+livsmedelssäkerhet, revisionsrapporter 1998 till 2027. Byggd ur den öppna
+korpusen med <code>pipeline/11_build_dashboard.py</code>. Källdokumenten
+återdistribueras inte; ett proveniensmanifest med sha256 per fil ligger i repot.
+</footer>
+</main>
+<div id="tip" role="status" aria-live="polite"></div>
+<script>
+const tip = document.getElementById("tip");
+for (const mark of document.querySelectorAll(".mark")) {
+  const show = (event) => {
+    tip.textContent = mark.dataset.tip;
+    tip.style.opacity = "1";
+    const box = mark.getBoundingClientRect();
+    const x = event.clientX ?? box.left + box.width / 2;
+    const y = event.clientY ?? box.top;
+    tip.style.left = Math.min(x + 14, innerWidth - 300) + "px";
+    tip.style.top = Math.max(y - 42, 8) + "px";
+  };
+  const hide = () => { tip.style.opacity = "0"; };
+  mark.addEventListener("mouseenter", show);
+  mark.addEventListener("mousemove", show);
+  mark.addEventListener("mouseleave", hide);
+  mark.addEventListener("focus", show);
+  mark.addEventListener("blur", hide);
+}
+document.getElementById("theme").addEventListener("click", () => {
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const current = document.documentElement.dataset.theme
+    || (dark ? "dark" : "light");
+  document.documentElement.dataset.theme = current === "dark" ? "light" : "dark";
+});
+</script>
+</body></html>
