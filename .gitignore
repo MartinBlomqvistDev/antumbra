@@ -45,3 +45,8 @@ service-account*.json
 .idea/
 Thumbs.db
 desktop.ini
+
+# dbt build output and any credentials the tool writes locally
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/

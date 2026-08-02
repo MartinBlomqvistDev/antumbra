@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      The star schema as pipeline/10_build_warehouse.py wrote it, loaded into
+      BigQuery by pipeline/12_load_bigquery.py. These tables are a publication
+      of the local Parquet model, never edited in place.
+    database: "{{ env_var('ANTUMBRA_GCP_PROJECT', 'antumbra') }}"
+    schema: dgsante_raw
+    tables:
+      - name: dim_country
+        columns:
+          - name: country_key
+            tests: [unique, not_null]
+      - name: dim_audit
+        columns:
+          - name: audit_key
+            tests: [unique, not_null]
+          - name: country_key
+            tests:
+              - relationships:
+                  to: source('raw', 'dim_country')
+                  field: country_key
+      - name: dim_paragraph
+        columns:
+          - name: paragraph_key
+            tests: [unique, not_null]
+      - name: fact_recommendation
+        columns:
+          - name: recommendation_key
+            tests: [unique, not_null]
+          - name: audit_key
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'dim_audit')
+                  field: audit_key
+      - name: fact_citation
+        columns:
+          - name: recommendation_key
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'fact_recommendation')
+                  field: recommendation_key
+      - name: fact_commitment
+        columns:
+          - name: plan_path
+            tests: [not_null]

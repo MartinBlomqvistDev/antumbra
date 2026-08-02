@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: mart_chain
+    description: >
+      One row per recommendation with what it rests on and whether the member
+      state answered it. Built as a left join outwards from the recommendation
+      so that a recommendation which cites nothing still appears; an inner join
+      would silently restrict every count to the part of the corpus where the
+      chain closes.
+    columns:
+      - name: recommendation_key
+        description: Surrogate key from the local model.
+        tests: [unique, not_null]
+      - name: country
+        tests: [not_null]
+      - name: citations
+        description: Edges this recommendation states, resolved or not.
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 40
+      - name: citations_resolved
+        description: Edges that found their paragraph.
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+      - name: chain_closes
+        description: >
+          True only where the recommendation names its basis, that basis
+          resolves, and a plan answers it. A partial chain is false.
+        tests: [not_null]
+      - name: parse_method
+        tests:
+          - accepted_values:
+              values: [numbered_lines, two_column_table, hierarchical]
+
+  - name: mart_country_year
+    description: >
+      Country by year, with numerator and denominator kept beside every share
+      so a thin percentage cannot be read as a solid one.
+    columns:
+      - name: country
+        tests: [not_null]
+      - name: recommendations
+        tests: [not_null]
+      - name: share_answered
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1
+      - name: share_stating_their_basis
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1

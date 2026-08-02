@@ -1,0 +1,21 @@
+name: antumbra
+version: 1.0.0
+config-version: 2
+
+profile: antumbra
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+# The staging layer only renames and types what the pipeline already wrote, so
+# it stays a view. The marts are what a dashboard queries, so they are tables.
+models:
+  antumbra:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts

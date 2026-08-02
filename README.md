@@ -102,6 +102,7 @@ python pipeline/08_parse_paragraphs.py     # de citerade styckena, grafens noder
 python pipeline/09_link_action_plans.py    # åtagandena kopplade till rekommendationerna
 python pipeline/10_build_warehouse.py      # stjärnschemat i Parquet
 python pipeline/11_build_dashboard.py      # docs/dashboard.html
+python pipeline/12_load_bigquery.py --dry-run  # visar vad som skulle laddas
 ```
 
 Stegen skriver till `data/`. De som tar tid är återupptagbara och hoppar över
@@ -132,6 +133,7 @@ docs/VILLKORSSCHEMA.md datakontrakt med motivering och verifieringskontroller
 docs/DGSANTE.md        jämförelselagrets korpus, struktur och volym
 docs/adr/              daterade beslut om avgränsningar och metod
 docs/dashboard.html    fristående dashboard över jämförelselagret
+dbt/                   staging och marts ovanpå stjärnschemat
 CONTRIBUTING.md        kodstandard, commit-konvention, vad som aldrig committas
 data/                  härledda dataset, ingen råtext och inga PDF:er
 src/                   datakontrakt (Pydantic v2)

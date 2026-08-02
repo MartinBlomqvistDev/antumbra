@@ -1,0 +1,21 @@
+# Copy to ~/.dbt/profiles.yml and fill in. Nothing here is a secret: the key
+# file lives outside the repository and is named, not embedded.
+#
+# The layer is built and tested locally first, in Parquet, by
+# pipeline/10_build_warehouse.py. BigQuery is a publication of that model, not
+# a second source of truth, so a run against an empty project is expected to
+# do nothing until the Parquet tables have been loaded with
+# pipeline/12_load_bigquery.py.
+antumbra:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: CHANGE-ME-gcp-project-id
+      dataset: dgsante
+      location: EU
+      keyfile: /path/to/service-account.json
+      threads: 4
+      priority: interactive
+      job_retries: 1
