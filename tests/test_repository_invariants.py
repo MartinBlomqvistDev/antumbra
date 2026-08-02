@@ -97,6 +97,13 @@ def recommendations() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def action_plans() -> list[dict]:
+    """One record per recommendation answered in an action plan."""
+    path = ROOT / "data" / "dgsante_action_plans.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def graph() -> list[dict]:
     """One record per citation edge, with the paragraph it points at."""
     path = ROOT / "data" / "dgsante_graph.jsonl"
@@ -345,6 +352,41 @@ class TestTheGraphClosesOntoRealParagraphs:
         cited = [e for e in graph if e["resolved"] and e["cites"] == "conclusion"]
         agreeing = sum(1 for e in cited if e["paragraph_kind"] == "conclusion")
         assert agreeing / len(cited) >= 0.55
+
+
+class TestActionPlansAnswerRealRecommendations:
+    """A commitment must be tied to a recommendation that exists."""
+
+    def test_every_response_names_a_plan_and_a_number(self, action_plans):
+        assert action_plans
+        for row in action_plans:
+            assert row["plan_path"].startswith("pdf/dgsante/annexes/")
+            assert 1 <= row["recommendation"] <= 40
+            assert row["response"] or row["restated_recommendation"]
+
+    def test_responses_mostly_match_a_parsed_recommendation(
+        self, action_plans, recommendations
+    ):
+        known = {(r["ref"], r["number"]) for r in recommendations}
+        matched = sum(
+            1 for r in action_plans if (r["ref"], r["recommendation"]) in known
+        )
+        assert matched / len(action_plans) >= 0.4
+
+    def test_the_restated_text_is_kept_so_the_link_can_be_checked(self, action_plans):
+        """The plan restates the recommendation; that is the check on the link.
+
+        A link resting on a shared number alone cannot be verified, so the
+        restatement has to survive into the output for most rows.
+        """
+        with_text = sum(1 for r in action_plans if r["restated_recommendation"])
+        assert with_text / len(action_plans) >= 0.8
+
+    def test_a_confirmed_link_really_does_have_matching_text(self, action_plans):
+        for row in action_plans:
+            if row["link_confirmed_by_text"]:
+                assert row["text_similarity"] >= 0.6
+                assert row["restated_recommendation"]
 
 
 class TestOcrIndexIsHonestAboutQuality:
