@@ -14,6 +14,10 @@ dependencies = ["pydantic>=2.12"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.6"]
+# Step 06 rasterises scanned annexes before reading them. It also needs the
+# Tesseract binary and its language packs, which are not Python packages; see
+# docs/DGSANTE.md for how they are installed and where the language data lives.
+ocr = ["pymupdf>=1.24"]
 
 [project.urls]
 Repository = "https://github.com/MartinBlomqvistDev/antumbra"
