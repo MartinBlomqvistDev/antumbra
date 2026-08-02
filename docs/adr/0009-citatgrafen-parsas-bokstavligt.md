@@ -20,6 +20,12 @@ mot en rapport. Mätningen visar något annat: korsreferenserna börjar 2014 och
 finns i 489 av 2 940 rapporter. Att beskriva 4 690 revisioner som en graf hade
 varit en överdrift som en granskare kan slå hål på med tre stickprov.
 
+**Rättelse 2026-08-02, samma dag:** talet 489 var för lågt. Sidbrytningens form
+feed gjorde varje rubrik som öppnade en sida osynlig för parsern, se ADR-0011.
+Rätt tal är **671 av 2 940**. Beslutet står oförändrat och slutsatsen likaså:
+grafen är en delmängd av korpusen, inte hela den. Posten skrivs inte om,
+eftersom en daterad beslutslogg tappar sitt värde om den redigeras i efterhand.
+
 Teckenklassen som först användes för referenslistorna åt sig förbi punkten och
 in i lagcitat, så att "2017/625" blev kanterna 201, 7 och 625. Felet syntes
 bara för att antalet kanter per rekommendation kontrollerades mot mallen: tio
