@@ -15,8 +15,11 @@ STATUS.md
 
 # Large derived files. The full paragraph corpus is 66 MB and is regenerated
 # by pipeline/08_parse_paragraphs.py; the citation graph derived from it is
-# committed instead, since that is the part worth reviewing.
+# committed instead, since that is the part worth reviewing. The warehouse is
+# a build artefact of pipeline/10_build_warehouse.py; its manifest, which
+# describes every table and column, is committed in its place.
 data/dgsante_paragraphs.jsonl
+data/warehouse/
 data/*.parquet
 data/*.duckdb
 *.pbix

@@ -1,0 +1,228 @@
+{
+  "tables": [
+    {
+      "table": "dim_country",
+      "rows": 165,
+      "columns": [
+        {
+          "name": "country_key",
+          "type": "int64"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "in_eu27",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "table": "dim_audit",
+      "rows": 4690,
+      "columns": [
+        {
+          "name": "audit_key",
+          "type": "int64"
+        },
+        {
+          "name": "ref",
+          "type": "string"
+        },
+        {
+          "name": "country_key",
+          "type": "int64"
+        },
+        {
+          "name": "year",
+          "type": "int64"
+        },
+        {
+          "name": "audit_period",
+          "type": "string"
+        },
+        {
+          "name": "published_date",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "reference_format",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "dim_paragraph",
+      "rows": 81292,
+      "columns": [
+        {
+          "name": "paragraph_key",
+          "type": "int64"
+        },
+        {
+          "name": "audit_key",
+          "type": "int64"
+        },
+        {
+          "name": "report_path",
+          "type": "string"
+        },
+        {
+          "name": "number",
+          "type": "int64"
+        },
+        {
+          "name": "kind",
+          "type": "string"
+        },
+        {
+          "name": "section",
+          "type": "string"
+        },
+        {
+          "name": "label_heading",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "fact_recommendation",
+      "rows": 10067,
+      "columns": [
+        {
+          "name": "recommendation_key",
+          "type": "int64"
+        },
+        {
+          "name": "audit_key",
+          "type": "int64"
+        },
+        {
+          "name": "report_path",
+          "type": "string"
+        },
+        {
+          "name": "number",
+          "type": "int64"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "legal_basis",
+          "type": "string"
+        },
+        {
+          "name": "parse_method",
+          "type": "string"
+        },
+        {
+          "name": "conclusions_cited",
+          "type": "int64"
+        },
+        {
+          "name": "findings_cited",
+          "type": "int64"
+        },
+        {
+          "name": "states_its_basis",
+          "type": "bool"
+        },
+        {
+          "name": "is_answered",
+          "type": "bool"
+        },
+        {
+          "name": "answer_confirmed_by_text",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "table": "fact_citation",
+      "rows": 7807,
+      "columns": [
+        {
+          "name": "recommendation_key",
+          "type": "int64"
+        },
+        {
+          "name": "paragraph_key",
+          "type": "int64"
+        },
+        {
+          "name": "audit_key",
+          "type": "int64"
+        },
+        {
+          "name": "cites",
+          "type": "string"
+        },
+        {
+          "name": "paragraph_number",
+          "type": "int64"
+        },
+        {
+          "name": "resolved",
+          "type": "bool"
+        },
+        {
+          "name": "heading_agrees",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "table": "fact_commitment",
+      "rows": 5710,
+      "columns": [
+        {
+          "name": "recommendation_key",
+          "type": "int64"
+        },
+        {
+          "name": "audit_key",
+          "type": "int64"
+        },
+        {
+          "name": "plan_path",
+          "type": "string"
+        },
+        {
+          "name": "recommendation_number",
+          "type": "int64"
+        },
+        {
+          "name": "response",
+          "type": "string"
+        },
+        {
+          "name": "text_similarity",
+          "type": "double"
+        },
+        {
+          "name": "confirmed_by_text",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "measures": {
+    "recommendations": 10067,
+    "recommendations_stating_their_basis": 2004,
+    "recommendations_answered": 3248,
+    "citations": 7807,
+    "citations_resolved": 7472,
+    "commitments": 5710
+  }
+}

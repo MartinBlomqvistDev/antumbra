@@ -104,6 +104,13 @@ def action_plans() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def warehouse() -> dict:
+    """The manifest describing the dimensional model."""
+    path = ROOT / "data" / "dgsante_warehouse_manifest.json"
+    return json.loads(path.read_text("utf-8"))
+
+
+@pytest.fixture(scope="module")
 def graph() -> list[dict]:
     """One record per citation edge, with the paragraph it points at."""
     path = ROOT / "data" / "dgsante_graph.jsonl"
@@ -387,6 +394,60 @@ class TestActionPlansAnswerRealRecommendations:
             if row["link_confirmed_by_text"]:
                 assert row["text_similarity"] >= 0.6
                 assert row["restated_recommendation"]
+
+
+class TestTheWarehouseDescribesWhatWasBuilt:
+    """The Parquet tables are a build artefact; the manifest is the record.
+
+    These run without the binaries, so CI checks that the model still has
+    the shape the documentation claims and that its row counts still follow
+    from the committed datasets.
+    """
+
+    EXPECTED: ClassVar[set[str]] = {
+        "dim_country",
+        "dim_audit",
+        "dim_paragraph",
+        "fact_recommendation",
+        "fact_citation",
+        "fact_commitment",
+    }
+
+    def test_the_star_has_its_dimensions_and_facts(self, warehouse):
+        assert {t["table"] for t in warehouse["tables"]} == self.EXPECTED
+
+    def test_every_table_declares_its_key(self, warehouse):
+        for table in warehouse["tables"]:
+            names = {column["name"] for column in table["columns"]}
+            if table["table"].startswith("dim_"):
+                assert f"{table['table'][4:]}_key" in names, table["table"]
+            else:
+                assert "audit_key" in names, table["table"]
+
+    def test_row_counts_follow_from_the_committed_datasets(
+        self, warehouse, recommendations, graph, action_plans, index
+    ):
+        rows = {t["table"]: t["rows"] for t in warehouse["tables"]}
+        assert rows["fact_recommendation"] == len(recommendations)
+        assert rows["fact_citation"] == len(graph)
+        assert rows["fact_commitment"] == len(action_plans)
+        assert rows["dim_audit"] == len(index)
+
+    def test_the_measures_agree_with_the_facts(self, warehouse, recommendations):
+        measures = warehouse["measures"]
+        assert measures["recommendations"] == len(recommendations)
+        stating = sum(1 for r in recommendations if r["based_on_conclusions"])
+        assert measures["recommendations_stating_their_basis"] == stating
+        assert measures["citations_resolved"] <= measures["citations"]
+
+    def test_a_citation_that_did_not_resolve_is_still_a_row(self, warehouse):
+        """Dropping the unresolved would flatter the model.
+
+        The count of what could not be joined is part of the result, so the
+        citation fact must hold more rows than it resolved.
+        """
+        measures = warehouse["measures"]
+        assert measures["citations"] > measures["citations_resolved"]
 
 
 class TestOcrIndexIsHonestAboutQuality:
