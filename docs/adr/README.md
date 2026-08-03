@@ -20,3 +20,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0011](0011-planerna-som-facit-mot-rapportparsningen.md) | Planerna som facit mot rapportparsningen | beslutad |
 | [0012](0012-dimensionsmodellen-byggs-lokalt-forst.md) | Dimensionsmodellen byggs lokalt först | beslutad |
 | [0013](0013-containment-i-stallet-for-likhet.md) | Länken mäts som containment, inte likhet | beslutad |
+| [0014](0014-ai-assistans-deklareras-i-metoden.md) | AI-assistansen deklareras i metoden | beslutad |
