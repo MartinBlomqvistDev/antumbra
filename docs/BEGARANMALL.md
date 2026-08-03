@@ -701,10 +701,10 @@ län, djurslag och kontrolltyp.
 ### Kammarrättspraxis som A/B-designen vilar på
 
 **Källkritiskt förbehåll:** samtliga referat nedan kommer från allmanhandling.se,
-en specialistsajt som följer utlämnandemål. Ingen av domarna har kontrollerats i
-fulltext. **Innan mallarna skickas ska KR Sundsvall 2682-21 begäras ut i fulltext
-från Kammarrätten i Sundsvall**, eftersom hela tvåbegärandedesignen vilar på den;
-KR Jönköping 549-19 bör begäras ut samtidigt som motpol.
+en specialistsajt som följer utlämnandemål. **KR Sundsvall 2682-21 är kontrollerad
+i fulltext 2026-08-03**, se verifieringen under referatet; övriga domar är det
+inte. KR Jönköping 549-19 bör begäras ut som motpol innan någon publicerad text
+lutar sig mot den.
 
 Fristående kontrollrapport, maskning har hållit:
 
@@ -718,10 +718,34 @@ Fristående kontrollrapport, maskning har hållit:
 
 Kontrollrapport som bilaga till beslut, inte hemlig:
 
-- KR Sundsvall 2682-21, avgjord 2022-02-13, Länsstyrelsen i Gävleborg. En
+- KR Sundsvall 2682-21, meddelad 2021-12-17, Länsstyrelsen i Gävleborg. En
   kontrollrapport och en fotobilaga som bilagor till ett beslut i ett
   djurskyddsärende omfattades inte av sekretess, eftersom sekretessregeln inte
   gäller uppgifter i beslut. Bilagorna delade beslutets status.
+
+**Verifierad i fulltext 2026-08-03.** Kopia begärd 2026-08-02, expedierad av
+kammarrätten påföljande arbetsdag; dokumentet ligger utanför git eftersom det
+namnger klaganden med personnummer. Referatet stämmer i sak. Domskälen ordagrant:
+"Eftersom båda bilagorna har fogats till beslutet omfattas de av beslutet i
+ärendet. Då beslutet inte omfattas av sekretess ska beslutet och dess
+tillhörande bilagor lämnas ut i sin helhet." Slutet lyder "i omaskerat skick".
+Ett fel i referatet: datumet 2022-02-13 var inte avgörandedagen; domen är
+meddelad 2021-12-17.
+
+Fulltexten ger dessutom tre saker referatet inte bar:
+
+1. **Samma dom håller båda linjerna.** Överklagandet avslogs i övrigt: maskningen
+   av de fristående kontrollrapporterna, tjänsteanteckningarna och
+   utredningsmaterialet stod fast som affärs- och driftförhållanden enligt
+   30 kap. 23 § första stycket 1 OSL. A/B-kontrasten finns alltså inom en och
+   samma dom, hos en och samma länsstyrelse, inte bara mellan olika kammarrätters
+   praxis.
+2. **Nedläggning saknar betydelse.** Att verksamheten upphört ändrade inte
+   skadebedömningen. En länsstyrelse kan därför inte förväntas släppa äldre
+   handlingar med hänvisning till att verksamheten är borta.
+3. **21 kap. 3 §-maskning av personuppgifter prövades aldrig**, eftersom
+   klaganden avstått uppgifterna, precis som mallarna A och B gör. Sådan maskning
+   i ett B-svar är därmed ingen avvikelse enligt P9 och får inte räknas som en.
 
 Allt innehåll är inte affärshemlighet:
 

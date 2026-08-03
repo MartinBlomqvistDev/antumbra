@@ -6,6 +6,14 @@ raw/
 ocr/
 *.pdf
 
+# Court rulings and correspondence received by mail. The Sundsvall ruling
+# names the appellant with a full personal identity number, and every .eml
+# carries addresses. What the rulings establish goes into the docs; the
+# documents themselves stay outside git.
+data/sundsvall/
+*.eml
+*.zip
+
 # Internal working files. They stay on disk but never in the repository:
 # they describe why the project exists in career terms, how it is framed for
 # different audiences, and which tooling is used. None of that belongs in a
