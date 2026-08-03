@@ -48,7 +48,12 @@ def load(paths: list[Path], dataset: str, project: str) -> int:
     from google.cloud import bigquery
 
     client = bigquery.Client(project=project)
-    client.create_dataset(f"{project}.{dataset}", exists_ok=True)
+    # The dbt profile declares location EU. Creating the dataset without a
+    # location would default to US, and every downstream query would then
+    # fail on the region mismatch.
+    target_dataset = bigquery.Dataset(f"{project}.{dataset}")
+    target_dataset.location = "EU"
+    client.create_dataset(target_dataset, exists_ok=True)
     config = bigquery.LoadJobConfig(
         source_format=bigquery.SourceFormat.PARQUET,
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
