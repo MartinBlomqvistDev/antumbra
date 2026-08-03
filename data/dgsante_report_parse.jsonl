@@ -1,8 +1,8 @@
 {"ref": "1998-1315", "country": "Czech Republic", "path": "pdf/dgsante/reports/1998-1315_1862_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "1998-1316", "country": "Belgium", "path": "pdf/dgsante/reports/1998-1316_1863_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1316", "country": "Belgium", "path": "pdf/dgsante/reports/1998-1316_1863_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1319", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1319_3379_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1320", "country": "Spain", "path": "pdf/dgsante/reports/1998-1320_1866_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "1998-1321", "country": "Denmark", "path": "pdf/dgsante/reports/1998-1321_1867_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1321", "country": "Denmark", "path": "pdf/dgsante/reports/1998-1321_1867_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1323", "country": "Belgium", "path": "pdf/dgsante/reports/1998-1323_1869_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1325", "country": "Portugal", "path": "pdf/dgsante/reports/1998-1325_1870_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1326", "country": "Spain", "path": "pdf/dgsante/reports/1998-1326_1871_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
@@ -13,7 +13,7 @@
 {"ref": "1998-1345", "country": "Hungary", "path": "pdf/dgsante/reports/1998-1345_1886_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1346", "country": "Finland", "path": "pdf/dgsante/reports/1998-1346_1887_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1347", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1347_1888_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1998-1348", "country": "Finland", "path": "pdf/dgsante/reports/1998-1348_1889_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1348", "country": "Finland", "path": "pdf/dgsante/reports/1998-1348_1889_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1349", "country": "France", "path": "pdf/dgsante/reports/1998-1349_1890_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1350", "country": "Greece", "path": "pdf/dgsante/reports/1998-1350_1891_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1351", "country": "Ireland", "path": "pdf/dgsante/reports/1998-1351_1892_en.pdf", "outcome": "no_section_found", "recommendations": 0}
@@ -31,8 +31,8 @@
 {"ref": "1998-1390", "country": "Slovenia", "path": "pdf/dgsante/reports/1998-1390_1922_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1392", "country": "Lithuania", "path": "pdf/dgsante/reports/1998-1392_1924_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1393", "country": "France", "path": "pdf/dgsante/reports/1998-1393_1925_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1998-1399", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1399_1929_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1998-1400", "country": "Austria", "path": "pdf/dgsante/reports/1998-1400_1930_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1399", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1399_1929_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "1998-1400", "country": "Austria", "path": "pdf/dgsante/reports/1998-1400_1930_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1402", "country": "Austria", "path": "pdf/dgsante/reports/1998-1402_1932_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1998-1406", "country": "Czech Republic", "path": "pdf/dgsante/reports/1998-1406_1935_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1409", "country": "Finland", "path": "pdf/dgsante/reports/1998-1409_1938_en.pdf", "outcome": "no_section_found", "recommendations": 0}
@@ -43,7 +43,7 @@
 {"ref": "1998-1427", "country": "Greece", "path": "pdf/dgsante/reports/1998-1427_1951_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1428", "country": "Ireland", "path": "pdf/dgsante/reports/1998-1428_1952_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1436", "country": "Sweden", "path": "pdf/dgsante/reports/1998-1436_1958_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1998-1437", "country": "Italy", "path": "pdf/dgsante/reports/1998-1437_1959_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1437", "country": "Italy", "path": "pdf/dgsante/reports/1998-1437_1959_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1440", "country": "Italy", "path": "pdf/dgsante/reports/1998-1440_1962_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1441", "country": "Finland", "path": "pdf/dgsante/reports/1998-1441_1963_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1442", "country": "Portugal", "path": "pdf/dgsante/reports/1998-1442_1964_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
@@ -57,16 +57,16 @@
 {"ref": "1998-1456", "country": "Italy", "path": "pdf/dgsante/reports/1998-1456_1978_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1998-1458", "country": "Ireland", "path": "pdf/dgsante/reports/1998-1458_1980_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1998-1461", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1461_1982_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1998-1463", "country": "Spain", "path": "pdf/dgsante/reports/1998-1463_1983_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1463", "country": "Spain", "path": "pdf/dgsante/reports/1998-1463_1983_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1468", "country": "Sweden", "path": "pdf/dgsante/reports/1998-1468_3416_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1998-1470", "country": "Greece", "path": "pdf/dgsante/reports/1998-1470_1987_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "1998-1471", "country": "Portugal", "path": "pdf/dgsante/reports/1998-1471_1988_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1471", "country": "Portugal", "path": "pdf/dgsante/reports/1998-1471_1988_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1473", "country": "Finland", "path": "pdf/dgsante/reports/1998-1473_1990_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1474", "country": "Italy", "path": "pdf/dgsante/reports/1998-1474_1991_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1475", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1475_1992_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1476", "country": "Ireland", "path": "pdf/dgsante/reports/1998-1476_1993_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1998-1479", "country": "France", "path": "pdf/dgsante/reports/1998-1479_1994_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "1998-1480", "country": "Austria", "path": "pdf/dgsante/reports/1998-1480_1995_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1998-1480", "country": "Austria", "path": "pdf/dgsante/reports/1998-1480_1995_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1998-1483", "country": "Germany", "path": "pdf/dgsante/reports/1998-1483_1998_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1485", "country": "Netherlands", "path": "pdf/dgsante/reports/1998-1485_2000_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1998-1488", "country": "Portugal", "path": "pdf/dgsante/reports/1998-1488_2001_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
@@ -105,7 +105,7 @@
 {"ref": "1999-1039", "country": "Germany", "path": "pdf/dgsante/reports/1999-1039_2067_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1999-1040", "country": "Greece", "path": "pdf/dgsante/reports/1999-1040_2068_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1999-1041", "country": "Spain", "path": "pdf/dgsante/reports/1999-1041_2069_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "1999-1043", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1043_2071_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1999-1043", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1043_2071_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1044", "country": "Portugal", "path": "pdf/dgsante/reports/1999-1044_2072_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1999-1045", "country": "Spain", "path": "pdf/dgsante/reports/1999-1045_2073_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1999-1048", "country": "Greece", "path": "pdf/dgsante/reports/1999-1048_2076_en.pdf", "outcome": "no_section_found", "recommendations": 0}
@@ -119,8 +119,8 @@
 {"ref": "1999-1065", "country": "Slovenia", "path": "pdf/dgsante/reports/1999-1065_2088_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1067", "country": "Italy", "path": "pdf/dgsante/reports/1999-1067_2089_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1074", "country": "Austria", "path": "pdf/dgsante/reports/1999-1074_2095_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1999-1077", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1077_2098_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1999-1077", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1077_4012_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1999-1077", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1077_2098_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "1999-1077", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1077_4012_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "1999-1082", "country": "Croatia", "path": "pdf/dgsante/reports/1999-1082_2101_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1084", "country": "Hungary", "path": "pdf/dgsante/reports/1999-1084_2102_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1086", "country": "Latvia", "path": "pdf/dgsante/reports/1999-1086_2104_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -137,7 +137,7 @@
 {"ref": "1999-1115", "country": "Netherlands", "path": "pdf/dgsante/reports/1999-1115_4006_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1116", "country": "Poland", "path": "pdf/dgsante/reports/1999-1116_8871_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1118", "country": "France", "path": "pdf/dgsante/reports/1999-1118_2127_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "1999-1119", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1119_2128_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1999-1119", "country": "Ireland", "path": "pdf/dgsante/reports/1999-1119_2128_en.pdf", "outcome": "parsed", "recommendations": 13, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1120", "country": "Finland", "path": "pdf/dgsante/reports/1999-1120_2129_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1120", "country": "Finland", "path": "pdf/dgsante/reports/1999-1120_4013_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1122", "country": "Spain", "path": "pdf/dgsante/reports/1999-1122_2131_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
@@ -176,7 +176,7 @@
 {"ref": "1999-1218", "country": "Finland", "path": "pdf/dgsante/reports/1999-1218_2187_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1223", "country": "Portugal", "path": "pdf/dgsante/reports/1999-1223_2189_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1226", "country": "Belgium", "path": "pdf/dgsante/reports/1999-1226_2190_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "1999-1227", "country": "Portugal", "path": "pdf/dgsante/reports/1999-1227_2191_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "1999-1227", "country": "Portugal", "path": "pdf/dgsante/reports/1999-1227_2191_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "1999-1229", "country": "Belgium", "path": "pdf/dgsante/reports/1999-1229_2192_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1999-1232", "country": "Netherlands", "path": "pdf/dgsante/reports/1999-1232_2194_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "1999-1233", "country": "Greece", "path": "pdf/dgsante/reports/1999-1233_2195_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
@@ -257,7 +257,7 @@
 {"ref": "2000-1118", "country": "Slovakia", "path": "pdf/dgsante/reports/2000-1118_2242_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2000-1119", "country": "Denmark", "path": "pdf/dgsante/reports/2000-1119_2231_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2000-1121", "country": "Germany", "path": "pdf/dgsante/reports/2000-1121_2234_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2000-1124", "country": "Portugal", "path": "pdf/dgsante/reports/2000-1124_2393_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2000-1124", "country": "Portugal", "path": "pdf/dgsante/reports/2000-1124_2393_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2000-1125", "country": "Denmark", "path": "pdf/dgsante/reports/2000-1125_2292_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2000-1127", "country": "Finland", "path": "pdf/dgsante/reports/2000-1127_3417_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2000-1129", "country": "Germany", "path": "pdf/dgsante/reports/2000-1129_2315_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -405,7 +405,7 @@
 {"ref": "2001-3335", "country": "Bulgaria", "path": "pdf/dgsante/reports/2001-3335_2768_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3338", "country": "Belgium", "path": "pdf/dgsante/reports/2001-3338_2771_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3339", "country": "Luxembourg", "path": "pdf/dgsante/reports/2001-3339_2774_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2001-3343", "country": "Luxembourg", "path": "pdf/dgsante/reports/2001-3343_2786_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2001-3343", "country": "Luxembourg", "path": "pdf/dgsante/reports/2001-3343_2786_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2001-3344", "country": "Spain", "path": "pdf/dgsante/reports/2001-3344_2789_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3352", "country": "Greece", "path": "pdf/dgsante/reports/2001-3352_2794_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3356", "country": "Denmark", "path": "pdf/dgsante/reports/2001-3356_2797_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -446,7 +446,7 @@
 {"ref": "2001-3427", "country": "Czech Republic", "path": "pdf/dgsante/reports/2001-3427_2928_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3432", "country": "France", "path": "pdf/dgsante/reports/2001-3432_2934_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3436", "country": "Finland", "path": "pdf/dgsante/reports/2001-3436_2937_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2001-3437", "country": "Sweden", "path": "pdf/dgsante/reports/2001-3437_3425_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
+{"ref": "2001-3437", "country": "Sweden", "path": "pdf/dgsante/reports/2001-3437_3425_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2001-3441", "country": "Denmark", "path": "pdf/dgsante/reports/2001-3441_2944_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3442", "country": "Italy", "path": "pdf/dgsante/reports/2001-3442_2947_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2001-3453", "country": "Luxembourg", "path": "pdf/dgsante/reports/2001-3453_2951_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
@@ -622,7 +622,7 @@
 {"ref": "2003-9226", "country": "Romania", "path": "pdf/dgsante/reports/2003-9226_3756_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2003-9244", "country": "Greece", "path": "pdf/dgsante/reports/2003-9244_3466_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2003-9246", "country": "Ireland", "path": "pdf/dgsante/reports/2003-9246_3523_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2003-9247", "country": "France", "path": "pdf/dgsante/reports/2003-9247_3511_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2003-9247", "country": "France", "path": "pdf/dgsante/reports/2003-9247_3511_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2003-9250", "country": "Portugal", "path": "pdf/dgsante/reports/2003-9250_3483_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2003-9251", "country": "Austria", "path": "pdf/dgsante/reports/2003-9251_3851_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2003-9252", "country": "Spain", "path": "pdf/dgsante/reports/2003-9252_3543_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
@@ -649,7 +649,7 @@
 {"ref": "2004-7015", "country": "Greece", "path": "pdf/dgsante/reports/2004-7015_4179_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7018", "country": "Germany", "path": "pdf/dgsante/reports/2004-7018_4220_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7022", "country": "Greece", "path": "pdf/dgsante/reports/2004-7022_4447_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2004-7023", "country": "France", "path": "pdf/dgsante/reports/2004-7023_4723_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7023", "country": "France", "path": "pdf/dgsante/reports/2004-7023_4723_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7024", "country": "Spain", "path": "pdf/dgsante/reports/2004-7024_4476_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7026", "country": "Italy", "path": "pdf/dgsante/reports/2004-7026_4743_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7027", "country": "Ireland", "path": "pdf/dgsante/reports/2004-7027_4642_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
@@ -676,15 +676,15 @@
 {"ref": "2004-7072", "country": "Netherlands", "path": "pdf/dgsante/reports/2004-7072_4185_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7080", "country": "Sweden", "path": "pdf/dgsante/reports/2004-7080_4026_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7081", "country": "Greece", "path": "pdf/dgsante/reports/2004-7081_4029_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2004-7082", "country": "Belgium", "path": "pdf/dgsante/reports/2004-7082_4041_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7082", "country": "Belgium", "path": "pdf/dgsante/reports/2004-7082_4041_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7083", "country": "Italy", "path": "pdf/dgsante/reports/2004-7083_4046_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7084", "country": "Denmark", "path": "pdf/dgsante/reports/2004-7084_4555_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7085", "country": "Germany", "path": "pdf/dgsante/reports/2004-7085_4464_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7087", "country": "Greece", "path": "pdf/dgsante/reports/2004-7087_4053_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7088", "country": "Spain", "path": "pdf/dgsante/reports/2004-7088_4284_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7117", "country": "Germany", "path": "pdf/dgsante/reports/2004-7117_5017_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2004-7119", "country": "Ireland", "path": "pdf/dgsante/reports/2004-7119_5007_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2004-7120", "country": "Italy", "path": "pdf/dgsante/reports/2004-7120_5009_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7119", "country": "Ireland", "path": "pdf/dgsante/reports/2004-7119_5007_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2004-7120", "country": "Italy", "path": "pdf/dgsante/reports/2004-7120_5009_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7127", "country": "France", "path": "pdf/dgsante/reports/2004-7127_4302_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7128", "country": "Spain", "path": "pdf/dgsante/reports/2004-7128_4348_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7129", "country": "Germany", "path": "pdf/dgsante/reports/2004-7129_4252_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
@@ -716,7 +716,7 @@
 {"ref": "2004-7240", "country": "Slovakia", "path": "pdf/dgsante/reports/2004-7240_4387_en.pdf", "outcome": "parsed", "recommendations": 12, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7246", "country": "Portugal", "path": "pdf/dgsante/reports/2004-7246_4358_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7247", "country": "France", "path": "pdf/dgsante/reports/2004-7247_4576_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2004-7248", "country": "Spain", "path": "pdf/dgsante/reports/2004-7248_5002_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7248", "country": "Spain", "path": "pdf/dgsante/reports/2004-7248_5002_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7250", "country": "Estonia", "path": "pdf/dgsante/reports/2004-7250_4687_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7252", "country": "Greece", "path": "pdf/dgsante/reports/2004-7252_4127_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7254", "country": "Italy", "path": "pdf/dgsante/reports/2004-7254_3984_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
@@ -754,7 +754,7 @@
 {"ref": "2004-7319", "country": "Spain", "path": "pdf/dgsante/reports/2004-7319_4351_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7320", "country": "Poland", "path": "pdf/dgsante/reports/2004-7320_4384_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7321", "country": "Netherlands", "path": "pdf/dgsante/reports/2004-7321_4427_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2004-7322", "country": "Belgium", "path": "pdf/dgsante/reports/2004-7322_4328_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7322", "country": "Belgium", "path": "pdf/dgsante/reports/2004-7322_4328_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7324", "country": "Slovakia", "path": "pdf/dgsante/reports/2004-7324_4305_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7325", "country": "Poland", "path": "pdf/dgsante/reports/2004-7325_4607_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2004-7327", "country": "Hungary", "path": "pdf/dgsante/reports/2004-7327_4411_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
@@ -773,8 +773,8 @@
 {"ref": "2004-7362", "country": "Portugal", "path": "pdf/dgsante/reports/2004-7362_4420_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2004-7366", "country": "Italy", "path": "pdf/dgsante/reports/2004-7366_4533_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2004-7369", "country": "Italy", "path": "pdf/dgsante/reports/2004-7369_4690_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2004-7373", "country": "Netherlands", "path": "pdf/dgsante/reports/2004-7373_6308_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2004-7374", "country": "Portugal", "path": "pdf/dgsante/reports/2004-7374_6309_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2004-7373", "country": "Netherlands", "path": "pdf/dgsante/reports/2004-7373_6308_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
+{"ref": "2004-7374", "country": "Portugal", "path": "pdf/dgsante/reports/2004-7374_6309_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7504", "country": "Greece", "path": "pdf/dgsante/reports/2005-7504_4763_en.pdf", "outcome": "parsed", "recommendations": 20, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7505", "country": "Cyprus", "path": "pdf/dgsante/reports/2005-7505_4818_en.pdf", "outcome": "parsed", "recommendations": 17, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7506", "country": "France", "path": "pdf/dgsante/reports/2005-7506_4932_en.pdf", "outcome": "parsed", "recommendations": 14, "with_conclusion_links": 0, "section_states_links": false}
@@ -785,36 +785,36 @@
 {"ref": "2005-7514", "country": "Malta", "path": "pdf/dgsante/reports/2005-7514_5001_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2005-7515", "country": "Portugal", "path": "pdf/dgsante/reports/2005-7515_4992_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2005-7516", "country": "Greece", "path": "pdf/dgsante/reports/2005-7516_5093_en.pdf", "outcome": "parsed", "recommendations": 13, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7517", "country": "Hungary", "path": "pdf/dgsante/reports/2005-7517_4988_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2005-7518", "country": "Poland", "path": "pdf/dgsante/reports/2005-7518_5005_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7517", "country": "Hungary", "path": "pdf/dgsante/reports/2005-7517_4988_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2005-7518", "country": "Poland", "path": "pdf/dgsante/reports/2005-7518_5005_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7519", "country": "Czech Republic", "path": "pdf/dgsante/reports/2005-7519_4630_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7520", "country": "Malta", "path": "pdf/dgsante/reports/2005-7520_4473_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7521", "country": "Poland", "path": "pdf/dgsante/reports/2005-7521_4492_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7522", "country": "France", "path": "pdf/dgsante/reports/2005-7522_4798_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7528", "country": "Germany", "path": "pdf/dgsante/reports/2005-7528_4902_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7529", "country": "Italy", "path": "pdf/dgsante/reports/2005-7529_4957_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7535", "country": "Czech Republic", "path": "pdf/dgsante/reports/2005-7535_5015_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2005-7537", "country": "Slovakia", "path": "pdf/dgsante/reports/2005-7537_5004_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2005-7538", "country": "Latvia", "path": "pdf/dgsante/reports/2005-7538_4994_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2005-7539", "country": "Slovenia", "path": "pdf/dgsante/reports/2005-7539_8021_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7535", "country": "Czech Republic", "path": "pdf/dgsante/reports/2005-7535_5015_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2005-7537", "country": "Slovakia", "path": "pdf/dgsante/reports/2005-7537_5004_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2005-7538", "country": "Latvia", "path": "pdf/dgsante/reports/2005-7538_4994_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2005-7539", "country": "Slovenia", "path": "pdf/dgsante/reports/2005-7539_8021_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7540", "country": "Estonia", "path": "pdf/dgsante/reports/2005-7540_5008_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2005-7542", "country": "Ireland", "path": "pdf/dgsante/reports/2005-7542_4864_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7543", "country": "Netherlands", "path": "pdf/dgsante/reports/2005-7543_5098_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7544", "country": "Portugal", "path": "pdf/dgsante/reports/2005-7544_4702_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7545", "country": "France", "path": "pdf/dgsante/reports/2005-7545_4708_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7546", "country": "Hungary", "path": "pdf/dgsante/reports/2005-7546_4486_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7547", "country": "Italy", "path": "pdf/dgsante/reports/2005-7547_6306_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7547", "country": "Italy", "path": "pdf/dgsante/reports/2005-7547_6306_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7548", "country": "Spain", "path": "pdf/dgsante/reports/2005-7548_4623_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7559", "country": "Denmark", "path": "pdf/dgsante/reports/2005-7559_4662_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7560", "country": "Sweden", "path": "pdf/dgsante/reports/2005-7560_4910_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7561", "country": "Belgium", "path": "pdf/dgsante/reports/2005-7561_4787_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7563", "country": "Malta", "path": "pdf/dgsante/reports/2005-7563_4598_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7564", "country": "Hungary", "path": "pdf/dgsante/reports/2005-7564_4893_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7567", "country": "Cyprus", "path": "pdf/dgsante/reports/2005-7567_4991_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7567", "country": "Cyprus", "path": "pdf/dgsante/reports/2005-7567_4991_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7568", "country": "Netherlands", "path": "pdf/dgsante/reports/2005-7568_5475_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7569", "country": "Finland", "path": "pdf/dgsante/reports/2005-7569_4832_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7571", "country": "Spain", "path": "pdf/dgsante/reports/2005-7571_4715_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7572", "country": "Lithuania", "path": "pdf/dgsante/reports/2005-7572_5011_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7572", "country": "Lithuania", "path": "pdf/dgsante/reports/2005-7572_5011_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7574", "country": "Czech Republic", "path": "pdf/dgsante/reports/2005-7574_5130_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7583", "country": "Germany", "path": "pdf/dgsante/reports/2005-7583_5357_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7586", "country": "Croatia", "path": "pdf/dgsante/reports/2005-7586_5443_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -839,7 +839,7 @@
 {"ref": "2005-7629", "country": "Estonia", "path": "pdf/dgsante/reports/2005-7629_4633_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7631", "country": "Slovakia", "path": "pdf/dgsante/reports/2005-7631_4680_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7632", "country": "Spain", "path": "pdf/dgsante/reports/2005-7632_4804_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7634", "country": "France", "path": "pdf/dgsante/reports/2005-7634_6326_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7634", "country": "France", "path": "pdf/dgsante/reports/2005-7634_6326_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7636", "country": "Italy", "path": "pdf/dgsante/reports/2005-7636_4778_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7637", "country": "Latvia", "path": "pdf/dgsante/reports/2005-7637_4766_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7638", "country": "Poland", "path": "pdf/dgsante/reports/2005-7638_5114_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
@@ -849,8 +849,8 @@
 {"ref": "2005-7643", "country": "Germany", "path": "pdf/dgsante/reports/2005-7643_6299_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2005-7646", "country": "Finland", "path": "pdf/dgsante/reports/2005-7646_4850_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7647", "country": "Belgium", "path": "pdf/dgsante/reports/2005-7647_4913_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7648", "country": "Belgium", "path": "pdf/dgsante/reports/2005-7648_6298_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2005-7649", "country": "Finland", "path": "pdf/dgsante/reports/2005-7649_6302_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7648", "country": "Belgium", "path": "pdf/dgsante/reports/2005-7648_6298_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
+{"ref": "2005-7649", "country": "Finland", "path": "pdf/dgsante/reports/2005-7649_6302_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7650", "country": "Bulgaria", "path": "pdf/dgsante/reports/2005-7650_4705_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7653", "country": "Italy", "path": "pdf/dgsante/reports/2005-7653_4827_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7654", "country": "Latvia", "path": "pdf/dgsante/reports/2005-7654_4826_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
@@ -901,7 +901,7 @@
 {"ref": "2005-7728", "country": "Poland", "path": "pdf/dgsante/reports/2005-7728_5039_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7747", "country": "Greece", "path": "pdf/dgsante/reports/2005-7747_4801_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7762", "country": "Romania", "path": "pdf/dgsante/reports/2005-7762_4775_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2005-7763", "country": "Luxembourg", "path": "pdf/dgsante/reports/2005-7763_5057_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2005-7763", "country": "Luxembourg", "path": "pdf/dgsante/reports/2005-7763_5057_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7769", "country": "Slovakia", "path": "pdf/dgsante/reports/2005-7769_5082_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2005-7771", "country": "Slovakia", "path": "pdf/dgsante/reports/2005-7771_5111_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2005-7773", "country": "Poland", "path": "pdf/dgsante/reports/2005-7773_5073_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
@@ -920,7 +920,7 @@
 {"ref": "2006-8040", "country": "Czech Republic", "path": "pdf/dgsante/reports/2006-8040_5252_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2006-8041", "country": "Netherlands", "path": "pdf/dgsante/reports/2006-8041_5601_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2006-8042", "country": "Greece", "path": "pdf/dgsante/reports/2006-8042_5204_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2006-8043", "country": "Belgium", "path": "pdf/dgsante/reports/2006-8043_5386_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2006-8043", "country": "Belgium", "path": "pdf/dgsante/reports/2006-8043_5386_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2006-8045", "country": "France", "path": "pdf/dgsante/reports/2006-8045_5524_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2006-8046", "country": "Lithuania", "path": "pdf/dgsante/reports/2006-8046_5627_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2006-8047", "country": "Slovakia", "path": "pdf/dgsante/reports/2006-8047_5460_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -1191,7 +1191,7 @@
 {"ref": "2008-7789", "country": "Poland", "path": "pdf/dgsante/reports/2008-7789_7328_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7793", "country": "Greece", "path": "pdf/dgsante/reports/2008-7793_7329_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7794", "country": "Poland", "path": "pdf/dgsante/reports/2008-7794_7459_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2008-7797", "country": "Germany", "path": "pdf/dgsante/reports/2008-7797_8672_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2008-7797", "country": "Germany", "path": "pdf/dgsante/reports/2008-7797_8672_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7800", "country": "Bulgaria", "path": "pdf/dgsante/reports/2008-7800_7333_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7801", "country": "Italy", "path": "pdf/dgsante/reports/2008-7801_7334_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7806", "country": "Lithuania", "path": "pdf/dgsante/reports/2008-7806_7238_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
@@ -1199,7 +1199,7 @@
 {"ref": "2008-7813", "country": "Greece", "path": "pdf/dgsante/reports/2008-7813_7389_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7818", "country": "Germany", "path": "pdf/dgsante/reports/2008-7818_8666_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7820", "country": "Romania", "path": "pdf/dgsante/reports/2008-7820_7390_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "2008-7827", "country": "France", "path": "pdf/dgsante/reports/2008-7827_7415_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2008-7827", "country": "France", "path": "pdf/dgsante/reports/2008-7827_7415_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7832", "country": "Denmark", "path": "pdf/dgsante/reports/2008-7832_7336_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7833", "country": "Romania", "path": "pdf/dgsante/reports/2008-7833_7455_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7835", "country": "Germany", "path": "pdf/dgsante/reports/2008-7835_8667_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
@@ -1222,7 +1222,7 @@
 {"ref": "2008-7939", "country": "Czech Republic", "path": "pdf/dgsante/reports/2008-7939_7401_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7940", "country": "Lithuania", "path": "pdf/dgsante/reports/2008-7940_7358_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7942", "country": "Denmark", "path": "pdf/dgsante/reports/2008-7942_7264_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2008-7945", "country": "Belgium", "path": "pdf/dgsante/reports/2008-7945_7098_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2008-7945", "country": "Belgium", "path": "pdf/dgsante/reports/2008-7945_7098_en.pdf", "outcome": "parsed", "recommendations": 14, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7950", "country": "Bulgaria", "path": "pdf/dgsante/reports/2008-7950_7402_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2008-7980", "country": "Germany", "path": "pdf/dgsante/reports/2008-7980_8676_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2008-7986", "country": "Portugal", "path": "pdf/dgsante/reports/2008-7986_7404_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
@@ -1422,13 +1422,13 @@
 {"ref": "2010-8498", "country": "Bulgaria", "path": "pdf/dgsante/reports/2010-8498_8501_en.pdf", "outcome": "parsed", "recommendations": 13, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8501", "country": "Sweden", "path": "pdf/dgsante/reports/2010-8501_8630_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8502", "country": "Italy", "path": "pdf/dgsante/reports/2010-8502_8545_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2010-8506", "country": "France", "path": "pdf/dgsante/reports/2010-8506_8565_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2010-8506", "country": "France", "path": "pdf/dgsante/reports/2010-8506_8565_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8507", "country": "Luxembourg", "path": "pdf/dgsante/reports/2010-8507_8804_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8508", "country": "Ireland", "path": "pdf/dgsante/reports/2010-8508_8794_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2010-8512", "country": "Romania", "path": "pdf/dgsante/reports/2010-8512_8834_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8513", "country": "Bulgaria", "path": "pdf/dgsante/reports/2010-8513_8864_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8521", "country": "Denmark", "path": "pdf/dgsante/reports/2010-8521_8304_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2010-8523", "country": "France", "path": "pdf/dgsante/reports/2010-8523_8462_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2010-8523", "country": "France", "path": "pdf/dgsante/reports/2010-8523_8462_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8525", "country": "Italy", "path": "pdf/dgsante/reports/2010-8525_8793_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8526", "country": "Poland", "path": "pdf/dgsante/reports/2010-8526_8512_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2010-8528", "country": "Romania", "path": "pdf/dgsante/reports/2010-8528_8344_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
@@ -1530,7 +1530,7 @@
 {"ref": "2011-8860", "country": "Luxembourg", "path": "pdf/dgsante/reports/2011-8860_9425_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2011-8869", "country": "Estonia", "path": "pdf/dgsante/reports/2011-8869_9074_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2011-8879", "country": "Estonia", "path": "pdf/dgsante/reports/2011-8879_8846_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
-{"ref": "2011-8880", "country": "Germany", "path": "pdf/dgsante/reports/2011-8880_9219_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2011-8880", "country": "Germany", "path": "pdf/dgsante/reports/2011-8880_9219_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2011-8881", "country": "Spain", "path": "pdf/dgsante/reports/2011-8881_9614_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2011-8882", "country": "France", "path": "pdf/dgsante/reports/2011-8882_9613_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2011-8883", "country": "Greece", "path": "pdf/dgsante/reports/2011-8883_9743_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
@@ -1627,7 +1627,7 @@
 {"ref": "2012-6330", "country": "France", "path": "pdf/dgsante/reports/2012-6330_9867_en.pdf", "outcome": "parsed", "recommendations": 10, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6331", "country": "Cyprus", "path": "pdf/dgsante/reports/2012-6331_9709_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6332", "country": "Belgium", "path": "pdf/dgsante/reports/2012-6332_9738_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2012-6333", "country": "Italy", "path": "pdf/dgsante/reports/2012-6333_10109_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2012-6333", "country": "Italy", "path": "pdf/dgsante/reports/2012-6333_10109_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6334", "country": "Greece", "path": "pdf/dgsante/reports/2012-6334_10094_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6335", "country": "Spain", "path": "pdf/dgsante/reports/2012-6335_10198_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6341", "country": "Austria", "path": "pdf/dgsante/reports/2012-6341_10413_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
@@ -1635,9 +1635,9 @@
 {"ref": "2012-6343", "country": "Finland", "path": "pdf/dgsante/reports/2012-6343_9929_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6344", "country": "Germany", "path": "pdf/dgsante/reports/2012-6344_10139_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6345", "country": "Romania", "path": "pdf/dgsante/reports/2012-6345_9848_en.pdf", "outcome": "parsed", "recommendations": 11, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2012-6346", "country": "Poland", "path": "pdf/dgsante/reports/2012-6346_9870_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2012-6346", "country": "Poland", "path": "pdf/dgsante/reports/2012-6346_9870_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6353", "country": "Belgium", "path": "pdf/dgsante/reports/2012-6353_10289_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2012-6354", "country": "France", "path": "pdf/dgsante/reports/2012-6354_10316_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2012-6354", "country": "France", "path": "pdf/dgsante/reports/2012-6354_10316_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6355", "country": "Germany", "path": "pdf/dgsante/reports/2012-6355_10318_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6356", "country": "Hungary", "path": "pdf/dgsante/reports/2012-6356_10184_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2012-6357", "country": "Lithuania", "path": "pdf/dgsante/reports/2012-6357_9594_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -1788,7 +1788,7 @@
 {"ref": "2013-6775", "country": "Netherlands", "path": "pdf/dgsante/reports/2013-6775_10344_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6777", "country": "Latvia", "path": "pdf/dgsante/reports/2013-6777_10627_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6778", "country": "Germany", "path": "pdf/dgsante/reports/2013-6778_10871_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2013-6779", "country": "France", "path": "pdf/dgsante/reports/2013-6779_11582_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2013-6779", "country": "France", "path": "pdf/dgsante/reports/2013-6779_11582_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2013-6780", "country": "Sweden", "path": "pdf/dgsante/reports/2013-6780_11146_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6781", "country": "Estonia", "path": "pdf/dgsante/reports/2013-6781_10674_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6784", "country": "Hungary", "path": "pdf/dgsante/reports/2013-6784_11019_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
@@ -1808,7 +1808,7 @@
 {"ref": "2013-6825", "country": "Estonia", "path": "pdf/dgsante/reports/2013-6825_10839_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6843", "country": "Romania", "path": "pdf/dgsante/reports/2013-6843_10410_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2013-6845", "country": "Lithuania", "path": "pdf/dgsante/reports/2013-6845_10387_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2013-6855", "country": "Belgium", "path": "pdf/dgsante/reports/2013-6855_10752_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2013-6855", "country": "Belgium", "path": "pdf/dgsante/reports/2013-6855_10752_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
 {"ref": "2013-6856", "country": "Czech Republic", "path": "pdf/dgsante/reports/2013-6856_10661_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
 {"ref": "2013-6857", "country": "Denmark", "path": "pdf/dgsante/reports/2013-6857_10777_en.pdf", "outcome": "states_no_recommendation", "recommendations": 0}
 {"ref": "2013-6858", "country": "Bulgaria", "path": "pdf/dgsante/reports/2013-6858_10877_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
@@ -1921,7 +1921,7 @@
 {"ref": "2014-7157", "country": "Hungary", "path": "pdf/dgsante/reports/2014-7157_11104_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7160", "country": "Poland", "path": "pdf/dgsante/reports/2014-7160_12013_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7161", "country": "Portugal", "path": "pdf/dgsante/reports/2014-7161_11608_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2014-7165", "country": "Netherlands", "path": "pdf/dgsante/reports/2014-7165_11563_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2014-7165", "country": "Netherlands", "path": "pdf/dgsante/reports/2014-7165_11563_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2014-7166", "country": "Estonia", "path": "pdf/dgsante/reports/2014-7166_11109_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7168", "country": "Romania", "path": "pdf/dgsante/reports/2014-7168_11112_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7171", "country": "Cyprus", "path": "pdf/dgsante/reports/2014-7171_11424_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
@@ -1942,7 +1942,7 @@
 {"ref": "2014-7204", "country": "Poland", "path": "pdf/dgsante/reports/2014-7204_11789_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7210", "country": "France", "path": "pdf/dgsante/reports/2014-7210_11206_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2014-7218", "country": "Croatia", "path": "pdf/dgsante/reports/2014-7218_11331_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2014-7219", "country": "Luxembourg", "path": "pdf/dgsante/reports/2014-7219_11467_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2014-7219", "country": "Luxembourg", "path": "pdf/dgsante/reports/2014-7219_11467_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7225", "country": "Romania", "path": "pdf/dgsante/reports/2014-7225_11618_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2014-7228", "country": "Denmark", "path": "pdf/dgsante/reports/2014-7228_11765_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2014-7229", "country": "Sweden", "path": "pdf/dgsante/reports/2014-7229_11768_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
@@ -2110,10 +2110,10 @@
 {"ref": "2016-8758", "country": "Denmark", "path": "pdf/dgsante/reports/2016-8758_13154_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8759", "country": "Italy", "path": "pdf/dgsante/reports/2016-8759_12689_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8760", "country": "Ireland", "path": "pdf/dgsante/reports/2016-8760_12508_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
-{"ref": "2016-8762", "country": "Poland", "path": "pdf/dgsante/reports/2016-8762_12616_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2016-8762", "country": "Poland", "path": "pdf/dgsante/reports/2016-8762_12616_en.pdf", "outcome": "parsed", "recommendations": 25, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2016-8763", "country": "Estonia", "path": "pdf/dgsante/reports/2016-8763_12900_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2016-8764", "country": "Italy", "path": "pdf/dgsante/reports/2016-8764_13156_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
-{"ref": "2016-8765", "country": "Austria", "path": "pdf/dgsante/reports/2016-8765_13008_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2016-8765", "country": "Austria", "path": "pdf/dgsante/reports/2016-8765_13008_en.pdf", "outcome": "parsed", "recommendations": 18, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2016-8766", "country": "Latvia", "path": "pdf/dgsante/reports/2016-8766_13041_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2016-8770", "country": "Finland", "path": "pdf/dgsante/reports/2016-8770_12651_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8771", "country": "Spain", "path": "pdf/dgsante/reports/2016-8771_12723_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 0, "section_states_links": false}
@@ -2170,7 +2170,7 @@
 {"ref": "2016-8887", "country": "Spain", "path": "pdf/dgsante/reports/2016-8887_13201_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8888", "country": "Romania", "path": "pdf/dgsante/reports/2016-8888_13110_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8889", "country": "Netherlands", "path": "pdf/dgsante/reports/2016-8889_12902_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2016-8890", "country": "Germany", "path": "pdf/dgsante/reports/2016-8890_12628_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2016-8890", "country": "Germany", "path": "pdf/dgsante/reports/2016-8890_12628_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2016-8900", "country": "Belgium", "path": "pdf/dgsante/reports/2016-8900_12684_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8901", "country": "Croatia", "path": "pdf/dgsante/reports/2016-8901_12683_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2016-8903", "country": "France", "path": "pdf/dgsante/reports/2016-8903_12682_en.pdf", "outcome": "no_section_found", "recommendations": 0}
@@ -2237,7 +2237,7 @@
 {"ref": "2017-6077", "country": "Germany", "path": "pdf/dgsante/reports/2017-6077_13469_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2017-6078", "country": "Romania", "path": "pdf/dgsante/reports/2017-6078_13570_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
 {"ref": "2017-6099", "country": "Hungary", "path": "pdf/dgsante/reports/2017-6099_13476_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 4, "section_states_links": true}
-{"ref": "2017-6101", "country": "Finland", "path": "pdf/dgsante/reports/2017-6101_13816_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2017-6101", "country": "Finland", "path": "pdf/dgsante/reports/2017-6101_13816_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2017-6106", "country": "Netherlands", "path": "pdf/dgsante/reports/2017-6106_13336_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2017-6107", "country": "Germany", "path": "pdf/dgsante/reports/2017-6107_13498_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2017-6108", "country": "France", "path": "pdf/dgsante/reports/2017-6108_13594_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
@@ -2272,9 +2272,9 @@
 {"ref": "2017-6191", "country": "Italy", "path": "pdf/dgsante/reports/2017-6191_13142_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2017-6192", "country": "Bulgaria", "path": "pdf/dgsante/reports/2017-6192_13146_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 5, "section_states_links": true}
 {"ref": "2017-6197", "country": "Lithuania", "path": "pdf/dgsante/reports/2017-6197_13471_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 5, "section_states_links": true}
-{"ref": "2017-6200", "country": "France", "path": "pdf/dgsante/reports/2017-6200_13254_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2017-6201", "country": "Sweden", "path": "pdf/dgsante/reports/2017-6201_13639_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2017-6202", "country": "Latvia", "path": "pdf/dgsante/reports/2017-6202_13502_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2017-6200", "country": "France", "path": "pdf/dgsante/reports/2017-6200_13254_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2017-6201", "country": "Sweden", "path": "pdf/dgsante/reports/2017-6201_13639_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
+{"ref": "2017-6202", "country": "Latvia", "path": "pdf/dgsante/reports/2017-6202_13502_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2017-6215", "country": "Netherlands", "path": "pdf/dgsante/reports/2017-6215_13549_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2017-6216", "country": "Spain", "path": "pdf/dgsante/reports/2017-6216_13470_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 6, "section_states_links": true}
 {"ref": "2017-6217", "country": "Czech Republic", "path": "pdf/dgsante/reports/2017-6217_13597_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
@@ -2282,7 +2282,7 @@
 {"ref": "2017-6248", "country": "Malta", "path": "pdf/dgsante/reports/2017-6248_14001_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2017-6249", "country": "Spain", "path": "pdf/dgsante/reports/2017-6249_13358_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2017-6257", "country": "Italy", "path": "pdf/dgsante/reports/2017-6257_13722_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2017-6293", "country": "Belgium", "path": "pdf/dgsante/reports/2017-6293_13779_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2017-6293", "country": "Belgium", "path": "pdf/dgsante/reports/2017-6293_13779_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2017-6296", "country": "Denmark", "path": "pdf/dgsante/reports/2017-6296_13635_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2017-6301", "country": "Spain", "path": "pdf/dgsante/reports/2017-6301_13688_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2018-6307", "country": "France", "path": "pdf/dgsante/reports/2018-6307_13712_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
@@ -2301,7 +2301,7 @@
 {"ref": "2018-6325", "country": "Sweden", "path": "pdf/dgsante/reports/2018-6325_14331_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2018-6326", "country": "Germany", "path": "pdf/dgsante/reports/2018-6326_14257_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2018-6328", "country": "Croatia", "path": "pdf/dgsante/reports/2018-6328_13890_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "2018-6329", "country": "Portugal", "path": "pdf/dgsante/reports/2018-6329_13894_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2018-6329", "country": "Portugal", "path": "pdf/dgsante/reports/2018-6329_13894_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2018-6330", "country": "Poland", "path": "pdf/dgsante/reports/2018-6330_13898_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2018-6331", "country": "Lithuania", "path": "pdf/dgsante/reports/2018-6331_13974_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2018-6332", "country": "Spain", "path": "pdf/dgsante/reports/2018-6332_14025_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
@@ -2373,7 +2373,7 @@
 {"ref": "2018-6466", "country": "Slovakia", "path": "pdf/dgsante/reports/2018-6466_13877_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
 {"ref": "2018-6467", "country": "Greece", "path": "pdf/dgsante/reports/2018-6467_13878_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2018-6468", "country": "Cyprus", "path": "pdf/dgsante/reports/2018-6468_14076_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
-{"ref": "2018-6474", "country": "Bulgaria", "path": "pdf/dgsante/reports/2018-6474_14259_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2018-6474", "country": "Bulgaria", "path": "pdf/dgsante/reports/2018-6474_14259_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2018-6477", "country": "Romania", "path": "pdf/dgsante/reports/2018-6477_13715_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 3, "section_states_links": true}
 {"ref": "2018-6478", "country": "Germany", "path": "pdf/dgsante/reports/2018-6478_14107_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
 {"ref": "2018-6479", "country": "Estonia", "path": "pdf/dgsante/reports/2018-6479_13681_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
@@ -2409,7 +2409,7 @@
 {"ref": "2019-6607", "country": "Poland", "path": "pdf/dgsante/reports/2019-6607_14546_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 5, "section_states_links": true}
 {"ref": "2019-6608", "country": "Hungary", "path": "pdf/dgsante/reports/2019-6608_14469_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2019-6609", "country": "Lithuania", "path": "pdf/dgsante/reports/2019-6609_14346_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
-{"ref": "2019-6622", "country": "Ireland", "path": "pdf/dgsante/reports/2019-6622_14842_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2019-6622", "country": "Ireland", "path": "pdf/dgsante/reports/2019-6622_14842_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2019-6627", "country": "Italy", "path": "pdf/dgsante/reports/2019-6627_14802_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2019-6628", "country": "Spain", "path": "pdf/dgsante/reports/2019-6628_14577_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2019-6629", "country": "France", "path": "pdf/dgsante/reports/2019-6629_14629_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 6, "section_states_links": true}
@@ -2431,7 +2431,7 @@
 {"ref": "2019-6646", "country": "Germany", "path": "pdf/dgsante/reports/2019-6646_14888_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2019-6647", "country": "France", "path": "pdf/dgsante/reports/2019-6647_14647_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2019-6648", "country": "Austria", "path": "pdf/dgsante/reports/2019-6648_14487_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
-{"ref": "2019-6649", "country": "Czech Republic", "path": "pdf/dgsante/reports/2019-6649_14766_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2019-6649", "country": "Czech Republic", "path": "pdf/dgsante/reports/2019-6649_14766_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2019-6650", "country": "Denmark", "path": "pdf/dgsante/reports/2019-6650_14455_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
 {"ref": "2019-6651", "country": "France", "path": "pdf/dgsante/reports/2019-6651_15036_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2019-6652", "country": "Cyprus", "path": "pdf/dgsante/reports/2019-6652_14511_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 8, "section_states_links": true}
@@ -2490,7 +2490,7 @@
 {"ref": "2020-6914", "country": "Austria", "path": "pdf/dgsante/reports/2020-6914_14994_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2020-6915", "country": "Cyprus", "path": "pdf/dgsante/reports/2020-6915_15214_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2020-6916", "country": "Estonia", "path": "pdf/dgsante/reports/2020-6916_15796_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": true}
-{"ref": "2020-6917", "country": "Germany", "path": "pdf/dgsante/reports/2020-6917_15095_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2020-6917", "country": "Germany", "path": "pdf/dgsante/reports/2020-6917_15095_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2020-6918", "country": "Malta", "path": "pdf/dgsante/reports/2020-6918_15166_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2020-6919", "country": "Poland", "path": "pdf/dgsante/reports/2020-6919_15289_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 6, "section_states_links": true}
 {"ref": "2020-6920", "country": "Slovenia", "path": "pdf/dgsante/reports/2020-6920_14917_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 1, "section_states_links": true}
@@ -2794,12 +2794,12 @@
 {"ref": "2024-7974", "country": "Romania", "path": "pdf/dgsante/reports/2024-7974_16773_en.pdf", "outcome": "parsed", "recommendations": 9, "with_conclusion_links": 9, "section_states_links": true}
 {"ref": "2024-7975", "country": "Germany", "path": "pdf/dgsante/reports/2024-7975_16841_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2024-7976", "country": "Finland", "path": "pdf/dgsante/reports/2024-7976_16837_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
-{"ref": "2024-7981", "country": "Spain", "path": "pdf/dgsante/reports/2024-7981_17074_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2024-7981", "country": "Spain", "path": "pdf/dgsante/reports/2024-7981_17074_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2024-7983", "country": "Finland", "path": "pdf/dgsante/reports/2024-7983_16774_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2024-7985", "country": "Portugal", "path": "pdf/dgsante/reports/2024-7985_17090_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2024-7986", "country": "Belgium", "path": "pdf/dgsante/reports/2024-7986_16990_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 0, "section_states_links": false}
 {"ref": "2024-7987", "country": "Italy", "path": "pdf/dgsante/reports/2024-7987_17298_en.pdf", "outcome": "no_section_found", "recommendations": 0}
-{"ref": "2024-7989", "country": "Germany", "path": "pdf/dgsante/reports/2024-7989_16931_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2024-7989", "country": "Germany", "path": "pdf/dgsante/reports/2024-7989_16931_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2024-7990", "country": "Italy", "path": "pdf/dgsante/reports/2024-7990_16602_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2024-7991", "country": "Spain", "path": "pdf/dgsante/reports/2024-7991_16960_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2024-7995", "country": "Portugal", "path": "pdf/dgsante/reports/2024-7995_16933_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 0, "section_states_links": false}
@@ -2817,7 +2817,7 @@
 {"ref": "2024-8014", "country": "Spain", "path": "pdf/dgsante/reports/2024-8014_16966_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "2024-8015", "country": "Spain", "path": "pdf/dgsante/reports/2024-8015_16667_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2024-8018", "country": "Italy", "path": "pdf/dgsante/reports/2024-8018_16941_en.pdf", "outcome": "parsed", "recommendations": 8, "with_conclusion_links": 8, "section_states_links": true}
-{"ref": "2024-8019", "country": "Portugal", "path": "pdf/dgsante/reports/2024-8019_16794_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2024-8019", "country": "Portugal", "path": "pdf/dgsante/reports/2024-8019_16794_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 5, "section_states_links": true}
 {"ref": "2024-8020", "country": "Poland", "path": "pdf/dgsante/reports/2024-8020_16888_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2024-8021", "country": "Estonia", "path": "pdf/dgsante/reports/2024-8021_16942_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2024-8022", "country": "France", "path": "pdf/dgsante/reports/2024-8022_17044_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
@@ -2851,11 +2851,11 @@
 {"ref": "2024-8084", "country": "Sweden", "path": "pdf/dgsante/reports/2024-8084_16846_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2024-8090", "country": "Greece", "path": "pdf/dgsante/reports/2024-8090_16838_en.pdf", "outcome": "parsed", "recommendations": 3, "with_conclusion_links": 3, "section_states_links": true}
 {"ref": "2024-8098", "country": "Romania", "path": "pdf/dgsante/reports/2024-8098_17068_en.pdf", "outcome": "parsed", "recommendations": 6, "with_conclusion_links": 6, "section_states_links": true}
-{"ref": "2024-8105", "country": "Sweden", "path": "pdf/dgsante/reports/2024-8105_16859_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "2024-8105", "country": "Sweden", "path": "pdf/dgsante/reports/2024-8105_16859_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "2024-8108", "country": "Poland", "path": "pdf/dgsante/reports/2024-8108_16871_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "2024-8112", "country": "Croatia", "path": "pdf/dgsante/reports/2024-8112_16951_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 1, "section_states_links": true}
 {"ref": "2024-8144", "country": "France", "path": "pdf/dgsante/reports/2024-8144_16661_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": true}
-{"ref": "CT-2024-0003", "country": "Bulgaria", "path": "pdf/dgsante/reports/CT-2024-0003_17073_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "CT-2024-0003", "country": "Bulgaria", "path": "pdf/dgsante/reports/CT-2024-0003_17073_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "CT-2025-0002", "country": "Cyprus", "path": "pdf/dgsante/reports/CT-2025-0002_17204_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "CT-2025-0003", "country": "Denmark", "path": "pdf/dgsante/reports/CT-2025-0003_17280_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "CT-2025-0004", "country": "Luxembourg", "path": "pdf/dgsante/reports/CT-2025-0004_17169_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
@@ -2894,7 +2894,7 @@
 {"ref": "CT-2025-0105", "country": "Italy", "path": "pdf/dgsante/reports/CT-2025-0105_17226_en.pdf", "outcome": "parsed", "recommendations": 5, "with_conclusion_links": 5, "section_states_links": true}
 {"ref": "CT-2025-0106", "country": "Croatia", "path": "pdf/dgsante/reports/CT-2025-0106_17126_en.pdf", "outcome": "parsed", "recommendations": 4, "with_conclusion_links": 4, "section_states_links": true}
 {"ref": "CT-2025-0107", "country": "Austria", "path": "pdf/dgsante/reports/CT-2025-0107_17187_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
-{"ref": "CT-2025-0113", "country": "Belgium", "path": "pdf/dgsante/reports/CT-2025-0113_17032_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "CT-2025-0113", "country": "Belgium", "path": "pdf/dgsante/reports/CT-2025-0113_17032_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "CT-2025-0115", "country": "Finland", "path": "pdf/dgsante/reports/CT-2025-0115_17300_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "CT-2025-0117", "country": "Italy", "path": "pdf/dgsante/reports/CT-2025-0117_17010_en.pdf", "outcome": "parsed", "recommendations": 7, "with_conclusion_links": 7, "section_states_links": true}
 {"ref": "CT-2025-0120", "country": "Sweden", "path": "pdf/dgsante/reports/CT-2025-0120_17284_en.pdf", "outcome": "no_section_found", "recommendations": 0}
@@ -2909,7 +2909,7 @@
 {"ref": "CT-2025-0161", "country": "Lithuania", "path": "pdf/dgsante/reports/CT-2025-0161_17130_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "CT-2025-0165", "country": "Romania", "path": "pdf/dgsante/reports/CT-2025-0165_17221_en.pdf", "outcome": "parsed", "recommendations": 2, "with_conclusion_links": 2, "section_states_links": true}
 {"ref": "CT-2025-0173", "country": "Hungary", "path": "pdf/dgsante/reports/CT-2025-0173_17053_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 0, "section_states_links": false}
-{"ref": "CT-2025-0174", "country": "Denmark", "path": "pdf/dgsante/reports/CT-2025-0174_17158_en.pdf", "outcome": "no_section_found", "recommendations": 0}
+{"ref": "CT-2025-0174", "country": "Denmark", "path": "pdf/dgsante/reports/CT-2025-0174_17158_en.pdf", "outcome": "section_without_items", "recommendations": 0, "section_states_links": false}
 {"ref": "CT-2025-0175", "country": "France", "path": "pdf/dgsante/reports/CT-2025-0175_17255_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "CT-2025-0177", "country": "Sweden", "path": "pdf/dgsante/reports/CT-2025-0177_17101_en.pdf", "outcome": "no_section_found", "recommendations": 0}
 {"ref": "CT-2025-0178", "country": "Ireland", "path": "pdf/dgsante/reports/CT-2025-0178_17206_en.pdf", "outcome": "parsed", "recommendations": 1, "with_conclusion_links": 1, "section_states_links": true}

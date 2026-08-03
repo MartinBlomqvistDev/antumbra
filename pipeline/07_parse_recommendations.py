@@ -39,6 +39,10 @@ OUT_REPORTS = ROOT / "data" / "dgsante_report_parse.jsonl"
 HEADING = re.compile(
     r"^[ \t\f]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b[^\n.\d]*$", re.M | re.I
 )
+# Some reports head the section without numbering it at all. The same
+# no-dots-no-digits rule keeps the table of contents out.
+HEADING_UNNUMBERED = re.compile(r"^[ \t\f]*RECOMMENDATIONS?\b[^\n.\d]*$", re.M | re.I)
+
 HEADING_LOOSE = re.compile(
     r"^[ \t\f]*\d{1,2}[.\s)]*\s*RECOMMENDATIONS?\b.*$", re.M | re.I
 )
@@ -161,7 +165,11 @@ def recommendations_section(text: str) -> str | None:
     The heading also appears in the table of contents, so the last match is
     taken; the table of contents always precedes the section itself.
     """
-    matches = list(HEADING.finditer(text)) or list(HEADING_LOOSE.finditer(text))
+    matches = (
+        list(HEADING.finditer(text))
+        or list(HEADING_UNNUMBERED.finditer(text))
+        or list(HEADING_LOOSE.finditer(text))
+    )
     if not matches:
         return None
     section = text[matches[-1].end() :]

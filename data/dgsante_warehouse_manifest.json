@@ -96,7 +96,7 @@
     },
     {
       "table": "fact_recommendation",
-      "rows": 11829,
+      "rows": 11999,
       "columns": [
         {
           "name": "recommendation_key",
@@ -150,7 +150,7 @@
     },
     {
       "table": "fact_citation",
-      "rows": 7806,
+      "rows": 7821,
       "columns": [
         {
           "name": "recommendation_key",
@@ -218,11 +218,11 @@
     }
   ],
   "measures": {
-    "recommendations": 11829,
-    "recommendations_stating_their_basis": 2004,
-    "recommendations_answered": 3248,
-    "citations": 7806,
-    "citations_resolved": 7472,
+    "recommendations": 11999,
+    "recommendations_stating_their_basis": 2010,
+    "recommendations_answered": 3258,
+    "citations": 7821,
+    "citations_resolved": 7484,
     "commitments": 5710
   }
 }

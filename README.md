@@ -132,6 +132,7 @@ docs/BEGARANMALL.md    tre begäranmallar, rättslig motivering, protokoll
 docs/VILLKORSSCHEMA.md datakontrakt med motivering och verifieringskontroller
 docs/DGSANTE.md        jämförelselagrets korpus, struktur och volym
 docs/adr/              daterade beslut om avgränsningar och metod
+docs/POWERBI.md        byggbeskrivning för .pbix mot samma modell
 docs/dashboard.html    fristående dashboard över jämförelselagret
 dbt/                   staging och marts ovanpå stjärnschemat
 CONTRIBUTING.md        kodstandard, commit-konvention, vad som aldrig committas

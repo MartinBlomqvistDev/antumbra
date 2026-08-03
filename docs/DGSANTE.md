@@ -254,21 +254,21 @@ Kört 2026-08-02 med `pipeline/07_parse_recommendations.py` över samtliga
 (en rad per rekommendation) och `data/dgsante_report_parse.jsonl` (en rad per
 rapport med utfallet).
 
-**11 829 rekommendationer ur 2 312 rapporter, 27 länder.** Tre layouter läses:
-6 647 poster ur flat numrering, 3 420 ur tvåspaltiga tabeller och 1 762 ur den
+**11 999 rekommendationer ur 2 341 rapporter, 27 länder.** Tre layouter läses:
+6 757 poster ur flat numrering, 3 451 ur tvåspaltiga tabeller och 1 791 ur den
 hierarkiska numrering de äldre rapporterna använder ("7.1.1", "7.1.2").
 
 | Utfall per rapport | Antal |
 | --- | --- |
-| Parsad till rekommendationer | 2 312 |
-| Avsnitt hittat men inga poster | 312 |
-| Inget rekommendationsavsnitt | 297 |
-| Rapporten säger att den saknar rekommendation | 19 |
+| Parsad till rekommendationer | 2 341 |
+| Avsnitt hittat men inga poster | 354 |
+| Inget rekommendationsavsnitt | 225 |
+| Rapporten säger att den saknar rekommendation | 20 |
 
-De 19 sista är ett **äkta nollresultat, inte ett parsningsfel**, och hålls
+De 20 sista är ett **äkta nollresultat, inte ett parsningsfel**, och hålls
 isär i utdatat just därför.
 
-**Korsreferenserna är den knappa resursen.** Bara 671 av 2 940 rapporter, 23
+**Korsreferenserna är den knappa resursen.** Bara 673 av 2 940 rapporter, 23
 procent, skriver ut vilken slutsats en rekommendation vilar på. Praktiken
 börjar 2014 och blir aldrig heltäckande:
 
@@ -288,16 +288,16 @@ börjar 2014 och blir aldrig heltäckande:
 | 2024 | 82 | 59 |
 | CT-formatet | 83 | 47 |
 
-**Grafen omfattar 2 004 rekommendationer med 2 607 kanter till slutsatser och
-5 201 kanter till iakttagelser.** Det är storleksordningen som ska stå i
-metoden, inte 4 690 och inte 11 829.
+**Grafen omfattar 2 010 rekommendationer med 2 614 kanter till slutsatser och
+5 207 kanter till iakttagelser.** Det är storleksordningen som ska stå i
+metoden, inte 4 690 och inte 11 999.
 
-**Parserns täckning mäts på den delmängd som bär grafen:** av de 671
-rapporterna parsas 634, alltså **94 procent**. Räknat på alla rapporter med
-ett rekommendationsavsnitt parsas 2 312 av 2 624, alltså 88 procent. Testsviten fäller om andelen
+**Parserns täckning mäts på den delmängd som bär grafen:** av de 673
+rapporterna parsas 636, alltså **94 procent**. Räknat på alla rapporter med
+ett rekommendationsavsnitt parsas 2 341 av 2 695, alltså 87 procent. Testsviten fäller om andelen
 faller under 85 procent.
 
-Kända begränsningar, utskrivna i stället för utjämnade: 312 rapporter har ett
+Kända begränsningar, utskrivna i stället för utjämnade: 354 rapporter har ett
 rekommendationsavsnitt vars numrering inte går att följa, oftast tvåspaltiga
 tabeller där sidnummer och radnummer blandas med rekommendationsnumren. 167
 rekommendationer bär flaggan `multiple_reference_blocks`, vilket betyder att
@@ -315,7 +315,7 @@ ligger i `.gitignore`; den återskapas genom att köra steget. Det som committas
 är `data/dgsante_graph.jsonl`: **en rad per kant med det citerade stycket
 bredvid**, alltså den slutna kedjan och 3,4 MB.
 
-**7 472 av 7 806 citerade stycknummer resolverar, alltså 96 procent.**
+**7 484 av 7 821 citerade stycknummer resolverar, alltså 96 procent.**
 
 Tre fel i vägen dit är värda att minnas, eftersom de alla gav tyst dataförlust:
 
@@ -413,8 +413,8 @@ Effekten är mätt mot planerna, inte uppskattad:
 
 | Mått | Före | Efter |
 | --- | --- | --- |
-| Rekommendationer | 8 365 | 11 829 |
-| Rapporter med parsade poster | 1 699 | 2 312 |
+| Rekommendationer | 8 365 | 11 999 |
+| Rapporter med parsade poster | 1 699 | 2 341 |
 | Rapporter som skriver ut korsreferenser | 489 | 671 |
 | Länkar bekräftade av matchande text | 956 | 1 981 |
 | Rader med likhet 0,9 eller högre | 459 | 1 076 |
@@ -447,8 +447,8 @@ hur dokumenten läser; modellen är format efter hur frågorna ställs.
 | `dim_country` | 165 | ett land |
 | `dim_audit` | 4 690 | en revision |
 | `dim_paragraph` | 81 292 | ett numrerat stycke |
-| `fact_recommendation` | 11 829 | en rekommendation |
-| `fact_citation` | 7 806 | en kant i citatgrafen |
+| `fact_recommendation` | 11 999 | en rekommendation |
+| `fact_citation` | 7 821 | en kant i citatgrafen |
 | `fact_commitment` | 5 710 | ett svar i en åtgärdsplan |
 
 `dim_country` och `dim_audit` är konformerade: alla tre faktatabeller hänger på
@@ -480,10 +480,13 @@ Nollan för 2025 är inget fel: åtgärdsplanerna för de nyaste revisionerna ä
 
 ## Nästa steg
 
-1. Förbättra kolumndelningen i steg 09. Ett försök att låta rapportens egen
-   lydelse välja mellan de två möjliga rännorna **gjorde det sämre**, 0,678
-   mot 0,695 i genomsnittlig containment mätt på 180 planer, och återställdes.
-   Nollresultatet står i koden så att idén inte upprepas.
+1. **Svansen är i huvudsak äkta, inte fel.** Stickprov om 60 av de rapporter
+   som saknar igenkänt avsnitt visar att 87 procent nämner rekommendationer
+   bara i löptext eller i förbigående, och 8 procent inte alls. Att pressa
+   dem vidare vore att gissa, vilket projektets metod förbjuder. Kvar som
+   åtgärdbart står kolumndelningen i steg 09, där ett försök att låta
+   rapportens lydelse välja ränna **gjorde det sämre** (0,678 mot 0,695 mätt
+   på 180 planer) och återställdes.
 2. Sätt ihop bilagorna per revision före parsning, enligt avsnittet om
    bilagorna som sidor.
 3. Ta reda på varför 6 procent av de iakttagelse-citerade numren inte

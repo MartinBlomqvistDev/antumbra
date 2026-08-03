@@ -89,8 +89,8 @@ som facit 2026-08-02 och det gav ett mätt resultat: 134 rapporter, mest 2011
 till 2013, hade rekommendationerna i en tvåspaltig tabell vars vänsterkolumn
 bara innehåller numren, och vid sidbrytning skildes numren från sin text.
 Radvis läsning fann då **en** rekommendation där rapporten har fem. Efter att
-steg 07 läser sådana tabeller kolumnvis, och efter en andra rättning ur samma
-facit (se nedan) steg rekommendationerna från 8 365 till 11 829, textbekräftade
+steg 07 läser sådana tabeller kolumnvis, och efter ytterligare rättningar ur
+samma facit (se nedan) steg rekommendationerna från 8 365 till 11 999, textbekräftade
 länkar från 956 till 1 981, och rapporter där varje rad är fel föll från 134
 till 50.
 
@@ -103,7 +103,7 @@ osynligt för parsern. Efter rättningen skriver **671 rapporter i stället för
 
 **Citatgrafen är sluten till 96 procent.** Verifierat 2026-08-02 med
 `pipeline/08_parse_paragraphs.py`: 81 292 numrerade stycken ur 2 724
-rapporter, och **7 472 av 7 806 citerade stycknummer resolverar till ett
+rapporter, och **7 484 av 7 821 citerade stycknummer resolverar till ett
 faktiskt stycke**. Den slutna kedjan ligger i `data/dgsante_graph.jsonl`;
 den fulla styckekorpusen är 66 MB, gitignorerad och återskapbar.
 Styckenumreringen löper genom hela dokumentet, inte per avsnitt.
@@ -116,12 +116,12 @@ stycke under en slutsatsrubrik, 13 procent motsäger och 8 procent är omärkta.
 Oenigheten redovisas per rad i stället för att jämkas ihop.
 
 **Citatgrafen är mycket mindre än korpusen.** Verifierat 2026-08-02 genom att
-parsa samtliga 2 940 engelska EU-27-rapporter. **11 829 rekommendationer ur
-2 312 rapporter**, men bara **671 rapporter, 23 procent, skriver ut vilken
+parsa samtliga 2 940 engelska EU-27-rapporter. **11 999 rekommendationer ur
+2 341 rapporter**, men bara **673 rapporter, 23 procent, skriver ut vilken
 slutsats en rekommendation vilar på.** Praktiken börjar **2014**; före det
-finns noll korsreferenser. Grafen omfattar 2 004 rekommendationer, 2 607
-kanter till slutsatser och 5 201 till iakttagelser. Det är storleksordningen
-som gäller, inte 4 690 och inte 11 829. 19 rapporter skriver att de saknar
+finns noll korsreferenser. Grafen omfattar 2 010 rekommendationer, 2 614
+kanter till slutsatser och 5 207 till iakttagelser. Det är storleksordningen
+som gäller, inte 4 690 och inte 11 999. 20 rapporter skriver att de saknar
 rekommendation, vilket är ett nollresultat och inte ett parsningsfel.
 Mallen i `docs/DGSANTE.md` var verifierad på en rapport och gäller inte alla
 eror: rekommendationerna ligger under rubrik 9 i äldre rapporter och rubrik 8
