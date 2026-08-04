@@ -907,3 +907,27 @@ prövningsplan, fyra konkurrerande förklaringar och förskriven nollresultattex
 (avsnitt 10). Protokollet fick C-grenar i P0, P1, P4, P5, P6, P8, P9 och P11b,
 och P11:s uppföljningsfråga utökades med nötkreatur. Riskordningen skrevs om:
 tolkningsspridning överst, följd av två C-specifika risker.
+
+### Tillämpningsnot 1, 2026-08-04: hur P4-svaren komponerats i praktiken
+
+Skriven dag 1, efter de första 22 svaren, som dokumentation av tre tolkningar
+av protokollet. Ingen ändrar omfång eller ger någon myndighet annan behandling
+i sak; de skrivs ned för att likabehandlingen ska vara granskningsbar mot de
+faktiskt avsända breven.
+
+1. **Komponerad upprepning.** P4 föreskriver att svar på omfångsfrågor endast
+   består av ordagrann upprepning av begärans avgränsningar. I praktiken har
+   svaren komponerats av ordagranna fragment ur begäran, ibland inledda med
+   "Ja" när myndighetens fråga var en ja-eller-nej-läsning av begäran. Exempel:
+   "de fem senast genomförda kontrollerna, räknat efter kontrolldatum, under
+   samma period, av anläggningar som håller nötkreatur, grisar eller fjäderfä".
+2. **Följdriktig sifferändring.** När avsmalningen enligt P5 ändrat antalet
+   från tjugo eller tio till fem har färre-än-klausulen återgetts som "har
+   färre än fem beslut meddelats under perioden avser begäran samtliga".
+3. **Särskiljande ord vid samlade besked.** När en myndighet lämnat ett samlat
+   besked i en tråd utan ärendekoppling har svaren per begäran försetts med
+   orden "om kontrollrapporter" respektive "om beslut om föreläggande", så att
+   två i övrigt identiska svar till samma mottagare kan hållas isär.
+
+Avvikelsen från P0:s klockslagsfönster (avsändning 10:00 till 10:03 i stället
+för 08:00 till 09:30, lika för alla mottagare) är loggad i protokollloggen.
