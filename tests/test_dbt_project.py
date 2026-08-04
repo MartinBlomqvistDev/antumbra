@@ -19,9 +19,20 @@ REF = re.compile(r"\{\{\s*ref\(\s*'([^']+)'\s*\)\s*\}\}")
 SOURCE = re.compile(r"\{\{\s*source\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)\s*\}\}")
 
 
+BUILD_DIRS = {"dbt_packages", "target", "logs"}
+
+
 def sql_files() -> list[Path]:
-    """Every model and singular test in the project."""
-    return sorted(DBT.rglob("*.sql"))
+    """Every model and singular test in the project itself.
+
+    Running dbt materialises installed packages and compiled output under
+    dbt/; those are build artefacts, not part of the project under test.
+    """
+    return sorted(
+        path
+        for path in DBT.rglob("*.sql")
+        if BUILD_DIRS.isdisjoint(part.lower() for part in path.parts)
+    )
 
 
 def model_names() -> set[str]:
@@ -103,4 +114,19 @@ class TestNoCredentialsAreCommitted:
         assert "private_key" not in text
 
     def test_no_service_account_key_is_tracked(self):
-        assert not list(DBT.rglob("*.json")), "a key file must never be committed"
+        """The invariant guards the repository, not the local build.
+
+        Running dbt writes lockfiles and manifests under dbt/ on disk, so the
+        check asks git what is tracked rather than sweeping the filesystem.
+        """
+        import subprocess
+
+        tracked = subprocess.run(
+            ["git", "ls-files", "dbt"],
+            capture_output=True,
+            text=True,
+            cwd=ROOT,
+            check=True,
+        ).stdout.splitlines()
+        keys = [path for path in tracked if path.endswith(".json")]
+        assert not keys, f"a key file must never be committed: {keys}"
