@@ -931,3 +931,15 @@ faktiskt avsända breven.
 
 Avvikelsen från P0:s klockslagsfönster (avsändning 10:00 till 10:03 i stället
 för 08:00 till 09:30, lika för alla mottagare) är loggad i protokollloggen.
+
+### Tillämpningsnot 2, 2026-08-04: förnyad begäran om avgiftsbeslut
+
+När en myndighet inte agerar på formuleringen "beslut i frågan om avgiften"
+utan i stället upprepar sitt erbjudande, lyder den förnyade begäran:
+
+    Jag begär ett särskilt skriftligt beslut om avgiften enligt 23 §
+    avgiftsförordningen (1992:191).
+
+Samma text används mot varje myndighet i samma läge. Första tillämpning:
+Jönköping, efter tre likalydande erbjudanden om nio handlingar i stället
+för beslut.
