@@ -14,6 +14,11 @@ data/sundsvall/
 *.eml
 *.zip
 
+# Documents delivered by authorities in response to the requests. They can
+# contain personal data and arrive in any format; the committed record is
+# the sha256 manifest, never the documents.
+data/leveranser/
+
 # Internal working files. They stay on disk but never in the repository:
 # they describe why the project exists in career terms, how it is framed for
 # different audiences, and which tooling is used. None of that belongs in a
