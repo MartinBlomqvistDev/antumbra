@@ -91,11 +91,34 @@ class TestAnswersAreVerbatim:
 
     def test_assemble_carries_the_source_reference_untouched(self):
         paragraphs = corpus()
-        answers = assemble(
-            [Candidate(paragraphs[1], 0.9)], {p.text for p in paragraphs}
-        )
+        answers = assemble([Candidate(paragraphs[1], 0.9)], set(paragraphs))
         assert answers[0].text == paragraphs[1].text
         assert (answers[0].ref, answers[0].number) == ("2003-2002", 7)
+
+    def test_a_correct_quotation_under_a_false_citation_is_refused(self):
+        """Attributing one country's words to another is the worse failure.
+
+        Found by probing the first implementation, which validated the text
+        alone and let the citation through untouched.
+        """
+        paragraphs = corpus()
+        misattributed = replace(paragraphs[0], country="Denmark", ref="9999-9999")
+        with pytest.raises(ValueError, match="not verbatim"):
+            assemble([Candidate(misattributed, 0.9)], set(paragraphs))
+
+
+class TestStaleEmbeddingsAreRefused:
+    def test_a_matrix_of_the_wrong_height_stops_the_answer(self):
+        """A stale embedding file would quote real text under wrong sources."""
+        paragraphs = corpus()
+        with pytest.raises(ValueError, match="out of step"):
+            ask(
+                question="antibiotics",
+                embedder=HashEmbedder(),
+                selector=ThresholdSelector(0.0),
+                matrix=matrix(paragraphs)[:2],
+                paragraphs=paragraphs,
+            )
 
 
 class TestNothingMeansNothing:

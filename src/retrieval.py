@@ -153,17 +153,22 @@ def top_candidates(
     return [Candidate(paragraphs[i], float(scores[i])) for i in order]
 
 
-def assemble(selected: list[Candidate], corpus_texts: set[str]) -> list[Answer]:
+def assemble(selected: list[Candidate], corpus: set[Paragraph]) -> list[Answer]:
     """Turn selected candidates into answers, enforcing verbatim quotation.
 
     The check is the guarantee the whole module exists for: no selector,
-    present or future, can smuggle rewritten text past this point.
+    present or future, can smuggle rewritten text past this point. It
+    validates the whole paragraph, not only its text, because a correct
+    quotation under a fabricated citation would put one member state's words
+    in another's mouth. That is a worse failure than a paraphrase, and 801
+    paragraphs in the corpus share their text with another paragraph, so
+    checking the text alone would not even place a quotation reliably.
     """
     answers = []
     for candidate in selected:
-        if candidate.paragraph.text not in corpus_texts:
+        if candidate.paragraph not in corpus:
             raise ValueError(
-                "selected text is not verbatim from the corpus: "
+                "selected paragraph is not verbatim from the corpus: "
                 f"{candidate.paragraph.ref} paragraph {candidate.paragraph.number}"
             )
         answers.append(
@@ -186,10 +191,22 @@ def ask(
     paragraphs: list[Paragraph],
     candidates: int = DEFAULT_CANDIDATES,
 ) -> list[Answer]:
-    """Answer a question with verbatim quotations, or with nothing."""
+    """Answer a question with verbatim quotations, or with nothing.
+
+    Row i of the matrix must be paragraph i of the corpus. A stale embedding
+    file, for instance one left behind when step 08 regenerated the corpus,
+    would otherwise attach real quotations to the wrong reports without
+    anything looking wrong in the output, so the mismatch is refused here.
+    """
+    if matrix.shape[0] != len(paragraphs):
+        raise ValueError(
+            f"embeddings and corpus are out of step: {matrix.shape[0]} vectors "
+            f"for {len(paragraphs)} paragraphs; rerun "
+            "pipeline/14_embed_paragraphs.py"
+        )
     found = top_candidates(question, embedder, matrix, paragraphs, candidates)
     selected = selector.select(question, found)
-    return assemble(selected, {p.text for p in paragraphs})
+    return assemble(selected, set(paragraphs))
 
 
 def main() -> int:

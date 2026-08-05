@@ -51,6 +51,25 @@ manifestet med modellnamn, dimension, radantal och sha256 per shard, så att en
 körning kan verifieras utan att vektorerna distribueras, samma mönster som
 proveniensmanifestet i ADR-0004.
 
+## Not 2026-08-05: granskningen fann två sätt att ljuga
+
+Efter första implementationen prövades garantin med angreppsförsök i stället
+för med välvilja, och två hål fanns:
+
+1. **Rätt citat under falsk källa gick igenom.** Kontrollen jämförde bara
+   texten, så en väljare kunde returnera Ungerns ord tillskrivna Danmark.
+   Det är en värre feltyp än en parafras: läsaren kan kontrollera citatet
+   mot korpusen och få rätt, men mot fel land. Dessutom delar 801 stycken
+   text med ett annat stycke, så textjämförelsen kunde inte ens placera ett
+   citat entydigt. Kontrollen validerar nu hela stycket, inte dess text.
+2. **Föråldrade embeddingar accepterades tyst.** Byggdes styckekorpusen om i
+   steg 08 utan att steg 14 kördes om, kopplades verkliga citat till fel
+   rapporter utan att något såg fel ut i utdatan. Radantalen jämförs nu
+   före varje fråga, och avvikelse stoppar svaret.
+
+Båda är samma feltyp som projektet i övrigt jagar: fel som inte syns i
+resultatet. Bägge fälls nu av egna tester.
+
 ## Konsekvenser
 
 - Steg 14 är återupptagbart: embeddingar skrivs i shards och färdiga shards
