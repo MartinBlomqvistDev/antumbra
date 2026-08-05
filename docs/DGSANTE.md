@@ -499,6 +499,14 @@ samma typ av brist i olika länder och år. Styckena är rapporternas egna
 citeringsenheter, så sökningen återanvänder exakt den struktur citatgrafen
 redan vilar på.
 
+**Vad sökningen inte kan:** modellen matchar ämne, inte polaritet. Frågan
+"kontroller utfördes men dokumenterades inte" returnerar även stycken som
+berömmer dokumentationen, eftersom en bi-encoder inte skiljer ett
+konstaterande från dess negation. Lagret är därför en uppslagsapparat som
+hittar var ett ämne behandlas, aldrig ett facit över vad som konstaterats;
+läsningen av citaten är alltid människans. En väljare som förstår polaritet
+kan sättas in i Selector-protokollet utan att retrieval ändras.
+
 ## Nästa steg
 
 1. **Svansen är i huvudsak äkta, inte fel.** Stickprov om 60 av de rapporter
