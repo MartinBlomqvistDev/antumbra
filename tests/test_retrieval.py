@@ -5,6 +5,7 @@ deterministic embedder, so CI never downloads a model. The final test runs
 against the real corpus and skips itself where the corpus is absent.
 """
 
+import importlib.util
 import json
 from dataclasses import replace
 from pathlib import Path
@@ -139,13 +140,16 @@ class TestAgainstTheRealCorpus:
     corpus_file = ROOT / "data" / "dgsante_paragraphs.jsonl"
     shard_dir = ROOT / "data" / "embeddings"
 
+    ready = (
+        corpus_file.exists()
+        and shard_dir.exists()
+        and any(shard_dir.glob("shard_*.npy"))
+        and importlib.util.find_spec("sentence_transformers") is not None
+    )
+
     @pytest.mark.skipif(
-        not (
-            corpus_file.exists() and any(Path(shard_dir).glob("shard_*.npy"))
-            if shard_dir.exists()
-            else False
-        ),
-        reason="real corpus or embeddings not on this machine",
+        not ready,
+        reason="real corpus, embeddings or the embedding model not on this machine",
     )
     def test_real_answers_exist_verbatim_in_the_corpus_file(self):
         """End to end against the real data, embedding the query with the model."""
