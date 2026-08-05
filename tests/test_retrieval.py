@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from src.retrieval import (
+from retrieval import (
     Candidate,
     Paragraph,
     ThresholdSelector,
@@ -153,7 +153,7 @@ class TestAgainstTheRealCorpus:
     )
     def test_real_answers_exist_verbatim_in_the_corpus_file(self):
         """End to end against the real data, embedding the query with the model."""
-        from src.retrieval import SentenceTransformerEmbedder
+        from retrieval import SentenceTransformerEmbedder
 
         manifest = json.loads(
             (ROOT / "data" / "dgsante_embeddings_manifest.json").read_text("utf-8")
