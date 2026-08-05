@@ -37,3 +37,32 @@
 {"path": "gavleborg_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(2684-2025-7).pdf", "bytes": 150138, "sha256": "304697b338a2632b5b5bc45f82881aead98081a601f33bfee1a16056dc27ab42", "recorded": "2026-08-04"}
 {"path": "gavleborg_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(4940-2025-4).pdf", "bytes": 125359, "sha256": "20ae1f08afde7403fe3ee41d50868eb088261d490d45844f1905297e6b98750c", "recorded": "2026-08-04"}
 {"path": "gavleborg_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(7819-2025-10).pdf", "bytes": 150543, "sha256": "b470e656dc755505ed6b5ea32eea2e154198083117cab8917ee51a6012d35d7b", "recorded": "2026-08-04"}
+{"path": "halland_B/1238-2025.pdf", "bytes": 251739, "sha256": "d32b3e249f80b5c457c00f43af4b70c908c6da98ea0fb9379aac857f55f66c73", "recorded": "2026-08-05"}
+{"path": "halland_B/1501-2026.pdf", "bytes": 205544, "sha256": "b4306ddf9b566340772d44f7d0722f79735dfa84d9c79cce068b11cc16cf0146", "recorded": "2026-08-05"}
+{"path": "halland_B/2534-2026.pdf", "bytes": 172836, "sha256": "c40f909b1d1f540b76d6088d4c592090f0d4df7afbb90fd1e84698c516f80083", "recorded": "2026-08-05"}
+{"path": "halland_B/3194-2025.pdf", "bytes": 191361, "sha256": "da1946b903f4b2f188b25fb8449662f43b469c48e7964438437faa4bd21d83e8", "recorded": "2026-08-05"}
+{"path": "halland_B/3403-2026_Bortredigerad.pdf", "bytes": 9360272, "sha256": "8e9c0c4e0b5c1785352db2e5ec7253af3800033a63e3db27bd0e473bcddfb465", "recorded": "2026-08-05"}
+{"path": "halland_B/4064-2026.pdf", "bytes": 145792, "sha256": "de8f574b133b38f2fa759c51b0ff4c6fa379deee5a52245278a516e70dde06b4", "recorded": "2026-08-05"}
+{"path": "halland_B/7886-2025.pdf", "bytes": 265156, "sha256": "ab494089b618f0a7b48080c8e01f3137dffe8c05ae0fd3b59477e3c1ca1ddbc7", "recorded": "2026-08-05"}
+{"path": "halland_B/8232-2025.pdf", "bytes": 222310, "sha256": "3d4305eb3bc17d0a10783a99b590fa9722729dfa30fbc43f362aa3ae793cddd9", "recorded": "2026-08-05"}
+{"path": "halland_B/8571-2025.pdf", "bytes": 302837, "sha256": "982dc9218aadb3ba3bffcffb59ccb2a9bd4d1a0499c0da40b0eaa136280cd0f7", "recorded": "2026-08-05"}
+{"path": "halland_B/8608-2026.pdf", "bytes": 141411, "sha256": "1d3f1e77540849a0366e0b44bd2ac366e6b677bdb930ebeb0f592d203d91d3bf", "recorded": "2026-08-05"}
+{"path": "ostergotland_B/2 Föreläggande enligt 8 kap 9 § djurskyddslagen gris(8763-2025-6).pdf", "bytes": 149561, "sha256": "b91f2b0d914109eebdae4cfcfb8270aa31f33f2b40967f1466cfa42e54547ee5", "recorded": "2026-08-05"}
+{"path": "ostergotland_B/3 Föreläggande enligt 8 kap 9 § djurskyddslagen nöt och får(13685-2025-12).pdf", "bytes": 217710, "sha256": "40a4ec429f16f83fb7a9982611ec1dd2093ca3816b1cfb9ecac0e2fcbbf0c6cf", "recorded": "2026-08-05"}
+{"path": "ostergotland_B/4 Föreläggande enligt 8 kap 9 § djurskyddslagen nöt(17662-2025-19).pdf", "bytes": 250098, "sha256": "d9e1d677cc0460dcc6ee62e88313d6fd6ef0f0a1a248301581611e703faecc75", "recorded": "2026-08-05"}
+{"path": "ostergotland_B/5 Föreläggande enligt 8 kap 9 § djurskyddslagen nöt och katt(5404-2025-4).pdf", "bytes": 174703, "sha256": "c0b148239973b66bb0e82e507ebae25959a1f2c726113117bb137b0db984aedf", "recorded": "2026-08-05"}
+{"path": "ostergotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(19036-2025-3).pdf", "bytes": 198124, "sha256": "36fe6eb4e8219608bf58b6273142e7d22f442ca88e09d5c38b9ca9f8032c1373", "recorded": "2026-08-05"}
+{"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(58984-2025-2).pdf", "bytes": 2937769, "sha256": "4075485eec1510c179dd3af0510fef6cc938aaecdc331e1b62feff272d8ca799", "recorded": "2026-08-05"}
+{"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(58991-2025-2).pdf", "bytes": 2085152, "sha256": "3a0eb06352243238f13c08a429866179e3ea9b9a9924a25c1520dd3f4ddc0bea", "recorded": "2026-08-05"}
+{"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(59072-2025-5).pdf", "bytes": 4639122, "sha256": "f390e8dd1d82a0a738eaa857e9193d28089e697f2f1687d890a1ae3c62e336a4", "recorded": "2026-08-05"}
+{"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(59074-2025-3).pdf", "bytes": 3070719, "sha256": "7cf07aba64aae4517efdbd1802eaa9a925d40f445209c9ebe5fb6fa487fe6f93", "recorded": "2026-08-05"}
+{"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(59199-2025-4).pdf", "bytes": 4051914, "sha256": "ece8a5fe8ac890feaf523a72f1c529d70bbf934532619574f5cd634fb90a0b9a", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Extra offentlig kontroll uppföljning befogad anmälan - kontrollrapport(1267-2026-11)_Bortredigerad.pdf", "bytes": 1537340, "sha256": "920429959a47b50eebaa873d73da6a66df49e0fd452195b585b54894665750b8", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Extra offentlig kontroll uppföljning befogad anmälan - kontrollrapport(1715-2025-2)_Bortredigerad.pdf", "bytes": 14076364, "sha256": "9784129a1ea4ab220102a12a08e69f62195fec98edb200f5673dfed1cf216a35", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Extra offentlig kontroll, uppföljning befogad anmälan - kontrollrapport(2315-2025-10).pdf", "bytes": 7048934, "sha256": "7aaba3e70697576f82f2547e7d1fb1ed8c3c8dd2105e0441ce10b5bf45eb5380", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(6728-2024-2).pdf", "bytes": 2822310, "sha256": "9f7cf6deaae9f7981db94653b8738ded7fa99fde407dbed4c1d532b3501e6a54", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen, gris(6728-2024-5).pdf", "bytes": 176474, "sha256": "f3c98097361a3c6b05711c4ad68a7b147b56303208ae76977f69a2076d702951", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen hund fjäderfä(1267-2026-15) (002)_Bortredigerad.pdf", "bytes": 334973, "sha256": "153936119412fd70bbff12cc29234f7235c76c71541a9fef36ec0afaab374260", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen, nöt, kalv(1492-2025-6).pdf", "bytes": 215401, "sha256": "f3b6247f32a58b5774b0916764c918c116c83b073ca61ee0db9bd95b29411bed", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen, nöt, kalv(1715-2025-13).pdf", "bytes": 274882, "sha256": "ee325a5e63abffb6bafb2fba1292ece81fd6abe9c3fd95e33d0fad22b7912f99", "recorded": "2026-08-05"}
+{"path": "vastmanland_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen, nöt, kalv(2315-2025-16).pdf", "bytes": 228248, "sha256": "da77e9e8bd7f131cc254c36138b8376df03bba089d0a9492e140cb2faf3e8e58", "recorded": "2026-08-05"}
