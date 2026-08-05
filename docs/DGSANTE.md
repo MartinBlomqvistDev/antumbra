@@ -478,6 +478,27 @@ sin grund och andel som besvarats:
 Nollan för 2025 är inget fel: åtgärdsplanerna för de nyaste revisionerna är
 ännu inte publicerade.
 
+## Retrieval: semantisk sökning som citatapparat
+
+Steg 14 beräknar embeddingar för samtliga 81 292 stycken med en lokal modell
+(`all-MiniLM-L6-v2`, 384 dimensioner) och `src/retrieval.py` besvarar frågor
+mot dem: brute force med numpy över en normaliserad matris om cirka 125 MB,
+inga API-nycklar, ingen vektordatabas (ADR-0015 avfärdar de alternativen
+uttryckligen). Vektorerna är härledda och ligger utanför git; det committade
+är manifestet med modellnamn, radantal och sha256 per shard.
+
+Svarslagret får bara välja och återge. Varje svar är ett stycke ordagrant,
+med land, rapportreferens och styckenummer, och svarsmontören vägrar
+returnera text som inte är teckenidentisk med källstycket. Matchar ingenting
+frågan är svaret att ingenting i korpusen svarar. Regeln vaktas av tester:
+en väljare som skriver om ett citat fälls, och mot den riktiga korpusen
+verifieras att varje returnerad text finns ordagrant i källfilen.
+
+Skälet att lagret finns är projektets egen fråga: vad kommissionen sagt om
+samma typ av brist i olika länder och år. Styckena är rapporternas egna
+citeringsenheter, så sökningen återanvänder exakt den struktur citatgrafen
+redan vilar på.
+
 ## Nästa steg
 
 1. **Svansen är i huvudsak äkta, inte fel.** Stickprov om 60 av de rapporter

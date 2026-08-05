@@ -1,0 +1,59 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimension": 384,
+  "rows": 81292,
+  "normalised": true,
+  "shard_rows": 8192,
+  "shards": [
+    {
+      "file": "shard_0000.npy",
+      "rows": 8192,
+      "sha256": "a3ff8c715e0d383c58eb8ba2c004fd47e6ec6f7a2f4f2045180180c4b93fc1fc"
+    },
+    {
+      "file": "shard_0001.npy",
+      "rows": 8192,
+      "sha256": "97dfc45f0003af012829f2f6c272a3a3d35d1bae6b4217fc5db16f76a3484ac9"
+    },
+    {
+      "file": "shard_0002.npy",
+      "rows": 8192,
+      "sha256": "408db44dfd7f01a4adcdcc6891f7057195006fbf1901f63be2158da6fcd03aa9"
+    },
+    {
+      "file": "shard_0003.npy",
+      "rows": 8192,
+      "sha256": "35775e47ca1bcc785b793dad26fe096181efb9c56537a8f8bb6c0d1890682647"
+    },
+    {
+      "file": "shard_0004.npy",
+      "rows": 8192,
+      "sha256": "8ff55d9b8c2cc522258e23d1a1ebeb66f9d3b072e09b5081f87e235da5c061d8"
+    },
+    {
+      "file": "shard_0005.npy",
+      "rows": 8192,
+      "sha256": "b1e7971cfd8c4148ad3dc2f822e0289f0f0017112405917a232127e1cae26be3"
+    },
+    {
+      "file": "shard_0006.npy",
+      "rows": 8192,
+      "sha256": "b5111816d76c73058aea51b803b0347a42aec779cbc0d551de23b90f067daff2"
+    },
+    {
+      "file": "shard_0007.npy",
+      "rows": 8192,
+      "sha256": "a1902521466e6f9a38091db485613d248e77de6126f721292b1c83e655c9e31f"
+    },
+    {
+      "file": "shard_0008.npy",
+      "rows": 8192,
+      "sha256": "3eec0918dc9a35a9e5a3a99144eceabadd810c596e059bf889b7496e444a1c16"
+    },
+    {
+      "file": "shard_0009.npy",
+      "rows": 7564,
+      "sha256": "6ab6c7511129001ce36e99ac09273d647b1a5f7ee2315dd183f91dbedfbd501c"
+    }
+  ]
+}

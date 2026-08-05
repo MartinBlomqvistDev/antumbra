@@ -103,6 +103,8 @@ python pipeline/09_link_action_plans.py    # åtagandena kopplade till rekommend
 python pipeline/10_build_warehouse.py      # stjärnschemat i Parquet
 python pipeline/11_build_dashboard.py      # docs/dashboard.html
 python pipeline/12_load_bigquery.py --dry-run  # visar vad som skulle laddas
+python pipeline/13_hash_deliveries.py      # sha256 över mottagna svenska handlingar
+python pipeline/14_embed_paragraphs.py     # lokala embeddingar för retrieval
 ```
 
 Stegen skriver till `data/`. De som tar tid är återupptagbara och hoppar över
