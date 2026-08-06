@@ -9,11 +9,12 @@ import type { Copy } from "@/content/types";
 export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
   return (
     <>
+      <div aria-hidden className="h-1 bg-accent" />
       <header className="border-b border-border-soft">
         <div className="mx-auto flex max-w-5xl flex-wrap items-baseline gap-x-6 gap-y-2 px-4 py-4">
           <Link
             href={copy.nav[0].href}
-            className="font-semibold tracking-tight"
+            className="font-display text-lg font-semibold tracking-tight"
           >
             {copy.site.name}
           </Link>
@@ -43,7 +44,13 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
         {children}
       </main>
       <footer className="border-t border-border-soft">
-        <div className="mx-auto max-w-5xl space-y-1 px-4 py-6 text-sm text-ink-secondary">
+        <div className="mx-auto max-w-5xl space-y-2 px-4 py-8 text-sm text-ink-secondary">
+          <p className="font-display text-base font-semibold text-ink">
+            {copy.site.name}
+            <span className="ml-3 font-sans text-sm font-normal text-ink-secondary">
+              {copy.site.tagline}
+            </span>
+          </p>
           <p>{copy.footer.privacy}</p>
           <p>{copy.footer.source}</p>
         </div>
@@ -64,7 +71,9 @@ export function PageIntro({
 }) {
   return (
     <div className="max-w-2xl space-y-4">
-      <h1 className="text-3xl font-semibold tracking-tight">{title}</h1>
+      <h1 className="font-display text-4xl font-semibold tracking-tight">
+        {title}
+      </h1>
       <p className="text-lg text-ink-secondary">{lead}</p>
       {building ? <p className="text-sm text-ink-secondary">{building}</p> : null}
     </div>

@@ -20,23 +20,23 @@ export default function Home() {
     },
   ];
   return (
-    <div className="space-y-10">
-      <div className="max-w-2xl space-y-4">
-        <h1 className="text-3xl font-semibold tracking-tight">
+    <div className="space-y-14 py-6">
+      <div className="max-w-3xl space-y-5">
+        <h1 className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
           {en.site.tagline}
         </h1>
-        <p className="text-lg text-ink-secondary">{en.home.lead}</p>
+        <p className="max-w-2xl text-lg text-ink-secondary">{en.home.lead}</p>
       </div>
       <dl className="grid gap-6 sm:grid-cols-3">
         {numbers.map((item) => (
           <div
             key={item.label}
-            className="rounded-lg border border-border-soft bg-surface-raised p-5"
+            className="border-t-2 border-accent bg-surface-raised p-5"
           >
-            <dt className="text-sm text-ink-secondary">{item.label}</dt>
-            <dd className="mt-1 text-3xl font-semibold tabular-nums">
+            <dd className="font-display text-4xl font-semibold tabular-nums">
               {item.value}
             </dd>
+            <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
           </div>
         ))}
       </dl>

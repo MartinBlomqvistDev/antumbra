@@ -29,7 +29,7 @@ export function CountryTable({
           {labels.caption}
         </caption>
         <thead>
-          <tr className="border-b border-border-soft text-left">
+          <tr className="border-b-2 border-ink text-left text-xs uppercase tracking-wide text-ink-secondary">
             <th scope="col" className="py-2 pr-4 font-semibold">
               {labels.country}
             </th>

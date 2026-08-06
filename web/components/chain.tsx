@@ -18,7 +18,7 @@ export function ChainAudit({
   return (
     <section className="space-y-4">
       <div>
-        <h2 className="text-xl font-semibold tracking-tight">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
           {audit.ref}
           {audit.year !== null ? (
             <span className="ml-2 font-normal text-ink-secondary">

@@ -43,7 +43,7 @@ export default async function Country({
             {en.chain.backToTable}
           </Link>
         </p>
-        <h1 className="text-3xl font-semibold tracking-tight">
+        <h1 className="font-display text-4xl font-semibold tracking-tight">
           {underlag.country}
         </h1>
         <p className="text-ink-secondary">
