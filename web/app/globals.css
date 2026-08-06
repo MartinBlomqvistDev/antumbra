@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/*
+ * The validated palette: #2A78D6 and #EB6834 with dark-mode variants. The
+ * dark steps are provisional until the chart work runs the palette
+ * validator against both surfaces; tokens are the only place they live.
+ * A manual theme toggle is added with the chart work; until then the site
+ * follows the system preference.
+ */
+:root {
+  --surface: #fdfdfc;
+  --surface-raised: #f4f4f2;
+  --ink: #1b1b1a;
+  --ink-secondary: #565654;
+  --border: #e4e4e1;
+  --accent: #2a78d6;
+  --accent-warm: #eb6834;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #131314;
+    --surface-raised: #1d1d1f;
+    --ink: #ececea;
+    --ink-secondary: #a5a5a1;
+    --border: #2d2d30;
+    --accent: #6ea8e8;
+    --accent-warm: #f0895f;
+  }
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-border-soft: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-warm: var(--accent-warm);
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+@media print {
+  header nav,
+  footer {
+    display: none;
+  }
+}
