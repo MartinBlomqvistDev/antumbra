@@ -6,9 +6,9 @@ export const sv: Copy = {
     name: "Antumbra",
     tagline: "Från siffra till källa på två klick.",
     description:
-      "Mätning av hur offentlig kontroll granskas: EU:s revisioner av " +
-      "medlemsstaternas kontrollsystem, med varje tal klickbart ned till " +
-      "den exakta meningen i källdokumentet.",
+      "Att göra tillsynen mätbar: EU:s revisioner av medlemsstaternas " +
+      "kontrollsystem, där varje tal kan klickas ned till den exakta " +
+      "meningen i källdokumentet.",
     navLabel: "Huvudnavigering",
   },
   nav: [

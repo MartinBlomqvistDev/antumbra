@@ -6,15 +6,15 @@ export const en: Copy = {
     name: "Antumbra",
     tagline: "From figure to source in two clicks.",
     description:
-      "Measuring how official controls are audited: the EU's audits of " +
-      "member state control systems, with every figure clickable down to " +
-      "the exact sentence in the source document.",
+      "Making supervision measurable: the EU's audits of member state " +
+      "control systems, where every figure can be clicked down to the " +
+      "exact sentence in the source document.",
     navLabel: "Main navigation",
   },
   nav: [
     { href: "/en/", label: "Home" },
     { href: "/en/jamforelse/", label: "Comparison" },
-    { href: "/en/uppslag/", label: "Look up" },
+    { href: "/en/uppslag/", label: "Reference" },
     { href: "/en/metod/", label: "Method" },
   ],
   languageSwitch: { href: "/", label: "Svenska" },
@@ -74,7 +74,7 @@ export const en: Copy = {
     backToTable: "Back to the comparison",
   },
   uppslag: {
-    title: "Look up",
+    title: "Reference",
     lead:
       "Search 81,292 paragraphs from DG SANTE's audit reports. Answers " +
       "are always verbatim quotations with country, reference and " +
