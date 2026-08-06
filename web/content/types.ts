@@ -27,7 +27,28 @@ export type Copy = {
       citationsResolved: string;
     };
   };
-  jamforelse: PageCopy;
+  jamforelse: PageCopy & {
+    table: {
+      caption: string;
+      country: string;
+      audits: string;
+      recommendations: string;
+      shareBasis: string;
+      shareAnswered: string;
+    };
+    notShown: { title: string; body: string };
+  };
+  chain: {
+    sourceDocument: string;
+    checksum: string;
+    recommendationLabel: string;
+    recommendationsCount: string;
+    legalBasis: string;
+    citesHeading: string;
+    unresolved: string;
+    responseHeading: string;
+    backToTable: string;
+  };
   uppslag: PageCopy & { banner: string };
   metod: PageCopy;
   handlingar?: PageCopy;

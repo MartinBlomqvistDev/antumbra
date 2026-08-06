@@ -42,6 +42,38 @@ export const sv: Copy = {
       "EU:s revisioner av medlemsstaternas kontrollsystem, land för land " +
       "och år för år. Varje diagram har en tabellvy och ett underlag ned " +
       "till stycket.",
+    table: {
+      caption:
+        "Rekommendationer i DG SANTE:s revisioner per land, hela " +
+        "perioden. Klicka på ett land för underlaget ned till stycket.",
+      country: "Land",
+      audits: "Revisioner",
+      recommendations: "Rekommendationer",
+      shareBasis: "Anger sin grund",
+      shareAnswered: "Besvarade",
+    },
+    notShown: {
+      title: "Vad sidan inte visar",
+      body:
+        "Tabellen omfattar EU-länderna, vars rapporter är hämtade i " +
+        "fulltext; övriga länders revisioner finns i registret men är " +
+        "inte styckeindexerade här. Andelar visas alltid tillsammans med " +
+        "sina antal: en andel över fyra rekommendationer är inte samma " +
+        "sak som en andel över fyrahundra.",
+    },
+  },
+  chain: {
+    sourceDocument: "Källdokument",
+    checksum: "sha256",
+    recommendationLabel: "Rekommendation",
+    recommendationsCount: "rekommendationer",
+    legalBasis: "Rättslig grund",
+    citesHeading: "Rekommendationen anger som grund",
+    unresolved:
+      "Citeringen kunde inte upplösas till ett numrerat stycke i " +
+      "rapporten.",
+    responseHeading: "Medlemsstatens svar",
+    backToTable: "Till jämförelsen",
   },
   uppslag: {
     title: "Uppslag",
