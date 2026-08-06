@@ -1,0 +1,15 @@
+{
+  "audits": 4690,
+  "countries": 165,
+  "paragraphs": 81292,
+  "years": {
+    "min": 1998,
+    "max": 2026
+  },
+  "recommendations": 11999,
+  "chain_closes": 1357,
+  "citations": 7821,
+  "citations_resolved": 7484,
+  "share_citations_resolved": 0.9569,
+  "commitments": 5710
+}
