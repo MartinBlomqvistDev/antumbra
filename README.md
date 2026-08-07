@@ -4,151 +4,200 @@
 [![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
 
-*Att göra tillsynen mätbar.*
+*Making supervision measurable.*
 
-Antumbra är halvskuggans yttre zon: platsen man ställer sig på när något skymmer
-ljuskällan, tillräckligt långt bort för att se en ring runt kanten av det som
-blockerar. Det är projektets metod. Den raka blicken är skymd, så mätningen sker
-runt kanten.
+The antumbra is the outer zone of a half-shadow: the place you stand when
+something blocks the light source, far enough back to see a ring around the
+edge of what is in the way. That is the project's method. The direct view is
+obstructed, so the measurement happens around the edge.
 
-## Frågan
+## The question
 
-Svenska staten ställer detaljerade krav på stora djurhållande anläggningar och
-publicerar kraven fritt. Utfallet av sina egna kontroller lämnar den ut maskat,
-olika mycket beroende på vilken länsstyrelse och vilken handläggare som svarar.
+The Swedish state imposes detailed conditions on large livestock
+installations and publishes those conditions freely. The outcome of its own
+inspections it discloses in redacted form, to varying degrees depending on
+which county administrative board and which case officer answers.
 
-Jordbruksverket redovisar samtidigt att andelen kontroller med konstaterade
-brister skiljer sig med **51 procentenheter** mellan den länsstyrelse som ligger
-lägst och den som ligger högst, och skriver i sin egen rapport att skillnaden
-"inte går att utläsa av statistiken".
+The responsible agency reports, at the same time, a spread of **51
+percentage points** between the county with the lowest and the county with
+the highest share of inspections finding deficiencies, and writes in its
+own report that the difference cannot be read out of the statistics.
 
-Ingen har mätt gapet, och ingen har prövat någon förklaring till det.
+Nobody has measured the gap, and nobody has tested an explanation for it.
 
-## Tre lager
+## Three layers
 
-**Kravlagret.** 237 miljötillståndsbeslut för stora gris- och
-fjäderfäanläggningar, 2013 till 2026, publicerade av Jordbruksverket. Uppskattat
-3 000 enskilda villkor, strukturerade till ett dataset. Hela populationen, inte
-ett urval.
+**The conditions layer.** 237 environmental permit decisions for large pig
+and poultry installations, 2013 to 2026, published by the Swedish Board of
+Agriculture. An estimated 3,000 individual conditions, structured into a
+dataset. The whole population, not a sample.
 
-**Öppenhetslagret.** Tre likalydande begäranden om allmän handling, avsända
-samma morgon. A avser fristående kontrollrapporter, där kammarrättspraxis har
-godtagit maskning. B avser beslut om föreläggande med bilagor, där sekretessen
-enligt bilagepunkt 30 till 9 § OSF inte gäller beslut. Kontrasten mellan A och B
-är mätvärdet. C är en registerfråga till Jordbruksverket om fördelningen anmälda
-mot oanmälda kontroller, vilken aldrig publicerats.
+**The openness layer.** Three identically worded freedom-of-information
+requests, sent the same morning to all 21 county administrative boards and
+handled under a protocol written in advance: the same narrowing when a fee
+is raised, the same request for an appealable decision, the same deadlines.
+A concerns free-standing inspection reports, where appellate case law has
+accepted redaction. B concerns injunction decisions with annexes, where the
+secrecy provision does not apply to decisions. The contrast between A and B
+is the measurement. C is a register question to the Board of Agriculture
+about the split between announced and unannounced inspections, which has
+never been published. Every event is logged with a verified timestamp in
+`data/protokoll_logg.jsonl`, and every received file is recorded with its
+sha256 in an append-only manifest; the documents themselves contain
+personal data and are never committed.
 
-**Jämförelselagret.** 4 690 revisionsrapporter från kommissionens direktorat för
-hälsa och livsmedelsrevision, 1998 till 2027, 165 länder. Samma revisor, samma
-rättsliga grund, samma rapportmall för alla medlemsstater, alltså jämförbara till
-sin konstruktion. Sverige har 98 rapporter, varav 8 om djurskydd.
+**The comparison layer.** 4,690 audit reports from the European
+Commission's directorate for health and food audits, 1998 to 2026, 165
+countries. The same auditor, the same legal basis, the same report template
+for every member state, so comparable by construction. Parsed into 11,999
+recommendations with a citation graph resolved to the verbatim paragraph in
+95.7 percent of edges, a dimensional model tested in dbt on BigQuery, and
+an 81,292-paragraph corpus with a retrieval layer that can answer only in
+verbatim quotations. Sweden has 98 reports, 8 of them on animal welfare.
 
-## Metod
+## From figure to source
 
-- **Subjektet är staten, inte djuren och inte djurhållaren.** Ingen värderande
-  mening om djurhållning skrivs i projektet.
-- **Karaktärisera aldrig, citera alltid.** Myndighetens egna ord, ordagrant.
-- **Baseline först.** Den triviala förklaringen körs innan den intressanta.
-- **Förregistrering.** Hypoteser och analysplan tidsstämplas i repot innan data
-  samlas in.
-- **Nollresultat publiceras överst.** Håller inte hypotesen är det resultatet.
-- **Jämför villkor bara inom Sverige**, där systemet är ett. Jämför kontrollregim
-  mellan länder via DG SANTE, som är byggd för att jämföras.
-- **Inga personuppgifter publiceras.** Aggregerat på län och juridisk person.
+Every number the project publishes carries its chain: aggregate to rows,
+rows to verbatim paragraphs, paragraphs to documents with checksums. The
+website under `web/` renders that chain as the interface, the retrieval
+service in `src/webapi.py` enforces it over HTTP, and the export step
+refuses to write anything the cloud model and a local recomputation do not
+agree on.
 
-## Vad mätningen inte kan visa
+## Method
 
-Redovisas här och inte i en fotnot, eftersom det avgör hur resultaten får läsas.
+- **The subject is the state, not the animals and not the keeper.** The
+  project contains no evaluative sentence about animal husbandry.
+- **Never characterise, always quote.** The authority's own words, verbatim.
+- **Baseline first.** The trivial explanation runs before the interesting
+  one.
+- **Pre-registration.** Hypotheses and the analysis plan are timestamped in
+  the repository before data collection.
+- **Null results are published on top.** If the hypothesis fails, that is
+  the result.
+- **Compare conditions only within Sweden**, where the system is one.
+  Compare control regimes between countries through DG SANTE, which is
+  built to be compared.
+- **No personal data is published.** Aggregated by county and legal person.
+- **AI assistance is declared, dated, in ADR-0014.** A language model is an
+  instrument here, never a cited source; every published figure traces to a
+  source document.
 
-**Kravlagret är inte nationellt.** Fem av tolv prövningsgrupper bär 208 av de
-237 besluten. Tre grupper har noll. Slutsatser om villkor gäller gris- och
-fjäderfäbältet, inte riket.
+## What the measurement cannot show
 
-**Ungefär halva kravkorpusen saknar textlager** och kräver OCR. Felfrekvensen
-mäts mot de dokument som har textlager och redovisas; den antas inte.
+Stated here rather than in a footnote, because it governs how the results
+may be read.
 
-**Giltighetsdatum är delvis proxy.** Ett tillstånd ersätts först när det nya tas
-i anspråk, och det datumet finns hos tillsynsmyndigheten, inte i besluten.
-Beslutsdatum används som proxy, felet går alltid åt samma håll, och varje rad
-bär sin egen datumkälla.
+**The conditions layer is not national.** Five of twelve permit divisions
+carry 208 of the 237 decisions. Three have zero. Conclusions about
+conditions hold for the pig and poultry belt, not the country.
 
-**Rättsläget om maskning är oavgjort.** Kammarrätterna har dömt åt olika håll
-och Högsta förvaltningsdomstolen har inte prövat frågan. Skillnader mellan
-myndigheter är därför inte i sig bevis på felaktig rättstillämpning.
+**About half the conditions corpus lacks a text layer** and requires OCR.
+The error rate is measured against the documents that have a text layer and
+reported; it is not assumed.
 
-**Observationella data kan inte skilja alla förklaringar.** Riskbaserat urval,
-djurslagsmix, kontrolltypsmix och registreringspraxis kan var för sig ge samma
-mönster som den prövade hypotesen. De redovisas som olöst konfundering.
+**Validity dates are partly proxies.** A permit is replaced only when the
+new one is taken into use, and that date sits with the supervisory
+authority, not in the decisions. Decision dates are used as proxies, the
+error always points the same way, and every row carries its own date
+source.
 
-**Tillsynsanläggningar under tröskeln ingår inte i kravlagret.** IED-gränsen går
-vid 40 000 fjäderfän, 2 000 slaktsvin eller 750 suggor, och mindre anläggningar
-har inga publicerade tillstånd att jämföra med.
+**The law on redaction is unsettled.** The appellate courts have ruled in
+different directions and the Supreme Administrative Court has not decided
+the question. Differences between authorities are therefore not in
+themselves evidence of misapplied law.
 
-## Reproducera
+**Observational data cannot separate all explanations.** Risk-based
+selection, species mix, inspection-type mix and registration practice can
+each produce the same pattern as the tested hypothesis. They are reported
+as unresolved confounding.
 
-Kräver Python 3.12. Skörden av DG SANTE använder enbart standardbiblioteket;
-`pydantic` behövs för datakontrakten.
+**Installations below the threshold are not in the conditions layer.** The
+IED boundary sits at 40,000 poultry, 2,000 fattening pigs or 750 sows, and
+smaller installations have no published permits to compare against.
+
+## Reproduce
+
+Requires Python 3.12. The DG SANTE harvest uses only the standard library;
+`pydantic` carries the data contracts.
 
 ```bash
 pip install -e ".[dev]"
-python pipeline/01_harvest_index.py        # en sökning per år, 1998 till 2027
-python pipeline/02_harvest_details.py      # en detaljsida per revision
-python pipeline/03_download_reports.py     # EU-27, engelska rapporter och bilagor
-python pipeline/04_build_manifest.py       # sha256 och källänk per fil
-python pipeline/05_classify_annexes.py     # bilagorna klassade på egna ord
-python pipeline/06_ocr_annexes.py          # OCR på det som är skannat
-python pipeline/07_parse_recommendations.py  # rekommendationer och citatgrafens kanter
-python pipeline/08_parse_paragraphs.py     # de citerade styckena, grafens noder
-python pipeline/09_link_action_plans.py    # åtagandena kopplade till rekommendationerna
-python pipeline/10_build_warehouse.py      # stjärnschemat i Parquet
+python pipeline/01_harvest_index.py        # one search per year, 1998 to 2027
+python pipeline/02_harvest_details.py      # one detail page per audit
+python pipeline/03_download_reports.py     # EU-27, English reports and annexes
+python pipeline/04_build_manifest.py       # sha256 and source link per file
+python pipeline/05_classify_annexes.py     # annexes classed on their own words
+python pipeline/06_ocr_annexes.py          # OCR where scanned
+python pipeline/07_parse_recommendations.py  # recommendations and citation edges
+python pipeline/08_parse_paragraphs.py     # the cited paragraphs, graph nodes
+python pipeline/09_link_action_plans.py    # member state commitments linked back
+python pipeline/10_build_warehouse.py      # the star schema in Parquet
 python pipeline/11_build_dashboard.py      # docs/dashboard.html
-python pipeline/12_load_bigquery.py --dry-run  # visar vad som skulle laddas
-python pipeline/13_hash_deliveries.py      # sha256 över mottagna svenska handlingar
-python pipeline/14_embed_paragraphs.py     # lokala embeddingar för retrieval
+python pipeline/12_load_bigquery.py --dry-run  # shows what would be loaded
+python pipeline/13_hash_deliveries.py      # sha256 over received Swedish documents
+python pipeline/14_embed_paragraphs.py     # local embeddings for retrieval
+python pipeline/15_export_web_data.py      # the site's data, verified twice
+python pipeline/16_bake_examples.py        # example answers via the live code path
 ```
 
-Stegen skriver till `data/`. De som tar tid är återupptagbara och hoppar över
-det som redan hämtats, så en avbruten körning startas om utan att arbetet görs
-på nytt. Steg 03 laddar ned 2,2 GB till `pdf/`, som aldrig committas. Steg 06
-kräver Tesseract som binär plus `pip install -e ".[ocr]"`, och steg 10 kräver
-`pip install -e ".[warehouse]"`.
+The steps write to `data/`. The slow ones are resumable and skip what is
+already fetched. Step 03 downloads 2.2 GB to `pdf/`, which is never
+committed. Step 06 needs the Tesseract binary plus `pip install -e
+".[ocr]"`, step 10 needs `".[warehouse]"`, steps 14 to 16 need
+`".[retrieval]"`, and the HTTP service needs `".[api]"`. The website is a
+static Next.js export:
 
-Kvalitetskontroll:
+```bash
+cd web && npm ci && npm run build
+```
+
+Quality gates, the same three CI runs on every push:
 
 ```bash
 ruff check . && ruff format --check .
 pytest
 ```
 
-Testsviten bär tre garantier utöver vanliga enhetstester: den genererade
-schemamodulen måste stämma med sitt designdokument, siffrorna i dokumentationen
-måste hålla mot datafilerna, och inga personuppgifter får finnas i repot. Samma
-kontroller körs i CI vid varje push, tillsammans med en kontroll av att
-källorna uppströms fortfarande svarar.
+The 152 tests carry guarantees beyond ordinary unit testing: the generated
+schema module must match its design document, the figures in the
+documentation must hold against the data files, no personal data may exist
+in the repository, the retrieval layer must refuse paraphrases, false
+citations and stale embeddings, and the web export must refuse to write
+numbers the cloud marts and a local recomputation disagree on.
 
-## Struktur
+## Structure
 
 ```
-docs/VERIFIERAT.md     kontrollerade fakta med datum och källa
-docs/BEGARANMALL.md    tre begäranmallar, rättslig motivering, protokoll
-docs/VILLKORSSCHEMA.md datakontrakt med motivering och verifieringskontroller
-docs/DGSANTE.md        jämförelselagrets korpus, struktur och volym
-docs/adr/              daterade beslut om avgränsningar och metod
-docs/POWERBI.md        byggbeskrivning för .pbix mot samma modell
-docs/dashboard.html    fristående dashboard över jämförelselagret
-dbt/                   staging och marts ovanpå stjärnschemat
-CONTRIBUTING.md        kodstandard, commit-konvention, vad som aldrig committas
-data/                  härledda dataset, ingen råtext och inga PDF:er
-src/                   datakontrakt (Pydantic v2)
-pipeline/              numrerade steg, körs i ordning
-tests/                 enhetstester och repo-invarianter
+docs/VERIFIERAT.md     verified facts with date and source
+docs/BEGARANMALL.md    the three request templates, legal grounds, protocol
+docs/VILLKORSSCHEMA.md data contract with rationale and checks
+docs/DGSANTE.md        the comparison corpus, structure and volume
+docs/WEBB.md           the website plan, in decision form
+docs/adr/              dated decisions on scope and method
+docs/POWERBI.md        build notes for the .pbix over the same model
+dbt/                   staging and marts on top of the star schema
+data/                  derived datasets and the public event log
+src/                   data contracts, retrieval, the HTTP service
+pipeline/              numbered steps, run in order
+web/                   the site: Swedish first, an English mirror
+tests/                 unit tests and repository invariants
+CONTRIBUTING.md        code standard and what is never committed
 ```
+
+Swedish project prose lives in `docs/`; code, comments and this file are in
+English.
 
 ## Status
 
-Under uppbyggnad. Ingen datainsamling påbörjad hos svenska myndigheter, inget
-publicerat resultat.
+As of 7 August 2026: the Swedish collection is running under the protocol
+(day 4: 43 requests sent, 14 of 21 county boards have delivered, 195 files
+verified, no fee paid), the comparison layer and the website are built, and
+no analytical result has been published. The repository stays private until
+the collection protocol closes.
 
-## Licens
+## License and citation
 
-AGPL-3.0.
+Code is AGPL-3.0 (see `LICENSE`). Derived datasets in `data/` are CC BY
+4.0. Received authority documents are not redistributed at all. To cite the
+project, see `CITATION.cff`.
