@@ -49,6 +49,21 @@ export const en: Copy = {
       recommendations: "recommendations",
       citationsResolved: "of citations resolved to their paragraph",
     },
+    chain: {
+      heading: "The chain, in one example",
+      intro:
+        "The same path sits behind every figure on this site: from the " +
+        "aggregate, through the rows, to the verbatim paragraph and the " +
+        "document's checksum.",
+      steps: {
+        figure: "The figure",
+        rows: "The rows behind it",
+        paragraph: "The paragraph, verbatim",
+        document: "The source document",
+      },
+      figureLead: "recommendations to Sweden in the EU's audits",
+      toCountry: "The full underlying record for Sweden",
+    },
   },
   sverige: {
     title: "Sweden",

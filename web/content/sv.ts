@@ -113,6 +113,21 @@ export const sv: Copy = {
       recommendations: "rekommendationer",
       citationsResolved: "av citeringarna upplösta till sitt stycke",
     },
+    chain: {
+      heading: "Kedjan i ett exempel",
+      intro:
+        "Samma väg finns bakom varje tal på sajten: från aggregatet, via " +
+        "raderna, till det ordagranna stycket och dokumentets " +
+        "kontrollsumma.",
+      steps: {
+        figure: "Siffran",
+        rows: "Raderna bakom den",
+        paragraph: "Stycket, ordagrant",
+        document: "Källdokumentet",
+      },
+      figureLead: "rekommendationer till Sverige i EU:s revisioner",
+      toCountry: "Hela underlaget för Sverige",
+    },
   },
   sverige: {
     title: "Sverige",

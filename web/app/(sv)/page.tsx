@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChainExample } from "@/components/chain-example";
 import { sv } from "@/content/sv";
 import { readHeadline } from "@/lib/data";
 import { swedenStats } from "@/lib/stats";
@@ -81,6 +82,7 @@ export default function Home() {
           ))}
         </dl>
       </section>
+      <ChainExample copy={sv} locale="sv-SE" hrefBase="/jamforelse/" />
     </div>
   );
 }

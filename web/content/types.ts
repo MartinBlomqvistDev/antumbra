@@ -36,6 +36,18 @@ export type Copy = {
       recommendations: string;
       citationsResolved: string;
     };
+    chain: {
+      heading: string;
+      intro: string;
+      steps: {
+        figure: string;
+        rows: string;
+        paragraph: string;
+        document: string;
+      };
+      figureLead: string;
+      toCountry: string;
+    };
   };
   sverige?: PageCopy & {
     design: { heading: string; body: string };
