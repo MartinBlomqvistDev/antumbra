@@ -44,8 +44,9 @@ export function readDeliveryManifest(): ManifestRow[] {
 /** The decision records under docs/adr, id and title from the heading. */
 export function readAdrIndex(): { id: string; title: string }[] {
   const adrDir = join(process.cwd(), "..", "docs", "adr");
+  // Only the numbered records; the directory also holds its own README.
   return readdirSync(adrDir)
-    .filter((name) => name.endsWith(".md"))
+    .filter((name) => /^\d{4}-.*\.md$/.test(name))
     .sort()
     .map((name) => {
       const firstLine = readFileSync(join(adrDir, name), "utf-8")
