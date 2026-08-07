@@ -22,6 +22,9 @@ export default function Home() {
   return (
     <div className="space-y-14 py-6">
       <div className="max-w-3xl space-y-5">
+        <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+          {en.home.kicker}
+        </p>
         <h1 className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
           {en.site.tagline}
         </h1>

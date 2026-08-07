@@ -21,6 +21,7 @@ export type Copy = {
   footer: { privacy: string; source: string };
   home: {
     title: string;
+    kicker: string;
     lead: string;
     numberLabels: {
       audits: string;

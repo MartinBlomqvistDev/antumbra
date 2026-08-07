@@ -27,12 +27,15 @@ export const sv: Copy = {
   },
   home: {
     title: "Antumbra",
+    kicker:
+      "EU:s revisioner av medlemsstaternas offentliga kontroll i " +
+      "livsmedelskedjan, 1998–2026",
     lead:
       "Varje tal på den här sidan kan klickas ned till den exakta meningen " +
       "i källdokumentet: aggregat till rader, rader till ordagranna " +
       "stycken, stycken till dokument med kontrollsumma.",
     numberLabels: {
-      audits: "revisioner 1998–2026",
+      audits: "revisioner",
       recommendations: "rekommendationer",
       citationsResolved: "av citeringarna upplösta till sitt stycke",
     },

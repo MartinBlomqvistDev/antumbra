@@ -25,12 +25,15 @@ export const en: Copy = {
   },
   home: {
     title: "Antumbra",
+    kicker:
+      "The EU's audits of member state official controls across the " +
+      "food chain, 1998–2026",
     lead:
       "Every figure on this site can be clicked down to the exact " +
       "sentence in the source document: aggregates to rows, rows to " +
       "verbatim paragraphs, paragraphs to documents with checksums.",
     numberLabels: {
-      audits: "audits 1998–2026",
+      audits: "audits",
       recommendations: "recommendations",
       citationsResolved: "of citations resolved to their paragraph",
     },
