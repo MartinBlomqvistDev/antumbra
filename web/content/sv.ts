@@ -1,6 +1,6 @@
 import type { Copy } from "./types";
 
-const wordingItems = [
+export const wordingItems = [
   {
     label: "Begäran A: kontrollrapporter",
     text:

@@ -1,4 +1,5 @@
 import type { Copy } from "./types";
+import { wordingItems } from "./sv";
 
 export const en: Copy = {
   locale: "en",
@@ -14,6 +15,7 @@ export const en: Copy = {
   },
   nav: [
     { href: "/en/", label: "Home" },
+    { href: "/en/sverige/", label: "Sweden" },
     { href: "/en/jamforelse/", label: "EU comparison" },
     { href: "/en/uppslag/", label: "Reference" },
     { href: "/en/metod/", label: "Method" },
@@ -33,12 +35,77 @@ export const en: Copy = {
       "protocol: the differences in the answers are the measurement. " +
       "The baseline is the EU's audits of member state controls, where " +
       "every figure can be clicked down to the exact sentence in the " +
-      "source document. The Swedish collection pages are in Swedish.",
+      "source document.",
+    swedenHeading: "Sweden, collection in progress",
+    euHeading: "The EU comparison, 1998–2026",
+    swedenLabels: {
+      sent: "requests sent on 3 August 2026",
+      files: "files received, verified with sha256",
+      paid: "fees paid",
+      paidValue: "0 kr",
+    },
     numberLabels: {
       audits: "audits",
       recommendations: "recommendations",
       citationsResolved: "of citations resolved to their paragraph",
     },
+  },
+  sverige: {
+    title: "Sweden",
+    lead:
+      "Is animal welfare supervised equivalently across the country, " +
+      "and can the supervision be examined from outside? The " +
+      "investigation measures this with the county administrative " +
+      "boards' own answers.",
+    design: {
+      heading: "How the measurement is built",
+      body:
+        "Two requests went to all 21 county administrative boards with " +
+        "identical wording: A concerns the most recent inspection " +
+        "reports, B the most recent injunction decisions. A third " +
+        "request, C, concerns statistics from the Swedish Board of " +
+        "Agriculture's animal welfare inspection register. Every answer " +
+        "is handled under a protocol written in advance: the same " +
+        "narrowing when a fee is raised, the same request for a formal " +
+        "decision, the same deadlines. When the questions are identical " +
+        "and the handling predetermined, differences in outcome reflect " +
+        "the authorities, not the questions.",
+    },
+    processNote:
+      "The collection is ongoing. What is shown here is the process in " +
+      "real time, drawn from the event log; the results and the " +
+      "county-by-county comparison are published once the collection " +
+      "has closed.",
+    overview: {
+      heading: "The state of play in numbers",
+      sent: "requests sent",
+      files: "files received, verified with sha256",
+      deliveringAuthorities: "authorities have delivered documents",
+      feeNotices: "authorities raised a fee",
+      feeStopped: "requests fee-stopped",
+      paid: "fees paid",
+      paidValue: "0 kr",
+    },
+    wordings: {
+      heading: "The exact wording of the requests",
+      note:
+        "The requests were made in Swedish and are reproduced verbatim " +
+        "below. The same text went to all 21 county administrative " +
+        "boards on 3 August 2026, one request per e-mail; request C " +
+        "went to the Swedish Board of Agriculture the same day.",
+      items: wordingItems,
+    },
+    feeStopped: {
+      heading: "Fee-stopped requests",
+      note:
+        "Requests where a fee remained after the protocol's narrowing. " +
+        "Copies are then declined, a written decision on the fee is " +
+        "requested, and the outcome is documented. No fee has been " +
+        "paid.",
+    },
+    toHandlingar:
+      "Every received file is listed with its checksum on the Swedish " +
+      "page Handlingar.",
   },
   jamforelse: {
     title: "The EU comparison",
