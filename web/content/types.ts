@@ -23,11 +23,40 @@ export type Copy = {
     title: string;
     kicker: string;
     lead: string;
+    swedenHeading?: string;
+    euHeading?: string;
+    swedenLabels?: {
+      sent: string;
+      files: string;
+      paid: string;
+      paidValue: string;
+    };
     numberLabels: {
       audits: string;
       recommendations: string;
       citationsResolved: string;
     };
+  };
+  sverige?: PageCopy & {
+    design: { heading: string; body: string };
+    processNote: string;
+    overview: {
+      heading: string;
+      sent: string;
+      files: string;
+      deliveringAuthorities: string;
+      feeNotices: string;
+      feeStopped: string;
+      paid: string;
+      paidValue: string;
+    };
+    wordings: {
+      heading: string;
+      note: string;
+      items: { label: string; text: string }[];
+    };
+    feeStopped: { heading: string; note: string };
+    toHandlingar: string;
   };
   jamforelse: PageCopy & {
     table: {
@@ -95,22 +124,6 @@ export type Copy = {
     };
   };
   handlingar?: PageCopy & {
-    overview: {
-      heading: string;
-      sent: string;
-      files: string;
-      deliveringAuthorities: string;
-      feeNotices: string;
-      feeStopped: string;
-      paid: string;
-      paidValue: string;
-    };
-    wordings: {
-      heading: string;
-      note: string;
-      items: { label: string; text: string }[];
-    };
-    feeStopped: { heading: string; note: string };
     deliveries: {
       heading: string;
       note: string;

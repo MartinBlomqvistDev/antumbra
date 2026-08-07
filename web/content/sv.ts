@@ -1,19 +1,85 @@
 import type { Copy } from "./types";
 
+const wordingItems = [
+  {
+    label: "Begäran A: kontrollrapporter",
+    text:
+      "Jag begär kopior av kontrollrapporter från " +
+      "djurskyddskontroller av anläggningar som håller nötkreatur, " +
+      "grisar eller fjäderfä.\n\nBegäran avser de 20 senast " +
+      "genomförda kontrollerna, räknat efter kontrolldatum, under " +
+      "perioden 1 januari 2024 till och med 31 december 2025. Har " +
+      "färre än 20 sådana kontroller genomförts under perioden " +
+      "avser begäran samtliga. Med kontrollrapport avser jag den " +
+      "rapport som upprättas efter genomförd kontroll enligt " +
+      "djurskyddslagen (2018:1192). Begäran omfattar även bilagor " +
+      "till rapporterna, till exempel fotobilagor.\n\nJag önskar " +
+      "handlingarna i elektronisk form, som PDF, till denna " +
+      "e-postadress. Om en uppgift i en handling inte kan lämnas " +
+      "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
+      "tas ut önskar jag besked om beloppet innan handlingarna " +
+      "skickas.",
+  },
+  {
+    label: "Begäran B: beslut om föreläggande",
+    text:
+      "Jag begär kopior av beslut om föreläggande i " +
+      "djurskyddsärenden som gäller hållning av nötkreatur, grisar " +
+      "eller fjäderfä. Med föreläggande avser jag beslut enligt 8 " +
+      "kap. 9 § djurskyddslagen (2018:1192) eller enligt de " +
+      "EU-bestämmelser som lagen kompletterar.\n\nBegäran avser de " +
+      "10 senast meddelade besluten, räknat efter beslutsdatum, " +
+      "under perioden 1 januari 2022 till och med 31 december " +
+      "2025. Har färre än 10 sådana beslut meddelats under " +
+      "perioden avser begäran samtliga. Begäran omfattar även " +
+      "bilagor till besluten, till exempel kontrollrapporter och " +
+      "fotobilagor. Beslut om omhändertagande av djur och beslut " +
+      "om djurförbud ingår inte i begäran.\n\nJag önskar " +
+      "handlingarna i elektronisk form, som PDF, till denna " +
+      "e-postadress. Om en uppgift i en handling inte kan lämnas " +
+      "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
+      "tas ut önskar jag besked om beloppet innan handlingarna " +
+      "skickas.",
+  },
+  {
+    label: "Begäran C: statistikuppgifter, Jordbruksverket",
+    text:
+      "Jag begär en sammanställning av uppgifter ur " +
+      "djurskyddskontrollregistret om djurskyddskontroller av " +
+      "nötkreatur, grisar och fjäderfä under åren 2024 och " +
+      "2025.\n\nJag önskar antal genomförda fysiska kontroller " +
+      "per länsstyrelse, år och djurslag, fördelat på\n\n1. " +
+      "oanmälda respektive föranmälda kontroller,\n2. " +
+      "kontrolltyp, till exempel rutinkontroll, kontroll efter " +
+      "anmälan och uppföljande kontroll,\n3. kontroller med minst " +
+      "en konstaterad brist respektive utan konstaterad " +
+      "brist.\n\nJag begär endast antalsuppgifter, inga uppgifter " +
+      "om enskilda kontrollobjekt. Kan någon del inte tas fram " +
+      "med rutinbetonade åtgärder önskar jag besked om vilken " +
+      "del, och de delar som kan tas fram.\n\nJag önskar " +
+      "sammanställningen i elektronisk form, till exempel som " +
+      "Excel eller CSV, till denna e-postadress.\n\nOm en avgift " +
+      "tas ut önskar jag besked om beloppet innan " +
+      "sammanställningen skickas.",
+  },
+];
+
 export const sv: Copy = {
   locale: "sv",
   site: {
     name: "Antumbra",
     tagline: "Från siffra till källa på två klick.",
     description:
-      "Att göra tillsynen mätbar: EU:s revisioner av medlemsstaternas " +
-      "kontrollsystem, där varje tal kan klickas ned till den exakta " +
+      "En mätning av den svenska djurskyddstillsynen, med EU:s " +
+      "revisioner av medlemsstaternas kontrollsystem som " +
+      "jämförelsegrund. Varje tal kan klickas ned till den exakta " +
       "meningen i källdokumentet.",
     navLabel: "Huvudnavigering",
   },
   nav: [
     { href: "/", label: "Hem" },
-    { href: "/jamforelse/", label: "Jämförelse" },
+    { href: "/sverige/", label: "Sverige" },
+    { href: "/jamforelse/", label: "EU-jämförelsen" },
     { href: "/uppslag/", label: "Uppslag" },
     { href: "/metod/", label: "Metod" },
     { href: "/handlingar/", label: "Handlingar" },
@@ -27,21 +93,81 @@ export const sv: Copy = {
   },
   home: {
     title: "Antumbra",
-    kicker:
-      "EU:s revisioner av medlemsstaternas offentliga kontroll i " +
-      "livsmedelskedjan, 1998–2026",
+    kicker: "En mätning av den svenska djurskyddstillsynen",
     lead:
-      "Varje tal på den här sidan kan klickas ned till den exakta meningen " +
-      "i källdokumentet: aggregat till rader, rader till ordagranna " +
-      "stycken, stycken till dokument med kontrollsumma.",
+      "Tre likalydande begäranden om allmänna handlingar till samtliga " +
+      "21 länsstyrelser, förda efter ett förskrivet protokoll: " +
+      "skillnaderna i svar är måttet. Som jämförelsegrund står EU:s " +
+      "revisioner av medlemsstaternas kontroll, där varje tal kan " +
+      "klickas ned till den exakta meningen i källdokumentet.",
+    swedenHeading: "Sverige, pågående insamling",
+    euHeading: "EU-jämförelsen, 1998–2026",
+    swedenLabels: {
+      sent: "begäranden avsända 3 augusti 2026",
+      files: "filer mottagna, verifierade med sha256",
+      paid: "betald avgift",
+      paidValue: "0 kr",
+    },
     numberLabels: {
       audits: "revisioner",
       recommendations: "rekommendationer",
       citationsResolved: "av citeringarna upplösta till sitt stycke",
     },
   },
+  sverige: {
+    title: "Sverige",
+    lead:
+      "Granskas djurskyddet likvärdigt över landet, och går tillsynen " +
+      "att granska utifrån? Undersökningen mäter det med länsstyrelsernas " +
+      "egna svar.",
+    design: {
+      heading: "Mätningens uppbyggnad",
+      body:
+        "Två begäranden gick till samtliga 21 länsstyrelser med samma " +
+        "lydelse: A avser de senaste kontrollrapporterna, B de senaste " +
+        "besluten om föreläggande. En tredje begäran, C, avser " +
+        "statistikuppgifter ur Jordbruksverkets " +
+        "djurskyddskontrollregister. Varje svar hanteras efter ett i " +
+        "förväg skrivet protokoll: samma avsmalning vid avgift, samma " +
+        "begäran om beslut, samma frist. När frågorna är identiska och " +
+        "hanteringen förutbestämd speglar skillnaderna i utfall " +
+        "myndigheterna, inte frågorna.",
+    },
+    processNote:
+      "Insamlingen pågår. Det som visas här är processen i realtid, " +
+      "hämtad ur händelseloggen; resultaten och jämförelsen mellan länen " +
+      "publiceras när insamlingen är stängd.",
+    overview: {
+      heading: "Läget i siffror",
+      sent: "begäranden avsända",
+      files: "filer mottagna, verifierade med sha256",
+      deliveringAuthorities: "myndigheter har levererat handlingar",
+      feeNotices: "myndigheter aviserade en avgift",
+      feeStopped: "begäranden avgiftsstoppade",
+      paid: "betald avgift",
+      paidValue: "0 kr",
+    },
+    wordings: {
+      heading: "Begärandenas exakta lydelse",
+      note:
+        "Samma text skickades till samtliga 21 länsstyrelser den 3 " +
+        "augusti 2026, en begäran per mejl. Begäran C gick till " +
+        "Jordbruksverket samma dag.",
+      items: wordingItems,
+    },
+    feeStopped: {
+      heading: "Avgiftsstoppade begäranden",
+      note:
+        "Begäranden där en avgift kvarstod efter protokollets " +
+        "avsmalning. Kopior avstås då, ett skriftligt beslut om avgiften " +
+        "begärs, och utfallet dokumenteras. Ingen avgift har betalats.",
+    },
+    toHandlingar:
+      "Varje mottagen fil är förtecknad med kontrollsumma på sidan " +
+      "Handlingar.",
+  },
   jamforelse: {
-    title: "Jämförelse",
+    title: "EU-jämförelsen",
     lead:
       "EU:s revisioner av medlemsstaternas kontrollsystem, land för land " +
       "och år för år. Varje diagram har en tabellvy och ett underlag ned " +
@@ -167,103 +293,14 @@ export const sv: Copy = {
     title: "Handlingar",
     lead:
       "Vad som begärts ut, vad som lämnats ut, vad som inte lämnats ut " +
-      "och varför.",
-    overview: {
-      heading: "Läget i siffror",
-      sent: "begäranden avsända",
-      files: "filer mottagna, verifierade med sha256",
-      deliveringAuthorities: "myndigheter har levererat handlingar",
-      feeNotices: "myndigheter aviserade en avgift",
-      feeStopped: "begäranden avgiftsstoppade",
-      paid: "betald avgift",
-      paidValue: "0 kr",
-    },
-    wordings: {
-      heading: "Begärandenas exakta lydelse",
-      note:
-        "Samma text skickades till samtliga 21 länsstyrelser den 3 " +
-        "augusti 2026, en begäran per mejl. Varje svar därefter har " +
-        "följt ett förskrivet protokoll, så att skillnaderna i utfall " +
-        "speglar myndigheterna och inte frågorna.",
-      items: [
-        {
-          label: "Begäran A: kontrollrapporter",
-          text:
-            "Jag begär kopior av kontrollrapporter från " +
-            "djurskyddskontroller av anläggningar som håller nötkreatur, " +
-            "grisar eller fjäderfä.\n\nBegäran avser de 20 senast " +
-            "genomförda kontrollerna, räknat efter kontrolldatum, under " +
-            "perioden 1 januari 2024 till och med 31 december 2025. Har " +
-            "färre än 20 sådana kontroller genomförts under perioden " +
-            "avser begäran samtliga. Med kontrollrapport avser jag den " +
-            "rapport som upprättas efter genomförd kontroll enligt " +
-            "djurskyddslagen (2018:1192). Begäran omfattar även bilagor " +
-            "till rapporterna, till exempel fotobilagor.\n\nJag önskar " +
-            "handlingarna i elektronisk form, som PDF, till denna " +
-            "e-postadress. Om en uppgift i en handling inte kan lämnas " +
-            "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
-            "tas ut önskar jag besked om beloppet innan handlingarna " +
-            "skickas.",
-        },
-        {
-          label: "Begäran B: beslut om föreläggande",
-          text:
-            "Jag begär kopior av beslut om föreläggande i " +
-            "djurskyddsärenden som gäller hållning av nötkreatur, grisar " +
-            "eller fjäderfä. Med föreläggande avser jag beslut enligt 8 " +
-            "kap. 9 § djurskyddslagen (2018:1192) eller enligt de " +
-            "EU-bestämmelser som lagen kompletterar.\n\nBegäran avser de " +
-            "10 senast meddelade besluten, räknat efter beslutsdatum, " +
-            "under perioden 1 januari 2022 till och med 31 december " +
-            "2025. Har färre än 10 sådana beslut meddelats under " +
-            "perioden avser begäran samtliga. Begäran omfattar även " +
-            "bilagor till besluten, till exempel kontrollrapporter och " +
-            "fotobilagor. Beslut om omhändertagande av djur och beslut " +
-            "om djurförbud ingår inte i begäran.\n\nJag önskar " +
-            "handlingarna i elektronisk form, som PDF, till denna " +
-            "e-postadress. Om en uppgift i en handling inte kan lämnas " +
-            "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
-            "tas ut önskar jag besked om beloppet innan handlingarna " +
-            "skickas.",
-        },
-        {
-          label: "Begäran C: statistikuppgifter, Jordbruksverket",
-          text:
-            "Jag begär en sammanställning av uppgifter ur " +
-            "djurskyddskontrollregistret om djurskyddskontroller av " +
-            "nötkreatur, grisar och fjäderfä under åren 2024 och " +
-            "2025.\n\nJag önskar antal genomförda fysiska kontroller " +
-            "per länsstyrelse, år och djurslag, fördelat på\n\n1. " +
-            "oanmälda respektive föranmälda kontroller,\n2. " +
-            "kontrolltyp, till exempel rutinkontroll, kontroll efter " +
-            "anmälan och uppföljande kontroll,\n3. kontroller med minst " +
-            "en konstaterad brist respektive utan konstaterad " +
-            "brist.\n\nJag begär endast antalsuppgifter, inga uppgifter " +
-            "om enskilda kontrollobjekt. Kan någon del inte tas fram " +
-            "med rutinbetonade åtgärder önskar jag besked om vilken " +
-            "del, och de delar som kan tas fram.\n\nJag önskar " +
-            "sammanställningen i elektronisk form, till exempel som " +
-            "Excel eller CSV, till denna e-postadress.\n\nOm en avgift " +
-            "tas ut önskar jag besked om beloppet innan " +
-            "sammanställningen skickas.",
-        },
-      ],
-    },
-    feeStopped: {
-      heading: "Avgiftsstoppade begäranden",
-      note:
-        "Begäranden där en avgift kvarstod efter protokollets " +
-        "avsmalning. Kopior avstås då, ett skriftligt beslut om avgiften " +
-        "begärs, och utfallet dokumenteras. Ingen avgift har betalats.",
-    },
+      "och varför. Dokumenten innehåller personuppgifter och publiceras " +
+      "inte; förteckningen gör leveranserna verifierbara utan dem.",
     deliveries: {
       heading: "Levererade handlingar",
       note:
         "Varje mottagen fil registreras med sin sha256-kontrollsumma i " +
         "ett manifest som är beständigt: en post kan läggas till men " +
-        "aldrig ändras. Dokumenten själva innehåller personuppgifter " +
-        "och publiceras inte; manifestet gör leveranserna verifierbara " +
-        "utan dem.",
+        "aldrig ändras.",
       filesWord: "filer",
       headers: { file: "Fil", bytes: "Byte", sha256: "sha256" },
     },

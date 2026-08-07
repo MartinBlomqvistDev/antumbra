@@ -20,9 +20,17 @@ belagd.
 
 ## Struktur
 
+Omdisponerad 2026-08-07: den svenska undersökningen är sajtens fokus och
+fick en egen sida näst först i menyn; EU-lagret heter uttryckligen
+EU-jämförelsen. Hem leder med den svenska mätningen och visar två
+sifferrader, Sverige först. Ingen svensk analys publiceras i förtid:
+/sverige visar mätningens uppbyggnad och processen i realtid ur loggen,
+resultaten kommer när insamlingen är stängd.
+
 | Sida | Innehåll |
 | --- | --- |
-| Hem | En mening om mätbarhet, tre levande tal, kedjeexemplet interaktivt: klicka talet, se raderna, klicka raden, se stycket markerat med referens och hash |
+| Hem | Svensk kicker, tesen, två sifferrader: den svenska insamlingen (levande ur loggen) och EU-lagret; kedjeexemplet interaktivt: klicka talet, se raderna, klicka raden, se stycket markerat med referens och hash |
+| /sverige | Undersökningens uppbyggnad (tre likalydande begäranden, protokollstyrd hantering), läget i siffror ur loggen, begärandenas exakta lydelser, avgiftsstoppen; länsjämförelsens resultat när insamlingen stängts |
 | /jamforelse | Hela BI-vyn: land/år/ämnes-matris, small multiples, citeringsgrafen som egen vy (96 % upplösta citeringar över 4 690 revisioner, uppföljningskedjor land för land); tabellvy, "visa underlaget" och "Vad sidan inte visar" vid varje diagram; länsdimensionen läggs ovanpå samma komponenter i fas 2 |
 | /uppslag | Retrieval som uppslagsverk, inte chatt: sökruta, land- och årsfilter, bakade exempelfrågor; svar är alltid ordagranna citat med land, referens och styckenummer, och länkar vidare till revisionens post; omgivande stycken på begäran, fortfarande ordagrant; stående banderoll om att sökningen hittar var ett ämne behandlas, aldrig vad som konstaterats |
 | /metod | Protokollet, händelseloggen renderad som filtrerbar tidslinje per län, ADR-indexet, AI-deklarationen, de förskrivna nollresultaten, korrigeringsloggen |

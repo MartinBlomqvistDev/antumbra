@@ -6,14 +6,15 @@ export const en: Copy = {
     name: "Antumbra",
     tagline: "From figure to source in two clicks.",
     description:
-      "Making supervision measurable: the EU's audits of member state " +
-      "control systems, where every figure can be clicked down to the " +
-      "exact sentence in the source document.",
+      "A measurement of Swedish animal welfare supervision, with the " +
+      "EU's audits of member state control systems as its baseline. " +
+      "Every figure can be clicked down to the exact sentence in the " +
+      "source document.",
     navLabel: "Main navigation",
   },
   nav: [
     { href: "/en/", label: "Home" },
-    { href: "/en/jamforelse/", label: "Comparison" },
+    { href: "/en/jamforelse/", label: "EU comparison" },
     { href: "/en/uppslag/", label: "Reference" },
     { href: "/en/metod/", label: "Method" },
   ],
@@ -25,13 +26,14 @@ export const en: Copy = {
   },
   home: {
     title: "Antumbra",
-    kicker:
-      "The EU's audits of member state official controls across the " +
-      "food chain, 1998–2026",
+    kicker: "A measurement of Swedish animal welfare supervision",
     lead:
-      "Every figure on this site can be clicked down to the exact " +
-      "sentence in the source document: aggregates to rows, rows to " +
-      "verbatim paragraphs, paragraphs to documents with checksums.",
+      "Three identically worded freedom-of-information requests to all " +
+      "21 county administrative boards, handled under a pre-written " +
+      "protocol: the differences in the answers are the measurement. " +
+      "The baseline is the EU's audits of member state controls, where " +
+      "every figure can be clicked down to the exact sentence in the " +
+      "source document. The Swedish collection pages are in Swedish.",
     numberLabels: {
       audits: "audits",
       recommendations: "recommendations",
@@ -39,7 +41,7 @@ export const en: Copy = {
     },
   },
   jamforelse: {
-    title: "Comparison",
+    title: "The EU comparison",
     lead:
       "The EU's audits of member state control systems, country by " +
       "country and year by year. Every chart has a table view and " +
