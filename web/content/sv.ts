@@ -128,11 +128,12 @@ export const sv: Copy = {
     ai: {
       heading: "AI-assistans",
       body:
-        "Insamling, loggföring och analys sker med AI-assistans under " +
-        "mänsklig verifiering; rollen är deklarerad i ADR-0014. En " +
-        "språkmodell är ett instrument som deklareras, aldrig en källa " +
-        "som citeras. Varje uppgift på sajten spåras till sitt " +
-        "källdokument, inte till ett modellsvar.",
+        "Insamling, loggföring och analys sker med AI-assistans. Varje " +
+        "brev, loggrad och publicerad siffra granskas av en människa " +
+        "innan den skickas eller committas, och rollen är dokumenterad " +
+        "med datum i ADR-0014. Ingen uppgift på sajten har en " +
+        "språkmodell som källa; allt spåras till källdokument med " +
+        "kontrollsumma.",
     },
     adr: {
       heading: "Beslutslogg (ADR)",
@@ -164,6 +165,87 @@ export const sv: Copy = {
     lead:
       "Vad som begärts ut, vad som lämnats ut, vad som inte lämnats ut " +
       "och varför.",
+    overview: {
+      heading: "Läget i siffror",
+      sent: "begäranden avsända",
+      files: "filer mottagna, verifierade med sha256",
+      deliveringAuthorities: "myndigheter har levererat handlingar",
+      feeNotices: "myndigheter aviserade en avgift",
+      feeStopped: "begäranden avgiftsstoppade",
+      paid: "betald avgift",
+      paidValue: "0 kr",
+    },
+    wordings: {
+      heading: "Begärandenas exakta lydelse",
+      note:
+        "Samma text skickades till samtliga 21 länsstyrelser den 3 " +
+        "augusti 2026, en begäran per mejl. Varje svar därefter har " +
+        "följt ett förskrivet protokoll, så att skillnaderna i utfall " +
+        "speglar myndigheterna och inte frågorna.",
+      items: [
+        {
+          label: "Begäran A: kontrollrapporter",
+          text:
+            "Jag begär kopior av kontrollrapporter från " +
+            "djurskyddskontroller av anläggningar som håller nötkreatur, " +
+            "grisar eller fjäderfä.\n\nBegäran avser de 20 senast " +
+            "genomförda kontrollerna, räknat efter kontrolldatum, under " +
+            "perioden 1 januari 2024 till och med 31 december 2025. Har " +
+            "färre än 20 sådana kontroller genomförts under perioden " +
+            "avser begäran samtliga. Med kontrollrapport avser jag den " +
+            "rapport som upprättas efter genomförd kontroll enligt " +
+            "djurskyddslagen (2018:1192). Begäran omfattar även bilagor " +
+            "till rapporterna, till exempel fotobilagor.\n\nJag önskar " +
+            "handlingarna i elektronisk form, som PDF, till denna " +
+            "e-postadress. Om en uppgift i en handling inte kan lämnas " +
+            "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
+            "tas ut önskar jag besked om beloppet innan handlingarna " +
+            "skickas.",
+        },
+        {
+          label: "Begäran B: beslut om föreläggande",
+          text:
+            "Jag begär kopior av beslut om föreläggande i " +
+            "djurskyddsärenden som gäller hållning av nötkreatur, grisar " +
+            "eller fjäderfä. Med föreläggande avser jag beslut enligt 8 " +
+            "kap. 9 § djurskyddslagen (2018:1192) eller enligt de " +
+            "EU-bestämmelser som lagen kompletterar.\n\nBegäran avser de " +
+            "10 senast meddelade besluten, räknat efter beslutsdatum, " +
+            "under perioden 1 januari 2022 till och med 31 december " +
+            "2025. Har färre än 10 sådana beslut meddelats under " +
+            "perioden avser begäran samtliga. Begäran omfattar även " +
+            "bilagor till besluten, till exempel kontrollrapporter och " +
+            "fotobilagor. Beslut om omhändertagande av djur och beslut " +
+            "om djurförbud ingår inte i begäran.\n\nJag önskar " +
+            "handlingarna i elektronisk form, som PDF, till denna " +
+            "e-postadress. Om en uppgift i en handling inte kan lämnas " +
+            "ut önskar jag handlingen i övriga delar.\n\nOm en avgift " +
+            "tas ut önskar jag besked om beloppet innan handlingarna " +
+            "skickas.",
+        },
+        {
+          label: "Begäran C: statistikuppgifter, Jordbruksverket",
+          text:
+            "Jag begär en sammanställning av uppgifter ur " +
+            "djurskyddskontrollregistret om djurskyddskontroller av " +
+            "nötkreatur, grisar och fjäderfä under åren 2024 och " +
+            "2025.\n\nJag önskar antal genomförda fysiska kontroller " +
+            "per länsstyrelse, år och djurslag, fördelat på\n\n1. " +
+            "oanmälda respektive föranmälda kontroller,\n2. " +
+            "kontrolltyp, till exempel rutinkontroll, kontroll efter " +
+            "anmälan och uppföljande kontroll,\n3. kontroller med minst " +
+            "en konstaterad brist respektive utan konstaterad " +
+            "brist.\n\nJag begär endast antalsuppgifter, inga uppgifter " +
+            "om enskilda kontrollobjekt. Kan någon del inte tas fram " +
+            "med rutinbetonade åtgärder önskar jag besked om vilken " +
+            "del, och de delar som kan tas fram.\n\nJag önskar " +
+            "sammanställningen i elektronisk form, till exempel som " +
+            "Excel eller CSV, till denna e-postadress.\n\nOm en avgift " +
+            "tas ut önskar jag besked om beloppet innan " +
+            "sammanställningen skickas.",
+        },
+      ],
+    },
     feeStopped: {
       heading: "Avgiftsstoppade begäranden",
       note:

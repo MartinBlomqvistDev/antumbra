@@ -94,6 +94,21 @@ export type Copy = {
     };
   };
   handlingar?: PageCopy & {
+    overview: {
+      heading: string;
+      sent: string;
+      files: string;
+      deliveringAuthorities: string;
+      feeNotices: string;
+      feeStopped: string;
+      paid: string;
+      paidValue: string;
+    };
+    wordings: {
+      heading: string;
+      note: string;
+      items: { label: string; text: string }[];
+    };
     feeStopped: { heading: string; note: string };
     deliveries: {
       heading: string;

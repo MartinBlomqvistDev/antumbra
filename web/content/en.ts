@@ -130,11 +130,12 @@ export const en: Copy = {
     ai: {
       heading: "AI assistance",
       body:
-        "Collection, logging and analysis are AI-assisted under human " +
-        "verification; the role is declared in ADR-0014. A language " +
-        "model is an instrument to declare, never a source to cite. " +
-        "Every figure on this site traces to its source document, not " +
-        "to a model answer.",
+        "Collection, logging and analysis are AI-assisted. Every " +
+        "letter, log row and published figure is reviewed by a person " +
+        "before it is sent or committed, and the role is documented, " +
+        "dated, in ADR-0014. No figure on this site has a language " +
+        "model as its source; everything traces to a source document " +
+        "with a checksum.",
     },
     adr: {
       heading: "Decision log (ADR)",

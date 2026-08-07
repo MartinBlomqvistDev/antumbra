@@ -20,6 +20,43 @@ export default function Handlingar() {
     ),
   ].sort();
 
+  const distinct = (rows: typeof log) =>
+    new Set(rows.map((row) => row.myndighet)).size;
+  const overview = [
+    {
+      value: count.format(
+        log.filter((row) => row.handelse === "avsändning").length,
+      ),
+      label: copy.overview.sent,
+    },
+    {
+      value: count.format(manifest.length),
+      label: copy.overview.files,
+    },
+    {
+      value: count.format(
+        distinct(log.filter((row) => row.handelse === "leverans")),
+      ),
+      label: copy.overview.deliveringAuthorities,
+    },
+    {
+      value: count.format(
+        distinct(
+          log.filter((row) => (row.handelse ?? "").includes("avgiftsbesked")),
+        ),
+      ),
+      label: copy.overview.feeNotices,
+    },
+    {
+      value: count.format(feeStopped.length),
+      label: copy.overview.feeStopped,
+    },
+    {
+      value: copy.overview.paidValue,
+      label: copy.overview.paid,
+    },
+  ];
+
   const folders = new Map<string, typeof manifest>();
   for (const row of manifest) {
     const folder = row.path.split("/")[0];
@@ -29,6 +66,45 @@ export default function Handlingar() {
   return (
     <div className="space-y-12">
       <PageIntro title={copy.title} lead={copy.lead} />
+      <section className="space-y-3">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {copy.overview.heading}
+        </h2>
+        <dl className="grid gap-6 sm:grid-cols-3">
+          {overview.map((item) => (
+            <div
+              key={item.label}
+              className="border-t-2 border-accent bg-surface-raised p-5"
+            >
+              <dd className="font-display text-3xl font-semibold tabular-nums">
+                {item.value}
+              </dd>
+              <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
+            </div>
+          ))}
+        </dl>
+      </section>
+      <section className="max-w-2xl space-y-3">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {copy.wordings.heading}
+        </h2>
+        <p className="text-sm text-ink-secondary">{copy.wordings.note}</p>
+        <div className="space-y-2">
+          {copy.wordings.items.map((item) => (
+            <details
+              key={item.label}
+              className="rounded-lg border border-border-soft bg-surface-raised"
+            >
+              <summary className="cursor-pointer p-3 text-sm font-semibold">
+                {item.label}
+              </summary>
+              <p className="whitespace-pre-line border-t border-border-soft p-4 text-sm">
+                {item.text}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
       <section className="max-w-2xl space-y-3">
         <h2 className="font-display text-2xl font-semibold tracking-tight">
           {copy.feeStopped.heading}
