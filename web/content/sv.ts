@@ -20,6 +20,7 @@ export const sv: Copy = {
     { href: "/data/", label: "Data" },
   ],
   languageSwitch: { href: "/en/", label: "English" },
+  themeToggle: "Byt färgläge",
   footer: {
     privacy: "Inga kakor, ingen spårning. Sökfrågor loggas inte.",
     source: "Källdata: DG SANTE:s publicerade revisionsrapporter.",
@@ -124,12 +125,63 @@ export const sv: Copy = {
     lead:
       "Protokollet, händelseloggen, besluten och deras skäl. Allt som " +
       "krävs för att göra om mätningen.",
+    ai: {
+      heading: "AI-assistans",
+      body:
+        "Insamling, loggföring och analys sker med AI-assistans under " +
+        "mänsklig verifiering; rollen är deklarerad i ADR-0014. En " +
+        "språkmodell är ett instrument som deklareras, aldrig en källa " +
+        "som citeras. Varje uppgift på sajten spåras till sitt " +
+        "källdokument, inte till ett modellsvar.",
+    },
+    adr: {
+      heading: "Beslutslogg (ADR)",
+      note:
+        "Varje metod- och arkitekturbeslut är daterat och dokumenterat " +
+        "med sina skäl och förkastade alternativ.",
+    },
+    log: {
+      heading: "Händelselogg",
+      note:
+        "Loggen förs löpande under insamlingen. Varje rad är en händelse " +
+        "med verifierat klockslag; ingenting skrivs i efterhand.",
+      countLabel: "händelser till och med",
+      filterLabel: "Filtrera på myndighet",
+      all: "Alla myndigheter",
+      headers: {
+        date: "Datum",
+        time: "Kl.",
+        channel: "Kanal",
+        authority: "Myndighet",
+        request: "Begäran",
+        event: "Händelse",
+        note: "Notering",
+      },
+    },
   },
   handlingar: {
     title: "Handlingar",
     lead:
       "Vad som begärts ut, vad som lämnats ut, vad som inte lämnats ut " +
       "och varför.",
+    feeStopped: {
+      heading: "Avgiftsstoppade begäranden",
+      note:
+        "Begäranden där en avgift kvarstod efter protokollets " +
+        "avsmalning. Kopior avstås då, ett skriftligt beslut om avgiften " +
+        "begärs, och utfallet dokumenteras. Ingen avgift har betalats.",
+    },
+    deliveries: {
+      heading: "Levererade handlingar",
+      note:
+        "Varje mottagen fil registreras med sin sha256-kontrollsumma i " +
+        "ett manifest som är beständigt: en post kan läggas till men " +
+        "aldrig ändras. Dokumenten själva innehåller personuppgifter " +
+        "och publiceras inte; manifestet gör leveranserna verifierbara " +
+        "utan dem.",
+      filesWord: "filer",
+      headers: { file: "Fil", bytes: "Byte", sha256: "sha256" },
+    },
   },
   data: {
     title: "Data",

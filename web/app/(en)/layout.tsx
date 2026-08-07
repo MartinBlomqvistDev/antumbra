@@ -15,6 +15,15 @@ export const metadata: Metadata = {
 export default function EnLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var t=localStorage.getItem("theme");' +
+              "if(t)document.documentElement.dataset.theme=t}catch(e){}",
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col">
         <Shell copy={en}>{children}</Shell>
       </body>

@@ -17,6 +17,7 @@ export type Copy = {
   };
   nav: { href: string; label: string }[];
   languageSwitch: { href: string; label: string };
+  themeToggle: string;
   footer: { privacy: string; source: string };
   home: {
     title: string;
@@ -72,8 +73,35 @@ export type Copy = {
       note: string;
     };
   };
-  metod: PageCopy;
-  handlingar?: PageCopy;
+  metod: PageCopy & {
+    ai: { heading: string; body: string };
+    adr: { heading: string; note: string };
+    log: {
+      heading: string;
+      note: string;
+      countLabel: string;
+      filterLabel: string;
+      all: string;
+      headers: {
+        date: string;
+        time: string;
+        channel: string;
+        authority: string;
+        request: string;
+        event: string;
+        note: string;
+      };
+    };
+  };
+  handlingar?: PageCopy & {
+    feeStopped: { heading: string; note: string };
+    deliveries: {
+      heading: string;
+      note: string;
+      filesWord: string;
+      headers: { file: string; bytes: string; sha256: string };
+    };
+  };
   data?: PageCopy;
   building: string;
 };

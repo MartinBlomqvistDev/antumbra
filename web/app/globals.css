@@ -29,6 +29,28 @@
   }
 }
 
+/* Manual override from the theme toggle; wins over the system preference
+   in both directions. Stored in localStorage, never in a cookie. */
+:root[data-theme="light"] {
+  --surface: #fdfdfc;
+  --surface-raised: #f4f4f2;
+  --ink: #1b1b1a;
+  --ink-secondary: #565654;
+  --border: #e4e4e1;
+  --accent: #2a78d6;
+  --accent-warm: #eb6834;
+}
+
+:root[data-theme="dark"] {
+  --surface: #131314;
+  --surface-raised: #1d1d1f;
+  --ink: #ececea;
+  --ink-secondary: #a5a5a1;
+  --border: #2d2d30;
+  --accent: #5697e2;
+  --accent-warm: #e06a3a;
+}
+
 @theme inline {
   --color-surface: var(--surface);
   --color-surface-raised: var(--surface-raised);

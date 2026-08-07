@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { Copy } from "@/content/types";
 
 /**
@@ -32,12 +33,15 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
               </Link>
             ))}
           </nav>
-          <a
-            href={copy.languageSwitch.href}
-            className="ml-auto text-sm text-ink-secondary hover:text-ink"
-          >
-            {copy.languageSwitch.label}
-          </a>
+          <span className="ml-auto flex items-baseline gap-4">
+            <ThemeToggle label={copy.themeToggle} />
+            <a
+              href={copy.languageSwitch.href}
+              className="text-sm text-ink-secondary hover:text-ink"
+            >
+              {copy.languageSwitch.label}
+            </a>
+          </span>
         </div>
       </header>
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">

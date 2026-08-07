@@ -18,6 +18,7 @@ export const en: Copy = {
     { href: "/en/metod/", label: "Method" },
   ],
   languageSwitch: { href: "/", label: "Svenska" },
+  themeToggle: "Switch colour scheme",
   footer: {
     privacy: "No cookies, no tracking. Search queries are not logged.",
     source: "Source data: DG SANTE's published audit reports.",
@@ -126,6 +127,40 @@ export const en: Copy = {
     lead:
       "The protocol, the event log, the decisions and their reasons. " +
       "Everything needed to repeat the measurement.",
+    ai: {
+      heading: "AI assistance",
+      body:
+        "Collection, logging and analysis are AI-assisted under human " +
+        "verification; the role is declared in ADR-0014. A language " +
+        "model is an instrument to declare, never a source to cite. " +
+        "Every figure on this site traces to its source document, not " +
+        "to a model answer.",
+    },
+    adr: {
+      heading: "Decision log (ADR)",
+      note:
+        "Every method and architecture decision is dated and documented " +
+        "with its reasons and rejected alternatives.",
+    },
+    log: {
+      heading: "Event log",
+      note:
+        "The log is kept as the collection runs. Each row is one event " +
+        "with a verified timestamp; nothing is written after the fact. " +
+        "Entries are in Swedish, the language of the record.",
+      countLabel: "events up to and including",
+      filterLabel: "Filter by authority",
+      all: "All authorities",
+      headers: {
+        date: "Date",
+        time: "Time",
+        channel: "Channel",
+        authority: "Authority",
+        request: "Request",
+        event: "Event",
+        note: "Note",
+      },
+    },
   },
   building: "This page is under construction.",
 };
