@@ -37,6 +37,16 @@ export type Copy = {
       shareAnswered: string;
     };
     notShown: { title: string; body: string };
+    charts: {
+      tableView: string;
+      of: string;
+      byYear: { title: string; note: string };
+      basis: { title: string };
+      answered: { title: string };
+      chain: { title: string; note: string };
+      yearHeader: string;
+      shareHeader: string;
+    };
   };
   chain: {
     sourceDocument: string;

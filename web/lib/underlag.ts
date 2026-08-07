@@ -84,6 +84,56 @@ export function readCountryYears(): CountryYearRow[] {
   return JSON.parse(readFileSync(path, "utf-8")) as CountryYearRow[];
 }
 
+/** Recommendations per audit year, summed over the EU countries. */
+export function byYear(
+  rows: CountryYearRow[],
+): { year: number; recommendations: number }[] {
+  const perYear = new Map<number, number>();
+  for (const row of rows) {
+    if (row.audit_year === null) continue;
+    perYear.set(
+      row.audit_year,
+      (perYear.get(row.audit_year) ?? 0) + row.recommendations,
+    );
+  }
+  return [...perYear.entries()]
+    .map(([year, recommendations]) => ({ year, recommendations }))
+    .sort((a, b) => a.year - b.year);
+}
+
+export type ChainClosure = {
+  country: string;
+  slug: string;
+  recommendations: number;
+  closed: number;
+};
+
+/**
+ * How often the chain closes, per country, derived at build time from the
+ * same verified underlag the country pages render: the recommendation
+ * states its basis, at least one citation resolves to a paragraph, and at
+ * least one member state response answers it (the mart_chain definition).
+ */
+export function chainClosureByCountry(): ChainClosure[] {
+  return underlagSlugs()
+    .map((slug) => {
+      const underlag = readUnderlag(slug);
+      let recommendations = 0;
+      let closed = 0;
+      for (const audit of underlag.audits) {
+        for (const rec of audit.recommendations) {
+          recommendations += 1;
+          const resolves = rec.citations.some((c) => c.resolved);
+          if (rec.states_its_basis && resolves && rec.responses.length > 0) {
+            closed += 1;
+          }
+        }
+      }
+      return { country: underlag.country, slug, recommendations, closed };
+    })
+    .sort((a, b) => a.country.localeCompare(b.country, "en"));
+}
+
 export type CountryTotals = {
   country: string;
   slug: string;

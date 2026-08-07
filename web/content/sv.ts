@@ -55,11 +55,32 @@ export const sv: Copy = {
     notShown: {
       title: "Vad sidan inte visar",
       body:
-        "Tabellen omfattar EU-länderna, vars rapporter är hämtade i " +
+        "Sidan omfattar EU-länderna, vars rapporter är hämtade i " +
         "fulltext; övriga länders revisioner finns i registret men är " +
         "inte styckeindexerade här. Andelar visas alltid tillsammans med " +
         "sina antal: en andel över fyra rekommendationer är inte samma " +
         "sak som en andel över fyrahundra.",
+    },
+    charts: {
+      tableView: "Tabellvy",
+      of: "av",
+      byYear: {
+        title: "Rekommendationer per år",
+        note:
+          "Samtliga rekommendationer i EU-ländernas revisionsrapporter, " +
+          "efter revisionens år.",
+      },
+      basis: { title: "Anger sin grund, per land" },
+      answered: { title: "Besvarade av medlemsstaten, per land" },
+      chain: {
+        title: "Kedjan sluts, per land",
+        note:
+          "Kedjan sluts när rekommendationen anger sin grund, grunden " +
+          "upplöses till ett ordagrant stycke och en åtgärdsplan besvarar " +
+          "den. Allt annat räknas som en delvis kedja, aldrig uppåt.",
+      },
+      yearHeader: "År",
+      shareHeader: "Andel",
     },
   },
   chain: {

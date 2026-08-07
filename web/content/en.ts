@@ -53,11 +53,33 @@ export const en: Copy = {
     notShown: {
       title: "What this page does not show",
       body:
-        "The table covers the EU countries, whose reports are fetched in " +
+        "The page covers the EU countries, whose reports are fetched in " +
         "full text; other countries' audits exist in the register but " +
         "are not paragraph-indexed here. Shares are always shown next to " +
         "their counts: a share over four recommendations is not the same " +
         "fact as a share over four hundred.",
+    },
+    charts: {
+      tableView: "Table view",
+      of: "of",
+      byYear: {
+        title: "Recommendations per year",
+        note:
+          "All recommendations in the EU countries' audit reports, by " +
+          "audit year.",
+      },
+      basis: { title: "State their basis, per country" },
+      answered: { title: "Answered by the member state, per country" },
+      chain: {
+        title: "The chain closes, per country",
+        note:
+          "The chain closes when the recommendation states its basis, " +
+          "the basis resolves to a verbatim paragraph, and an action " +
+          "plan answers it. Anything less counts as a partial chain, " +
+          "never rounded up.",
+      },
+      yearHeader: "Year",
+      shareHeader: "Share",
     },
   },
   chain: {
