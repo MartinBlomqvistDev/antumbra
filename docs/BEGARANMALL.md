@@ -943,3 +943,26 @@ utan i stället upprepar sitt erbjudande, lyder den förnyade begäran:
 Samma text används mot varje myndighet i samma läge. Första tillämpning:
 Jönköping, efter tre likalydande erbjudanden om nio handlingar i stället
 för beslut.
+
+### Tillämpningsnot 3, 2026-08-07: definition av stängd insamling
+
+Skriven dag 4, innan något villkor i den kan vara uppfyllt, så att beslutet
+om publicering blir mekaniskt och inte skön.
+
+Insamlingen är stängd när varje begäran har nått ett slutstatus och inga
+frister löper. Slutstatus per begäran är ett av följande:
+
+1. **Levererad.** Handlingarna eller sammanställningen har mottagits och
+   arkiverats med kontrollsumma.
+2. **Avgiftsstoppad med avslutat beslutsspår.** Kopior har avståtts, beslut
+   i avgiftsfrågan har begärts, och spåret är avslutat genom mottaget
+   beslut, uttrycklig vägran att meddela beslut, eller utebliven reaktion
+   på den förnyade begäran enligt tillämpningsnot 2 vid dag 40.
+3. **Uttryckligen vägrad**, med myndighetens besked arkiverat.
+
+Repot förblir privat till minst dag 40 (måndag 2026-09-28) oavsett om
+insamlingen stängs tidigare; regeln lyder minst, och en tidigareläggning
+skulle själv vara en protokollavvikelse. Publicering dag 40 eller senare
+förutsätter dessutom stängd insamling enligt definitionen ovan. Löper
+något spår fortfarande vid dag 40 skjuts publiceringen upp tills det är
+avslutat, och uppskjutandet loggas.
