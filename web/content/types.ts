@@ -49,7 +49,19 @@ export type Copy = {
     responseHeading: string;
     backToTable: string;
   };
-  uppslag: PageCopy & { banner: string };
+  uppslag: PageCopy & {
+    banner: string;
+    examplesHeading: string;
+    similarity: string;
+    noAnswers: string;
+    search: {
+      label: string;
+      button: string;
+      searching: string;
+      error: string;
+      note: string;
+    };
+  };
   metod: PageCopy;
   handlingar?: PageCopy;
   data?: PageCopy;

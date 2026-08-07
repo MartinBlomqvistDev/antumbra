@@ -1,0 +1,31 @@
+# The retrieval service: src/retrieval wrapped in HTTP by src/webapi.py,
+# with the corpus, the embedding shards and the model baked into the image
+# so that a cold start needs no network. Built for Cloud Run scale-to-zero;
+# CPU is enough (ADR-0015).
+#
+# The corpus and the shards are build artefacts that live outside git, so
+# the image is built where the pipeline has run:
+#
+#     docker build -f Dockerfile.retrieval -t antumbra-retrieval .
+#
+# uvicorn runs without an access log: queries are not logged, and the site
+# says so.
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY pyproject.toml README.md ./
+COPY src/ src/
+RUN pip install --no-cache-dir ".[retrieval,api]"
+
+# Download the model at build time so the running container stays offline.
+RUN python -c "from sentence_transformers import SentenceTransformer; \
+SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+
+COPY data/dgsante_embeddings_manifest.json data/
+COPY data/dgsante_paragraphs.jsonl data/
+COPY data/embeddings/ data/embeddings/
+
+ENV PORT=8080
+CMD ["sh", "-c", "uvicorn --app-dir src --factory webapi:production_app \
+--host 0.0.0.0 --port ${PORT} --no-access-log"]

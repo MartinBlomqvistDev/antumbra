@@ -83,6 +83,20 @@ export const sv: Copy = {
     banner:
       "Sökningen hittar var ett ämne behandlas, aldrig vad som " +
       "konstaterats. Läs alltid citatet.",
+    examplesHeading: "Exempelfrågor",
+    similarity: "likhet",
+    noAnswers:
+      "Inget stycke över likhetströskeln. Ett tomt svar är ett tomt " +
+      "svar, aldrig en gissning.",
+    search: {
+      label: "Sök i korpusen",
+      button: "Sök",
+      searching: "Söker",
+      error: "Söket kunde inte nås. Exempelfrågorna nedan fungerar ändå.",
+      note:
+        "Livesöket öppnar tillsammans med sajten. Exempelsvaren nedan är " +
+        "förberäknade genom samma kod som livesöket kör.",
+    },
   },
   metod: {
     title: "Metod",

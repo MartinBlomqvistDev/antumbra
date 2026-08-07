@@ -82,6 +82,22 @@ export const en: Copy = {
     banner:
       "The search finds where a topic is discussed, never what was " +
       "concluded. Always read the quotation.",
+    examplesHeading: "Example questions",
+    similarity: "similarity",
+    noAnswers:
+      "No paragraph above the similarity threshold. An empty answer is " +
+      "an empty answer, never a guess.",
+    search: {
+      label: "Search the corpus",
+      button: "Search",
+      searching: "Searching",
+      error:
+        "The search could not be reached. The example questions below " +
+        "still work.",
+      note:
+        "Live search opens with the site. The example answers below are " +
+        "precomputed by the same code the live search runs.",
+    },
   },
   metod: {
     title: "Method",

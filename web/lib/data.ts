@@ -20,3 +20,21 @@ export function readHeadline(): Headline {
   const path = join(process.cwd(), "public", "data", "headline.json");
   return JSON.parse(readFileSync(path, "utf-8")) as Headline;
 }
+
+/** One baked example from pipeline/16_bake_examples.py. */
+export type Example = {
+  question: string;
+  answers: {
+    text: string;
+    ref: string;
+    country: string;
+    number: number;
+    score: number;
+  }[];
+};
+
+/** Read the baked example answers at build time. */
+export function readExamples(): Example[] {
+  const path = join(process.cwd(), "public", "data", "exempel.json");
+  return JSON.parse(readFileSync(path, "utf-8")) as Example[];
+}

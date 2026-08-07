@@ -23,6 +23,9 @@ ocr = ["pymupdf>=1.24"]
 # numpy unless a question is actually asked, so the model dependency is
 # opt-in and CI runs the retrieval tests without it.
 retrieval = ["sentence-transformers>=3.0"]
+# The /uppslag service wraps src/retrieval in HTTP for the website. httpx is
+# fastapi's test client transport.
+api = ["fastapi>=0.115", "uvicorn>=0.30", "httpx>=0.27"]
 
 [project.urls]
 Repository = "https://github.com/MartinBlomqvistDev/antumbra"
