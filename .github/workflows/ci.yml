@@ -18,7 +18,7 @@ jobs:
     name: Lint, format and types
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -37,7 +37,7 @@ jobs:
       matrix:
         python-version: ["3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
@@ -57,7 +57,7 @@ jobs:
     # time; a broken export or a content file that no longer matches its
     # type would otherwise surface only at deploy.
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -78,7 +78,7 @@ jobs:
     # The pipeline depends on two public endpoints. A silent change upstream
     # would otherwise surface only on the next harvest.
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: DG SANTE search form
         run: |
           code=$(curl -sS -o /dev/null -w '%{http_code}' -L \
