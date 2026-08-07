@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "antumbra",
+  "compatibility_date": "2026-08-07",
+  // Assets-only Worker: no script runs, Cloudflare serves the static export
+  // from out/ straight off the edge. Deployment happens earliest at the
+  // protocol's day 40; this file exists so that launch day is a single
+  // `npm run deploy`, not configuration work.
+  "assets": {
+    "directory": "./out"
+  },
+  "workers_dev": true,
+  "preview_urls": true
+  // Custom domain routes are added when antumbra.org is registered at
+  // launch:
+  // "routes": [
+  //   { "pattern": "antumbra.org", "custom_domain": true },
+  //   { "pattern": "www.antumbra.org", "custom_domain": true }
+  // ]
+}

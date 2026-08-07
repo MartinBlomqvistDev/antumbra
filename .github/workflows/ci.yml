@@ -50,6 +50,28 @@ jobs:
       # quoted in the documentation must hold against the data files, and no
       # personal data may enter the repository.
 
+  web:
+    name: Website builds
+    runs-on: ubuntu-latest
+    # The site is a static export whose pages read committed data at build
+    # time; a broken export or a content file that no longer matches its
+    # type would otherwise surface only at deploy.
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - name: Lint
+        run: npm run lint
+        working-directory: web
+      - name: Build
+        run: npm run build
+        working-directory: web
+
   sources:
     name: Upstream sources still reachable
     runs-on: ubuntu-latest

@@ -507,6 +507,33 @@ hittar var ett ämne behandlas, aldrig ett facit över vad som konstaterats;
 läsningen av citaten är alltid människans. En väljare som förstår polaritet
 kan sättas in i Selector-protokollet utan att retrieval ändras.
 
+## Publika lager ovanpå korpusen
+
+**HTTP-tjänsten.** `src/webapi.py` är ett tunt skal runt `src/retrieval`:
+korpus, matris och modell laddas en gång, varje fråga besvaras av samma
+`ask()` som ovan, och garantierna följer med oförändrade. Testerna
+verifierar att en manipulerande väljare kraschar tjänsten i stället för
+att servera, och att en för lång fråga avvisas före retrieval. Sökfrågor
+loggas inte; containern (`Dockerfile.retrieval`) kör uvicorn utan
+accesslogg och bakar in modell och shards så att en kallstart inte behöver
+nätet. Driftmålet är Cloud Run scale-to-zero, tidigast dag 40.
+
+**Webbexporten, steg 15.** Sajten frågar aldrig BigQuery: steget läser de
+dbt-testade marts en gång, räknar om samma tal lokalt ur Parquet-lagret,
+och vägrar skriva något de två inte är överens om. Det som committas under
+`web/public/data/` är aggregat per land och år, underlag per land på
+styckenivå med dokumentens sha256, och ett manifest över filerna.
+
+**Bakade exempelsvar, steg 16.** Exempelfrågorna på /uppslag besvaras vid
+byggtid genom exakt samma kodväg som tjänsten kör, så en kallstart aldrig
+möter första besöket och de bakade svaren inte kan glida ifrån de levande.
+
+**Paketering för Hugging Face, steg 17.** Warehouse-tabellerna,
+källmanifestet och datasetkortet (`docs/HF_DATASET.md`) samlas i
+`data/hf/` utanför git. Publiceringen är ett separat, manuellt steg som
+väntar på protokollets dag 40, eftersom ett publikt dataset som beskriver
+projektet skulle avslöja den svenska mätningen mitt i insamlingen.
+
 ## Nästa steg
 
 1. **Svansen är i huvudsak äkta, inte fel.** Stickprov om 60 av de rapporter
