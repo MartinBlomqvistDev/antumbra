@@ -57,31 +57,45 @@
         "score": 0.7646
       },
       {
-        "text": "The association of local authority veterinarians have adopted and are adapting VPHIS procedures for the approval and operation of courses suitable for operatives working in low-capacity slaughterhouses.",
-        "ref": "2015-7419",
-        "country": "Ireland",
-        "number": 30,
-        "score": 0.7449
+        "text": "VETERINARY SUPERVISION",
+        "ref": "1998-1352",
+        "country": "Denmark",
+        "number": 3,
+        "score": 0.7538
       },
       {
-        "text": "A course has been introduced for private veterinarians in order to train them on the requirements and the procedures that they need to follow in the case of emergency slaughter at the farm or regarding the transport of an animal to the slaughterhouse that has suffered an accident and the documents that should accompany it. 12 5.2.5. Supervision and Audits",
-        "ref": "2020-6926",
-        "country": "France",
-        "number": 30,
-        "score": 0.7249
+        "text": "VETERINARY SUPERVISION",
+        "ref": "1998-1390",
+        "country": "Slovenia",
+        "number": 4,
+        "score": 0.7538
       },
       {
-        "text": "The central veterinary authority runs a multi-annual training programme on the 'Protection of Animal Health and Public Health' for officials at central, provincial and district levels. The programme is delivered by the National Veterinary Institute in Pulawy. The Institute maintains dedicated training facilities for this purpose.",
-        "ref": "2018-6416",
-        "country": "Poland",
-        "number": 93,
-        "score": 0.7246
+        "text": "VETERINARY SUPERVISION",
+        "ref": "1998-1489",
+        "country": "Latvia",
+        "number": 6,
+        "score": 0.7538
       }
     ]
   },
   {
     "question": "laboratory accreditation for residue testing",
     "answers": [
+      {
+        "text": "The competent authority can have confidence in the laboratory performance and the reliability of analytical results generated under the residue monitoring plan, as all laboratories are accredited and methods are fit for purpose. 9",
+        "ref": "2019-6649",
+        "country": "Czech Republic",
+        "number": 43,
+        "score": 0.7899
+      },
+      {
+        "text": "Laboratories are accredited to EN ISO/IEC 17025:2017, the methods used are largely included in their respective scopes of accreditation and the laboratories' performance in proficiency tests has been generally satisfactory, providing assurance on the reliability of results. However, the absence of formal verification of certain designation criteria for official laboratories, the partial absence of information essential for interpretation of the analytical results and the erroneous approach by one contracted laboratory to interpret certain analytical data undermine the effectiveness of the residue control system.",
+        "ref": "2021-7201",
+        "country": "Luxembourg",
+        "number": 59,
+        "score": 0.772
+      },
       {
         "text": "All methods used for the residue monitoring plan are within the laboratory's scope of accreditation. The accreditation includes a flexible scope for a part of the methods implemented.",
         "ref": "2019-6649",
@@ -102,26 +116,33 @@
         "country": "Cyprus",
         "number": 47,
         "score": 0.7343
-      },
-      {
-        "text": "Laboratories are accredited to EN ISO/IEC 17025:2017, the methods used are largely included in their respective scopes of accreditation and the laboratories' performance in proficiency tests has been generally satisfactory, providing assurance on the reliability of results. However, the absence of formal verification of certain designation criteria for official laboratories, the partial absence of information essential for interpretation of the analytical results and the erroneous approach by one contracted laboratory to interpret certain analytical data undermine the effectiveness of the residue control system. 6. OVERALL CONCLUSION The planning of the residue monitoring plan is timely, based on relevant inputs, and results in a plan that is largely in line with applicable legal requirements, which contributes to the effectiveness of controls on residues. Nevertheless, the failure to ensure that the designated laboratories have appropriate validated, accredited, confirmatory methods for certain analyte/matrix combinations undermines the competent authority's ability to legally establish non-compliance and thus ensure timely follow-up of non-compliance. The residue monitoring plan is generally implemented in accordance with planned arrangements and legal requirements, and its implementation is adequately monitored. (30) Section 4.3 of Annex II to Regulation (EC) No 401/2006. (31) Section 4.4 of Annex II to Regulation (EC) No 401/2006. 10 However, sampling arrangements for some honey samples do not meet EU requirements as the samples selected by the producers cannot be considered to be official samples. Prompt investigations following receipt of non-compliant residue results, and the imposition of sanctions where failure to respect EU requirements is identified, contribute to identifying and reducing the causes of unacceptable residues in food of animal origin. Notwithstanding shortcomings in relation to meeting all of the designation criteria for official laboratories, availability of confirmatory methods for some B1 analytes and lack of information essential for the interpretation of analytical results on some analysis reports, overall laboratory performance is largely sufficient to ensure reliability of results. 7. CLOSING MEETING A closing meeting was held on 5 March 2021 with representatives of the central competent authority. At this meeting, the audit team presented the main findings and preliminary conclusions of the audit. The authority generally accepted the main findings and conclusions presented, provided some additional clarifications and undertook to take any actions were necessary in order to address shortcomings identified. 8. RECOMMENDATIONS The competent authorities are invited to provide details of the actions taken and planned, including deadlines for their completion ('action plan'), aimed at addressing the recommendations set out below, within 25 working days of receipt of this audit report. No Recommendation 1 To ensure that confirmatory methods are available for all analytes included in the residue monitoring plan. Legal basis: Article 5(1)(d) of Regulation (EU) 2017/625. Recommendation based on conclusion 14. Associated findings 3 and 48. 2 To ensure that all honey samples used for the residue monitoring plan are taken by officials designated for the purpose. Legal basis: Point 1.1 of the Annex to Commission Decision 98/179/EC. Recommendation based on conclusion 34. Associated finding 25. 3 To ensure that verification of the designation of the contracted laboratories as official by the competent authoritity(ies) of the member state on whose territory it is located is a part of the formal designation process. Legal basis: Article 37 of Regulation (EU) 2017/625. Recommendation based on conclusion 59. 11 Associated finding 45. 4 To ensure that the competent authority has access to information on all parameters necessary for interpretation of analytical results. Legal basis: Article 6 of Decision 2002/657/E",
-        "ref": "2021-7201",
-        "country": "Luxembourg",
-        "number": 59,
-        "score": 0.7341
-      },
-      {
-        "text": "The laboratory network for residue analysis comprises NRLs, FASFC laboratories and, as need be, external laboratories approved by FASFC. The approval can be granted only for methods included in the International Organization for Standardization (ISO) 17025 accredited scope of the respective laboratories' accreditation. The FASFC internal audit unit carries out audits to the NRLs (e.g. to CODA-CERVA in 2014) and representatives of DG Laboratories participate in technical audits carried out by the accreditation bodies to NRLs and approved laboratories. The 2014 residue monitoring plan samples were analysed in three FASFC laboratories (in Gentbrugge, Tervuren and Liège) and in the NRLs.",
-        "ref": "2015-7511",
-        "country": "Belgium",
-        "number": 38,
-        "score": 0.7266
       }
     ]
   },
   {
     "question": "animal welfare during transport",
     "answers": [
+      {
+        "text": "ANIMAL WELFARE DURING TRANSPORT",
+        "ref": "2008-7764",
+        "country": "Germany",
+        "number": 2,
+        "score": 1.0
+      },
+      {
+        "text": "ANIMAL WELFARE DURING TRANSPORT",
+        "ref": "2008-7980",
+        "country": "Germany",
+        "number": 2,
+        "score": 1.0
+      },
+      {
+        "text": "Main findings (information received and facts found) in the field of animal welfare during transport, including certain aspects of animal identification",
+        "ref": "1998-1448",
+        "country": "Belgium",
+        "number": 5,
+        "score": 0.788
+      },
       {
         "text": "BACKGROUND A previous mission on animal welfare during transport in Sweden was undertaken from 4 to 8 March 1996. In its conclusions the report indicated that animal transport was overall carried out under acceptable conditions.",
         "ref": "2003-9210",
@@ -135,27 +156,6 @@
         "country": "Finland",
         "number": 4,
         "score": 0.7469
-      },
-      {
-        "text": "As regards controls on animal welfare during transport, in 2019, a total of 34 non- compliances were found with respect to bovine animals. Checks were performed at the arrival at the slaughterhouses for both long and short journey transports, but were also performed at the beginning of long journeys.",
-        "ref": "2021-7186",
-        "country": "Italy",
-        "number": 105,
-        "score": 0.7354
-      },
-      {
-        "text": "There have been significant improvements in the quality and completeness of official controls related to animal welfare during sea transport since 2018. There is a clear and detailed national framework for protecting the welfare of animals during transport and a national protocol detailing how to implement several requirements in the Regulation. The existing controls cover all necessary steps and are suitable to minimise the risk of injury or undue suffering to animals during transport by livestock vessel to non-EU countries.",
-        "ref": "2022-7522",
-        "country": "Spain",
-        "number": 1,
-        "score": 0.6985
-      },
-      {
-        "text": "The legislation in place and the lack of a system to facilitate the killing on farm, and subsequent transport to slaughterhouses, of injured animals that are in pain and unfit for transport, results in many bovines unfit for transport still being transported to slaughterhouses. Current national guidance allows this with no enforcement actions being taken and significant negative impact on animal welfare.",
-        "ref": "2015-7427",
-        "country": "France",
-        "number": 89,
-        "score": 0.6838
       }
     ]
   },
@@ -191,11 +191,11 @@
         "score": 0.6572
       },
       {
-        "text": "There is appropriate laboratory support within the surveillance system. 5.5 TRACEABILITY OF MEAT AND MEAT PRODUCTS Legal requirements Commission implementing decision 2014/709/EU; Council Directive 2002/99/EC; Annex II, section III of Regulation (EC) No 853/2004; Regulation (EC) No 854/2004. 5.5.1 Traceability of wild boar",
-        "ref": "2016-6002",
-        "country": "Estonia",
-        "number": 72,
-        "score": 0.6496
+        "text": "The traceability of imported consignments is ensured by the use of TRACES for live animals and products of animal origin and the use of well-developed alternative systems for products of non-animal origin and feed.",
+        "ref": "2017-6041",
+        "country": "Ireland",
+        "number": 43,
+        "score": 0.6526
       }
     ]
   },
@@ -224,18 +224,18 @@
         "score": 0.7295
       },
       {
-        "text": "The AGES has put in place arrangements for the follow-up of audit recommendations for the new audit system. Conclusions",
-        "ref": "2016-8826",
-        "country": "Austria",
-        "number": 89,
-        "score": 0.7145
+        "text": "Not all Recommendations from previous audits have been followed up satisfactorily.",
+        "ref": "2015-7468",
+        "country": "Italy",
+        "number": 98,
+        "score": 0.7252
       },
       {
-        "text": "In preparation of the audits the auditors request the audit report from the previous audits and follow-up recommendations from previous audits, if needed.",
-        "ref": "2016-8826",
-        "country": "Austria",
-        "number": 88,
-        "score": 0.7073
+        "text": "The recommendations from the last audit are mostly addressed.",
+        "ref": "2016-8789",
+        "country": "Portugal",
+        "number": 49,
+        "score": 0.7228
       }
     ]
   }

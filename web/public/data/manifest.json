@@ -2,9 +2,9 @@
   "files": [
     {
       "path": "web/public/data/country_year.json",
-      "bytes": 189558,
+      "bytes": 189557,
       "rows": 673,
-      "sha256": "8e7ec38eb75e658ffea63d60129cf5b190d55cc232e5f632aa14e54f5576426c"
+      "sha256": "7893191e8cb600df2723350b58667d37830a5e8bed98f9fa80a5b3a209b6f0fd"
     },
     {
       "path": "web/public/data/headline.json",
@@ -14,165 +14,165 @@
     },
     {
       "path": "web/public/data/underlag/austria.json",
-      "bytes": 380402,
+      "bytes": 361886,
       "rows": 1,
-      "sha256": "43dab8595a19a80da1943a4dfc98487a86f38f80e85abc49664620577a4893c6"
+      "sha256": "f9b14b134d71aebbd2d6287e37f8ff278aed104398dbb5ae6c76f41be94e92e0"
     },
     {
       "path": "web/public/data/underlag/belgium.json",
-      "bytes": 637461,
+      "bytes": 581962,
       "rows": 1,
-      "sha256": "abc4288876f5b11b3eb53cd040cc1ff4cfbb9f6bb6673a25ed0dbaeb7e4ea581"
+      "sha256": "098cff2ff50f3e4ce9933adb9dd9a35c3d43f89e756510c1a1e9062c588bd052"
     },
     {
       "path": "web/public/data/underlag/bulgaria.json",
-      "bytes": 938540,
+      "bytes": 859693,
       "rows": 1,
-      "sha256": "88cd3d8e7eb57d1eca962d41e297dad119ad82ad4bf9f7b3f959aa785f8d9c29"
+      "sha256": "e178de71dfdfa2e00e77b9f128ca28d40c60468b94a8bf889004a69a9d1ba926"
     },
     {
       "path": "web/public/data/underlag/croatia.json",
-      "bytes": 408471,
+      "bytes": 378226,
       "rows": 1,
-      "sha256": "d37d7b6b82053f516d86b2b41546215b34a8d59624d0c629924dcdf0f7e7c169"
+      "sha256": "0cb12e4e6f6b961c0b64538d63ed4ab10ba391c4fa4eb1a7a8e359935da9fa4c"
     },
     {
       "path": "web/public/data/underlag/cyprus.json",
-      "bytes": 352514,
+      "bytes": 327877,
       "rows": 1,
-      "sha256": "8d622560a605e9e3dd57784388bdfb187a5cd60a90f071084c3101b7547b772d"
+      "sha256": "308bb93c2eb114c83456c04c94e4a75f8f96b322c754f0b8a4345881ac71703f"
     },
     {
       "path": "web/public/data/underlag/czech-republic.json",
-      "bytes": 515568,
+      "bytes": 453110,
       "rows": 1,
-      "sha256": "7fbc16929567c81fa031d5463d284f9a8872d35e7427a61ba38666ed86e33a5e"
+      "sha256": "2f058ce0e4584df05f5b7780e5064126cf910f2d7fe6673201ec976660196bd7"
     },
     {
       "path": "web/public/data/underlag/denmark.json",
-      "bytes": 609629,
+      "bytes": 565499,
       "rows": 1,
-      "sha256": "a51c61a55207fdc49172b00e778e418bfb3c3c569577c33a1373c4db0cf4a1ff"
+      "sha256": "88a6a4ea2453e1d95f0e71604c7c89907dd02d04e5d38a5f1c9895d763965e08"
     },
     {
       "path": "web/public/data/underlag/estonia.json",
-      "bytes": 394894,
+      "bytes": 347079,
       "rows": 1,
-      "sha256": "29488d22a585dc34842fad7628be0ba07fb745827a93210125c371057a36b88c"
+      "sha256": "28aee502b4c00937981b0b5e8e8e771ef42e79e0402ffbd9d31a2620b7e79f80"
     },
     {
       "path": "web/public/data/underlag/finland.json",
-      "bytes": 494018,
+      "bytes": 448787,
       "rows": 1,
-      "sha256": "e25858e2bcac500e67b6c5c066d660de56b42bf036f4f8d6433b679b32fddac1"
+      "sha256": "38af734289abb4098dd360b3c9a1134cfc7f49620dc8ee107fad37f8bc8c96b2"
     },
     {
       "path": "web/public/data/underlag/france.json",
-      "bytes": 1023929,
+      "bytes": 967482,
       "rows": 1,
-      "sha256": "8ddb97e4244547a033a20d93b9c5095e26333ad189605bb30ff9f41cdd22353a"
+      "sha256": "7fe66343b01feb7fb9acb3c845f4c323fede76690e6f42fbb8bbe5720d54e3e6"
     },
     {
       "path": "web/public/data/underlag/germany.json",
-      "bytes": 867079,
+      "bytes": 809481,
       "rows": 1,
-      "sha256": "415298787971450533ac0595f00c144920addec4879ccb3bffea6660470e2647"
+      "sha256": "b5fb73e65f5159218c326ed02573d9faffc34b1a8d1d089ae35205f4469ad5f5"
     },
     {
       "path": "web/public/data/underlag/greece.json",
-      "bytes": 1025670,
+      "bytes": 943146,
       "rows": 1,
-      "sha256": "951c78a54adeb58ab48f5aba26f11d8b21e735b557225c2300f73b781bfcd06e"
+      "sha256": "364961f469f30e4be5292c9cfebe145a3c6aaf02e8789e80f3641922f8350ad4"
     },
     {
       "path": "web/public/data/underlag/hungary.json",
-      "bytes": 693045,
+      "bytes": 638443,
       "rows": 1,
-      "sha256": "549109f40b48b6e2b9943c9bf6a55562feea11914893af88fb1b2c5423b3870c"
+      "sha256": "4392b2748cd8eb6d411821a2617dded48d410422c67436a21b1f4f5ad67a3eaf"
     },
     {
       "path": "web/public/data/underlag/ireland.json",
-      "bytes": 703268,
+      "bytes": 646738,
       "rows": 1,
-      "sha256": "eeb6d7094a4a66eee649d8027f614269edcd8c2804dc58e235cdbf9f0eeb176c"
+      "sha256": "90f05648bfe692bf8c21d49e5f534f44b5b7e63ef006bf1bbce68a02e9370190"
     },
     {
       "path": "web/public/data/underlag/italy.json",
-      "bytes": 1245143,
+      "bytes": 1148551,
       "rows": 1,
-      "sha256": "3e3700a52fbb9f289255584ba926395db09741eca00a7819431793f723aad4c9"
+      "sha256": "007f765cf0d35835b5780c4600e9e0ae05f17b1cae5ee4cb402fe3fadbc6dd15"
     },
     {
       "path": "web/public/data/underlag/latvia.json",
-      "bytes": 286007,
+      "bytes": 250561,
       "rows": 1,
-      "sha256": "f7ae894cc76f7f107d5d8bc37f5ff81bbbc265ff038baac332a1090d9d9eca2c"
+      "sha256": "f194ce81b88a133d7f994b5453b8a262bcbd82d8acd4725bbcbddb647113ded3"
     },
     {
       "path": "web/public/data/underlag/lithuania.json",
-      "bytes": 396087,
+      "bytes": 364213,
       "rows": 1,
-      "sha256": "6ee6bded79c23b32c426606cb3a5e35011440e3bbd995ed2318e1ac19a5f377e"
+      "sha256": "7e699df701e466b745edd05cd5c8d753da49f753384eceb19ae82de6697072af"
     },
     {
       "path": "web/public/data/underlag/luxembourg.json",
-      "bytes": 254826,
+      "bytes": 229566,
       "rows": 1,
-      "sha256": "159349148dc25de73ca9916cc1b9ebd19e6137b0181d78c962dfe22852080b6f"
+      "sha256": "4f0945c2874a7f70897f547b7cb385c2f02961e02e5b04b6644a870f0e290550"
     },
     {
       "path": "web/public/data/underlag/malta.json",
-      "bytes": 389197,
+      "bytes": 354810,
       "rows": 1,
-      "sha256": "25ad0e246216e36049d7faea45d8e8371ca14d0453ab46bb09322bb923e87b97"
+      "sha256": "110f82fa8c29db47d6a12870429ab0fcf925929787e8b37c68d4130b7013a320"
     },
     {
       "path": "web/public/data/underlag/netherlands.json",
-      "bytes": 733978,
+      "bytes": 701996,
       "rows": 1,
-      "sha256": "8fca43333c679521aee2708b42137cbe3af08cec6b85fc3f5bb66ee76d05cf35"
+      "sha256": "67c97f64e410b9c7be9fa926ac1010d7560f3ecafeead6fa6876ebcd00e64384"
     },
     {
       "path": "web/public/data/underlag/poland.json",
-      "bytes": 1020690,
+      "bytes": 934684,
       "rows": 1,
-      "sha256": "0fbfeba9c2fc5fb0510c04fc1846196a776e929d6db3112015b289fedaa23984"
+      "sha256": "03a7c9d0c7f3f9597a0e9222ef23b863bbdb800d892dfe0ea6cc667972f1cb35"
     },
     {
       "path": "web/public/data/underlag/portugal.json",
-      "bytes": 864414,
+      "bytes": 831479,
       "rows": 1,
-      "sha256": "24a28e7cdb1295629155e775a848c80a20148a8a66749985fe52c9154e229cba"
+      "sha256": "b3ae621a3dfbc5e7083df8c4c80287e6b4778ee38cc27ae83b504bf3ee6779c2"
     },
     {
       "path": "web/public/data/underlag/romania.json",
-      "bytes": 938581,
+      "bytes": 867469,
       "rows": 1,
-      "sha256": "5dcb6c431e8de382cc965809389b0ecb91011e02fd8e9cfd4a2a88cea1343e6d"
+      "sha256": "a271092dd5760e281c2b9bf7f0956910a5ac50233a755f9757aa03b7c3f1a155"
     },
     {
       "path": "web/public/data/underlag/slovakia.json",
-      "bytes": 479344,
+      "bytes": 419302,
       "rows": 1,
-      "sha256": "03c045c60d50c56815f0ab48b9e8274193795b29d9de3ccc1cc0645753108418"
+      "sha256": "a49e37af29f5c738a17d9d7ab71cbfe37a2a6d29b2beba1a8389617839703ae7"
     },
     {
       "path": "web/public/data/underlag/slovenia.json",
-      "bytes": 333954,
+      "bytes": 305652,
       "rows": 1,
-      "sha256": "304c22893e556d2180136e6650586411e6f91ce5692bd90a66a2eb2e15bd8960"
+      "sha256": "a5018e97a7f4dd770630d66cb76e7a170073171fad336f76bac401b3fb08c250"
     },
     {
       "path": "web/public/data/underlag/spain.json",
-      "bytes": 1167488,
+      "bytes": 1094265,
       "rows": 1,
-      "sha256": "fa6842e3ef985d14a4bfbeac05539a2f2de6ea20637a15aed449cc75f24b91ab"
+      "sha256": "acf1bfc8665d124f06d93a468393fbab8bbf881d7f80c94017ab4eb2e57e7674"
     },
     {
       "path": "web/public/data/underlag/sweden.json",
-      "bytes": 588709,
+      "bytes": 554387,
       "rows": 1,
-      "sha256": "4061b56713068fe4b644025cf19e952ecb2cce392c3ec33f5864bd4e1c8fcecb"
+      "sha256": "85000ba0408c4f5da84c32ed011125c7e53e48f49499287d38d20a083f5620b6"
     }
   ]
 }

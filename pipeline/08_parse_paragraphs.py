@@ -22,6 +22,7 @@ Usage:
 
 from __future__ import annotations
 
+import bisect
 import json
 import re
 import subprocess
@@ -138,7 +139,9 @@ def context_at(marks: list[tuple[int, str, str]], position: int) -> tuple[str, s
     return section, label
 
 
-def split_paragraphs(text: str) -> list[tuple[int, int, str]]:
+def split_paragraphs(
+    text: str, boundaries: list[int] | None = None
+) -> list[tuple[int, int, str]]:
     """Split a report into its numbered paragraphs.
 
     The numbering runs in one sequence through the document, so only numbers
@@ -147,6 +150,11 @@ def split_paragraphs(text: str) -> list[tuple[int, int, str]]:
 
     Args:
         text: Full report text.
+        boundaries: Positions of numbered section headings. A paragraph's
+            body also ends at the first of these after it, so the next
+            section's heading is not glued onto the paragraph's tail. Only
+            the acceptance of paragraphs ignores them, deliberately: the
+            cleanup must not change which paragraphs exist.
 
     Returns:
         One (position, number, body) triple per paragraph.
@@ -180,10 +188,16 @@ def split_paragraphs(text: str) -> list[tuple[int, int, str]]:
             best = kept
     kept = best
 
+    cuts = sorted(boundaries or [])
     out: list[tuple[int, int, str]] = []
     for index, (start, end, value) in enumerate(kept):
         stop = kept[index + 1][0] if index + 1 < len(kept) else len(text)
-        body = " ".join(text[end:stop].split())
+        heading = bisect.bisect_right(cuts, end)
+        if heading < len(cuts) and cuts[heading] < stop:
+            trimmed = " ".join(text[end : cuts[heading]].split())
+            body = trimmed or " ".join(text[end:stop].split())
+        else:
+            body = " ".join(text[end:stop].split())
         if body:
             out.append((start, value, body))
     return out
@@ -218,8 +232,16 @@ def parse_report(record: dict) -> list[dict]:
     if len(text.strip()) < 500:
         return []
     marks = headings(text)
+    # Only the numbered headings bound paragraph bodies. The free-standing
+    # findings/conclusions lines stay context labels: they are matched
+    # case-insensitively and a wrapped body line can look like one, so using
+    # them as hard cuts would truncate real paragraphs.
+    numbered = sorted(
+        {m.start() for m in SECTION.finditer(text)}
+        | {m.start() for m in SUBSECTION.finditer(text)}
+    )
     rows = []
-    for position, number, body in split_paragraphs(text):
+    for position, number, body in split_paragraphs(text, numbered):
         section, label = context_at(marks, position)
         rows.append(
             {

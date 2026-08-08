@@ -203,7 +203,7 @@
     "audits": 3,
     "stating_their_basis": 2,
     "answered": 10,
-    "confirmed": 9,
+    "confirmed": 8,
     "share_stating_their_basis": 0.2,
     "share_answered": 1.0
   },
@@ -554,7 +554,7 @@
     "audits": 3,
     "stating_their_basis": 2,
     "answered": 18,
-    "confirmed": 17,
+    "confirmed": 16,
     "share_stating_their_basis": 0.1111,
     "share_answered": 1.0
   },
@@ -1256,7 +1256,7 @@
     "audits": 4,
     "stating_their_basis": 10,
     "answered": 12,
-    "confirmed": 10,
+    "confirmed": 11,
     "share_stating_their_basis": 0.7692,
     "share_answered": 0.9231
   },
@@ -1789,7 +1789,7 @@
     "audits": 2,
     "stating_their_basis": 5,
     "answered": 5,
-    "confirmed": 2,
+    "confirmed": 1,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -1893,7 +1893,7 @@
     "audits": 3,
     "stating_their_basis": 12,
     "answered": 12,
-    "confirmed": 11,
+    "confirmed": 12,
     "share_stating_their_basis": 0.9231,
     "share_answered": 0.9231
   },
@@ -2218,7 +2218,7 @@
     "audits": 1,
     "stating_their_basis": 17,
     "answered": 17,
-    "confirmed": 17,
+    "confirmed": 16,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -2231,7 +2231,7 @@
     "audits": 2,
     "stating_their_basis": 5,
     "answered": 5,
-    "confirmed": 2,
+    "confirmed": 3,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -2452,7 +2452,7 @@
     "audits": 3,
     "stating_their_basis": 9,
     "answered": 4,
-    "confirmed": 3,
+    "confirmed": 2,
     "share_stating_their_basis": 1.0,
     "share_answered": 0.4444
   },
@@ -2478,7 +2478,7 @@
     "audits": 2,
     "stating_their_basis": 7,
     "answered": 6,
-    "confirmed": 6,
+    "confirmed": 5,
     "share_stating_their_basis": 0.875,
     "share_answered": 0.75
   },
@@ -2517,7 +2517,7 @@
     "audits": 4,
     "stating_their_basis": 9,
     "answered": 7,
-    "confirmed": 6,
+    "confirmed": 7,
     "share_stating_their_basis": 0.9,
     "share_answered": 0.7
   },
@@ -2855,7 +2855,7 @@
     "audits": 2,
     "stating_their_basis": 5,
     "answered": 4,
-    "confirmed": 4,
+    "confirmed": 3,
     "share_stating_their_basis": 1.0,
     "share_answered": 0.8
   },
@@ -3167,7 +3167,7 @@
     "audits": 2,
     "stating_their_basis": 6,
     "answered": 4,
-    "confirmed": 4,
+    "confirmed": 3,
     "share_stating_their_basis": 0.8571,
     "share_answered": 0.5714
   },
@@ -3544,7 +3544,7 @@
     "audits": 3,
     "stating_their_basis": 6,
     "answered": 4,
-    "confirmed": 3,
+    "confirmed": 2,
     "share_stating_their_basis": 1.0,
     "share_answered": 0.6667
   },
@@ -3856,7 +3856,7 @@
     "audits": 2,
     "stating_their_basis": 9,
     "answered": 9,
-    "confirmed": 7,
+    "confirmed": 6,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -4181,7 +4181,7 @@
     "audits": 3,
     "stating_their_basis": 2,
     "answered": 4,
-    "confirmed": 2,
+    "confirmed": 1,
     "share_stating_their_basis": 0.5,
     "share_answered": 1.0
   },
@@ -4532,7 +4532,7 @@
     "audits": 1,
     "stating_their_basis": 4,
     "answered": 4,
-    "confirmed": 4,
+    "confirmed": 3,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -4597,7 +4597,7 @@
     "audits": 1,
     "stating_their_basis": 5,
     "answered": 5,
-    "confirmed": 4,
+    "confirmed": 3,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -4974,7 +4974,7 @@
     "audits": 8,
     "stating_their_basis": 14,
     "answered": 16,
-    "confirmed": 13,
+    "confirmed": 12,
     "share_stating_their_basis": 0.56,
     "share_answered": 0.64
   },
@@ -4987,7 +4987,7 @@
     "audits": 3,
     "stating_their_basis": 16,
     "answered": 18,
-    "confirmed": 18,
+    "confirmed": 17,
     "share_stating_their_basis": 0.8889,
     "share_answered": 1.0
   },
@@ -5455,7 +5455,7 @@
     "audits": 3,
     "stating_their_basis": 3,
     "answered": 12,
-    "confirmed": 11,
+    "confirmed": 10,
     "share_stating_their_basis": 0.25,
     "share_answered": 1.0
   },
@@ -5507,7 +5507,7 @@
     "audits": 3,
     "stating_their_basis": 5,
     "answered": 6,
-    "confirmed": 6,
+    "confirmed": 5,
     "share_stating_their_basis": 0.8333,
     "share_answered": 1.0
   },
@@ -6040,7 +6040,7 @@
     "audits": 4,
     "stating_their_basis": 15,
     "answered": 13,
-    "confirmed": 10,
+    "confirmed": 8,
     "share_stating_their_basis": 1.0,
     "share_answered": 0.8667
   },
@@ -6053,7 +6053,7 @@
     "audits": 1,
     "stating_their_basis": 6,
     "answered": 6,
-    "confirmed": 6,
+    "confirmed": 5,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },
@@ -6287,7 +6287,7 @@
     "audits": 5,
     "stating_their_basis": 2,
     "answered": 24,
-    "confirmed": 22,
+    "confirmed": 21,
     "share_stating_their_basis": 0.0833,
     "share_answered": 1.0
   },
@@ -6339,7 +6339,7 @@
     "audits": 2,
     "stating_their_basis": 6,
     "answered": 7,
-    "confirmed": 6,
+    "confirmed": 7,
     "share_stating_their_basis": 0.8571,
     "share_answered": 1.0
   },
@@ -6989,7 +6989,7 @@
     "audits": 4,
     "stating_their_basis": 6,
     "answered": 7,
-    "confirmed": 4,
+    "confirmed": 5,
     "share_stating_their_basis": 0.75,
     "share_answered": 0.875
   },
@@ -7314,7 +7314,7 @@
     "audits": 4,
     "stating_their_basis": 12,
     "answered": 7,
-    "confirmed": 5,
+    "confirmed": 4,
     "share_stating_their_basis": 0.9231,
     "share_answered": 0.5385
   },
@@ -8627,7 +8627,7 @@
     "audits": 4,
     "stating_their_basis": 18,
     "answered": 23,
-    "confirmed": 12,
+    "confirmed": 11,
     "share_stating_their_basis": 0.7826,
     "share_answered": 1.0
   },
@@ -8718,7 +8718,7 @@
     "audits": 2,
     "stating_their_basis": 7,
     "answered": 7,
-    "confirmed": 6,
+    "confirmed": 4,
     "share_stating_their_basis": 1.0,
     "share_answered": 1.0
   },

@@ -273,3 +273,64 @@ class TestAnHonestZero:
         assert not parser.NO_RECOMMENDATION.search(
             "The report makes four recommendations to the competent authority."
         )
+
+
+class TestMetadataIsStrippedFromTheText:
+    """The fields carry the metadata; the wording must not repeat it."""
+
+    def test_a_trailing_metadata_block_is_removed(self):
+        flattened = (
+            "To ensure that identity checks are performed at the minimum "
+            "frequencies laid down in EU legislation. Legal basis: Articles 6 "
+            "and 8 and Annexes I and II to Regulation (EU) 2019/1793 "
+            "Recommendation based on conclusion:40 Associated findings: 34"
+        )
+        assert parser.strip_metadata(flattened) == (
+            "To ensure that identity checks are performed at the minimum "
+            "frequencies laid down in EU legislation."
+        )
+
+    def test_an_interior_reference_phrase_is_removed_without_eating_wording(self):
+        flattened = (
+            "First recommendation wording. The recommendation is based on "
+            "conclusions 12 and 14. Second recommendation wording follows here."
+        )
+        assert parser.strip_metadata(flattened) == (
+            "First recommendation wording. Second recommendation wording follows here."
+        )
+
+    def test_a_legal_basis_far_from_the_end_is_left_alone(self):
+        flattened = (
+            "The legal basis: framework applies. " + "Wording continues. " * 40
+        ).strip()
+        assert "legal basis" in parser.strip_metadata(flattened).lower()
+
+    def test_the_legal_basis_field_stops_before_the_reference_lines(self):
+        body = (
+            "To ensure something.\n"
+            "Legal basis: Articles 6 and 8 and Annexes I and II to Regulation "
+            "(EU) 2019/1793\n"
+            "Recommendation based on conclusion: 40\n"
+            "Associated findings: 34\n"
+        )
+        match = parser.LEGAL_BASIS.search(body)
+        captured = " ".join(match.group(1).split())
+        assert captured.endswith("2019/1793")
+        assert "based on" not in captured.lower()
+
+    def test_a_metadata_only_block_keeps_its_text(self):
+        flattened = "Recommendation based on conclusion: 40"
+        assert parser.strip_metadata(flattened) == flattened
+
+    def test_wording_that_mentions_a_legal_basis_is_not_eaten(self):
+        flattened = (
+            "Establish a legal basis for official controls of feed at the "
+            "primary production stage."
+        )
+        assert parser.strip_metadata(flattened) == flattened
+
+    def test_a_stub_after_stripping_keeps_the_original_text(self):
+        flattened = (
+            "Establish a Legal basis: Article 45(6) of Regulation (EC) No 882/2004."
+        )
+        assert parser.strip_metadata(flattened) == flattened

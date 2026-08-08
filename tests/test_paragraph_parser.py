@@ -116,3 +116,40 @@ class TestLabellingParagraphs:
         position = text.index("1. The audit team")
         _, label = parser.context_at(marks, position)
         assert label == ""
+
+
+class TestHeadingsDoNotGlueOntoParagraphTails:
+    def test_the_next_sections_heading_is_cut_from_the_body(self):
+        text = (
+            "1. First paragraph with enough letters to be counted as a real "
+            "paragraph in the sequence.\n"
+            "5.3 COMPLIANCE OF BORDER CONTROL POSTS\n"
+            "2. Second paragraph with enough letters to be counted as well "
+            "in the sequence.\n"
+        )
+        boundaries = [text.index("5.3")]
+        bodies = [body for _, _, body in parser.split_paragraphs(text, boundaries)]
+        assert bodies[0].endswith("real paragraph in the sequence.")
+        assert "COMPLIANCE" not in bodies[0]
+
+    def test_without_boundaries_the_old_behaviour_stands(self):
+        text = (
+            "1. First paragraph with enough letters to be counted as a real "
+            "paragraph in the sequence.\n"
+            "5.3 COMPLIANCE OF BORDER CONTROL POSTS\n"
+            "2. Second paragraph with enough letters to be counted as well "
+            "in the sequence.\n"
+        )
+        bodies = [body for _, _, body in parser.split_paragraphs(text)]
+        assert "COMPLIANCE" in bodies[0]
+
+    def test_a_cut_that_would_empty_the_body_falls_back(self):
+        text = (
+            "1. First paragraph with enough letters to be counted as a real "
+            "paragraph in the sequence.\n"
+            "2. Second paragraph with enough letters to be counted as well "
+            "in the sequence.\n"
+        )
+        first_end = text.index("First")
+        bodies = [body for _, _, body in parser.split_paragraphs(text, [first_end])]
+        assert bodies[0].startswith("First paragraph")

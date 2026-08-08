@@ -143,7 +143,62 @@ CONCLUSIONS = re.compile(
     rf"based on conclusions?\s*(?:Nos?\b\.?)?\s*:?\s*({LIST})", re.I
 )
 FINDINGS = re.compile(rf"associated findings?\s*(?:Nos?\b\.?)?\s*:?\s*({LIST})", re.I)
-LEGAL_BASIS = re.compile(r"legal basis\s*:?\s*(.+?)(?:\n\s*\n|$)", re.I | re.S)
+# The capture stops where the next metadata line starts, not only at a blank
+# line: the layouts often run "Legal basis: ... Recommendation based on
+# conclusion: 40" without one, and the field used to swallow the references.
+_NEXT_METADATA = (
+    r"(?:the\s+)?recommendations?\s+(?:is\s+|are\s+)?based\s+on\b"
+    r"|based on conclusions?\b|associated findings?\b"
+)
+LEGAL_BASIS = re.compile(
+    rf"legal basis\s*:?\s*(.+?)(?=\n\s*\n|{_NEXT_METADATA}|$)", re.I | re.S
+)
+
+# The metadata is extracted into fields of their own, so the display text
+# should not repeat it. The reference phrases are bounded by the same number
+# list grammar as the extraction and are safe to remove wherever they occur;
+# the legal basis line is unbounded prose and is removed only where it runs
+# to the end of the block, so a block holding several recommendations cannot
+# lose real wording.
+_PHRASE_PREFIX = r"(?:the\s+)?recommendations?\s+(?:is\s+|are\s+)?"
+REFERENCE_PHRASES = [
+    re.compile(
+        rf"{_PHRASE_PREFIX}based on conclusions?\s*(?:Nos?\b\.?)?\s*:?\s*{LIST}\s*\.?",
+        re.I,
+    ),
+    re.compile(rf"based on conclusions?\s*(?:Nos?\b\.?)?\s*:?\s*{LIST}\s*\.?", re.I),
+    re.compile(rf"associated findings?\s*(?:Nos?\b\.?)?\s*:?\s*{LIST}\s*\.?", re.I),
+]
+# The colon is mandatory: the metadata label is always "Legal basis:",
+# while a recommendation's own wording can say "establish a legal basis
+# for" and must not be eaten.
+TRAILING_LEGAL = re.compile(r"legal basis\s*:\s*[^\n]{0,400}$", re.I)
+MAX_TRAILING_LEGAL = 500
+
+
+def strip_metadata(flattened: str) -> str:
+    """Remove extracted metadata from a recommendation's display text.
+
+    Args:
+        flattened: The whitespace-collapsed block text.
+
+    Returns:
+        The wording alone: reference phrases removed wherever they occur,
+        a trailing legal basis line removed where it ends the block.
+    """
+    result = flattened
+    for pattern in REFERENCE_PHRASES:
+        result = pattern.sub(" ", result)
+    last = None
+    for match in TRAILING_LEGAL.finditer(result):
+        last = match
+    if last is not None and len(result) - last.start() <= MAX_TRAILING_LEGAL:
+        result = result[: last.start()]
+    stripped = " ".join(result.split()).strip()
+    # A block whose wording all but disappears keeps its original text: the
+    # cleanup must never turn a recommendation into a stub, and the corpus
+    # invariant requires at least MIN_ITEM_LETTERS characters of wording.
+    return stripped if len(stripped) >= MIN_ITEM_LETTERS else flattened.strip()
 
 
 def report_text(path: Path) -> str:
@@ -452,7 +507,7 @@ def parse_report(record: dict) -> tuple[dict, list[dict]]:
                 **base,
                 "number": number,
                 "number_label": labels[number],
-                "text": " ".join(body.split()),
+                "text": strip_metadata(" ".join(body.split())),
                 "legal_basis": (
                     " ".join(legal_match.group(1).split())[:400]
                     if legal_match
