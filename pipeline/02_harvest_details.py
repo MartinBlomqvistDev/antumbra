@@ -145,7 +145,10 @@ def main() -> int:
         flush=True,
     )
 
-    with open(OUT, "a", encoding="utf-8") as fh, ThreadPoolExecutor(WORKERS) as pool:
+    with (
+        open(OUT, "a", encoding="utf-8", newline="\n") as fh,
+        ThreadPoolExecutor(WORKERS) as pool,
+    ):
         list(pool.map(lambda r: work(r, fh), todo))
 
     print(f"FINISHED, {_done} fetched in this run", flush=True)

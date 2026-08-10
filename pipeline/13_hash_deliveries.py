@@ -51,7 +51,7 @@ def main() -> int:
 
     recorded = known()
     added = 0
-    with MANIFEST.open("a", encoding="utf-8") as out:
+    with MANIFEST.open("a", encoding="utf-8", newline="\n") as out:
         for path in sorted(DELIVERIES.rglob("*")):
             if not path.is_file():
                 continue
