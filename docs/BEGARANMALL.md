@@ -966,3 +966,40 @@ skulle själv vara en protokollavvikelse. Publicering dag 40 eller senare
 förutsätter dessutom stängd insamling enligt definitionen ovan. Löper
 något spår fortfarande vid dag 40 skjuts publiceringen upp tills det är
 avslutat, och uppskjutandet loggas.
+
+### Tillämpningsnot 4, 2026-08-12: P8 tillämpas urvalsvis och avvikelsen redovisas
+
+P8 föreskriver att myndighetens prövning och ett skriftligt överklagbart beslut
+begärs inom tre arbetsdagar efter varje maskerad eller delvis leverans, per
+begäran, oavsett maskningens omfattning eller angiven grund. Regeln har inte
+följts. Den 12 augusti 2026, dag 7, hade ingen sådan skrivelse skickats för
+någon av de 31 leveranser som då var loggade, och fristen för den första
+leveransen, Stockholm B den 3 augusti, gick ut den 6 augusti.
+
+Avvikelsen rättas inte genom ett massutskick i efterhand. Fyra skäl:
+
+1. Maskningsgraden mäts enligt P8 på den första leveransen, före skrivelsen.
+   Måttet är därmed oskadat, och steg 14 i pipelinen mäter det maskinellt ur
+   handlingarna: maskningens typ, om text ligger kvar under en svärtad ruta,
+   och andelen maskade dokument per begäran.
+2. Skrivelsens enda funktion utöver måttet är att framkalla det beslut som P9
+   förutsätter. P9 medger högst fem överklaganden för A och B tillsammans, så
+   antalet beslut som behövs är långt mindre än antalet leveranser.
+3. P9:s kriterium (b) är definierat av jämförelsen mellan län. Skrivelserna kan
+   därför inte skickas innan maskningsanalysen är gjord utan att kriteriet blir
+   omöjligt att tillämpa.
+4. Länsstyrelserna har svarat snabbt, och flera har lämnat ut utan avgift trots
+   att de aviserat en. Administrativt arbete som mätningen inte kräver är en
+   kostnad projektet väljer att inte lägga på dem.
+
+Härefter gäller: P8 skickas när maskningsanalysen visar att en leverans
+uppfyller något av P9:s kriterier, och när myndigheten själv har erbjudit ett
+överklagbart beslut. För övriga leveranser skickas ingen skrivelse. C-grenen
+berörs inte; avslås C helt eller delvis begärs prövning och skriftligt beslut
+som P8 föreskriver.
+
+Följden för mätningen redovisas öppet. Om myndigheten fattar ett överklagbart
+beslut när det begärs, och hur snabbt, upphör att vara en enhetlig variabel
+över alla 21 länsstyrelser och blir en variabel för det urval som skrivelserna
+går till. Enhetligheten offras därför att den hade kostat myndigheterna arbete
+som mätningen inte behöver.
