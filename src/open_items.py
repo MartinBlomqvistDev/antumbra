@@ -289,10 +289,13 @@ def report(rows: list[dict], today: date) -> list[str]:
         waiting, key=lambda pair: pair[1]["silent_since"]
     ):
         silence = working_days_between(item["silent_since"], today)
+        quiet = "i dag" if silence == 0 else f"tyst {silence} arbetsdag"
+        if silence > 1:
+            quiet += "ar"
         flag = f"  [{item['note']}]" if item["note"] else ""
         lines.append(
             f"  {authority} {klass}: {item['last_event']['handelse']} "
-            f"{item['last_event']['datum']}, tyst {silence} arbetsdagar{flag}"
+            f"{item['last_event']['datum']}, {quiet}{flag}"
         )
 
     delivered = [key for key, i in items.items() if i["closed"]]
