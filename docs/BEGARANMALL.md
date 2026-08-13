@@ -1003,3 +1003,63 @@ beslut när det begärs, och hur snabbt, upphör att vara en enhetlig variabel
 över alla 21 länsstyrelser och blir en variabel för det urval som skrivelserna
 går till. Enhetligheten offras därför att den hade kostat myndigheterna arbete
 som mätningen inte behöver.
+
+### Tillämpningsnot 5, 2026-08-13: när en begäran om avgiftsbeslut besvaras med ett generellt styrdokument
+
+Anledningen deklareras. Örebro besvarade den 6 augusti 2026 en begäran om ett
+särskilt skriftligt beslut om avgiften med en riktlinje om avgiftsuttag från
+2023, och Kalmar besvarade den 12 augusti samma begäran med länsstyrelsens
+generella beslut om avgifter av den 9 december 2025, som enligt sin egen
+lydelse gäller alla utlämnanden från den 1 januari 2026. Situationen finns
+varken i P5 eller i tillämpningsnot 2, som förutsätter att myndigheten
+upprepar sitt erbjudande, inte att den skickar ett dokument den själv kallar
+beslutet.
+
+Noten skrivs innan något ytterligare svar inkommit från någon av de två, av
+samma skäl som tillämpningsnot 3: avslutet ska vara mekaniskt och inte bero på
+hur trött sökanden hunnit bli på en viss myndighet. Tidsföljden går att
+kontrollera i den append-only historiken.
+
+**Utlösande omständighet**, definierad av myndighetens handlande och inte av
+antalet skrivelser: myndigheten har fått besked om att ett generellt
+styrdokument inte är ett beslut i ärendet, eller den förnyade begäran enligt
+tillämpningsnot 2, och svarar därefter på nytt med något som inte är ett
+beslut i det egna ärendet. Ligger frågan hos myndighetens jurist enligt
+myndighetens eget besked är omständigheten inte uppfylld, och ingenting
+skickas medan den ligger där.
+
+**Åtgärd**, en gång per myndighet, i den tråd där styrdokumentet kom:
+
+```
+Hej!
+
+Jag har begärt ett särskilt skriftligt beslut om avgiften i mitt ärende
+enligt 23 § avgiftsförordningen (1992:191). Det jag har fått är ett
+generellt styrdokument, inte ett beslut i ärendet.
+
+Med ett beslut i ärendet avser jag en handling med en beslutsmening som
+avser min begäran, en motivering enligt 32 § förvaltningslagen
+(2017:900) och en underrättelse om hur beslutet överklagas enligt 33 §
+samma lag.
+
+Jag ber att frågan hänskjuts till myndighetens jurist.
+
+Med vänliga hälsningar,
+Martin Blomqvist
+```
+
+**Stopp.** Därefter skickas ingenting mer i avgiftsfrågan till den
+myndigheten. Att skrivelsen är den sista sägs inte i brevet. Dels kan ett
+sådant tillägg läsas som ett ultimatum, dels ska myndighetens fortsatta
+handlande inte formas av vetskapen att sökanden slutat skriva; det senare
+skulle vara en störning av det som mäts.
+
+**Måttet, deklarerat samtidigt som regeln.** Antal skrivelser i avgiftsfrågan
+fram till ett överklagbart beslut i ärendet, samt utfall i fyra klasser:
+beslut meddelat, beslut vägrat, generellt styrdokument i stället för beslut,
+och uteblivet svar. Redovisas för samtliga 21 länsstyrelser oavsett utfall,
+inklusive de län där noll skrivelser behövdes.
+
+**Avgränsning.** Jönköpings uttryckliga vägran den 6 augusti hör inte hit. Den
+är ett slutstatus enligt tillämpningsnot 3, uttryckligen vägrad, och besvaras
+inte.
