@@ -1,0 +1,82 @@
+name: DG SANTE sensor
+
+# Monthly check for audit reports published since the corpus was last built.
+# The sensor reports; it never commits. Refreshing the corpus stays a
+# deliberate act, because the published figures rest on a corpus frozen at a
+# stated date.
+
+on:
+  schedule:
+    - cron: "17 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sensor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Harvest the index for the current year window
+        run: |
+          year=$(date -u +%Y)
+          python pipeline/01_harvest_index.py --from $((year - 1)) --to $((year + 1))
+
+      - name: Compare the index against the committed corpus
+        id: diff
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+
+          data = Path("data")
+          index = json.loads((data / "dgsante_index.json").read_text("utf-8"))
+          known = {
+              json.loads(line)["detail_id"]
+              for line in (data / "dgsante_details.jsonl").read_text("utf-8").splitlines()
+          }
+          fresh = [row for row in index if row["detail_id"] not in known]
+          print(f"count={len(fresh)}")
+          Path("fresh.json").write_text(json.dumps(fresh, ensure_ascii=False), "utf-8")
+          PY
+
+      - name: Harvest the detail pages of the new audits
+        if: steps.diff.outputs.count != '0'
+        run: python pipeline/02_harvest_details.py
+
+      - name: Write the report
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          fresh = json.loads(Path("fresh.json").read_text("utf-8"))
+          if not fresh:
+              print("No audit reports published since the corpus was built.")
+              raise SystemExit
+
+          print(f"## {len(fresh)} new audit reports\n")
+          print("| Reference | Country | Period | Subject |")
+          print("| --- | --- | --- | --- |")
+          for row in sorted(fresh, key=lambda r: r["ref"]):
+              subject = row["subject"].replace("|", " ")
+              print(f"| {row['ref']} | {row['country']} | {row['period']} | {subject} |")
+          print("\nRun the full pipeline to take them into the corpus.")
+          PY
+
+      - name: Open an issue when the corpus is behind
+        if: steps.diff.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count=${{ steps.diff.outputs.count }}
+          gh issue create \
+            --title "DG SANTE: $count new audit reports since the last corpus build" \
+            --body "The monthly sensor found $count audit reports that are not in data/dgsante_details.jsonl. The run summary lists reference, country, period and subject: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
