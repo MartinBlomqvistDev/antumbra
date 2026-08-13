@@ -1,6 +1,6 @@
 """Measure how each delivered document was redacted.
 
-Step 14 of the pipeline. The delivered documents live outside git in
+Step 18 of the pipeline. The delivered documents live outside git in
 data/leveranser/ and contain personal data; this step reads them and writes
 only counts and flags to data/maskning.jsonl, never a character of their text.
 
@@ -21,7 +21,7 @@ the page frame. Text under a box is counted by character centre, which is
 robust to the box being drawn slightly larger than the glyphs.
 
 Usage:
-    python pipeline/14_analyse_masking.py
+    python pipeline/18_analyse_masking.py
 """
 
 from __future__ import annotations

@@ -979,7 +979,7 @@ leveransen, Stockholm B den 3 augusti, gick ut den 6 augusti.
 Avvikelsen rättas inte genom ett massutskick i efterhand. Fyra skäl:
 
 1. Maskningsgraden mäts enligt P8 på den första leveransen, före skrivelsen.
-   Måttet är därmed oskadat, och steg 14 i pipelinen mäter det maskinellt ur
+   Måttet är därmed oskadat, och steg 18 i pipelinen mäter det maskinellt ur
    handlingarna: maskningens typ, om text ligger kvar under en svärtad ruta,
    och andelen maskade dokument per begäran.
 2. Skrivelsens enda funktion utöver måttet är att framkalla det beslut som P9
