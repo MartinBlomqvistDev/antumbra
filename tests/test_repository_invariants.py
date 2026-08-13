@@ -199,6 +199,21 @@ class TestThePipelineStaysOrdered:
         )
 
 
+class TestOpenItemsKnowsEveryEvent:
+    """The open-items report must never guess which side an event came from."""
+
+    def test_every_logged_event_is_mapped_to_a_side(self):
+        from src.open_items import load, unmapped
+
+        holes = unmapped(load())
+        assert not holes, (
+            f"event types missing from src/open_items.py: {sorted(holes)}. Until "
+            "they are placed in OURS, THEIRS or INTERNAL the report cannot say "
+            "who owes the next move, and a new event type would silently drop "
+            "out of the check."
+        )
+
+
 class TestDocumentationMatchesData:
     """Figures quoted in docs/DGSANTE.md must hold against the data files."""
 

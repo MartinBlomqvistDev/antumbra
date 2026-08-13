@@ -139,6 +139,16 @@ python pipeline/13_hash_deliveries.py      # sha256 over received Swedish docume
 python pipeline/14_embed_paragraphs.py     # local embeddings for retrieval
 python pipeline/15_export_web_data.py      # the site's data, verified twice
 python pipeline/16_bake_examples.py        # example answers via the live code path
+python pipeline/17_package_hf_dataset.py   # the corpus packaged for Hugging Face
+python pipeline/18_analyse_masking.py      # redaction kind per received document
+```
+
+One report is not a pipeline step, because it derives nothing and writes
+nothing. It reads the protocol log and prints what each of the 43 requests is
+waiting for, which side owes the next move, and when it falls due:
+
+```bash
+python src/open_items.py
 ```
 
 The steps write to `data/`. The slow ones are resumable and skip what is
