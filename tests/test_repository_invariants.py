@@ -185,6 +185,20 @@ class TestNoPersonalDataIsCommitted:
         )
 
 
+class TestThePipelineStaysOrdered:
+    """The numbered steps are how docs and ADRs refer to the work."""
+
+    def test_step_numbers_are_unique(self):
+        steps = (ROOT / "pipeline").glob("[0-9][0-9]_*.py")
+        numbers = [path.name[:2] for path in steps]
+        duplicates = sorted({n for n in numbers if numbers.count(n) > 1})
+        assert not duplicates, (
+            f"two pipeline scripts share a step number: {duplicates}. The number "
+            "is how docs and ADRs cite a step, so a collision makes every such "
+            "reference ambiguous."
+        )
+
+
 class TestDocumentationMatchesData:
     """Figures quoted in docs/DGSANTE.md must hold against the data files."""
 

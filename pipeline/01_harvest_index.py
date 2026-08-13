@@ -83,13 +83,22 @@ def main() -> int:
     opener.addheaders = [("User-Agent", UA)]
 
     all_rows: list[dict] = []
+    failed: list[int] = []
     for year in range(args.start, args.end + 1):
         try:
             rows = harvest_year(opener, year)
             all_rows.extend(rows)
             print(f"{year} {len(rows)}", flush=True)
         except Exception as exc:
+            failed.append(year)
             print(f"{year} FAILED {exc}", flush=True)
+
+    # The index is rewritten whole, so a partial harvest would silently shrink
+    # it, and a caller comparing the index against the corpus would read the
+    # gap as "nothing new published". Write nothing unless every year answered.
+    if failed:
+        print(f"NOT WRITTEN, {len(failed)} years failed: {failed}")
+        return 1
 
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(all_rows, ensure_ascii=False), encoding="utf-8")
