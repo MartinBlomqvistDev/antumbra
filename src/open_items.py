@@ -254,7 +254,8 @@ def report(rows: list[dict], today: date) -> list[str]:
         f"Dag {day} av {PUBLICATION_DAY}. {len(tracks)} begäranden, "
         f"{sum(1 for i in items.values() if i['closed'])} avslutade enligt not 3, "
         f"{sum(1 for i in items.values() if i['partial'])} delleveranser, "
-        f"{sum(1 for i in items.values() if i['fee_stopped'])} avgiftsstoppade. "
+        f"{sum(1 for i in items.values() if i['fee_stopped'] and not i['closed'])} "
+        f"avgiftsstoppade. "
         f"Publiceringsgräns {publication.isoformat()}."
     )
 
