@@ -141,6 +141,9 @@ python pipeline/15_export_web_data.py      # the site's data, verified twice
 python pipeline/16_bake_examples.py        # example answers via the live code path
 python pipeline/17_package_hf_dataset.py   # the corpus packaged for Hugging Face
 python pipeline/18_analyse_masking.py      # redaction kind per received document
+python pipeline/19_ocr_deliveries.py       # Swedish OCR over the scanned deliveries
+python pipeline/20_extract_species.py      # which animals each document concerns
+python pipeline/21_contrast_within_species.py  # class A against B, within species
 ```
 
 One report is not a pipeline step, because it derives nothing and writes

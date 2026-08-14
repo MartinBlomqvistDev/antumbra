@@ -318,3 +318,50 @@ enligt avsnitt 4 och P1 redovisas per djurslag. Fältmåttet kräver att
 handlingarnas fältstruktur parsas, och djurslag kräver klassning per handling.
 Ingetdera finns; ytdelen och dokumentandelen är det som mäts i dag, och det ska
 sägas när talen används.
+
+---
+
+## Djurslag och kontrastmåttet inom djurslag
+
+Verifierat 2026-08-14 genom körning av stegen 19 till 21 över hela
+leveransmaterialet.
+
+**OCR på de skannade leveranserna.** 45 dokument, 378 sidor, 58 305 ord,
+Tesseract med svenskt språkpaket i 300 dpi. Medelkonfidensen är 82,9 med
+median, lägst 28,9 och högst 95,2. Åtta läsningar ligger under 70 i konfidens
+eller under 30 ord och ska inte behandlas som lika säkra som de övriga;
+konfidensen står per dokument i `data/leveranser_ocr_index.jsonl`. Texten
+ligger utanför git eftersom den namnger enskilda.
+
+**Djurslagsklassningen är prövad mot ett oberoende facit.** Flera län skriver
+djurslaget i filnamnet, till exempel "Föreläggande ... nöt, kalv" och
+"... gris". 23 dokument bär en sådan etikett från myndigheten själv, och
+**22 av 23 stämmer** mot vad textklassningen säger. Avvikelsen är ett
+hullvärderingsschema för nötkreatur där djurslaget står i titeln men inte i
+blankettexten.
+
+40 dokument nämner inget djurslag: fyra är inte leveranser utan avgiftsbeslut
+och riktlinjer, fyra är fotobilagor, en är en blankett, och 31 är rapporter
+eller beslut med 400 till 2 500 ord text, alltså inte ett extraktionsfel.
+Flera av de 31 är administrativa bilagor som rimligen inte nämner djurslag,
+såsom underrättelser, kopior av klagomål och tjänsteanteckningar.
+**Ordlistan har medvetet inte justerats mot de 31**, eftersom det vore att
+anpassa klassificeraren efter samma dokument som ska bedöma den. Ett handläst
+stickprov återstår, och till dess är klassningen prövad bara mot filnamnen.
+
+**Kontrastmåttet inom djurslag, P1:s definition.** 62 celler av myndighet,
+djurslag och klass; 22 har både A och B, varav 11 har minst tre dokument i
+båda:
+
+| Djurslag | Län | Median, andel maskade | Median, maskad yta | Negativa |
+| --- | --- | --- | --- | --- |
+| nöt | 9 | +80 procentenheter | +2,74 procentenheter | 1 |
+| fjäderfä | 2 | +100 procentenheter | +0,73 procentenheter | 0 |
+| gris | 0 | går inte att beräkna | går inte att beräkna | - |
+
+**Kontrasten är alltså inte en djurslagsartefakt.** Den enda negativa cellen är
+Dalarna, där andelen maskade dokument är lägre i A än i B, med tre dokument i
+A; ytmåttet pekar där åt samma håll som i övriga län. För gris saknas underlag
+helt, vilket stämmer med att Dalarna uttryckligen svarat att någon
+kontrollrapport för gris inte påträffats, och det ska redovisas som en gräns
+för mätningen och inte döljas.
