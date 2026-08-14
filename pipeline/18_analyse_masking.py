@@ -78,7 +78,11 @@ def is_solid_dark(colour: object) -> bool:
 
 
 def redaction_boxes(page: pdfplumber.page.Page) -> list[tuple[float, ...]]:
-    """The filled rectangles on a page that look like redactions."""
+    """The filled rectangles on a page that look like redactions.
+
+    Returns each box as x0, top, x1, bottom in points, so that both the count
+    and the covered area can be measured.
+    """
     page_area = float(page.width) * float(page.height)
     boxes = []
     for rect in page.rects:
@@ -139,11 +143,11 @@ def dark_runs(dark: np.ndarray) -> list[tuple[int, int, int]]:
     ]
 
 
-def image_bars(dark: np.ndarray) -> int:
-    """Solid dark rectangles in a rendered page, grouped from horizontal runs."""
+def image_bars(dark: np.ndarray) -> tuple[int, int]:
+    """Solid dark rectangles in a rendered page: how many, and their area."""
     runs = dark_runs(dark)
     if not runs:
-        return 0
+        return 0, 0
     page_area = dark.size
     open_blocks: list[list[int]] = []  # x0, x1, y0, y1
     closed: list[list[int]] = []
@@ -161,7 +165,7 @@ def image_bars(dark: np.ndarray) -> int:
         open_blocks = [b for b in open_blocks if b[3] >= row - 1]
     closed.extend(open_blocks)
 
-    bars = 0
+    bars = covered = 0
     for x0, x1, y0, y1 in closed:
         width, height = x1 - x0, y1 - y0 + 1
         if height < MIN_BAR_H:
@@ -171,27 +175,33 @@ def image_bars(dark: np.ndarray) -> int:
         floor = BIG_FILL if area > page_area * BIG_SHARE else MIN_FILL
         if fill >= floor:
             bars += 1
-    return bars
+            covered += area
+    return bars, covered
 
 
-def scan_bars(path: Path) -> tuple[int, int]:
-    """Bars and pages carrying them, for a document with no text layer."""
+def scan_bars(path: Path) -> tuple[int, int, float]:
+    """Bars, pages carrying them and covered share, for a scanned document."""
     try:
         import pymupdf
     except ImportError:  # the step still measures born-digital files without it
-        return -1, -1
+        return -1, -1, 0.0
 
     total = pages = 0
+    covered = surface = 0
     with pymupdf.open(path) as doc:
         for page in doc:
             pixmap = page.get_pixmap(dpi=DPI, colorspace=pymupdf.csGRAY)
             grey = np.frombuffer(pixmap.samples, dtype=np.uint8).reshape(
                 pixmap.height, pixmap.width
             )
-            found = image_bars(grey[EDGE:-EDGE, EDGE:-EDGE] < DARK_LEVEL)
+            inner = grey[EDGE:-EDGE, EDGE:-EDGE] < DARK_LEVEL
+            found, area = image_bars(inner)
             total += found
+            covered += area
+            surface += inner.size
             pages += 1 if found else 0
-    return total, pages
+    share = covered / surface if surface else 0.0
+    return total, pages, round(share, 5)
 
 
 def classify(record: dict) -> tuple[str, bool | None]:
@@ -224,6 +234,7 @@ def analyse(path: Path) -> dict:
         "chars_under_boxes": 0,
         "bars": 0,
         "pages_with_bars": 0,
+        "masked_area_share": 0.0,
         "marker_in_filename": "bortredigerad" in name,
         "marker_in_text": False,
         "method": "text",
@@ -231,10 +242,12 @@ def analyse(path: Path) -> dict:
         "masked": None,
         "error": None,
     }
+    covered = surface = 0.0
     try:
         with pdfplumber.open(path) as pdf:
             record["pages"] = len(pdf.pages)
             for page in pdf.pages:
+                surface += float(page.width) * float(page.height)
                 text = (page.extract_text() or "").lower()
                 if text.strip():
                     record["pages_with_text"] += 1
@@ -246,12 +259,16 @@ def analyse(path: Path) -> dict:
                     record["boxes"] += len(boxes)
                     record["pages_with_boxes"] += 1
                     record["chars_under_boxes"] += chars_inside(page, boxes)
+                    covered += sum((x1 - x0) * (b - t0) for x0, t0, x1, b in boxes)
     except Exception as exc:  # a corrupt file is a finding, not a crash
         record["error"] = str(exc)[:200]
 
     if not record["error"] and record["pages_with_text"] == 0:
         record["method"] = "image"
-        record["bars"], record["pages_with_bars"] = scan_bars(path)
+        record["bars"], record["pages_with_bars"], share = scan_bars(path)
+        record["masked_area_share"] = share
+    elif surface:
+        record["masked_area_share"] = round(covered / surface, 5)
 
     record["kind"], record["masked"] = classify(record)
     return record

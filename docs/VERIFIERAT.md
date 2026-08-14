@@ -298,7 +298,23 @@ strikt bättre än de två andra. **De två avvikelserna är kända och förklar
 före utskrift ser likadan ut som en sida som aldrig bar texten. `masked` falskt
 på en skanning betyder att ingen balk hittades, inte att ingenting undanhållits.
 
-**Utfallet över hela materialet, 293 dokument, inga uteslutna:** begäran A
-maskad i 138 av 155 dokument, 89 procent; begäran B i 31 av 134, 23 procent. 45
-dokument bedömdes på bild. Före bildmetoden var 45 dokument omätbara och
-kontrasten mättes på 244 dokument till 86 mot 17 procent.
+**Utfallet över hela materialet, 293 dokument, inga uteslutna.** Två mått
+hålls isär, och bara det andra är protokollets:
+
+*Andel dokument med minst en maskning*, poolat över landet: begäran A 138 av
+155, 89 procent; begäran B 31 av 134, 23 procent. Före bildmetoden var 45
+dokument omätbara och samma tal var 86 mot 17 räknat på 244 dokument.
+
+*Kontrastmåttet enligt P1*, alltså skillnaden i maskningsgrad mellan A och B
+inom samma myndighet: 14 län har levererat i båda klasserna. Medianskillnaden
+är **2,3 procentenheter maskerad yta** och **80 procentenheter andel maskade
+dokument**. Inget av de fjorton länen har högre maskad yta i B än i A. Dalarna
+är det enda som vänder på andelsmåttet, 60 procent av A mot 80 procent av B,
+medan ytan där pekar åt samma håll som i övriga län.
+
+**Det som ännu inte är byggt av det förregistrerade måttet:** maskningsgrad är
+förregistrerad som andel maskerad yta **plus andel maskerade fält**, och ska
+enligt avsnitt 4 och P1 redovisas per djurslag. Fältmåttet kräver att
+handlingarnas fältstruktur parsas, och djurslag kräver klassning per handling.
+Ingetdera finns; ytdelen och dokumentandelen är det som mäts i dag, och det ska
+sägas när talen används.
