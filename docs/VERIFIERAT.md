@@ -263,3 +263,42 @@ visste länsstyrelsen inte om anläggningen var i drift. **Men anläggningen har
 cirka 10 000 hönor och IED-tröskeln går vid 40 000.** Det värst dokumenterade
 fallet ligger under tröskeln och finns inte i tillståndsmaterialet. Det ska stå
 i metoden i stället för att upptäckas av någon annan.
+
+---
+
+## Maskningsmätningen: bildmetoden mot textlagret
+
+Verifierat 2026-08-14 genom körning över hela leveransmaterialet, steg 18.
+
+Leveranserna kommer i två former. Digitalt födda filer bedöms ur textlagret:
+en fylld rektangel är en maskning, och om text ligger kvar under den avgör om
+maskningen är verklig. Skannade filer saknar textlager och bedöms i stället på
+den renderade sidan, genom solida mörka rektanglar i bilden.
+
+**Bildmetoden är prövad mot textmetoden på samtliga 248 digitalt födda
+dokument**, alltså där ett facit redan fanns:
+
+| Facit ur textlagret | Antal | Balk hittad | Ingen balk |
+| --- | --- | --- | --- |
+| maskade (`text_removed`) | 123 | 122 | 1 |
+| omaskade (`none`) | 118 | 1 | 117 |
+| endast markör (`marker_only`) | 7 | 3 | 4 |
+
+Tre parametersättningar prövades mot samma facit innan en valdes; den valda är
+strikt bättre än de två andra. **De två avvikelserna är kända och förklarade:**
+
+- Det missade maskade dokumentet är `kronoberg_A`, där maskningen är 13 gånger
+  15 punkter, alltså under detektorns minsta balk om 40 gånger 6 bildpunkter
+  vid 100 dpi. En maskning så liten som två tecken hittas inte.
+- Den falska träffen är `jamtland_A`, ett dokument med fotografier, där ett
+  mörkt parti i ett foto uppfyller balkkriterierna. Fotografier i skannat
+  material kan alltså räknas som maskning.
+
+**Golvet metoden inte ser förbi:** en skanning av en sida vars text togs bort
+före utskrift ser likadan ut som en sida som aldrig bar texten. `masked` falskt
+på en skanning betyder att ingen balk hittades, inte att ingenting undanhållits.
+
+**Utfallet över hela materialet, 293 dokument, inga uteslutna:** begäran A
+maskad i 138 av 155 dokument, 89 procent; begäran B i 31 av 134, 23 procent. 45
+dokument bedömdes på bild. Före bildmetoden var 45 dokument omätbara och
+kontrasten mättes på 244 dokument till 86 mot 17 procent.
