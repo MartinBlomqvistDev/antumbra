@@ -335,10 +335,12 @@ ligger utanför git eftersom den namnger enskilda.
 
 **Djurslagsklassningen är prövad mot ett oberoende facit.** Flera län skriver
 djurslaget i filnamnet, till exempel "Föreläggande ... nöt, kalv" och
-"... gris". 23 dokument bär en sådan etikett från myndigheten själv, och
-**22 av 23 stämmer** mot vad textklassningen säger. Avvikelsen är ett
-hullvärderingsschema för nötkreatur där djurslaget står i titeln men inte i
-blankettexten.
+"... gris". 23 dokument bär en sådan etikett från myndigheten själv, och två
+test har körts mot den. **Mjukt test, finns filnamnets djurslag i texten: 22 av
+23. Strikt test, är klassningens utpekade dominerande djurslag detsamma som
+filnamnets: 21 av 23.** Avvikelserna är ett hullvärderingsschema för nötkreatur
+där djurslaget står i titeln men inte i blankettexten, och ett föreläggande vars
+filnamn säger nöt men vars text nämner fjäderfä oftare.
 
 40 dokument nämner inget djurslag: fyra är inte leveranser utan avgiftsbeslut
 och riktlinjer, fyra är fotobilagor, en är en blankett, och 31 är rapporter
