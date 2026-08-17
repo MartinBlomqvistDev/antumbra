@@ -634,13 +634,30 @@ class TestTheConditionBaselineHoldsItsClaim:
     def test_the_corpus_is_the_one_the_document_describes(self, conditions, permits):
         assert len(permits) == 236
         assert len({p["sha256"] for p in permits}) == 235
-        assert len(conditions) == 1704
-        assert len({r["id"] for r in conditions}) == 120
+        assert len(conditions) == 2264
+        assert len({r["id"] for r in conditions}) == 173
+
+    def test_the_two_sources_are_kept_apart(self, conditions):
+        # The published figure is the born-digital one. OCR text loses
+        # characters and breaks words at line ends, so pooling the two moves
+        # the reuse share for an instrument reason. Both counts are pinned so
+        # that a pooled headline cannot appear unnoticed.
+        by_source = Counter(r["källa"] for r in conditions)
+        assert by_source == {"text": 1704, "ocr": 560}
+        assert len({r["id"] for r in conditions if r["källa"] == "text"}) == 120
+        assert len({r["id"] for r in conditions if r["källa"] == "ocr"}) == 53
 
     def test_no_condition_row_carries_text(self, conditions):
         # The corpus is outside version control because the file names carry
         # private individuals' names; the hash is the only thing that may leave.
-        fields = {"id", "prövningsgrupp", "villkorsnummer", "tecken", "series_ok"}
+        fields = {
+            "id",
+            "prövningsgrupp",
+            "villkorsnummer",
+            "tecken",
+            "källa",
+            "series_ok",
+        }
         for record in conditions:
             assert set(record) == fields | {"text_hash"}
             assert len(record["text_hash"]) == 16
@@ -654,37 +671,53 @@ class TestTheConditionBaselineHoldsItsClaim:
 
     def test_the_series_check_still_passes_on_most_decisions(self, conditions):
         per_decision = {}
+        source = {}
         for record in conditions:
             per_decision.setdefault(record["id"], []).append(record["villkorsnummer"])
+            source[record["id"]] = record["källa"]
         clean = {
             i
             for i, ns in per_decision.items()
             if sorted(ns) == list(range(1, max(ns) + 1))
         }
-        assert len(clean) == 106
-        # series_ok is recorded per row and must agree with the numbers.
+        # OCR segments worse, and the gap is the reason the sources stay apart.
+        assert sum(1 for i in clean if source[i] == "text") == 106
+        assert sum(1 for i in clean if source[i] == "ocr") == 21
         for record in conditions:
             assert record["series_ok"] == (record["id"] in clean)
 
+    @staticmethod
+    def owners(rows) -> dict[str, set[str]]:
+        """Which decisions carry each condition text."""
+        found: dict[str, set[str]] = {}
+        for record in rows:
+            found.setdefault(record["text_hash"], set()).add(record["id"])
+        return found
+
     def test_the_headline_share_of_shared_text(self, conditions):
-        owners = {}
-        for record in conditions:
-            owners.setdefault(record["text_hash"], set()).add(record["id"])
+        rows = [r for r in conditions if r["källa"] == "text"]
+        owners = self.owners(rows)
         shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
-        repeated = sum(1 for r in conditions if len(owners[r["text_hash"]]) > 1)
+        repeated = sum(1 for r in rows if len(owners[r["text_hash"]]) > 1)
         assert len(owners) == 1316
         assert len(shared) == 217
         assert repeated == 605
-        assert round(repeated / len(conditions), 2) == 0.36
+        assert round(repeated / len(rows), 2) == 0.36
 
     def test_reuse_stays_inside_a_permit_division(self, conditions):
         groups = {r["id"]: r["prövningsgrupp"] for r in conditions}
-        owners = {}
-        for record in conditions:
-            owners.setdefault(record["text_hash"], set()).add(record["id"])
-        shared = [ids for ids in owners.values() if len(ids) > 1]
-        inside = sum(1 for ids in shared if len({groups[i] for i in ids}) == 1)
-        assert inside == 204
+        inside = {}
+        for source in ("text", "ocr"):
+            rows = [r for r in conditions if r["källa"] == source]
+            shared = [ids for ids in self.owners(rows).values() if len(ids) > 1]
+            inside[source] = (
+                sum(1 for ids in shared if len({groups[i] for i in ids}) == 1),
+                len(shared),
+            )
+        # The OCR set shares no document with the born-digital one, so its own
+        # concentration is a replication and not a restatement.
+        assert inside["text"] == (204, 217)
+        assert inside["ocr"] == (39, 41)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

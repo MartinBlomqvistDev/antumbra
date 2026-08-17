@@ -20,10 +20,10 @@ present in the corpus, and VILLKORSSCHEMA section 2.2 already records that
 headings vary and can be absent.
 
 **What this step is not.** It does not classify conditions by type, parse
-quantified requirements or resolve the decision's identity. It reads only the
-decisions that carry a usable text layer, and among those only the ones whose
-conditions section can be located. Both limits are counted and printed with the
-result rather than hidden behind it.
+quantified requirements or resolve the decision's identity. It reaches only the
+decisions whose conditions section can be located, which is the limit that
+decides coverage. That limit is counted and printed with the result rather than
+hidden behind it.
 
 **The measure.** Two condition texts count as the same when they are identical
 after case folding and whitespace collapsing, and nothing else is normalised.
@@ -35,8 +35,16 @@ conservative instrument, and it can only understate reuse.
 
 **Verification is check 1 from VILLKORSSCHEMA section 5**, the numbers forming
 the series 1..N. Every decision carries the outcome as series_ok, and the
-reuse figures are reported twice, over every decision and over the clean subset
-alone, so that a segmentation failure cannot carry the headline.
+reuse figures are reported over the clean subset as well as over everything, so
+that a segmentation failure cannot carry the headline.
+
+**Born-digital and OCR text are never pooled into the headline.** Step 25 reads
+the scans, and every row records which source it came from. OCR breaks words
+across line ends and loses characters, so two identical conditions seldom
+survive as identical strings once one has been read by OCR. A pooled reuse share
+would therefore fall for an instrument reason and not a factual one. The
+born-digital figure is printed first and labelled as the headline, the OCR set
+is reported beside it, and the pooled figure is printed last carrying nothing.
 
 **Reuse staying inside one permit division is tested against chance.** Two
 divisions hold half the corpus, so a shared text landing inside one division is
@@ -68,6 +76,8 @@ import pymupdf
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "pdf" / "jordbruksverket"
 MANIFEST = ROOT / "data" / "tillstand_manifest.jsonl"
+OCR_DIR = ROOT / "ocr" / "tillstand"
+OCR_INDEX = ROOT / "data" / "tillstand_ocr_index.jsonl"
 OUT = ROOT / "data" / "villkor_baseline.jsonl"
 
 MIN_CHARS_PER_PAGE = 200
@@ -104,6 +114,25 @@ CONDITION_START = re.compile(r"^(\d{1,2})[.)]\s*(.*)$")
 def normalise(text: str) -> str:
     """Case folded with whitespace collapsed, and nothing else changed."""
     return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+def document_text(path: Path) -> tuple[str, str]:
+    """The text of one decision and where it came from.
+
+    A born-digital text layer is preferred. A scan has none, and then step 25's
+    OCR output is used if it exists. Which of the two a decision was read from
+    is carried through to every row, because OCR text segments worse and a
+    figure that pooled the two silently would hide that.
+    """
+    with pymupdf.open(path) as document:
+        pages = len(document)
+        text = "\n".join(page.get_text() for page in document)
+    if len(text) >= MIN_CHARS_PER_PAGE * pages:
+        return text, "text"
+    recognised = OCR_DIR / f"{path.stem}.txt"
+    if recognised.exists():
+        return recognised.read_text("utf-8"), "ocr"
+    return "", ""
 
 
 def section(lines: list[str]) -> list[str]:
@@ -244,10 +273,8 @@ def main() -> int:
         if path.stem not in groups:
             unlisted += 1
             continue
-        with pymupdf.open(path) as document:
-            pages = len(document)
-            text = "\n".join(page.get_text() for page in document)
-        if len(text) < MIN_CHARS_PER_PAGE * pages:
+        text, origin = document_text(path)
+        if not origin:
             no_text += 1
             continue
         window = section(text.split("\n"))
@@ -268,6 +295,7 @@ def main() -> int:
                     "prövningsgrupp": groups[path.stem],
                     "villkorsnummer": number,
                     "tecken": len(body),
+                    "källa": origin,
                     "series_ok": ok,
                     "text_hash": hashlib.sha256(body.encode("utf-8")).hexdigest()[:16],
                 }
@@ -295,10 +323,45 @@ def main() -> int:
         f"lägst {counts[0]}, högst {counts[-1]}"
     )
 
-    print("\nalla segmenterade beslut")
-    print(reuse(records, groups))
-    print("\nbara beslut med obruten serie")
-    print(reuse([r for r in records if r["id"] in clean], groups))
+    by_origin = {
+        o: {r["id"] for r in records if r["källa"] == o} for o in ("text", "ocr")
+    }
+    if by_origin["ocr"]:
+        confidence = {}
+        if OCR_INDEX.exists():
+            confidence = {
+                json.loads(line)["id"]: json.loads(line)["confidence"]
+                for line in OCR_INDEX.read_text("utf-8").splitlines()
+            }
+        read = sorted(confidence[i] for i in by_origin["ocr"] if i in confidence)
+        print(
+            f"källa: {len(by_origin['text'])} beslut ur textlagret, "
+            f"{len(by_origin['ocr'])} ur OCR"
+            + (f", mediankonfidens {read[len(read) // 2]}" if read else "")
+        )
+        for origin in ("text", "ocr"):
+            ids = by_origin[origin]
+            good = len(ids & clean)
+            share = good / len(ids) if ids else 0.0
+            print(f"  {origin}: obruten serie {good} av {len(ids)}, {share:.0%}")
+
+    # The headline is the born-digital set, and the order here says so. OCR
+    # text breaks words across line ends and drops characters, so two identical
+    # conditions rarely survive as identical strings once one of them has been
+    # read by OCR. Pooling the two sources would therefore move the reuse share
+    # downwards for an instrument reason rather than a factual one, and the
+    # figure that goes into docs/VERIFIERAT.md must not move that way.
+    print("\nHUVUDSIFFRA, beslut ur textlagret")
+    print(reuse([r for r in records if r["källa"] == "text"], groups))
+    print("\nbara beslut ur textlagret med obruten serie")
+    print(
+        reuse([r for r in records if r["källa"] == "text" and r["id"] in clean], groups)
+    )
+    if by_origin["ocr"]:
+        print("\nbara OCR-lästa beslut, exakt matchning missgynnar dem")
+        print(reuse([r for r in records if r["källa"] == "ocr"], groups))
+        print("\npoolat, redovisas för fullständighet och bär ingen slutsats")
+        print(reuse(records, groups))
     return 0
 
 

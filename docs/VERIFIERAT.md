@@ -380,7 +380,8 @@ för mätningen och inte döljas.
 ## Villkorslagret: baselinetestet mot standardtext
 
 Mätt 2026-08-17 med `pipeline/24_condition_baseline.py` över de 236 hämtade
-filerna, som är 235 unika beslut. Testet ligger före all extraktion av ett skäl:
+filerna, som är 235 unika beslut, och om 2026-08-18 sedan de skannade besluten
+OCR-lästs. Testet ligger före all extraktion av ett skäl:
 om villkoren är standardtext som återanvänds mellan anläggningar beskriver ett
 villkorsregister en mall, och då är det resultatet. Nollhypotesen är alltså att
 villkoren är mall.
@@ -391,24 +392,46 @@ dokumentet, och då gav bara 12 beslut av 144, **8 procent**, en obruten
 sifferserie 1..N. Numrerade listor finns över hela besluten, i redogörelsen och i
 upplysningarna, så det måttet togs över en blandning av villkor och annan text.
 Den version som gäller söker villkorsrubriken, läser till nästa avsnittsrubrik
-och segmenterar bara innanför det fönstret: då ger **88 procent** en obruten
-serie, 106 av 120. Rubriken hittas av `SECTION_START` i 122 av de 164 filerna
-med textlager, vilket stämmer med att `VILLKORSSCHEMA.md` avsnitt 2.2 redan
-skriver att rubriker varierar och kan saknas.
+och segmenterar bara innanför det fönstret: då ger **88 procent** av de digitalt
+födda besluten en obruten serie, 106 av 120. Att rubriken inte alltid går att
+hitta stämmer med att `VILLKORSSCHEMA.md` avsnitt 2.2 redan skriver att rubriker
+varierar och kan saknas.
 
-**Täckningen, räknad så som en kritisk läsare skulle räkna den.** 72 filer
-saknar textlager och är inte OCR-körda, 42 har textlager men ingen rubrik som
-går att hitta, 2 har rubrik men inget numrerat villkor. Kvar: **120 filer av
-236, alltså 51 procent, och 1 704 villkor**, median 13 villkor per beslut.
-Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5, sifferserien 1..N,
-och varje beslut bär utfallet som `series_ok`.
+**Täckningen, räknad så som en kritisk läsare skulle räkna den.** Efter att steg
+25 OCR-läst de 72 skannade besluten saknar ingen fil text. Kvar som bortfall: 60
+filer utan villkorsrubrik som går att hitta och 3 med rubrik men inget numrerat
+villkor. Segmenterade: **173 filer av 236, alltså 73 procent, och 2 264
+villkor**, median 13 villkor per beslut. Rubrikträffen är nästan lika god i båda
+källorna: 122 av 164 digitalt födda och 54 av 72 OCR-lästa, alltså 74 respektive
+75 procent. Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5,
+sifferserien 1..N, och varje beslut bär utfallet som `series_ok` och sin källa
+som `källa`.
 
-**Resultatet, och det står sig i den rena delmängden:**
+**Täckningen för själva huvudsiffran är däremot oförändrad.** 73 procent gäller
+segmenteringen, inte återanvändningsmåttet. Huvudsiffran räknas på de 120
+digitalt födda besluten, alltså 51 procent av korpusen, precis som före OCR:n.
+Det som tillkommit är en andra, separat mätning på 53 andra beslut.
+
+**OCR-läst text segmenteras sämre, och det är utskrivet i stället för utjämnat.**
+Obruten serie fås för 106 av 120 digitalt födda beslut, 88 procent, men bara 21
+av 53 OCR-lästa, 40 procent. OCR bryter dessutom ord över radslut, så två
+identiska villkor överlever sällan som identiska strängar när ett av dem lästs
+med OCR. Därför poolas källorna aldrig i huvudsiffran; det poolade talet skrivs
+ut men bär ingen slutsats.
+
+**Resultatet, och det står sig i varje delmängd:**
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| alla segmenterade | 1 704 | 120 | 1 316 | 605 (36 %) | 68 % |
-| bara obruten serie | 1 545 | 106 | 1 200 | 544 (35 %) | 70 % |
+| **huvudsiffra, ur textlagret** | 1 704 | 120 | 1 316 | 605 (36 %) | 68 % |
+| ur textlagret, obruten serie | 1 545 | 106 | 1 200 | 544 (35 %) | 70 % |
+| enbart OCR-lästa | 560 | 53 | 489 | 112 (20 %) | 83 % |
+| poolat, bär ingen slutsats | 2 264 | 173 | 1 762 | 771 (34 %) | 70 % |
+
+**Huvudsiffran rörde sig inte när OCR-mängden tillkom.** Samtliga tal i första
+raden är identiska före och efter att 53 beslut lades till underlaget, vilket de
+ska vara, eftersom raden räknas på oförändrade dokument. Det är kontrollen på
+att OCR-tillskottet är additivt och inte har rört det som redan var mätt.
 
 **Nollhypotesen faller.** 1 099 av 1 704 villkor, 64 procent, förekommer i ett
 enda beslut, och medianbeslutet har egen text i 68 procent av sina villkor. Ett
@@ -431,6 +454,14 @@ percentilen ligger på 33; noll av 2 000 permutationer nådde 204 (`p < 0,0005`)
 Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
 Götaland bär hälften av korpusen.
 
+**Koncentrationen replikerar på en oberoende dokumentmängd.** De 53 OCR-lästa
+besluten delar inga dokument med de 120 digitalt födda och är lästa med ett
+annat instrument. Där stannar **39 av 41 delade texter inom en enda
+prövningsgrupp** mot 4,2 väntat under samma permutation, och noll av 2 000
+omfördelningar nådde 39. Att andelen delad text är lägre i den mängden, 20 mot
+36 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
+och kan bara underskatta återanvändningen där.
+
 **Den konkurrerande förklaringen prövad.** Ett ändringsbeslut upprepar
 originalets villkor, och det skulle ge gruppintern återanvändning utan att någon
 mall finns. Den förklaringen räcker för par, som är 141 av de 217 klustren, men
@@ -445,13 +476,30 @@ Mallar finns alltså, de är prövningsgruppens snarare än landets, och de
 förklarar drygt en tredjedel av villkoren. Det är i sig ekvivalensfrågan ställd
 på kravsidan.
 
+**OCR på tillståndskorpusen, körd 2026-08-17 och om 2026-08-18.** Steg 25 läste
+samtliga 72 skannade beslut, 1 473 sidor och 436 515 ord, med Tesseract i
+svenska. Talen är identiska i båda körningarna. Mediankonfidens
+91,5, tionde percentilen 76,6, och fyra beslut ligger under 70 med lägst 46,7.
+Tre beslut föll på ett övergående fel i första körningen och lästes felfritt vid
+omförsök, varefter omförsök byggdes in i steget.
+
+**Ett fel i steget som resultatet självt avslöjade.** Första OCR-körningen gav
+noll villkor ur samtliga 72 beslut medan texten uppenbart innehöll dem.
+Orsaken: funktionen kopierades från steg 19, som slår ihop varje sidas ord till
+en enda sträng, vilket räcker för djurslagstermer men inte här. Ett beslut blev
+34 815 tecken på 31 rader, en per sida, och steg 24 ankrar på radbörjan.
+Radstrukturen återskapas nu ur Tesseracts block-, stycke- och radnummer; samma
+beslut blev då 642 rader och gav femton villkor.
+
 **Gränserna, oförkortade.** Rubrik- och stopplistorna är heuristik över de
-layouter som faktiskt finns i korpusen, inte en specifikation. De 14 beslut som
-faller på seriekontrollen gör det av tre skäl som gått att läsa i texten: ett
-strönummer mitt i serien, en andra numrerad lista efter villkoren som stoppordet
-missar, och ändringsbeslut som lagligen börjar på villkor 35 eller 12. De 72
-utan textlager är den enskilt största luckan och kräver OCR innan villkorslagret
-kan sägas täcka korpusen.
+layouter som faktiskt finns i korpusen, inte en specifikation. De 14 digitalt
+födda beslut som faller på seriekontrollen gör det av tre skäl som gått att läsa
+i texten: ett strönummer mitt i serien, en andra numrerad lista efter villkoren
+som stoppordet missar, och ändringsbeslut som lagligen börjar på villkor 35
+eller 12. Bland de OCR-lästa faller 32 av 53, och där är orsaken en annan:
+tecken och hela nummerrader går förlorade i inläsningen. Den största kvarvarande
+luckan är nu de 60 filer där ingen villkorsrubrik hittas, alltså 25 procent av
+korpusen, och den ligger i rubrikmönstret och inte i texttillgången.
 
 ---
 

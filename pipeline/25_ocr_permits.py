@@ -14,6 +14,15 @@ company and place names throughout. What the repository keeps is an index of
 counts: pages, words and mean confidence per decision, enough to judge whether
 a reading can be trusted without republishing a word of it.
 
+**The line structure is kept, and that is not a detail.** Step 19 does the same
+work for the Swedish deliveries and joins every recognised word on a page into
+one string, which is enough for the species terms it feeds. Step 24 anchors on
+the start of a line: the conditions heading is a line of its own and every
+condition opens a line with its number. The first run here copied step 19 and
+produced one line per page, whereupon all 72 decisions yielded exactly zero
+conditions while their text plainly contained them. Tesseract's TSV carries
+block, paragraph and line numbers, so the lines are reassembled from those.
+
 **OCR text is not equal to born-digital text, and the index says so per file.**
 A decision read at low confidence will segment worse than one with a text layer,
 so any figure computed over the OCR set has to be reported beside its confidence
@@ -96,10 +105,10 @@ def read_page(image: Path, workdir: Path) -> tuple[str, float]:
                 raise
             time.sleep(2 * (attempt + 1))
     rows = base.with_suffix(".tsv").read_text(encoding="utf-8", errors="replace")
-    words: list[str] = []
+    lines: dict[tuple[str, str, str], list[str]] = {}
     confidences: list[float] = []
-    for line in rows.splitlines()[1:]:
-        fields = line.split("\t")
+    for row in rows.splitlines()[1:]:
+        fields = row.split("\t")
         if len(fields) < 12 or not fields[11].strip():
             continue
         try:
@@ -108,10 +117,10 @@ def read_page(image: Path, workdir: Path) -> tuple[str, float]:
             continue
         if confidence < 0:
             continue
-        words.append(fields[11])
+        lines.setdefault((fields[2], fields[3], fields[4]), []).append(fields[11])
         confidences.append(confidence)
     mean = sum(confidences) / len(confidences) if confidences else 0.0
-    return " ".join(words), round(mean, 1)
+    return "\n".join(" ".join(words) for words in lines.values()), round(mean, 1)
 
 
 def read_document(source: Path) -> tuple[str, int, float]:
