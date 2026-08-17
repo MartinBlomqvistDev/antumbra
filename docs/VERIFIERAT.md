@@ -10,7 +10,11 @@ Allt här är kontrollerat mot primärkälla med angivet datum och faktiska anro
 Verifierat 2026-08-01 mot
 `jordbruksverket.se/kontroller-och-tillsyn/miljo/stora-anlaggningar-for-uppfodning-av-fjaderfa-och-gris/tillstand-och-domar-for-stora-gris--och-fjaderfaanlaggningar`
 
-- **237 PDF-beslut**, 2013 till 2026. Totalt 0,87 GB, median 1,6 MB.
+- **237 länkar men 235 unika beslut**, 2013 till 2026. Totalt 0,85 GB hämtat 2026-08-17.
+  Rättelse mot den ursprungliga räkningen: sidan listar samma URL två gånger
+  (Gullspång, Ivarhag Lantbruk AB), och två skilda URL:er levererar byteidentiskt
+  innehåll (Kungsbacka, Dotetorps Ägg AB, 2015-11-19, den ena med "(1)" i
+  filnamnet). 236 filer ligger på disk, varav två med samma innehåll.
 - Beslut före 2013 publiceras inte; då hänvisas man till kommunen.
 - Listan är sorterad på **miljöprövningsdelegation, inte län**. Tolv MPD täcker
   21 länsstyrelser.
