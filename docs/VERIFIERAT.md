@@ -380,26 +380,28 @@ för mätningen och inte döljas.
 ## Villkorslagret: baselinetestet mot standardtext
 
 Mätt 2026-08-17 med `pipeline/24_condition_baseline.py` över de 236 hämtade
-tillståndsbesluten. Testet ligger före all extraktion av ett skäl: om villkoren
-är standardtext som återanvänds mellan anläggningar beskriver ett villkorsregister
-en mall, och då är det resultatet. Nollhypotesen är alltså att villkoren är mall.
+filerna, som är 235 unika beslut. Testet ligger före all extraktion av ett skäl:
+om villkoren är standardtext som återanvänds mellan anläggningar beskriver ett
+villkorsregister en mall, och då är det resultatet. Nollhypotesen är alltså att
+villkoren är mall.
 
 **Instrumentet räknar bara inom villkorsavsnittet.** En första version
 segmenterade på varje rad som inleds med siffra och punkt var som helst i
-dokumentet, och då gav **8 procent** av besluten en obruten sifferserie 1..N.
-Numrerade listor finns över hela besluten, i redogörelsen och i upplysningarna,
-så det måttet togs över en blandning av villkor och annan text. Den version som
-gäller söker villkorsrubriken, läser till nästa avsnittsrubrik och segmenterar
-bara innanför det fönstret: då ger **88 procent** en obruten serie. Rubrikerna
-finns i 135 av 164 beslut med textlager, vilket stämmer med att
-`VILLKORSSCHEMA.md` avsnitt 2.2 redan skriver att rubriker varierar och kan
-saknas.
+dokumentet, och då gav bara 12 beslut av 144, **8 procent**, en obruten
+sifferserie 1..N. Numrerade listor finns över hela besluten, i redogörelsen och i
+upplysningarna, så det måttet togs över en blandning av villkor och annan text.
+Den version som gäller söker villkorsrubriken, läser till nästa avsnittsrubrik
+och segmenterar bara innanför det fönstret: då ger **88 procent** en obruten
+serie, 106 av 120. Rubriken hittas av `SECTION_START` i 122 av de 164 filerna
+med textlager, vilket stämmer med att `VILLKORSSCHEMA.md` avsnitt 2.2 redan
+skriver att rubriker varierar och kan saknas.
 
-**Täckning.** 72 beslut saknar textlager och är inte OCR-körda, 42 har textlager
-men ingen rubrik som går att hitta, 2 har rubrik men inget numrerat villkor.
-Kvar: **120 beslut och 1 704 villkor**, median 13 villkor per beslut. Verifiering
-är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5, sifferserien 1..N, och varje
-beslut bär utfallet som `series_ok`.
+**Täckningen, räknad så som en kritisk läsare skulle räkna den.** 72 filer
+saknar textlager och är inte OCR-körda, 42 har textlager men ingen rubrik som
+går att hitta, 2 har rubrik men inget numrerat villkor. Kvar: **120 filer av
+236, alltså 51 procent, och 1 704 villkor**, median 13 villkor per beslut.
+Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5, sifferserien 1..N,
+och varje beslut bär utfallet som `series_ok`.
 
 **Resultatet, och det står sig i den rena delmängden:**
 
@@ -408,17 +410,40 @@ beslut bär utfallet som `series_ok`.
 | alla segmenterade | 1 704 | 120 | 1 316 | 605 (36 %) | 68 % |
 | bara obruten serie | 1 545 | 106 | 1 200 | 544 (35 %) | 70 % |
 
-**Nollhypotesen faller.** Knappt två tredjedelar av villkoren förekommer i ett
+**Nollhypotesen faller.** 1 099 av 1 704 villkor, 64 procent, förekommer i ett
 enda beslut, och medianbeslutet har egen text i 68 procent av sina villkor. Ett
 villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
 är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
 ingenting annat normaliserat, siffervärden avsiktligt bevarade: **det kan bara
-underskatta återanvändningen**, aldrig överskatta den.
+underskatta återanvändningen**, aldrig överskatta den. Ett segmenteringsfel som
+delar ett villkor i två drar åt samma håll, alltså mot mer skenbar egenart, så
+båda felkällorna gör slutsatsen försiktigare och ingen av dem gör den starkare.
 
-**Den återanvändning som finns är gruppintern.** Av de 217 texter som
-förekommer i mer än ett beslut stannar **204 inom en enda prövningsgrupp**.
-Mallarna är alltså prövningsgruppens, inte landets, och det är i sig
-ekvivalensfrågan ställd på kravsidan.
+**Den delade texten är inte korta fragment.** Delade texter har median 210
+tecken mot 260 för de egna, och 6 av 217 ligger under 80 tecken. Det är hela
+villkor som återanvänds, inte gemensamma formuleringar som halkat med.
+
+**Den återanvändning som finns är gruppintern, och det är inte en
+storlekseffekt.** Av de 217 texter som förekommer i mer än ett beslut stannar
+**204 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
+med prövningsgruppernas faktiska storlekar bevarade, väntas 25,3 och den 95:e
+percentilen ligger på 33; noll av 2 000 permutationer nådde 204 (`p < 0,0005`).
+Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
+Götaland bär hälften av korpusen.
+
+**Den konkurrerande förklaringen prövad.** Ett ändringsbeslut upprepar
+originalets villkor, och det skulle ge gruppintern återanvändning utan att någon
+mall finns. Den förklaringen räcker för par, som är 141 av de 217 klustren, men
+inte för de breda: den vidaste texten delas av **26 beslut, varav 24 i Västra
+Götalands län**, och tio beslut i Kalmar med Kronoberg delar en annan.
+Ändringskedjor hos en och samma verksamhetsutövare blir inte 24 beslut.
+Omvänt gäller att de allra vidaste texterna är de som korsar gruppgränser,
+medan den typiska delade texten stannar; av de 18 klustren med minst fem beslut
+ligger 14 inom en enda grupp.
+
+Mallar finns alltså, de är prövningsgruppens snarare än landets, och de
+förklarar drygt en tredjedel av villkoren. Det är i sig ekvivalensfrågan ställd
+på kravsidan.
 
 **Gränserna, oförkortade.** Rubrik- och stopplistorna är heuristik över de
 layouter som faktiskt finns i korpusen, inte en specifikation. De 14 beslut som

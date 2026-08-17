@@ -138,6 +138,20 @@ def ocr_index() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def conditions() -> list[dict]:
+    """One record per condition segmented out of a permit decision."""
+    path = ROOT / "data" / "villkor_baseline.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def permits() -> list[dict]:
+    """One record per downloaded permit decision."""
+    path = ROOT / "data" / "tillstand_manifest.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def annex_labels() -> list[dict]:
     """Hand-read classes for the held-out samples."""
     path = ROOT / "data" / "dgsante_annex_labels.jsonl"
@@ -596,3 +610,70 @@ class TestManifestCoversTheDownloadedCorpus:
         assert all(re.fullmatch(r"[0-9a-f]{64}", m["sha256"]) for m in manifest)
         assert all(m["bytes"] > 0 for m in manifest)
         assert all(m["kind"] in {"report", "annex"} for m in manifest)
+
+
+class TestTheConditionBaselineHoldsItsClaim:
+    """The boilerplate null hypothesis fell, and the numbers must stay checkable.
+
+    docs/VERIFIERAT.md states that 36 per cent of conditions share text with
+    another decision and that reuse concentrates inside a permit division. If
+    the segmenter drifts, those figures move and the claim silently changes,
+    which is exactly the failure the retrain of Site Sentinel taught. The
+    figures are pinned here, and a change to them has to be a deliberate edit
+    of both the data and the document.
+    """
+
+    def test_the_corpus_is_the_one_the_document_describes(self, conditions, permits):
+        assert len(permits) == 236
+        assert len({p["sha256"] for p in permits}) == 235
+        assert len(conditions) == 1704
+        assert len({r["id"] for r in conditions}) == 120
+
+    def test_no_condition_row_carries_text(self, conditions):
+        # The corpus is outside version control because the file names carry
+        # private individuals' names; the hash is the only thing that may leave.
+        fields = {"id", "prövningsgrupp", "villkorsnummer", "tecken", "series_ok"}
+        for record in conditions:
+            assert set(record) == fields | {"text_hash"}
+            assert len(record["text_hash"]) == 16
+
+    def test_every_condition_belongs_to_a_manifested_decision(
+        self, conditions, permits
+    ):
+        groups = {p["id"]: p["prövningsgrupp"] for p in permits}
+        for record in conditions:
+            assert record["prövningsgrupp"] == groups[record["id"]]
+
+    def test_the_series_check_still_passes_on_most_decisions(self, conditions):
+        per_decision = {}
+        for record in conditions:
+            per_decision.setdefault(record["id"], []).append(record["villkorsnummer"])
+        clean = {
+            i
+            for i, ns in per_decision.items()
+            if sorted(ns) == list(range(1, max(ns) + 1))
+        }
+        assert len(clean) == 106
+        # series_ok is recorded per row and must agree with the numbers.
+        for record in conditions:
+            assert record["series_ok"] == (record["id"] in clean)
+
+    def test_the_headline_share_of_shared_text(self, conditions):
+        owners = {}
+        for record in conditions:
+            owners.setdefault(record["text_hash"], set()).add(record["id"])
+        shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
+        repeated = sum(1 for r in conditions if len(owners[r["text_hash"]]) > 1)
+        assert len(owners) == 1316
+        assert len(shared) == 217
+        assert repeated == 605
+        assert round(repeated / len(conditions), 2) == 0.36
+
+    def test_reuse_stays_inside_a_permit_division(self, conditions):
+        groups = {r["id"]: r["prövningsgrupp"] for r in conditions}
+        owners = {}
+        for record in conditions:
+            owners.setdefault(record["text_hash"], set()).add(record["id"])
+        shared = [ids for ids in owners.values() if len(ids) > 1]
+        inside = sum(1 for ids in shared if len({groups[i] for i in ids}) == 1)
+        assert inside == 204

@@ -9,12 +9,12 @@ first costs two days; discovering it after the extractor is built costs weeks.
 
 **The conditions section is bounded, not searched for everywhere.** A first
 version segmented on any line opening with a number and a full stop, anywhere
-in the document, and 8 per cent of decisions then produced an unbroken 1..N
-series of condition numbers. Numbered lists live all over these decisions, in
-the account of the case and in the closing information, so that measure was
+in the document, and 12 decisions of 144, 8 per cent, then produced an unbroken
+1..N series of condition numbers. Numbered lists live all over these decisions,
+in the account of the case and in the closing information, so that measure was
 taken over a mixture of conditions and other text. This version finds the
 conditions heading, reads until the next section heading, and segments only
-inside that window: 88 per cent of decisions then produce an unbroken series.
+inside that window: 106 of 120, 88 per cent, then produce an unbroken series.
 The heading list and the stop list are heuristics over the layouts actually
 present in the corpus, and VILLKORSSCHEMA section 2.2 already records that
 headings vary and can be absent.
@@ -38,6 +38,13 @@ the series 1..N. Every decision carries the outcome as series_ok, and the
 reuse figures are reported twice, over every decision and over the clean subset
 alone, so that a segmentation failure cannot carry the headline.
 
+**Reuse staying inside one permit division is tested against chance.** Two
+divisions hold half the corpus, so a shared text landing inside one division is
+common by chance and the raw count means nothing on its own. The clusters are
+re-drawn from the same decisions with their sizes kept, which holds the division
+sizes fixed and destroys only the association, and the observed count is placed
+against that distribution. Baseline before conclusion, as everywhere else here.
+
 Writes data/villkor_baseline.jsonl, one row per extracted condition, carrying a
 hash of the normalised text and never the text itself, since the corpus is
 outside version control for good reasons.
@@ -50,6 +57,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import random
 import re
 import sys
 from collections import Counter, defaultdict
@@ -65,6 +73,11 @@ OUT = ROOT / "data" / "villkor_baseline.jsonl"
 MIN_CHARS_PER_PAGE = 200
 MIN_CONDITION_CHARS = 40
 MAX_CONDITION_CHARS = 4000
+
+# The permutation that tells a real concentration from a size effect. Fixed so
+# the figure in docs/VERIFIERAT.md can be reproduced exactly.
+PERMUTATIONS = 2000
+SEED = 20260817
 
 # The heading that opens the conditions section, in the forms the corpus uses.
 SECTION_START = re.compile(
@@ -141,6 +154,35 @@ def series_ok(numbers: list[int]) -> bool:
     return sorted(numbers) == list(range(1, max(numbers) + 1))
 
 
+def group_concentration(
+    shared: dict[str, set[str]], groups: dict[str, str], decisions: list[str]
+) -> str:
+    """Whether reuse staying inside one permit division is more than size.
+
+    Half the corpus sits in two divisions, so a shared text landing inside
+    one division is common by chance alone. The clusters are re-drawn
+    from the same decisions, keeping every cluster's size, which holds the
+    division sizes fixed and destroys only the association.
+    """
+    observed = sum(1 for ids in shared.values() if len({groups[i] for i in ids}) == 1)
+    pool = [groups[i] for i in decisions]
+    sizes = [len(ids) for ids in shared.values()]
+    rng = random.Random(SEED)
+    draws = sorted(
+        sum(1 for k in sizes if len(set(rng.sample(pool, k))) == 1)
+        for _ in range(PERMUTATIONS)
+    )
+    at_least = sum(1 for d in draws if d >= observed)
+    # No permutation reaching the observed count gives a bound, never a zero.
+    p = f"= {at_least / PERMUTATIONS:.4f}" if at_least else f"< {1 / PERMUTATIONS:.4f}"
+    return (
+        f"  inom en enda prövningsgrupp: {observed} av {len(shared)}\n"
+        f"  slumpbaslinje över {PERMUTATIONS} permutationer: väntat "
+        f"{sum(draws) / len(draws):.1f}, 95:e percentilen "
+        f"{draws[int(0.95 * len(draws))]}, p {p}"
+    )
+
+
 def reuse(records: list[dict], groups: dict[str, str]) -> str:
     """How much condition text repeats across decisions, as a printable block."""
     by_hash: dict[str, set[str]] = defaultdict(set)
@@ -148,9 +190,13 @@ def reuse(records: list[dict], groups: dict[str, str]) -> str:
         by_hash[record["text_hash"]].add(record["id"])
     shared = {h: ids for h, ids in by_hash.items() if len(ids) > 1}
     repeated = sum(1 for r in records if len(by_hash[r["text_hash"]]) > 1)
-    inside = sum(
-        1 for ids in shared.values() if len({groups.get(i, "") for i in ids}) == 1
-    )
+    inside = sum(1 for ids in shared.values() if len({groups[i] for i in ids}) == 1)
+
+    # Short shared fragments would be a different finding from shared
+    # conditions, so the two lengths are reported side by side.
+    lengths = {r["text_hash"]: r["tecken"] for r in records}
+    shared_len = sorted(lengths[h] for h in shared)
+    own_len = sorted(lengths[h] for h in by_hash if h not in shared)
 
     own = Counter()
     total = Counter()
@@ -169,7 +215,12 @@ def reuse(records: list[dict], groups: dict[str, str]) -> str:
         f"{inside} av dem inom en enda prövningsgrupp\n"
         f"  andel egna villkor per beslut: median {middle:.0%}, "
         f"beslut utan eget villkor {sum(1 for s in shares if s == 0.0)}, "
-        f"beslut med bara egna {sum(1 for s in shares if s == 1.0)}"
+        f"beslut med bara egna {sum(1 for s in shares if s == 1.0)}\n"
+        f"  längd i tecken: delade texter median "
+        f"{shared_len[len(shared_len) // 2] if shared_len else 0}, "
+        f"egna median {own_len[len(own_len) // 2] if own_len else 0}, "
+        f"delade under 80 tecken {sum(1 for x in shared_len if x < 80)}\n"
+        + group_concentration(shared, groups, sorted(total))
     )
 
 
@@ -184,9 +235,15 @@ def main() -> int:
     }
 
     records: list[dict] = []
-    no_text = no_heading = no_conditions = 0
+    no_text = no_heading = no_conditions = unlisted = 0
     clean: set[str] = set()
     for path in sorted(SOURCE.glob("*.pdf")):
+        # A file the manifest does not know has no permit division, and the
+        # concentration test cannot place it. Counted and skipped, never
+        # silently assigned to an empty division.
+        if path.stem not in groups:
+            unlisted += 1
+            continue
         with pymupdf.open(path) as document:
             pages = len(document)
             text = "\n".join(page.get_text() for page in document)
@@ -208,7 +265,7 @@ def main() -> int:
             records.append(
                 {
                     "id": path.stem,
-                    "prövningsgrupp": groups.get(path.stem, ""),
+                    "prövningsgrupp": groups[path.stem],
                     "villkorsnummer": number,
                     "tecken": len(body),
                     "series_ok": ok,
@@ -222,8 +279,9 @@ def main() -> int:
 
     decisions = len({r["id"] for r in records})
     print(
-        f"{no_text} beslut utan textlager, {no_heading} utan hittad villkorsrubrik, "
-        f"{no_conditions} med rubrik men inget numrerat villkor\n"
+        f"{no_text} filer utan textlager, {no_heading} utan hittad villkorsrubrik, "
+        f"{no_conditions} med rubrik men inget numrerat villkor, "
+        f"{unlisted} utanför manifestet\n"
         f"{decisions} beslut segmenterade, {len(clean)} med obruten serie 1..N "
         f"({len(clean) / decisions:.0%}) -> {OUT.name}"
     )
