@@ -43,11 +43,13 @@ inte att göra. Gris- och fjäderfäbältet går, och det är nästan hela brans
 i länktexterna, ett litet parsningsproblem), 15 förlängningar, 14 domar MMD/MÖD,
 plus slutliga villkor, igångsättningsbeslut och upphävanden.
 
-**Textlager, stickprov om elva testade med `pdftotext -layout`:** ungefär hälften
-digitalt födda och extraherar rent, hälften inskannade och ger noll tecken.
-Filstorleken avslöjar vilket: digitala 150 kB till 650 kB, skannade 5 till
-9,5 MB. 42 procent av alla ligger under 1 MB. **OCR krävs för ungefär halva
-korpusen.** Ingen OCR-motor installerad lokalt per 2026-08-02.
+**Textlager, hela korpusen mätt 2026-08-17 efter hämtningen:** 236 filer,
+5 357 sidor, varav **164 filer digitalt födda** (3 884 sidor) och **72 utan
+textlager** (1 473 sidor). Filstorleken avslöjar vilket: median 0,69 MB digitalt
+mot 7,51 MB skannat. **OCR krävs för 31 procent av filerna, inte för halva
+korpusen.** Den tidigare siffran kom från ett stickprov om elva filer testade
+med `pdftotext -layout` den 2026-08-02, och stickprovet överskattade andelen
+skannade.
 
 **Filnamnen är gratis metadata:** `Kommun_Bolag_Djurslag_Typ_Datum`. Inte helt
 konsekvent, men kommun, verksamhetsutövare och beslutsdatum går att läsa utan
@@ -55,8 +57,9 @@ att öppna filen. **Flera filnamn innehåller privatpersoners namn**
 i formen `Kommun_Förnamn_o_Förnamn_Efternamn`; minst tre av de 237 gör det.
 Namnen återges inte i repot, och källfilerna ligger utanför versionshanteringen.
 
-Uppskattat cirka 7 000 sidor och i storleksordningen 3 000 enskilda villkor.
-Inte stor data i volym, men **hela populationen, inte ett urval.**
+Räknat 5 357 sidor. Villkorsantalet är inte längre en uppskattning; se
+avsnittet om baselinetestet nedan. Inte stor data i volym, men **hela
+populationen, inte ett urval.**
 
 ---
 
@@ -371,3 +374,56 @@ A; ytmåttet pekar där åt samma håll som i övriga län. För gris saknas und
 helt, vilket stämmer med att Dalarna uttryckligen svarat att någon
 kontrollrapport för gris inte påträffats, och det ska redovisas som en gräns
 för mätningen och inte döljas.
+
+---
+
+## Villkorslagret: baselinetestet mot standardtext
+
+Mätt 2026-08-17 med `pipeline/24_condition_baseline.py` över de 236 hämtade
+tillståndsbesluten. Testet ligger före all extraktion av ett skäl: om villkoren
+är standardtext som återanvänds mellan anläggningar beskriver ett villkorsregister
+en mall, och då är det resultatet. Nollhypotesen är alltså att villkoren är mall.
+
+**Instrumentet räknar bara inom villkorsavsnittet.** En första version
+segmenterade på varje rad som inleds med siffra och punkt var som helst i
+dokumentet, och då gav **8 procent** av besluten en obruten sifferserie 1..N.
+Numrerade listor finns över hela besluten, i redogörelsen och i upplysningarna,
+så det måttet togs över en blandning av villkor och annan text. Den version som
+gäller söker villkorsrubriken, läser till nästa avsnittsrubrik och segmenterar
+bara innanför det fönstret: då ger **88 procent** en obruten serie. Rubrikerna
+finns i 135 av 164 beslut med textlager, vilket stämmer med att
+`VILLKORSSCHEMA.md` avsnitt 2.2 redan skriver att rubriker varierar och kan
+saknas.
+
+**Täckning.** 72 beslut saknar textlager och är inte OCR-körda, 42 har textlager
+men ingen rubrik som går att hitta, 2 har rubrik men inget numrerat villkor.
+Kvar: **120 beslut och 1 704 villkor**, median 13 villkor per beslut. Verifiering
+är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5, sifferserien 1..N, och varje
+beslut bär utfallet som `series_ok`.
+
+**Resultatet, och det står sig i den rena delmängden:**
+
+| Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
+| --- | --- | --- | --- | --- | --- |
+| alla segmenterade | 1 704 | 120 | 1 316 | 605 (36 %) | 68 % |
+| bara obruten serie | 1 545 | 106 | 1 200 | 544 (35 %) | 70 % |
+
+**Nollhypotesen faller.** Knappt två tredjedelar av villkoren förekommer i ett
+enda beslut, och medianbeslutet har egen text i 68 procent av sina villkor. Ett
+villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
+är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
+ingenting annat normaliserat, siffervärden avsiktligt bevarade: **det kan bara
+underskatta återanvändningen**, aldrig överskatta den.
+
+**Den återanvändning som finns är gruppintern.** Av de 217 texter som
+förekommer i mer än ett beslut stannar **204 inom en enda prövningsgrupp**.
+Mallarna är alltså prövningsgruppens, inte landets, och det är i sig
+ekvivalensfrågan ställd på kravsidan.
+
+**Gränserna, oförkortade.** Rubrik- och stopplistorna är heuristik över de
+layouter som faktiskt finns i korpusen, inte en specifikation. De 14 beslut som
+faller på seriekontrollen gör det av tre skäl som gått att läsa i texten: ett
+strönummer mitt i serien, en andra numrerad lista efter villkoren som stoppordet
+missar, och ändringsbeslut som lagligen börjar på villkor 35 eller 12. De 72
+utan textlager är den enskilt största luckan och kräver OCR innan villkorslagret
+kan sägas täcka korpusen.
