@@ -9,6 +9,7 @@ repository. Each is asserted here so it fails in CI rather than in public.
 import json
 import re
 import subprocess
+from collections import Counter
 from pathlib import Path
 from typing import ClassVar
 
@@ -134,6 +135,13 @@ def report_parse() -> list[dict]:
 def ocr_index() -> list[dict]:
     """One record per annex put through OCR."""
     path = ROOT / "data" / "dgsante_ocr_index.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def hidden_text() -> list[dict]:
+    """One record per delivered document with a text layer."""
+    path = ROOT / "data" / "dold_text.jsonl"
     return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
 
 
@@ -677,3 +685,47 @@ class TestTheConditionBaselineHoldsItsClaim:
         shared = [ids for ids in owners.values() if len(ids) > 1]
         inside = sum(1 for ids in shared if len({groups[i] for i in ids}) == 1)
         assert inside == 204
+
+
+class TestNoDocumentHidesBodyTextBehindALightCover:
+    """The pre-registered field measure resolved to a null, and nulls drift too.
+
+    ADR-0017 replaced "andel maskerade fält" with a covered-content measure and
+    published the result: no delivered document hides body text behind anything
+    light. A null result is the easiest kind of finding to lose, because an
+    instrument that quietly stops detecting produces the same number as an
+    instrument that correctly detects nothing. These pin both sides.
+    """
+
+    def test_the_corpus_is_the_one_the_document_describes(self, hidden_text):
+        assert len(hidden_text) == 249
+        by_class = Counter(r["klass"] for r in hidden_text)
+        assert by_class == {"A": 125, "B": 120, "övrigt": 4}
+
+    def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
+        # The detector must keep finding the known true positives. Were it to
+        # return nothing at all, the null below would be vacuous.
+        with_hidden = [r for r in hidden_text if r["dolda"]]
+        assert len(with_hidden) == 41
+        assert sum(r["dolda"] for r in hidden_text) == 232
+        assert max(r["längsta_körning"] for r in hidden_text) == 13
+
+    def test_no_body_text_is_hidden(self, hidden_text):
+        assert [r["path"] for r in hidden_text if r["dold_av_ljus_täckning"]] == []
+        assert max(r["längsta_i_brödtext"] for r in hidden_text) == 0
+
+    def test_hidden_text_is_only_ever_counted_never_stored(self, hidden_text):
+        fields = {
+            "path",
+            "mapp",
+            "klass",
+            "tecken",
+            "dolda",
+            "längsta_körning",
+            "längsta_i_brödtext",
+            "körningar",
+            "dold_av_ljus_täckning",
+        }
+        for record in hidden_text:
+            assert set(record) == fields
+            assert isinstance(record["dolda"], int)

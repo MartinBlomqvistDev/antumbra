@@ -452,3 +452,62 @@ strönummer mitt i serien, en andra numrerad lista efter villkoren som stopporde
 missar, och ändringsbeslut som lagligen börjar på villkor 35 eller 12. De 72
 utan textlager är den enskilt största luckan och kräver OCR innan villkorslagret
 kan sägas täcka korpusen.
+
+---
+
+## Fältmåttet: text som döljs utan att svärtas
+
+Mätt 2026-08-17 med `pipeline/26_hidden_text.py` över de 249 levererade
+dokument som har textlager. Beslutet att ersätta det förregistrerade fältmåttet
+med ett mått på täckt innehåll, och skälen till det, står i ADR-0017.
+
+**Instrumentet jämför textlagret mot den renderade sidan.** Ett tecken är dolt
+när dess glyfruta, renderad i 150 dpi gråskala, inte innehåller en enda pixel
+mörkare än 200. Ingenting antas om vad som täcker, så en vit rektangel, en ljus
+bild och en täckande annotering fångas av samma test.
+
+**Den negativa kontrollen kom före resultatet.** Ett färgbaserat mått prövades
+först och gav mörk text under en ljus ruta i 39 av 60 dokument. **27 av dem gav
+exakt samma tal, 2 701 tecken**, i skilda län och skilda ärenden. Den identiska
+siffran avslöjade ett mallelement: kontrollrapporten ritar en vit bottenplatta
+bakom brödtexten. Samtliga dessa tecken renderas synligt, alltså ligger plattan
+bakom texten och inte över den, och det färgbaserade måttet hade flaggat alla 39
+fel.
+
+**Utfallet är ett nollresultat.**
+
+| Klass | Dokument | Med minst ett dolt tecken | Med dold brödtext |
+| --- | --- | --- | --- |
+| A | 125 | 0 | 0 |
+| B | 120 | 41 | 0 |
+| övrigt | 4 | 0 | 0 |
+
+Sammanlagt 232 dolda tecken av 2 947 869. Den längsta dolda strängen i ett
+enskilt dokument är 13 tecken, och fördelningen är 28 dokument med fyra tecken,
+elva med fem eller sex, ett med åtta och ett med tretton. **Samtliga ligger i
+övre marginalen**, och teckenklasserna svarar mot diarienummer, datum och
+sidnumrering: myndighetens egen vita sidhuvudruta täcker sitt eget sidhuvud.
+Noll dokument döljer brödtext bakom en ljus täckning.
+
+**Att alla 41 ligger i klass B är inget maskningsfynd.** Det följer av att
+föreläggandenas mall ritar den vita sidhuvudrutan och kontrollrapporternas inte
+gör det. Talet mäter mallar, inte myndighetsbeteende, och får inte läsas som att
+B skulle vara mer maskat än A; kontrasten går åt andra hållet och mäts i steg 18
+och 21.
+
+**Nollresultatet beror inte på tröskeln.** Gränsen på tio sammanhängande tecken
+valdes för att en maskning täcker en sträng och inte ett tecken, men den längsta
+dolda strängen i brödtext över hela materialet är **noll tecken**. Utfallet blir
+alltså detsamma för varje tröskel från ett och uppåt, och tröskelvalet kan inte
+ha skapat resultatet.
+
+Tillsammans med steg 18:s resultat att noll dokument har läsbar text kvar under
+en svärtad ruta är bilden entydig i en avgränsad fråga: **den maskning som
+gjorts är tekniskt äkta, och ingen myndighet har dolt innehåll med en teknik som
+ytmåttet missar.** Påståendet gäller maskningens teknik, aldrig dess omfattning;
+hur mycket som maskats mäts på annat håll och är det som skiljer länen åt.
+
+**Gränsen, utskriven.** Text som raderats före utlämnandet lämnar ingenting kvar
+att jämföra mot och kan inte upptäckas ur handlingen ensam. Måttet visar att
+ingenting täcks utan att synas, aldrig att ingenting saknas. Skannade handlingar
+ingår inte, eftersom de saknar textlager att jämföra renderingen mot.

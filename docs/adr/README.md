@@ -23,3 +23,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0014](0014-ai-assistans-deklareras-i-metoden.md) | AI-assistansen deklareras i metoden | beslutad |
 | [0015](0015-retrieval-som-citatapparat.md) | Retrieval som citatapparat, aldrig författare | beslutad |
 | [0016](0016-maskning-mats-pa-bild-nar-textlagret-saknas.md) | Maskning mäts på bild när textlagret saknas | beslutad |
+| [0017](0017-faltmattet-ersatts-av-tackt-innehall.md) | Fältmåttet ersätts av täckt innehåll | beslutad |
