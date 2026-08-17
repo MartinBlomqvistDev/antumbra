@@ -70,6 +70,7 @@ THEIRS = frozenset(
         "avgiftsbeslut vägrat",
         "besked",
         "besked om att dimension 1 inte kan tas fram",
+        "delvis avslag och kompletterande leverans",
         "diarieföringsbesked",
         "förnyat avgiftserbjudande",
         "förtydligandefråga",
@@ -84,6 +85,7 @@ THEIRS = frozenset(
 )
 INTERNAL = frozenset(
     {
+        "kompletterande leverans arkiverad",
         "leverans arkiverad",
         "protokollavvikelse",
         "tillämpningsnot skriven",
