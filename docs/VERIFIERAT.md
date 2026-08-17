@@ -499,7 +499,21 @@ som stoppordet missar, och ändringsbeslut som lagligen börjar på villkor 35
 eller 12. Bland de OCR-lästa faller 32 av 53, och där är orsaken en annan:
 tecken och hela nummerrader går förlorade i inläsningen. Den största kvarvarande
 luckan är nu de 60 filer där ingen villkorsrubrik hittas, alltså 25 procent av
-korpusen, och den ligger i rubrikmönstret och inte i texttillgången.
+korpusen, och den ligger i dokumenttypen snarare än i texttillgången. Deras egna
+korta rader handlar om att ändra enstaka villkor och inte om att meddela en
+uppsättning: "villkorsändring" på tio, "ändring av villkor i tillstånd" på åtta,
+"villkoret ska ha följande ändrade lydelse" och "villkor N ändras till följande
+lydelse" på fyra vardera. Femton av de 60 nämner inte ordet villkor på någon
+kort rad alls. Filnamnen kan inte avgöra saken: de bär ingen läsbar dokumenttyp
+för 43 av de 60.
+
+**En utvidgad rubriklista är mätt och medvetet inte införd.** Formen "för
+tillståndet gäller följande villkor:" är en äkta villkorsrubrik som mönstret
+missar, och den skulle lägga till **fyra beslut**, alltså 1,7 procent av
+korpusen. Ändringen görs inte nu, av två skäl: den skulle vara en justering av
+instrumentet efter att utfallet setts, och vinsten är för liten för att motivera
+att ett publicerat tal räknas om. Den står här som en känd och kvantifierad
+brist i stället för att tyst rättas eller tyst utelämnas.
 
 ---
 
