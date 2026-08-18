@@ -73,6 +73,7 @@ THEIRS = frozenset(
         "avgiftsbesked",
         "avgiftsbesked och erbjudande om maskad elektronisk leverans",
         "avgiftsbesked och förtydligande",
+        "besked om uttagets omfattning och förtydligandefråga",
         "avgiftsbeslut mottaget",
         "avgiftsbeslut vägrat",
         "besked",
@@ -109,6 +110,7 @@ NOT_A_REQUEST = frozenset({"flera", "samtliga"})
 # An authority event that puts the next move on us, with its deadline in
 # working days. Longest key first, so a compound name matches its own rule.
 ANSWER_DUE = (
+    ("besked om uttagets omfattning och förtydligandefråga", 1, "P4"),
     ("förtydligandefråga och avgiftsbesked", 1, "P4"),
     ("avgiftsbesked och förtydligande", 1, "P4"),
     ("förtydligandefråga upprepad", 1, "P4"),
