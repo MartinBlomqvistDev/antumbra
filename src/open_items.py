@@ -19,6 +19,10 @@ delivery is reported as information and never as a due item. Tillämpningsnot 5
 turns on conduct that cannot be read off an event name, so a general policy
 document sent instead of a decision is flagged for judgement, not scheduled.
 
+Tillämpningsnot 3 also decides when a request is finished, and a request whose
+decision has been asked for and not answered is not: delivery of the part that
+could be delivered does not settle the part that was refused.
+
 Working days are Monday to Friday. Public holidays are not modelled, which
 matters from Christmas onwards and not at all in August; the effect is that a
 deadline can be reported one or two days earlier than it truly falls.
@@ -124,6 +128,20 @@ JUDGEMENT = frozenset({"riktlinje bifogad", "taxebeslut bifogat"})
 # tillämpningsnot 3 counts it as finished rather than as still running.
 DECISION_CLOSERS = frozenset({"avgiftsbeslut mottaget", "avgiftsbeslut vägrat"})
 
+# Asking the authority to try the question and issue an appealable decision
+# opens a track of its own. Tillämpningsnot 3 requires every request to have
+# reached a slutstatus before publication, and a request whose decision is
+# still owed has not. Delivery does not settle it: a sammanställning can be
+# handed over in part while the refused part is under decision, which is
+# exactly where Jordbruksverket C stood on 2026-08-17.
+DECISION_REQUESTS = frozenset(
+    {
+        "beslutsbegäran och fråga om uttagets fullständighet",
+        "beslutsbegäran upprepad",
+        "förnyad begäran om avgiftsbeslut",
+    }
+)
+
 # A delivery whose own note says more is coming is not a finished delivery.
 PARTIAL_MARK = "inte avslutad"
 
@@ -190,6 +208,17 @@ def state(events: list[dict], today: date) -> dict:
     decision_closed = any(
         e["handelse"] in DECISION_CLOSERS for e in events if e["handelse"] in THEIRS
     )
+    # A decision that has been asked for and not answered leaves the request
+    # running, however much of it was delivered.
+    asked = [e for e in events if e["handelse"] in DECISION_REQUESTS]
+    answered_at = [
+        (e["datum"], e["klockslag"])
+        for e in events
+        if e["handelse"] in DECISION_CLOSERS
+    ]
+    decision_pending = bool(asked) and not any(
+        when > (asked[-1]["datum"], asked[-1]["klockslag"]) for when in answered_at
+    )
     contacted = any(
         e["handelse"] in THEIRS and e["handelse"] != "autosvar" for e in events
     )
@@ -205,7 +234,9 @@ def state(events: list[dict], today: date) -> dict:
         "fee_stopped": fee_stopped,
         # Tillämpningsnot 3: a request is finished when it is delivered in
         # full, or the copies were declined and the decision track has ended.
-        "closed": (delivered and not partial) or (fee_stopped and decision_closed),
+        "closed": ((delivered and not partial) or (fee_stopped and decision_closed))
+        and not decision_pending,
+        "decision_pending": decision_pending,
         "last_event": substantive[-1] if substantive else events[-1],
         "waiting_on": "myndigheten",
         "due": None,
@@ -302,7 +333,10 @@ def report(rows: list[dict], today: date) -> list[str]:
         quiet = "i dag" if silence == 0 else f"tyst {silence} arbetsdag"
         if silence > 1:
             quiet += "ar"
-        flag = f"  [{item['note']}]" if item["note"] else ""
+        notes = [n for n in (item["note"],) if n]
+        if item["decision_pending"]:
+            notes.append("begärt beslut inte meddelat, inte slutstatus enligt not 3")
+        flag = f"  [{'; '.join(notes)}]" if notes else ""
         lines.append(
             f"  {authority} {klass}: {item['last_event']['handelse']} "
             f"{item['last_event']['datum']}, {quiet}{flag}"

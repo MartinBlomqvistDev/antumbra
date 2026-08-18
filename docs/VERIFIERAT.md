@@ -638,7 +638,12 @@ Prövning och skriftligt överklagbart beslut enligt 6 kap. 3 § OSL begärdes d
 filen svarar myndigheten ordagrant: *"Vi kommer återkomma till dig i frågan
 kring beslut kring föranmälda och ej föranmälda kontroller uppdelat per län och
 år."* Begäran C är alltså levererad till de delar den kunnat levereras, men
-beslutsspåret löper. Tillämpningsnot 3 kräver att varje begäran nått slutstatus
-innan publicering, och `src/open_items.py` räknar i dag C som avslutad enbart på
-att en leverans finns. Den avvikelsen mellan skriptets regel och notens är känd
-och oavgjord.
+beslutsspåret löper.
+
+Tillämpningsnot 3 kräver att varje begäran nått slutstatus innan publicering.
+`src/open_items.py` räknade tidigare C som avslutad enbart på att en leverans
+fanns, och det är rättat 2026-08-18: **ett begärt men inte meddelat beslut
+hindrar slutstatus, oavsett hur mycket som levererats.** Effekten är avgränsad
+och kontrollerad: fyra begäranden har öppet beslutsspår, men Kalmar B, Örebro A
+och Örebro B var redan öppna som avgiftsstoppade, så bara Jordbruksverket C
+byter status. Avslutade går från 35 till 34.
