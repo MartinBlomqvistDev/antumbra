@@ -19,12 +19,15 @@ routine controls, and so does this one. The categorisation into routine,
 complaint and follow-up is the authority's own, quoted from its covering
 e-mail of 14 August 2026.
 
-**2025 only for the headline.** The 2024 cattle sheet holds 1 577 rows against
-2 916 for 2025, lacks Norrbotten and Uppsala entirely, and several counties
-carry a handful of rows where 2025 has hundreds. A question about whether the
-extract is complete is with the authority. Every year is written to the output;
-the printed summary covers the years separately so that a broken year cannot
-quietly enter a national figure.
+**The 2024 cattle sheet was defective and has been replaced.** The delivery of
+14 August held 1 577 rows for 2024 against 2 916 for 2025, lacked Norrbotten and
+Uppsala entirely, and gave nine counties a handful of rows where the year should
+carry hundreds. The authority was asked whether the extract was complete and
+delivered a corrected file on 17 August: 2 451 rows and all 21 counties, with
+Jönköping, Kronoberg and Västerbotten each gaining more than 130 rows. Only that
+one sheet changed; the other seven are byte-identical in content. Both years are
+now usable, and the printed summary still covers them separately so that no
+national figure can pool a year silently.
 
 Writes data/bristandel.jsonl, counts and shares per county, year, species and
 control category.
@@ -42,12 +45,16 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
+# The corrected delivery, received after the authority was asked whether its
+# 2024 cattle extract was complete. Named explicitly rather than picked by
+# glob: which file a figure came from is provenance, and a newest-file rule
+# would change the source without changing the code.
 DELIVERY = (
     ROOT
     / "data"
     / "leveranser"
     / "jordbruksverket_C"
-    / "Kontrollstatistik per län 2024 2025 nöt, gris, höns, slaktkyckling.xlsx"
+    / "Kontrollstatistik per län 2024 2025 nöt, gris, höns, slaktkyckling_v2.xlsx"
 )
 OUT = ROOT / "data" / "bristandel.jsonl"
 

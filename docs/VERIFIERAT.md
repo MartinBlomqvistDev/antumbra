@@ -573,3 +573,72 @@ hur mycket som maskats mäts på annat håll och är det som skiljer länen åt.
 att jämföra mot och kan inte upptäckas ur handlingen ensam. Måttet visar att
 ingenting täcks utan att synas, aldrig att ingenting saknas. Skannade handlingar
 ingår inte, eftersom de saknar textlager att jämföra renderingen mot.
+
+---
+
+## Begäran C: den rättade leveransen och omräkningen ur radnivådata
+
+**Uttaget för 2024 var ofullständigt och rättades efter en fråga.** Leveransen
+den 17 augusti 2026 hade 1 577 rader i bladet Nötkreatur 2024 mot 2 916 för
+2025, saknade Norrbotten och Uppsala helt och gav nio län en handfull rader där
+året borde bära hundratals. Frågan om bladet var fullständigt ställdes samma dag
+12:34, med talen utskrivna. Svaret kom **samma dag 17:19** med en rättad fil:
+**2 451 rader och samtliga 21 län**, sha256 734bc8359c62, bilagans storlek
+11 454 946 byte enligt e-posthuvudet. Myndigheten skriver ordagrant: *"Vi ber om
+ursäkt för att innehållet i fliken Nötkreatur 2024 inte verkat ha blivit
+fullständig. Vi har gjort om det utdraget ur systemen och lagt in uppdaterad
+data i den fliken."*
+
+| Län | Rader före | Rader efter |
+| --- | --- | --- |
+| Jönköping | 12 | 154 |
+| Kronoberg | 4 | 135 |
+| Västerbotten | 6 | 136 |
+| Östergötland | 2 | 102 |
+| Kalmar | 57 | 143 |
+| Södermanland | 2 | 85 |
+| Stockholm | 4 | 67 |
+| Norrbotten | 0 | 65 |
+| Uppsala | 0 | 49 |
+
+Övriga tolv län ändrades med noll till tio rader, och **de sju andra bladen är
+innehållsidentiska**. Felet träffade alltså ett blad och inom det vissa län, inte
+materialet jämnt.
+
+**Spridningen omräknad ur raderna, steg 22.** Rutinkontroller enligt
+myndighetens egen kategorisering, län med minst 20 kontroller:
+
+| År | Län | Lägst | Högst | Spridning |
+| --- | --- | --- | --- | --- |
+| 2024 | 21 av 21 | Södermanland 31 % | Västmanland 88 % | 57 procentenheter |
+| 2025 | 19 av 21 | Södermanland 28 % | Jönköping 73 % | 45 procentenheter |
+
+**Detta reproducerar inte rapportens 33 och 84 procent, och ska inte påstås
+göra det.** Tre definitioner av rutinkontroll prövades mot 2024 års nötdata:
+myndighetens egen lista ger 27 till 91 procent, samma lista utan Ansökan
+tillstånd ger likaså 27 till 91, och enbart Rutinkontroll risk och slump ger 28
+till 74. Ingen träffar 33 och 84. Den mest närliggande förklaringen är att
+rapportens mening gäller all djurskyddskontroll medan begäran C bara omfattar
+nötkreatur, gris och fjäderfä, alltså två skilda populationer; **den
+förklaringen är inte verifierad mot myndigheten**. Definitionen justerades inte
+för att träffa talen, eftersom en definition vald efter facit inte mäter något.
+
+Rapportens 51 procentenheter står därför kvar som myndighetens egen uppgift,
+ordagrant citerad ovan, och omräkningen redovisas bredvid som en annan mätning
+på ett annat underlag.
+
+**Dimensionen föranmäld mot oanmäld finns fortfarande bara nationellt.**
+Myndigheten har skriftligen svarat att den inte går att ta fram per län med
+rutinbetonade åtgärder. Den förregistrerade hypotesen i avsnitt 10, som ska
+prövas per länsstyrelse, kan alltså inte prövas på C-datat som det ser ut.
+
+**Beslutsspåret är öppet, och det påverkar när insamlingen kan kallas stängd.**
+Prövning och skriftligt överklagbart beslut enligt 6 kap. 3 § OSL begärdes den
+17 augusti 2026 för just den sammanställningen. I samma brev som den rättade
+filen svarar myndigheten ordagrant: *"Vi kommer återkomma till dig i frågan
+kring beslut kring föranmälda och ej föranmälda kontroller uppdelat per län och
+år."* Begäran C är alltså levererad till de delar den kunnat levereras, men
+beslutsspåret löper. Tillämpningsnot 3 kräver att varje begäran nått slutstatus
+innan publicering, och `src/open_items.py` räknar i dag C som avslutad enbart på
+att en leverans finns. Den avvikelsen mellan skriptets regel och notens är känd
+och oavgjord.

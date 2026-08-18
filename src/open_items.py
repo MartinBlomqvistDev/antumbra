@@ -82,6 +82,10 @@ THEIRS = frozenset(
         "leverans",
         "manuellt svar",
         "mottagningsbesked",
+        # A delivery that replaces a defective one. Distinct from "leverans"
+        # because it does not start the collection, it repairs it, and the
+        # distinction has to survive in the published log.
+        "rättad leverans",
         "riktlinje bifogad",
         "taxebeslut bifogat",
     }
