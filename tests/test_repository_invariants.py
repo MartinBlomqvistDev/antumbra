@@ -139,6 +139,20 @@ def ocr_index() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def grounds() -> list[dict]:
+    """One record per authority statement about what was masked and why."""
+    path = ROOT / "data" / "sekretessgrunder.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def masking() -> list[dict]:
+    """One record per delivered document judged by step 18."""
+    path = ROOT / "data" / "maskning.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def hidden_text() -> list[dict]:
     """One record per delivered document with a text layer."""
     path = ROOT / "data" / "dold_text.jsonl"
@@ -762,3 +776,56 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         for record in hidden_text:
             assert set(record) == fields
             assert isinstance(record["dolda"], int)
+
+
+class TestTheP9CriteriaRestOnQuotedGrounds:
+    """P9 turns on which provision each authority invoked, so it is quoted.
+
+    Criterion (c) is a null: no authority masked class B under 30 kap. 23 §.
+    A null that lives in someone's memory is a null that drifts, and this one
+    decides whether an appeal is required, so it is pinned against the quoted
+    grounds rather than against a recollection.
+    """
+
+    GROUND_30_23 = "30 kap. 23 § OSL"
+
+    def test_every_ground_is_traceable_to_a_message(self, grounds):
+        for record in grounds:
+            assert record["meddelande_id"]
+            assert record["citat"].strip()
+            assert record["klass"] in {"A", "B"}
+            assert isinstance(record["citat_fullstandigt"], bool)
+
+    def test_criterion_c_is_empty(self, grounds):
+        klass_b = [
+            r
+            for r in grounds
+            if r["klass"] == "B" and self.GROUND_30_23 in r["bestammelser"]
+        ]
+        assert klass_b == []
+
+    def test_criterion_b_has_a_comparison_set(self, masking):
+        # (b) needs at least three other counties releasing class A unmasked.
+        clean = set()
+        for record in masking:
+            folder = record["path"].split("/")[0]
+            county, _, klass = folder.rpartition("_")
+            if klass == "A" and not record["masked"]:
+                clean.add(county)
+        assert len(clean) == 5
+        assert clean == {"dalarna", "gavleborg", "jamtland", "sodermanland", "uppsala"}
+
+    def test_the_counties_invoking_30_23_in_class_a(self, grounds):
+        counties = {
+            r["myndighet"]
+            for r in grounds
+            if r["klass"] == "A" and self.GROUND_30_23 in r["bestammelser"]
+        }
+        assert counties == {
+            "Gotland",
+            "Halland",
+            "Kronoberg",
+            "Södermanland",
+            "Värmland",
+            "Västernorrland",
+        }

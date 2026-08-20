@@ -647,3 +647,57 @@ hindrar slutstatus, oavsett hur mycket som levererats.** Effekten är avgränsad
 och kontrollerad: fyra begäranden har öppet beslutsspår, men Kalmar B, Örebro A
 och Örebro B var redan öppna som avgiftsstoppade, så bara Jordbruksverket C
 byter status. Avslutade går från 35 till 34.
+
+---
+
+## P9:s kriterier prövade, 2026-08-20
+
+Not 4 gör P9:s kriterier till utlösaren för varje P8-skrivelse, och prövningen
+hade aldrig gjorts. Underlaget är `data/sekretessgrunder.jsonl`, som citerar
+varje myndighets egen lydelse om vad som maskats och med vilket stöd, med
+meddelande-id och en flagga för om citatet är fullständigt i källan.
+
+**Kriterium (c), maskning i klass B med stöd av 30 kap. 23 §: noll.** Verifierat
+mot brevlådan och inte mot minnet. En riktad sökning i samtliga B-trådar efter
+30 kap ger två träffar, och båda är län där bestämmelsen inte åberopas av
+myndigheten: Örebro, vars B aldrig levererades på grund av avgiftsstopp, och
+Norrbotten, som lämnade ut B omaskat. De län som maskade i klass B anger annat:
+Stockholm *"de fyra sista siffrorna i personnumren är maskerade (dolda)"*,
+Västra Götaland 18 kap. 1 § för två helt undanhållna beslut, Blekinge sekretess
+utan angiven bestämmelse.
+
+**Kriterium (b) är uppfyllt, och det var det jag först trodde var omöjligt.**
+Sex län maskade klass A med stöd av 30 kap. 23 §: Gotland, Kronoberg, Värmland,
+Västernorrland, Södermanland och Halland. Jämförelsemängden finns: **fem län har
+minst ett helt omaskat A-dokument**, sammanlagt 17 dokument, nämligen Dalarna,
+Gävleborg, Jämtland, Södermanland och Uppsala. Fem är fler än de tre kriteriet
+kräver.
+
+Uppgiftstypen tas ur myndigheternas egna ord. Kronoberg är den enda som namnger
+den: *"uppgifter om enskilds affärs- och driftförhållanden maskerade, med hänsyn
+till sekretess enligt 30 kap. 23 § OSL"*. För de övriga följer typen av den
+bestämmelse de själva åberopat, eftersom 30 kap. 23 § skyddar just enskilds
+affärs- eller driftförhållanden.
+
+**Läsningen är grov, och det ska stå.** Uppgiftstyp tolkas här på
+bestämmelsenivå. En striktare läsning på fältnivå, alltså exakt vilken uppgift
+varje svärtning döljer, går inte att göra: i 124 av 294 dokument är texten under
+rutan borttagen, och ADR-0017 slog fast att handlingarna är prosa utan
+fältstruktur. Ett försök att härleda typen ur omgivande text övergavs sedan det
+visat sig dra enskildas namn genom analysen.
+
+**Följden för P8 är liten, eftersom not 4 är konjunktiv.** Skrivelse skickas bara
+när ett kriterium är uppfyllt **och** myndigheten själv erbjudit ett
+överklagbart beslut. Bara Gotland har gjort det med full och verifierad lydelse:
+*"Önskar du ett överklagningsbart beslut om detta så får du höra av dig."*
+Kronobergs mening är avhuggen i källan och kan inte räknas förrän den lästs i
+fulltext.
+
+**Slutsats: en, möjligen två, P8-skrivelser är utlösta, och femtaket i P9 binder
+inte.** Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
+går vidare. Det är inte ett nollresultat, vilket jag först skrev, och inte
+heller de tio överklaganden en läsning av enbart kriteriet skulle antyda.
+
+**Kvar att komplettera:** fem citat är avhuggna i källan och behöver läsas i
+fulltext innan de kan bära något: Södermanland A, Halland A, Västra Götaland B,
+Blekinge B och Dalarna A.
