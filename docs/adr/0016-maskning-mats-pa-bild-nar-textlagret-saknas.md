@@ -49,6 +49,11 @@ får numera `bars_on_scan` eller `none`, och fältet `masked` gör räkningen
 entydig. Det gamla talet, 86 procent maskat i begäran A mot 17 i B räknat på
 244 bedömbara dokument, ersätts av 89 mot 23 över alla 293.
 
+*Tillägg 2026-08-21:* Södermanlands andra leverans den 17 augusti lade till ett
+dokument i klass B, och steg 18 kördes om. Talet är sedan dess 89 mot 24 över
+294 dokument. Beslutet i denna ADR är oförändrat; siffran står kvar som den var
+när beslutet fattades, och den gällande finns i `docs/VERIFIERAT.md`.
+
 **Golvet metoden inte ser förbi ska alltid följa med siffran:** en skanning av
 en sida vars text togs bort före utskrift är omöjlig att skilja från en sida som
 aldrig bar texten. `masked` falskt på en skanning betyder att ingen balk

@@ -1,7 +1,8 @@
 # Antumbra: villkorsschema
 
-Datastruktur för ett villkor i korpusen om 237 miljötillståndsbeslut för stora
-gris- och fjäderfäanläggningar, 2013 till 2026. Designad 2026-08-01 mot fyra
+Datastruktur för ett villkor i korpusen om 235 miljötillståndsbeslut för stora
+gris- och fjäderfäanläggningar, 2013 till 2026. Korpusen listas som 237 länkar
+och ligger som 236 filer; rättelsen är daterad 2026-08-17 i `docs/VERIFIERAT.md`. Designad 2026-08-01 mot fyra
 beslut i fulltext: Lidfarm 2017 (MPD Västra Götaland), Motala 2021
 (MPD Östergötland), Stora Markie 2022 (MPD Skåne), SweHatch 2026 (MPD Skåne,
 dnr 26665-2025, beslutsdatum 2026-06-04).
@@ -727,7 +728,7 @@ Hantering: manuell kodning av 14 dokument, med `status=REVOKED` och
 
 **Enskilda firmor.** Filnamn med personnamn kräver manuell bedömning av hur
 anläggningen ska betecknas utan att namnet lagras. Ur filnamnslistan syns
-minst tre; räkna med ett tiotal av 237.
+minst tre; räkna med ett tiotal av 235.
 
 ---
 
@@ -749,8 +750,8 @@ nummer, och det syns inte i någon aggregerad statistik.
 själva i löptext: "Länsstyrelsen tillstyrker ansökan och föreslår 13 villkor
 samt att tillsynsmyndigheten ges möjlighet föreskriva ytterligare villkor i
 sex punkter" (Stora Markie s. 18). Sådana fraser regexfångas och diffas mot
-`condition_count` och antal delegationspunkter. På korpusnivå: 237 filer ska
-ge 237 beslutsrader; typfördelningen ska stämma mot länktexternas cirka
+`condition_count` och antal delegationspunkter. På korpusnivå: 236 filer ska
+ge 235 beslutsrader, eftersom två filer bär byteidentiskt innehåll; typfördelningen ska stämma mot länktexternas cirka
 160/38/15/14; och noll villkor är bara tillåtet för förlängningar,
 igångsättningsbeslut, upphävanden och domar. Ett tillstånd med noll villkor
 är per definition en tyst trasig extraktion; Lidfarm visar att noll är
