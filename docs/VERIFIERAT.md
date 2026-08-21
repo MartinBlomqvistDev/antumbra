@@ -305,11 +305,12 @@ strikt bättre än de två andra. **De två avvikelserna är kända och förklar
 före utskrift ser likadan ut som en sida som aldrig bar texten. `masked` falskt
 på en skanning betyder att ingen balk hittades, inte att ingenting undanhållits.
 
-**Utfallet över hela materialet, 293 dokument, inga uteslutna.** Två mått
-hålls isär, och bara det andra är protokollets:
+**Utfallet över hela materialet, 294 dokument, inga uteslutna.** Omräknat
+2026-08-21 sedan Södermanlands andra leverans den 17 augusti lagt till ett
+dokument i klass B. Två mått hålls isär, och bara det andra är protokollets:
 
 *Andel dokument med minst en maskning*, poolat över landet: begäran A 138 av
-155, 89 procent; begäran B 31 av 134, 23 procent. Före bildmetoden var 45
+155, 89 procent; begäran B 32 av 135, 24 procent. Före bildmetoden var 45
 dokument omätbara och samma tal var 86 mot 17 räknat på 244 dokument.
 
 *Kontrastmåttet enligt P1*, alltså skillnaden i maskningsgrad mellan A och B

@@ -27,10 +27,11 @@ Nobody has measured the gap, and nobody has tested an explanation for it.
 
 ## Three layers
 
-**The conditions layer.** 237 environmental permit decisions for large pig
+**The conditions layer.** 235 environmental permit decisions for large pig
 and poultry installations, 2013 to 2026, published by the Swedish Board of
-Agriculture. An estimated 3,000 individual conditions, structured into a
-dataset. The whole population, not a sample.
+Agriculture, harvested as 236 files under 237 links. 2,264 individual
+conditions have been read out of the 173 files whose conditions section can be
+located. The whole population, not a sample.
 
 **The openness layer.** Three identically worded freedom-of-information
 requests, sent the same morning to all 21 county administrative boards and
@@ -92,9 +93,10 @@ may be read.
 carry 208 of the 237 decisions. Three have zero. Conclusions about
 conditions hold for the pig and poultry belt, not the country.
 
-**About half the conditions corpus lacks a text layer** and requires OCR.
-The error rate is measured against the documents that have a text layer and
-reported; it is not assumed.
+**72 of the 236 permit files carried no text layer** and were read with OCR
+in Swedish. OCR text segments worse than a text layer, so the two sources are
+reported apart and never pooled into a headline; the difference is measured
+against the documents that have a text layer, not assumed.
 
 **Validity dates are partly proxies.** A permit is replaced only when the
 new one is taken into use, and that date sits with the supervisory
