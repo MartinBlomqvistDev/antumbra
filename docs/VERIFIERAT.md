@@ -758,3 +758,58 @@ myndigheten gjorde om **enbart bladet Nötkreatur 2024** den 17 augusti. Bladen
 Gris 2024 och >350 värphöns 2024 är alltså sannolikt fortfarande ofullständiga,
 med minst 8 respektive 18 kontroller som saknas. Detta är en slutsats av
 jämförelsen mellan källorna och inte ett besked från myndigheten.
+
+---
+
+## Den förregistrerade oanmäld-hypotesen, prövad 2026-08-21
+
+Avsnitt 10 i `docs/BEGARANMALL.md`, tidsstämplat innan någon begäran skickades:
+oanmälda kontroller ger oftare konstaterade brister än föranmälda, och andelen
+oanmälda förklarar en del av spridningen mellan länen. Prövad med
+`pipeline/28_unannounced_hypothesis.py` sedan de 336 rapporterna gjort andelen
+oanmälda tillgänglig per län.
+
+**Halva den förregistrerade prövningen går inte att göra.** Avsnitt 10 begär
+både sambandet över länen och skillnaden i bristandel mellan oanmälda och
+föranmälda **inom** samma län, djurslag och kontrolltyp. Den andra kräver att
+aviseringsfältet är korsat med bristfältet, och de 336 rapporterna avser alla
+"Alla kontrolltypgrupper". Den delen är alltså inte svag, den saknas, och
+ingenting sätts i dess ställe.
+
+**Bara nötkreatur bär prövningen.** Gris, värphöns och slaktkyckling har för få
+län som når tjugo kontroller i båda måtten.
+
+| Djurslag | År | Kategori | Län | Spearman rho | p, permutation |
+| --- | --- | --- | --- | --- | --- |
+| nötkreatur | 2024 | rutin | 20 | 0,009 | 0,4755 |
+| nötkreatur | 2024 | alla kontrolltyper | 21 | 0,314 | 0,0840 |
+| nötkreatur | 2025 | rutin | 19 | 0,344 | 0,0755 |
+| nötkreatur | 2025 | alla kontrolltyper | 21 | 0,514 | 0,0080 |
+
+**Läsningen, och den går åt hypotesens nackdel.** Det enda sambandet som når
+signifikans ligger i måttet över alla kontrolltyper, och det är just det måttet
+steg 22 undviker: fem kontrolltyper bär utfallet i sitt eget namn, till exempel
+"Klagomål, offentlig kontroll med brister", och bristflaggan sammanfaller med
+typnamnet i 96 till 100 procent av de raderna. Ett län med fler klagomålsdrivna
+kontroller får därför både högre bristandel och fler oanmälda kontroller utan
+att hypotesen behöver vara sann. Det är konkurrerande förklaring 2 i
+förregistreringen, kontrolltypsmix, och den kan producera exakt det observerade
+sambandet mekaniskt.
+
+**I det rena måttet, rutinkontroller, finns inget stöd.** 2024 ger rho 0,009,
+alltså ingenting. 2025 ger 0,344 med p = 0,0755, alltså positivt men inte
+signifikant. De två åren är dessutom inte förenliga med varandra, vilket i sig
+talar mot ett stabilt samband.
+
+**Nollresultatet ska inte överdrivas heller.** Nitton till tjugoen län är ett
+litet underlag, och 0,344 är inte samma sak som noll. Det korrekta beskedet är
+att prövningen inte kan skilja ett svagt positivt samband från inget samband,
+inte att sambandet är motbevisat.
+
+**Den förskrivna nollresultatstexten går inte att använda ordagrant.** Avsnitt
+10 skrev före datainsamlingen att *"skillnaden i bristandel mellan oanmälda och
+föranmälda kontroller är liten eller obefintlig inom län, djurslag och
+kontrolltyp"*. Den satsen påstår resultatet av just den prövning som visade sig
+omöjlig, och den måste strykas ur den publicerade texten i stället för att
+återges. Det är en brist i förregistreringen: den förutsatte att den korstabell
+som begärdes också skulle levereras.
