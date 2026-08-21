@@ -1,0 +1,336 @@
+{"fil": "AB_2024_anmalda_gris.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "AB_2024_nötkreatur_anmälda.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 58}
+{"fil": "AB_2024_nötkreatur_oanmäld.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 7}
+{"fil": "AB_2024_oanmalda_gris.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "AB_2024_slaktkyckling_anmälda.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "AB_2024_slaktkyckling_oanmälda.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "AB_2024_Vhöns_anmälda.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "AB_2024_Vhöns_oanmälda.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "AB_anmälda_gris_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 5}
+{"fil": "AB_anmälda_nötkreatur_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 35}
+{"fil": "AB_anmälda_slaktkyckling_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "AB_anmälda_värphöns350_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "AB_oanmälda_gris_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "AB_oanmälda_nötkreatur_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 13}
+{"fil": "AB_oanmälda_slaktkyckling_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "AB_oanmälda_värphöns350_2025.skv", "myndighet": "Stockholm", "lansbokstav": "AB", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "AC_2024_anmalda_gris.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "AC_2024_nötkreatur_anmälda.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 103}
+{"fil": "AC_2024_nötkreatur_oanmäld.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 26}
+{"fil": "AC_2024_oanmalda_gris.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "AC_2024_slaktkyckling_anmälda.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "AC_2024_slaktkyckling_oanmälda.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "AC_2024_Vhöns_anmälda.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "AC_2024_Vhöns_oanmälda.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 19}
+{"fil": "AC_anmälda_gris_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 9}
+{"fil": "AC_anmälda_nötkreatur_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 117}
+{"fil": "AC_anmälda_slaktkyckling_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "AC_anmälda_värphöns350_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "AC_oanmälda_gris_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "AC_oanmälda_nötkreatur_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 28}
+{"fil": "AC_oanmälda_slaktkyckling_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "AC_oanmälda_värphöns350_2025.skv", "myndighet": "Västerbotten", "lansbokstav": "AC", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "BD_2024_anmalda_gris.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 2}
+{"fil": "BD_2024_nötkreatur_anmälda.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 43}
+{"fil": "BD_2024_nötkreatur_oanmäld.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 17}
+{"fil": "BD_2024_oanmalda_gris.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 3}
+{"fil": "BD_2024_slaktkyckling_anmälda.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "BD_2024_slaktkyckling_oanmälda.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "BD_2024_Vhöns_anmälda.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 2}
+{"fil": "BD_2024_Vhöns_oanmälda.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "BD_anmälda_gris_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 4}
+{"fil": "BD_anmälda_nötkreatur_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 43}
+{"fil": "BD_anmälda_slaktkyckling_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "BD_anmälda_värphöns350_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "BD_oanmälda_gris_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 4}
+{"fil": "BD_oanmälda_nötkreatur_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 28}
+{"fil": "BD_oanmälda_slaktkyckling_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "BD_oanmälda_värphöns350_2025.skv", "myndighet": "Norrbotten", "lansbokstav": "BD", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "C_2024_anmalda_gris.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 6}
+{"fil": "C_2024_nötkreatur_anmälda.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 40}
+{"fil": "C_2024_nötkreatur_oanmäld.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 9}
+{"fil": "C_2024_oanmalda_gris.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "C_2024_slaktkyckling_anmälda.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "C_2024_slaktkyckling_oanmälda.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "C_2024_Vhöns_anmälda.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "C_2024_Vhöns_oanmälda.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "C_anmälda_gris_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 2}
+{"fil": "C_anmälda_nötkreatur_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 45}
+{"fil": "C_anmälda_slaktkyckling_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "C_anmälda_värphöns350_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "C_oanmälda_gris_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 2}
+{"fil": "C_oanmälda_nötkreatur_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 18}
+{"fil": "C_oanmälda_slaktkyckling_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "C_oanmälda_värphöns350_2025.skv", "myndighet": "Uppsala", "lansbokstav": "C", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "D_2024_anmalda_gris.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 7}
+{"fil": "D_2024_nötkreatur_anmälda.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 52}
+{"fil": "D_2024_nötkreatur_oanmäld.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 33}
+{"fil": "D_2024_oanmalda_gris.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 3}
+{"fil": "D_2024_slaktkyckling_anmälda.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 2}
+{"fil": "D_2024_slaktkyckling_oanmälda.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "D_2024_Vhöns_anmälda.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "D_2024_Vhöns_oanmälda.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "D_anmälda_gris_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 4}
+{"fil": "D_anmälda_nötkreatur_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 40}
+{"fil": "D_anmälda_slaktkyckling_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "D_anmälda_värphöns350_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "D_oanmälda_gris_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 4}
+{"fil": "D_oanmälda_nötkreatur_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 29}
+{"fil": "D_oanmälda_slaktkyckling_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "D_oanmälda_värphöns350_2025.skv", "myndighet": "Södermanland", "lansbokstav": "D", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "E_2024_anmalda_gris.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "E_2024_nötkreatur_anmälda.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 75}
+{"fil": "E_2024_nötkreatur_oanmäld.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 26}
+{"fil": "E_2024_oanmalda_gris.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 17}
+{"fil": "E_2024_slaktkyckling_anmälda.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 3}
+{"fil": "E_2024_slaktkyckling_oanmälda.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "E_2024_Vhöns_anmälda.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 6}
+{"fil": "E_2024_Vhöns_oanmälda.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "E_anmälda_gris_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 14}
+{"fil": "E_anmälda_nötkreatur_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 104}
+{"fil": "E_anmälda_slaktkyckling_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "E_anmälda_värphöns350_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 8}
+{"fil": "E_oanmälda_gris_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "E_oanmälda_nötkreatur_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 34}
+{"fil": "E_oanmälda_slaktkyckling_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "E_oanmälda_värphöns350_2025.skv", "myndighet": "Östergötland", "lansbokstav": "E", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "F_2024_anmalda_gris.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "F_2024_nötkreatur_anmälda.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 94}
+{"fil": "F_2024_nötkreatur_oanmäld.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 47}
+{"fil": "F_2024_oanmalda_gris.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 3}
+{"fil": "F_2024_slaktkyckling_anmälda.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "F_2024_slaktkyckling_oanmälda.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "F_2024_Vhöns_anmälda.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "F_2024_Vhöns_oanmälda.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "F_anmälda_gris_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 2}
+{"fil": "F_anmälda_nötkreatur_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 123}
+{"fil": "F_anmälda_slaktkyckling_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "F_anmälda_värphöns350_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "F_oanmälda_gris_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "F_oanmälda_nötkreatur_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 42}
+{"fil": "F_oanmälda_slaktkyckling_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "F_oanmälda_värphöns350_2025.skv", "myndighet": "Jönköping", "lansbokstav": "F", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "G_2024_anmalda_gris.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 6}
+{"fil": "G_2024_nötkreatur_anmälda.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 76}
+{"fil": "G_2024_nötkreatur_oanmäld.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 59}
+{"fil": "G_2024_oanmalda_gris.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 4}
+{"fil": "G_2024_slaktkyckling_anmälda.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "G_2024_slaktkyckling_oanmälda.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "G_2024_Vhöns_anmälda.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "G_2024_Vhöns_oanmälda.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "G_anmälda_gris_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 5}
+{"fil": "G_anmälda_nötkreatur_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 200}
+{"fil": "G_anmälda_slaktkyckling_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "G_anmälda_värphöns350_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "G_oanmälda_gris_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 14}
+{"fil": "G_oanmälda_nötkreatur_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 76}
+{"fil": "G_oanmälda_slaktkyckling_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 4}
+{"fil": "G_oanmälda_värphöns350_2025.skv", "myndighet": "Kronoberg", "lansbokstav": "G", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 4}
+{"fil": "H_2024_anmalda_gris.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 7}
+{"fil": "H_2024_nötkreatur_anmälda.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 95}
+{"fil": "H_2024_nötkreatur_oanmäld.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 37}
+{"fil": "H_2024_oanmalda_gris.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 3}
+{"fil": "H_2024_slaktkyckling_anmälda.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "H_2024_slaktkyckling_oanmälda.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "H_2024_Vhöns_anmälda.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "H_2024_Vhöns_oanmälda.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "H_anmälda_gris_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 4}
+{"fil": "H_anmälda_nötkreatur_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 72}
+{"fil": "H_anmälda_slaktkyckling_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 2}
+{"fil": "H_anmälda_värphöns350_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "H_oanmälda_gris_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "H_oanmälda_nötkreatur_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 65}
+{"fil": "H_oanmälda_slaktkyckling_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "H_oanmälda_värphöns350_2025.skv", "myndighet": "Kalmar", "lansbokstav": "H", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "I_2024_anmalda_gris.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 6}
+{"fil": "I_2024_nötkreatur_anmälda.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 50}
+{"fil": "I_2024_nötkreatur_oanmäld.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 17}
+{"fil": "I_2024_oanmalda_gris.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 7}
+{"fil": "I_2024_slaktkyckling_anmälda.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "I_2024_slaktkyckling_oanmälda.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "I_2024_Vhöns_anmälda.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 3}
+{"fil": "I_2024_Vhöns_oanmälda.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "I_anmälda_gris_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "I_anmälda_nötkreatur_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 33}
+{"fil": "I_anmälda_slaktkyckling_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "I_anmälda_värphöns350_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "I_oanmälda_gris_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "I_oanmälda_nötkreatur_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 18}
+{"fil": "I_oanmälda_slaktkyckling_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "i_oanmälda_värphöns350_2025.skv", "myndighet": "Gotland", "lansbokstav": "I", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "K_2024_anmalda_gris.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 3}
+{"fil": "K_2024_nötkreatur_anmälda.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 12}
+{"fil": "K_2024_nötkreatur_oanmäld.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 19}
+{"fil": "K_2024_oanmalda_gris.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 4}
+{"fil": "K_2024_slaktkyckling_anmälda.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "K_2024_slaktkyckling_oanmälda.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "K_2024_Vhöns_anmälda.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "K_2024_Vhöns_oanmälda.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "K_anmälda_gris_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "K_anmälda_nötkreatur_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 4}
+{"fil": "K_anmälda_slaktkyckling_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "K_anmälda_värphöns350_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "K_oanmälda_gris_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "K_oanmälda_nötkreatur_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 23}
+{"fil": "K_oanmälda_slaktkyckling_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "K_oanmälda_värphöns350_2025.skv", "myndighet": "Blekinge", "lansbokstav": "K", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "M_2024_anmalda_gris.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 7}
+{"fil": "M_2024_nötkreatur_anmälda.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 44}
+{"fil": "M_2024_nötkreatur_oanmäld.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 91}
+{"fil": "M_2024_oanmalda_gris.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 17}
+{"fil": "M_2024_slaktkyckling_anmälda.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "M_2024_slaktkyckling_oanmälda.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "M_2024_Vhöns_anmälda.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "M_2024_Vhöns_oanmälda.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "M_anmälda_gris_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 13}
+{"fil": "M_anmälda_nötkreatur_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 86}
+{"fil": "M_anmälda_slaktkyckling_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "M_anmälda_värphöns350_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "M_oanmälda_gris_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 18}
+{"fil": "M_oanmälda_nötkreatur_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 74}
+{"fil": "M_oanmälda_slaktkyckling_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "M_oanmälda_värphöns350_2025.skv", "myndighet": "Skåne", "lansbokstav": "M", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "N_2024_anmalda_gris.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 9}
+{"fil": "N_2024_nötkreatur_anmälda.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 50}
+{"fil": "N_2024_nötkreatur_oanmäld.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 62}
+{"fil": "N_2024_oanmalda_gris.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 16}
+{"fil": "N_2024_slaktkyckling_anmälda.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 3}
+{"fil": "N_2024_slaktkyckling_oanmälda.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "N_2024_Vhöns_anmälda.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 5}
+{"fil": "N_2024_Vhöns_oanmälda.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "N_anmälda_gris_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 32}
+{"fil": "N_anmälda_nötkreatur_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 108}
+{"fil": "N_anmälda_slaktkyckling_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "N_anmälda_värphöns350_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "N_oanmälda_gris_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 14}
+{"fil": "N_oanmälda_nötkreatur_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 75}
+{"fil": "N_oanmälda_slaktkyckling_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "N_oanmälda_värphöns350_2025.skv", "myndighet": "Halland", "lansbokstav": "N", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "O_2024_anmalda_gris.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 31}
+{"fil": "O_2024_nötkreatur_anmälda.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 307}
+{"fil": "O_2024_nötkreatur_oanmäld.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 171}
+{"fil": "O_2024_oanmalda_gris.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 14}
+{"fil": "O_2024_slaktkyckling_anmälda.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 5}
+{"fil": "O_2024_slaktkyckling_oanmälda.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "O_2024_Vhöns_anmälda.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 8}
+{"fil": "O_2024_Vhöns_oanmälda.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "O_anmälda_gris_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 36}
+{"fil": "O_anmälda_nötkreatur_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 433}
+{"fil": "O_anmälda_slaktkyckling_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "O_anmälda_värphöns350_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 7}
+{"fil": "O_oanmälda_gris_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 8}
+{"fil": "O_oanmälda_nötkreatur_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 171}
+{"fil": "O_oanmälda_slaktkyckling_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "O_oanmälda_värphöns350_2025.skv", "myndighet": "Västra Götaland", "lansbokstav": "O", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 2}
+{"fil": "S_2024_anmalda_gris.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 8}
+{"fil": "S_2024_nötkreatur_anmälda.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 99}
+{"fil": "S_2024_nötkreatur_oanmäld.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 74}
+{"fil": "S_2024_oanmalda_gris.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 4}
+{"fil": "S_2024_slaktkyckling_anmälda.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "S_2024_slaktkyckling_oanmälda.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "S_2024_Vhöns_anmälda.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "S_2024_Vhöns_oanmälda.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "S_anmälda_gris_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 17}
+{"fil": "S_anmälda_nötkreatur_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 123}
+{"fil": "S_anmälda_slaktkyckling_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "S_anmälda_värphöns350_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "S_oanmälda_gris_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "S_oanmälda_nötkreatur_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 63}
+{"fil": "S_oanmälda_slaktkyckling_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "S_oanmälda_värphöns350_2025.skv", "myndighet": "Värmland", "lansbokstav": "S", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "T_2024_anmalda_gris.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 7}
+{"fil": "T_2024_nötkreatur_anmälda.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 63}
+{"fil": "T_2024_nötkreatur_oanmäld.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 11}
+{"fil": "T_2024_oanmalda_gris.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "T_2024_slaktkyckling_anmälda.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "T_2024_slaktkyckling_oanmälda.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "T_2024_Vhöns_anmälda.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "T_2024_Vhöns_oanmälda.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "T_anmälda_gris_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 12}
+{"fil": "T_anmälda_nötkreatur_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 58}
+{"fil": "T_anmälda_slaktkyckling_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "T_anmälda_värphöns350_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 7}
+{"fil": "T_oanmälda_gris_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 3}
+{"fil": "T_oanmälda_nötkreatur_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 19}
+{"fil": "T_oanmälda_slaktkyckling_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "T_oanmälda_värphöns350_2025.skv", "myndighet": "Örebro", "lansbokstav": "T", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "U_2024_anmalda_gris.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 11}
+{"fil": "U_2024_nötkreatur_anmälda.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 27}
+{"fil": "U_2024_nötkreatur_oanmäld.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 26}
+{"fil": "U_2024_oanmalda_gris.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 3}
+{"fil": "U_2024_slaktkyckling_anmälda.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "U_2024_slaktkyckling_oanmälda.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 2}
+{"fil": "U_2024_Vhöns_anmälda.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "U_2024_Vhöns_oanmälda.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "U_anmälda_gris_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "U_anmälda_nötkreatur_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 15}
+{"fil": "U_anmälda_slaktkyckling_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "U_anmälda_värphöns350_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "U_oanmälda_gris_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 5}
+{"fil": "U_oanmälda_nötkreatur_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 22}
+{"fil": "U_oanmälda_slaktkyckling_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "U_oanmälda_värphöns350_2025.skv", "myndighet": "Västmanland", "lansbokstav": "U", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "W_2024_anmalda_gris.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "W_2024_nötkreatur_anmälda.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 41}
+{"fil": "W_2024_nötkreatur_oanmäld.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 25}
+{"fil": "W_2024_oanmalda_gris.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 4}
+{"fil": "W_2024_slaktkyckling_anmälda.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "W_2024_slaktkyckling_oanmälda.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "W_2024_Vhöns_anmälda.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "W_2024_Vhöns_oanmälda.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "W_anmälda_gris_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 2}
+{"fil": "W_anmälda_nötkreatur_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 52}
+{"fil": "W_anmälda_slaktkyckling_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "W_anmälda_värphöns350_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "W_oanmälda_gris_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 2}
+{"fil": "W_oanmälda_nötkreatur_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 42}
+{"fil": "W_oanmälda_slaktkyckling_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "W_oanmälda_värphöns350_2025.skv", "myndighet": "Dalarna", "lansbokstav": "W", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "X_2024_anmalda_gris.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 3}
+{"fil": "X_2024_nötkreatur_anmälda.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 55}
+{"fil": "X_2024_nötkreatur_oanmäld.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 18}
+{"fil": "X_2024_oanmalda_gris.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "X_2024_slaktkyckling_anmälda.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "X_2024_slaktkyckling_oanmälda.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "X_2024_Vhöns_anmälda.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "X_2024_Vhöns_oanmälda.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "X_anmälda_gris_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 8}
+{"fil": "X_anmälda_nötkreatur_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 85}
+{"fil": "X_anmälda_slaktkyckling_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "X_anmälda_värphöns350_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "X_oanmälda_gris_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "X_oanmälda_nötkreatur_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 13}
+{"fil": "X_oanmälda_slaktkyckling_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 1}
+{"fil": "X_oanmälda_värphöns350_2025.skv", "myndighet": "Gävleborg", "lansbokstav": "X", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "Y_2024_anmalda_gris.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 1}
+{"fil": "Y_2024_nötkreatur_anmälda.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 43}
+{"fil": "Y_2024_nötkreatur_oanmäld.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 20}
+{"fil": "Y_2024_oanmalda_gris.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "Y_2024_slaktkyckling_anmälda.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "Y_2024_slaktkyckling_oanmälda.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "Y_2024_Vhöns_anmälda.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "Y_2024_Vhöns_oanmälda.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "Y_anmälda_gris_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 1}
+{"fil": "Y_anmälda_nötkreatur_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 23}
+{"fil": "Y_anmälda_slaktkyckling_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "Y_anmälda_värphöns350_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "Y_oanmälda_gris_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "Y_oanmälda_nötkreatur_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 25}
+{"fil": "Y_oanmälda_slaktkyckling_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "Y_oanmälda_värphöns350_2025.skv", "myndighet": "Västernorrland", "lansbokstav": "Y", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "Z_2024_anmalda_gris.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Gris", "år": 2024, "aviserad": true, "kontroller": 4}
+{"fil": "Z_2024_nötkreatur_anmälda.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Nötkreatur", "år": 2024, "aviserad": true, "kontroller": 55}
+{"fil": "Z_2024_nötkreatur_oanmäld.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Nötkreatur", "år": 2024, "aviserad": false, "kontroller": 25}
+{"fil": "Z_2024_oanmalda_gris.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Gris", "år": 2024, "aviserad": false, "kontroller": 5}
+{"fil": "Z_2024_slaktkyckling_anmälda.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Slaktkyckling", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "Z_2024_slaktkyckling_oanmälda.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Slaktkyckling", "år": 2024, "aviserad": false, "kontroller": 0}
+{"fil": "Z_2024_Vhöns_anmälda.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": true, "kontroller": 0}
+{"fil": "Z_2024_Vhöns_oanmälda.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Värphöns fler än 350 st", "år": 2024, "aviserad": false, "kontroller": 1}
+{"fil": "Z_anmälda_gris_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Gris", "år": 2025, "aviserad": true, "kontroller": 3}
+{"fil": "Z_anmälda_nötkreatur_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Nötkreatur", "år": 2025, "aviserad": true, "kontroller": 56}
+{"fil": "Z_anmälda_slaktkyckling_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Slaktkyckling", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "Z_anmälda_värphöns350_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": true, "kontroller": 0}
+{"fil": "Z_oanmälda_gris_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Gris", "år": 2025, "aviserad": false, "kontroller": 2}
+{"fil": "Z_oanmälda_nötkreatur_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Nötkreatur", "år": 2025, "aviserad": false, "kontroller": 35}
+{"fil": "Z_oanmälda_slaktkyckling_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Slaktkyckling", "år": 2025, "aviserad": false, "kontroller": 0}
+{"fil": "Z_oanmälda_värphöns350_2025.skv", "myndighet": "Jämtland", "lansbokstav": "Z", "checklista": "Värphöns fler än 350 st", "år": 2025, "aviserad": false, "kontroller": 0}

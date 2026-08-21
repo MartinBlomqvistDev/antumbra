@@ -704,3 +704,56 @@ Götaland B och Blekinge B. Dalarna A gäller inte en sekretessgrund utan
 beskedet att ingen kontrollrapport för gris påträffats. Ingen av dem kan lägga
 till ett län på P8-listan, eftersom inget av dem innehåller ett erbjudande om
 beslut.
+
+---
+
+## Begäran C: dimensionen oanmäld mot föranmäld, levererad per län
+
+Levererad 2026-08-21 kl. 09:29 via filöverföringslänk, **336 rapporter**, en per
+län, djurslag, år och aviseringsstatus. Parsad av `pipeline/27_parse_announced.py`
+till `data/foranmalda.jsonl`. Detta är den dimension myndigheten den 12 augusti
+uppgav *"går dessvärre inte att få ut med rutinbetonade åtgärder per län utan
+endast per år för hela landet"*, och den kom dagen efter att begäran upprepats,
+trots beskedet att arbetet skulle ta flera dagar.
+
+**Formatet begränsar vad dimensionen kan bära.** Varje rapport anger
+Kontrolltypgrupp *"Alla kontrolltypgrupper"*, alltså ingen korsning med
+kontrolltyp eller med brist. Avsnitt 10 prövar hypotesen på två sätt, och bara
+det första blir möjligt: sambandet mellan andelen oanmälda och andelen med brist
+över länen. Skillnaden i bristandel mellan oanmälda och föranmälda **inom** samma
+län, djurslag och kontrolltyp går inte att räkna, och det ska stå som en gräns i
+redovisningen.
+
+**Tre källor, och de säger inte samma sak.**
+
+| Checklista och år | 336 rapporter | Excel v2, rader | Mejl 14 och 17 aug |
+| --- | --- | --- | --- |
+| Nötkreatur 2025 | 2 768 | 2 916 | 2 768 |
+| Gris 2025 | 269 | 288 | 269 |
+| Värphöns 2025 | 52 | 55 | 52 |
+| Slaktkyckling 2025 | 19 | 26 | 19 |
+| Nötkreatur 2024 | 2 302 | 2 451 | 2 302 |
+| Gris 2024 | 249 | 241 | 222 |
+| Värphöns 2024 | 61 | 43 | 42 |
+| Slaktkyckling 2024 | 27 | 30 | 27 |
+
+**Rapporterna och mejlen är samma fråga mot registret.** De stämmer exakt i sex
+av åtta celler, vilket är kontrollen på att skörden är komplett och att inget
+län fallit bort.
+
+**Risk 2 i förregistreringen är bekräftad.** Förregistreringen varnade för att
+aviseringsfältet inte behöver vara konsekvent ifyllt. Det är det inte: i sex
+celler ligger summan av aviserade och oaviserade **under** antalet rader i
+radnivåuttaget för samma djurslag och år. Nötkreatur saknar 148 kontroller 2025
+och 149 kontroller 2024, alltså omkring 5 till 6 procent. Slaktkyckling 2025
+saknar 7 av 26, alltså 27 procent. En kontroll vars aviseringsfält är tomt faller
+ur både JA och NEJ, och nämnaren för varje andel måste därför vara summan av
+aviserade och oaviserade, aldrig radantalet.
+
+**Två celler går åt andra hållet, och pekar på att rättelsen var ofullständig.**
+Gris 2024 ger 249 kontroller i rapporterna mot 241 rader i excelbladet, och
+värphöns 2024 ger 61 mot 43. Det var 2024 års uttag som var defekt, och
+myndigheten gjorde om **enbart bladet Nötkreatur 2024** den 17 augusti. Bladen
+Gris 2024 och >350 värphöns 2024 är alltså sannolikt fortfarande ofullständiga,
+med minst 8 respektive 18 kontroller som saknas. Detta är en slutsats av
+jämförelsen mellan källorna och inte ett besked från myndigheten.

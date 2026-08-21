@@ -149,6 +149,7 @@ python pipeline/23_download_permits.py     # the permit decisions, named by hash
 python pipeline/24_condition_baseline.py   # are the conditions standard text?
 python pipeline/25_ocr_permits.py          # Swedish OCR over the scanned permits
 python pipeline/26_hidden_text.py          # text covered by something that is not black
+python pipeline/27_parse_announced.py      # announced or not, per county and year
 ```
 
 One report is not a pipeline step, because it derives nothing and writes
