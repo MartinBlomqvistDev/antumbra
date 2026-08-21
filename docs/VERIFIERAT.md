@@ -689,22 +689,42 @@ visat sig dra enskildas namn genom analysen.
 
 **Följden för P8 är liten, eftersom not 4 är konjunktiv.** Skrivelse skickas bara
 när ett kriterium är uppfyllt **och** myndigheten själv erbjudit ett
-överklagbart beslut. Två län har gjort det med full och verifierad lydelse. Gotland:
-*"Önskar du ett överklagningsbart beslut om detta så får du höra av dig."*
-Kronoberg, läst i fulltext 2026-08-20:
-*"Återkom till länsstyrelsen om du önskar att vi fattar ett överklagbart
-beslut."*
+överklagbart beslut. **Fyra län**, sedan samtliga avhuggna citat lästs i fulltext 2026-08-21.
+Gotland: *"Önskar du ett överklagningsbart beslut om detta så får du höra av
+dig."* Kronoberg: *"Återkom till länsstyrelsen om du önskar att vi fattar ett
+överklagbart beslut."* Halland: *"Är du inte nöjd med detta svar får du begära
+ett överklagbart beslut av Länsstyrelsen i Halland."* Södermanland: *"Om ni
+önskar ett formellt beslut med överklagandehänvisning vänligen kontakta
+Länsstyrelsen."*
 
-**Slutsats: två P8-skrivelser är utlösta, och femtaket i P9 binder inte.** Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
+**Rättelse.** Den 20 augusti stod här att de avhuggna citaten inte kunde lägga
+till något län, eftersom inget av dem innehöll ett erbjudande. Det påstods utan
+att citaten lästs, och det var fel: två av dem, Halland och Södermanland,
+innehåller var sitt uttryckligt erbjudande.
+
+**Blekinge erbjuder också ett beslut**, i klass B och med den utförligaste
+lydelsen av alla: *"Om du är missnöjd med att Länsstyrelsen inte lämnar ut
+handlingarna i sin helhet kan du begära myndighetens prövning i frågan. Ändrar
+inte Länsstyrelsen sin bedömning så får du då ett skriftligt, överklagbart
+beslut med en överklagandehänvisning."* Blekinge faller ändå utanför, eftersom
+inget P9-kriterium är uppfyllt: de anger ingen bestämmelse alls för sin maskning
+i klass B, och kriterium (c) kräver uttryckligen 30 kap. 23 §. **Det är en
+egenskap hos kriteriet värd att notera: ett län som maskar utan att ange grund
+kan inte träffas av (c), hur omfattande maskningen än är.** Blekinge är det
+enda län som maskat samtliga sina B-dokument.
+
+**Slutsats: fyra P8-skrivelser är utlösta, och femtaket i P9 binder inte.** Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
 går vidare. Det är inte ett nollresultat, vilket jag först skrev, och inte
 heller de tio överklaganden en läsning av enbart kriteriet skulle antyda.
 
-**Kvar att komplettera:** fyra citat är avhuggna i Gmails utdrag och behöver
-läsas i fulltext innan de kan bära något: Södermanland A, Halland A, Västra
-Götaland B och Blekinge B. Dalarna A gäller inte en sekretessgrund utan
-beskedet att ingen kontrollrapport för gris påträffats. Ingen av dem kan lägga
-till ett län på P8-listan, eftersom inget av dem innehåller ett erbjudande om
-beslut.
+**Lästa i fulltext 2026-08-21:** Södermanland A, Halland A, Västra Götaland B
+och Blekinge B. Västra Götaland undanhåller två beslut helt med stöd av 18 kap.
+1 och 3 §§ OSL och har dessutom tagit bort uppgifter *"enligt
+dataskyddsförordningen"*, alltså inte med stöd av OSL. Samma mejl uppger ett
+nämnartal som hör till P11: *"Totalt har 86 antal beslut/ föreläggande fattats
+enligt 8 kap 9 § Djurskyddslagen under perioden 1 januari 2022 till och med 31
+december 2025"*. Kvar oläst är endast Dalarna A, som inte gäller en
+sekretessgrund utan beskedet att ingen kontrollrapport för gris påträffats.
 
 ---
 
