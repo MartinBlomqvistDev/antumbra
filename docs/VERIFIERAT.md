@@ -508,13 +508,28 @@ lydelse" på fyra vardera. Femton av de 60 nämner inte ordet villkor på någon
 kort rad alls. Filnamnen kan inte avgöra saken: de bär ingen läsbar dokumenttyp
 för 43 av de 60.
 
-**En utvidgad rubriklista är mätt och medvetet inte införd.** Formen "för
+**De 60 är till största delen en annan dokumenttyp, uppmätt 2026-08-22:**
+27 ändringsbeslut, 16 förlängningar eller igångsättningsbeslut, 5 domar, 3 som
+inte nämner ordet villkor på någon kort rad, och 9 övriga. Endast
+ändringsbesluten bär villkorstext, och bara 10 av dem anger ett villkorsnummer
+som går att läsa maskinellt.
+
+**En segmenterare för ändringsbeslut prövades i tanken och byggdes inte.** Den
+skulle lyfta beslutstäckningen med omkring åtta procentenheter men bara
+villkorstäckningen med ungefär en procent, och skälet att avstå är starkare än
+så: **ett ändrat villkor är per definition unikt för sin ändring.** Att föra in
+dem i återanvändningsmåttet skulle mekaniskt sänka andelen delad text och
+blanda två populationer, den stående kravuppsättningen och ändringarna av den.
+Hålls de i stället strikt åtskilda tillför de en liten sidomängd utan eget
+värde för frågan. Bedömningen är gjord efter mätning och redovisas här i
+stället för att luckan beskrivs som ett förbiseende.
+
+**En utvidgad rubriklista är också mätt och medvetet inte införd.** Formen "för
 tillståndet gäller följande villkor:" är en äkta villkorsrubrik som mönstret
 missar, och den skulle lägga till **fyra beslut**, alltså 1,7 procent av
-korpusen. Ändringen görs inte nu, av två skäl: den skulle vara en justering av
-instrumentet efter att utfallet setts, och vinsten är för liten för att motivera
-att ett publicerat tal räknas om. Den står här som en känd och kvantifierad
-brist i stället för att tyst rättas eller tyst utelämnas.
+korpusen. Ändringen görs inte, eftersom den skulle vara en justering av
+instrumentet efter att utfallet setts och vinsten är för liten för att motivera
+att ett publicerat tal räknas om.
 
 ---
 
