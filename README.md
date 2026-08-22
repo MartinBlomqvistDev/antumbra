@@ -153,6 +153,7 @@ python pipeline/25_ocr_permits.py          # Swedish OCR over the scanned permit
 python pipeline/26_hidden_text.py          # text covered by something that is not black
 python pipeline/27_parse_announced.py      # announced or not, per county and year
 python pipeline/28_unannounced_hypothesis.py  # the pre-registered hypothesis
+python pipeline/29_check_grounds.py        # is the register of cited grounds closed?
 ```
 
 One report is not a pipeline step, because it derives nothing and writes

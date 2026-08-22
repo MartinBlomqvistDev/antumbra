@@ -829,3 +829,115 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
             "Värmland",
             "Västernorrland",
         }
+
+
+class TestTheGroundsRegisterKnowsItsOwnGaps:
+    """The register of cited grounds is hand-curated, so its holes are pinned.
+
+    Every row is one authority's own sentence, copied out of a covering e-mail
+    by hand. Nothing generates it, which is legitimate, as it is for the
+    hand-read annex labels, but only if the population is declared and the gap
+    is visible. Criterion (c) of P9 is a negative claim, and a negative claim
+    over a set nobody has bounded is worth nothing. These tests bound it.
+
+    Coverage is asserted as a number and as a list. The list is the point: it
+    can only shrink by someone reading the missing e-mail and adding the row,
+    never by the population quietly changing underneath.
+    """
+
+    COUNTIES: ClassVar[dict[str, str]] = {
+        "blekinge": "Blekinge",
+        "dalarna": "Dalarna",
+        "gotland": "Gotland",
+        "gavleborg": "Gävleborg",
+        "halland": "Halland",
+        "jamtland": "Jämtland",
+        "jonkoping": "Jönköping",
+        "kalmar": "Kalmar",
+        "kronoberg": "Kronoberg",
+        "norrbotten": "Norrbotten",
+        "skane": "Skåne",
+        "stockholm": "Stockholm",
+        "sodermanland": "Södermanland",
+        "uppsala": "Uppsala",
+        "varmland": "Värmland",
+        "vasterbotten": "Västerbotten",
+        "vasternorrland": "Västernorrland",
+        "vastmanland": "Västmanland",
+        "vastra_gotaland": "Västra Götaland",
+        "orebro": "Örebro",
+        "ostergotland": "Östergötland",
+    }
+    MISSING: ClassVar[set[tuple[str, str]]] = {
+        ("Dalarna", "B"),
+        ("Gävleborg", "A"),
+        ("Gävleborg", "B"),
+        ("Halland", "B"),
+        ("Jämtland", "A"),
+        ("Kalmar", "A"),
+        ("Kronoberg", "B"),
+        ("Stockholm", "A"),
+        ("Södermanland", "B"),
+        ("Uppsala", "B"),
+        ("Västmanland", "B"),
+        ("Västra Götaland", "A"),
+        ("Östergötland", "A"),
+    }
+
+    def population(self, masking) -> set[tuple[str, str]]:
+        """Every county and class with at least one masked document."""
+        found = set()
+        for record in masking:
+            if not record["masked"]:
+                continue
+            folder = record["path"].split("/")[0]
+            county, _, klass = folder.rpartition("_")
+            if klass in {"A", "B"} and county in self.COUNTIES:
+                found.add((self.COUNTIES[county], klass))
+        return found
+
+    @staticmethod
+    def traceable(provision: str, quote: str) -> bool:
+        """Whether the provision can be read out of the quote it came from."""
+        numbers = re.findall(r"\d+", provision)
+        stem = provision.split()[0].casefold()[:5]
+        if not numbers:
+            return stem in quote.casefold()
+        if len(numbers) < 2:
+            return numbers[0] in quote and stem in quote.casefold()
+        marker = re.search(
+            rf"\b{numbers[0]}\s*(kap\.?|kapitel|:)", quote, re.IGNORECASE
+        )
+        if not marker:
+            return False
+        window = quote[marker.end() : marker.end() + 40]
+        return re.search(rf"\b{numbers[1]}\b", window) is not None
+
+    def test_every_row_is_well_formed(self, grounds):
+        for record in grounds:
+            assert record["klass"] in {"A", "B"}
+            assert record["citat"].strip()
+            assert record["meddelande_id"]
+            assert isinstance(record["bestammelser"], list)
+            assert isinstance(record["citat_fullstandigt"], bool)
+            assert isinstance(record["erbjudet_beslut"], bool)
+
+    def test_no_provision_is_invented(self, grounds):
+        # A provision recorded without its quote is the failure this catches;
+        # one row carried 21 kap. 1 § from a paragraph that had not been stored.
+        for record in grounds:
+            for provision in record["bestammelser"]:
+                assert self.traceable(provision, record["citat"]), (
+                    f"{record['myndighet']} {record['klass']}: {provision}"
+                )
+
+    def test_no_row_without_a_masked_delivery(self, grounds, masking):
+        covered = {(r["myndighet"], r["klass"]) for r in grounds}
+        assert covered <= self.population(masking)
+
+    def test_the_gap_is_exactly_the_one_we_know_about(self, grounds, masking):
+        covered = {(r["myndighet"], r["klass"]) for r in grounds}
+        population = self.population(masking)
+        assert len(population) == 25
+        assert len(covered) == 12
+        assert population - covered == self.MISSING

@@ -658,6 +658,25 @@ hade aldrig gjorts. Underlaget är `data/sekretessgrunder.jsonl`, som citerar
 varje myndighets egen lydelse om vad som maskats och med vilket stöd, med
 meddelande-id och en flagga för om citatet är fullständigt i källan.
 
+**Registret är handkurerat och ännu inte slutet, och det avgör hur långt
+slutsatserna räcker.** Ingen kod skapar filen; varje rad är avskriven för hand
+ur ett följebrev, på samma villkor som det handlästa facit som bär
+bilageklassningen. Populationen är däremot maskinellt definierad av
+`pipeline/29_check_grounds.py`: varje län och klass med minst ett maskat
+dokument ska ha en rad. **Täckningen är 12 av 25**, och de tretton som saknas
+är Dalarna B, Gävleborg A och B, Halland B, Jämtland A, Kalmar A, Kronoberg B,
+Stockholm A, Södermanland B, Uppsala B, Västmanland B, Västra Götaland A och
+Östergötland A. Steget returnerar fel så länge luckan finns, och testsviten
+spikar exakt vilka rader som fattas.
+
+Följden ska läsas strikt. **Kriterium (c) noll är ett påstående om klass B, och
+sju B-leveranser saknar nedtecknad grund**; nollan vilar där på sökningar i
+brevlådan, vilket är svagare än en post per leverans och nästan missade
+Södermanlands leverans den 17 augusti, som hade en annan ämnesrad. **P8-listan
+på fyra län är inte slutlig**, eftersom sex A-leveranser är ogranskade och en
+av dem kan bära både 30 kap. 23 § och ett erbjudande om beslut. Listan kan
+växa, aldrig krympa, så de fyra skrivelserna är riktiga oavsett.
+
 **Kriterium (c), maskning i klass B med stöd av 30 kap. 23 §: noll.** Verifierat
 mot brevlådan och inte mot minnet. En riktad sökning i samtliga B-trådar efter
 30 kap ger två träffar, och båda är län där bestämmelsen inte åberopas av
