@@ -52,6 +52,7 @@ REQUIRED = {
     "bestammelser",
     "citat_fullstandigt",
     "erbjudet_beslut",
+    "kalla_ej_atkomlig",
 }
 
 # The delivery folders are named after the county in a transliterated form.
@@ -143,7 +144,7 @@ def main() -> int:
             name = f"{row.get('myndighet')} {row.get('klass')}"
             problems.append(f"{name}: saknar fält {sorted(missing_fields)}")
             continue
-        if not row["citat"].strip():
+        if not row["citat"].strip() and not row["kalla_ej_atkomlig"]:
             problems.append(f"{row['myndighet']} {row['klass']}: tomt citat")
         for provision in row["bestammelser"]:
             if not chapter_is_quoted(provision, row["citat"]):
@@ -168,6 +169,15 @@ def main() -> int:
         print(f"\ninre motsägelser ({len(problems)}):")
         for problem in problems:
             print(f"  {problem}")
+
+    unreachable = [
+        f"{r['myndighet']} {r['klass']}" for r in rows if r["kalla_ej_atkomlig"]
+    ]
+    if unreachable:
+        print(
+            f"\nleveranser vars följebrev inte gått att hämta "
+            f"({len(unreachable)}): {unreachable}"
+        )
 
     incomplete = [
         f"{r['myndighet']} {r['klass']}" for r in rows if not r["citat_fullstandigt"]

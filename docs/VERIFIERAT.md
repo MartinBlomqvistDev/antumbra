@@ -658,37 +658,31 @@ hade aldrig gjorts. Underlaget är `data/sekretessgrunder.jsonl`, som citerar
 varje myndighets egen lydelse om vad som maskats och med vilket stöd, med
 meddelande-id och en flagga för om citatet är fullständigt i källan.
 
-**Registret är handkurerat och ännu inte slutet, och det avgör hur långt
-slutsatserna räcker.** Ingen kod skapar filen; varje rad är avskriven för hand
-ur ett följebrev, på samma villkor som det handlästa facit som bär
-bilageklassningen. Populationen är däremot maskinellt definierad av
-`pipeline/29_check_grounds.py`: varje län och klass med minst ett maskat
-dokument ska ha en rad. **Täckningen är 12 av 25**, och de tretton som saknas
-är Dalarna B, Gävleborg A och B, Halland B, Jämtland A, Kalmar A, Kronoberg B,
-Stockholm A, Södermanland B, Uppsala B, Västmanland B, Västra Götaland A och
-Östergötland A. Steget returnerar fel så länge luckan finns, och testsviten
-spikar exakt vilka rader som fattas.
+**Registret är handkurerat men slutet sedan 2026-08-22.** Ingen kod skapar
+filen; varje rad är avskriven för hand ur ett följebrev, på samma villkor som det
+handlästa facit som bär bilageklassningen. Populationen är maskinellt definierad
+av `pipeline/29_check_grounds.py`: varje län och klass med minst ett maskat
+dokument ska ha en rad. **Täckningen är 25 av 25.** En enda rad saknar sitt
+citat, Kalmar A, vars följebrev inte går att hämta ur brevlådan trots att
+leveransen är loggad och filerna ligger på disk; raden finns ändå och bär
+flaggan `kalla_ej_atkomlig` i stället för att utelämnas.
 
-Följden ska läsas strikt. **Kriterium (c) noll är ett påstående om klass B, och
-sju B-leveranser saknar nedtecknad grund**; nollan vilar där på sökningar i
-brevlådan, vilket är svagare än en post per leverans och nästan missade
-Södermanlands leverans den 17 augusti, som hade en annan ämnesrad. **P8-listan
-på fyra län är inte slutlig**, eftersom sex A-leveranser är ogranskade och en
-av dem kan bära både 30 kap. 23 § och ett erbjudande om beslut. Listan kan
-växa, aldrig krympa, så de fyra skrivelserna är riktiga oavsett.
-
-**Kriterium (c), maskning i klass B med stöd av 30 kap. 23 §: noll.** Verifierat
-mot brevlådan och inte mot minnet. En riktad sökning i samtliga B-trådar efter
-30 kap ger två träffar, och båda är län där bestämmelsen inte åberopas av
-myndigheten: Örebro, vars B aldrig levererades på grund av avgiftsstopp, och
-Norrbotten, som lämnade ut B omaskat. De län som maskade i klass B anger annat:
-Stockholm *"de fyra sista siffrorna i personnumren är maskerade (dolda)"*,
-Västra Götaland 18 kap. 1 § för två helt undanhållna beslut, Blekinge sekretess
-utan angiven bestämmelse.
+**Kriterium (c), maskning i klass B med stöd av 30 kap. 23 §: noll, nu prövat
+mot varje maskad B-leverans i stället för mot sökningar.** Tio län maskade i
+klass B och inget av dem åberopar bestämmelsen. Västra Götaland undanhåller två
+beslut helt med stöd av 18 kap. 1 och 3 §§. Stockholm, Dalarna och Halland
+maskar personuppgifter, Dalarna och Halland uttryckligen med stöd av
+dataskyddsförordningen och inte av OSL; enligt avsnitt 11 i mallen är sådan
+maskning i ett B-svar ingen avvikelse enligt P9 och får inte räknas som en.
+Blekinge anger sekretess utan bestämmelse. **Fem län maskade i klass B utan att
+ange någon grund alls:** Gävleborg, Kronoberg, Södermanland, Uppsala och
+Västmanland. Det är ett fynd i sig, och det visar en egenskap hos kriteriet: ett
+län som inte anger grund kan aldrig träffas av (c), hur omfattande maskningen än
+är.
 
 **Kriterium (b) är uppfyllt, och det var det jag först trodde var omöjligt.**
-Sex län maskade klass A med stöd av 30 kap. 23 §: Gotland, Kronoberg, Värmland,
-Västernorrland, Södermanland och Halland. Jämförelsemängden finns: **fem län har
+Sju län maskade klass A med stöd av 30 kap. 23 §: Gotland, Kronoberg, Värmland,
+Västernorrland, Södermanland, Halland och Västra Götaland. Jämförelsemängden finns: **fem län har
 minst ett helt omaskat A-dokument**, sammanlagt 17 dokument, nämligen Dalarna,
 Gävleborg, Jämtland, Södermanland och Uppsala. Fem är fler än de tre kriteriet
 kräver.
@@ -732,7 +726,13 @@ egenskap hos kriteriet värd att notera: ett län som maskar utan att ange grund
 kan inte träffas av (c), hur omfattande maskningen än är.** Blekinge är det
 enda län som maskat samtliga sina B-dokument.
 
-**Slutsats: fyra P8-skrivelser är utlösta, och femtaket i P9 binder inte.** Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
+**Slutsats: fem P8-skrivelser är utlösta, och femtaket i P9 binder nätt och
+jämnt inte.** Västra Götaland tillkom när registret slöts den 22 augusti och
+åberopar både bestämmelsen och erbjuder ett beslut ordagrant: *"Om du inte är
+nöjd med detta besked så kan du återkomma och begära ett skriftligt
+avslagsbeslut från Länsstyrelsen."* Fyra skrivelser är avsända, till Gotland och
+Kronoberg den 21 augusti och till Halland och Södermanland den 22 augusti. Den
+femte, till Västra Götaland, är inte skriven. Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
 går vidare. Det är inte ett nollresultat, vilket jag först skrev, och inte
 heller de tio överklaganden en läsning av enbart kriteriet skulle antyda.
 

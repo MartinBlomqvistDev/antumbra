@@ -791,6 +791,8 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
 
     def test_every_ground_is_traceable_to_a_message(self, grounds):
         for record in grounds:
+            if record["kalla_ej_atkomlig"]:
+                continue
             assert record["meddelande_id"]
             assert record["citat"].strip()
             assert record["klass"] in {"A", "B"}
@@ -828,6 +830,25 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
             "Södermanland",
             "Värmland",
             "Västernorrland",
+            "Västra Götaland",
+        }
+
+    def test_the_p8_list_is_the_intersection(self, grounds):
+        # Not 4 is conjunctive: the criterion and the authority's own offer.
+        # Five counties meet both, and the list may only grow.
+        triggered = {
+            r["myndighet"]
+            for r in grounds
+            if r["klass"] == "A"
+            and self.GROUND_30_23 in r["bestammelser"]
+            and r["erbjudet_beslut"]
+        }
+        assert triggered == {
+            "Gotland",
+            "Halland",
+            "Kronoberg",
+            "Södermanland",
+            "Västra Götaland",
         }
 
 
@@ -868,21 +889,7 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         "orebro": "Örebro",
         "ostergotland": "Östergötland",
     }
-    MISSING: ClassVar[set[tuple[str, str]]] = {
-        ("Dalarna", "B"),
-        ("Gävleborg", "A"),
-        ("Gävleborg", "B"),
-        ("Halland", "B"),
-        ("Jämtland", "A"),
-        ("Kalmar", "A"),
-        ("Kronoberg", "B"),
-        ("Stockholm", "A"),
-        ("Södermanland", "B"),
-        ("Uppsala", "B"),
-        ("Västmanland", "B"),
-        ("Västra Götaland", "A"),
-        ("Östergötland", "A"),
-    }
+    MISSING: ClassVar[set[tuple[str, str]]] = set()
 
     def population(self, masking) -> set[tuple[str, str]]:
         """Every county and class with at least one masked document."""
@@ -916,6 +923,11 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
     def test_every_row_is_well_formed(self, grounds):
         for record in grounds:
             assert record["klass"] in {"A", "B"}
+            # One covering e-mail cannot be retrieved from the mailbox, and the
+            # row says so rather than being absent. Every other row is quoted.
+            if record["kalla_ej_atkomlig"]:
+                assert not record["citat"]
+                continue
             assert record["citat"].strip()
             assert record["meddelande_id"]
             assert isinstance(record["bestammelser"], list)
@@ -935,9 +947,9 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         covered = {(r["myndighet"], r["klass"]) for r in grounds}
         assert covered <= self.population(masking)
 
-    def test_the_gap_is_exactly_the_one_we_know_about(self, grounds, masking):
+    def test_the_register_is_closed(self, grounds, masking):
         covered = {(r["myndighet"], r["klass"]) for r in grounds}
         population = self.population(masking)
         assert len(population) == 25
-        assert len(covered) == 12
+        assert len(covered) == 25
         assert population - covered == self.MISSING
