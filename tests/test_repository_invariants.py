@@ -826,6 +826,7 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
         assert counties == {
             "Gotland",
             "Halland",
+            "Kalmar",
             "Kronoberg",
             "Södermanland",
             "Värmland",
@@ -846,6 +847,7 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
         assert triggered == {
             "Gotland",
             "Halland",
+            "Kalmar",
             "Kronoberg",
             "Södermanland",
             "Västra Götaland",
