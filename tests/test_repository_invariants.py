@@ -925,13 +925,13 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
     def test_every_row_is_well_formed(self, grounds):
         for record in grounds:
             assert record["klass"] in {"A", "B"}
-            # One covering e-mail cannot be retrieved from the mailbox, and the
-            # row says so rather than being absent. Every other row is quoted.
-            if record["kalla_ej_atkomlig"]:
-                assert not record["citat"]
-                continue
-            assert record["citat"].strip()
-            assert record["meddelande_id"]
+            # One covering e-mail cannot be located through the mailbox API, so
+            # its row carries no message id. Its quote was pasted from the
+            # mailbox by hand, which is why the flag allows a missing id and a
+            # missing quote but never requires either.
+            if not record["kalla_ej_atkomlig"]:
+                assert record["meddelande_id"]
+                assert record["citat"].strip()
             assert isinstance(record["bestammelser"], list)
             assert isinstance(record["citat_fullstandigt"], bool)
             assert isinstance(record["erbjudet_beslut"], bool)

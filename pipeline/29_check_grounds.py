@@ -23,6 +23,12 @@ not, so a provision whose paragraph is not quoted anywhere in the row is
 reported. That failure was real: one row carried 21 kap. 1 § from a paragraph
 that had not been stored.
 
+**One row carries no message id.** Kalmar's covering e-mail of 14 August cannot
+be located through the mailbox API, although the delivery is in the protocol log
+and its files are on disk. Its row is flagged kalla_ej_atkomlig, which permits a
+missing id and a missing quote without requiring either; the quote itself was
+read out of the mailbox by hand and is present.
+
 **This step never edits the register.** It reports what is missing and what does
 not hold together, and returns non-zero, so the gap is visible in a run and in
 CI rather than in someone's memory. The precedent is
