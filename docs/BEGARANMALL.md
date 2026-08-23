@@ -1063,3 +1063,57 @@ inklusive de län där noll skrivelser behövdes.
 **Avgränsning.** Jönköpings uttryckliga vägran den 6 augusti hör inte hit. Den
 är ett slutstatus enligt tillämpningsnot 3, uttryckligen vägrad, och besvaras
 inte.
+
+### Tillämpningsnot 6, 2026-08-23: hur uppgiftstyp läses i P9 (b), och vad som krävs för att överklaga
+
+Skriven innan något beslut har kommit in, av samma skäl som not 3 och not 5:
+tröskeln för ett rättsligt steg ska vara satt innan den kan bli bekväm eller
+obekväm i det enskilda fallet. Sex P8-skrivelser är avsända den 21 till 23
+augusti och kan ge upp till sex beslut. P9:s överklagandeskyldighet utlöses av
+beslutet, inte av skrivelsen, och fristen är tre veckor från delfåendet.
+
+**Problemet.** Kriterium (b) lyder att maskning i klass A med stöd av 30 kap.
+23 § OSL ska träffa "en uppgiftstyp som minst tre andra länsstyrelser lämnat ut
+omaskad i samma handlingsklass". Kriteriet förutsätter alltså att den maskerade
+uppgiftstypen går att fastställa. Det gör den inte på fältnivå: i 124 av 294
+levererade dokument är texten under svärtningen borttagen, och ADR-0017 slog
+fast att handlingarna är löpande prosa utan fältstruktur. Ett försök att härleda
+typen ur texten runt varje svärtning övergavs sedan det visat sig dra enskildas
+namn genom analysen.
+
+**Läsningen som gäller.** Uppgiftstyp läses på **bestämmelsenivå**, alltså den
+kategori den åberopade regeln skyddar. Åberopar en myndighet 30 kap. 23 § är den
+maskerade uppgiftstypen enskilds affärs- eller driftförhållanden, vilket är vad
+bestämmelsen skyddar och vad Kronoberg som enda län också skriver ut i klartext.
+Jämförelsemängden är de län som lämnat ut minst ett helt omaskat dokument i
+klass A, eftersom ett omaskat dokument per definition släpper varje uppgiftstyp
+det innehåller. De är fem: Dalarna, Gävleborg, Jämtland, Södermanland och
+Uppsala, tillsammans 17 dokument. Fem är fler än de tre kriteriet kräver.
+
+**Vad läsningen inte gör.** Den avgör ingen sekretessfråga och den påstår inte
+att två län maskat samma konkreta uppgift. Den fastställer att kriteriet är
+uppfyllt i protokollets mening, ingenting mer.
+
+**Överklagande följer inte automatiskt av den grova läsningen.** Ett beslut
+överklagas enligt kriterium (b) endast om beslutet självt namnger den maskerade
+uppgiftstypen så att jämförelsen kan göras på fältnivå mot de fem länens
+omaskade dokument. Gör beslutet inte det saknas underlag för att driva saken,
+och det redovisas som en gräns i mätningen i stället för att drivas på svag
+grund. Skälet är att ett förlorat mål ger ett avgörande om att maskningen var
+laglig, vilket är sämre för öppenhetslagret än tystnad, och att kammarrätten
+skulle ställa just den fråga den grova läsningen inte kan besvara.
+
+**Maskning av personuppgifter ligger utanför kriterierna.** Avsnitt 11 slår fast
+att sådan maskning i ett B-svar inte är en avvikelse enligt P9 och inte får
+räknas som en. Detsamma gäller i klass A: maskning med stöd av 21 kap. OSL eller
+dataskyddsförordningen berör inte (b), som är skriven mot 30 kap. 23 §.
+
+**Följden i siffror, per 2026-08-23.** Åtta län maskade klass A med stöd av
+30 kap. 23 §: Gotland, Halland, Kalmar, Kronoberg, Södermanland, Värmland,
+Västernorrland och Västra Götaland. Sex av dem har själva erbjudit ett
+överklagbart beslut och har därför fått en P8-skrivelse enligt not 4:s
+konjunktion; Värmland och Västernorrland har inte erbjudit något och får ingen.
+Kriterium (c) är noll, prövat mot varje maskad B-leverans. Kommer fler än fem
+kvalificerade beslut in gäller P9:s ordning: (c) först, därefter (a), därefter
+(b) i fallande avvikelsestorlek, mätt som skillnaden i maskad yta mot
+jämförelsemängden.
