@@ -745,9 +745,11 @@ enda län som maskat samtliga sina B-dokument.
 jämnt inte.** Västra Götaland tillkom när registret slöts den 22 augusti och
 åberopar både bestämmelsen och erbjuder ett beslut ordagrant: *"Om du inte är
 nöjd med detta besked så kan du återkomma och begära ett skriftligt
-avslagsbeslut från Länsstyrelsen."* Fyra skrivelser är avsända, till Gotland och
-Kronoberg den 21 augusti och till Halland och Södermanland den 22 augusti. Den
-femte, till Västra Götaland, är inte skriven. Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
+avslagsbeslut från Länsstyrelsen."* Kalmar tillkom den 22 augusti sedan dess följebrev lästs: myndigheten åberopar
+OSL 30:23 och skriver *"Om du önskar ett överklagningsbart beslut så återkom
+till oss."* **Sex skrivelser är utlösta och samtliga sex är avsända**, till
+Gotland och Kronoberg den 21 augusti, Halland och Södermanland den 22 augusti,
+Västra Götaland och Kalmar den 23 augusti. Kriterium (b) slår mot sex län, men bara de som själva erbjudit beslut
 går vidare. Det är inte ett nollresultat, vilket jag först skrev, och inte
 heller de tio överklaganden en läsning av enbart kriteriet skulle antyda.
 
