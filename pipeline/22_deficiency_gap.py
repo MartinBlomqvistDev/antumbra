@@ -5,10 +5,22 @@ Agriculture's own report for 2024: "Under 2024 rapporterade en länsstyrelse
 brister vid 33 procent av rutinkontrollerna, medan en annan rapporterade
 brister vid 84 procent av rutinkontrollerna", followed by the statement that
 the difference cannot be read out of the statistics. The register extract
-delivered under request C carries one row per control, so the spread can be
-recomputed from the rows instead of quoted from the report.
+delivered under request C is finer than that report, so the spread can be
+recomputed from the rows instead of quoted from the text.
 
-Two restrictions, both forced by the data rather than chosen.
+Three restrictions, all forced by the data rather than chosen.
+
+**A row is one animal keeper at one control, not one control.** The authority
+stated this itself on 24 August 2026, after being asked why its two deliveries
+disagree: "i de fall det är fler än en djurhållare på kontrollplatsen så blir
+varje djurhållare en egen rad (dvs. en kontroll där det finns två djurhållare
+blir två rader i Excelfilen)". The extract carries four columns, county, control
+type, checklist and the deficiency flag, and no identifier of any kind, so the
+duplicates cannot be located and the rows cannot be collapsed onto controls.
+Every count below is therefore a count of keeper rows, which is what the output
+field is named. A share over them equals the share over controls only where
+duplicated keepers carry the same deficiency flag, and how often they do cannot
+be measured from this file.
 
 **Routine controls only.** Five of the control types name the outcome in the
 type itself, for instance "Klagomål, offentlig kontroll med brister", and in
@@ -29,8 +41,8 @@ one sheet changed; the other seven are byte-identical in content. Both years are
 now usable, and the printed summary still covers them separately so that no
 national figure can pool a year silently.
 
-Writes data/bristandel.jsonl, counts and shares per county, year, species and
-control category.
+Writes data/bristandel.jsonl, keeper rows and shares per county, year, species
+and control category.
 
 Usage:
     python pipeline/22_deficiency_gap.py
@@ -58,7 +70,7 @@ DELIVERY = (
 )
 OUT = ROOT / "data" / "bristandel.jsonl"
 
-MIN_CONTROLS = 20
+MIN_ROWS = 20
 
 # The authority's own grouping, quoted from its e-mail of 2026-08-14. Types in
 # the file that appear in none of the three lists are reported, never bucketed
@@ -129,10 +141,10 @@ def main() -> int:
 
     grouped = (
         rows.groupby(["year", "species", "category", "LÄN"])
-        .agg(kontroller=("fault", "size"), med_brist=("fault", "sum"))
+        .agg(rader=("fault", "size"), med_brist=("fault", "sum"))
         .reset_index()
     )
-    grouped["andel_brist"] = (grouped["med_brist"] / grouped["kontroller"]).round(3)
+    grouped["andel_brist"] = (grouped["med_brist"] / grouped["rader"]).round(3)
     with OUT.open("w", encoding="utf-8", newline="\n") as out:
         for record in grouped.to_dict("records"):
             record["med_brist"] = int(record["med_brist"])
@@ -142,13 +154,13 @@ def main() -> int:
     for year in sorted(rows["year"].unique()):
         routine = rows[(rows["year"] == year) & (rows["category"] == "rutin")]
         per_county = routine.groupby("LÄN")["fault"].agg(["size", "mean"]).reset_index()
-        usable = per_county[per_county["size"] >= MIN_CONTROLS].sort_values("mean")
+        usable = per_county[per_county["size"] >= MIN_ROWS].sort_values("mean")
         if usable.empty:
-            print(f"{year}: no county reaches {MIN_CONTROLS} routine controls\n")
+            print(f"{year}: no county reaches {MIN_ROWS} routine rows\n")
             continue
         low, high = usable.iloc[0], usable.iloc[-1]
         print(
-            f"{year}, rutinkontroller, län med minst {MIN_CONTROLS} kontroller: "
+            f"{year}, rutinkontroller, län med minst {MIN_ROWS} rader: "
             f"{len(usable)} av {len(per_county)}"
         )
         print(

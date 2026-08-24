@@ -17,11 +17,19 @@ across counties can be computed. The within-county contrast is not weakened
 here, it is absent, and no substitute is offered for it.
 
 **The denominator is the sum of announced and unannounced, never the row
-count.** The row level extract holds more controls than the two reports add up
-to, by five to six per cent for cattle and by 27 per cent for broilers in 2025.
-A control whose announced field is empty falls out of both, which is risk 2 in
-the pre-registration confirmed in the data. Dividing by the row count would
-silently treat those controls as announced.
+count.** The row level extract holds more rows than the two reports add up to,
+by five to six per cent for cattle and by 27 per cent for broilers in 2025. The
+authority explained that difference on 24 August 2026: a control with two animal
+keepers becomes two rows in the extract, so the excess is duplication and not a
+count of controls. Dividing by the row count would divide by keepers.
+
+**The two sides of the correlation are not the same unit, and cannot be made
+so.** The announced share is a share of controls, taken from the 336 reports.
+The deficiency share is a share of keeper rows, taken from the extract, which
+carries no identifier to collapse them onto controls. The two are compared as
+ranks across counties, so the association survives a constant duplication rate
+and is disturbed only where the rate itself varies by county. That cannot be
+ruled out here, and it is reported as a limit rather than resolved.
 
 **The deficiency share is computed twice.** Over routine controls, which is
 what the authority's own published figure concerns and what step 22 measures,
@@ -56,8 +64,9 @@ OUT = ROOT / "data" / "oanmald_hypotes.jsonl"
 PERMUTATIONS = 2000
 SEED = 20260821
 # A county contributes to a correlation only when both of its shares rest on
-# enough controls to mean anything. The same floor step 22 uses.
-MIN_CONTROLS = 20
+# enough observations to mean anything: controls on the announced side, rows
+# on the deficiency side. The same floor step 22 uses.
+MIN_ROWS = 20
 
 # The two deliveries name the same things differently, so the join is written
 # out rather than guessed by string surgery.
@@ -144,13 +153,13 @@ def load_announced() -> dict[tuple[str, str, int], tuple[int, int]]:
 
 
 def load_deficiency() -> dict[tuple[str, str, int, str], tuple[int, int]]:
-    """Controls and controls with a deficiency, per cell and category."""
+    """Keeper rows and rows with a deficiency, per cell and category."""
     found: dict[tuple[str, str, int, str], list[int]] = defaultdict(lambda: [0, 0])
     for line in DEFICIENCY.read_text("utf-8").splitlines():
         row = json.loads(line)
         for category in (row["category"], "alla"):
             key = (row["LÄN"], row["species"], row["year"], category)
-            found[key][0] += row["kontroller"]
+            found[key][0] += row["rader"]
             found[key][1] += row["med_brist"]
     return {k: (v[0], v[1]) for k, v in found.items()}
 
@@ -171,7 +180,7 @@ def main() -> int:
             cell = deficiency.get((county, species, year, category))
             if not cell:
                 continue
-            controls, faults = cell
+            rows_here, faults = cell
             records.append(
                 {
                     "myndighet": county,
@@ -181,9 +190,9 @@ def main() -> int:
                     "aviserade": yes,
                     "oaviserade": no,
                     "andel_oanmalda": round(no / total, 4) if total else None,
-                    "kontroller_brist": controls,
+                    "rader_brist": rows_here,
                     "med_brist": faults,
-                    "andel_brist": round(faults / controls, 4) if controls else None,
+                    "andel_brist": round(faults / rows_here, 4) if rows_here else None,
                 }
             )
     with OUT.open("w", encoding="utf-8", newline="\n") as out:
@@ -192,7 +201,8 @@ def main() -> int:
     print(f"{len(records)} celler -> {OUT.name}\n")
 
     print(
-        f"Spearman över län, celler med minst {MIN_CONTROLS} kontroller i båda måtten"
+        f"Spearman över län, celler med minst {MIN_ROWS} kontroller "
+        "respektive rader i båda måtten"
     )
     print(f"{'djurslag':16} {'år':>5} {'kategori':10} {'län':>4} {'rho':>7} {'p':>8}")
     for species in ("nötkreatur", "gris", ">350 värphöns", "slaktkyckling"):
@@ -204,8 +214,8 @@ def main() -> int:
                     if r["djurslag"] == species
                     and r["år"] == year
                     and r["kategori"] == category
-                    and r["aviserade"] + r["oaviserade"] >= MIN_CONTROLS
-                    and r["kontroller_brist"] >= MIN_CONTROLS
+                    and r["aviserade"] + r["oaviserade"] >= MIN_ROWS
+                    and r["rader_brist"] >= MIN_ROWS
                 ]
                 if len(cells) < 5:
                     continue

@@ -1,305 +1,305 @@
-{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Hallands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Jämtlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västernorrlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Gotlands län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Hallands län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Jönköpings län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Skåne län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 8, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 6, "med_brist": 1, "andel_brist": 0.167}
-{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Blekinge län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Hallands län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kalmar län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Blekinge län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Dalarnas län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Gotlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Hallands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Jämtlands län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Kronobergs län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Norrbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Skåne län", "kontroller": 8, "med_brist": 4, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Södermanlands län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Värmlands län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västerbottens län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västmanlands län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 9, "med_brist": 2, "andel_brist": 0.222}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Blekinge län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 6, "med_brist": 2, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Gotlands län", "kontroller": 5, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Gävleborgs län", "kontroller": 3, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Hallands län", "kontroller": 9, "med_brist": 3, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Jämtlands län", "kontroller": 5, "med_brist": 3, "andel_brist": 0.6}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Jönköpings län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 8, "med_brist": 4, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 7, "med_brist": 1, "andel_brist": 0.143}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Skåne län", "kontroller": 7, "med_brist": 4, "andel_brist": 0.571}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Stockholms län", "kontroller": 4, "med_brist": 2, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Södermanlands län", "kontroller": 8, "med_brist": 4, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Uppsala län", "kontroller": 6, "med_brist": 2, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 9, "med_brist": 3, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västernorrlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 9, "med_brist": 7, "andel_brist": 0.778}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 41, "med_brist": 17, "andel_brist": 0.415}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Örebro län", "kontroller": 8, "med_brist": 2, "andel_brist": 0.25}
-{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Hallands län", "kontroller": 14, "med_brist": 7, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Jämtlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Jönköpings län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Norrbottens län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 13, "med_brist": 10, "andel_brist": 0.769}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Södermanlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Värmlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västerbottens län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västmanlands län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västra Götalands län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Östergötlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Blekinge län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Dalarnas län", "kontroller": 7, "med_brist": 7, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gotlands län", "kontroller": 10, "med_brist": 8, "andel_brist": 0.8}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gävleborgs län", "kontroller": 10, "med_brist": 5, "andel_brist": 0.5}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Hallands län", "kontroller": 14, "med_brist": 11, "andel_brist": 0.786}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jämtlands län", "kontroller": 5, "med_brist": 4, "andel_brist": 0.8}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jönköpings län", "kontroller": 24, "med_brist": 15, "andel_brist": 0.625}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 14, "med_brist": 14, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kronobergs län", "kontroller": 9, "med_brist": 6, "andel_brist": 0.667}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Norrbottens län", "kontroller": 15, "med_brist": 14, "andel_brist": 0.933}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Skåne län", "kontroller": 41, "med_brist": 33, "andel_brist": 0.805}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Stockholms län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Södermanlands län", "kontroller": 10, "med_brist": 9, "andel_brist": 0.9}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Uppsala län", "kontroller": 5, "med_brist": 5, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Värmlands län", "kontroller": 34, "med_brist": 32, "andel_brist": 0.941}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västerbottens län", "kontroller": 15, "med_brist": 11, "andel_brist": 0.733}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västernorrlands län", "kontroller": 8, "med_brist": 7, "andel_brist": 0.875}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västmanlands län", "kontroller": 10, "med_brist": 8, "andel_brist": 0.8}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 62, "med_brist": 48, "andel_brist": 0.774}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Örebro län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Östergötlands län", "kontroller": 8, "med_brist": 6, "andel_brist": 0.75}
-{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Gävleborgs län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Jönköpings län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Skåne län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Södermanlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Västra Götalands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Blekinge län", "kontroller": 19, "med_brist": 8, "andel_brist": 0.421}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 46, "med_brist": 22, "andel_brist": 0.478}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Gotlands län", "kontroller": 48, "med_brist": 18, "andel_brist": 0.375}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Gävleborgs län", "kontroller": 60, "med_brist": 35, "andel_brist": 0.583}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Hallands län", "kontroller": 44, "med_brist": 26, "andel_brist": 0.591}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Jämtlands län", "kontroller": 57, "med_brist": 37, "andel_brist": 0.649}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Jönköpings län", "kontroller": 107, "med_brist": 55, "andel_brist": 0.514}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 94, "med_brist": 58, "andel_brist": 0.617}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 104, "med_brist": 38, "andel_brist": 0.365}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 28, "med_brist": 21, "andel_brist": 0.75}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Skåne län", "kontroller": 44, "med_brist": 19, "andel_brist": 0.432}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Stockholms län", "kontroller": 61, "med_brist": 31, "andel_brist": 0.508}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Södermanlands län", "kontroller": 49, "med_brist": 13, "andel_brist": 0.265}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Uppsala län", "kontroller": 39, "med_brist": 25, "andel_brist": 0.641}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 111, "med_brist": 56, "andel_brist": 0.505}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 108, "med_brist": 42, "andel_brist": 0.389}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västernorrlands län", "kontroller": 41, "med_brist": 26, "andel_brist": 0.634}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 22, "med_brist": 20, "andel_brist": 0.909}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 349, "med_brist": 194, "andel_brist": 0.556}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Örebro län", "kontroller": 66, "med_brist": 23, "andel_brist": 0.348}
-{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 72, "med_brist": 38, "andel_brist": 0.528}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Blekinge län", "kontroller": 9, "med_brist": 8, "andel_brist": 0.889}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Dalarnas län", "kontroller": 13, "med_brist": 12, "andel_brist": 0.923}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gotlands län", "kontroller": 9, "med_brist": 7, "andel_brist": 0.778}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gävleborgs län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Hallands län", "kontroller": 55, "med_brist": 35, "andel_brist": 0.636}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jämtlands län", "kontroller": 18, "med_brist": 17, "andel_brist": 0.944}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jönköpings län", "kontroller": 22, "med_brist": 19, "andel_brist": 0.864}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kalmar län", "kontroller": 35, "med_brist": 32, "andel_brist": 0.914}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 22, "med_brist": 18, "andel_brist": 0.818}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Norrbottens län", "kontroller": 22, "med_brist": 13, "andel_brist": 0.591}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 62, "med_brist": 56, "andel_brist": 0.903}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Stockholms län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Södermanlands län", "kontroller": 25, "med_brist": 18, "andel_brist": 0.72}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 5, "med_brist": 5, "andel_brist": 1.0}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Värmlands län", "kontroller": 42, "med_brist": 28, "andel_brist": 0.667}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västerbottens län", "kontroller": 13, "med_brist": 7, "andel_brist": 0.538}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västernorrlands län", "kontroller": 18, "med_brist": 16, "andel_brist": 0.889}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västmanlands län", "kontroller": 22, "med_brist": 19, "andel_brist": 0.864}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västra Götalands län", "kontroller": 134, "med_brist": 103, "andel_brist": 0.769}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Örebro län", "kontroller": 14, "med_brist": 12, "andel_brist": 0.857}
-{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Östergötlands län", "kontroller": 22, "med_brist": 17, "andel_brist": 0.773}
-{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Blekinge län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Dalarnas län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Hallands län", "kontroller": 3, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 3, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Södermanlands län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 4, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Västmanlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Gotlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västerbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Gävleborgs län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Hallands län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Skåne län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 3, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 7, "med_brist": 3, "andel_brist": 0.429}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Örebro län", "kontroller": 6, "med_brist": 2, "andel_brist": 0.333}
-{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 8, "med_brist": 1, "andel_brist": 0.125}
-{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Blekinge län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Västra Götalands län", "kontroller": 4, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Örebro län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Gotlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Hallands län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Jönköpings län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Kronobergs län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Norrbottens län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Skåne län", "kontroller": 4, "med_brist": 4, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Södermanlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Värmlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västerbottens län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västernorrlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 12, "med_brist": 5, "andel_brist": 0.417}
-{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Örebro län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Gotlands län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Gävleborgs län", "kontroller": 8, "med_brist": 3, "andel_brist": 0.375}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Hallands län", "kontroller": 32, "med_brist": 13, "andel_brist": 0.406}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Jämtlands län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Jönköpings län", "kontroller": 3, "med_brist": 2, "andel_brist": 0.667}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 4, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Skåne län", "kontroller": 23, "med_brist": 19, "andel_brist": 0.826}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Stockholms län", "kontroller": 4, "med_brist": 1, "andel_brist": 0.25}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Södermanlands län", "kontroller": 4, "med_brist": 3, "andel_brist": 0.75}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Uppsala län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 17, "med_brist": 4, "andel_brist": 0.235}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 9, "med_brist": 3, "andel_brist": 0.333}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 37, "med_brist": 19, "andel_brist": 0.514}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Örebro län", "kontroller": 10, "med_brist": 3, "andel_brist": 0.3}
-{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 17, "med_brist": 11, "andel_brist": 0.647}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Dalarnas län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Gotlands län", "kontroller": 2, "med_brist": 1, "andel_brist": 0.5}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Hallands län", "kontroller": 10, "med_brist": 7, "andel_brist": 0.7}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Jämtlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Jönköpings län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Kalmar län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 12, "med_brist": 11, "andel_brist": 0.917}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Norrbottens län", "kontroller": 7, "med_brist": 2, "andel_brist": 0.286}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 8, "med_brist": 7, "andel_brist": 0.875}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Stockholms län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Södermanlands län", "kontroller": 3, "med_brist": 3, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Värmlands län", "kontroller": 3, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Västmanlands län", "kontroller": 4, "med_brist": 3, "andel_brist": 0.75}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Västra Götalands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Örebro län", "kontroller": 3, "med_brist": 1, "andel_brist": 0.333}
-{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Östergötlands län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Blekinge län", "kontroller": 5, "med_brist": 5, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Dalarnas län", "kontroller": 12, "med_brist": 9, "andel_brist": 0.75}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gotlands län", "kontroller": 8, "med_brist": 5, "andel_brist": 0.625}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gävleborgs län", "kontroller": 9, "med_brist": 7, "andel_brist": 0.778}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Hallands län", "kontroller": 26, "med_brist": 18, "andel_brist": 0.692}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jämtlands län", "kontroller": 5, "med_brist": 5, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jönköpings län", "kontroller": 15, "med_brist": 13, "andel_brist": 0.867}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 7, "med_brist": 6, "andel_brist": 0.857}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kronobergs län", "kontroller": 12, "med_brist": 5, "andel_brist": 0.417}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Norrbottens län", "kontroller": 6, "med_brist": 6, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Skåne län", "kontroller": 13, "med_brist": 12, "andel_brist": 0.923}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Stockholms län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Södermanlands län", "kontroller": 8, "med_brist": 4, "andel_brist": 0.5}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Uppsala län", "kontroller": 9, "med_brist": 9, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Värmlands län", "kontroller": 16, "med_brist": 13, "andel_brist": 0.812}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västerbottens län", "kontroller": 11, "med_brist": 8, "andel_brist": 0.727}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västernorrlands län", "kontroller": 10, "med_brist": 8, "andel_brist": 0.8}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västmanlands län", "kontroller": 6, "med_brist": 4, "andel_brist": 0.667}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 56, "med_brist": 33, "andel_brist": 0.589}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Örebro län", "kontroller": 10, "med_brist": 9, "andel_brist": 0.9}
-{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Östergötlands län", "kontroller": 12, "med_brist": 10, "andel_brist": 0.833}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Blekinge län", "kontroller": 12, "med_brist": 3, "andel_brist": 0.25}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Dalarnas län", "kontroller": 66, "med_brist": 26, "andel_brist": 0.394}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Gotlands län", "kontroller": 34, "med_brist": 15, "andel_brist": 0.441}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Gävleborgs län", "kontroller": 88, "med_brist": 30, "andel_brist": 0.341}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Hallands län", "kontroller": 112, "med_brist": 59, "andel_brist": 0.527}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Jämtlands län", "kontroller": 58, "med_brist": 31, "andel_brist": 0.534}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Jönköpings län", "kontroller": 129, "med_brist": 94, "andel_brist": 0.729}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 84, "med_brist": 47, "andel_brist": 0.56}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Kronobergs län", "kontroller": 219, "med_brist": 66, "andel_brist": 0.301}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Norrbottens län", "kontroller": 30, "med_brist": 16, "andel_brist": 0.533}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Skåne län", "kontroller": 118, "med_brist": 47, "andel_brist": 0.398}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Stockholms län", "kontroller": 48, "med_brist": 20, "andel_brist": 0.417}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Södermanlands län", "kontroller": 43, "med_brist": 10, "andel_brist": 0.233}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Uppsala län", "kontroller": 53, "med_brist": 28, "andel_brist": 0.528}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 132, "med_brist": 63, "andel_brist": 0.477}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 111, "med_brist": 39, "andel_brist": 0.351}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västernorrlands län", "kontroller": 25, "med_brist": 17, "andel_brist": 0.68}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västmanlands län", "kontroller": 14, "med_brist": 10, "andel_brist": 0.714}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 477, "med_brist": 224, "andel_brist": 0.47}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Örebro län", "kontroller": 60, "med_brist": 17, "andel_brist": 0.283}
-{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Östergötlands län", "kontroller": 112, "med_brist": 50, "andel_brist": 0.446}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Blekinge län", "kontroller": 10, "med_brist": 10, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Dalarnas län", "kontroller": 23, "med_brist": 18, "andel_brist": 0.783}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gotlands län", "kontroller": 9, "med_brist": 3, "andel_brist": 0.333}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gävleborgs län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Hallands län", "kontroller": 45, "med_brist": 32, "andel_brist": 0.711}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jämtlands län", "kontroller": 28, "med_brist": 20, "andel_brist": 0.714}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jönköpings län", "kontroller": 32, "med_brist": 29, "andel_brist": 0.906}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kalmar län", "kontroller": 55, "med_brist": 52, "andel_brist": 0.945}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 48, "med_brist": 34, "andel_brist": 0.708}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Norrbottens län", "kontroller": 42, "med_brist": 33, "andel_brist": 0.786}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 35, "med_brist": 31, "andel_brist": 0.886}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Stockholms län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Södermanlands län", "kontroller": 17, "med_brist": 12, "andel_brist": 0.706}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 8, "med_brist": 8, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Värmlands län", "kontroller": 51, "med_brist": 40, "andel_brist": 0.784}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västerbottens län", "kontroller": 22, "med_brist": 17, "andel_brist": 0.773}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västernorrlands län", "kontroller": 16, "med_brist": 13, "andel_brist": 0.812}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västmanlands län", "kontroller": 17, "med_brist": 15, "andel_brist": 0.882}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västra Götalands län", "kontroller": 137, "med_brist": 95, "andel_brist": 0.693}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Örebro län", "kontroller": 13, "med_brist": 13, "andel_brist": 1.0}
-{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Östergötlands län", "kontroller": 21, "med_brist": 20, "andel_brist": 0.952}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Blekinge län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Gävleborgs län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Jönköpings län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kalmar län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kronobergs län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Västra Götalands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Blekinge län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Kalmar län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Skåne län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Värmlands län", "kontroller": 1, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västerbottens län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västra Götalands län", "kontroller": 2, "med_brist": 0, "andel_brist": 0.0}
-{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Kronobergs län", "kontroller": 7, "med_brist": 2, "andel_brist": 0.286}
-{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Skåne län", "kontroller": 2, "med_brist": 2, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Södermanlands län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
-{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Uppsala län", "kontroller": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Hallands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Jämtlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västernorrlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Dalarnas län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Gotlands län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Hallands län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Jönköpings län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kalmar län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kronobergs län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Norrbottens län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Skåne län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Uppsala län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Värmlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västerbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 8, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": ">350 värphöns", "category": "rutin", "LÄN": "Östergötlands län", "rader": 6, "med_brist": 1, "andel_brist": 0.167}
+{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Blekinge län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Hallands län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kalmar län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Stockholms län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Blekinge län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Dalarnas län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Gotlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Hallands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Jämtlands län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Kalmar län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Kronobergs län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Norrbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Skåne län", "rader": 8, "med_brist": 4, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Stockholms län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Södermanlands län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Uppsala län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Värmlands län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västerbottens län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västmanlands län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "gris", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 9, "med_brist": 2, "andel_brist": 0.222}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Blekinge län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Dalarnas län", "rader": 6, "med_brist": 2, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Gotlands län", "rader": 5, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Gävleborgs län", "rader": 3, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Hallands län", "rader": 9, "med_brist": 3, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Jämtlands län", "rader": 5, "med_brist": 3, "andel_brist": 0.6}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Jönköpings län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Kalmar län", "rader": 8, "med_brist": 4, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Kronobergs län", "rader": 7, "med_brist": 1, "andel_brist": 0.143}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Norrbottens län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Skåne län", "rader": 7, "med_brist": 4, "andel_brist": 0.571}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Stockholms län", "rader": 4, "med_brist": 2, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Södermanlands län", "rader": 8, "med_brist": 4, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Uppsala län", "rader": 6, "med_brist": 2, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Värmlands län", "rader": 9, "med_brist": 3, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västerbottens län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västernorrlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västmanlands län", "rader": 9, "med_brist": 7, "andel_brist": 0.778}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 41, "med_brist": 17, "andel_brist": 0.415}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Örebro län", "rader": 8, "med_brist": 2, "andel_brist": 0.25}
+{"year": 2024, "species": "gris", "category": "rutin", "LÄN": "Östergötlands län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Hallands län", "rader": 14, "med_brist": 7, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Jämtlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Jönköpings län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Kalmar län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Norrbottens län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Skåne län", "rader": 13, "med_brist": 10, "andel_brist": 0.769}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Stockholms län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Södermanlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Värmlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västerbottens län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västmanlands län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Västra Götalands län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "gris", "category": "uppföljning", "LÄN": "Östergötlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Blekinge län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Dalarnas län", "rader": 7, "med_brist": 7, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gotlands län", "rader": 10, "med_brist": 8, "andel_brist": 0.8}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gävleborgs län", "rader": 10, "med_brist": 5, "andel_brist": 0.5}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Hallands län", "rader": 14, "med_brist": 11, "andel_brist": 0.786}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jämtlands län", "rader": 5, "med_brist": 4, "andel_brist": 0.8}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jönköpings län", "rader": 24, "med_brist": 15, "andel_brist": 0.625}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kalmar län", "rader": 14, "med_brist": 14, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kronobergs län", "rader": 9, "med_brist": 6, "andel_brist": 0.667}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Norrbottens län", "rader": 15, "med_brist": 14, "andel_brist": 0.933}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Skåne län", "rader": 41, "med_brist": 33, "andel_brist": 0.805}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Stockholms län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Södermanlands län", "rader": 10, "med_brist": 9, "andel_brist": 0.9}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Uppsala län", "rader": 5, "med_brist": 5, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Värmlands län", "rader": 34, "med_brist": 32, "andel_brist": 0.941}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västerbottens län", "rader": 15, "med_brist": 11, "andel_brist": 0.733}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västernorrlands län", "rader": 8, "med_brist": 7, "andel_brist": 0.875}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västmanlands län", "rader": 10, "med_brist": 8, "andel_brist": 0.8}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 62, "med_brist": 48, "andel_brist": 0.774}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Örebro län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2024, "species": "nötkreatur", "category": "klagomål", "LÄN": "Östergötlands län", "rader": 8, "med_brist": 6, "andel_brist": 0.75}
+{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Gävleborgs län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Jönköpings län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Skåne län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Södermanlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "okategoriserad", "LÄN": "Västra Götalands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Blekinge län", "rader": 19, "med_brist": 8, "andel_brist": 0.421}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Dalarnas län", "rader": 46, "med_brist": 22, "andel_brist": 0.478}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Gotlands län", "rader": 48, "med_brist": 18, "andel_brist": 0.375}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Gävleborgs län", "rader": 60, "med_brist": 35, "andel_brist": 0.583}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Hallands län", "rader": 44, "med_brist": 26, "andel_brist": 0.591}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Jämtlands län", "rader": 57, "med_brist": 37, "andel_brist": 0.649}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Jönköpings län", "rader": 107, "med_brist": 55, "andel_brist": 0.514}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Kalmar län", "rader": 94, "med_brist": 58, "andel_brist": 0.617}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Kronobergs län", "rader": 104, "med_brist": 38, "andel_brist": 0.365}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Norrbottens län", "rader": 28, "med_brist": 21, "andel_brist": 0.75}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Skåne län", "rader": 44, "med_brist": 19, "andel_brist": 0.432}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Stockholms län", "rader": 61, "med_brist": 31, "andel_brist": 0.508}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Södermanlands län", "rader": 49, "med_brist": 13, "andel_brist": 0.265}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Uppsala län", "rader": 39, "med_brist": 25, "andel_brist": 0.641}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Värmlands län", "rader": 111, "med_brist": 56, "andel_brist": 0.505}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västerbottens län", "rader": 108, "med_brist": 42, "andel_brist": 0.389}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västernorrlands län", "rader": 41, "med_brist": 26, "andel_brist": 0.634}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västmanlands län", "rader": 22, "med_brist": 20, "andel_brist": 0.909}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 349, "med_brist": 194, "andel_brist": 0.556}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Örebro län", "rader": 66, "med_brist": 23, "andel_brist": 0.348}
+{"year": 2024, "species": "nötkreatur", "category": "rutin", "LÄN": "Östergötlands län", "rader": 72, "med_brist": 38, "andel_brist": 0.528}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Blekinge län", "rader": 9, "med_brist": 8, "andel_brist": 0.889}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Dalarnas län", "rader": 13, "med_brist": 12, "andel_brist": 0.923}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gotlands län", "rader": 9, "med_brist": 7, "andel_brist": 0.778}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gävleborgs län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Hallands län", "rader": 55, "med_brist": 35, "andel_brist": 0.636}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jämtlands län", "rader": 18, "med_brist": 17, "andel_brist": 0.944}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jönköpings län", "rader": 22, "med_brist": 19, "andel_brist": 0.864}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kalmar län", "rader": 35, "med_brist": 32, "andel_brist": 0.914}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 22, "med_brist": 18, "andel_brist": 0.818}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Norrbottens län", "rader": 22, "med_brist": 13, "andel_brist": 0.591}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Skåne län", "rader": 62, "med_brist": 56, "andel_brist": 0.903}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Stockholms län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Södermanlands län", "rader": 25, "med_brist": 18, "andel_brist": 0.72}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 5, "med_brist": 5, "andel_brist": 1.0}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Värmlands län", "rader": 42, "med_brist": 28, "andel_brist": 0.667}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västerbottens län", "rader": 13, "med_brist": 7, "andel_brist": 0.538}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västernorrlands län", "rader": 18, "med_brist": 16, "andel_brist": 0.889}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västmanlands län", "rader": 22, "med_brist": 19, "andel_brist": 0.864}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västra Götalands län", "rader": 134, "med_brist": 103, "andel_brist": 0.769}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Örebro län", "rader": 14, "med_brist": 12, "andel_brist": 0.857}
+{"year": 2024, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Östergötlands län", "rader": 22, "med_brist": 17, "andel_brist": 0.773}
+{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Blekinge län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Dalarnas län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kalmar län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Hallands län", "rader": 3, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Kalmar län", "rader": 3, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Södermanlands län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Värmlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västmanlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 4, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "rutin", "LÄN": "Östergötlands län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Skåne län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2024, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Västmanlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Gotlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Kalmar län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Stockholms län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "klagomål", "LÄN": "Västerbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Dalarnas län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Gävleborgs län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Hallands län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kalmar län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Kronobergs län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Norrbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Skåne län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Stockholms län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Värmlands län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västmanlands län", "rader": 3, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 7, "med_brist": 3, "andel_brist": 0.429}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Örebro län", "rader": 6, "med_brist": 2, "andel_brist": 0.333}
+{"year": 2025, "species": ">350 värphöns", "category": "rutin", "LÄN": "Östergötlands län", "rader": 8, "med_brist": 1, "andel_brist": 0.125}
+{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Blekinge län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Västra Götalands län", "rader": 4, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": ">350 värphöns", "category": "uppföljning", "LÄN": "Örebro län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Gotlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Hallands län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Jönköpings län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Kalmar län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Kronobergs län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Norrbottens län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Skåne län", "rader": 4, "med_brist": 4, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Södermanlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Uppsala län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Värmlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västerbottens län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västernorrlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 12, "med_brist": 5, "andel_brist": 0.417}
+{"year": 2025, "species": "gris", "category": "klagomål", "LÄN": "Örebro län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Dalarnas län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Gotlands län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Gävleborgs län", "rader": 8, "med_brist": 3, "andel_brist": 0.375}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Hallands län", "rader": 32, "med_brist": 13, "andel_brist": 0.406}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Jämtlands län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Jönköpings län", "rader": 3, "med_brist": 2, "andel_brist": 0.667}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Kalmar län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Kronobergs län", "rader": 4, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Norrbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Skåne län", "rader": 23, "med_brist": 19, "andel_brist": 0.826}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Stockholms län", "rader": 4, "med_brist": 1, "andel_brist": 0.25}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Södermanlands län", "rader": 4, "med_brist": 3, "andel_brist": 0.75}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Uppsala län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Värmlands län", "rader": 17, "med_brist": 4, "andel_brist": 0.235}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västerbottens län", "rader": 9, "med_brist": 3, "andel_brist": 0.333}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västmanlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 37, "med_brist": 19, "andel_brist": 0.514}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Örebro län", "rader": 10, "med_brist": 3, "andel_brist": 0.3}
+{"year": 2025, "species": "gris", "category": "rutin", "LÄN": "Östergötlands län", "rader": 17, "med_brist": 11, "andel_brist": 0.647}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Dalarnas län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Gotlands län", "rader": 2, "med_brist": 1, "andel_brist": 0.5}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Hallands län", "rader": 10, "med_brist": 7, "andel_brist": 0.7}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Jämtlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Jönköpings län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Kalmar län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 12, "med_brist": 11, "andel_brist": 0.917}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Norrbottens län", "rader": 7, "med_brist": 2, "andel_brist": 0.286}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Skåne län", "rader": 8, "med_brist": 7, "andel_brist": 0.875}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Stockholms län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Södermanlands län", "rader": 3, "med_brist": 3, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Värmlands län", "rader": 3, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Västmanlands län", "rader": 4, "med_brist": 3, "andel_brist": 0.75}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Västra Götalands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Örebro län", "rader": 3, "med_brist": 1, "andel_brist": 0.333}
+{"year": 2025, "species": "gris", "category": "uppföljning", "LÄN": "Östergötlands län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Blekinge län", "rader": 5, "med_brist": 5, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Dalarnas län", "rader": 12, "med_brist": 9, "andel_brist": 0.75}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gotlands län", "rader": 8, "med_brist": 5, "andel_brist": 0.625}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Gävleborgs län", "rader": 9, "med_brist": 7, "andel_brist": 0.778}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Hallands län", "rader": 26, "med_brist": 18, "andel_brist": 0.692}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jämtlands län", "rader": 5, "med_brist": 5, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Jönköpings län", "rader": 15, "med_brist": 13, "andel_brist": 0.867}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kalmar län", "rader": 7, "med_brist": 6, "andel_brist": 0.857}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Kronobergs län", "rader": 12, "med_brist": 5, "andel_brist": 0.417}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Norrbottens län", "rader": 6, "med_brist": 6, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Skåne län", "rader": 13, "med_brist": 12, "andel_brist": 0.923}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Stockholms län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Södermanlands län", "rader": 8, "med_brist": 4, "andel_brist": 0.5}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Uppsala län", "rader": 9, "med_brist": 9, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Värmlands län", "rader": 16, "med_brist": 13, "andel_brist": 0.812}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västerbottens län", "rader": 11, "med_brist": 8, "andel_brist": 0.727}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västernorrlands län", "rader": 10, "med_brist": 8, "andel_brist": 0.8}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västmanlands län", "rader": 6, "med_brist": 4, "andel_brist": 0.667}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 56, "med_brist": 33, "andel_brist": 0.589}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Örebro län", "rader": 10, "med_brist": 9, "andel_brist": 0.9}
+{"year": 2025, "species": "nötkreatur", "category": "klagomål", "LÄN": "Östergötlands län", "rader": 12, "med_brist": 10, "andel_brist": 0.833}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Blekinge län", "rader": 12, "med_brist": 3, "andel_brist": 0.25}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Dalarnas län", "rader": 66, "med_brist": 26, "andel_brist": 0.394}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Gotlands län", "rader": 34, "med_brist": 15, "andel_brist": 0.441}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Gävleborgs län", "rader": 88, "med_brist": 30, "andel_brist": 0.341}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Hallands län", "rader": 112, "med_brist": 59, "andel_brist": 0.527}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Jämtlands län", "rader": 58, "med_brist": 31, "andel_brist": 0.534}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Jönköpings län", "rader": 129, "med_brist": 94, "andel_brist": 0.729}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Kalmar län", "rader": 84, "med_brist": 47, "andel_brist": 0.56}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Kronobergs län", "rader": 219, "med_brist": 66, "andel_brist": 0.301}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Norrbottens län", "rader": 30, "med_brist": 16, "andel_brist": 0.533}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Skåne län", "rader": 118, "med_brist": 47, "andel_brist": 0.398}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Stockholms län", "rader": 48, "med_brist": 20, "andel_brist": 0.417}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Södermanlands län", "rader": 43, "med_brist": 10, "andel_brist": 0.233}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Uppsala län", "rader": 53, "med_brist": 28, "andel_brist": 0.528}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Värmlands län", "rader": 132, "med_brist": 63, "andel_brist": 0.477}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västerbottens län", "rader": 111, "med_brist": 39, "andel_brist": 0.351}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västernorrlands län", "rader": 25, "med_brist": 17, "andel_brist": 0.68}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västmanlands län", "rader": 14, "med_brist": 10, "andel_brist": 0.714}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 477, "med_brist": 224, "andel_brist": 0.47}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Örebro län", "rader": 60, "med_brist": 17, "andel_brist": 0.283}
+{"year": 2025, "species": "nötkreatur", "category": "rutin", "LÄN": "Östergötlands län", "rader": 112, "med_brist": 50, "andel_brist": 0.446}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Blekinge län", "rader": 10, "med_brist": 10, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Dalarnas län", "rader": 23, "med_brist": 18, "andel_brist": 0.783}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gotlands län", "rader": 9, "med_brist": 3, "andel_brist": 0.333}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Gävleborgs län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Hallands län", "rader": 45, "med_brist": 32, "andel_brist": 0.711}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jämtlands län", "rader": 28, "med_brist": 20, "andel_brist": 0.714}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Jönköpings län", "rader": 32, "med_brist": 29, "andel_brist": 0.906}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kalmar län", "rader": 55, "med_brist": 52, "andel_brist": 0.945}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 48, "med_brist": 34, "andel_brist": 0.708}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Norrbottens län", "rader": 42, "med_brist": 33, "andel_brist": 0.786}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Skåne län", "rader": 35, "med_brist": 31, "andel_brist": 0.886}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Stockholms län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Södermanlands län", "rader": 17, "med_brist": 12, "andel_brist": 0.706}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 8, "med_brist": 8, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Värmlands län", "rader": 51, "med_brist": 40, "andel_brist": 0.784}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västerbottens län", "rader": 22, "med_brist": 17, "andel_brist": 0.773}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västernorrlands län", "rader": 16, "med_brist": 13, "andel_brist": 0.812}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västmanlands län", "rader": 17, "med_brist": 15, "andel_brist": 0.882}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Västra Götalands län", "rader": 137, "med_brist": 95, "andel_brist": 0.693}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Örebro län", "rader": 13, "med_brist": 13, "andel_brist": 1.0}
+{"year": 2025, "species": "nötkreatur", "category": "uppföljning", "LÄN": "Östergötlands län", "rader": 21, "med_brist": 20, "andel_brist": 0.952}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Blekinge län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Gävleborgs län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Jönköpings län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kalmar län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Kronobergs län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "klagomål", "LÄN": "Västra Götalands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Blekinge län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Kalmar län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Skåne län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Värmlands län", "rader": 1, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västerbottens län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "rutin", "LÄN": "Västra Götalands län", "rader": 2, "med_brist": 0, "andel_brist": 0.0}
+{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Kronobergs län", "rader": 7, "med_brist": 2, "andel_brist": 0.286}
+{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Skåne län", "rader": 2, "med_brist": 2, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Södermanlands län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}
+{"year": 2025, "species": "slaktkyckling", "category": "uppföljning", "LÄN": "Uppsala län", "rader": 1, "med_brist": 1, "andel_brist": 1.0}

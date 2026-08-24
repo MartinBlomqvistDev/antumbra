@@ -92,6 +92,10 @@ THEIRS = frozenset(
         # distinction has to survive in the published log.
         "rättad leverans",
         "riktlinje bifogad",
+        # The authority explaining how its own extract is built, here that a
+        # row is one animal keeper and not one control. It answers nothing that
+        # was asked, so it closes no open question, but it is their move.
+        "svar om uttagets uppbyggnad",
         "taxebeslut bifogat",
     }
 )

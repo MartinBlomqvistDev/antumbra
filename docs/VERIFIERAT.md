@@ -798,22 +798,78 @@ redovisningen.
 av åtta celler, vilket är kontrollen på att skörden är komplett och att inget
 län fallit bort.
 
-**Risk 2 i förregistreringen är bekräftad.** Förregistreringen varnade för att
-aviseringsfältet inte behöver vara konsekvent ifyllt. Det är det inte: i sex
-celler ligger summan av aviserade och oaviserade **under** antalet rader i
-radnivåuttaget för samma djurslag och år. Nötkreatur saknar 148 kontroller 2025
-och 149 kontroller 2024, alltså omkring 5 till 6 procent. Slaktkyckling 2025
-saknar 7 av 26, alltså 27 procent. En kontroll vars aviseringsfält är tomt faller
-ur både JA och NEJ, och nämnaren för varje andel måste därför vara summan av
-aviserade och oaviserade, aldrig radantalet.
+**Rättelse 2026-08-24: risk 2 var inte bekräftad.** Här stod tidigare att
+förregistreringens risk 2, ett inkonsekvent ifyllt aviseringsfält, var bekräftad,
+och skillnaden mellan radantalet och summan av aviserade och oaviserade angavs
+som belägg. Myndigheten har därefter uppgett en annan förklaring till samma
+skillnad, och den förklaringen gäller filens uppbyggnad: en kontroll med två
+djurhållare blir två rader. Överskottet är alltså dubbletter i excelfilen, inte
+kontroller som fallit ur både JA och NEJ. Talen står kvar som mätning: summan
+ligger under radantalet i sex celler, för nötkreatur med 148 rader 2025 och 149
+rader 2024, omkring 5 till 6 procent, och för slaktkyckling 2025 med 7 av 26,
+alltså 27 procent. Vad de mäter är antalet extra djurhållare. Risk 2 är därmed
+varken bekräftad eller utesluten, och den går inte att pröva mot det här
+materialet.
 
-**Två celler går åt andra hållet, och pekar på att rättelsen var ofullständig.**
+**Nämnaren är fortfarande summan av aviserade och oaviserade**, men av ett annat
+skäl än det som stod här: radantalet är inte ett antal kontroller, och var därför
+aldrig en giltig nämnare.
+
+**Två blad går åt andra hållet, och beskedet den 24 augusti skärper det.**
 Gris 2024 ger 249 kontroller i rapporterna mot 241 rader i excelbladet, och
-värphöns 2024 ger 61 mot 43. Det var 2024 års uttag som var defekt, och
-myndigheten gjorde om **enbart bladet Nötkreatur 2024** den 17 augusti. Bladen
-Gris 2024 och >350 värphöns 2024 är alltså sannolikt fortfarande ofullständiga,
-med minst 8 respektive 18 kontroller som saknas. Detta är en slutsats av
-jämförelsen mellan källorna och inte ett besked från myndigheten.
+värphöns 2024 ger 61 mot 43. Dubbletter kan bara höja ett radantal, aldrig sänka
+det, så förklaringen om flera djurhållare kan inte förklara ett underskott. De 8
+respektive 18 kontroller som saknas är därför en undre gräns: förekommer
+dubbletter också i de bladen saknas fler. Nedbrutet på län ligger underskottet i
+sju celler och summerar till 48 rader, varav tre celler bär 42: Västerbotten
+värphöns 2024 har 1 rad mot 20 kontroller, Östergötland gris 2024 har 5 mot 21
+och Gotland gris 2024 har 6 mot 13. Det är samma mönster som i det defekta bladet
+Nötkreatur 2024, där enskilda län bar en handfull rader där året borde bära
+hundratals, och myndigheten gjorde den 17 augusti om **enbart det bladet**.
+Frågan om de två bladen är fullständiga ställdes 2026-08-22 och är obesvarad.
+Detta är en slutsats av jämförelsen mellan källorna och inte ett besked från
+myndigheten.
+
+---
+
+## Begäran C: vad en rad i uttaget är, besked 2026-08-24
+
+**En rad är en djurhållare vid en kontroll, inte en kontroll.** Frågorna om de
+två avvikelserna ställdes 2026-08-22 kl. 09:21 och besvarades 2026-08-24 kl.
+09:09. Myndigheten skriver ordagrant: *"Anledningen till att det skiljer sig är
+att i den sammanställda Excelfilen du fick del av först kan det finnas dubbletter
+eftersom i de fall det är fler än en djurhållare på kontrollplatsen så blir varje
+djurhållare en egen rad (dvs. en kontroll där det finns två djurhållare blir två
+rader i Excelfilen). Vi glömde informera dig om det, så det var bra att du
+uppmärksammade det."*
+
+**Dubbletterna går inte att hitta.** Uttaget har fyra kolumner, LÄN,
+KONTROLLTYP, CHECKLISTA och FINNS_BRISTER, och ingen identifierare, inget datum
+och ingen plats. Två rader från samma kontroll är därmed inte skiljbara från två
+rader från två kontroller, och raderna går inte att lägga ihop till kontroller.
+Steg 22 räknar alltså djurhållarrader, vilket är varför fältet i
+`data/bristandel.jsonl` heter `rader` och inte `kontroller`.
+
+**Vad det gör med måtten.** Andelen med brist över raderna är lika med andelen
+över kontrollerna endast där dubblerade djurhållare bär samma bristmarkering, och
+hur ofta de gör det går inte att mäta ur filen. Spridningen mellan länen
+förskjuts bara om dubblettfrekvensen skiljer sig mellan län. Prövningen i steg 28
+jämför rangordningar och tål därför en konstant dubblettfrekvens, men inte en som
+varierar. Ingen av de publicerade siffrorna ändras av beskedet; det är enheten de
+uttrycks i som ändras, från kontroller till djurhållarrader.
+
+**Uttaget svarar därmed inte på begäran som den är formulerad.** Begäran C i
+avsnitt 4 av `docs/BEGARANMALL.md` gäller *"antal genomförda fysiska kontroller
+per länsstyrelse, år och djurslag"*. Excelfilen ger antal djurhållare vid
+kontroller. De 336 rapporterna räknar däremot kontroller, vilket är varför de två
+källorna skiljer sig åt.
+
+**Beskedet besvarar ingen av de två frågorna, men täcker riktningen i den ena.**
+Fråga 2 gällde om aviseringsfältet saknas för en del kontroller. Förklaringen om
+flera djurhållare gäller den riktningen, men säger bara att skillnaden inte
+behöver bero på tomma aviseringsfält, inte att fältet är fullständigt ifyllt.
+Fråga 1 gällde de två blad där rapporterna anger fler kontroller än bladet har
+rader, alltså den motsatta riktningen, och den frågan är obesvarad.
 
 ---
 

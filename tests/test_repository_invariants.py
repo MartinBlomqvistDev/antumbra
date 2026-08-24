@@ -153,6 +153,20 @@ def masking() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def deficiency() -> list[dict]:
+    """One record per county, year, species and control category."""
+    path = ROOT / "data" / "bristandel.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def unannounced() -> list[dict]:
+    """One record per cell of the pre-registered association test."""
+    path = ROOT / "data" / "oanmald_hypotes.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def hidden_text() -> list[dict]:
     """One record per delivered document with a text layer."""
     path = ROOT / "data" / "dold_text.jsonl"
@@ -955,3 +969,49 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         assert len(population) == 25
         assert len(covered) == 25
         assert population - covered == self.MISSING
+
+
+class TestTheRegisterExtractCountsKeeperRows:
+    """A row in the request C extract is an animal keeper, not a control.
+
+    The authority stated it on 24 August 2026: a control with two keepers becomes
+    two rows. The extract carries four columns and no identifier, so nothing can
+    collapse the rows onto controls, and every figure derived from it is a figure
+    over keeper rows. The unit is easy to lose, because a column called
+    kontroller reads as a count of controls to everyone who did not read the
+    covering e-mail. These tests keep the name honest and the arithmetic sound.
+    """
+
+    def test_the_count_is_named_for_what_it_counts(self, deficiency):
+        for record in deficiency:
+            assert "rader" in record
+            assert "kontroller" not in record
+
+    def test_the_test_cells_carry_the_same_name(self, unannounced):
+        for record in unannounced:
+            assert "rader_brist" in record
+            assert "kontroller_brist" not in record
+
+    def test_no_cell_finds_more_faults_than_it_has_rows(self, deficiency):
+        for record in deficiency:
+            assert 0 <= record["med_brist"] <= record["rader"]
+            assert record["andel_brist"] == round(
+                record["med_brist"] / record["rader"], 3
+            )
+
+    def test_the_two_sides_of_the_test_stay_apart(self, unannounced):
+        # The announced share counts controls and the deficiency share counts
+        # keeper rows. They may not be summed, averaged or otherwise pooled, and
+        # the row count must never stand in for the announced denominator.
+        for record in unannounced:
+            assert record["aviserade"] + record["oaviserade"] >= 0
+            if record["andel_oanmalda"] is not None:
+                total = record["aviserade"] + record["oaviserade"]
+                share = round(record["oaviserade"] / total, 4)
+                assert record["andel_oanmalda"] == share
+
+    def test_the_limit_is_written_where_a_reader_meets_the_figures(self):
+        readme = (ROOT / "README.md").read_text("utf-8")
+        assert "counts animal keepers, not controls" in readme
+        verified = (ROOT / "docs" / "VERIFIERAT.md").read_text("utf-8")
+        assert "En rad är en djurhållare vid en kontroll, inte en kontroll" in verified

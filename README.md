@@ -104,6 +104,15 @@ authority, not in the decisions. Decision dates are used as proxies, the
 error always points the same way, and every row carries its own date
 source.
 
+**The register extract counts animal keepers, not controls.** The row level
+extract behind the recomputed deficiency spread carries one row per animal
+keeper at a control, so a control with two keepers appears twice. The authority
+stated this on 24 August 2026, and the file carries four columns and no
+identifier, so the duplicates cannot be located and the rows cannot be collapsed.
+Every figure taken from it is a figure over keeper rows, and the share over rows
+equals the share over controls only where duplicated keepers carry the same
+deficiency flag.
+
 **The law on redaction is unsettled.** The appellate courts have ruled in
 different directions and the Supreme Administrative Court has not decided
 the question. Differences between authorities are therefore not in
