@@ -163,6 +163,7 @@ python pipeline/26_hidden_text.py          # text covered by something that is n
 python pipeline/27_parse_announced.py      # announced or not, per county and year
 python pipeline/28_unannounced_hypothesis.py  # the pre-registered hypothesis
 python pipeline/29_check_grounds.py        # is the register of cited grounds closed?
+python pipeline/30_draw_species_sample.py  # the blind sample the species rule is checked against
 ```
 
 One report is not a pipeline step, because it derives nothing and writes
