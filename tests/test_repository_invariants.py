@@ -284,6 +284,61 @@ class TestOpenItemsKnowsEveryEvent:
             "out of the check."
         )
 
+    def test_acknowledging_service_does_not_close_the_appeal_window(self):
+        # The authority asks for a receipt, so the receipt is an event of ours.
+        # Counting any event of ours as an answer made the P9 deadline vanish
+        # from the report the moment the receipt was logged, which is the one
+        # failure this report exists to prevent.
+        from datetime import date as _date
+
+        from open_items import state
+
+        events = [
+            {
+                "datum": "2026-08-23",
+                "klockslag": "22:00",
+                "myndighet": "x",
+                "begaran": "A",
+                "handelse": "beslutsbegäran och fråga om uttagets fullständighet",
+                "notering": "",
+            },
+            {
+                "datum": "2026-08-25",
+                "klockslag": "13:46",
+                "myndighet": "x",
+                "begaran": "A",
+                "handelse": "avslagsbeslut mottaget",
+                "notering": "",
+            },
+            {
+                "datum": "2026-08-25",
+                "klockslag": "14:10",
+                "myndighet": "x",
+                "begaran": "A",
+                "handelse": "delgivningskvitto",
+                "notering": "",
+            },
+        ]
+        item = state(events, _date(2026, 8, 26))
+        assert item["waiting_on"] == "dig"
+        assert item["step"] == "P9"
+        assert item["due"] == _date(2026, 9, 8)
+        assert item["last_event"]["handelse"] == "avslagsbeslut mottaget"
+        assert not item["closed"]
+
+        events.append(
+            {
+                "datum": "2026-09-01",
+                "klockslag": "09:00",
+                "myndighet": "x",
+                "begaran": "A",
+                "handelse": "avstående från överklagande",
+                "notering": "",
+            }
+        )
+        after = state(events, _date(2026, 9, 2))
+        assert after["waiting_on"] == "myndigheten"
+
 
 class TestDocumentationMatchesData:
     """Figures quoted in docs/DGSANTE.md must hold against the data files."""

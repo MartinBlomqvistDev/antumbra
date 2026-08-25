@@ -52,6 +52,7 @@ OURS = frozenset(
         "avsmalningssvar",
         "avstående",
         "avstående från överklagande",
+        "överklagande",
         "beslutsbegäran och fråga om uttagets fullständighet",
         "beslutsbegäran upprepad",
         "delgivningskvitto",
@@ -146,6 +147,13 @@ DECISION_CLOSERS = frozenset(
 # Kept apart from ANSWER_DUE so that neither rule can borrow the other's
 # clock, which would move a deadline without anyone editing it.
 APPEAL_DUE = (("avslagsbeslut mottaget", 14, "P9"),)
+
+# What actually ends an appeal window. Acknowledging service does not: the
+# authority asks for a receipt, the receipt is our event, and treating any
+# event of ours as an answer made the P9 deadline disappear from the report
+# the moment the receipt was logged. Only appealing, or deciding not to,
+# closes the window.
+APPEAL_CLOSERS = frozenset({"överklagande", "avstående från överklagande"})
 
 # Asking the authority to try the question and issue an appealable decision
 # opens a track of its own. Tillämpningsnot 3 requires every request to have
@@ -286,13 +294,22 @@ def state(events: list[dict], today: date) -> dict:
         > (last_theirs["datum"], last_theirs["klockslag"])
     )
     appeal = appeal_deadline(last_theirs["handelse"])
+    appeal_closed = any(
+        e["handelse"] in APPEAL_CLOSERS
+        and (e["datum"], e["klockslag"])
+        > (last_theirs["datum"], last_theirs["klockslag"])
+        for e in events
+    )
     deadline = answer_deadline(last_theirs["handelse"])
-    if appeal and not answered:
+    if appeal and not appeal_closed:
         days, step = appeal
         item["waiting_on"] = "dig"
         item["step"] = step
         item["due"] = date.fromisoformat(last_theirs["datum"]) + timedelta(days=days)
         item["note"] = "avslagsbeslut, pröva P9:s kriterier"
+        # The decision is what requires the move, so it is what the line
+        # names, however many acknowledgements have been logged since.
+        item["last_event"] = last_theirs
     elif deadline and not answered:
         days, step = deadline
         item["waiting_on"] = "dig"
