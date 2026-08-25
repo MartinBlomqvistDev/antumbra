@@ -13,6 +13,16 @@ was announced, and the count. The county is read from inside the file rather
 than from the file name, because one file name spells the county letter in lower
 case and a name is a weaker source than the report's own header.
 
+**The number is checklist uses, and the report says so.** The single figure
+each report carries is labelled "Antal gånger checklista använd", not a number of
+controls, so it is stored under that name. Whether the two are the same is not
+stated anywhere in the delivery and has been put to the authority. The evidence
+so far says they behave alike: the row level extract holds one row per animal
+keeper, and if a checklist were used once per keeper the two sources would agree
+instead of the extract running five to six per cent higher. That is an argument,
+not a confirmation, and the field keeps the authority's own word until there is
+one.
+
 **The grouping is not crossed with anything.** Every report says
 "Alla kontrolltypgrupper", so the announced dimension arrives per county,
 species and year, and not per control type or against the deficiency flag. That
@@ -131,7 +141,7 @@ def main() -> int:
                 "checklista": fields.get("Checklista", ""),
                 "år": int(start[:4]),
                 "aviserad": fields.get("Aviserad", "").upper() == "JA",
-                "kontroller": count,
+                "anvandningar": count,
             }
         )
 
@@ -153,7 +163,7 @@ def main() -> int:
     for record in records:
         totals[(record["checklista"], record["år"])][
             0 if record["aviserad"] else 1
-        ] += record["kontroller"]
+        ] += record["anvandningar"]
 
     print("\nsumma per checklista och år mot myndighetens egna nationella tal:")
     mismatch = 0

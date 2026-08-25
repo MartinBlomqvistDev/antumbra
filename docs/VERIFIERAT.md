@@ -858,6 +858,15 @@ jämför rangordningar och tål därför en konstant dubblettfrekvens, men inte 
 varierar. Ingen av de publicerade siffrorna ändras av beskedet; det är enheten de
 uttrycks i som ändras, från kontroller till djurhållarrader.
 
+**Rapporternas tal heter något annat än kontroller.** Varje rapport bär ett enda
+tal, och etiketten i filen är *"Antal gånger checklista använd"*. Om en
+checklistanvändning är detsamma som en kontroll står ingenstans i leveransen, och
+frågan är ställd till myndigheten. Indicierna talar för att de följs åt:
+radnivåuttaget bär en rad per djurhållare, och om en checklista användes en gång
+per djurhållare skulle de två källorna stämma överens i stället för att uttaget
+ligger 5 till 6 procent högre. Det är ett argument och inte ett besked, så fältet
+i `data/foranmalda.jsonl` heter `anvandningar` tills det finns ett.
+
 **Uttaget svarar därmed inte på begäran som den är formulerad.** Begäran C i
 avsnitt 4 av `docs/BEGARANMALL.md` gäller *"antal genomförda fysiska kontroller
 per länsstyrelse, år och djurslag"*. Excelfilen ger antal djurhållare vid

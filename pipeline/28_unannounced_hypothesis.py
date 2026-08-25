@@ -148,7 +148,7 @@ def load_announced() -> dict[tuple[str, str, int], tuple[int, int]]:
     for line in ANNOUNCED.read_text("utf-8").splitlines():
         row = json.loads(line)
         key = (COUNTY[row["myndighet"]], SPECIES[row["checklista"]], row["år"])
-        found[key][0 if row["aviserad"] else 1] += row["kontroller"]
+        found[key][0 if row["aviserad"] else 1] += row["anvandningar"]
     return {k: (v[0], v[1]) for k, v in found.items()}
 
 
