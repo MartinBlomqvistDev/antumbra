@@ -764,6 +764,65 @@ sekretessgrund utan beskedet att ingen kontrollrapport för gris påträffats.
 
 ---
 
+## Det första överklagbara beslutet, Kalmar 2026-08-25
+
+Länsstyrelsen i Kalmar avslår begäran om de maskade uppgifterna i de fem
+kontrollrapporterna, dnr 6666-2026, beslutat av enhetschef med
+en djurskyddshandläggare som föredragande. Skickat som elektronisk
+delgivning 2026-08-25 kl. 13:46 med begäran om mottagningsbekräftelse. Det är
+svaret på P8-skrivelsen den 23 augusti kl. 22:00, alltså två dagar. Registrerat
+i `data/beslut.jsonl`.
+
+**Grunderna anges, till skillnad från i följebreven.** Ordagrant: *"30 kap. 23 §
+offentlighets- och sekretesslagen (2009:400), 9 § offentlighets- och
+sekretessförordningen (2009:641) samt punkten 30 i bilagan till förordningen"*.
+Kriterium (a) i P9 är därmed inte uppfyllt.
+
+**Uppgiftstypen namnges.** Ordagrant: *"Av begärda handlingar framgår uppgifter
+om verksamheternas djurhållning och bedömda brister i dessa. Uppgifterna rör
+därmed den enskildes affärs- och driftförhållanden."* Det är vad tillämpningsnot
+6 kräver för att kriterium (b) ska kunna drivas: beslutet självt måste namnge den
+maskerade uppgiftstypen, annars redovisas saken som en gräns i mätningen.
+
+**Kriterium (b) är uppfyllt.** Maskningen är i klass A med stöd av 30 kap. 23 §,
+och jämförelsemängden är de fem län som lämnat ut klass A helt omaskad, Dalarna,
+Gävleborg, Jämtland, Södermanland och Uppsala, alltså fler än de tre som
+kriteriet kräver. De handlingarna är kontrollrapporter i samma handlingsklass och
+innehåller därmed både djurhållning och konstaterade brister, de uppgiftstyper
+beslutet namnger. Detta är det första beslutet, så femtaket är inte i spel.
+
+**Beslutet medger att prövningen inte är gjord uppgift för uppgift.** Ordagrant:
+*"Länsstyrelsen bedömer att de maskerade uppgifterna i handlingen till
+övervägande del är av sådan karaktär att det kan antas att den enskilde lider
+skada om uppgifterna lämnas ut."* Skaderekvisitet i 30 kap. 23 § är rakt, alltså
+med presumtion för offentlighet, och gäller varje uppgift. En bedömning som
+stannar vid *"till övervägande del"* säger att en del av det maskerade inte bär
+rekvisitet. Formuleringen är myndighetens egen och citeras oförändrad; vad den
+innebär rättsligt är en fråga för ett överklagande, inte för den här filen.
+
+**Besvärshänvisningen anger fel instans.** Beslutet skriver *"Om du inte är nöjd
+med Länsstyrelsens beslut, kan du skriftligen överklaga beslutet hos
+förvaltningsrätten."* P9, skrivet före insamlingen, anger kammarrätten, vilket
+följer av 6 kap. 8 § OSL och av att KR Sundsvall 2682-21 är ett kammarrättsmål.
+Skillnaden redovisas som den står och förs inte samman till ett påstående om vem
+som har rätt; vilken domstol ett beslut pekar ut är i sig en mätpunkt i
+öppenhetslagret.
+
+**Ärendebeskrivningens datum stämmer inte med brevlådan.** Beslutet skriver att
+begäran inkom den 4 augusti 2026 och begränsades till fem rapporter den 13
+augusti. Loggen och brevlådan visar begäran 2026-08-03 kl. 10:00 och
+begränsningen till fem 2026-08-04 kl. 12:36; den 13 augusti upprepades att
+begäran varit begränsad sedan den 4 augusti, tillsammans med frågan om
+elektroniskt utlämnande. Båda avvikelserna förskjuter ärendet framåt i tiden och
+berör T1 i P1.
+
+**Frister.** Delfående 2026-08-25. P9 sätter 14 kalenderdagar, alltså
+2026-09-08. Lagens frist är tre veckor enligt 44 § förvaltningslagen, alltså
+2026-09-15. `src/open_items.py` räknar den första och visar begäran under KRÄVER
+DIG till dess att ett överklagande eller ett avstående loggats.
+
+---
+
 ## Begäran C: dimensionen oanmäld mot föranmäld, levererad per län
 
 Levererad 2026-08-21 kl. 09:29 via filöverföringslänk, **336 rapporter**, en per

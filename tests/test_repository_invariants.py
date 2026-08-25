@@ -153,6 +153,20 @@ def masking() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def protocol() -> list[dict]:
+    """Every logged event in the collection protocol."""
+    path = ROOT / "data" / "protokoll_logg.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def decisions() -> list[dict]:
+    """One record per appealable decision received under P8."""
+    path = ROOT / "data" / "beslut.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def announced() -> list[dict]:
     """One record per report on announced and unannounced controls."""
     path = ROOT / "data" / "foranmalda.jsonl"
@@ -1051,3 +1065,52 @@ class TestTheAnnouncedReportsCarryAKnownFault:
         assert [k for k, v in seen.items() if v > 1] == [
             ("Dalarna", "Gris", 2024, False)
         ]
+
+
+class TestEveryRefusalDecisionIsInTheRegister:
+    """P9 ranks appeals against each other, so the decisions need a register.
+
+    The protocol allows five appeals for A and B together and orders them by
+    criterion and then by falling deviation. Ranking needs every decision in one
+    place, with the grounds it cites and the data type it names, both verbatim.
+    The population is not a judgement call: it is every avslagsbeslut in the
+    protocol log, so a decision cannot be received and then quietly left out.
+    """
+
+    def test_the_register_covers_every_logged_decision(self, decisions, protocol):
+        logged = {
+            (row["myndighet"], row["begaran"])
+            for row in protocol
+            if row["handelse"] == "avslagsbeslut mottaget"
+        }
+        held = {(row["myndighet"], row["klass"]) for row in decisions}
+        assert held == logged
+
+    def test_every_decision_carries_its_own_words(self, decisions):
+        for record in decisions:
+            assert record["citat_bestammelser"].strip()
+            assert record["citat_bedomning"].strip()
+            assert record["bestammelser"]
+            # Tillämpningsnot 6: criterion (b) may only be pursued where the
+            # decision itself names the masked data type.
+            if "b" in record["p9_kriterier"]:
+                assert record["uppgiftstyp_namngiven"]
+                assert record["citat_uppgiftstyp"].strip()
+
+    def test_no_provision_is_invented(self, decisions):
+        for record in decisions:
+            for provision in record["bestammelser"]:
+                assert TestTheGroundsRegisterKnowsItsOwnGaps.traceable(
+                    provision, record["citat_bestammelser"]
+                )
+
+    def test_the_five_appeal_cap_is_not_exceeded(self, decisions):
+        appealed = [r for r in decisions if r["overklagas"]]
+        assert len(appealed) <= 5
+
+    def test_the_appeal_forum_the_protocol_names(self, decisions):
+        # P9 sends the appeal to kammarrätten. Where a decision says otherwise
+        # the difference is recorded rather than reconciled, because which court
+        # a decision points at is itself a measurement of the openness layer.
+        for record in decisions:
+            assert record["instans_enligt_p9"] == "kammarrätten"

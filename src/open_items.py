@@ -51,8 +51,10 @@ OURS = frozenset(
         "avsändning",
         "avsmalningssvar",
         "avstående",
+        "avstående från överklagande",
         "beslutsbegäran och fråga om uttagets fullständighet",
         "beslutsbegäran upprepad",
+        "delgivningskvitto",
         "förfrågan om beskedets innebörd",
         "förfrågan om fjäderfätäckning",
         "förfrågan om länsuppdelning",
@@ -91,6 +93,9 @@ THEIRS = frozenset(
         # because it does not start the collection, it repairs it, and the
         # distinction has to survive in the published log.
         "rättad leverans",
+        # A written, appealable refusal, which is what P8 asks for. It ends
+        # the decision track and starts P9's own clock.
+        "avslagsbeslut mottaget",
         "riktlinje bifogad",
         # The authority explaining how its own extract is built, here that a
         # row is one animal keeper and not one control. It answers nothing that
@@ -132,7 +137,15 @@ JUDGEMENT = frozenset({"riktlinje bifogad", "taxebeslut bifogat"})
 
 # Events that end the decision track behind a declined request, so that
 # tillämpningsnot 3 counts it as finished rather than as still running.
-DECISION_CLOSERS = frozenset({"avgiftsbeslut mottaget", "avgiftsbeslut vägrat"})
+DECISION_CLOSERS = frozenset(
+    {"avgiftsbeslut mottaget", "avgiftsbeslut vägrat", "avslagsbeslut mottaget"}
+)
+
+# P9 runs on calendar days, not working days: the appeal is sent within 14
+# calendar days of delfåendet although the statutory limit is three weeks.
+# Kept apart from ANSWER_DUE so that neither rule can borrow the other's
+# clock, which would move a deadline without anyone editing it.
+APPEAL_DUE = (("avslagsbeslut mottaget", 14, "P9"),)
 
 # Asking the authority to try the question and issue an appealable decision
 # opens a track of its own. Tillämpningsnot 3 requires every request to have
@@ -205,6 +218,14 @@ def answer_deadline(handelse: str) -> tuple[int, str] | None:
     return None
 
 
+def appeal_deadline(handelse: str) -> tuple[int, str] | None:
+    """Calendar days allowed and the step, for a refusal we may appeal."""
+    for name, days, step in APPEAL_DUE:
+        if handelse == name:
+            return days, step
+    return None
+
+
 def state(events: list[dict], today: date) -> dict:
     """What one request is waiting for."""
     deliveries = [e for e in events if e["handelse"] == "leverans"]
@@ -264,8 +285,15 @@ def state(events: list[dict], today: date) -> dict:
         (last_ours["datum"], last_ours["klockslag"])
         > (last_theirs["datum"], last_theirs["klockslag"])
     )
+    appeal = appeal_deadline(last_theirs["handelse"])
     deadline = answer_deadline(last_theirs["handelse"])
-    if deadline and not answered:
+    if appeal and not answered:
+        days, step = appeal
+        item["waiting_on"] = "dig"
+        item["step"] = step
+        item["due"] = date.fromisoformat(last_theirs["datum"]) + timedelta(days=days)
+        item["note"] = "avslagsbeslut, pröva P9:s kriterier"
+    elif deadline and not answered:
         days, step = deadline
         item["waiting_on"] = "dig"
         item["step"] = step
@@ -277,6 +305,13 @@ def state(events: list[dict], today: date) -> dict:
         last_theirs.get("notering") or ""
     ):
         item["note"] = "maskad leverans, P8 tillämpas urvalsvis enligt not 4"
+
+    # A request is not finished while the protocol owes a move on it. P9's
+    # appeal window is the only case where a delivered request whose decision
+    # has arrived still requires something from us, and a request listed as
+    # finished is a request nobody looks at again.
+    if item["waiting_on"] == "dig":
+        item["closed"] = False
 
     item["silent_since"] = date.fromisoformat(events[-1]["datum"])
     return item
