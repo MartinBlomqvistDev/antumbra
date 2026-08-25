@@ -767,8 +767,11 @@ sekretessgrund utan beskedet att ingen kontrollrapport för gris påträffats.
 ## Det första överklagbara beslutet, Kalmar 2026-08-25
 
 Länsstyrelsen i Kalmar avslår begäran om de maskade uppgifterna i de fem
-kontrollrapporterna, dnr 6666-2026, beslutat av enhetschef med
-en djurskyddshandläggare som föredragande. Skickat som elektronisk
+kontrollrapporterna, dnr 6666-2026, beslutat av en enhetschef med en
+djurskyddshandläggare som föredragande. **Deras namn står i beslutet men
+inte här.** Projektets subjekt är myndigheten, rollnivån bär det som mäts,
+att beslutet fattades på enhetschefsnivå, och beslutet självt ligger kvar
+med sin kontrollsumma. Utelämnandet är alltså deklarerat och inte tyst. Skickat som elektronisk
 delgivning 2026-08-25 kl. 13:46 med begäran om mottagningsbekräftelse. Det är
 svaret på P8-skrivelsen den 23 augusti kl. 22:00, alltså två dagar. Registrerat
 i `data/beslut.jsonl`.

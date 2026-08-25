@@ -46,6 +46,15 @@ med en beskrivning av diffen.
 besluten innehåller privata mejladresser. Ingetdera går in i repot, i data
 eller i dokumentation. Publicering sker aggregerat på län och juridisk person.
 
+**Tjänstemäns namn, även när de står i en offentlig handling.** Ett beslut
+namnger beslutsfattare och föredragande. Namnen stannar i källhandlingen, som
+ligger utanför git med sin kontrollsumma; i repot skrivs rollen, alltså
+"enhetschef" och "djurskyddshandläggare". Projektets subjekt är myndigheten,
+och rollnivån bär det som mäts, nämligen på vilken nivå beslutet fattades. Ett
+namn bär ingen mätning men gör en enskild sökbar i ett publicerat material om
+maskningspraxis. Utelämnandet skrivs ut där det sker, så att det är deklarerat
+och inte tyst.
+
 **Källdokumenten.** PDF:er, OCR-utdata och stora härledda binärfiler ligger i
 `.gitignore`. Pipelinen hämtar dem, och `data/` innehåller bara härledd
 metadata som går att granska.

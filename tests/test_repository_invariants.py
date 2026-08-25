@@ -248,6 +248,56 @@ class TestNoPersonalDataIsCommitted:
                     offenders.append(f"{path.name}: {found}")
         assert not offenders, f"third-party e-mail addresses committed: {offenders}"
 
+    # The Swedish collection's own files. The DG SANTE datasets are excluded on
+    # purpose: they quote published Commission audit reports, which name
+    # authority contact addresses, and redacting a published source would be a
+    # different kind of dishonesty.
+    PROTOCOL_DATA: ClassVar[tuple[str, ...]] = (
+        "protokoll_logg.jsonl",
+        "beslut.jsonl",
+        "sekretessgrunder.jsonl",
+        "maskning.jsonl",
+        "leveranser_manifest.jsonl",
+        "dold_text.jsonl",
+    )
+    ROLES: ClassVar[set[str]] = {
+        "enhetschef",
+        "djurskyddshandläggare",
+        "länsveterinär",
+        "jurist",
+        "handläggare",
+    }
+
+    def test_no_addresses_in_the_swedish_protocol_data(self):
+        # The e-mail scan above skips .jsonl, and the protocol log is exactly
+        # where an authority's correspondence lands.
+        offenders = []
+        for name in self.PROTOCOL_DATA:
+            path = ROOT / "data" / name
+            if not path.exists():
+                continue
+            for found in self.EMAIL.findall(path.read_text("utf-8")):
+                if found not in self.ALLOWED_EMAILS:
+                    offenders.append(f"{name}: {found}")
+        assert not offenders, f"e-mail addresses in the protocol data: {offenders}"
+
+    def test_a_decision_names_a_role_and_never_a_person(self):
+        # CONTRIBUTING: the names stay in the source document, the repo carries
+        # the role. A new decision pasted in with its names fails here.
+        path = ROOT / "data" / "beslut.jsonl"
+        if not path.exists():
+            return
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            for field in ("beslutsfattare", "foredragande"):
+                assert record[field] in self.ROLES, (
+                    f"{field} is {record[field]!r}; write the role alone, and "
+                    "leave the name in the source document"
+                )
+            assert record["namn_utelamnade"] is True
+
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
         assert not pdfs, (
