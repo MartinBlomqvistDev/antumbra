@@ -153,6 +153,13 @@ def masking() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def announced() -> list[dict]:
+    """One record per report on announced and unannounced controls."""
+    path = ROOT / "data" / "foranmalda.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def deficiency() -> list[dict]:
     """One record per county, year, species and control category."""
     path = ROOT / "data" / "bristandel.jsonl"
@@ -1015,3 +1022,32 @@ class TestTheRegisterExtractCountsKeeperRows:
         assert "counts animal keepers, not controls" in readme
         verified = (ROOT / "docs" / "VERIFIERAT.md").read_text("utf-8")
         assert "En rad är en djurhållare vid en kontroll, inte en kontroll" in verified
+
+
+class TestTheAnnouncedReportsCarryAKnownFault:
+    """One of the 336 reports holds another county's figure, and that is pinned.
+
+    K_2024_oanmalda_gris.skv contains Länsbokstav W and is identical in content
+    to W_2024_oanmalda_gris.skv, so Dalarna is counted twice and Blekinge's
+    unannounced pig controls for 2024 never arrived. The delivery has the right
+    number of files, so nothing about the count betrays it. Pinning the skew
+    means a corrected delivery breaks this test and forces the note to be
+    rewritten, rather than quietly changing a figure nobody re-derives.
+    """
+
+    def test_every_county_has_sixteen_reports_except_the_two(self, announced):
+        by_letter = Counter(record["lansbokstav"] for record in announced)
+        assert len(announced) == 336
+        assert by_letter["K"] == 15
+        assert by_letter["W"] == 17
+        rest = {k: v for k, v in by_letter.items() if k not in {"K", "W"}}
+        assert set(rest.values()) == {16}
+        assert len(by_letter) == 21
+
+    def test_the_duplicated_cell_is_the_one_named_in_the_note(self, announced):
+        seen = Counter(
+            (r["myndighet"], r["checklista"], r["år"], r["aviserad"]) for r in announced
+        )
+        assert [k for k, v in seen.items() if v > 1] == [
+            ("Dalarna", "Gris", 2024, False)
+        ]

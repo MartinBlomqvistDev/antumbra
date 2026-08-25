@@ -29,6 +29,15 @@ species and year, and not per control type or against the deficiency flag. That
 is the limit of what request C's first dimension can support, and it is checked
 here rather than assumed: a report with any other group would be reported.
 
+**One report carries another county's figure.** `K_2024_oanmalda_gris.skv` holds
+`Länsbokstav;W` and is identical in content to `W_2024_oanmalda_gris.skv`, so
+Dalarna is counted twice and Blekinge's unannounced pig controls for 2024 are
+absent from the delivery. The file count is right, 336, so the fault shows only
+in the contents, which is why the county is read from inside the file: counted by
+county letter, K has fifteen reports and W has seventeen. Nothing is repaired
+here. The parse keeps what the files say and the cross-check below reports the
+consequence.
+
 **The authority's own national totals are the check.** In its e-mails of 14 and
 17 August the authority stated the national counts per species and year. If the
 336 county reports sum to those figures, the two extracts agree and the harvest

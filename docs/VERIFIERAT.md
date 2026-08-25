@@ -815,19 +815,43 @@ materialet.
 skäl än det som stod här: radantalet är inte ett antal kontroller, och var därför
 aldrig en giltig nämnare.
 
-**Två blad går åt andra hållet, och beskedet den 24 augusti skärper det.**
-Gris 2024 ger 249 kontroller i rapporterna mot 241 rader i excelbladet, och
-värphöns 2024 ger 61 mot 43. Dubbletter kan bara höja ett radantal, aldrig sänka
-det, så förklaringen om flera djurhållare kan inte förklara ett underskott. De 8
-respektive 18 kontroller som saknas är därför en undre gräns: förekommer
-dubbletter också i de bladen saknas fler. Nedbrutet på län ligger underskottet i
-sju celler och summerar till 48 rader, varav tre celler bär 42: Västerbotten
-värphöns 2024 har 1 rad mot 20 kontroller, Östergötland gris 2024 har 5 mot 21
-och Gotland gris 2024 har 6 mot 13. Det är samma mönster som i det defekta bladet
-Nötkreatur 2024, där enskilda län bar en handfull rader där året borde bära
-hundratals, och myndigheten gjorde den 17 augusti om **enbart det bladet**.
-Frågan om de två bladen är fullständiga ställdes 2026-08-22 och är obesvarad.
-Detta är en slutsats av jämförelsen mellan källorna och inte ett besked från
+**Rättelse 2026-08-25: excelbladen är inte ofullständiga, avvikelsen sitter i
+rapporterna.** Här stod att bladen Gris 2024 och >350 värphöns 2024 sannolikt
+saknade kontroller, med de 336 rapporterna som måttstock. Jämförelsen gjordes mot
+fel källa. Ställd mot myndighetens egna nationella tal i mejlen den 14 och 17
+augusti ligger excelfilen **över i samtliga åtta celler**, från +1 till +149,
+vilket är precis vad en rad per djurhållare förutsäger. Inget blad går åt andra
+hållet.
+
+| Djurslag och år | Mejlen | Excel, rader | Diff | 336 rapporter |
+| --- | --- | --- | --- | --- |
+| Nötkreatur 2024 | 2 302 | 2 451 | +149 | 2 302 |
+| Nötkreatur 2025 | 2 768 | 2 916 | +148 | 2 768 |
+| Gris 2024 | 222 | 241 | +19 | **249** |
+| Gris 2025 | 269 | 288 | +19 | 269 |
+| Värphöns 2024 | 42 | 43 | +1 | **61** |
+| Värphöns 2025 | 52 | 55 | +3 | 52 |
+| Slaktkyckling 2024 | 27 | 30 | +3 | 27 |
+| Slaktkyckling 2025 | 19 | 26 | +7 | 19 |
+
+**Det är i stället två av rapporterna som avviker, och båda i det oaviserade
+talet.** Rapporterna stämmer mot mejlen i sex av åtta celler. Gris 2024 ger 114
+oaviserade mot mejlens 87, och värphöns 2024 ger 30 mot 11.
+
+**Värphöns 2024 går att spåra till en enda rapport.** Filen
+`AC_2024_Vhöns_oanmälda.skv` anger 19 oaviserade kontroller för Västerbotten, ett
+tal som ensamt överstiger mejlets nationella 11 och som saknar motsvarighet i
+radnivåuttaget, där länet har en enda rad för djurslaget och året. Utan den
+rapporten summerar de övriga till 11, alltså exakt mejlets tal.
+
+**Gris 2024 bär ett dokumenterbart fel och en oförklarad rest.** Filen
+`K_2024_oanmalda_gris.skv` innehåller `Länsbokstav;W`, och dess innehåll är
+identiskt med `W_2024_oanmalda_gris.skv`. Dalarna räknas därmed två gånger och
+Blekinges tal saknas helt i leveransen, vilket förklarar 4 av de 27. Resterande
+23 är oförklarade. Filantalet stämmer, 336, så felet syns bara i innehållet:
+läst per länsbokstav har K femton rapporter och W sjutton.
+
+Detta är slutsatser av jämförelsen mellan källorna och inte besked från
 myndigheten.
 
 ---
