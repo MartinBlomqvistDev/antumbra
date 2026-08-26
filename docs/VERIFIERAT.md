@@ -968,6 +968,52 @@ rader, alltså den motsatta riktningen, och den frågan är obesvarad.
 
 ---
 
+## Djurslagsregeln prövad mot handläsning, 2026-08-25
+
+Steg 20 säger om sig självt att termräkningen är en baslinje och inte en
+klassificerare, och att den måste kontrolleras mot handlästa dokument innan
+någon djurslagsuppdelad siffra publiceras. Steg 30 drar den kontrollen: tre
+dokument ur var och en av regelns fyra utfallsklasser, sorterade på sökväg,
+utan att läsaren ser vad regeln svarat eller vilken klass dokumentet kom ur.
+Frö 20260825.
+
+**Sammanfattningen på en rad: regeln namnger aldrig fel djurslag, men den kan
+inte uttrycka en besättning med flera.**
+
+| Fråga | Utfall |
+| --- | --- |
+| Namngav regeln någonsin fel art? | 0 av 6 dokument med en art |
+| En art, sedd som en art | 6 av 6 |
+| Flera arter, sedda som flera | 3 av 6 |
+
+**Alla sex avvikelserna har samma form.** Läsaren svarade *flera* där regeln
+namngav ett djurslag eller avstod. Inget dokument fick fel art. Regeln förväxlar
+alltså inte nöt med gris eller fjäderfä i det här stickprovet; det den inte kan
+är att representera en besättning som håller mer än ett.
+
+**Klassen `ingen` är inget fel, den är regeln som fungerar.** Alla tre dokument
+där regeln avstod från att namnge ett dominerande djurslag hade två djurslag i
+`present`, och alla tre lästes som *flera*. Namnet är missvisande: `ingen`
+betyder inget dominerande djurslag, inte inget djurslag.
+
+**De tre verkliga missarna är underdetektion.** I dessa hade `present` bara ett
+djurslag medan besättningen håller flera, alltså nämns det andra färre än två
+gånger eller med termer utanför mönstret: `gavleborg_A` såg bara fjäderfä,
+`uppsala_A` bara gris, `vasterbotten_A` bara fjäderfä.
+
+**Vad det betyder för kontrastmåttet inom djurslag.** Steg 21 jämför maskning
+inom djurslag, och en tredjedel av de dokument regeln kallade endjurs var i
+själva verket flerdjurs. Ingen siffra räknas om här, eftersom stickprovet är
+stratifierat och därför inte representativt för populationen: nöt är 190 av 293
+dokument och bar 3 av 12 i stickprovet, utan en enda avvikelse. Just därför
+vilar populationens största cell på det tunnaste underlaget, och **nötstratumet
+utökas med sex dokument** med eget frö, 20260826, med de första tolv orörda.
+Skälet skrivs ut här och i steg 30, eftersom en utökning efter sedda svar bara
+är legitim om den deklareras. Ingen djurslagsuppdelad siffra publiceras innan
+den läsningen är gjord.
+
+---
+
 ## Den förregistrerade oanmäld-hypotesen, prövad 2026-08-21
 
 Avsnitt 10 i `docs/BEGARANMALL.md`, tidsstämplat innan någon begäran skickades:

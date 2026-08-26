@@ -22,6 +22,21 @@ species the rule found present, nor its verdict, nor even the stratum a document
 was drawn from reaches the reader, since the stratum is the verdict. A check
 that shows the answer first is not a check.
 
+**The comparison runs against two fields, because they answer two questions.**
+`dominant` is the rule's single verdict, and `present` is the set of species it
+found at all. A reader who answers "flera" disagrees with every `dominant`,
+including the honest `ingen`, so a comparison against `dominant` alone counts the
+rule's refusal to name one species as an error. `present` is what says whether
+the rule saw one species or several, and it is the field that tests the counting.
+
+**The cattle stratum was extended after the first twelve, and the reason is
+declared.** Three documents cannot carry a class of 190, and cattle was the only
+class where nothing disagreed, so the population's largest cell rested on the
+thinnest evidence. Six more cattle documents are drawn with a second seed,
+excluding those already read. Extending an under-powered stratum is legitimate;
+dropping a document that gave an inconvenient answer would not be, and none is
+dropped.
+
 **Answers are never overwritten.** Once `data/djurslag_facit.jsonl` exists the
 step leaves it alone and reports progress instead. The draw is reproducible from
 the seed, so re-running cannot quietly produce a different sample after someone
@@ -46,6 +61,10 @@ DELIVERIES = ROOT / "data" / "leveranser"
 
 SEED = 20260825
 PER_CLASS = 3
+# The extension of the cattle stratum, drawn separately so the first sample is
+# untouched and both draws stay reproducible from their own seed.
+EXTRA_SEED = 20260826
+EXTRA = {"nöt": 6}
 CLASSES = ("nöt", "gris", "fjäderfä", None)
 # What a reader may write. "flera" is for a holding that genuinely keeps more
 # than one species, "oklart" for a document that does not say.
@@ -76,6 +95,31 @@ def draw(rows: list[dict]) -> list[dict]:
     return sorted(picked, key=lambda record: record["path"])
 
 
+def extend(rows: list[dict], answers: list[dict]) -> list[dict]:
+    """The extra documents an under-powered stratum needs, drawn once.
+
+    Only ever adds. The rows already in the file are what someone has read, and
+    a sample that can shrink after its answers are known is not a sample.
+    """
+    have = {a["path"] for a in answers}
+    rng = random.Random(EXTRA_SEED)
+    added: list[dict] = []
+    for klass, count in EXTRA.items():
+        drawn = sum(1 for r in rows if r["dominant"] == klass and r["path"] in have)
+        missing = count + PER_CLASS - drawn
+        if missing <= 0:
+            continue
+        pool = sorted(
+            r["path"] for r in rows if r["dominant"] == klass and r["path"] not in have
+        )
+        for path in sorted(rng.sample(pool, min(missing, len(pool)))):
+            source = next(r["source"] for r in rows if r["path"] == path)
+            added.append(
+                {"path": path, "källa": source, "handlast": None, "anteckning": ""}
+            )
+    return added
+
+
 def report(rows: list[dict], answers: list[dict]) -> int:
     """Progress, and the comparison once every answer is in."""
     verdict = {r["path"]: r["dominant"] for r in rows}
@@ -93,22 +137,37 @@ def report(rows: list[dict], answers: list[dict]) -> int:
                 print(f"  {answer['path']}")
         return 1
 
-    print("\nregelns utfall mot handläsningen, per klass:")
+    present = {r["path"]: r["present"] for r in rows}
+
+    print("\nett: regelns dominant mot handläsningen, per klass:")
     per_class: dict[str, list[bool]] = {}
     for answer in answers:
         rule = verdict[answer["path"]] or "ingen"
         per_class.setdefault(rule, []).append(rule == answer["handlast"])
     for klass, hits in sorted(per_class.items()):
         print(f"  {klass:10} {sum(hits)} av {len(hits)}")
-    disagreements = [
-        (a["path"], verdict[a["path"]] or "ingen", a["handlast"])
-        for a in answers
-        if (verdict[a["path"]] or "ingen") != a["handlast"]
+
+    print("\ntvå: höll regeln isär en art från flera?")
+    several = [a for a in answers if a["handlast"] == "flera"]
+    single = [a for a in answers if a["handlast"] in {"nöt", "gris", "fjäderfä"}]
+    caught = [a for a in several if len(present[a["path"]]) > 1]
+    clean = [a for a in single if len(present[a["path"]]) == 1]
+    print(f"  flera arter, sedda som flera: {len(caught)} av {len(several)}")
+    print(f"  en art, sedd som en:          {len(clean)} av {len(single)}")
+
+    print("\ntre: namngav regeln någonsin fel art?")
+    wrong = [
+        a
+        for a in single
+        if verdict[a["path"]] is not None and verdict[a["path"]] != a["handlast"]
     ]
-    if disagreements:
-        print(f"\navvikelser ({len(disagreements)}):")
-        for path, rule, read in disagreements:
-            print(f"  {path}\n    regeln: {rule}, handläst: {read}")
+    print(f"  fel art: {len(wrong)} av {len(single)}")
+
+    missed = [a for a in several if len(present[a["path"]]) == 1]
+    if missed:
+        print(f"\nmissat andra djurslag ({len(missed)}):")
+        for answer in missed:
+            print(f"  {answer['path']}\n    regeln såg bara {present[answer['path']]}")
     return 0
 
 
@@ -132,6 +191,16 @@ def main() -> int:
         answers = [
             json.loads(line) for line in OUT.read_text("utf-8").splitlines() if line
         ]
+        added = extend(rows, answers)
+        if added:
+            with OUT.open("a", encoding="utf-8", newline="\n") as out:
+                for record in added:
+                    out.write(json.dumps(record, ensure_ascii=False) + "\n")
+            print(f"\n{len(added)} dokument tillagda med frö {EXTRA_SEED}:\n")
+            for record in added:
+                print(f"  {DELIVERIES / record['path']}")
+                print(f"    källa: {record['källa']}")
+            answers += added
         return report(rows, answers)
 
     picked = draw(rows)
