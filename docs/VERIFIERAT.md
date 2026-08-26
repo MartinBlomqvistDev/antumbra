@@ -975,50 +975,62 @@ klassificerare, och att den måste kontrolleras mot handlästa dokument innan
 någon djurslagsuppdelad siffra publiceras. Steg 30 drar den kontrollen: tre
 dokument ur var och en av regelns fyra utfallsklasser, sorterade på sökväg, utan
 att läsaren ser vad regeln svarat eller vilken klass dokumentet kom ur. Frö
-20260825. Nötstratumet utökades därefter med sex dokument, frö 20260826, av skäl
-som står nedan. Sammanlagt 18 handlästa dokument.
+20260825, därefter sex nötdokument till med frö 20260826 av skäl som står nedan.
+Sammanlagt 18 handlästa dokument.
 
-**Regeln namnger aldrig fel djurslag. Den kan däremot inte uttrycka en besättning
-med flera.**
+**Regeln gjorde inget fel i något av de arton dokumenten.**
 
 | Fråga | Utfall |
 | --- | --- |
 | Namngav regeln fel art? | **0 av 11** dokument där läsaren namngav en art |
-| En art, sedd som en art | **12 av 12** |
-| Flera arter, sedda som flera | **3 av 6** |
+| En art, sedd som en art | **15 av 15** |
+| Flera arter, sedda som flera | **3 av 3** |
 
-**Klassen `ingen` är inget fel, den är regeln som fungerar.** Alla tre dokument
-där regeln avstod från att namnge ett dominerande djurslag hade två djurslag i
-`present`, och alla tre lästes som flera. Namnet är missvisande: `ingen` betyder
-inget dominerande djurslag, inte inget djurslag.
+**Rättelse 2026-08-25 av den första redovisningen.** Här stod först att regeln
+såg blandbesättningar i endast 3 av 6 fall, och att tre dokument var missar. Det
+var fel, och felet satt i läsformuläret och inte i regeln: svarsordet *flera* var
+tillåtet utan att läsaren behövde skriva vilka djur, och fyra av de sju
+blandbesättningarna visade sig blanda med djurslag projektet inte mäter. Steg 30
+avvisar numera ett flera-svar som inte namnger djuren.
 
-**De tre missarna är underdetektion, inte förväxling.** Där hade `present` bara
-ett djurslag medan besättningen håller flera, alltså nämns det andra färre än två
-gånger eller med termer utanför mönstret: `gavleborg_A` såg bara fjäderfä,
-`uppsala_A` bara gris, `vasterbotten_A` bara fjäderfä. Ingen av dem gäller
-nötdokument.
+**Fyra blandningar ligger utanför de tre djurslagen.** Ett gävleborgsdokument
+gäller fjäderfä och häst, ett uppsaladokument gris tillsammans med kanin, häst
+och får, ett västerbottendokument fjäderfä inklusive gås tillsammans med häst,
+och ett västernorrlandsdokument nöt och får. Steg 20 har inget mönster för häst,
+får, get eller kanin och skulle inte kunna se ett. Inom de tre djurslag projektet
+jämför håller var och en av anläggningarna ett djurslag, och regeln namngav det
+rätta i samtliga fyra.
 
-**Ett dokument blandar med ett djurslag projektet inte mäter.** Ett
-föreläggande från Västernorrland gäller nöt och får. Steg 20 har inget mönster
-för får och skulle inte kunna se ett; inom de tre djurslag projektet jämför
-håller anläggningen ett, och regeln svarade nöt. Dokumentet räknas därför som
-endjurs i frågan ovan, med läsarens egna ord kvar i raden och sökvägen utskriven
-i steg 30, så att undantaget är deklarerat och inte inläst ur fritext.
+**De tre äkta blandningarna fångades allihop.** Två hallandsdokument med nöt och
+gris, och ett värmlandsdokument med nöt tillsammans med höns, ankor och tuppar.
+I alla tre registrerade regeln båda djurslagen och avstod från att utse ett
+dominerande.
+
+**Klassen `ingen` är alltså inget fel utan regeln som fungerar.** Namnet är
+missvisande: `ingen` betyder inget dominerande djurslag, inte inget djurslag.
 
 **Nöt bär populationen och är rätt i alla nio.** Nöt är 190 av 293 dokument.
-Efter utökningen vilar klassen på nio handlästa i stället för tre, och regeln
-träffar rätt i samtliga inom de tre mätta djurslagen. Utökningen gjordes efter
-att de första tolv besvarats, med skälet att klassen var underdimensionerad och
-som enda klass saknade avvikelser; de första tolv lämnades orörda och inget
-dokument ströks. Att utöka ett tunt stratum är legitimt, att stryka ett obekvämt
-svar är det inte.
+Efter utökningen vilar klassen på nio handlästa i stället för tre. Utökningen
+gjordes efter att de första tolv besvarats, med skälet att klassen var
+underdimensionerad och som enda klass saknade avvikelser; de första tolv lämnades
+orörda och inget dokument ströks.
 
-**Vad det betyder för kontrastmåttet inom djurslag.** Steg 21 jämför maskning
-inom djurslag. Tilldelningen till ett djurslag håller: ingen handling har fått
-fel art. Det som kvarstår är att hälften av de genuint blandade besättningarna
-inte syns som blandade, och de fallen ligger i fjäderfä och gris, inte i nöt.
-Ingen missfrekvens räknas om till populationen här, eftersom stickprovet är
-stratifierat och inte proportionellt.
+**En begränsning som handläsningen avslöjade, och som ingen letade efter.** I
+gävleborgsdokumentet fanns ingen anmärkning på de 60 fåglarna; bristerna gällde
+hästutrymmena. Fältet `FINNS_BRISTER` sitter på kontrollen och inte på
+djurslaget, så en djurslagsuppdelad bristandel kan skriva en hästbrist på
+fjäderfäkontot. Det gäller både radnivåuttaget i begäran C och varje uppdelning
+byggd på steg 20, och det går inte att åtgärda ur materialet. Redovisas som
+gräns.
+
+**Två observationer ur läsningen som inte bär någon slutsats.** Uppsaladokumentet
+gäller en 4H-gård med små bestånd, alltså inte produktionsdjurhållning, och i
+värmlandsdokumentet förefaller antalet getter vara maskat i en handling som i
+övrigt är hårt maskad.
+
+**Följden.** Tilldelningen till djurslag håller, och djurslagsuppdelade siffror
+får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och det
+är en annan sak än att djurslaget skulle vara fel.
 
 ---
 

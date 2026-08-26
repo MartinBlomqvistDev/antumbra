@@ -70,12 +70,23 @@ CLASSES = ("nöt", "gris", "fjäderfä", None)
 # than one species, "oklart" for a document that does not say.
 ANSWERS = {"nöt", "gris", "fjäderfä", "flera", "oklart"}
 # A holding can keep an animal the project does not measure. Step 20 has no
-# pattern for sheep, horses or goats and could not see one if it tried, so a
-# document read as "flera" because of such an animal is not a counting failure:
-# within the three species the project compares, it holds one. The reader's own
-# words are kept in the row's anteckning, and the path is listed here so the
-# distinction is declared rather than inferred from free text.
+# pattern for horses, sheep, goats or rabbits and could not see one if it tried,
+# so a document read as "flera" because of such an animal is not a counting
+# failure: within the three species the project compares, it holds one. The
+# reader's own words are kept in the row's anteckning, and the paths are listed
+# here so the distinction is declared rather than inferred from free text.
+#
+# Four of the seven mixed holdings turned out to be of this kind, which is why
+# the first reading of this sample judged the rule wrongly: a bare answer of
+# "flera" does not say which animals, and the sheet did not ask. It does now.
 OUT_OF_SCOPE = {
+    # fjäderfä plus häst
+    "gavleborg_A/Normal kontroll, risk - kontrollrapport(8916-2025-2).pdf",
+    # gris plus kanin, häst och får
+    "uppsala_A/7826-2025 Kopia på klagomål.pdf",
+    # fjäderfä, inklusive gås, plus häst
+    "vasterbotten_A/11096-2025, Kontrollrapport.pdf",
+    # nöt plus får
     "vasternorrland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(10488-2023-9).pdf",
 }
 
@@ -139,6 +150,19 @@ def report(rows: list[dict], answers: list[dict]) -> int:
     if bad:
         print(f"svar utanför {sorted(ANSWERS)}: {sorted(set(bad))}")
         return 1
+    # An answer of "flera" that does not say which animals cannot be told apart
+    # from a mixture with a species the project never counts, and the first
+    # reading of this sample was misjudged for exactly that reason.
+    unnamed = [
+        a["path"]
+        for a in filled
+        if a["handlast"] == "flera" and not a["anteckning"].strip()
+    ]
+    if unnamed:
+        print(f"\nflera-svar utan djuren utskrivna ({len(unnamed)}):")
+        for path in unnamed:
+            print(f"  {path}")
+        return 1
     if len(filled) < len(answers):
         print("\nkvar att läsa:")
         for answer in answers:
@@ -156,7 +180,7 @@ def report(rows: list[dict], answers: list[dict]) -> int:
     for klass, hits in sorted(per_class.items()):
         print(f"  {klass:10} {sum(hits)} av {len(hits)}")
 
-    print("\ntvå: höll regeln isär en art från flera?")
+    print("\ntvå: en art eller flera, inom projektets tre djurslag?")
     several = [
         a for a in answers if a["handlast"] == "flera" and a["path"] not in OUT_OF_SCOPE
     ]
@@ -167,8 +191,8 @@ def report(rows: list[dict], answers: list[dict]) -> int:
     single = named + outside
     if outside:
         print(
-            f"  ({len(outside)} dokument räknas som en art här: blandningen gäller "
-            "ett djurslag projektet inte mäter)"
+            f"  ({len(outside)} dokument blandar med djurslag projektet inte "
+            "mäter och räknas därför som en art)"
         )
     caught = [a for a in several if len(present[a["path"]]) > 1]
     clean = [a for a in single if len(present[a["path"]]) == 1]
