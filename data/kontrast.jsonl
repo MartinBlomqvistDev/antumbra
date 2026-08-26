@@ -30,7 +30,7 @@
 {"myndighet": "ostergotland", "djurslag": "nöt", "begaran": "A", "dokument": 5, "maskade": 5, "andel_maskade": 1.0, "andel_yta": 0.06455}
 {"myndighet": "ostergotland", "djurslag": "nöt", "begaran": "B", "dokument": 8, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "sodermanland", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.09709}
-{"myndighet": "sodermanland", "djurslag": "fjäderfä", "begaran": "B", "dokument": 4, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
+{"myndighet": "sodermanland", "djurslag": "fjäderfä", "begaran": "B", "dokument": 5, "maskade": 1, "andel_maskade": 0.2, "andel_yta": 0.00019}
 {"myndighet": "sodermanland", "djurslag": "gris", "begaran": "A", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "sodermanland", "djurslag": "nöt", "begaran": "A", "dokument": 10, "maskade": 7, "andel_maskade": 0.7, "andel_yta": 0.04086}
 {"myndighet": "sodermanland", "djurslag": "nöt", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}

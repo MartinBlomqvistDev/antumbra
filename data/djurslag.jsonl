@@ -148,6 +148,7 @@
 {"path": "sodermanland_A/Normal kontroll, slump - kontrollrapport(6091-2025-1) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 5, "fjäderfä": 0}, "present": ["gris"], "dominant": "gris", "readable": true}
 {"path": "sodermanland_A/Normal kontroll, slump - kontrollrapport(8206-2025-1) (0).pdf", "source": "text", "counts": {"nöt": 97, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "sodermanland_A/Normal kontroll, slump - kontrollrapport(8212-2025-1) (0).pdf", "source": "text", "counts": {"nöt": 97, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "sodermanland_B/Extra offentlig kontroll, uppföljning befogad anmälan - kontrollrapport(7904-2025-1) (0).pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 18}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "sodermanland_B/Föreläggande (2608-2025-4) (0).pdf", "source": "ocr", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "sodermanland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen - i fält(2868-2025-3) (0).pdf", "source": "ocr", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "sodermanland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen - i fält(2934-2025-2) (0).pdf", "source": "ocr", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
