@@ -8,7 +8,7 @@ annexes". This step draws that sample and, once the answers are filled in,
 compares them. It never invents an answer.
 
 **The draw is stratified on the rule's own outcome, three per class.** The
-classes are nöt, gris, fjäderfä and none, with 190, 16, 41 and 46 documents. A
+classes are nöt, gris, fjäderfä and none, with 190, 16, 42 and 46 documents. A
 simple random sample of twelve would hold roughly eight cattle documents and
 might hold no pig document at all, and the fragile classes are exactly the small
 ones: gris rests on sixteen documents, and "none" is where the rule declined to
@@ -36,6 +36,13 @@ thinnest evidence. Six more cattle documents are drawn with a second seed,
 excluding those already read. Extending an under-powered stratum is legitimate;
 dropping a document that gave an inconvenient answer would not be, and none is
 dropped.
+
+**The sample was drawn from 293 documents, one short of the population.** A
+delivery that arrived on 17 August was missing from step 20 when the draw was
+made and only appeared when the step was re-run on 26 August. It was therefore
+not eligible. The sample is not redrawn with it: changing a sample after its
+answers are known does more damage than the known limit that one document of 294
+could not be drawn.
 
 **Answers are never overwritten.** Once `data/djurslag_facit.jsonl` exists the
 step leaves it alone and reports progress instead. The draw is reproducible from

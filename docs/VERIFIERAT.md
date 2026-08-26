@@ -320,12 +320,16 @@ dokument**. Inget av de fjorton länen har högre maskad yta i B än i A. Dalarn
 är det enda som vänder på andelsmåttet, 60 procent av A mot 80 procent av B,
 medan ytan där pekar åt samma håll som i övriga län.
 
-**Det som ännu inte är byggt av det förregistrerade måttet:** maskningsgrad är
-förregistrerad som andel maskerad yta **plus andel maskerade fält**, och ska
-enligt avsnitt 4 och P1 redovisas per djurslag. Fältmåttet kräver att
-handlingarnas fältstruktur parsas, och djurslag kräver klassning per handling.
-Ingetdera finns; ytdelen och dokumentandelen är det som mäts i dag, och det ska
-sägas när talen används.
+**Det förregistrerade måttets två öppna delar är sedan dess avgjorda, båda på
+annat sätt än planerat.** Maskningsgrad är förregistrerad som andel maskerad yta
+**plus andel maskerade fält**, och ska enligt avsnitt 4 och P1 redovisas per
+djurslag. Fältmåttet visade sig inte gå att beräkna bokstavligt, eftersom
+handlingarna är prosa och inte formulär, och ersattes 2026-08-17 av ett mått på
+täckt innehåll enligt ADR-0017; utfallet blev ett nollresultat. Djurslag krävde
+klassning per handling, och den finns sedan steg 20, prövad mot handläsning
+2026-08-25. Talen i det här avsnittet är ändå poolade över djurslag, eftersom de
+mäter något annat än den djurslagsuppdelade tabellen längre ned; vilket som
+avses ska sägas när talen används.
 
 ---
 
@@ -356,8 +360,10 @@ eller beslut med 400 till 2 500 ord text, alltså inte ett extraktionsfel.
 Flera av de 31 är administrativa bilagor som rimligen inte nämner djurslag,
 såsom underrättelser, kopior av klagomål och tjänsteanteckningar.
 **Ordlistan har medvetet inte justerats mot de 31**, eftersom det vore att
-anpassa klassificeraren efter samma dokument som ska bedöma den. Ett handläst
-stickprov återstår, och till dess är klassningen prövad bara mot filnamnen.
+anpassa klassificeraren efter samma dokument som ska bedöma den. **Det handlästa
+stickprovet gjordes 2026-08-25**, se avsnittet om djurslagsregeln prövad mot
+handläsning: 18 dokument, noll fel djurslag. Fram till dess var klassningen
+prövad bara mot filnamnen.
 
 **Kontrastmåttet inom djurslag, P1:s definition.** 62 celler av myndighet,
 djurslag och klass; 22 har både A och B, varav 11 har minst tre dokument i
@@ -1008,6 +1014,14 @@ dominerande.
 
 **Klassen `ingen` är alltså inget fel utan regeln som fungerar.** Namnet är
 missvisande: `ingen` betyder inget dominerande djurslag, inte inget djurslag.
+
+**Stickprovet drogs ur 293 dokument och dras inte om.** Ett södermanlandsdokument
+som kom in den 17 augusti saknades i steg 20 när dragningen gjordes, och kom in
+först när steget kördes om 2026-08-26; populationen är därefter 294 och
+fjäderfäklassen 42 i stället för 41. Dokumentet var alltså inte valbart. Att dra
+om stickprovet med det inlagt vore att ändra ett stickprov efter att svaren är
+kända, vilket är en större skada än den kända gränsen att ett av 294 dokument
+inte kunde dras.
 
 **Nöt bär populationen och är rätt i alla nio.** Nöt är 190 av 293 dokument.
 Efter utökningen vilar klassen på nio handlästa i stället för tre. Utökningen

@@ -153,6 +153,27 @@ def masking() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def species() -> list[dict]:
+    """One record per delivered document with its animal counts."""
+    path = ROOT / "data" / "djurslag.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def contrast() -> list[dict]:
+    """One record per authority, species and request class."""
+    path = ROOT / "data" / "kontrast.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
+def species_sample() -> list[dict]:
+    """The hand-read sample the species rule was checked against."""
+    path = ROOT / "data" / "djurslag_facit.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def protocol() -> list[dict]:
     """Every logged event in the collection protocol."""
     path = ROOT / "data" / "protokoll_logg.jsonl"
@@ -1219,3 +1240,59 @@ class TestEveryRefusalDecisionIsInTheRegister:
         # a decision points at is itself a measurement of the openness layer.
         for record in decisions:
             assert record["instans_enligt_p9"] == "kammarrätten"
+
+
+class TestTheSwedishDatasetsShareOnePopulation:
+    """Every derived Swedish dataset must cover the documents it claims to.
+
+    Steps 18, 20, 21 and 26 read the same delivery folder at different times, and
+    a delivery that lands between two runs leaves one of them behind. That is not
+    hypothetical: on 26 August 2026 an audit found `djurslag.jsonl` one document
+    short of `maskning.jsonl`, a Södermanland report delivered on 17 August after
+    step 20 had last run. Nothing in the repository noticed for nine days. The
+    figures did not move, but nothing guaranteed that.
+
+    Step 18 is the spine, because it reads the folder itself and judges every
+    file. The others are checked against it.
+    """
+
+    def paths(self, records) -> set[str]:
+        return {record["path"] for record in records}
+
+    def test_the_species_step_covers_every_delivered_document(self, masking, species):
+        assert self.paths(species) == self.paths(masking), (
+            "step 20 and step 18 disagree about which documents exist; re-run "
+            "the later one rather than editing either file"
+        )
+
+    def test_the_hidden_text_measure_covers_the_born_digital_documents(
+        self, masking, hidden_text
+    ):
+        # Step 26 compares a text layer to the rendered page, so a scan has
+        # nothing to compare. Its population is exactly the born-digital set.
+        born_digital = {r["path"] for r in masking if r["method"] == "text"}
+        assert self.paths(hidden_text) == born_digital
+
+    def test_the_contrast_counts_every_document_it_can_place(
+        self, masking, species, contrast
+    ):
+        # A document reaches the contrast only if it is in a request class and
+        # the rule named a species for it. Both conditions are derivable, so the
+        # total is not a number anyone has to remember.
+        dominant = {r["path"]: r["dominant"] for r in species}
+        placeable = sum(
+            1
+            for record in masking
+            if record["path"].split("/")[0].rpartition("_")[2] in {"A", "B"}
+            # .get, so a missing document fails the population test above
+            # with a useful message instead of crashing here.
+            and dominant.get(record["path"]) is not None
+        )
+        assert sum(cell["dokument"] for cell in contrast) == placeable
+
+    def test_the_hand_read_sample_still_points_at_documents_that_exist(
+        self, species, species_sample
+    ):
+        # The sample is never redrawn, so it must keep resolving. A document
+        # vanishing from step 20 would silently shrink the check.
+        assert self.paths(species_sample) <= self.paths(species)

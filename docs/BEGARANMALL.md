@@ -400,6 +400,8 @@ Alla tidsangivelser i arbetsdagar från avsändningsdagen (dag 0) om inget annat
 anges. Varje händelse loggas med datum, klockslag, kanal, myndighet, begäran (A,
 B eller C) och händelsetyp. Loggen publiceras i sin helhet.
 
+**Loggen förs i den ordning händelser loggas, inte i den ordning de inträffade.** Raderna läggs till och ändras aldrig, så en händelse som loggas i efterhand hamnar sist även om dess datum är tidigare, och en rättelse av en tidigare notering skrivs som en egen rad. Det gör loggföringen granskbar i sig: när något fördes in syns lika väl som när det hände. En läsare som vill ha kronologi sorterar på datum och klockslag.
+
 **P0. Avsändning.** Alla 43 begäranden skickas samma dag, en måndag, från
 cm.blomqvist@gmail.com. Begäran A till alla 21 länsstyrelser mellan 08.00 och
 08.30, begäran B till alla 21 mellan 08.30 och 09.00, begäran C till
