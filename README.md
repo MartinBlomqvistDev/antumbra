@@ -113,6 +113,14 @@ Every figure taken from it is a figure over keeper rows, and the share over rows
 equals the share over controls only where duplicated keepers carry the same
 deficiency flag.
 
+**The deficiency flag is not split by species.** Documents are assigned to an
+animal by counting terms, and that assignment was checked against eighteen
+hand-read documents on 25 August 2026 without a single wrong animal. The
+deficiency field, however, sits on the control and not on the animal, and one of
+the eighteen records its faults in the horse facilities of a holding that also
+keeps birds. A deficiency share computed per species can therefore carry a fault
+found in an animal outside the three the project measures.
+
 **The law on redaction is unsettled.** The appellate courts have ruled in
 different directions and the Supreme Administrative Court has not decided
 the question. Differences between authorities are therefore not in

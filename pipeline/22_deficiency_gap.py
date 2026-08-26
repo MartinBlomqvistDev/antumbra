@@ -22,6 +22,14 @@ field is named. A share over them equals the share over controls only where
 duplicated keepers carry the same deficiency flag, and how often they do cannot
 be measured from this file.
 
+**The deficiency flag belongs to the control, not to the animal.** The output
+is grouped by species, and one of the eighteen documents hand-read for step 30
+records deficiencies in the horse facilities of a holding that also keeps 60
+birds. A share computed for a species can therefore carry a fault found in an
+animal the project does not measure. The extract has one deficiency field per
+control and no way to attach it to an animal, so this is reported and not
+repaired.
+
 **Routine controls only.** Five of the control types name the outcome in the
 type itself, for instance "Klagomål, offentlig kontroll med brister", and in
 those rows the deficiency flag agrees with the type name 96 to 100 per cent of
