@@ -76,6 +76,9 @@ THEIRS = frozenset(
         "avgiftsbesked",
         "avgiftsbesked och erbjudande om maskad elektronisk leverans",
         "avgiftsbesked och förtydligande",
+        # A plain statement of what the register can and cannot produce,
+        # with no question attached, so no P4 clock starts.
+        "besked om uttagets omfattning",
         "besked om uttagets omfattning och förtydligandefråga",
         "avgiftsbeslut mottaget",
         "avgiftsbeslut vägrat",
