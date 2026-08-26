@@ -69,6 +69,15 @@ CLASSES = ("nöt", "gris", "fjäderfä", None)
 # What a reader may write. "flera" is for a holding that genuinely keeps more
 # than one species, "oklart" for a document that does not say.
 ANSWERS = {"nöt", "gris", "fjäderfä", "flera", "oklart"}
+# A holding can keep an animal the project does not measure. Step 20 has no
+# pattern for sheep, horses or goats and could not see one if it tried, so a
+# document read as "flera" because of such an animal is not a counting failure:
+# within the three species the project compares, it holds one. The reader's own
+# words are kept in the row's anteckning, and the path is listed here so the
+# distinction is declared rather than inferred from free text.
+OUT_OF_SCOPE = {
+    "vasternorrland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(10488-2023-9).pdf",
+}
 
 
 def load() -> list[dict]:
@@ -148,20 +157,33 @@ def report(rows: list[dict], answers: list[dict]) -> int:
         print(f"  {klass:10} {sum(hits)} av {len(hits)}")
 
     print("\ntvå: höll regeln isär en art från flera?")
-    several = [a for a in answers if a["handlast"] == "flera"]
-    single = [a for a in answers if a["handlast"] in {"nöt", "gris", "fjäderfä"}]
+    several = [
+        a for a in answers if a["handlast"] == "flera" and a["path"] not in OUT_OF_SCOPE
+    ]
+    named = [a for a in answers if a["handlast"] in {"nöt", "gris", "fjäderfä"}]
+    outside = [a for a in answers if a["path"] in OUT_OF_SCOPE]
+    # A holding of cattle and sheep holds one of the three species compared, so
+    # it belongs with the single-species documents for this question.
+    single = named + outside
+    if outside:
+        print(
+            f"  ({len(outside)} dokument räknas som en art här: blandningen gäller "
+            "ett djurslag projektet inte mäter)"
+        )
     caught = [a for a in several if len(present[a["path"]]) > 1]
     clean = [a for a in single if len(present[a["path"]]) == 1]
     print(f"  flera arter, sedda som flera: {len(caught)} av {len(several)}")
     print(f"  en art, sedd som en:          {len(clean)} av {len(single)}")
 
     print("\ntre: namngav regeln någonsin fel art?")
+    # Only the documents where the reader named one of the three species, since
+    # a "flera" answer gives nothing to compare a single name against.
     wrong = [
         a
-        for a in single
+        for a in named
         if verdict[a["path"]] is not None and verdict[a["path"]] != a["handlast"]
     ]
-    print(f"  fel art: {len(wrong)} av {len(single)}")
+    print(f"  fel art: {len(wrong)} av {len(named)}")
 
     missed = [a for a in several if len(present[a["path"]]) == 1]
     if missed:

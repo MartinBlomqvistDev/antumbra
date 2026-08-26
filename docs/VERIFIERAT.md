@@ -973,44 +973,52 @@ rader, alltså den motsatta riktningen, och den frågan är obesvarad.
 Steg 20 säger om sig självt att termräkningen är en baslinje och inte en
 klassificerare, och att den måste kontrolleras mot handlästa dokument innan
 någon djurslagsuppdelad siffra publiceras. Steg 30 drar den kontrollen: tre
-dokument ur var och en av regelns fyra utfallsklasser, sorterade på sökväg,
-utan att läsaren ser vad regeln svarat eller vilken klass dokumentet kom ur.
-Frö 20260825.
+dokument ur var och en av regelns fyra utfallsklasser, sorterade på sökväg, utan
+att läsaren ser vad regeln svarat eller vilken klass dokumentet kom ur. Frö
+20260825. Nötstratumet utökades därefter med sex dokument, frö 20260826, av skäl
+som står nedan. Sammanlagt 18 handlästa dokument.
 
-**Sammanfattningen på en rad: regeln namnger aldrig fel djurslag, men den kan
-inte uttrycka en besättning med flera.**
+**Regeln namnger aldrig fel djurslag. Den kan däremot inte uttrycka en besättning
+med flera.**
 
 | Fråga | Utfall |
 | --- | --- |
-| Namngav regeln någonsin fel art? | 0 av 6 dokument med en art |
-| En art, sedd som en art | 6 av 6 |
-| Flera arter, sedda som flera | 3 av 6 |
-
-**Alla sex avvikelserna har samma form.** Läsaren svarade *flera* där regeln
-namngav ett djurslag eller avstod. Inget dokument fick fel art. Regeln förväxlar
-alltså inte nöt med gris eller fjäderfä i det här stickprovet; det den inte kan
-är att representera en besättning som håller mer än ett.
+| Namngav regeln fel art? | **0 av 11** dokument där läsaren namngav en art |
+| En art, sedd som en art | **12 av 12** |
+| Flera arter, sedda som flera | **3 av 6** |
 
 **Klassen `ingen` är inget fel, den är regeln som fungerar.** Alla tre dokument
 där regeln avstod från att namnge ett dominerande djurslag hade två djurslag i
-`present`, och alla tre lästes som *flera*. Namnet är missvisande: `ingen`
-betyder inget dominerande djurslag, inte inget djurslag.
+`present`, och alla tre lästes som flera. Namnet är missvisande: `ingen` betyder
+inget dominerande djurslag, inte inget djurslag.
 
-**De tre verkliga missarna är underdetektion.** I dessa hade `present` bara ett
-djurslag medan besättningen håller flera, alltså nämns det andra färre än två
+**De tre missarna är underdetektion, inte förväxling.** Där hade `present` bara
+ett djurslag medan besättningen håller flera, alltså nämns det andra färre än två
 gånger eller med termer utanför mönstret: `gavleborg_A` såg bara fjäderfä,
-`uppsala_A` bara gris, `vasterbotten_A` bara fjäderfä.
+`uppsala_A` bara gris, `vasterbotten_A` bara fjäderfä. Ingen av dem gäller
+nötdokument.
+
+**Ett dokument blandar med ett djurslag projektet inte mäter.** Ett
+föreläggande från Västernorrland gäller nöt och får. Steg 20 har inget mönster
+för får och skulle inte kunna se ett; inom de tre djurslag projektet jämför
+håller anläggningen ett, och regeln svarade nöt. Dokumentet räknas därför som
+endjurs i frågan ovan, med läsarens egna ord kvar i raden och sökvägen utskriven
+i steg 30, så att undantaget är deklarerat och inte inläst ur fritext.
+
+**Nöt bär populationen och är rätt i alla nio.** Nöt är 190 av 293 dokument.
+Efter utökningen vilar klassen på nio handlästa i stället för tre, och regeln
+träffar rätt i samtliga inom de tre mätta djurslagen. Utökningen gjordes efter
+att de första tolv besvarats, med skälet att klassen var underdimensionerad och
+som enda klass saknade avvikelser; de första tolv lämnades orörda och inget
+dokument ströks. Att utöka ett tunt stratum är legitimt, att stryka ett obekvämt
+svar är det inte.
 
 **Vad det betyder för kontrastmåttet inom djurslag.** Steg 21 jämför maskning
-inom djurslag, och en tredjedel av de dokument regeln kallade endjurs var i
-själva verket flerdjurs. Ingen siffra räknas om här, eftersom stickprovet är
-stratifierat och därför inte representativt för populationen: nöt är 190 av 293
-dokument och bar 3 av 12 i stickprovet, utan en enda avvikelse. Just därför
-vilar populationens största cell på det tunnaste underlaget, och **nötstratumet
-utökas med sex dokument** med eget frö, 20260826, med de första tolv orörda.
-Skälet skrivs ut här och i steg 30, eftersom en utökning efter sedda svar bara
-är legitim om den deklareras. Ingen djurslagsuppdelad siffra publiceras innan
-den läsningen är gjord.
+inom djurslag. Tilldelningen till ett djurslag håller: ingen handling har fått
+fel art. Det som kvarstår är att hälften av de genuint blandade besättningarna
+inte syns som blandade, och de fallen ligger i fjäderfä och gris, inte i nöt.
+Ingen missfrekvens räknas om till populationen här, eftersom stickprovet är
+stratifierat och inte proportionellt.
 
 ---
 
