@@ -906,16 +906,20 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
     """
 
     def test_the_corpus_is_the_one_the_document_describes(self, hidden_text):
-        assert len(hidden_text) == 249
+        # 249 until 27 August 2026, when Gotland delivered four re-masked
+        # reports and one annex under gotland_X and the Kalmar refusal decision
+        # was filed under its own folder. Neither belongs to request A or B, so
+        # both sit in "övrigt" and neither touches the A-against-B contrast.
+        assert len(hidden_text) == 255
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 120, "övrigt": 4}
+        assert by_class == {"A": 125, "B": 120, "övrigt": 10}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to
         # return nothing at all, the null below would be vacuous.
         with_hidden = [r for r in hidden_text if r["dolda"]]
-        assert len(with_hidden) == 41
-        assert sum(r["dolda"] for r in hidden_text) == 232
+        assert len(with_hidden) == 42
+        assert sum(r["dolda"] for r in hidden_text) == 236
         assert max(r["längsta_körning"] for r in hidden_text) == 13
 
     def test_no_body_text_is_hidden(self, hidden_text):

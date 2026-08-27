@@ -37,6 +37,11 @@
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(4102-2024-6) (0).pdf", "source": "text", "counts": {"nöt": 1, "gris": 19, "fjäderfä": 0}, "present": ["gris"], "dominant": "gris", "readable": true}
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(4871-2024-3) (0).pdf", "source": "text", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(5340-2024-4) (0).pdf", "source": "text", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "gotland_X/5132-2025.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
+{"path": "gotland_X/5215-2025(3287-2026-2.2) (0) ny maskning_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "gotland_X/5238-2025(3287-2026-2.3) ny maskning (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 2, "fjäderfä": 1}, "present": ["gris"], "dominant": "gris", "readable": true}
+{"path": "gotland_X/5296-2025(3287-2026-2.4) ny maskning (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
+{"path": "gotland_X/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(1454-2025-4) (0).pdf", "source": "text", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "halland_A/1163-2026-Kontrollrapport_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 17, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "halland_A/1212-2026-Kontrollrapport_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 10, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "halland_A/1214-2026-Kontrollraport_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
@@ -106,6 +111,7 @@
 {"path": "kalmar_A/5388-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 7, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kalmar_A/5931-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kalmar_avgiftsbeslut/Beslut om avgift för utlämnande av allmänna handlingar(9147-2025-2) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kalmar_avslagsbeslut/Beslut om avslag(6666-2026-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7440-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 3, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7446-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 5}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7484-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 14, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}

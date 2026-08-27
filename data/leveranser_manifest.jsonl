@@ -634,3 +634,9 @@
 {"path": "jordbruksverket_C/Begarda hanlingar/Z_oanmälda_slaktkyckling_2025.skv", "bytes": 210, "sha256": "91c485f5de56f84dd056fcd406cce7db8cec07961ca05495dcc85ac2633d59ce", "recorded": "2026-08-21"}
 {"path": "jordbruksverket_C/Begarda hanlingar/Z_oanmälda_värphöns350_2025.skv", "bytes": 220, "sha256": "ed6074c65e017503c868d913473e09c6761b21c4cb93988505ac422a9484616a", "recorded": "2026-08-21"}
 {"path": "kalmar_A/Beslut om avslag(6666-2026-2).pdf", "bytes": 114134, "sha256": "9b986a5df7c1980579f489097952d1014b8bdf1c811c85efea68b740ab6da61f", "recorded": "2026-08-25"}
+{"path": "gotland_X/5132-2025.pdf", "bytes": 191342, "sha256": "48efab90014323e4acb86ebd4cbe8845d42959c939a8e181772d124182f7546f", "recorded": "2026-08-27"}
+{"path": "gotland_X/5215-2025(3287-2026-2.2) (0) ny maskning_Bortredigerad.pdf", "bytes": 113275, "sha256": "742e701ad4b269370b41a5d2cafd0b1af371770673dd764c600e3c697b1143d9", "recorded": "2026-08-27"}
+{"path": "gotland_X/5238-2025(3287-2026-2.3) ny maskning (0)_Bortredigerad.pdf", "bytes": 99900, "sha256": "ad993e1cab14c1f50f3419031b0e804ccc7866f9da2162a94d4a6481452ab0cb", "recorded": "2026-08-27"}
+{"path": "gotland_X/5296-2025(3287-2026-2.4) ny maskning (0)_Bortredigerad.pdf", "bytes": 186007, "sha256": "9ba8d4f1df984b75f8bea027773d80a766d366925ea12449150b1ee8441c9ae3", "recorded": "2026-08-27"}
+{"path": "gotland_X/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(1454-2025-4) (0).pdf", "bytes": 145493, "sha256": "653bad29d898e5429c14dce44ca3fa58dd857626d5a2d06398e80cd19604500b", "recorded": "2026-08-27"}
+{"path": "kalmar_avslagsbeslut/Beslut om avslag(6666-2026-2).pdf", "bytes": 114134, "sha256": "9b986a5df7c1980579f489097952d1014b8bdf1c811c85efea68b740ab6da61f", "recorded": "2026-08-27"}

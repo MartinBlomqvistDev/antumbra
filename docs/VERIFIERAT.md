@@ -770,6 +770,52 @@ sekretessgrund utan beskedet att ingen kontrollrapport för gris påträffats.
 
 ---
 
+## Gotland omprövar och lämnar ut mer, 2026-08-27
+
+P8-skrivelsen till Gotland gick den 21 augusti. Svaret kom den 27 augusti från
+myndighetens chefsjurist, och det är inte ett avslag utan en delvis ändrad
+bedömning. Ordagrant: *"I denna prövning har jag beslutat att delvis ändra
+tidigare bedömning."* En kontrollrapport, 5132-25, lämnas ut i sin helhet. Tre
+andra maskas fortfarande med stöd av 30 kap. 23 § OSL, *"dock i mindre omfattning
+än tidigare"*. Ett överklagbart beslut aviseras för de delar som fortfarande
+maskas. 5027-2025 ingick inte i omprövningen.
+
+**En bilaga lämnas ut därför att den är ett beslut.** Ordagrant: *"Bilaga 3 till
+kontrollrapport 5296-25 lämnas ut i sin helhet då den utgör ett beslut."* Det är
+A/B-designens rättsliga tes, tillämpad av myndigheten själv och utan att någon
+domstol behövt säga det: bilagepunkt 30 till 9 § OSF undantar beslut från
+sekretessen, och KR Sundsvall 2682-21 fann att bilagor delar beslutets status.
+Handlingen är ett föreläggande med vite enligt 8 kap. 9 § djurskyddslagen, och
+den är levererad utan en enda maskning.
+
+**Talen ligger utanför maskningsmåttet, med avsikt.** P8 föreskriver att
+maskningsgraden mäts på den första leveransen, före skrivelsen, så att skrivelsen
+inte kan påverka måttet. De omprövade handlingarna ligger därför i
+`data/leveranser/gotland_X`, utanför klass A och B. Klass A står oförändrad på
+138 maskade av 155.
+
+**Vad omprövningen ändrade, mätt.** Sidantalet är identiskt i alla fyra
+handlingarna, och antalet tecken i textlagret har stigit i var och en:
+
+| Handling | Tecken före | Tecken efter | Ändring | Maskad yta före | Efter |
+| --- | --- | --- | --- | --- | --- |
+| 5132-2025 | 5 838 | 6 511 | +673 | 0,0438 | 0,0094 |
+| 5215-2025 | 7 211 | 9 067 | +1 856 | 0,1287 | 0,0569 |
+| 5238-2025 | 6 244 | 7 973 | +1 729 | 0,0335 | 0,0806 |
+| 5296-2025 | 5 891 | 7 812 | +1 921 | 0,0043 | 0,1444 |
+
+**Och det ger en metodisk lärdom som väger tyngre än talen.** Mer text har
+lämnats ut i samtliga fyra, mellan 11 och 33 procent fler tecken. Den maskade
+ytan sjunker ändå bara i två av dem och stiger i två. Gotlands maskning har
+sorten `text_removed`, alltså att texten under svärtningen är borttagen, och då
+mäter ytmåttet hur rutorna ritats och inte hur mycket som hålls inne. **För den
+maskningstekniken är antalet tecken det bättre måttet, och ytmåttet kan peka åt
+fel håll.** Det gäller det förregistrerade ytmåttet i P1 och ska stå som en
+gräns när ytsiffror används. Ingen siffra räknas om här: omprövningen ligger
+utanför måttets population, och lärdomen gäller tolkningen.
+
+---
+
 ## Det första överklagbara beslutet, Kalmar 2026-08-25
 
 Länsstyrelsen i Kalmar avslår begäran om de maskade uppgifterna i de fem
