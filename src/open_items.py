@@ -53,6 +53,7 @@ OURS = frozenset(
         "avstående",
         "avstående från överklagande",
         "överklagande",
+        "beslutsbegäran",
         "beslutsbegäran och fråga om uttagets fullständighet",
         "beslutsbegäran upprepad",
         "delgivningskvitto",
@@ -166,6 +167,7 @@ APPEAL_CLOSERS = frozenset({"överklagande", "avstående från överklagande"})
 # exactly where Jordbruksverket C stood on 2026-08-17.
 DECISION_REQUESTS = frozenset(
     {
+        "beslutsbegäran",
         "beslutsbegäran och fråga om uttagets fullständighet",
         "beslutsbegäran upprepad",
         "förnyad begäran om avgiftsbeslut",
