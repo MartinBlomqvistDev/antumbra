@@ -1131,9 +1131,12 @@ inte av dem och gäller lika för varje begäran som hamnar i samma läge.
 **Problemet.** Tillämpningsnot 3 säger att insamlingen är stängd när *"varje
 begäran har nått ett slutstatus och inga frister löper"*, och räknar upp tre
 slutstatus: levererad, avgiftsstoppad med avslutat beslutsspår, och uttryckligen
-vägrad. P10 skapar en fjärde utgång, *"begäranden utan leverans och utan beslut
-redovisas som uteblivet svar"*, men uttryckligen bara *"för svarstidsmåttet"*.
-Uteblivet svar finns alltså inte bland not 3:s slutstatus. Not 3 säger vidare
+vägrad. P10 skapar en fjärde utgång: *"Dag 40 stängs datainsamlingen för
+svarstidsmåttet; begäranden utan leverans och utan beslut redovisas som uteblivet
+svar."* Kvalifikationen *"för svarstidsmåttet"* sitter i den meningen på
+stängningen. Om den också styr redovisningskategorin står inte skrivet, och det
+är just den oklarheten som gör att uteblivet svar inte går att läsa in bland not
+3:s slutstatus. Not 3 säger vidare
 att *"Löper något spår fortfarande vid dag 40 skjuts publiceringen upp tills det
 är avslutat"*. Läst bokstavligt kan en myndighet som aldrig svarar skjuta upp
 publiceringen utan bortre gräns, vilket ger den som inte svarar ett veto över
@@ -1142,9 +1145,8 @@ redovisningen av att den inte svarat.
 **Vad protokollet självt säger om saken.** P10 avslutas: *"Eventuell JO-anmälan
 övervägs först efter publicering, enhetligt för alla myndigheter som då
 fortfarande inte svarat."* Den meningen förutsätter att publicering sker medan
-någon ännu inte svarat. Luckan är därför ett skrivfel i not 3 och inte ett
-ställningstagande, och noten sluter den i den riktning protokollets egen text
-redan pekar.
+någon ännu inte svarat. Luckan i not 3 är därför ett skrivfel, och noten sluter den i
+den riktning protokollets egen text redan pekar.
 
 **Fjärde slutstatus: uteblivet svar.** En begäran har nått slutstatus när
 samtliga tre villkor är uppfyllda:
@@ -1153,9 +1155,13 @@ samtliga tre villkor är uppfyllda:
 2. den sista påminnelsen enligt P10 har skickats, tidigast dag 40, och
 3. tio arbetsdagar har gått sedan den påminnelsen.
 
-Tio arbetsdagar är samma frist som P3 använder för sin påminnelse och är vald
-för att inte vara ett nytt tal. Datumet blir därmed räknebart och inte en
-bedömning. Utfallet redovisas som uteblivet svar, per begäran och myndighet, och
+Tio arbetsdagar är ett val och inget härlett tal. P3:s tio är ett dagnummer
+räknat från dag 0 och inte en väntetid efter en påminnelse, så noten lånar
+siffran utan att kunna åberopa den. Valet motiveras så här: fem arbetsdagar är
+kortare än den tid myndigheterna i den här insamlingen faktiskt behövt för
+enklare besked, och tjugo skjuter publiceringen en månad utan att tillföra något
+när tystnaden redan varat sedan augusti. Det avgörande är att talet står skrivet
+i förväg, så att datumet blir räknebart och inte en bedömning. Utfallet redovisas som uteblivet svar, per begäran och myndighet, och
 räknas aldrig som ett utlämnande eller som ett avslag.
 
 **P11 utan svar.** P11 är en uppföljningsfråga och inte en av de 43
@@ -1171,7 +1177,11 @@ levererats har nått slutstatus enligt not 3 punkt 1, även när maskningen i de
 ingenstans publiceringen beroende av ett avgörande. Ett mål i kammarrätten kan
 löpa i månader, och att vänta in det hade gjort publiceringsdatumet till en
 funktion av domstolens kölista. Pågående mål redovisas som pågående, med
-diarienummer och yrkande, och avgörandet publiceras när det kommer.
+diarienummer och yrkande, och avgörandet publiceras när det kommer. Att
+publicera innan målen avgjorts skärper avsnitt 11:s regel om hur en maskande
+myndighet får beskrivas: som avvikande från befintlig kammarrättspraxis för
+beslutsbilagor, aldrig som lagbrytare, eftersom prejudikat saknas och frågan i
+två fall dessutom ligger hos domstol.
 
 **Vad noten inte gör.** Den flyttar inte dag 40, den förkortar inte P12:s tre
 veckor, och den låter ingen begäran med löpande frist nå slutstatus. Den ger
