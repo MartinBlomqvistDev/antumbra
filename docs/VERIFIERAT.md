@@ -778,7 +778,7 @@ bedömning. Ordagrant: *"I denna prövning har jag beslutat att delvis ändra
 tidigare bedömning."* En kontrollrapport, 5132-25, lämnas ut i sin helhet. Tre
 andra maskas fortfarande med stöd av 30 kap. 23 § OSL, *"dock i mindre omfattning
 än tidigare"*. Ett överklagbart beslut aviseras för de delar som fortfarande
-maskas. 5027-2025 ingick inte i omprövningen.
+maskas. 5027-2025 saknades i den första försändelsen och kom dagen efter, sedan chefsjuristen själv uppmärksammat att en rapport fallit bort; omprövningen omfattar därmed samtliga fem.
 
 **En bilaga lämnas ut därför att den är ett beslut.** Ordagrant: *"Bilaga 3 till
 kontrollrapport 5296-25 lämnas ut i sin helhet då den utgör ett beslut."* Det är
@@ -794,19 +794,20 @@ inte kan påverka måttet. De omprövade handlingarna ligger därför i
 `data/leveranser/gotland_X`, utanför klass A och B. Klass A står oförändrad på
 138 maskade av 155.
 
-**Vad omprövningen ändrade, mätt.** Sidantalet är identiskt i alla fyra
+**Vad omprövningen ändrade, mätt.** Sidantalet är identiskt i alla fem
 handlingarna, och antalet tecken i textlagret har stigit i var och en:
 
 | Handling | Tecken före | Tecken efter | Ändring | Maskad yta före | Efter |
 | --- | --- | --- | --- | --- | --- |
+| 5027-2025 | 9 525 | 10 307 | +782 | 0,0514 | 0,0317 |
 | 5132-2025 | 5 838 | 6 511 | +673 | 0,0438 | 0,0094 |
 | 5215-2025 | 7 211 | 9 067 | +1 856 | 0,1287 | 0,0569 |
 | 5238-2025 | 6 244 | 7 973 | +1 729 | 0,0335 | 0,0806 |
 | 5296-2025 | 5 891 | 7 812 | +1 921 | 0,0043 | 0,1444 |
 
 **Och det ger en metodisk lärdom som väger tyngre än talen.** Mer text har
-lämnats ut i samtliga fyra, mellan 11 och 33 procent fler tecken. Den maskade
-ytan sjunker ändå bara i två av dem och stiger i två. Gotlands maskning har
+lämnats ut i samtliga fem, mellan 8 och 33 procent fler tecken. Den maskade
+ytan sjunker ändå bara i tre av dem och stiger i två. Gotlands maskning har
 sorten `text_removed`, alltså att texten under svärtningen är borttagen, och då
 mäter ytmåttet hur rutorna ritats och inte hur mycket som hålls inne. **För den
 maskningstekniken är antalet tecken det bättre måttet, och ytmåttet kan peka åt
