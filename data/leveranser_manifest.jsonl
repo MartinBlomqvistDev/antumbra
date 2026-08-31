@@ -643,3 +643,5 @@
 {"path": "halland_beslut/Beslut om begäran om allmän handling(5556-2026-5).pdf", "bytes": 93487, "sha256": "c9c500b82f810a8a9444fb4492539752c758165131fcd2be183732e3ad3663c0", "recorded": "2026-08-28"}
 {"path": "orebro_avgiftsbeslut/Beslut om avgift(13775-2026-2).pdf", "bytes": 111675, "sha256": "0951c1fb2b4c3c3768be3b5831457f476b03773a753ecc40ce720480cdaf5282", "recorded": "2026-08-28"}
 {"path": "gotland_X/Omaskade kontrollrapporter(3287-2026-2) ny maskning(0)_Bortredigerad.pdf", "bytes": 97376, "sha256": "0e76f83f636fb9a6aba12ab5d9de55cbd2bb0d03a9d8f5b8b8ed0266ad462c0e", "recorded": "2026-08-31"}
+{"path": "kronoberg_beslut/Beslut om utlämnande av allmän handling(4902-2026-4).pdf", "bytes": 103638, "sha256": "eb4974f0e581d137b5204e593f3590292a40b4c7945d382e5a65dec966f7264f", "recorded": "2026-08-31"}
+{"path": "kronoberg_X/Handlingar för utlämnande(4902-2026-5).pdf", "bytes": 1659212, "sha256": "d9733130c17173bc046e0b1ab7952ea15ea798c8777ff64ca3d2f61ecf39eb0c", "recorded": "2026-08-31"}

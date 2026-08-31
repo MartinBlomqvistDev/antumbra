@@ -284,6 +284,7 @@ class TestNoPersonalDataIsCommitted:
     ROLES: ClassVar[set[str]] = {
         "arkivarie",
         "enhetschef",
+        "länsjurist",
         "djurskyddshandläggare",
         "länsveterinär",
         "jurist",
@@ -913,9 +914,9 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         # belongs to request A or B, so all sit in "övrigt" and none touches the
         # A-against-B contrast, which stands unchanged at 138 of 155 and 32 of
         # 135.
-        assert len(hidden_text) == 258
+        assert len(hidden_text) == 260
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 120, "övrigt": 13}
+        assert by_class == {"A": 125, "B": 120, "övrigt": 15}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to
@@ -1214,7 +1215,8 @@ class TestEveryRefusalDecisionIsInTheRegister:
         logged = {
             (row["myndighet"], row["begaran"])
             for row in protocol
-            if row["handelse"] == "avslagsbeslut mottaget"
+            if row["handelse"]
+            in {"avslagsbeslut mottaget", "delvis avslagsbeslut mottaget"}
         }
         held = {(row["myndighet"], row["klass"]) for row in decisions}
         assert held == logged

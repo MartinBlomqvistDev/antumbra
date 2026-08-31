@@ -101,6 +101,9 @@ THEIRS = frozenset(
         # A written, appealable refusal, which is what P8 asks for. It ends
         # the decision track and starts P9's own clock.
         "avslagsbeslut mottaget",
+        # The same thing where the authority also released more: it ends the
+        # decision track and starts P9's clock exactly as a plain refusal does.
+        "delvis avslagsbeslut mottaget",
         "riktlinje bifogad",
         # The authority explaining how its own extract is built, here that a
         # row is one animal keeper and not one control. It answers nothing that
@@ -143,14 +146,22 @@ JUDGEMENT = frozenset({"riktlinje bifogad", "taxebeslut bifogat"})
 # Events that end the decision track behind a declined request, so that
 # tillämpningsnot 3 counts it as finished rather than as still running.
 DECISION_CLOSERS = frozenset(
-    {"avgiftsbeslut mottaget", "avgiftsbeslut vägrat", "avslagsbeslut mottaget"}
+    {
+        "avgiftsbeslut mottaget",
+        "avgiftsbeslut vägrat",
+        "avslagsbeslut mottaget",
+        "delvis avslagsbeslut mottaget",
+    }
 )
 
 # P9 runs on calendar days, not working days: the appeal is sent within 14
 # calendar days of delfåendet although the statutory limit is three weeks.
 # Kept apart from ANSWER_DUE so that neither rule can borrow the other's
 # clock, which would move a deadline without anyone editing it.
-APPEAL_DUE = (("avslagsbeslut mottaget", 14, "P9"),)
+APPEAL_DUE = (
+    ("avslagsbeslut mottaget", 14, "P9"),
+    ("delvis avslagsbeslut mottaget", 14, "P9"),
+)
 
 # What actually ends an appeal window. Acknowledging service does not: the
 # authority asks for a receipt, the receipt is our event, and treating any

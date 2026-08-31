@@ -124,6 +124,8 @@
 {"path": "kronoberg_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(1931-2026-4) (0).pdf", "source": "text", "counts": {"nöt": 31, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kronoberg_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(3230-2026-4) (0).pdf", "source": "text", "counts": {"nöt": 33, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kronoberg_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(4114-2026-7) (0).pdf", "source": "text", "counts": {"nöt": 23, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "kronoberg_beslut/Beslut om utlämnande av allmän handling(4902-2026-4).pdf", "source": "text", "counts": {"nöt": 1, "gris": 1, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
+{"path": "kronoberg_X/Handlingar för utlämnande(4902-2026-5).pdf", "source": "text", "counts": {"nöt": 26, "gris": 0, "fjäderfä": 16}, "present": ["fjäderfä", "nöt"], "dominant": "nöt", "readable": true}
 {"path": "norrbotten_B/Mapp1.pdf", "source": "text", "counts": {"nöt": 1, "gris": 6, "fjäderfä": 45}, "present": ["fjäderfä", "gris"], "dominant": "fjäderfä", "readable": true}
 {"path": "orebro_avgiftsbeslut/Beslut om avgift(13775-2026-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "orebro_avgiftsriktlinje/Riktlinje om avgiftsuttag vid utlämnande av allmän handling(5587-2023-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
