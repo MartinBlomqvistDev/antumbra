@@ -1119,3 +1119,62 @@ Kriterium (c) är noll, prövat mot varje maskad B-leverans. Kommer fler än fem
 kvalificerade beslut in gäller P9:s ordning: (c) först, därefter (a), därefter
 (b) i fallande avvikelsestorlek, mätt som skillnaden i maskad yta mot
 jämförelsemängden.
+
+### Tillämpningsnot 7, 2026-08-31: när insamlingen är stängd trots att någon inte svarat
+
+Skriven dag 20, innan det är känt vilka myndigheter som förblir tysta, av samma
+skäl som not 3, not 5 och not 6: villkoret för att avsluta ska vara satt medan
+det ännu inte gynnar eller missgynnar någon bestämd myndighet. Tre begäranden
+har vid skrivandet varit utan leverans sedan den 4 augusti, men noten avgörs
+inte av dem och gäller lika för varje begäran som hamnar i samma läge.
+
+**Problemet.** Tillämpningsnot 3 säger att insamlingen är stängd när *"varje
+begäran har nått ett slutstatus och inga frister löper"*, och räknar upp tre
+slutstatus: levererad, avgiftsstoppad med avslutat beslutsspår, och uttryckligen
+vägrad. P10 skapar en fjärde utgång, *"begäranden utan leverans och utan beslut
+redovisas som uteblivet svar"*, men uttryckligen bara *"för svarstidsmåttet"*.
+Uteblivet svar finns alltså inte bland not 3:s slutstatus. Not 3 säger vidare
+att *"Löper något spår fortfarande vid dag 40 skjuts publiceringen upp tills det
+är avslutat"*. Läst bokstavligt kan en myndighet som aldrig svarar skjuta upp
+publiceringen utan bortre gräns, vilket ger den som inte svarar ett veto över
+redovisningen av att den inte svarat.
+
+**Vad protokollet självt säger om saken.** P10 avslutas: *"Eventuell JO-anmälan
+övervägs först efter publicering, enhetligt för alla myndigheter som då
+fortfarande inte svarat."* Den meningen förutsätter att publicering sker medan
+någon ännu inte svarat. Luckan är därför ett skrivfel i not 3 och inte ett
+ställningstagande, och noten sluter den i den riktning protokollets egen text
+redan pekar.
+
+**Fjärde slutstatus: uteblivet svar.** En begäran har nått slutstatus när
+samtliga tre villkor är uppfyllda:
+
+1. ingen leverans och inget beslut har kommit in,
+2. den sista påminnelsen enligt P10 har skickats, tidigast dag 40, och
+3. tio arbetsdagar har gått sedan den påminnelsen.
+
+Tio arbetsdagar är samma frist som P3 använder för sin påminnelse och är vald
+för att inte vara ett nytt tal. Datumet blir därmed räknebart och inte en
+bedömning. Utfallet redovisas som uteblivet svar, per begäran och myndighet, och
+räknas aldrig som ett utlämnande eller som ett avslag.
+
+**P11 utan svar.** P11 är en uppföljningsfråga och inte en av de 43
+begärandena, så P2 och P3 gäller den inte och den saknar frist. Samma ordning
+tillämpas: en påminnelse tio arbetsdagar efter frågan, och om svar uteblir
+ytterligare tio arbetsdagar därefter redovisas nämnaren som saknad för den
+myndigheten. **Nämnaren uppskattas aldrig.** Utlämningsgrad beräknas inte för
+ett län vars nämnare saknas, och luckan redovisas som en lucka.
+
+**Överklaganden skjuter inte upp publiceringen.** En begäran vars handlingar
+levererats har nått slutstatus enligt not 3 punkt 1, även när maskningen i dem är
+överklagad. P9 skrevs i vetskap om att överklaganden förekommer, och not 3 gör
+ingenstans publiceringen beroende av ett avgörande. Ett mål i kammarrätten kan
+löpa i månader, och att vänta in det hade gjort publiceringsdatumet till en
+funktion av domstolens kölista. Pågående mål redovisas som pågående, med
+diarienummer och yrkande, och avgörandet publiceras när det kommer.
+
+**Vad noten inte gör.** Den flyttar inte dag 40, den förkortar inte P12:s tre
+veckor, och den låter ingen begäran med löpande frist nå slutstatus. Den ger
+heller ingen myndighet en sämre redovisning: uteblivet svar redovisas som just
+det, och P10:s bestämmelse att en eventuell JO-anmälan övervägs först efter
+publicering, enhetligt för alla, står oförändrad.
