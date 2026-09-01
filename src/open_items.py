@@ -120,6 +120,9 @@ INTERNAL = frozenset(
     {
         "kompletterande leverans arkiverad",
         "leverans arkiverad",
+        # A test condition written down before its outcome is known, so that
+        # the bar cannot be moved to meet the result.
+        "förregistrerat prövningsvillkor",
         "protokollavvikelse",
         "tillämpningsnot skriven",
     }

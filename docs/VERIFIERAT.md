@@ -328,7 +328,22 @@ verifierad okulärt: länsstyrelsens vapen på sidan ett är en solid svart skö
 49 gånger 9 bildpunkter vid 100 dpi, och den klarar varje krav detektorn ställer
 på en balk. Mot det rättade facit ger bildmetoden balk i 64 av de 155
 handlingar som textmetoden bedömer som omaskade, av materialets 261 digitalt
-födda; talet 155 är alltså ett annat än klass A:s 155. Vad `masked` sant betyder
+födda; talet 155 är alltså ett annat än klass A:s 155.
+
+**Åtgärdat samma kväll, till hälften.** Villkoret för att anta en
+uteslutningsregel skrevs i protokollloggen innan utfallet var känt, och
+utfallet står i ADR-0020. Vapnet och rubrikbandet utesluts numera även ur
+bildmetoden. Falsklarmen faller från 64 av 155 till **30 av 155**, alltså från
+41 till 19 procent, medan missarna står kvar på 1 av 88. Resten är fotografier:
+varje kvarvarande handling har minst en balk inuti en rasterbild, och det är den
+felkälla ADR-0016 skrev ut från början. En regel för fotografier är avvisad med
+skäl, eftersom Halland har lämnat en fotobilaga där maskningarna är ritade
+ovanpå bilderna.
+
+**Ingen siffra nedan rör sig av den regeln.** Ingen skannad handling byter dom,
+eftersom var och en som bär de två elementen också bär andra balkar. Därför står
+uppdelningen på metod kvar, och därför gäller reservationen om den skannade
+halvan fortfarande. Vad `masked` sant betyder
 på en skanning är därför en öppen fråga, och den ligger i ADR-0016:s tillägg.
 
 **Utfallet, räknat på de 290 handlingarna i klass A och B.** De övriga 16
@@ -345,10 +360,10 @@ uppdelade på metod, eftersom de två halvorna är olika säkra:
 | A | 78 av 125, 62 % | 30 av 30, 100 % | 108 av 155, 70 % |
 | B | 18 av 120, 15 % | 11 av 15, 73 % | 29 av 135, 21 % |
 
-Att varenda skannad A-handling bedöms som maskad är förenligt med den
-falsklarmsfrekvens rättelsen ovan visar, och det är inte prövat mot handläsning
-för en enda av dem. Den digitalt födda halvan vilar på ett instrument som är
-prövat på det sättet.
+Att varenda skannad A-handling bedöms som maskad är förenligt med bildmetodens
+falsklarmsfrekvens om 19 procent, och det är inte prövat mot handläsning för en
+enda av dem. Den digitalt födda halvan vilar på ett instrument som är prövat på
+det sättet.
 
 Det tal som stod här före bildmetoden, 86 procent mot 17 räknat på 244 bedömbara
 dokument, vilar på den oreviderade rutregeln och kan inte jämföras med talen

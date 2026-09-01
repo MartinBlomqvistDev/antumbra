@@ -85,6 +85,25 @@ MIN_FILL = 0.9
 BIG_SHARE, BIG_FILL = 0.25, 0.98
 EDGE = 20
 
+# The two template elements the image method has to be told about, because a
+# rendered page carries no text and the text method's exclusions cannot be
+# applied to pixels. Both are given in points on the page, converted to the
+# rendered grid at use, so that the numbers can be checked against a PDF
+# viewer's ruler rather than against a screenshot.
+#
+# The letterhead: the county's coat of arms is a solid black shield in the top
+# left corner of page one. Measured across the corpus it sits at x 61 to 96 and
+# y 48 to 54 points; the box below is wider on every side.
+ARMS_X, ARMS_Y = 130.0, 80.0
+# The legislation table's header band, the same element ADR-0019 excludes from
+# the text layer. It runs from x 81 to 513 points and is at most 33 points high,
+# and it is recognised as a row of blocks spanning that full width rather than
+# by any single block, since white text breaks it into pieces.
+BAND_LEFT, BAND_RIGHT = 81.0, 513.0
+BAND_MAX_HEIGHT = 36.0
+BAND_MIN_SPAN = 400.0
+BAND_TOLERANCE = 18.0
+
 
 def is_solid_dark(colour: object) -> bool:
     """True when a fill colour is a solid black or near-black."""
@@ -192,7 +211,57 @@ def dark_runs(dark: np.ndarray) -> list[tuple[int, int, int]]:
     ]
 
 
-def image_bars(dark: np.ndarray) -> tuple[int, int]:
+def to_pixels(points: float) -> float:
+    """A length in points, in rendered pixels."""
+    return points * DPI / 72
+
+
+def to_column(points: float) -> float:
+    """A page coordinate in points, on the cropped grid the bar search runs over."""
+    return to_pixels(points) - EDGE
+
+
+def template_blocks(kept: list[list[int]], first_page: bool) -> set[int]:
+    """The blocks that belong to the form rather than to a redaction.
+
+    Two elements, both fixed by the authorities' own template: the coat of arms
+    in the letterhead, and the black header band over the list of applied
+    legislation. The band is found as a row of blocks reaching across the page,
+    because its white column headings cut it into pieces that no single block
+    describes. ADR-0020 records the test both rules were adopted on.
+    """
+    drop: set[int] = set()
+    if first_page:
+        for index, (_, x1, _, y1) in enumerate(kept):
+            if x1 <= to_column(ARMS_X) and y1 <= to_column(ARMS_Y):
+                drop.add(index)
+
+    rows: list[list[int]] = []
+    for index in sorted(range(len(kept)), key=lambda i: kept[i][2]):
+        top = kept[index][2]
+        for row in rows:
+            if top <= max(kept[i][3] for i in row) + 3:
+                row.append(index)
+                break
+        else:
+            rows.append([index])
+    for row in rows:
+        top = min(kept[i][2] for i in row)
+        bottom = max(kept[i][3] for i in row)
+        left = min(kept[i][0] for i in row)
+        right = max(kept[i][1] for i in row)
+        if bottom - top + 1 > to_pixels(BAND_MAX_HEIGHT):
+            continue
+        if right - left < to_pixels(BAND_MIN_SPAN):
+            continue
+        near_left = abs(left - to_column(BAND_LEFT)) <= BAND_TOLERANCE
+        near_right = abs(right - to_column(BAND_RIGHT)) <= BAND_TOLERANCE
+        if near_left and near_right:
+            drop.update(row)
+    return drop
+
+
+def image_bars(dark: np.ndarray, first_page: bool = False) -> tuple[int, int]:
     """Solid dark rectangles in a rendered page: how many, and their area."""
     runs = dark_runs(dark)
     if not runs:
@@ -214,8 +283,9 @@ def image_bars(dark: np.ndarray) -> tuple[int, int]:
         open_blocks = [b for b in open_blocks if b[3] >= row - 1]
     closed.extend(open_blocks)
 
-    bars = covered = 0
-    for x0, x1, y0, y1 in closed:
+    kept = []
+    for block in closed:
+        x0, x1, y0, y1 = block
         width, height = x1 - x0, y1 - y0 + 1
         if height < MIN_BAR_H:
             continue
@@ -223,8 +293,15 @@ def image_bars(dark: np.ndarray) -> tuple[int, int]:
         fill = dark[y0 : y1 + 1, x0:x1].mean()
         floor = BIG_FILL if area > page_area * BIG_SHARE else MIN_FILL
         if fill >= floor:
-            bars += 1
-            covered += area
+            kept.append(block)
+
+    drop = template_blocks(kept, first_page)
+    bars = covered = 0
+    for index, (x0, x1, y0, y1) in enumerate(kept):
+        if index in drop:
+            continue
+        bars += 1
+        covered += (x1 - x0) * (y1 - y0 + 1)
     return bars, covered
 
 
@@ -238,13 +315,13 @@ def scan_bars(path: Path) -> tuple[int, int, float]:
     total = pages = 0
     covered = surface = 0
     with pymupdf.open(path) as doc:
-        for page in doc:
+        for number, page in enumerate(doc, 1):
             pixmap = page.get_pixmap(dpi=DPI, colorspace=pymupdf.csGRAY)
             grey = np.frombuffer(pixmap.samples, dtype=np.uint8).reshape(
                 pixmap.height, pixmap.width
             )
             inner = grey[EDGE:-EDGE, EDGE:-EDGE] < DARK_LEVEL
-            found, area = image_bars(inner)
+            found, area = image_bars(inner, first_page=number == 1)
             total += found
             covered += area
             surface += inner.size

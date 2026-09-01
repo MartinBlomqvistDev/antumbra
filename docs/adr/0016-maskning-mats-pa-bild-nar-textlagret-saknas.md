@@ -95,6 +95,12 @@ den skannade delen försedd med den här reservationen.
 
 Beslutet i denna ADR står kvar: två metoder behövs, och alternativet att lämna
 15 procent av materialet omätt är sämre. Det som faller är påståendet om
-metodens falsklarmsfrekvens. Ingen regel för bildsidan införs i dag, eftersom
-uteslutningen av rubrikband inte kan överföras till pixlar och en uteslutning av
-vapnet skulle kräva en egen validering mot samma facit.
+metodens falsklarmsfrekvens.
+
+Frågan om en regel för bildsidan prövades samma kväll, mot ett villkor som
+skrevs innan utfallet var känt, och utfallet står i ADR-0020: vapnet och
+rubrikbandet utesluts numera även ur bildmetoden, falsklarmen faller från 64 av
+155 till 30, och ingen ytterligare verkligt maskad handling blir blind. Ingen
+publicerad siffra rör sig av det, eftersom varje skannad handling som bär de två
+elementen också bär andra balkar. Resten är fotografier, alltså den felkälla den
+här ADR:n skrev ut från början.

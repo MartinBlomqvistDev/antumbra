@@ -6,6 +6,7 @@ the data they describe, and the rule that no personal data enters the
 repository. Each is asserted here so it fails in CI rather than in public.
 """
 
+import importlib.util
 import json
 import re
 import subprocess
@@ -143,6 +144,15 @@ def grounds() -> list[dict]:
     """One record per authority statement about what was masked and why."""
     path = ROOT / "data" / "sekretessgrunder.jsonl"
     return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+def load_masking_step():
+    """Step 18 as a module, since a name starting with a digit cannot be imported."""
+    path = ROOT / "pipeline" / "18_analyse_masking.py"
+    spec = importlib.util.spec_from_file_location("masking_step", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 @pytest.fixture(scope="module")
@@ -983,6 +993,18 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         b = tuple(sum(x) for x in pairs)
         assert a == (108, 155)
         assert b == (29, 135)
+
+    def test_the_exclusions_keep_the_thresholds_their_decisions_name(self):
+        # ADR-0019 and ADR-0020 state these numbers, and the ADRs are what a
+        # reader checks the measure against. A threshold quietly retuned in the
+        # code would move a published figure while both documents still read as
+        # if nothing had changed.
+        step = load_masking_step()
+        assert step.MIN_BOX_HEIGHT == 3.0
+        assert (step.ARMS_X, step.ARMS_Y) == (130.0, 80.0)
+        assert (step.BAND_LEFT, step.BAND_RIGHT) == (81.0, 513.0)
+        assert step.BAND_MAX_HEIGHT == 36.0
+        assert step.BAND_MIN_SPAN == 400.0
 
     def test_the_split_between_the_two_methods(self, masking):
         found = self.shares(masking)
