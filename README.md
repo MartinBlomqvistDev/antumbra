@@ -174,12 +174,16 @@ python pipeline/29_check_grounds.py        # is the register of cited grounds cl
 python pipeline/30_draw_species_sample.py  # the blind sample the species rule is checked against
 ```
 
-One report is not a pipeline step, because it derives nothing and writes
-nothing. It reads the protocol log and prints what each of the 43 requests is
-waiting for, which side owes the next move, and when it falls due:
+Two reports are not pipeline steps, because they derive nothing and write
+nothing. The first reads the protocol log and prints what each of the 43
+requests is waiting for, which side owes the next move, and when it falls due.
+The second re-runs the check that the redaction measure's image method rests
+on, by pointing it at the born-digital documents where the text method already
+holds an answer:
 
 ```bash
 python src/open_items.py
+python src/validate_image_method.py
 ```
 
 The steps write to `data/`. The slow ones are resumable and skip what is

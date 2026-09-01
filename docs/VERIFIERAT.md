@@ -305,20 +305,61 @@ strikt bättre än de två andra. **De två avvikelserna är kända och förklar
 före utskrift ser likadan ut som en sida som aldrig bar texten. `masked` falskt
 på en skanning betyder att ingen balk hittades, inte att ingenting undanhållits.
 
-**Utfallet över hela materialet, 294 dokument, inga uteslutna.** Omräknat
-2026-08-21 sedan Södermanlands andra leverans den 17 augusti lagt till ett
-dokument i klass B. Två mått hålls isär, och bara det andra är protokollets:
+**Rättelse 2026-09-01: två sorters svarta rektanglar var inte maskningar.**
+Här stod att en fylld rektangel i textlagret är en maskning, utan förbehåll. Den
+1 september 2026 arkiverades Kammarrätten i Jönköpings meddelande i mål 3249-26,
+och steg 18 bedömde ett domstolsbrev utan en enda maskning som maskat. Två
+felkällor kom fram, båda beskrivna i ADR-0019. Den ena är kontrollrapportmallens
+svarta tabellhuvud med vit text, som finns i 105 av de 124 digitalt födda A- och
+B-handlingar som över huvud taget har rutor, och som för 33 av dem var den enda
+grunden för maskningsdomen. Den andra är vågräta linjer om en halv punkt, som
+klarar ytgolvet på sin bredd. Textmetoden utesluter numera båda. En av Jämtlands
+kontrollrapporter är läst för hand som kontroll och är utlämnad utan en enda
+maskning, med djurhållarens namn och adress i klartext.
 
-*Andel dokument med minst en maskning*, poolat över landet: begäran A 138 av
-155, 89 procent; begäran B 32 av 135, 24 procent. Före bildmetoden var 45
-dokument omätbara och samma tal var 86 mot 17 räknat på 244 dokument.
+**Rättelse 2026-09-01: valideringens rena rad går inte att reproducera.**
+Tabellen ovan står kvar som den redovisades. Dess maskade rad kommer tillbaka
+dokument för dokument när jämförelsen körs om mot exakt samma 248 handlingar och
+samma facit: 122 med balk och 1 utan. Den rena raden kommer inte tillbaka. Av
+de 118 omaskade handlingarna ger 30 balk, där tabellen redovisar 1, och
+markörraden blir 4 och 3 där tabellen har 3 och 4. Detektorn är oförändrad sedan
+valideringen, vilket är kontrollerat i git. Den vanligaste felkällan är
+verifierad okulärt: länsstyrelsens vapen på sidan ett är en solid svart sköld,
+49 gånger 9 bildpunkter vid 100 dpi, och den klarar varje krav detektorn ställer
+på en balk. Mot det rättade facit ger bildmetoden balk i 64 av de 155
+handlingar som textmetoden bedömer som omaskade, av materialets 261 digitalt
+födda; talet 155 är alltså ett annat än klass A:s 155. Vad `masked` sant betyder
+på en skanning är därför en öppen fråga, och den ligger i ADR-0016:s tillägg.
+
+**Utfallet, räknat på de 290 handlingarna i klass A och B.** De övriga 16
+dokumenten i `data/maskning.jsonl` är myndighetsbeslut, Gotlands omprövade
+leverans och kammarrättens meddelande, alla utanför måttets population enligt
+P8. Två mått hålls isär, och bara det andra är protokollets:
+
+*Andel dokument med minst en maskning*, poolat över landet: begäran A **108 av
+155**, 70 procent; begäran B **29 av 135**, 21 procent. Talen ska läsas
+uppdelade på metod, eftersom de två halvorna är olika säkra:
+
+| Klass | Digitalt födda | Skannade | Totalt |
+| --- | --- | --- | --- |
+| A | 78 av 125, 62 % | 30 av 30, 100 % | 108 av 155, 70 % |
+| B | 18 av 120, 15 % | 11 av 15, 73 % | 29 av 135, 21 % |
+
+Att varenda skannad A-handling bedöms som maskad är förenligt med den
+falsklarmsfrekvens rättelsen ovan visar, och det är inte prövat mot handläsning
+för en enda av dem. Den digitalt födda halvan vilar på ett instrument som är
+prövat på det sättet.
+
+Det tal som stod här före bildmetoden, 86 procent mot 17 räknat på 244 bedömbara
+dokument, vilar på den oreviderade rutregeln och kan inte jämföras med talen
+ovan.
 
 *Kontrastmåttet enligt P1*, alltså skillnaden i maskningsgrad mellan A och B
 inom samma myndighet: 14 län har levererat i båda klasserna. Medianskillnaden
-är **2,3 procentenheter maskerad yta** och **80 procentenheter andel maskade
-dokument**. Inget av de fjorton länen har högre maskad yta i B än i A. Dalarna
-är det enda som vänder på andelsmåttet, 60 procent av A mot 80 procent av B,
-medan ytan där pekar åt samma håll som i övriga län.
+är **2,04 procentenheter maskerad yta** och **68 procentenheter andel maskade
+dokument**. Inget av de fjorton länen har högre maskad yta i B än i A. Två
+vänder på andelsmåttet: Dalarna med 20 procent av A mot 80 procent av B, och
+Gävleborg med 0 mot 25 procent.
 
 **Det förregistrerade måttets två öppna delar är sedan dess avgjorda, båda på
 annat sätt än planerat.** Maskningsgrad är förregistrerad som andel maskerad yta
@@ -371,13 +412,20 @@ båda:
 
 | Djurslag | Län | Median, andel maskade | Median, maskad yta | Negativa |
 | --- | --- | --- | --- | --- |
-| nöt | 9 | +80 procentenheter | +2,74 procentenheter | 1 |
-| fjäderfä | 2 | +100 procentenheter | +0,73 procentenheter | 0 |
+| nöt | 9 | +80 procentenheter | +2,59 procentenheter | 1 |
+| fjäderfä | 2 | +50 procentenheter | +0,46 procentenheter | 0 |
 | gris | 0 | går inte att beräkna | går inte att beräkna | - |
 
-**Kontrasten är alltså inte en djurslagsartefakt.** Den enda negativa cellen är
-Dalarna, där andelen maskade dokument är lägre i A än i B, med tre dokument i
-A; ytmåttet pekar där åt samma håll som i övriga län. För gris saknas underlag
+Talen är omräknade 2026-09-01 efter rättelsen längre upp. Före den stod +2,74
+och +0,73 procentenheter maskerad yta och +100 procentenheter andel för
+fjäderfä.
+
+**Kontrasten är alltså inte en djurslagsartefakt.** Av de elva cellerna pekar
+åtta åt samma håll, två visar ingen skillnad alls och en är negativ. Den
+negativa är Dalarna nöt, med tre dokument i A, och där pekar sedan rättelsen
+båda måtten åt samma håll: 88 procentenheter lägre andel maskade dokument i A
+och 0,02 procentenheter lägre maskad yta. De två utan skillnad är Jämtland nöt
+och Västerbotten fjäderfä, där båda klasserna är helt omaskade. För gris saknas underlag
 helt, vilket stämmer med att Dalarna uttryckligen svarat att någon
 kontrollrapport för gris inte påträffats, och det ska redovisas som en gräns
 för mätningen och inte döljas.
@@ -791,8 +839,9 @@ den är levererad utan en enda maskning.
 **Talen ligger utanför maskningsmåttet, med avsikt.** P8 föreskriver att
 maskningsgraden mäts på den första leveransen, före skrivelsen, så att skrivelsen
 inte kan påverka måttet. De omprövade handlingarna ligger därför i
-`data/leveranser/gotland_X`, utanför klass A och B. Klass A står oförändrad på
-138 maskade av 155.
+`data/leveranser/gotland_X`, utanför klass A och B. Klass A stod oförändrad på
+138 maskade av 155; efter rättelsen 2026-09-01 är samma tal 108 av 155, och
+omprövningen ligger fortfarande utanför.
 
 **Vad omprövningen ändrade, mätt.** Sidantalet är identiskt i alla fem
 handlingarna, och antalet tecken i textlagret har stigit i var och en:

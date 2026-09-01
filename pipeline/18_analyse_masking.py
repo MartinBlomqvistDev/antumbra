@@ -22,12 +22,28 @@ What it separates, because the difference is the finding:
     none              nothing indicating redaction was found
     unreadable        the file could not be opened
 
+**Not every filled black rectangle is a redaction, and two kinds are excluded
+by name.** A dark band carrying light text is a table header, which the reader
+is meant to read: the counties' control report template ends with a list of
+applied legislation under a black header row reading "Saknr", "Föreskriftens
+namn", "Författningssamling" and "Utgivningsnummer", and until 1 September 2026
+that header made every document carrying it count as redacted. It was found
+when the kammarrätt's notice of a case number was filed and this step judged a
+court letter with nothing hidden in it to be masked. A rule thinner than three
+points is the second kind: it cannot cover a line of text, and the same court
+letter's three hits were hairlines half a point high that cleared the area floor
+on their width alone. Neither exclusion can touch a real redaction here: the
+corpus holds no box at all between the hairlines' half point and the shortest
+real redaction's 13.8, and no excluded box has dark text under it.
+
 The image method was tested against the text method on all 248 born-digital
 documents before it was trusted; the result and its two failure modes are
 recorded in docs/VERIFIERAT.md. The floor it cannot see past: a scan of a page
 whose text was removed before printing looks exactly like a page that never
 carried the text, so `masked` false on a scan means no bar was found, not that
-nothing was withheld.
+nothing was withheld. The scan side has no equivalent of the header exclusion,
+because a rendered black band with white text in it cannot be told from a
+redaction without reading the pixels as text.
 
 The image method needs pymupdf, `pip install -e ".[ocr]"`.
 
@@ -50,6 +66,11 @@ OUT = ROOT / "data" / "maskning.jsonl"
 
 MIN_BOX_AREA = 150.0
 MAX_BOX_SHARE = 0.5
+# A redaction has to be at least as tall as the line it hides. Three points is
+# well under the shortest real redaction in the corpus, fifteen points, and well
+# over the hairline rules that a wide enough page divider clears the area floor
+# with.
+MIN_BOX_HEIGHT = 3.0
 MARKERS = ("bortredigerad", "maskerad", "maskat", "sekretess", "xxxx")
 
 # Image method. A bar is a solid dark rectangle at least 40 by 6 pixels at
@@ -77,13 +98,38 @@ def is_solid_dark(colour: object) -> bool:
     return False
 
 
+def is_header_band(chars: list[dict], box: tuple[float, ...]) -> bool:
+    """True when a dark box carries light text and hides no dark text.
+
+    White text on a black band is a table header, meant to be read. A redaction
+    either has nothing under it or has the original dark text still there, so a
+    box holding light characters and no dark ones is page furniture.
+    """
+    light = dark = 0
+    x0, top, x1, bottom = box
+    for char in chars:
+        if not char.get("text", "").strip():
+            continue
+        cx = (float(char["x0"]) + float(char["x1"])) / 2
+        cy = (float(char["top"]) + float(char["bottom"])) / 2
+        if not (x0 <= cx <= x1 and top <= cy <= bottom):
+            continue
+        if is_solid_dark(char.get("non_stroking_color")):
+            dark += 1
+        else:
+            light += 1
+    return bool(light) and not dark
+
+
 def redaction_boxes(page: pdfplumber.page.Page) -> list[tuple[float, ...]]:
     """The filled rectangles on a page that look like redactions.
 
     Returns each box as x0, top, x1, bottom in points, so that both the count
-    and the covered area can be measured.
+    and the covered area can be measured. Table header bands and rules too thin
+    to cover a line are excluded, because neither hides anything.
     """
     page_area = float(page.width) * float(page.height)
+    chars = page.chars
     boxes = []
     for rect in page.rects:
         if not is_solid_dark(rect.get("non_stroking_color")):
@@ -93,14 +139,17 @@ def redaction_boxes(page: pdfplumber.page.Page) -> list[tuple[float, ...]]:
         area = width * height
         if area < MIN_BOX_AREA or area > page_area * MAX_BOX_SHARE:
             continue
-        boxes.append(
-            (
-                float(rect["x0"]),
-                float(rect["top"]),
-                float(rect["x1"]),
-                float(rect["bottom"]),
-            )
+        if height < MIN_BOX_HEIGHT:
+            continue
+        box = (
+            float(rect["x0"]),
+            float(rect["top"]),
+            float(rect["x1"]),
+            float(rect["bottom"]),
         )
+        if is_header_band(chars, box):
+            continue
+        boxes.append(box)
     return boxes
 
 

@@ -60,3 +60,41 @@ aldrig bar texten. `masked` falskt på en skanning betyder att ingen balk
 hittades, inte att ingenting undanhållits. Ett fotografi i skannat material kan
 dessutom räknas som maskning om ett tillräckligt stort parti är mörkt; ett
 sådant fall finns i valideringen och är utskrivet där.
+
+*Tillägg 2026-09-01:* **valideringens rena rad går inte att reproducera.**
+Sedan textmetodens facit rättats enligt ADR-0019 kördes jämförelsen om med
+detektorn som den står i repot, mot exakt de 248 dokumenten och exakt det facit
+som gällde den 14 augusti. Den maskade raden kommer tillbaka dokument för
+dokument: 122 med balk och 1 utan. Den rena raden gör det inte. Av de 118
+omaskade handlingarna ger 30 balk, där tabellen ovan redovisar 1. Markörraden
+blir 4 och 3 där tabellen har 3 och 4.
+
+Detektorn är oförändrad sedan valideringen. Den enda senare ändringen i steg 18
+den dagen lade till ytmätningen, och ingen ändring efter det rörde geometrin.
+Att den maskade raden återkommer exakt talar också emot att renderingen skulle
+ha ändrat sig under tiden, eftersom en sådan ändring hade rubbat båda raderna.
+Kvar står frågan hur den rena raden räknades fram, och den går inte att avgöra
+ur repot.
+
+**Den vanligaste felkällan är verifierad.** Länsstyrelsens vapen på sidan ett är
+en solid svart sköld, 49 gånger 9 bildpunkter vid 100 dpi med 93 procents
+fyllnad, och den klarar varje krav detektorn ställer på en balk. Mallens svarta
+tabellhuvud är den andra källan. Att utesluta tabellhuvudet räcker inte: av de
+64 handlingar som mot det rättade facit ger balk utan att vara maskade blir
+ingen enda ren av den uteslutningen, eftersom vapnet ligger kvar.
+Jämförelsen körs om med `python src/validate_image_method.py`, som skrevs i dag
+just därför att den förra kördes utan att lämna något spår.
+
+**Följden för talen.** Mot det rättade facit ger bildmetoden balk i 64 av de
+155 handlingar som textmetoden bedömer som omaskade, räknat över materialets 261
+digitalt födda. Samtliga 30
+skannade handlingar i klass A bedöms som maskade, liksom 11 av 15 i klass B.
+Ett `masked` sant på en skanning bär därför mycket mindre än det såg ut att
+göra, och dokumentandelen ska tills vidare redovisas uppdelad på metod, med
+den skannade delen försedd med den här reservationen.
+
+Beslutet i denna ADR står kvar: två metoder behövs, och alternativet att lämna
+15 procent av materialet omätt är sämre. Det som faller är påståendet om
+metodens falsklarmsfrekvens. Ingen regel för bildsidan införs i dag, eftersom
+uteslutningen av rubrikband inte kan överföras till pixlar och en uteslutning av
+vapnet skulle kräva en egen validering mot samma facit.

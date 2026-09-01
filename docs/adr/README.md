@@ -25,3 +25,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0016](0016-maskning-mats-pa-bild-nar-textlagret-saknas.md) | Maskning mäts på bild när textlagret saknas | beslutad |
 | [0017](0017-faltmattet-ersatts-av-tackt-innehall.md) | Fältmåttet ersätts av täckt innehåll | beslutad |
 | [0018](0018-tjanstemans-namn-stannar-i-kallhandlingen.md) | Tjänstemäns namn stannar i källhandlingen | beslutad |
+| [0019](0019-ett-rubrikband-ar-inte-en-maskning.md) | Ett rubrikband är inte en maskning | beslutad |

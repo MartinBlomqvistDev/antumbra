@@ -948,6 +948,50 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
             assert isinstance(record["dolda"], int)
 
 
+class TestThePublishedMaskingSharesHoldAgainstTheData:
+    """The headline of the openness layer is two fractions, so both are pinned.
+
+    They moved once already, on 1 September 2026, when the text method stopped
+    counting the control report template's black table header as a redaction:
+    A fell from 138 of 155 to 108 of 155 and B from 32 of 135 to 29 of 135. A
+    figure that has been wrong once is a figure worth holding still.
+
+    The split by method is pinned with them, because it is the part that says
+    how much weight each fraction can carry. Every scanned class A document is
+    judged masked, which is what a detector with a known false positive rate
+    produces when it is pointed at a template with a logo on page one, and the
+    born-digital half is the half measured by an instrument checked by hand.
+    """
+
+    def shares(self, masking) -> dict[tuple[str, str], tuple[int, int]]:
+        counted: dict[tuple[str, str], list[int]] = {}
+        for record in masking:
+            klass = record["path"].split("/")[0].rpartition("_")[2]
+            if klass not in {"A", "B"}:
+                continue
+            key = (klass, record["method"])
+            cell = counted.setdefault(key, [0, 0])
+            cell[0] += 1
+            cell[1] += bool(record["masked"])
+        return {k: (v[1], v[0]) for k, v in counted.items()}
+
+    def test_the_two_published_fractions(self, masking):
+        found = self.shares(masking)
+        pairs = zip(found[("A", "text")], found[("A", "image")], strict=True)
+        a = tuple(sum(x) for x in pairs)
+        pairs = zip(found[("B", "text")], found[("B", "image")], strict=True)
+        b = tuple(sum(x) for x in pairs)
+        assert a == (108, 155)
+        assert b == (29, 135)
+
+    def test_the_split_between_the_two_methods(self, masking):
+        found = self.shares(masking)
+        assert found[("A", "text")] == (78, 125)
+        assert found[("A", "image")] == (30, 30)
+        assert found[("B", "text")] == (18, 120)
+        assert found[("B", "image")] == (11, 15)
+
+
 class TestTheP9CriteriaRestOnQuotedGrounds:
     """P9 turns on which provision each authority invoked, so it is quoted.
 
@@ -978,14 +1022,26 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
 
     def test_criterion_b_has_a_comparison_set(self, masking):
         # (b) needs at least three other counties releasing class A unmasked.
+        # Five until 1 September 2026, when the header band was excluded from
+        # the text method and Västerbotten's reports turned out to carry no
+        # redaction at all. The set may grow again as the image method is
+        # repaired; it is pinned so that it cannot shrink unnoticed, because a
+        # shrinking comparison set weakens every appeal resting on (b).
         clean = set()
         for record in masking:
             folder = record["path"].split("/")[0]
             county, _, klass = folder.rpartition("_")
             if klass == "A" and not record["masked"]:
                 clean.add(county)
-        assert len(clean) == 5
-        assert clean == {"dalarna", "gavleborg", "jamtland", "sodermanland", "uppsala"}
+        assert len(clean) == 6
+        assert clean == {
+            "dalarna",
+            "gavleborg",
+            "jamtland",
+            "sodermanland",
+            "uppsala",
+            "vasterbotten",
+        }
 
     def test_the_counties_invoking_30_23_in_class_a(self, grounds):
         counties = {
@@ -1062,6 +1118,16 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         "ostergotland": "Östergötland",
     }
     MISSING: ClassVar[set[tuple[str, str]]] = set()
+    # Two rows outlived the population they were drawn from. Both were entered
+    # while the text method still counted the template's black table header as
+    # a redaction; with the header excluded on 1 September 2026 neither county
+    # has a masked class A document left. The rows stay, because each one is an
+    # authority's own covering sentence and both cite no provision at all,
+    # which is exactly what a delivery without redaction looks like.
+    UNMASKED_AFTER_THE_CORRECTION: ClassVar[set[tuple[str, str]]] = {
+        ("Gävleborg", "A"),
+        ("Jämtland", "A"),
+    }
 
     def population(self, masking) -> set[tuple[str, str]]:
         """Every county and class with at least one masked document."""
@@ -1117,12 +1183,12 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
 
     def test_no_row_without_a_masked_delivery(self, grounds, masking):
         covered = {(r["myndighet"], r["klass"]) for r in grounds}
-        assert covered <= self.population(masking)
+        assert covered - self.population(masking) == self.UNMASKED_AFTER_THE_CORRECTION
 
     def test_the_register_is_closed(self, grounds, masking):
         covered = {(r["myndighet"], r["klass"]) for r in grounds}
         population = self.population(masking)
-        assert len(population) == 25
+        assert len(population) == 23
         assert len(covered) == 25
         assert population - covered == self.MISSING
 
