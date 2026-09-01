@@ -93,6 +93,10 @@ THEIRS = frozenset(
         "förtydligandefråga upprepad",
         "leverans",
         "manuellt svar",
+        # The court registering an appeal and giving it a case number. The
+        # sender is the kammarrätt, not the county, but the event belongs to
+        # the request whose decision was appealed, and nothing is asked of us.
+        "målregistrering i kammarrätten",
         "mottagningsbesked",
         # A delivery that replaces a defective one. Distinct from "leverans"
         # because it does not start the collection, it repairs it, and the
