@@ -107,6 +107,7 @@
 {"path": "jamtland_B/6881-2025-10 Föreläggande med vite enligt 8 kap 9 § djurskyddslagen.pdf", "source": "text", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "jamtland_B/8628-2025-3 Föreläggande enligt 8 kap 9 § djurskyddslagen.pdf", "source": "text", "counts": {"nöt": 7, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "jamtland_B/9321-2025-1 Föreläggande enligt 8 kap 9 § djurskyddslagen.pdf", "source": "text", "counts": {"nöt": 49, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "jordbruksverket_avslagsbeslut/Beslut i begäran utlämnande av handling.PDF", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "kalmar_A/5104-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kalmar_A/5146-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 7, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kalmar_A/5182-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}

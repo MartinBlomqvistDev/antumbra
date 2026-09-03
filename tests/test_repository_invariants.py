@@ -284,12 +284,19 @@ class TestNoPersonalDataIsCommitted:
     )
     ROLES: ClassVar[set[str]] = {
         "arkivarie",
+        "avdelningschef",
         "enhetschef",
         "länsjurist",
         "djurskyddshandläggare",
         "länsveterinär",
         "jurist",
         "handläggare",
+        "verksjurist",
+        # Jordbruksverket's decision of 2 September 2026 names its presenter
+        # without a title. Writing a plausible one would be an invention, and
+        # leaving the field empty would look like an omission, so the register
+        # says what the source says.
+        "titel anges inte",
     }
 
     def test_no_addresses_in_the_swedish_protocol_data(self):
@@ -910,15 +917,15 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
 
     def test_the_corpus_is_the_one_the_document_describes(self, hidden_text):
         # 249 until late August 2026, when Gotland's re-examination delivered
-        # five re-masked reports and one annex under gotland_X, three authority
+        # five re-masked reports and one annex under gotland_X, four authority
         # decisions were filed under their own folders, and the kammarrätt's
         # notice of the case number in the Kalmar appeal was filed under its
         # own. None of them belongs to request A or B, so all sit in "övrigt"
-        # and none touches the A-against-B contrast, which stands unchanged at
-        # 138 of 155 and 32 of 135.
-        assert len(hidden_text) == 261
+        # and none touches the A-against-B contrast, which stands at 108 of 155
+        # and 29 of 135 since the correction of 1 September 2026.
+        assert len(hidden_text) == 262
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 120, "övrigt": 16}
+        assert by_class == {"A": 125, "B": 120, "övrigt": 17}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to
@@ -1189,13 +1196,17 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
             return stem in quote.casefold()
         if len(numbers) < 2:
             return numbers[0] in quote and stem in quote.casefold()
-        marker = re.search(
+        # Every occurrence, not only the first: a decision that cites two
+        # provisions from the same chapter puts "2 kap." in the quote more
+        # than once, and stopping at the first match would call the second
+        # provision invented.
+        for marker in re.finditer(
             rf"\b{numbers[0]}\s*(kap\.?|kapitel|:)", quote, re.IGNORECASE
-        )
-        if not marker:
-            return False
-        window = quote[marker.end() : marker.end() + 40]
-        return re.search(rf"\b{numbers[1]}\b", window) is not None
+        ):
+            window = quote[marker.end() : marker.end() + 40]
+            if re.search(rf"\b{numbers[1]}\b", window):
+                return True
+        return False
 
     def test_every_row_is_well_formed(self, grounds):
         for record in grounds:
