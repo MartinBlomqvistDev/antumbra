@@ -886,7 +886,7 @@ class TestThePermitCorpusDecomposesAsDocumented:
 class TestTheConditionBaselineHoldsItsClaim:
     """The boilerplate null hypothesis fell, and the numbers must stay checkable.
 
-    docs/VERIFIERAT.md states that 36 per cent of conditions share text with
+    docs/VERIFIERAT.md states that 35 per cent of conditions share text with
     another decision and that reuse concentrates inside a permit division. If
     the segmenter drifts, those figures move and the claim silently changes,
     which is exactly the failure the retrain of Site Sentinel taught. The

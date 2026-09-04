@@ -29,9 +29,10 @@ Nobody has measured the gap, and nobody has tested an explanation for it.
 
 **The conditions layer.** 235 environmental permit decisions for large pig
 and poultry installations, 2013 to 2026, published by the Swedish Board of
-Agriculture, harvested as 236 files under 237 links. 2,264 individual
-conditions have been read out of the 173 files whose conditions section can be
-located. The whole population, not a sample.
+Agriculture, harvested as 236 files under 237 links. 2,347 individual
+conditions have been read out of the 180 files whose conditions section can be
+located, and every one of the 160 permits that carries conditions is among
+them. The whole population, not a sample.
 
 **The openness layer.** Three identically worded freedom-of-information
 requests, sent the same morning to all 21 county administrative boards and
