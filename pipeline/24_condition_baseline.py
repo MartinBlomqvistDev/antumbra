@@ -47,6 +47,17 @@ the series 1..N. Every decision carries the outcome as series_ok, and the
 reuse figures are reported over the clean subset as well as over everything, so
 that a segmentation failure cannot carry the headline.
 
+**The check does not apply to amendment decisions, and the row says so.** An
+amendment that changes conditions 1, 3 and 8 in an earlier permit is correctly
+extracted as 1, 3 and 8, so a gap is the right answer and not a fault. Reading
+seven amendments by hand on 4 September 2026 showed three shapes: a full set
+numbered from 1, a consecutive run appended after the base permit's last number,
+and a scattered set of the conditions being changed. Only the first is testable
+by the series. The field `serie_prövas` carries that judgement per decision, the
+type comes from step 31, and every decision keeps its raw `series_ok` so that
+nothing downstream changes meaning. Where the type is unknown the check is
+applied, since that is the stricter reading.
+
 **Born-digital and OCR text are never pooled into the headline.** Step 25 reads
 the scans, and every row records which source it came from. OCR breaks words
 across line ends and loses characters, so two identical conditions seldom
@@ -83,6 +94,12 @@ from pathlib import Path
 import pymupdf
 
 ROOT = Path(__file__).resolve().parent.parent
+# Written by step 31. Optional: without it every decision is tested, which is
+# the stricter reading and the behaviour this step had before 4 September 2026.
+TYPES = ROOT / "data" / "tillstand_typ.jsonl"
+# The one type whose numbering is inherited from another decision, so that a
+# gap carries no information about this extraction.
+SERIES_NOT_TESTED = frozenset({"ändring"})
 SOURCE = ROOT / "pdf" / "jordbruksverket"
 MANIFEST = ROOT / "data" / "tillstand_manifest.jsonl"
 OCR_DIR = ROOT / "ocr" / "tillstand"
@@ -310,6 +327,13 @@ def main() -> int:
         json.loads(line)["id"]: json.loads(line)["prövningsgrupp"]
         for line in MANIFEST.read_text("utf-8").splitlines()
     }
+    kinds: dict[str, str] = {}
+    if TYPES.exists():
+        kinds = {
+            json.loads(line)["id"]: json.loads(line)["typ"]
+            for line in TYPES.read_text("utf-8").splitlines()
+            if line
+        }
 
     records: list[dict] = []
     no_text = no_heading = no_conditions = unlisted = 0
@@ -334,6 +358,7 @@ def main() -> int:
             no_conditions += 1
             continue
         ok = series_ok([n for n, _ in found])
+        tested = kinds.get(path.stem, "") not in SERIES_NOT_TESTED
         if ok:
             clean.add(path.stem)
         for number, body in found:
@@ -345,6 +370,7 @@ def main() -> int:
                     "tecken": len(body),
                     "källa": origin,
                     "series_ok": ok,
+                    "serie_prövas": tested,
                     "text_hash": hashlib.sha256(body.encode("utf-8")).hexdigest()[:16],
                 }
             )
@@ -387,11 +413,24 @@ def main() -> int:
             f"{len(by_origin['ocr'])} ur OCR"
             + (f", mediankonfidens {read[len(read) // 2]}" if read else "")
         )
+        tested = {r["id"] for r in records if r["serie_prövas"]}
         for origin in ("text", "ocr"):
             ids = by_origin[origin]
             good = len(ids & clean)
             share = good / len(ids) if ids else 0.0
             print(f"  {origin}: obruten serie {good} av {len(ids)}, {share:.0%}")
+            # The same figure over the decisions the check can speak about. An
+            # amendment changes named conditions in an earlier permit, so a gap
+            # in its numbering is the right answer and counting it as a failure
+            # makes the segmenter look worse than it is.
+            scoped = ids & tested
+            if scoped and scoped != ids:
+                hit = len(scoped & clean)
+                print(
+                    f"    varav prövbara: {hit} av {len(scoped)}, "
+                    f"{hit / len(scoped):.0%}; "
+                    f"{len(ids - tested)} ändringsbeslut ligger utanför kontrollen"
+                )
 
     # The headline is the born-digital set, and the order here says so. OCR
     # text breaks words across line ends and drops characters, so two identical

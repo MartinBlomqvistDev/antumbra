@@ -926,6 +926,7 @@ class TestTheConditionBaselineHoldsItsClaim:
             "tecken",
             "källa",
             "series_ok",
+            "serie_prövas",
         }
         for record in conditions:
             assert set(record) == fields | {"text_hash"}
@@ -952,6 +953,20 @@ class TestTheConditionBaselineHoldsItsClaim:
         # OCR segments worse, and the gap is the reason the sources stay apart.
         assert sum(1 for i in clean if source[i] == "text") == 108
         assert sum(1 for i in clean if source[i] == "ocr") == 22
+
+    def test_the_series_check_reports_what_it_can_speak_about(self, conditions):
+        # An amendment changes named conditions in an earlier permit, so a gap
+        # in its numbering is the right answer. Counting those as failures made
+        # the segmenter look worse than it is and hid that the check says
+        # nothing at all about them. The scoped figure is the one that measures
+        # the segmenter, and both are pinned so neither can drift into the
+        # other's place.
+        tested = {r["id"] for r in conditions if r["serie_prövas"]}
+        born = {r["id"] for r in conditions if r["källa"] == "text"}
+        clean = {r["id"] for r in conditions if r["series_ok"]}
+        assert len(born - tested) == 9
+        assert len(born & tested) == 114
+        assert len(born & tested & clean) == 105
         for record in conditions:
             assert record["series_ok"] == (record["id"] in clean)
 

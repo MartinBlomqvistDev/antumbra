@@ -1182,6 +1182,46 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## Kontroll 1 säger inte något om ändringsbeslut, 2026-09-04
+
+Handläsningen av ändringsbesluten visade att kontroll 1 tillämpas på handlingar
+den inte kan uttala sig om. Ett ändringsbeslut som ändrar villkor 1, 3 och 8 i
+ett tidigare tillstånd extraheras rätt som 1, 3 och 8, och luckan är då det
+riktiga svaret. Att räkna det som en trasig serie gör två saker fel samtidigt:
+segmenteraren ser sämre ut än den är, och det döljs att kontrollen inte vet
+något alls om just den handlingens fullständighet.
+
+**Tre former förekommer bland de nio ändringsbeslut som har extraherade
+villkor.** Fyra bär en full serie från 1, alltså hela villkorsuppsättningen
+omtryckt. Tre bär en obruten löpande serie som börjar högt, 35 till 40, 7 till 8
+och ett ensamt 18, alltså villkor som lagts till efter grundtillståndets sista
+nummer. Två bär en spridd mängd, 1, 3, 8, 9, 15 respektive 3, 4, 6, 12 till 16,
+alltså de villkor som ändras. Bara den första formen är prövbar med en serie.
+
+**Åtgärden ändrar ingen publicerad siffra.** Varje rad bär nu `serie_prövas`
+vid sidan av `series_ok`, och det råa utfallet står kvar oförändrat, så inget
+mått som räknas på den rena delmängden rör sig. Det som tillkommer är att steget
+också redovisar kontrollen över de handlingar den är skriven för:
+
+| Underlag | Obruten serie |
+| --- | --- |
+| digitalt födda, alla | 108 av 123, 88 % |
+| digitalt födda, prövbara | **105 av 114, 92 %** |
+| OCR-lästa, alla | 22 av 57, 39 % |
+
+De nio ändringsbesluten ligger utanför kontrollen. Ändringsbesluten flyttas
+alltså inte in i den rena delmängden, eftersom kontrollen inte kan visa att de
+är fullständiga; de lyfts ut ur nämnaren, eftersom den inte kan visa att de är
+trasiga heller. Vad som är känt om deras fullständighet är ingenting, och det
+är den ärliga redovisningen.
+
+**Fyra tillstånd vars serie inte börjar på 1 är däremot verkliga fynd.** Tre är
+OCR-lästa med luckor, och ett av dem bär ett villkor numrerat 98, vilket är en
+felläsning. Det fjärde, `e8009d9f51c0`, är digitalt fött och börjar på 11.
+Kontroll 1 gör där precis det den ska.
+
+---
+
 ## Ändringsbesluten handlästa, 2026-09-04
 
 Kontroll 2 lämnade en fråga öppen: 31 av 40 ändringsbeslut saknar extraherade
