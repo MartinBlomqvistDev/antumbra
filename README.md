@@ -173,6 +173,7 @@ python pipeline/28_unannounced_hypothesis.py  # the pre-registered hypothesis
 python pipeline/29_check_grounds.py        # is the register of cited grounds closed?
 python pipeline/30_draw_species_sample.py  # the blind sample the species rule is checked against
 python pipeline/31_permit_decision_types.py   # what the publisher calls each permit decision
+python pipeline/32_check_condition_coverage.py # does every decision carry the conditions it should?
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write

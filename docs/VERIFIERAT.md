@@ -1159,6 +1159,84 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## Kontroll 2 körd, och de sju undantagen handlästa, 2026-09-04
+
+Kontroll 2 i `docs/VILLKORSSCHEMA.md` avsnitt 5 lyder att "noll villkor är bara
+tillåtet för förlängningar, igångsättningsbeslut, upphävanden och domar. Ett
+tillstånd med noll villkor är per definition en tyst trasig extraktion." Den har
+inte kunnat köras tidigare, eftersom typen per beslut saknades. Steg 32 kör den
+mot steg 31:s typer.
+
+**Täckningstalet 73 procent var sant och oanvändbart.** Steg 24 rapporterar att
+173 av 236 filer gick att segmentera. Uppdelat på typ säger materialet något
+annat:
+
+| Typ | Med villkor | Utan | Totalt | Noll tillåtet |
+| --- | --- | --- | --- | --- |
+| tillstånd | 155 | 7 | 162 | nej |
+| ändring | 8 | 32 | 40 | nej |
+| förlängning | 0 | 15 | 15 | ja |
+| dom | 10 | 4 | 14 | ja |
+| villkor | 0 | 2 | 2 | nej |
+| igångsättning | 0 | 2 | 2 | ja |
+| upphävande | 0 | 1 | 1 | ja |
+
+**Förlängningarna bekräftar dokumentets egen förutsägelse exakt.** Noll av
+femton bär villkor, vilket är vad VILLKORSSCHEMA säger att en förlängning ska
+göra och vad Lidfarmbeslutet visar. I det poolade täckningstalet räknades de
+femton som misslyckanden.
+
+### De sju tillstånden utan villkor, ett i taget
+
+Samtliga sju är öppnade och lästa. Två av dem har rätt i att sakna villkor.
+
+**Två där noll är riktigt.** `fccfef166252` är rubricerat "Förlängning av
+igångsättningstid" i sin egen text och skriver att det inte finns behov av nya
+eller strängare villkor; utgivarens länktext kallar det ändå "Tillstånd", så
+etiketten är fel och extraktionen rätt. `e181f70f9cda` är ett beslut som ändrar
+enskilda villkor, med raderna "Villkor 6 ändras till följande lydelse:" och
+"Villkor 7 ändras till följande lydelse:", alltså ingen serie 1..N att
+segmentera.
+
+**Fem segmenteringsmissar, fyra av dem med samma orsak.** Segmenteraren letar
+efter en rubrikrad som består av ordet villkor och ingenting annat. I
+`686fac957352`, `85f59705885d`, `876e9df5fd03` och `aee6ec54ed25` införs
+villkoren av en mening i stället. Alla fyra bär den ordagrant likadant: "För
+tillståndet gäller följande villkor: 1. Om inte annat framgår av övriga villkor
+eller föreskrifter ska verksamheten i huvudsak bedrivas ...". Alla fyra är
+OCR-lästa, och raden bär både inledningen och det första villkoret.
+
+Den femte, `361be3bd133c`, är digitalt född och har rubriken kvar, men
+textlagret klistrar ihop den med nästa mening: "Villkor för
+verksamhetenMiljöprövningsdelegationen fastställer med stöd av". En rubrikrad
+som inte är en egen rad matchar inte heller.
+
+**Vad en rättelse skulle ge, mätt utan att röra måttet.** Två kandidatregler är
+prövade mot de sju i en fristående körning. En regel som känner igen den
+inledande meningen hittar avsnittets början i fyra av dem. En regel som matchar
+rubriken som radprefix i stället för som hel rad hittar den i den femte,
+`361be3bd133c`. Tillsammans når de alla fem som saknar villkor av
+segmenteringsskäl.
+
+Vad körningen visar är att avsnittets början går att hitta. Om villkoren därefter
+segmenterar till en obruten serie är inte prövat, och det avgörs först av en
+körning över hela materialet. Ingen ändring är gjord i
+`data/villkor_baseline.jsonl`, eftersom en ny segmentering flyttar
+återanvändningsmåttet och permutationstestet, och de talen är publicerade.
+
+### Två frågor kontrollen inte svarar på
+
+**Trettiotvå av fyrtio ändringsbeslut saknar villkor.** Regeln uttalar sig inte
+om ändringar. Om ett ändringsbeslut bär egna villkor eller bara ändrar ett
+villkor i det underliggande tillståndet är en fråga om dokumenten, och att
+avgöra den ur frånvaron av en rubrik vore en gissning. `e181f70f9cda` ovan visar
+att den andra formen finns.
+
+**Två beslut heter "Villkor" respektive "Slutliga villkor" och saknar villkor.**
+Namnet gör dem till de sista man väntar sig hitta tomma. De är inte lästa än.
+
+---
+
 ## Tillståndskorpusens typfördelning, verifierad 2026-09-04
 
 Kontroll 2 i `docs/VILLKORSSCHEMA.md` kräver att korpusen delas upp på
