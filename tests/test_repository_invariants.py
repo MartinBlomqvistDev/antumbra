@@ -255,9 +255,16 @@ class TestNoPersonalDataIsCommitted:
     """The project measures authorities, never named individuals."""
 
     EMAIL = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}")
+    # Martin's own address, and the courts' registry addresses. The latter are
+    # institutional, published on the courts' own websites, and they enter the
+    # repository without anyone typing them: a court that answers by secure
+    # e-mail names the attachment after the address it came from, and the
+    # delivery manifest records file names verbatim. A natural person's address
+    # has no such route in and stays forbidden.
     ALLOWED_EMAILS: ClassVar[set[str]] = {
         "cm.blomqvist@gmail.com",
         "kammarrattenisundsvall@dom.se",
+        "Kammarratten.Goteborg@dom.se",
     }
 
     def test_no_third_party_email_addresses(self):
@@ -916,16 +923,17 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
     """
 
     def test_the_corpus_is_the_one_the_document_describes(self, hidden_text):
-        # 249 until late August 2026, when Gotland's re-examination delivered
-        # five re-masked reports and one annex under gotland_X, four authority
-        # decisions were filed under their own folders, and the kammarrätt's
-        # notice of the case number in the Kalmar appeal was filed under its
-        # own. None of them belongs to request A or B, so all sit in "övrigt"
+        # 249 until late August 2026. Since then Gotland's re-examination
+        # delivered five re-masked reports and one annex under gotland_X, four
+        # authority decisions were filed under their own folders, and the
+        # appeals began producing documents of their own: two kammarrätter's
+        # notices of a case number and Halland's transfer of the appeal to the
+        # court. None of them belongs to request A or B, so all sit in "övrigt"
         # and none touches the A-against-B contrast, which stands at 108 of 155
         # and 29 of 135 since the correction of 1 September 2026.
-        assert len(hidden_text) == 262
+        assert len(hidden_text) == 264
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 120, "övrigt": 17}
+        assert by_class == {"A": 125, "B": 120, "övrigt": 19}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to

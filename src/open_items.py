@@ -97,6 +97,10 @@ THEIRS = frozenset(
         # sender is the kammarrätt, not the county, but the event belongs to
         # the request whose decision was appealed, and nothing is asked of us.
         "målregistrering i kammarrätten",
+        # The authority passing an appeal on to the court after finding it in
+        # time. It ends the authority's own part of the appeal and asks
+        # nothing of us, so it starts no clock here.
+        "överlämnande till kammarrätten",
         "mottagningsbesked",
         # A delivery that replaces a defective one. Distinct from "leverans"
         # because it does not start the collection, it repairs it, and the
