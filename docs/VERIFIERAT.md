@@ -1159,6 +1159,108 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## HFD-praxis som Kronoberg åberopar, prövad 2026-09-04
+
+Länsstyrelsen i Kronobergs beslut den 31 augusti 2026 åberopar fem avgöranden
+från Högsta förvaltningsdomstolen. Avsnitt 11 i `docs/BEGARANMALL.md` skriver
+att inget sådant avgörande finns. Påståendet måste prövas innan det upprepas,
+och innan beslutet om överklagande fattas den 14 september.
+
+**Ett av de fem är läst i primärtext, fyra i referat.** RÅ 2010 ref. 77 är hämtad
+i fulltext från lagen.nu och läst i sin helhet. RÅ 1994 not. 506, RÅ 1994 not.
+624, RÅ 2005 ref. 87 och RÅ 2007 ref. 45 är lästa genom ett sammanfattande
+verktyg, alltså i referat. Skillnaden står här därför att projektets regel är
+citat, aldrig karaktärisering, och ett referat är en karaktärisering.
+
+| Avgörande | Bestämmelse | Vem begärde | Uppgift | Utfall |
+| --- | --- | --- | --- | --- |
+| RÅ 1994 not. 506 | 8 kap. 6 § p. 1 sekretesslagen | miljönämnden i Falu kommun | djursammansättning, antal djur, spridningsareal ur lantbruksregistret | ej utlämnat |
+| RÅ 1994 not. 624 | 8 kap. 6 § p. 1 sekretesslagen | miljönämnden i Lunds kommun | samma tre uppgifter | ej utlämnat |
+| RÅ 2005 ref. 87 | 8 kap. 6 § första stycket 1 | enskild, av Jordbruksverket | försöksdata om GMO | delvis utlämnat |
+| RÅ 2007 ref. 45 | 8 kap. 6 § andra stycket | enskild, av Jordbruksverket | försöksdata om GMO | ej utlämnat |
+| RÅ 2010 ref. 77 | 30 kap. 23 § första stycket 1 OSL | miljöinspektör i Aneby kommun | vilka djur som är registrerade på en viss produktionsplats | ej utlämnat |
+
+### RÅ 2010 ref. 77, läst i fulltext
+
+Målnummer 1653-10, avgjort 2010-10-19 av Regeringsrätten. Rubriken lyder:
+"En miljöinspektör i en kommun har ansetts inte ha rätt att ta del av uppgifter
+från det centrala nötkreaturregistret (CDB) hos Jordbruksverket om vilka djur
+som är registrerade på en viss produktionsplats."
+
+Domskälen ordagrant i den del som bär avgörandet: "Eftersom dessa uppgifter
+behandlar enskilds affärs- och driftsförhållanden samt används bl.a. för
+kontroll av stöd kan den enskilde lida skada om uppgifterna lämnas ut.
+Regeringsrätten finner i likhet med underinstanserna att sekretess gäller för
+dessa uppgifter enligt 30 kap. 23 § första stycket 1 OSL och 9 § första stycket
+1 OSF (jfr t.ex. RÅ 1994 not. 506 och RÅ 1994 not. 624)." Om undantaget för
+allmänintresse: "Enligt Regeringsrättens bedömning är de begärda uppgifterna
+inte av den karaktären att intresset av allmän kännedom har sådan vikt att
+sekretessen inte ska gälla."
+
+**Rättelse av en första läsning samma dag.** Här stod först, i ett svar till
+Martin, att fyra av de fem avgörandena gäller en myndighet som begär uppgifter
+av en annan, och att de därför prövas mot generalklausulen snarare än mot en
+enskilds rätt. För RÅ 2010 ref. 77 är det fel. Målet är ett utlämnandemål: begäran
+avslogs av Jordbruksverket, överklagades till kammarrätt och därefter till
+Regeringsrätten, och prövades mot skaderekvisitet i 30 kap. 23 § första stycket
+1 och mot den sekretessbrytande regeln i punkt 107. Att R.E. begärde uppgifterna
+i egenskap av miljöinspektör vägde in i intresseavvägningen, inte i valet av
+rättslig ram. Den procedurella vägen är alltså densamma som projektets egen.
+
+### Vad avgörandet gör med avsnitt 11
+
+**Påståendet står i sin egen mening och faller utanför den.** Meningen "Inget
+avgörande från Högsta förvaltningsdomstolen finns" avslutar genomgången av
+kammarrättspraxis om kontrollrapport som bilaga till beslut, alltså A/B-frågan.
+Inget av de fem avgörandena rör den frågan, så påståendet är riktigt i sitt
+sammanhang. Men det har i projektet lästs bredare än så, som att ingen
+HFD-praxis alls finns om maskning av uppgifter om djurhållning, och den
+läsningen är fel: RÅ 2010 ref. 77 tillämpar exakt den bestämmelse projektet
+mäter mot på exakt den sortens uppgift.
+
+### Vad avgörandet gör med P9 (b) för Kronoberg
+
+Kronoberg namnger uppgiftstypen: "Länsstyrelsen har maskerat uppgifter om
+djurbesättningens storlek och vissa uppgifter om de brister som framkom vid
+kontrolltillfällena." Det är två uppgiftstyper, och de står olika starkt.
+
+**Djurbesättningens storlek ligger nära det RÅ 2010 ref. 77 höll hemligt.**
+Inte identiskt: avgörandet gäller vilka djur som är registrerade i CDB, alltså
+en registerförteckning, medan Kronoberg maskat ett antal i en kontrollrapport.
+Men en kammarrätt skulle behöva skilja dem åt, och det är den svåra riktningen.
+
+**Bristuppgifterna ligger inte nära.** Skadebedömningen i RÅ 2010 ref. 77 vilar
+uttryckligen på att CDB-uppgifterna används för kontroll av stöd, alltså att ett
+utlämnande kan leda till avdrag på lantbrukarens stöd. En kontrollrapport från
+djurskyddstillsyn är inte det registret. Den skiljaktige i kammarrätten skrev
+dessutom om just bristuppgifter: "uppgifterna, som anknyter till iakttagna
+missförhållanden vid den aktuella djurhållningen, till sin natur är sådana att
+det finns ett allmänt intresse av att uppgifterna lämnas ut."
+
+**Föreskriften är en annan punkt i samma bilaga.** RÅ 2010 ref. 77 gäller
+punkt 107, Jordbruksverkets tillsyn. Kronobergs beslut åberopar punkt 30,
+"utredning, tillståndsgivning och tillsyn enligt lagstiftningen om djurskydd",
+som till skillnad från punkt 107 bär den uttryckliga begränsningen "sekretessen
+gäller inte beslut i ärenden". Avgörandet säger ingenting om punkt 30 och
+ingenting om A/B-designens tes.
+
+**Domstolen är densamma.** Kronobergs län ligger i Kammarrätten i Jönköpings
+domkrets, samma domstol som redan har Kalmaröverklagandet som mål 3249-26 och
+som får Jordbruksverkets. Det är också den kammarrätt vars dom i 2010 års mål
+Regeringsrätten fastställde. Domkretsen är kontrollerad mot två andrahandskällor
+som är eniga om Kronoberg, inte mot domstolens egen förteckning, som inte gick
+att nå; att Kalmar ligger i samma domkrets är däremot bekräftat av att
+Kalmaröverklagandet togs upp där.
+
+### Vad som återstår att kontrollera
+
+De två notiserna från 1994 är inte lästa i fulltext. De är det underlag
+Regeringsrätten själv hänvisar till, och om de visar sig gälla uppgiftslämnande
+mellan myndigheter enligt generalklausulen bär de mindre mot en enskilds
+begäran än vad hänvisningen antyder. Slutsatserna ovan vilar inte på dem.
+
+---
+
 ## Den förregistrerade oanmäld-hypotesen, prövad 2026-08-21
 
 Avsnitt 10 i `docs/BEGARANMALL.md`, tidsstämplat innan någon begäran skickades:
