@@ -1180,6 +1180,58 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## Ändringsbesluten handlästa, 2026-09-04
+
+Kontroll 2 lämnade en fråga öppen: 31 av 40 ändringsbeslut saknar extraherade
+villkor, och VILLKORSSCHEMA uttalar sig inte om ändringar. Sju är lästa för
+hand. Urvalet är var femte av de 31 sorterade på identifierare, alltså en
+reproducerbar regel och inget plock.
+
+**Ändringsbesluten är tre olika saker, och bara den ena sorten ska bära
+villkor.**
+
+**Villkorsändring, fem av sju.** Beslutet ändrar eller upphäver ett eller ett
+par namngivna villkor i ett tidigare tillstånd, med stöd av 24 kap. 8 § eller
+13 § miljöbalken. Formen är genomgående densamma: "Miljöprövningsdelegationen
+ändrar villkor 10 i tillståndet från den 8 oktober 2020", "Villkor 5 ändras till
+följande lydelse", "Miljöprövningsdelegationen upphäver villkor 4 och 18".
+Någon numrerad serie finns inte, och noll extraherade villkor är rätt svar.
+
+**Ändringstillstånd som lägger till villkor, en av sju.** Beslutet meddelar nya
+villkor och numrerar dem vidare från grundtillståndet. I `982fb8530a1b` heter de
+17 till 21, och beslutet skriver ut varför: "Villkor som meddelats för
+grundtillståndet i beslut ... ska de ytterligare villkor gälla som fastställs i
+detta beslut." Det är en verklig miss i extraktionen.
+
+**Ändringstillstånd som för över befintliga villkor, en av sju.**
+`50e5f7f6ec2d` beslutar att grundtillståndets villkor ska omfatta även den
+utökade verksamheten: "Miljöprövningsdelegationen förordnar att de villkor som
+föreskrivs för verksamheten i Miljöprövningsdelegationens tidigare beslut
+daterat 2009-10-23 ... ska omfatta den samlade verksamheten." Inga egna villkor,
+och noll är rätt.
+
+**Fördelningen över alla 31, mekaniskt räknad och därför indikativ.** Formerna
+ovan går att känna igen på beslutets egna ord, och en räkning som söker dem ger
+15 villkorsändringar, 1 som för över befintliga villkor, 6 som ser ut att bära
+egna villkor och 9 som inte går att placera med de mönstren. Räkningen är ett
+sökuttryck och ingen läsning; den säger var de återstående läsningarna ska
+göras.
+
+**Det viktigaste fyndet gäller kontroll 1, inte täckningen.** De sex som ser ut
+att bära egna villkor numrerar dem 7 till 11, 12 till 15, 17 till 21 och 30 till
+32. **Inget av dem börjar på 1.** Kontroll 1 i VILLKORSSCHEMA avsnitt 5 kräver en
+obruten serie 1 till N, och det kravet är rätt för ett tillstånd och fel för ett
+ändringsbeslut som fortsätter grundtillståndets numrering. Ett korrekt
+extraherat ändringsbeslut skulle med dagens kontroll flaggas som trasigt.
+
+Schemat är redan byggt för det: `number` är en sträng och `position` ett heltal,
+motiverat i beslutsloggen med suffixnummer i ändringsbeslut. Vad som saknas är
+att kontrollen skiljer på beslutstyp. Ingen ändring är gjord här; fyndet är
+diagnosen, och villkoret för en rättelse ska skrivas innan den körs, på samma
+sätt som segmenteringens gjorde.
+
+---
+
 ## Kontroll 2 körd, och de sju undantagen handlästa, 2026-09-04
 
 Kontroll 2 i `docs/VILLKORSSCHEMA.md` avsnitt 5 lyder att "noll villkor är bara
