@@ -27,6 +27,7 @@
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 21, "tecken": 229, "källa": "ocr", "series_ok": false, "text_hash": "691f73a154178a32"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 22, "tecken": 172, "källa": "ocr", "series_ok": false, "text_hash": "692e17d23332f975"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 23, "tecken": 1473, "källa": "ocr", "series_ok": false, "text_hash": "7c9b57686d26a141"}
+{"id": "017a452fb59c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 14, "tecken": 325, "källa": "text", "series_ok": false, "text_hash": "c2f2a639c94ee509"}
 {"id": "0434dfb9f2e1", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 190, "källa": "text", "series_ok": true, "text_hash": "2e714168f0d90569"}
 {"id": "0434dfb9f2e1", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 194, "källa": "text", "series_ok": true, "text_hash": "03f24ff13cbd7864"}
 {"id": "0434dfb9f2e1", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 384, "källa": "text", "series_ok": true, "text_hash": "53711505a463c26c"}
@@ -532,6 +533,37 @@
 {"id": "350ec94a336f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 19, "tecken": 510, "källa": "text", "series_ok": true, "text_hash": "19ca88ff2ca44249"}
 {"id": "350ec94a336f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 20, "tecken": 331, "källa": "text", "series_ok": true, "text_hash": "7fb897b2f64062c4"}
 {"id": "350ec94a336f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 21, "tecken": 820, "källa": "text", "series_ok": true, "text_hash": "612b2d079b96fa12"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 169, "källa": "text", "series_ok": true, "text_hash": "29d03e43ab18bc15"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 112, "källa": "text", "series_ok": true, "text_hash": "1fabe064c6a05b8b"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 3, "tecken": 235, "källa": "text", "series_ok": true, "text_hash": "a363a7d2321e7485"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 4, "tecken": 297, "källa": "text", "series_ok": true, "text_hash": "66654f15ba034d81"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 5, "tecken": 114, "källa": "text", "series_ok": true, "text_hash": "02061a34d40a4e90"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 6, "tecken": 149, "källa": "text", "series_ok": true, "text_hash": "1f3914ee0950d88f"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 7, "tecken": 349, "källa": "text", "series_ok": true, "text_hash": "373066af54624a2e"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 8, "tecken": 236, "källa": "text", "series_ok": true, "text_hash": "4ef053234e9f9e2b"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 9, "tecken": 279, "källa": "text", "series_ok": true, "text_hash": "f9bef708fef24473"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 10, "tecken": 404, "källa": "text", "series_ok": true, "text_hash": "1315c9f179f9b2fb"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 11, "tecken": 225, "källa": "text", "series_ok": true, "text_hash": "d5144f6f88536318"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 12, "tecken": 77, "källa": "text", "series_ok": true, "text_hash": "db77e2e94afe73a7"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 13, "tecken": 225, "källa": "text", "series_ok": true, "text_hash": "32ecaf7b8c2e3d49"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 14, "tecken": 115, "källa": "text", "series_ok": true, "text_hash": "f59e91d19c5de290"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 15, "tecken": 179, "källa": "text", "series_ok": true, "text_hash": "3857691de3c5970a"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 16, "tecken": 211, "källa": "text", "series_ok": true, "text_hash": "b3d6d13173a09921"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 17, "tecken": 299, "källa": "text", "series_ok": true, "text_hash": "84e6e3ffc9823134"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 18, "tecken": 115, "källa": "text", "series_ok": true, "text_hash": "3c9e509b65f45ce5"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 19, "tecken": 485, "källa": "text", "series_ok": true, "text_hash": "9771edbfb5a37104"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 20, "tecken": 81, "källa": "text", "series_ok": true, "text_hash": "78ed740eda67c73b"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 21, "tecken": 187, "källa": "text", "series_ok": true, "text_hash": "79fae80f8a6f6eb7"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 22, "tecken": 330, "källa": "text", "series_ok": true, "text_hash": "157080afebd2f25e"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 23, "tecken": 155, "källa": "text", "series_ok": true, "text_hash": "cad150b8c1e0af69"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 24, "tecken": 146, "källa": "text", "series_ok": true, "text_hash": "9867aa51afe2ea5c"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 25, "tecken": 300, "källa": "text", "series_ok": true, "text_hash": "d288b4ab9cde5097"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 26, "tecken": 181, "källa": "text", "series_ok": true, "text_hash": "13c6593529813593"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 27, "tecken": 613, "källa": "text", "series_ok": true, "text_hash": "b86725f6898b6948"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 28, "tecken": 332, "källa": "text", "series_ok": true, "text_hash": "a66fa189efa12ba5"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 29, "tecken": 420, "källa": "text", "series_ok": true, "text_hash": "ea5b39bf0562ee15"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 30, "tecken": 506, "källa": "text", "series_ok": true, "text_hash": "69f6d2649efae8f9"}
+{"id": "361be3bd133c", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 31, "tecken": 2119, "källa": "text", "series_ok": true, "text_hash": "acf987b06cabe2ab"}
 {"id": "375a0f8ee07e", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 168, "källa": "text", "series_ok": true, "text_hash": "2fd0e43b82d00eaf"}
 {"id": "375a0f8ee07e", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 113, "källa": "text", "series_ok": true, "text_hash": "e94277fc41e8607e"}
 {"id": "375a0f8ee07e", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 3, "tecken": 234, "källa": "text", "series_ok": true, "text_hash": "7628a5e0e8a844a2"}
@@ -993,6 +1025,11 @@
 {"id": "662c5ebb921f", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 19, "tecken": 383, "källa": "text", "series_ok": false, "text_hash": "3308a0c34ccc2984"}
 {"id": "662c5ebb921f", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 20, "tecken": 688, "källa": "text", "series_ok": false, "text_hash": "b7519a324a3dff8f"}
 {"id": "662c5ebb921f", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 24, "tecken": 1228, "källa": "text", "series_ok": false, "text_hash": "1666fa9111accc1b"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": false, "text_hash": "cf23def432c1e0b4"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 843, "källa": "ocr", "series_ok": false, "text_hash": "205d54d6c95f9f35"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 14, "tecken": 2208, "källa": "ocr", "series_ok": false, "text_hash": "bad35de806a48180"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 15, "tecken": 211, "källa": "ocr", "series_ok": false, "text_hash": "ccd467f02f45faa7"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 16, "tecken": 609, "källa": "ocr", "series_ok": false, "text_hash": "f5f439d2abc90a03"}
 {"id": "68f45cac645e", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 1, "tecken": 174, "källa": "text", "series_ok": false, "text_hash": "30839851fe84a888"}
 {"id": "68f45cac645e", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 2, "tecken": 239, "källa": "text", "series_ok": false, "text_hash": "cae4a99a9896310e"}
 {"id": "68f45cac645e", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 3, "tecken": 87, "källa": "text", "series_ok": false, "text_hash": "4812b164161b65f1"}
@@ -1265,6 +1302,14 @@
 {"id": "8532a044b25e", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 11, "tecken": 483, "källa": "text", "series_ok": true, "text_hash": "b3739c8583421ed0"}
 {"id": "8532a044b25e", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 12, "tecken": 225, "källa": "text", "series_ok": true, "text_hash": "47cbaafa510e92c3"}
 {"id": "8532a044b25e", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 13, "tecken": 1060, "källa": "text", "series_ok": true, "text_hash": "16e9aaefe30110f6"}
+{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 207, "källa": "ocr", "series_ok": false, "text_hash": "1febde8a62700870"}
+{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 608, "källa": "ocr", "series_ok": false, "text_hash": "5aa1266ed1ec4795"}
+{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 685, "källa": "ocr", "series_ok": false, "text_hash": "990013dd564d4a0a"}
+{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 1794, "källa": "ocr", "series_ok": false, "text_hash": "c4005137e7c4a311"}
+{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": false, "text_hash": "cf23def432c1e0b4"}
+{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 734, "källa": "ocr", "series_ok": false, "text_hash": "628b6b089f720604"}
+{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 475, "källa": "ocr", "series_ok": false, "text_hash": "c8a87c175a59ca9f"}
+{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 1830, "källa": "ocr", "series_ok": false, "text_hash": "f8e5650e594f4cee"}
 {"id": "8a999cc58db2", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 197, "källa": "text", "series_ok": true, "text_hash": "b24c0da3affd3533"}
 {"id": "8a999cc58db2", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 113, "källa": "text", "series_ok": true, "text_hash": "046af640f9f32b0a"}
 {"id": "8a999cc58db2", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 3, "tecken": 540, "källa": "text", "series_ok": true, "text_hash": "1b19bb2fe2fb7d08"}
@@ -1317,6 +1362,32 @@
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 528, "källa": "ocr", "series_ok": true, "text_hash": "1de954f6c8506861"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 8, "tecken": 461, "källa": "ocr", "series_ok": true, "text_hash": "de7cc40986e31bff"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 9, "tecken": 545, "källa": "ocr", "series_ok": true, "text_hash": "3657328549179c6e"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 187, "källa": "text", "series_ok": true, "text_hash": "449b9e1623d77153"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 114, "källa": "text", "series_ok": true, "text_hash": "2d8ad4db4d6f89d5"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 828, "källa": "text", "series_ok": true, "text_hash": "16bc00f8644a78c8"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 209, "källa": "text", "series_ok": true, "text_hash": "c2f8eac0215d590d"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 5, "tecken": 222, "källa": "text", "series_ok": true, "text_hash": "4c892a1ed8a03f37"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 156, "källa": "text", "series_ok": true, "text_hash": "a710f99e2a2efc25"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 7, "tecken": 205, "källa": "text", "series_ok": true, "text_hash": "f7143589f4132028"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 8, "tecken": 56, "källa": "text", "series_ok": true, "text_hash": "2581e48c5cdd0542"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 9, "tecken": 308, "källa": "text", "series_ok": true, "text_hash": "eb88792349394fef"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 169, "källa": "text", "series_ok": true, "text_hash": "115c702057d14fc3"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 11, "tecken": 121, "källa": "text", "series_ok": true, "text_hash": "e0ecc203f417cce6"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 12, "tecken": 218, "källa": "text", "series_ok": true, "text_hash": "2f72665b435432e1"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 13, "tecken": 373, "källa": "text", "series_ok": true, "text_hash": "07742f79b53b5683"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 14, "tecken": 157, "källa": "text", "series_ok": true, "text_hash": "2e3bd9a0e0304bde"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 15, "tecken": 263, "källa": "text", "series_ok": true, "text_hash": "d1670565a9554ae3"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 16, "tecken": 177, "källa": "text", "series_ok": true, "text_hash": "81c3d42773f675ba"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 17, "tecken": 146, "källa": "text", "series_ok": true, "text_hash": "3fff39717fbdbc25"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 18, "tecken": 437, "källa": "text", "series_ok": true, "text_hash": "2691a45f3c97107e"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 19, "tecken": 257, "källa": "text", "series_ok": true, "text_hash": "341cdbf7aa3aa076"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 20, "tecken": 554, "källa": "text", "series_ok": true, "text_hash": "94f08a89a06b14aa"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 21, "tecken": 477, "källa": "text", "series_ok": true, "text_hash": "55050b97ddd1ea67"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 22, "tecken": 251, "källa": "text", "series_ok": true, "text_hash": "240447b9f367bafa"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 23, "tecken": 229, "källa": "text", "series_ok": true, "text_hash": "5eb0028c911dca3d"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 24, "tecken": 217, "källa": "text", "series_ok": true, "text_hash": "ab6210536d18080a"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 25, "tecken": 122, "källa": "text", "series_ok": true, "text_hash": "ecabea3ed00abcf3"}
+{"id": "949fceb500c3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 26, "tecken": 94, "källa": "text", "series_ok": true, "text_hash": "72ac3f1434b91d68"}
 {"id": "954389eb3c8e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 117, "källa": "text", "series_ok": true, "text_hash": "1cc9e6cc65684afc"}
 {"id": "954389eb3c8e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 274, "källa": "text", "series_ok": true, "text_hash": "3765a580cbc691b5"}
 {"id": "954389eb3c8e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 209, "källa": "text", "series_ok": true, "text_hash": "72ff6468586aa162"}
@@ -1605,6 +1676,18 @@
 {"id": "ad86286fe6b3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 16, "tecken": 588, "källa": "text", "series_ok": true, "text_hash": "06fb742a3659d570"}
 {"id": "ad86286fe6b3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 17, "tecken": 186, "källa": "text", "series_ok": true, "text_hash": "77b88afbde47b260"}
 {"id": "ad86286fe6b3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 18, "tecken": 209, "källa": "text", "series_ok": true, "text_hash": "f1474a75249951c6"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": true, "text_hash": "78fc3fac75cca8e2"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 610, "källa": "ocr", "series_ok": true, "text_hash": "9826ed7532eddc67"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 774, "källa": "ocr", "series_ok": true, "text_hash": "023ddd1308743064"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 166, "källa": "ocr", "series_ok": true, "text_hash": "9910f4540843b7c7"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 133, "källa": "ocr", "series_ok": true, "text_hash": "96d85f8d06f4c180"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 6, "tecken": 131, "källa": "ocr", "series_ok": true, "text_hash": "0e7f4160baeba409"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 7, "tecken": 393, "källa": "ocr", "series_ok": true, "text_hash": "0a66ef097f71fd7c"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 8, "tecken": 80, "källa": "ocr", "series_ok": true, "text_hash": "3d5de72dc5ca6238"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 9, "tecken": 312, "källa": "ocr", "series_ok": true, "text_hash": "887c4f33d1acb7bc"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 316, "källa": "ocr", "series_ok": true, "text_hash": "1d70a925b4cde75d"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 11, "tecken": 211, "källa": "ocr", "series_ok": true, "text_hash": "ccd467f02f45faa7"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 12, "tecken": 72, "källa": "ocr", "series_ok": true, "text_hash": "34d747db2d2ce544"}
 {"id": "b44bd61c1641", "prövningsgrupp": "Hallands län", "villkorsnummer": 12, "tecken": 211, "källa": "text", "series_ok": false, "text_hash": "94be77c2d30a66b1"}
 {"id": "b44bd61c1641", "prövningsgrupp": "Hallands län", "villkorsnummer": 13, "tecken": 146, "källa": "text", "series_ok": false, "text_hash": "20dbb0a60a66e437"}
 {"id": "b44bd61c1641", "prövningsgrupp": "Hallands län", "villkorsnummer": 14, "tecken": 122, "källa": "text", "series_ok": false, "text_hash": "35d6bc4c991759cc"}

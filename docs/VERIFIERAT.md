@@ -468,12 +468,13 @@ hitta stämmer med att `VILLKORSSCHEMA.md` avsnitt 2.2 redan skriver att rubrike
 varierar och kan saknas.
 
 **Täckningen, räknad så som en kritisk läsare skulle räkna den.** Efter att steg
-25 OCR-läst de 72 skannade besluten saknar ingen fil text. Kvar som bortfall: 60
-filer utan villkorsrubrik som går att hitta och 3 med rubrik men inget numrerat
-villkor. Segmenterade: **173 filer av 236, alltså 73 procent, och 2 264
-villkor**, median 13 villkor per beslut. Rubrikträffen är nästan lika god i båda
-källorna: 122 av 164 digitalt födda och 54 av 72 OCR-lästa, alltså 74 respektive
-75 procent. Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5,
+25 OCR-läst de 72 skannade besluten saknar ingen fil text. Segmenterade efter rättelsen den 4
+september 2026: **180 filer av 236, alltså 76 procent, och 2 347 villkor**,
+median 12,5 villkor per beslut. Rubrikträffen är nästan lika god i båda
+källorna: 123 av 164 digitalt födda och 57 av 72 OCR-lästa, alltså 75 respektive
+79 procent. Före rättelsen var talen 173 filer och 2 264 villkor, och bortfallet
+beskrevs som 60 filer utan villkorsrubrik som gick att hitta och 3 med rubrik men
+inget numrerat villkor. Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5,
 sifferserien 1..N, och varje beslut bär utfallet som `series_ok` och sin källa
 som `källa`.
 
@@ -493,18 +494,37 @@ ut men bär ingen slutsats.
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| **huvudsiffra, ur textlagret** | 1 704 | 120 | 1 316 | 605 (36 %) | 68 % |
-| ur textlagret, obruten serie | 1 545 | 106 | 1 200 | 544 (35 %) | 70 % |
-| enbart OCR-lästa | 560 | 53 | 489 | 112 (20 %) | 83 % |
-| poolat, bär ingen slutsats | 2 264 | 173 | 1 762 | 771 (34 %) | 70 % |
+| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 367 | 615 (35 %) | 70 % |
+| ur textlagret, obruten serie | 1 602 | 108 | 1 251 | 552 (34 %) | 71 % |
+| enbart OCR-lästa | 585 | 57 | 511 | 118 (20 %) | 80 % |
+| poolat, bär ingen slutsats | 2 347 | 180 | 1 831 | 791 (34 %) | 70 % |
+
+**Rättelse 2026-09-04: segmenteringen kände inte igen två sätt att öppna
+villkorsavsnittet.** Tabellen ovan är omräknad. Före rättelsen stod huvudsiffran
+på 1 704 villkor i 120 beslut med 36 procent delad text, och det poolade talet på
+2 264 villkor i 173 beslut. Orsaken hittades genom att läsa de sju tillstånd som
+saknade villkor, se avsnittet om kontroll 2 längre ned: fyra av dem inleder
+avsnittet med en mening i stället för med en rubrikrad, och ett har ett textlager
+som klistrar ihop rubriken med nästa ord. Segmenteraren fick två reservregler som
+bara används när ingen rubrikrad finns i dokumentet, så att inget beslut som
+redan segmenterade kan förlora ett villkor på dem.
+
+**Villkoret för att behålla ändringen skrevs innan den kördes** och står i
+protokollloggen 2026-09-04 kl. 16:00: inget beslut fick tappa villkor. Utfallet
+blev sju nya beslut och noll som tappade. Fyra av de sju bär bruten sifferserie
+och är därmed flaggade av instrumentet självt, alltså utanför den rena
+delmängden. En av förutsägelserna slog fel och redovisas som sådan: andelen
+beslut med obruten serie väntades sjunka, eftersom en inledande mening bär det
+första villkoret på samma rad, men den steg från 106 till 108 av de digitalt
+födda.
 
 **Huvudsiffran rörde sig inte när OCR-mängden tillkom.** Samtliga tal i första
 raden är identiska före och efter att 53 beslut lades till underlaget, vilket de
 ska vara, eftersom raden räknas på oförändrade dokument. Det är kontrollen på
 att OCR-tillskottet är additivt och inte har rört det som redan var mätt.
 
-**Nollhypotesen faller.** 1 099 av 1 704 villkor, 64 procent, förekommer i ett
-enda beslut, och medianbeslutet har egen text i 68 procent av sina villkor. Ett
+**Nollhypotesen faller.** 1 147 av 1 762 villkor, 65 procent, förekommer i ett
+enda beslut, och medianbeslutet har egen text i 70 procent av sina villkor. Ett
 villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
 är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
 ingenting annat normaliserat, siffervärden avsiktligt bevarade: **det kan bara
@@ -513,31 +533,32 @@ delar ett villkor i två drar åt samma håll, alltså mot mer skenbar egenart, 
 båda felkällorna gör slutsatsen försiktigare och ingen av dem gör den starkare.
 
 **Den delade texten är inte korta fragment.** Delade texter har median 210
-tecken mot 260 för de egna, och 6 av 217 ligger under 80 tecken. Det är hela
+tecken mot 258 för de egna, och 6 av 220 ligger under 80 tecken. Det är hela
 villkor som återanvänds, inte gemensamma formuleringar som halkat med.
 
 **Den återanvändning som finns är gruppintern, och det är inte en
-storlekseffekt.** Av de 217 texter som förekommer i mer än ett beslut stannar
-**204 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
-med prövningsgruppernas faktiska storlekar bevarade, väntas 25,3 och den 95:e
-percentilen ligger på 33; noll av 2 000 permutationer nådde 204 (`p < 0,0005`).
+storlekseffekt.** Av de 220 texter som förekommer i mer än ett beslut stannar
+**206 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
+med prövningsgruppernas faktiska storlekar bevarade, väntas 25,9 och den 95:e
+percentilen ligger på 34; noll av 2 000 permutationer nådde 206 (`p < 0,0005`).
 Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
 Götaland bär hälften av korpusen.
 
-**Koncentrationen replikerar på en oberoende dokumentmängd.** De 53 OCR-lästa
-besluten delar inga dokument med de 120 digitalt födda och är lästa med ett
-annat instrument. Där stannar **39 av 41 delade texter inom en enda
-prövningsgrupp** mot 4,2 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 39. Att andelen delad text är lägre i den mängden, 20 mot
-36 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
+**Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
+besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
+annat instrument. Där stannar **42 av 44 delade texter inom en enda
+prövningsgrupp** mot 5,5 väntat under samma permutation, och noll av 2 000
+omfördelningar nådde 42. Att andelen delad text är lägre i den mängden, 20 mot
+35 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
 **Den konkurrerande förklaringen prövad.** Ett ändringsbeslut upprepar
 originalets villkor, och det skulle ge gruppintern återanvändning utan att någon
-mall finns. Den förklaringen räcker för par, som är 141 av de 217 klustren, men
+mall finns. Den förklaringen räcker för par, som är 142 av de 220 klustren, men
 inte för de breda: den vidaste texten delas av **26 beslut, varav 24 i Västra
-Götalands län**, och tio beslut i Kalmar med Kronoberg delar en annan.
-Ändringskedjor hos en och samma verksamhetsutövare blir inte 24 beslut.
+Götalands län**, och den näst vidaste av 13 beslut, varav 7 i Örebro med
+Värmland. Ändringskedjor hos en och samma verksamhetsutövare blir inte 24
+beslut.
 Omvänt gäller att de allra vidaste texterna är de som korsar gruppgränser,
 medan den typiska delade texten stannar; av de 18 klustren med minst fem beslut
 ligger 14 inom en enda grupp.
@@ -1181,6 +1202,11 @@ annat:
 | igångsättning | 0 | 2 | 2 | ja |
 | upphävande | 0 | 1 | 1 | ja |
 
+Talen ovan är körningen före rättelsen samma dag, och de står kvar eftersom det
+är de som ledde till handläsningen. Efter rättelsen har tillstånd 160 med och 2
+utan, ändring 9 med och 31 utan, och villkor 1 med och 1 utan; övriga rader är
+oförändrade.
+
 **Förlängningarna bekräftar dokumentets egen förutsägelse exakt.** Noll av
 femton bär villkor, vilket är vad VILLKORSSCHEMA säger att en förlängning ska
 göra och vad Lidfarmbeslutet visar. I det poolade täckningstalet räknades de
@@ -1211,29 +1237,38 @@ textlagret klistrar ihop den med nästa mening: "Villkor för
 verksamhetenMiljöprövningsdelegationen fastställer med stöd av". En rubrikrad
 som inte är en egen rad matchar inte heller.
 
-**Vad en rättelse skulle ge, mätt utan att röra måttet.** Två kandidatregler är
-prövade mot de sju i en fristående körning. En regel som känner igen den
-inledande meningen hittar avsnittets början i fyra av dem. En regel som matchar
-rubriken som radprefix i stället för som hel rad hittar den i den femte,
-`361be3bd133c`. Tillsammans når de alla fem som saknar villkor av
-segmenteringsskäl.
+**Rättelsen är gjord samma dag, efter att villkoret för den skrivits ned.**
+Steg 24 har fått två reservregler: en för den inledande meningen och en som
+matchar rubriken som radprefix. Båda används bara när ingen rubrikrad finns i
+dokumentet, så inget beslut som redan segmenterade kan förlora ett villkor på
+dem. Villkoret för att behålla ändringen skrevs i protokollloggen innan
+körningen: inget beslut fick tappa villkor. Utfallet blev sju nya beslut och noll
+som tappade.
 
-Vad körningen visar är att avsnittets början går att hitta. Om villkoren därefter
-segmenterar till en obruten serie är inte prövat, och det avgörs först av en
-körning över hela materialet. Ingen ändring är gjord i
-`data/villkor_baseline.jsonl`, eftersom en ny segmentering flyttar
-återanvändningsmåttet och permutationstestet, och de talen är publicerade.
+**Täckningen för tillstånd är därmed 160 av 162.** De två som återstår är just de
+två som handläsningen visade riktigt saknar villkor. Fyra av de fem återvunna
+segmenteringsmissarna får dessutom bruten sifferserie, vilket är instrumentets
+eget sätt att säga att extraktionen är ofullständig; de ligger utanför den rena
+delmängden och kan inte bära huvudsiffran. Den femte, `361be3bd133c`, ger 31
+villkor med obruten serie.
+
+Vad rättelsen gjorde med de publicerade talen står i avsnittet om
+villkorslagrets baseline längre upp, med den gamla tabellen utskriven bredvid
+den nya.
 
 ### Två frågor kontrollen inte svarar på
 
-**Trettiotvå av fyrtio ändringsbeslut saknar villkor.** Regeln uttalar sig inte
+**Trettioen av fyrtio ändringsbeslut saknar villkor**, ett färre efter
+rättelsen. Regeln uttalar sig inte
 om ändringar. Om ett ändringsbeslut bär egna villkor eller bara ändrar ett
 villkor i det underliggande tillståndet är en fråga om dokumenten, och att
 avgöra den ur frånvaron av en rubrik vore en gissning. `e181f70f9cda` ovan visar
 att den andra formen finns.
 
-**Två beslut heter "Villkor" respektive "Slutliga villkor" och saknar villkor.**
-Namnet gör dem till de sista man väntar sig hitta tomma. De är inte lästa än.
+**Ett beslut som heter "Villkor" eller "Slutliga villkor" saknar villkor.**
+Efter rättelsen segmenterar det ena av de två, med ett enda villkor och bruten
+sifferserie. Namnet gör dem till de sista man väntar sig hitta tomma. Inget av
+dem är läst än.
 
 ---
 

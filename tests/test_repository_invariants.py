@@ -838,6 +838,20 @@ class TestThePermitCorpusDecomposesAsDocumented:
         assert {r["id"] for r in permit_types} == {r["id"] for r in permits}
         assert all(r["i_manifestet"] for r in permit_types)
 
+    def test_every_permit_that_should_have_conditions_has_them(
+        self, permit_types, conditions
+    ):
+        # After the widened segmentation of 4 September 2026 the only permits
+        # without conditions are the two that were read by hand and found to
+        # have none: one is an extension of a start-up deadline that the
+        # publisher labelled a permit, the other amends single conditions in an
+        # earlier decision. VILLKORSSCHEMA calls any other permit with zero
+        # conditions a silent broken extraction, so this must stay at two.
+        with_conditions = {r["id"] for r in conditions}
+        permits = [r["id"] for r in permit_types if r["typ"] == "tillstånd"]
+        assert len(permits) == 162
+        assert sum(1 for p in permits if p not in with_conditions) == 2
+
     def test_the_four_documented_types_hold(self, permit_types):
         counted = Counter(r["typ"] for r in permit_types)
         assert counted["tillstånd"] == 162
@@ -878,13 +892,19 @@ class TestTheConditionBaselineHoldsItsClaim:
     which is exactly the failure the retrain of Site Sentinel taught. The
     figures are pinned here, and a change to them has to be a deliberate edit
     of both the data and the document.
+
+    They moved once, on 4 September 2026, when the segmenter learned two more
+    ways a conditions section can open. Seven decisions entered the corpus and
+    none lost a condition, which was the condition written down before the run.
+    The share of shared text fell from 36 to 35 per cent, and the concentration
+    inside one permit division held.
     """
 
     def test_the_corpus_is_the_one_the_document_describes(self, conditions, permits):
         assert len(permits) == 236
         assert len({p["sha256"] for p in permits}) == 235
-        assert len(conditions) == 2264
-        assert len({r["id"] for r in conditions}) == 173
+        assert len(conditions) == 2347
+        assert len({r["id"] for r in conditions}) == 180
 
     def test_the_two_sources_are_kept_apart(self, conditions):
         # The published figure is the born-digital one. OCR text loses
@@ -892,9 +912,9 @@ class TestTheConditionBaselineHoldsItsClaim:
         # the reuse share for an instrument reason. Both counts are pinned so
         # that a pooled headline cannot appear unnoticed.
         by_source = Counter(r["källa"] for r in conditions)
-        assert by_source == {"text": 1704, "ocr": 560}
-        assert len({r["id"] for r in conditions if r["källa"] == "text"}) == 120
-        assert len({r["id"] for r in conditions if r["källa"] == "ocr"}) == 53
+        assert by_source == {"text": 1762, "ocr": 585}
+        assert len({r["id"] for r in conditions if r["källa"] == "text"}) == 123
+        assert len({r["id"] for r in conditions if r["källa"] == "ocr"}) == 57
 
     def test_no_condition_row_carries_text(self, conditions):
         # The corpus is outside version control because the file names carry
@@ -930,8 +950,8 @@ class TestTheConditionBaselineHoldsItsClaim:
             if sorted(ns) == list(range(1, max(ns) + 1))
         }
         # OCR segments worse, and the gap is the reason the sources stay apart.
-        assert sum(1 for i in clean if source[i] == "text") == 106
-        assert sum(1 for i in clean if source[i] == "ocr") == 21
+        assert sum(1 for i in clean if source[i] == "text") == 108
+        assert sum(1 for i in clean if source[i] == "ocr") == 22
         for record in conditions:
             assert record["series_ok"] == (record["id"] in clean)
 
@@ -948,10 +968,10 @@ class TestTheConditionBaselineHoldsItsClaim:
         owners = self.owners(rows)
         shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
         repeated = sum(1 for r in rows if len(owners[r["text_hash"]]) > 1)
-        assert len(owners) == 1316
-        assert len(shared) == 217
-        assert repeated == 605
-        assert round(repeated / len(rows), 2) == 0.36
+        assert len(owners) == 1367
+        assert len(shared) == 220
+        assert repeated == 615
+        assert round(repeated / len(rows), 2) == 0.35
 
     def test_reuse_stays_inside_a_permit_division(self, conditions):
         groups = {r["id"]: r["prövningsgrupp"] for r in conditions}
@@ -965,8 +985,8 @@ class TestTheConditionBaselineHoldsItsClaim:
             )
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
-        assert inside["text"] == (204, 217)
-        assert inside["ocr"] == (39, 41)
+        assert inside["text"] == (206, 220)
+        assert inside["ocr"] == (42, 44)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

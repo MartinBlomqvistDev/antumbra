@@ -14,10 +14,19 @@ in the document, and 12 decisions of 144, 8 per cent, then produced an unbroken
 in the account of the case and in the closing information, so that measure was
 taken over a mixture of conditions and other text. This version finds the
 conditions heading, reads until the next section heading, and segments only
-inside that window: 106 of 120, 88 per cent, then produce an unbroken series.
+inside that window: 108 of 123, 88 per cent, then produce an unbroken series.
 The heading list and the stop list are heuristics over the layouts actually
 present in the corpus, and VILLKORSSCHEMA section 2.2 already records that
 headings vary and can be absent.
+
+**Two of the openers are fallbacks, added on 4 September 2026.** Reading the
+seven permits that carried no conditions showed that five of them open the
+section without a heading line: four introduce it with a sentence, "För
+tillståndet gäller följande villkor: 1. ...", and one has a text layer that runs
+the heading into the next word. Both fallbacks are tried only when no heading
+line exists anywhere in the document, so a decision that segmented before keeps
+the code path it had. The condition set before the change was written down and
+compared afterwards: seven decisions entered and none lost a condition.
 
 **What this step is not.** It does not classify conditions by type, parse
 quantified requirements or resolve the decision's identity. It reaches only the
@@ -106,6 +115,27 @@ SECTION_STOP = re.compile(
     r"|detta beslut|information)",
     re.IGNORECASE,
 )
+# Two fallbacks for a section that never gets a heading line of its own. They
+# are tried only when SECTION_START matches nothing in the document, so a
+# decision that segments today cannot lose a condition to them.
+#
+# The first is a heading that the text layer glued to the sentence after it, as
+# in "Villkor för verksamhetenMiljöprövningsdelegationen fastställer med stöd
+# av". The second is a section introduced by a sentence rather than a heading,
+# "För tillståndet gäller följande villkor: 1. ...", which is how the four
+# OCR-read permits in the hand reading of 4 September 2026 open theirs. The verb
+# is required so that the motivation's own "Bolaget har föreslagit följande
+# villkor" cannot open a section.
+# No word boundary after the heading: the case this rule exists for is a text
+# layer that runs the heading straight into the next word.
+SECTION_PREFIX = re.compile(
+    r"^villkor för (?:tillståndet|verksamheten)[\s:.]*(.*)$", re.IGNORECASE
+)
+SECTION_INTRO = re.compile(
+    r"(?:gäller|meddelas|föreskrivs)\s+följande villkor\s*[:.]?\s*(.*)$",
+    re.IGNORECASE,
+)
+
 # A condition opens with its number. The text can follow on the same line or on
 # the next one, which is how the decisions that amend a single condition are set.
 CONDITION_START = re.compile(r"^(\d{1,2})[.)]\s*(.*)$")
@@ -135,18 +165,36 @@ def document_text(path: Path) -> tuple[str, str]:
     return "", ""
 
 
+def read_on(lines: list[str], start: int, first: str = "") -> list[str]:
+    """The section from a given line, stopping at the next section heading.
+
+    `first` is what remained of the opening line after the heading or the
+    introducing sentence, which is where the first condition sits when the
+    section opens mid-line.
+    """
+    out: list[str] = [first] if first else []
+    for candidate in lines[start:]:
+        stripped = candidate.strip()
+        if out and SECTION_STOP.match(stripped):
+            break
+        out.append(stripped)
+    return out
+
+
 def section(lines: list[str]) -> list[str]:
-    """The lines of the conditions section, or empty if no heading is found."""
+    """The lines of the conditions section, or empty if no opening is found."""
     for index, line in enumerate(lines):
-        if not SECTION_START.match(line.strip()):
-            continue
-        out: list[str] = []
-        for candidate in lines[index + 1 :]:
-            stripped = candidate.strip()
-            if out and SECTION_STOP.match(stripped):
-                break
-            out.append(stripped)
-        return out
+        if SECTION_START.match(line.strip()):
+            return read_on(lines, index + 1)
+    # Only now the fallbacks, so the safest opener always wins.
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+        prefix = SECTION_PREFIX.match(stripped)
+        if prefix:
+            return read_on(lines, index + 1, prefix.group(1).strip())
+        intro = SECTION_INTRO.search(stripped)
+        if intro:
+            return read_on(lines, index + 1, intro.group(1).strip())
     return []
 
 

@@ -7,13 +7,17 @@ per definition en tyst trasig extraktion." The rule could not be run until step
 31 gave every decision its type, because until then a decision with no extracted
 conditions could not be told apart from a decision that has none.
 
-**This replaces a coverage figure that was true and useless.** Step 24 reports
-that 173 of 236 files, 73 per cent, could be segmented. Read on its own that
-number invites the conclusion that a quarter of the corpus is lost. Split by
-type it says something else: the extraction reaches 155 of 162 permits, and the
-fifteen extensions that carry no conditions at all are counted as failures by
-the pooled figure while they are in fact the correct answer, exactly as the
-Lidfarm decision in VILLKORSSCHEMA predicts.
+**This replaces a coverage figure that was true and useless.** Step 24 first
+reported that 173 of 236 files, 73 per cent, could be segmented. Read on its own
+that number invites the conclusion that a quarter of the corpus is lost. Split by
+type it says something else: the fifteen extensions that carry no conditions at
+all were counted as failures by the pooled figure while they are in fact the
+correct answer, exactly as the Lidfarm decision in VILLKORSSCHEMA predicts.
+
+Running this check is what produced the seven permits that were then read by
+hand, and the reading is what gave step 24 its two fallback openers. Since that
+run the extraction reaches 160 of 162 permits, and the two that remain were read
+and found to have no conditions to extract.
 
 **What the step reports, and what it refuses to decide.** It prints the split by
 type, names the permits with no conditions so that they can be read by hand, and
