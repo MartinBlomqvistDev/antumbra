@@ -172,7 +172,17 @@ SECTION_INTRO = re.compile(
 # prose, not in a column of labels.
 PAGE_FOOTER = re.compile(
     r"postadress|bes[öo]ksadress|bankgiro|plusgiro|telefax|v[äa]xel"
-    r"|\borg\.? ?nr\b|organisationsnummer|www\.|@|\bvx\b|hemsida|webbadress",
+    r"|\borg\.? ?nr\b|organisationsnummer|www\.|@|\bvx\b|hemsida|webbadress"
+    # Added 5 September 2026, after step 33 refused to write the register.
+    # These are the naked continuation lines of the same block, plus the
+    # page number, which sits in the same place and breaks a condition the
+    # same way. Each was counted and sampled against the corpus first: 24
+    # telephone lines, 26 postcode lines, 3 fax lines and 418 page numbers,
+    # and a sample of 22 of the last held nothing but page furniture.
+    r"|\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b"
+    r"|\b\d{3} ?\d{2} [A-ZÅÄÖ][A-ZÅÄÖa-zåäö]{2,}"
+    r"|\(fax\)|telefon/fax"
+    r"|\bsid(a|an)?\.? ?\d|\b\d{1,2} ?\( ?\d{1,2} ?\)",
     re.IGNORECASE,
 )
 
@@ -323,8 +333,11 @@ def conditions(lines: list[str]) -> list[tuple[int, str, str | None]]:
                 current.append(line)
     if number is not None and current:
         found.append((number, " ".join(current), heading))
+    # The text is returned as it stands in the decision. Normalising is the
+    # reuse measure's business, and a register that quotes a condition needs the
+    # wording the authority wrote. Step 33 reads this function for that reason.
     return [
-        (n, normalise(t), h)
+        (n, t, h)
         for n, t, h in found
         if MIN_CONDITION_CHARS <= len(normalise(t)) <= MAX_CONDITION_CHARS
     ]
@@ -448,7 +461,8 @@ def main() -> int:
         tested = kinds.get(path.stem, "") not in SERIES_NOT_TESTED
         if ok:
             clean.add(path.stem)
-        for number, body, heading in found:
+        for number, raw, heading in found:
+            body = normalise(raw)
             records.append(
                 {
                     "id": path.stem,

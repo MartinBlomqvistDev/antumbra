@@ -496,10 +496,10 @@ ut men bär ingen slutsats.
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 302 | 697 (40 %) | 64 % |
-| ur textlagret, obruten serie | 1 602 | 108 | 1 187 | 632 (39 %) | 64 % |
-| enbart OCR-lästa | 585 | 57 | 504 | 131 (22 %) | 78 % |
-| poolat, bär ingen slutsats | 2 347 | 180 | 1 752 | 893 (38 %) | 67 % |
+| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 301 | 698 (40 %) | 64 % |
+| ur textlagret, obruten serie | 1 602 | 108 | 1 186 | 633 (40 %) | 64 % |
+| enbart OCR-lästa | 585 | 57 | 502 | 134 (23 %) | 78 % |
+| poolat, bär ingen slutsats | 2 347 | 180 | 1 748 | 897 (38 %) | 67 % |
 
 **Rättelse 2026-09-05: avsnittsrubriken låg i villkorstexten.** Tabellen är
 omräknad. Före rättelsen stod huvudsiffran på 615 delade villkor, 35 procent,
@@ -572,9 +572,9 @@ Götaland bär hälften av korpusen.
 
 **Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
 besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
-annat instrument. Där stannar **48 av 50 delade texter inom en enda
+annat instrument. Där stannar **49 av 51 delade texter inom en enda
 prövningsgrupp** mot 6,3 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 48. Att andelen delad text är lägre i den mängden, 22 mot
+omfördelningar nådde 49. Att andelen delad text är lägre i den mängden, 23 mot
 40 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
@@ -1254,6 +1254,45 @@ ibland som ett nytt villkor med samma nummer. Schemat är byggt för det, med
 `number` som sträng och `position` som heltal, men baselinemåttet skiljer dem
 inte åt. Ingen åtgärd i dag; gränsen står här i stället för att upptäckas när
 registret byggs.
+
+---
+
+## Villkorsregistret skrivet, och screeningen som stoppade det, 2026-09-05
+
+Steg 33 skriver villkoren själva till `data/villkor.jsonl`: 2 347 rader med
+texten som beslutet skrev den, numret, positionen i avsnittet, rubriken,
+prövningsgruppen, beslutstypen och samma `text_hash` som baselinen. Det är
+första gången källtext går in i repot, och VILLKORSSCHEMA avsnitt 2.7 tillåter
+just det, eftersom villkorstexten är mätobjektet.
+
+**Steget vägrade skriva första gången, och det var meningen.** Screeningen mot
+e-postadresser, personnummer och telefonnummer sitter före skrivningen och
+avbryter på träff i stället för att varna. Den fann 23 villkor med
+telefonnummer, alla sidfotsrader som den tidigare markörlistan inte kände igen,
+och ett av dem bar en namngiven handläggare med personlig adress som OCR gjort
+oigenkännlig för e-postmönstret. **Utan den spärren hade en tjänstemans namn
+och adress gått in i repot.**
+
+**Fyra markörer till, var och en mätt och stickprovad före beslut.** Bart
+telefonnummer 24 rader, postnummer med ort 26, fax i tre former 3, och
+sidnummer 418. Ett stickprov på 22 av de 418 innehöll uteslutande sidnummer och
+sidhuvuden. Effekten på måttet blev liten, eftersom de flesta sidnummer redan
+föll bort som rader mellan två villkor: huvudsiffran gick från 697 till 698
+delade villkor och den OCR-lästa mängden från 48 av 50 till 49 av 51
+gruppinterna texter.
+
+**Registret och baselinen är en och samma segmentering.** Steg 33 importerar
+steg 24 i stället för att upprepa dess regler, och hashen är det som visar att
+de beskriver samma villkor. En invariant håller de två filerna mot varandra rad
+för rad, och en andra invariant söker registret efter samma tre sorters
+uppgifter som steget gör, så att garantin inte vilar på att någon körde
+screeningen en gång.
+
+**Vad registret bär och inte bär.** Det bär texten, rubriken och
+proveniensfälten. Det bär ännu ingen villkorstyp, inga kvantifierade krav, ingen
+tidsdimension och inga länkar mellan beslut. De fyra är nästa steg i schemat och
+kräver var för sig samma ordning som allt annat i dag: villkoret skrivet före
+körningen och ett handläst facit innan en siffra får publiceras.
 
 ---
 

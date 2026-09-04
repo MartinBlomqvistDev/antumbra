@@ -224,6 +224,13 @@ def conditions() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def register() -> list[dict]:
+    """One record per condition, with the text as the decision wrote it."""
+    path = ROOT / "data" / "villkor.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def permit_types() -> list[dict]:
     """One record per decision on the publisher's listing, with its own label."""
     path = ROOT / "data" / "tillstand_typ.jsonl"
@@ -819,6 +826,74 @@ class TestManifestCoversTheDownloadedCorpus:
         assert all(m["kind"] in {"report", "annex"} for m in manifest)
 
 
+class TestTheConditionRegisterCarriesTextAndNothingElse:
+    """The register is the only file in the repository holding source text.
+
+    VILLKORSSCHEMA section 2.7 allows it, because the condition text is the
+    measurement object, and forbids everything around it: names of natural
+    persons, officials and agents, and the contact details in the decision
+    heads. Step 33 screens before it writes and refuses on a hit; these make the
+    guarantee outlive that one run. The screen earned its place on 4 September
+    2026, when it stopped the first write over 23 conditions that had swallowed
+    a page footer, one of them naming an official with a private address.
+    """
+
+    FORBIDDEN: ClassVar[dict[str, str]] = {
+        "e-postadress": r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}",
+        "personnummer": r"\b(?:19|20)\d{6}[-+]\d{4}\b",
+        "telefonnummer": r"\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b",
+    }
+
+    def test_no_contact_details_reached_the_register(self, register):
+        offenders = []
+        for record in register:
+            for label, pattern in self.FORBIDDEN.items():
+                if re.search(pattern, record["text"]):
+                    offenders.append(
+                        f"{record['id']} {record['villkorsnummer']}: {label}"
+                    )
+        assert not offenders, offenders[:10]
+
+    def test_the_register_and_the_baseline_are_one_segmentation(
+        self, register, conditions
+    ):
+        # Step 33 imports step 24 rather than repeating its rules, and the hash
+        # is what proves the two files describe the same conditions.
+        assert len(register) == len(conditions) == 2347
+        assert {r["id"] for r in register} == {r["id"] for r in conditions}
+        assert Counter(r["text_hash"] for r in register) == Counter(
+            r["text_hash"] for r in conditions
+        )
+
+    def test_every_row_carries_its_provenance(self, register):
+        fields = {
+            "id",
+            "prövningsgrupp",
+            "beslutstyp",
+            "villkorsnummer",
+            "position",
+            "rubrik",
+            "text",
+            "tecken",
+            "källa",
+            "text_hash",
+        }
+        for record in register:
+            assert set(record) == fields
+            assert record["text"].strip()
+            assert record["källa"] in {"text", "ocr"}
+
+    def test_the_headings_are_the_documents_own_words(self, register):
+        # 1 691 of the conditions sit under a heading the decision wrote, and
+        # the vocabulary is what VILLKORSSCHEMA section 2.2 predicted from four
+        # decisions: the general condition, manure, air, chemicals, noise,
+        # monitoring. A drop here means the heading rule stopped firing.
+        headings = [r["rubrik"] for r in register if r["rubrik"]]
+        assert len(headings) == 1691
+        assert len(set(headings)) == 161
+        assert Counter(headings).most_common(1)[0] == ("Allmänt", 269)
+
+
 class TestThePermitCorpusDecomposesAsDocumented:
     """Check 2 in VILLKORSSCHEMA needs the corpus split by decision type.
 
@@ -984,9 +1059,9 @@ class TestTheConditionBaselineHoldsItsClaim:
         owners = self.owners(rows)
         shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
         repeated = sum(1 for r in rows if len(owners[r["text_hash"]]) > 1)
-        assert len(owners) == 1302
+        assert len(owners) == 1301
         assert len(shared) == 237
-        assert repeated == 697
+        assert repeated == 698
         assert round(repeated / len(rows), 2) == 0.40
 
     def test_reuse_stays_inside_a_permit_division(self, conditions):
@@ -1002,7 +1077,7 @@ class TestTheConditionBaselineHoldsItsClaim:
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
         assert inside["text"] == (222, 237)
-        assert inside["ocr"] == (48, 50)
+        assert inside["ocr"] == (49, 51)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:
