@@ -1246,11 +1246,12 @@ körningen: inget beslut fick tappa villkor. Utfallet blev sju nya beslut och no
 som tappade.
 
 **Täckningen för tillstånd är därmed 160 av 162.** De två som återstår är just de
-två som handläsningen visade riktigt saknar villkor. Fyra av de fem återvunna
-segmenteringsmissarna får dessutom bruten sifferserie, vilket är instrumentets
-eget sätt att säga att extraktionen är ofullständig; de ligger utanför den rena
-delmängden och kan inte bära huvudsiffran. Den femte, `361be3bd133c`, ger 31
-villkor med obruten serie.
+två som handläsningen visade riktigt saknar villkor. Tre av de fem återvunna
+tillstånden får bruten sifferserie, vilket är instrumentets eget sätt att säga
+att extraktionen är ofullständig; de ligger utanför den rena delmängden och kan
+inte bära huvudsiffran. De två andra är rena: `361be3bd133c` ger 31 villkor och
+`aee6ec54ed25` tolv. Räknat på alla sju nya beslut är fyra brutna, eftersom även
+villkorsbeslutet med sitt enda villkor är det.
 
 Vad rättelsen gjorde med de publicerade talen står i avsnittet om
 villkorslagrets baseline längre upp, med den gamla tabellen utskriven bredvid
