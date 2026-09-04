@@ -498,8 +498,8 @@ ut men bär ingen slutsats.
 | --- | --- | --- | --- | --- | --- |
 | **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 367 | 615 (35 %) | 70 % |
 | ur textlagret, obruten serie | 1 602 | 108 | 1 251 | 552 (34 %) | 71 % |
-| enbart OCR-lästa | 585 | 57 | 511 | 118 (20 %) | 80 % |
-| poolat, bär ingen slutsats | 2 347 | 180 | 1 831 | 791 (34 %) | 70 % |
+| enbart OCR-lästa | 585 | 57 | 510 | 120 (21 %) | 80 % |
+| poolat, bär ingen slutsats | 2 347 | 180 | 1 827 | 797 (34 %) | 70 % |
 
 **Rättelse 2026-09-04: segmenteringen kände inte igen två sätt att öppna
 villkorsavsnittet.** Tabellen ovan är omräknad. Före rättelsen stod huvudsiffran
@@ -548,9 +548,9 @@ Götaland bär hälften av korpusen.
 
 **Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
 besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
-annat instrument. Där stannar **42 av 44 delade texter inom en enda
+annat instrument. Där stannar **43 av 45 delade texter inom en enda
 prövningsgrupp** mot 5,5 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 42. Att andelen delad text är lägre i den mängden, 20 mot
+omfördelningar nådde 43. Att andelen delad text är lägre i den mängden, 21 mot
 35 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
@@ -1179,6 +1179,57 @@ värmlandsdokumentet förefaller antalet getter vara maskat i en handling som i
 **Följden.** Tilldelningen till djurslag håller, och djurslagsuppdelade siffror
 får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och det
 är en annan sak än att djurslaget skulle vara fel.
+
+---
+
+## Villkorstexten screenad, och sidfoten som låg i den, 2026-09-04
+
+Innan villkorstext får läggas i repot måste påståendet i VILLKORSSCHEMA avsnitt
+2.7 prövas. Där står att texten "innehåller i underlaget inga personuppgifter",
+och underlaget var då fyra lästa beslut. Samtliga 2 347 villkorstexter är nu
+sökta efter e-postadresser, personnummer och telefonnummer, och varje enskild
+träff är läst i sitt sammanhang.
+
+**Påståendet håller.** Träffarna är 5 e-postadresser, 5 tal som liknar
+personnummer och 69 telefonnummer, och varenda en är länsstyrelsens egen:
+adresserna är länsstyrelsernas registratorsadresser, alltså länets namn följt
+av myndighetens domän, de personnummerliknande talen är organisationsnummer som
+202100-2270, och telefonnumren är myndigheternas växlar. Ingen enskild person förekommer i någon villkorstext.
+
+### Men screeningen hittade något annat
+
+Alla dessa uppgifter kom in samma väg: **länsstyrelsens sidfot ligger inuti
+villkorstexten.** Ett villkor som löper över en sidbrytning sväljer den blocket
+med postadress, besöksadress, växel, telefax, bankgiro och webbadress. Det satt
+i 54 av 2 347 villkor, ett per drabbat beslut, och 147 rader i
+villkorsavsnitten bar en sidfotsmarkör.
+
+**Åtgärd och utfall, med villkoret skrivet före körningen.** Sidfotsrader
+utesluts när avsnittet läses. Villkoret var detsamma som vid segmenteringen
+tidigare i dag: inget beslut fick tappa villkor. Utfallet: noll borta, noll
+tillkomna, och exakt 54 villkor blev kortare, median 149 tecken borttagna och
+som mest 263.
+
+**Förutsägelsen slog in på ena halvan och inte på den andra.** Jag väntade att
+andelen delad text skulle stiga något, eftersom 54 villkor kommer närmare sina
+motsvarigheter. Huvudsiffran rörde sig inte alls och står kvar på 1 762 villkor,
+615 delade, 35 procent, 206 av 220 inom en prövningsgrupp. Den OCR-lästa
+mängden rörde sig: delade texter går från 44 till 45, gruppinterna från 42 till
+43, upprepade villkor från 118 till 120 och andelen från 20 till 21 procent.
+
+Riktningen är den väntade och skälet är begripligt. Sidfoten är samma block i
+varje beslut från samma län, men OCR läser den olika varje gång, så den bröt
+matchningar just där. I textlagret är de 54 villkoren unika ändå. Föroreningen
+gav alltså en liten skevhet, och den låg i den mängd som redan var svagast.
+
+### En tredje gräns, mindre och utskriven
+
+Tio par av beslut och villkorsnummer förekommer två gånger, i åtta beslut, och
+texten skiljer sig varje gång. En numrerad rad inne i ett villkor läses alltså
+ibland som ett nytt villkor med samma nummer. Schemat är byggt för det, med
+`number` som sträng och `position` som heltal, men baselinemåttet skiljer dem
+inte åt. Ingen åtgärd i dag; gränsen står här i stället för att upptäckas när
+registret byggs.
 
 ---
 

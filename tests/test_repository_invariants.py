@@ -1001,7 +1001,7 @@ class TestTheConditionBaselineHoldsItsClaim:
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
         assert inside["text"] == (206, 220)
-        assert inside["ocr"] == (42, 44)
+        assert inside["ocr"] == (43, 45)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

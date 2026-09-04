@@ -7,6 +7,16 @@ describes a template, and that is the result. If they differ, the register
 measures something, and the work of building it is justified. Deciding this
 first costs two days; discovering it after the extractor is built costs weeks.
 
+**The page footer is dropped, because a condition that runs across a page
+break swallows it.** Every county board prints the same block of address,
+switchboard and registry lines at the foot of the page, and the text layer puts
+it in the middle of whatever condition spans the break. It sat inside 54 of the
+2 347 conditions on 4 September 2026, one per affected decision, adding about
+150 characters each. It was found by screening every condition for personal
+data before the text could be stored: the only e-mail addresses, telephone
+numbers and personnummer-shaped strings in the whole corpus were the boards'
+own, and all of them arrived this way.
+
 **The conditions section is bounded, not searched for everywhere.** A first
 version segmented on any line opening with a number and a full stop, anywhere
 in the document, and 12 decisions of 144, 8 per cent, then produced an unbroken
@@ -153,6 +163,19 @@ SECTION_INTRO = re.compile(
     re.IGNORECASE,
 )
 
+# The page footer, which a condition running across a page break otherwise
+# swallows. Every county board prints the same block: postal and visiting
+# address, switchboard, fax, bank giro, registry address and web address. On
+# 4 September 2026 it sat inside 54 of 2 347 conditions, one per decision, and
+# added about 150 characters to each. Dropping the line is safe because the
+# markers are page furniture: a condition that mentions an address states it in
+# prose, not in a column of labels.
+PAGE_FOOTER = re.compile(
+    r"postadress|bes[öo]ksadress|bankgiro|plusgiro|telefax|v[äa]xel"
+    r"|\borg\.? ?nr\b|organisationsnummer|www\.|@|\bvx\b|hemsida|webbadress",
+    re.IGNORECASE,
+)
+
 # A condition opens with its number. The text can follow on the same line or on
 # the next one, which is how the decisions that amend a single condition are set.
 CONDITION_START = re.compile(r"^(\d{1,2})[.)]\s*(.*)$")
@@ -194,6 +217,8 @@ def read_on(lines: list[str], start: int, first: str = "") -> list[str]:
         stripped = candidate.strip()
         if out and SECTION_STOP.match(stripped):
             break
+        if PAGE_FOOTER.search(stripped):
+            continue
         out.append(stripped)
     return out
 

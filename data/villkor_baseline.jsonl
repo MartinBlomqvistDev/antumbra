@@ -15,7 +15,7 @@
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 187, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "449b9e1623d77153"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 168, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "91e6052c7b86fb9f"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 151, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fe2592692f42dba9"}
-{"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 523, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b7e534ac0e58c3c4"}
+{"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 333, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a7d7ca9982ea813e"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 890, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3896692673272b8d"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 13, "tecken": 688, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b6739a6bdda711b2"}
 {"id": "00b6f9b9e64f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 14, "tecken": 263, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "553653cba0887098"}
@@ -54,7 +54,7 @@
 {"id": "04b64597535a", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 18, "tecken": 213, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "60ed01790d347605"}
 {"id": "04b64597535a", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 19, "tecken": 486, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "712f9713856efafd"}
 {"id": "04b64597535a", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 20, "tecken": 920, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e0379c50e76aca17"}
-{"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 427, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "6fe71c13d53512e3"}
+{"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 191, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "41742ba39d452d20"}
 {"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 237, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "3637e28e597419ac"}
 {"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 145, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "268810b579d28a9d"}
 {"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 521, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "24b7bd3b75a5d8b8"}
@@ -67,7 +67,7 @@
 {"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 11, "tecken": 326, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "ef3b142b4853a453"}
 {"id": "061c7e9bb517", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 12, "tecken": 900, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "3b3a002690a5abf9"}
 {"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 210, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c9980840425808b8"}
-{"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 935, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d7b34325fb74c7e4"}
+{"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 672, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "212ab95319f8332a"}
 {"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 250, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8e3f0a5f077458d7"}
 {"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 1083, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4858952d10a88443"}
 {"id": "073b890ef134", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 7, "tecken": 758, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f45291a1b79fa55a"}
@@ -92,7 +92,7 @@
 {"id": "0977e5e428c9", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 16, "tecken": 449, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b254f8b28cf727bc"}
 {"id": "0977e5e428c9", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 17, "tecken": 1570, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1479ad29caaebeee"}
 {"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 189, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8700181d49315396"}
-{"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 846, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b49ce86221dbcab2"}
+{"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 667, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b1a7ea703311ef8c"}
 {"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 78, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "771949890d03b6d8"}
 {"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 2527, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "72b9df7ee0347c3d"}
 {"id": "097f049b82b6", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 11, "tecken": 167, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e9cf6e4fdbe202ce"}
@@ -102,7 +102,7 @@
 {"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 207, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1febde8a62700870"}
 {"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 582, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "2000cc4a8a249636"}
 {"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 234, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d7d4719fdb741e59"}
-{"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 437, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "6cb0285c57cfc1a9"}
+{"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 189, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "7adfa3f6ba14291d"}
 {"id": "098f327727da", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 2363, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de21cd17625292c0"}
 {"id": "0b76120ecfff", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 188, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3917b8bf238eee43"}
 {"id": "0b76120ecfff", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 588, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "8f78c6020e0fa73e"}
@@ -136,7 +136,7 @@
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "0607fcee80838b66"}
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "741ee8ea1dbd654d"}
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 534, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "2cb124d1ecbdb96c"}
-{"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 427, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "2741beedf1412bec"}
+{"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 379, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "fd5d3ff536aabb32"}
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 192, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "3bf2fc1150d45de5"}
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 320, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "80f93b4117e8a228"}
 {"id": "0fe92f8e7486", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 90, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "ef45f6d4fac9fac6"}
@@ -156,7 +156,7 @@
 {"id": "10b4687f53c8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 18, "tecken": 313, "källa": "text", "series_ok": false, "serie_prövas": false, "text_hash": "04133cdfdff31b6b"}
 {"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 189, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "12914c1504c4bd95"}
 {"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 124, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "74e9604261421f14"}
-{"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 764, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "da9e852ae534d34b"}
+{"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 574, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c0084c80c7ff94b3"}
 {"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 5, "tecken": 86, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "962ce8b4c9b5084a"}
 {"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 187, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a39796bec23244fc"}
 {"id": "111fe3df2737", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 7, "tecken": 247, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "39c6d689ad40116a"}
@@ -185,7 +185,7 @@
 {"id": "13df613f9802", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 221, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "5a2ad734101699e8"}
 {"id": "13df613f9802", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3174281876794c93"}
 {"id": "13df613f9802", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 353, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "866c063c9f57e748"}
-{"id": "13df613f9802", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 629, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "644704428ac07175"}
+{"id": "13df613f9802", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 564, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "8be9649a327874a6"}
 {"id": "18aabde3fab2", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 190, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3ebdcd944f0c5ffe"}
 {"id": "18aabde3fab2", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 248, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "df92657a006d573c"}
 {"id": "18aabde3fab2", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 252, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "8ed54ddba103d378"}
@@ -202,7 +202,7 @@
 {"id": "18aabde3fab2", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 14, "tecken": 1276, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "0a2b1d3bf5a7379e"}
 {"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 189, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "893b7bc49df7e72c"}
 {"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 124, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "74e9604261421f14"}
-{"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 579, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "85334f2f97cfef2c"}
+{"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 407, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "5ef38cff3ca2e39b"}
 {"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 209, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "c2f8eac0215d590d"}
 {"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 5, "tecken": 224, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "35e6e4f282d8982e"}
 {"id": "1948e37b26fc", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 158, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "eb5af2e87eaeb859"}
@@ -329,7 +329,7 @@
 {"id": "216c6e41e29b", "prövningsgrupp": "Hallands län", "villkorsnummer": 11, "tecken": 95, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "2774d7f1d1a0dc5c"}
 {"id": "216c6e41e29b", "prövningsgrupp": "Hallands län", "villkorsnummer": 12, "tecken": 1406, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "e93c6ddb94f9faa0"}
 {"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 169, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "29d03e43ab18bc15"}
-{"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 278, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "10556381cd856e41"}
+{"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "346d1042dca51876"}
 {"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 3, "tecken": 270, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "e792106e2136db81"}
 {"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 4, "tecken": 288, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9cf16097dcc94691"}
 {"id": "21bde06c76ea", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 5, "tecken": 115, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4fcfc2636d930f8b"}
@@ -371,7 +371,7 @@
 {"id": "24ab1609a6cd", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 9, "tecken": 370, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "193c68a694600a33"}
 {"id": "24ab1609a6cd", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 10, "tecken": 596, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "655897ace29f400d"}
 {"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 192, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "a091042fe4bd6484"}
-{"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 560, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "c3009b10ca2b7818"}
+{"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 452, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "901cf5ca9749241b"}
 {"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 82, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "d8542f3cdba974f3"}
 {"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 649, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "13ec8b696e797a98"}
 {"id": "24fa29afced5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 224, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "36c6f05a10d12f2d"}
@@ -397,7 +397,7 @@
 {"id": "253fd3e4bff7", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 12, "tecken": 330, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "fb51ab4d96d95216"}
 {"id": "253fd3e4bff7", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 13, "tecken": 903, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "b2e5dce85cb099c4"}
 {"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 1, "tecken": 174, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "30839851fe84a888"}
-{"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 2, "tecken": 604, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "0123f311f8130d02"}
+{"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 2, "tecken": 430, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9c02edb42c401d13"}
 {"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 3, "tecken": 259, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f547ee6434d691a4"}
 {"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 4, "tecken": 125, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4bfaf762f546ccc6"}
 {"id": "258af83170ca", "prövningsgrupp": "Dalarnas län och Gävleborgs län", "villkorsnummer": 5, "tecken": 84, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "24d139e0e15814ac"}
@@ -502,7 +502,7 @@
 {"id": "324fffaa3aeb", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 18, "tecken": 718, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "d77f9dd8c8cf0a1f"}
 {"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 189, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "893b7bc49df7e72c"}
 {"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 124, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "74e9604261421f14"}
-{"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 476, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "aea89923bd408ff8"}
+{"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 295, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1b2fcda8115996a5"}
 {"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 467, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "38c5434288eea618"}
 {"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 8, "tecken": 132, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fa8e3f3ab628bf8b"}
 {"id": "349f6ac370ab", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 1030, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de54e725d9835446"}
@@ -583,7 +583,7 @@
 {"id": "378129cc4495", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 192, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "a091042fe4bd6484"}
 {"id": "378129cc4495", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 150, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "99ad133bc3fa1df3"}
 {"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 214, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "7fce6e8cccd52a0d"}
-{"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 710, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b3245115f5c87520"}
+{"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 461, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "49b317daa3e8d616"}
 {"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 261, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "408c007463472f76"}
 {"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 146, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "61d9dbab8e672260"}
 {"id": "38358851cc85", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 212, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3b6f2c82bc0fc73e"}
@@ -622,14 +622,14 @@
 {"id": "38cec8b43c23", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 9, "tecken": 79, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "2f3aafebfb76e5b0"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 227, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e60fb9c0af2218ad"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "741ee8ea1dbd654d"}
-{"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 684, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4ea9c9f9422b563e"}
+{"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 636, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8c9434427383026d"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 10, "tecken": 79, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "5a4f98bb0a52699d"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 11, "tecken": 173, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "707b7193edcbe098"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 12, "tecken": 478, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fdf5815783ffa9b8"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 13, "tecken": 171, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a7284038c06f4137"}
 {"id": "38e53a4441ba", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 14, "tecken": 647, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d1fcf3187a7fabf0"}
 {"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 210, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "d2d9dc8540eb63d1"}
-{"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 389, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4254e9c682f10eb6"}
+{"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 151, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "ff42abfece08ecf6"}
 {"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 344, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "e75ead4bdb1d67e3"}
 {"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 183, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "aee6949befed6edc"}
 {"id": "3af32e28bd6c", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 610, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "20aeaf3140c43d1d"}
@@ -680,7 +680,7 @@
 {"id": "419ae6f109a7", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 19, "tecken": 351, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "160646c23cb9e5e1"}
 {"id": "419ae6f109a7", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 20, "tecken": 1160, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3e73c8fc6fb6b633"}
 {"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 192, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a091042fe4bd6484"}
-{"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 571, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8ad9f60d26e0adca"}
+{"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 331, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a00590c5bcc19163"}
 {"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 2900, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f5735b694c8c452c"}
 {"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 11, "tecken": 124, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8affe6b28bee4e58"}
 {"id": "41f823ea9e27", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 12, "tecken": 231, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "36f76255268cb220"}
@@ -751,7 +751,7 @@
 {"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 3, "tecken": 144, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3fc1742b58994d2d"}
 {"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 4, "tecken": 161, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "85d5e37542be01a9"}
 {"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 5, "tecken": 176, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1b7e9af5c084c4cf"}
-{"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 6, "tecken": 298, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "47afab357b31e176"}
+{"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 6, "tecken": 136, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "388d138e48aed369"}
 {"id": "47e4a0500a8b", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 12, "tecken": 2241, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f4cbe0d798ffa540"}
 {"id": "480f7d732838", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 174, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "30839851fe84a888"}
 {"id": "480f7d732838", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 203, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3f5108ffeb72b2c0"}
@@ -768,7 +768,7 @@
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 225, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1246b343e523aff3"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de869bb2e98af223"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 162, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "705c570d2ddd83c2"}
-{"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 687, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "0842e289cd67338a"}
+{"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 639, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "379186e79bc0be00"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 310, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a68e7a290a75ffc2"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 249, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "13b3f49b5769c2d7"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 320, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "80f93b4117e8a228"}
@@ -784,7 +784,7 @@
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 19, "tecken": 331, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "7fb897b2f64062c4"}
 {"id": "486f0758082c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 20, "tecken": 775, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "bd72163b3c1c265f"}
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 191, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "9db043384fa3125c"}
-{"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 411, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "493bd7c9aaf79e53"}
+{"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 312, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "1c7f7e17cee503bb"}
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 200, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "b23b3e8c4ca5c851"}
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 303, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "78e66444268571f5"}
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 269, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "c99ecef5fbae24cd"}
@@ -798,7 +798,7 @@
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 13, "tecken": 171, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "ea9d4c6642865a6c"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 190, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4b0de8a85cc818aa"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
-{"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 326, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "87e8f879b14a4dff"}
+{"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 287, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8217bf59cb2263d8"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 267, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "28ff2e825aeab691"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 81, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4b4d9f965e7add89"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 425, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9981ec81972add58"}
@@ -848,7 +848,7 @@
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 259, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "acf1e43dabb83e8a"}
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 167, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "595564ff96f51ce7"}
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 3, "tecken": 167, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "801804dacbcb9f46"}
-{"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 4, "tecken": 432, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9c6caaa7241dd730"}
+{"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 4, "tecken": 271, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "d260b25ee68dd87e"}
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 5, "tecken": 596, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7ac3701a753827f4"}
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 6, "tecken": 497, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "0f46616843ac3bd1"}
 {"id": "4e6c36e66314", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 7, "tecken": 208, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f4008e15e914e355"}
@@ -912,7 +912,7 @@
 {"id": "574eb0e55a61", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 663, "källa": "text", "series_ok": true, "serie_prövas": false, "text_hash": "2a224b6df220aed1"}
 {"id": "574eb0e55a61", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 8, "tecken": 117, "källa": "text", "series_ok": true, "serie_prövas": false, "text_hash": "d228ecaeea0f5e75"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 124, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "74e9604261421f14"}
-{"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 308, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f84dea06674ebd17"}
+{"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 125, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "019eea03b76deb6d"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 8, "tecken": 104, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a20b569fc05305a1"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 9, "tecken": 219, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4b5ccd26545d618c"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 406, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e9a66d374621114f"}
@@ -922,7 +922,7 @@
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 16, "tecken": 901, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "93b85225e0db872f"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 19, "tecken": 234, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "65fedb0fb01b0370"}
 {"id": "58e826c83fda", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 98, "tecken": 462, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "739c7927a7b78a45"}
-{"id": "59e804ecc8e4", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 427, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "314d6353a8bbad28"}
+{"id": "59e804ecc8e4", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 190, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "3ebdcd944f0c5ffe"}
 {"id": "59e804ecc8e4", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 150, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "99ad133bc3fa1df3"}
 {"id": "5b8568e71985", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 203, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3da9ec8c8db55960"}
 {"id": "5b8568e71985", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 274, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3765a580cbc691b5"}
@@ -972,7 +972,7 @@
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "69cff741d8c58466"}
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "de869bb2e98af223"}
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 268, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "262fcec8231b2a04"}
-{"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 687, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "20ca64db296d4099"}
+{"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 639, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "898af03920f446d3"}
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 324, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "16f7f17ced74879a"}
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 239, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "6eb25ac2733b5771"}
 {"id": "631361b2b16e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 320, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "80f93b4117e8a228"}
@@ -1026,7 +1026,7 @@
 {"id": "662c5ebb921f", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 20, "tecken": 688, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "b7519a324a3dff8f"}
 {"id": "662c5ebb921f", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 24, "tecken": 1228, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "1666fa9111accc1b"}
 {"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "cf23def432c1e0b4"}
-{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 843, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "205d54d6c95f9f35"}
+{"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 595, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fb78663f6d1c20ed"}
 {"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 14, "tecken": 2208, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "bad35de806a48180"}
 {"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 15, "tecken": 211, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ccd467f02f45faa7"}
 {"id": "686fac957352", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 16, "tecken": 609, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f5f439d2abc90a03"}
@@ -1055,7 +1055,7 @@
 {"id": "69b1fe6ee36d", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 3, "tecken": 107, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "61346d260ff6a7fd"}
 {"id": "69b1fe6ee36d", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 56, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f71f25dd4a0fb12c"}
 {"id": "69b1fe6ee36d", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 153, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "cde5eb840145de62"}
-{"id": "69b1fe6ee36d", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 6, "tecken": 537, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8c1cd89320a29bfb"}
+{"id": "69b1fe6ee36d", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 6, "tecken": 410, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "c21093920d07c171"}
 {"id": "6b8a5b8154a3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 174, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "30839851fe84a888"}
 {"id": "6b8a5b8154a3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 289, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "716a3e83761fcde6"}
 {"id": "6b8a5b8154a3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 116, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "07d9427c76e74076"}
@@ -1078,7 +1078,7 @@
 {"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 1, "tecken": 173, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "75ad0b9107af5472"}
 {"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 2, "tecken": 208, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "434c43587368ffbf"}
 {"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 3, "tecken": 156, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "21cf62e12e613879"}
-{"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 4, "tecken": 413, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "20e0bbeef6eb37ef"}
+{"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 4, "tecken": 282, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "da43a5aff7580bd4"}
 {"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 5, "tecken": 66, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d30fc6d3485cd4a2"}
 {"id": "6f5ac43b3c20", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 10, "tecken": 2062, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e310a24e70de6428"}
 {"id": "6f97da7fed4c", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ad9288783474d51b"}
@@ -1131,7 +1131,7 @@
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 123, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "756b2e64a0f4b08e"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 156, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "12290bbaab87e086"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 135, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "19c044a41d4aa7b0"}
-{"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 418, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "dc5d0d6e0bd07663"}
+{"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 379, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "5ed8a0159535fd3e"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 290, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "afba1bfd1f24896a"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 8, "tecken": 171, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "d07ec8e87bb753b8"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 9, "tecken": 106, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "fd78c52971e0920d"}
@@ -1187,7 +1187,7 @@
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ad9288783474d51b"}
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de869bb2e98af223"}
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 343, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "9bae9296ecca0623"}
-{"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 446, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d48482a31851dd7c"}
+{"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 398, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4a5fe61344b4efe2"}
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 197, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e943470b8727a515"}
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 150, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "46bdb731109f8305"}
 {"id": "777f4fcb9746", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 8, "tecken": 118, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "95e819d73160246d"}
@@ -1198,7 +1198,7 @@
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 155, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3d96578dc78c49d1"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 59, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b223c42ac98c8ee6"}
-{"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 335, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8eb047dbf3f0017a"}
+{"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 296, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3a261faae2e93832"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 16, "tecken": 2294, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fdcc2af962b014c1"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 17, "tecken": 271, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "2ca43855b0c00b87"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 18, "tecken": 958, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "083145727daeac80"}
@@ -1255,7 +1255,7 @@
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "de869bb2e98af223"}
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 162, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "705c570d2ddd83c2"}
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 365, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "af1f428fe9ac0fc1"}
-{"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 290, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "dfb46c99dc6eba0b"}
+{"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 242, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "75a64e67244ef1cf"}
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 303, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "cf7b4d8a43e5e84a"}
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 513, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "d8359a4fcb05eadf"}
 {"id": "7e13889f1c04", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 8, "tecken": 171, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "46cb52a9912d604c"}
@@ -1283,7 +1283,7 @@
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 192, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4d9f7f977b09ff40"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 155, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3d96578dc78c49d1"}
-{"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 247, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "6d5f34ca12357365"}
+{"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 208, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "565332a7a9e90c6b"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 16, "tecken": 2354, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ac0fa719ded4cf9d"}
 {"id": "82c38262d46d", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 183, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "cc6af19b9ae635af"}
 {"id": "82c38262d46d", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 545, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "711687a705726e7a"}
@@ -1304,11 +1304,11 @@
 {"id": "8532a044b25e", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 13, "tecken": 1060, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "16e9aaefe30110f6"}
 {"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 207, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1febde8a62700870"}
 {"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 608, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "5aa1266ed1ec4795"}
-{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 685, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "990013dd564d4a0a"}
+{"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 433, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f39b539247854e97"}
 {"id": "85f59705885d", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 1794, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c4005137e7c4a311"}
 {"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "cf23def432c1e0b4"}
 {"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 734, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "628b6b089f720604"}
-{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 475, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c8a87c175a59ca9f"}
+{"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 225, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "09cffb1cd86b5910"}
 {"id": "876e9df5fd03", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 10, "tecken": 1830, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f8e5650e594f4cee"}
 {"id": "8a999cc58db2", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 197, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "b24c0da3affd3533"}
 {"id": "8a999cc58db2", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 113, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "046af640f9f32b0a"}
@@ -1331,7 +1331,7 @@
 {"id": "8c3eb858f38a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 15, "tecken": 136, "källa": "text", "series_ok": false, "serie_prövas": false, "text_hash": "fc5c17049242e95c"}
 {"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 174, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "30839851fe84a888"}
 {"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 270, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "e83467e9c84d557f"}
-{"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 285, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "7d121028bcac3d17"}
+{"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 104, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "5d019afbd5897606"}
 {"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 333, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "e627d74274ca70ed"}
 {"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 5, "tecken": 266, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "f0373b830f890414"}
 {"id": "8c6fb0989be8", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 391, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "6e90d83064941cb1"}
@@ -1357,7 +1357,7 @@
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "741ee8ea1dbd654d"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 162, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "705c570d2ddd83c2"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 365, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "af1f428fe9ac0fc1"}
-{"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 246, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "076ba0a94eb189ee"}
+{"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 198, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "345e941851635061"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 233, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7ed3167589de5b80"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 528, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "1de954f6c8506861"}
 {"id": "9327fb75e98f", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 8, "tecken": 461, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "de7cc40986e31bff"}
@@ -1413,12 +1413,12 @@
 {"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 2, "tecken": 173, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "648bb7f3eed39bf4"}
 {"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 3, "tecken": 253, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "7017ab575490c766"}
 {"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 125, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "783239f1de97c34a"}
-{"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 389, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "87457f5d3344f521"}
+{"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 263, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4987a777ebec634f"}
 {"id": "9814c96c2381", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 12, "tecken": 1743, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "5d1c4fa4ffc5489d"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 1, "tecken": 173, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "75ad0b9107af5472"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 2, "tecken": 173, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "648bb7f3eed39bf4"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 3, "tecken": 254, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f92d4e2e78c344b6"}
-{"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 291, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "307b9d7005bbcb37"}
+{"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 165, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9558e9de798ed45b"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 655, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "043a16f8a7a338f5"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 6, "tecken": 321, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "d9b851786ea6eb85"}
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 7, "tecken": 161, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "117e6e745c6f02c0"}
@@ -1430,7 +1430,7 @@
 {"id": "9ba369229e82", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 13, "tecken": 370, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8c41c02ce98bd65e"}
 {"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 1, "tecken": 174, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "30839851fe84a888"}
 {"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 2, "tecken": 239, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "cae4a99a9896310e"}
-{"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 3, "tecken": 246, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "404741b5b2d5d35e"}
+{"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 3, "tecken": 87, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4812b164161b65f1"}
 {"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 4, "tecken": 69, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fc55493dd2d6fc11"}
 {"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 10, "tecken": 2067, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "5e955042c727c1c6"}
 {"id": "9e42f92ac696", "prövningsgrupp": "Örebro län och Värmlands län", "villkorsnummer": 16, "tecken": 1931, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b9e0f1486d05e679"}
@@ -1544,7 +1544,7 @@
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 59, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "b223c42ac98c8ee6"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 142, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "abb45032d780fceb"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 130, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "cacf704d77d34cb6"}
-{"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 324, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8283bda90f8e450b"}
+{"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 285, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "42b8a5701e7d21ac"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 8, "tecken": 139, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "0d5b13d293dbb28a"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 9, "tecken": 161, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7172ff82d3a104f3"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 10, "tecken": 167, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f908921361058061"}
@@ -1595,7 +1595,7 @@
 {"id": "aa2cbc78989b", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 15, "tecken": 433, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "ee6357d46a12cc39"}
 {"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 210, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c9980840425808b8"}
 {"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 586, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e697ff604025c6a3"}
-{"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 609, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "64ef3eb6eab60c7f"}
+{"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 433, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "bf1baac4bd21bff8"}
 {"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 12, "tecken": 2658, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "9bd7c937c4b64011"}
 {"id": "aa9349a67b80", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 18, "tecken": 2746, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "cad0cbefd92a844f"}
 {"id": "ac75496aec5f", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 173, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "75ad0b9107af5472"}
@@ -1678,7 +1678,7 @@
 {"id": "ad86286fe6b3", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 18, "tecken": 209, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "f1474a75249951c6"}
 {"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 209, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "78fc3fac75cca8e2"}
 {"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 610, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9826ed7532eddc67"}
-{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 774, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "023ddd1308743064"}
+{"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 525, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "868749d3797378d1"}
 {"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 166, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "9910f4540843b7c7"}
 {"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 133, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "96d85f8d06f4c180"}
 {"id": "aee6ec54ed25", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 6, "tecken": 131, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "0e7f4160baeba409"}
@@ -1700,7 +1700,7 @@
 {"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 2, "tecken": 133, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "2937ec7b7f253ffe"}
 {"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 3, "tecken": 254, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de0ab07c56772832"}
 {"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 257, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "0036154daf2552c7"}
-{"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 465, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e452483cb2d76189"}
+{"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 339, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8fdca5cffc3afa94"}
 {"id": "b525da45015f", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 10, "tecken": 1649, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "59e3855195664607"}
 {"id": "b713c795e6cc", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 1, "tecken": 222, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "55404f6a3315a4ba"}
 {"id": "b713c795e6cc", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 2, "tecken": 489, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "81eb0f8ce6748e39"}
@@ -1726,7 +1726,7 @@
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 152, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "1ff7ee6fee3f90b5"}
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 278, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "a85989b67dbf9eeb"}
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 3, "tecken": 91, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "18206b713912d9d6"}
-{"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 349, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "9833d3b05cf7a0fb"}
+{"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 4, "tecken": 182, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "4f1e12f9f0a2fb1b"}
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 2166, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f5aad0325d457af8"}
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 15, "tecken": 984, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f10b298931eb6052"}
 {"id": "b7fcf6736d9c", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 19, "tecken": 1439, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "e0ceaeacb9e68878"}
@@ -1785,7 +1785,7 @@
 {"id": "bfe5a33606e9", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 3, "tecken": 56, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f71f25dd4a0fb12c"}
 {"id": "bfe5a33606e9", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 4, "tecken": 80, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8bb7cd2147e0d0f1"}
 {"id": "bfe5a33606e9", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 5, "tecken": 153, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "cde5eb840145de62"}
-{"id": "bfe5a33606e9", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 6, "tecken": 308, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "46337de5192f7a65"}
+{"id": "bfe5a33606e9", "prövningsgrupp": "Uppsala län, Västmanlands län och Södermanlands län", "villkorsnummer": 6, "tecken": 182, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "1c50ef9264773287"}
 {"id": "c17f7c9f7c19", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 205, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "f50709388365edf0"}
 {"id": "c17f7c9f7c19", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 258, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "c578f5ee269a54d4"}
 {"id": "c17f7c9f7c19", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 252, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "8ed54ddba103d378"}
@@ -1830,7 +1830,7 @@
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "ad9288783474d51b"}
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "741ee8ea1dbd654d"}
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 534, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "f7e12cac002e42a5"}
-{"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 422, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7fe73b4a726d734b"}
+{"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 4, "tecken": 374, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "71ffa0860640c663"}
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 192, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "3bf2fc1150d45de5"}
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 320, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "80f93b4117e8a228"}
 {"id": "c357ac195bc7", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 90, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "ef45f6d4fac9fac6"}
@@ -1940,7 +1940,7 @@
 {"id": "ce247b90da2d", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 19, "tecken": 735, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "804dd5cb21f60385"}
 {"id": "ce247b90da2d", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 20, "tecken": 420, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "ea5b39bf0562ee15"}
 {"id": "ce247b90da2d", "prövningsgrupp": "Kalmar län och Kronobergs län", "villkorsnummer": 21, "tecken": 1292, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "4452f3837c6e4f58"}
-{"id": "d1427f6e0278", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 450, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "b9dde9a6882f0d8a"}
+{"id": "d1427f6e0278", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 211, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "fefff984d1801381"}
 {"id": "d1427f6e0278", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 677, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "2b6456f39f5e8f90"}
 {"id": "d1427f6e0278", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 315, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "07619f981f8e5937"}
 {"id": "d1427f6e0278", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 104, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "c5a32d005044bc48"}
@@ -1988,7 +1988,7 @@
 {"id": "d2ca9bca4547", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 11, "tecken": 581, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3efd78348afd971a"}
 {"id": "d2ca9bca4547", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 12, "tecken": 695, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "f246bba678c8572f"}
 {"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 1, "tecken": 154, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "141c2dcfc9287f55"}
-{"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 457, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "cb94964475475646"}
+{"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 2, "tecken": 308, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "476c0659f7103f63"}
 {"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 6, "tecken": 1119, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ef8e0d400571ce2b"}
 {"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 10, "tecken": 786, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "d8fe05dd1b3045d9"}
 {"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 11, "tecken": 490, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8d3ba1dde5dd735b"}
@@ -1998,7 +1998,7 @@
 {"id": "d5d6092cea4a", "prövningsgrupp": "Västra Götalands län", "villkorsnummer": 15, "tecken": 417, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "ba06c677255a5449"}
 {"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "0607fcee80838b66"}
 {"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 125, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "de869bb2e98af223"}
-{"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 651, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "17ddf01c83c74183"}
+{"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 603, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f8f75ca18db75202"}
 {"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 13, "tecken": 2756, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "8ab6de2e1b0f2d63"}
 {"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 14, "tecken": 144, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "89561bc43cacf840"}
 {"id": "d9029b92288e", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 15, "tecken": 118, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "95e819d73160246d"}
@@ -2125,7 +2125,7 @@
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 1, "tecken": 173, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "75ad0b9107af5472"}
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 2, "tecken": 76, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "a9ed1ac1e9febcd7"}
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 3, "tecken": 139, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "14df00abd44f24d3"}
-{"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 4, "tecken": 354, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "53b586aa6117084b"}
+{"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 4, "tecken": 272, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "9956762a9ac47431"}
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 6, "tecken": 530, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "b6e017a12358e787"}
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 5, "tecken": 312, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "9e0ef36fdb75e064"}
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 6, "tecken": 86, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "d9da862a1e77d1d4"}
@@ -2142,7 +2142,7 @@
 {"id": "e484daf2fbe6", "prövningsgrupp": "Stockholms län och Gotlands län", "villkorsnummer": 17, "tecken": 1006, "källa": "text", "series_ok": false, "serie_prövas": true, "text_hash": "54f2cfb1fbf9e6ef"}
 {"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 1, "tecken": 224, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "56665d71833e465b"}
 {"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 2, "tecken": 111, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "741ee8ea1dbd654d"}
-{"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 529, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "3cae247a6cde98de"}
+{"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 3, "tecken": 481, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "96b357c59f8d758e"}
 {"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 5, "tecken": 282, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "f2df3e69059312c6"}
 {"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 6, "tecken": 475, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "710fe1d1c23e9c37"}
 {"id": "e707d9968fb0", "prövningsgrupp": "Östergötlands län och Jönköpings län", "villkorsnummer": 7, "tecken": 320, "källa": "ocr", "series_ok": false, "serie_prövas": true, "text_hash": "69ed491b24635f2f"}
@@ -2284,7 +2284,7 @@
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 1, "tecken": 246, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "37177ff984395d93"}
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 2, "tecken": 248, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "df92657a006d573c"}
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 3, "tecken": 439, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "db1ea2c60b70bb6f"}
-{"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 187, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "3022a979837b39f3"}
+{"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 4, "tecken": 135, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "60e38ddd1d2a3c41"}
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 5, "tecken": 117, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "7ae0e443b0b0a63b"}
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 6, "tecken": 362, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "592c502b179a5f19"}
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 7, "tecken": 236, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "b661e2b18816dc98"}
@@ -2296,7 +2296,7 @@
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 13, "tecken": 676, "källa": "text", "series_ok": true, "serie_prövas": true, "text_hash": "de9a000b22da2c33"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 190, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "4b0de8a85cc818aa"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
-{"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 482, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "73674cf45fc34073"}
+{"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 443, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7c22097ad650550e"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 194, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "7aee1fb5d25ced2f"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 169, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "a3438cd7b0e723dc"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 80, "källa": "ocr", "series_ok": true, "serie_prövas": true, "text_hash": "8def6371e57c73b7"}
