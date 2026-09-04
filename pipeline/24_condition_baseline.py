@@ -180,6 +180,36 @@ PAGE_FOOTER = re.compile(
 # the next one, which is how the decisions that amend a single condition are set.
 CONDITION_START = re.compile(r"^(\d{1,2})[.)]\s*(.*)$")
 
+# A section heading between two conditions, recognised by shape rather than by a
+# word list, so that a county's own wording is caught as well as the ones
+# VILLKORSSCHEMA section 2.2 lists. It is a short line that does not open a
+# condition, does not end like a sentence, and is followed by a line that does
+# open one. Before 5 September 2026 such a line was read as the tail of the
+# condition above it, which put the next section's heading inside 471 of 2 347
+# condition texts and lost the heading the schema asks for.
+HEADING_MAX_CHARS = 60
+HEADING_ENDINGS = (".", ":", ",", ";")
+
+# What such a line has to look like before it is recorded as a heading. The
+# structural rule above removes the line either way, since it is not part of the
+# condition; this decides whether it is also a name for what follows. The
+# exclusions are the page furniture the corpus actually carries, found by
+# reading the 231 candidates the structural rule produced on 5 September 2026:
+# page numbers as "2(16)", case numbers as "551-4691-17", facility numbers as
+# "1382-90-004", dates, and running headers naming the authority.
+NOT_A_HEADING = re.compile(
+    r"\d+\s*\(\s*\d+\s*\)"  # page number, "3 (17)"
+    r"|^\s*(sid|sida|s\.)\s*\d"  # "sid 2"
+    r"|\bdnr\b"
+    r"|\d{4}-\d{2}-\d{2}"  # a date
+    r"|\blänsstyrelsen\b"
+    r"|\|",
+    re.IGNORECASE,
+)
+# A heading is words. An identifier is digits with separators, and the two are
+# told apart by which of them the line is mostly made of.
+HEADING_MIN_LETTERS = 3
+
 
 def normalise(text: str) -> str:
     """Case folded with whitespace collapsed, and nothing else changed."""
@@ -240,30 +270,62 @@ def section(lines: list[str]) -> list[str]:
     return []
 
 
-def conditions(lines: list[str]) -> list[tuple[int, str]]:
-    """Number and text of every condition in the bounded section."""
-    found: list[tuple[int, str]] = []
+def between_conditions(line: str, following: str) -> bool:
+    """Whether a line sits between two conditions and belongs to neither."""
+    line = line.strip()
+    if not line or CONDITION_START.match(line):
+        return False
+    if len(line) > HEADING_MAX_CHARS or line.endswith(HEADING_ENDINGS):
+        return False
+    return bool(CONDITION_START.match(following.strip()))
+
+
+def is_heading(line: str) -> bool:
+    """Whether such a line names what the conditions below regulate."""
+    line = line.strip()
+    if NOT_A_HEADING.search(line):
+        return False
+    letters = sum(character.isalpha() for character in line)
+    digits = sum(character.isdigit() for character in line)
+    return letters >= HEADING_MIN_LETTERS and letters > digits
+
+
+def conditions(lines: list[str]) -> list[tuple[int, str, str | None]]:
+    """Number, text and heading of every condition in the bounded section."""
+    found: list[tuple[int, str, str | None]] = []
     number: int | None = None
     current: list[str] = []
-    for line in lines:
+    heading: str | None = None
+    for position, line in enumerate(lines):
+        following = lines[position + 1] if position + 1 < len(lines) else ""
         match = CONDITION_START.match(line)
         if match:
             if number is not None and current:
-                found.append((number, " ".join(current)))
+                found.append((number, " ".join(current), heading))
             number = int(match.group(1))
             current = [match.group(2)] if match.group(2) else []
+        elif between_conditions(line, following):
+            # The line belongs to what comes after it, so the condition above is
+            # closed here rather than swallowing it. Only a line that reads as a
+            # name is kept as the heading; a page number is dropped and leaves
+            # the previous heading standing.
+            if number is not None and current:
+                found.append((number, " ".join(current), heading))
+                number, current = None, []
+            if is_heading(line):
+                heading = line.strip()
         elif number is not None:
             if not line:
                 if current:
-                    found.append((number, " ".join(current)))
+                    found.append((number, " ".join(current), heading))
                 number, current = None, []
             else:
                 current.append(line)
     if number is not None and current:
-        found.append((number, " ".join(current)))
+        found.append((number, " ".join(current), heading))
     return [
-        (n, normalise(t))
-        for n, t in found
+        (n, normalise(t), h)
+        for n, t, h in found
         if MIN_CONDITION_CHARS <= len(normalise(t)) <= MAX_CONDITION_CHARS
     ]
 
@@ -382,11 +444,11 @@ def main() -> int:
         if not found:
             no_conditions += 1
             continue
-        ok = series_ok([n for n, _ in found])
+        ok = series_ok([n for n, _, _ in found])
         tested = kinds.get(path.stem, "") not in SERIES_NOT_TESTED
         if ok:
             clean.add(path.stem)
-        for number, body in found:
+        for number, body, heading in found:
             records.append(
                 {
                     "id": path.stem,
@@ -394,6 +456,11 @@ def main() -> int:
                     "villkorsnummer": number,
                     "tecken": len(body),
                     "källa": origin,
+                    # The section heading over this condition, verbatim and
+                    # nullable, which is the field VILLKORSSCHEMA section 2.2
+                    # asks for. It is the document's own word for what the
+                    # condition regulates.
+                    "rubrik": heading,
                     "series_ok": ok,
                     "serie_prövas": tested,
                     "text_hash": hashlib.sha256(body.encode("utf-8")).hexdigest()[:16],

@@ -886,7 +886,7 @@ class TestThePermitCorpusDecomposesAsDocumented:
 class TestTheConditionBaselineHoldsItsClaim:
     """The boilerplate null hypothesis fell, and the numbers must stay checkable.
 
-    docs/VERIFIERAT.md states that 35 per cent of conditions share text with
+    docs/VERIFIERAT.md states that 40 per cent of conditions share text with
     another decision and that reuse concentrates inside a permit division. If
     the segmenter drifts, those figures move and the claim silently changes,
     which is exactly the failure the retrain of Site Sentinel taught. The
@@ -925,6 +925,7 @@ class TestTheConditionBaselineHoldsItsClaim:
             "villkorsnummer",
             "tecken",
             "källa",
+            "rubrik",
             "series_ok",
             "serie_prövas",
         }
@@ -983,10 +984,10 @@ class TestTheConditionBaselineHoldsItsClaim:
         owners = self.owners(rows)
         shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
         repeated = sum(1 for r in rows if len(owners[r["text_hash"]]) > 1)
-        assert len(owners) == 1367
-        assert len(shared) == 220
-        assert repeated == 615
-        assert round(repeated / len(rows), 2) == 0.35
+        assert len(owners) == 1302
+        assert len(shared) == 237
+        assert repeated == 697
+        assert round(repeated / len(rows), 2) == 0.40
 
     def test_reuse_stays_inside_a_permit_division(self, conditions):
         groups = {r["id"]: r["prövningsgrupp"] for r in conditions}
@@ -1000,8 +1001,8 @@ class TestTheConditionBaselineHoldsItsClaim:
             )
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
-        assert inside["text"] == (206, 220)
-        assert inside["ocr"] == (43, 45)
+        assert inside["text"] == (222, 237)
+        assert inside["ocr"] == (48, 50)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

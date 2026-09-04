@@ -496,10 +496,34 @@ ut men bär ingen slutsats.
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 367 | 615 (35 %) | 70 % |
-| ur textlagret, obruten serie | 1 602 | 108 | 1 251 | 552 (34 %) | 71 % |
-| enbart OCR-lästa | 585 | 57 | 510 | 120 (21 %) | 80 % |
-| poolat, bär ingen slutsats | 2 347 | 180 | 1 827 | 797 (34 %) | 70 % |
+| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 302 | 697 (40 %) | 64 % |
+| ur textlagret, obruten serie | 1 602 | 108 | 1 187 | 632 (39 %) | 64 % |
+| enbart OCR-lästa | 585 | 57 | 504 | 131 (22 %) | 78 % |
+| poolat, bär ingen slutsats | 2 347 | 180 | 1 752 | 893 (38 %) | 67 % |
+
+**Rättelse 2026-09-05: avsnittsrubriken låg i villkorstexten.** Tabellen är
+omräknad. Före rättelsen stod huvudsiffran på 615 delade villkor, 35 procent,
+och 206 av 220 delade texter inom en prövningsgrupp. Rubriken mellan två villkor
+lades till det föregående villkorets text, i 471 av 2 347 villkor, och två
+likalydande villkor i olika beslut matchade därför inte när det ena följdes av
+en rubrik. Rubrikerna är dessutom det fält VILLKORSSCHEMA avsnitt 2.2 vill ha
+bevarat, så de gick förlorade två gånger om. Regeln som infördes är strukturell:
+en kort rad inne i avsnittet som inte inleder ett villkor, inte slutar som en
+mening och följs av ett numrerat villkor tillhör det som kommer efter den.
+**1 691 av 2 347 villkor bär nu sin rubrik, 161 olika.**
+
+**Båda de förregistrerade villkoren höll.** Inget beslut tappade villkor, och
+det okulära stickprovet på 25 av de 823 borttagna raderna innehöll ingen
+villkorstext: alla var antingen rubriker eller sidfotselement. Stickprovet
+fällde däremot en första version av regeln, som räknade sidnummer, diarienummer
+och anläggningsnummer som rubriker; 58 av 231 kandidater var sådana. Att ta bort
+raderna ur villkorstexten är rätt oavsett, så borttagningen behölls och en andra
+regel avgör vad som också får sparas som rubrik. Efter den finns noll
+identifierare bland de 161 rubrikerna.
+
+**Förutsägelsen slog in.** Antalet villkor och beslut står oförändrat, andelen
+delad text steg märkbart, och koncentrationen inom prövningsgrupp håller både
+riktning och p-värde.
 
 **Rättelse 2026-09-04: segmenteringen kände inte igen två sätt att öppna
 villkorsavsnittet.** Tabellen ovan är omräknad. Före rättelsen stod huvudsiffran
@@ -525,8 +549,8 @@ raden är identiska före och efter att 53 beslut lades till underlaget, vilket 
 ska vara, eftersom raden räknas på oförändrade dokument. Det är kontrollen på
 att OCR-tillskottet är additivt och inte har rört det som redan var mätt.
 
-**Nollhypotesen faller.** 1 147 av 1 762 villkor, 65 procent, förekommer i ett
-enda beslut, och medianbeslutet har egen text i 70 procent av sina villkor. Ett
+**Nollhypotesen faller.** 1 065 av 1 762 villkor, 60 procent, förekommer i ett
+enda beslut, och medianbeslutet har egen text i 64 procent av sina villkor. Ett
 villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
 är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
 ingenting annat normaliserat, siffervärden avsiktligt bevarade: **det kan bara
@@ -534,30 +558,30 @@ underskatta återanvändningen**, aldrig överskatta den. Ett segmenteringsfel s
 delar ett villkor i två drar åt samma håll, alltså mot mer skenbar egenart, så
 båda felkällorna gör slutsatsen försiktigare och ingen av dem gör den starkare.
 
-**Den delade texten är inte korta fragment.** Delade texter har median 210
-tecken mot 258 för de egna, och 6 av 220 ligger under 80 tecken. Det är hela
+**Den delade texten är inte korta fragment.** Delade texter har median 209
+tecken mot 257 för de egna, och 10 av 237 ligger under 80 tecken. Det är hela
 villkor som återanvänds, inte gemensamma formuleringar som halkat med.
 
 **Den återanvändning som finns är gruppintern, och det är inte en
-storlekseffekt.** Av de 220 texter som förekommer i mer än ett beslut stannar
-**206 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
-med prövningsgruppernas faktiska storlekar bevarade, väntas 25,9 och den 95:e
-percentilen ligger på 34; noll av 2 000 permutationer nådde 206 (`p < 0,0005`).
+storlekseffekt.** Av de 237 texter som förekommer i mer än ett beslut stannar
+**222 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
+med prövningsgruppernas faktiska storlekar bevarade, väntas 27,1 och den 95:e
+percentilen ligger på 35; noll av 2 000 permutationer nådde 222 (`p < 0,0005`).
 Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
 Götaland bär hälften av korpusen.
 
 **Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
 besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
-annat instrument. Där stannar **43 av 45 delade texter inom en enda
-prövningsgrupp** mot 5,5 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 43. Att andelen delad text är lägre i den mängden, 21 mot
-35 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
+annat instrument. Där stannar **48 av 50 delade texter inom en enda
+prövningsgrupp** mot 6,3 väntat under samma permutation, och noll av 2 000
+omfördelningar nådde 48. Att andelen delad text är lägre i den mängden, 22 mot
+40 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
 **Den konkurrerande förklaringen prövad.** Ett ändringsbeslut upprepar
 originalets villkor, och det skulle ge gruppintern återanvändning utan att någon
-mall finns. Den förklaringen räcker för par, som är 142 av de 220 klustren, men
-inte för de breda: den vidaste texten delas av **26 beslut, varav 24 i Västra
+mall finns. Den förklaringen räcker för par, som är 148 av de 237 klustren, men
+inte för de breda: den vidaste texten delas av **28 beslut, varav 24 i Västra
 Götalands län**, och den näst vidaste av 13 beslut, varav 7 i Örebro med
 Värmland. Ändringskedjor hos en och samma verksamhetsutövare blir inte 24
 beslut.
