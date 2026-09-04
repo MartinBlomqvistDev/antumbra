@@ -224,6 +224,13 @@ def conditions() -> list[dict]:
 
 
 @pytest.fixture(scope="module")
+def permit_types() -> list[dict]:
+    """One record per decision on the publisher's listing, with its own label."""
+    path = ROOT / "data" / "tillstand_typ.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def permits() -> list[dict]:
     """One record per downloaded permit decision."""
     path = ROOT / "data" / "tillstand_manifest.jsonl"
@@ -810,6 +817,56 @@ class TestManifestCoversTheDownloadedCorpus:
         assert all(re.fullmatch(r"[0-9a-f]{64}", m["sha256"]) for m in manifest)
         assert all(m["bytes"] > 0 for m in manifest)
         assert all(m["kind"] in {"report", "annex"} for m in manifest)
+
+
+class TestThePermitCorpusDecomposesAsDocumented:
+    """Check 2 in VILLKORSSCHEMA needs the corpus split by decision type.
+
+    The document states the expected split as "cirka 160/38/15/14" and the
+    figure sat in prose with nothing holding it: the harvest manifest carries a
+    hash and a permit division and no type at all. Step 31 takes the type from
+    the publisher's own link text, which is the same principle ADR-0007 applies
+    to annexes, and these pin what it found on 4 September 2026.
+
+    The corpus grows as decisions are published, so a difference here is a
+    finding about the source and not a broken test. The right response is to
+    read the new documents and move the number, never to widen the assertion.
+    """
+
+    def test_every_listed_decision_was_harvested(self, permit_types, permits):
+        assert len(permit_types) == 236
+        assert {r["id"] for r in permit_types} == {r["id"] for r in permits}
+        assert all(r["i_manifestet"] for r in permit_types)
+
+    def test_the_four_documented_types_hold(self, permit_types):
+        counted = Counter(r["typ"] for r in permit_types)
+        assert counted["tillstånd"] == 162
+        assert counted["ändring"] == 40
+        assert counted["förlängning"] == 15
+        assert counted["dom"] == 14
+
+    def test_the_three_types_the_document_did_not_count(self, permit_types):
+        # VILLKORSSCHEMA section 5 names igångsättning and upphävande among the
+        # kinds allowed to carry zero conditions but never counted them, and it
+        # does not mention the two condition decisions at all. They are pinned
+        # here so that the population is fully declared.
+        counted = Counter(r["typ"] for r in permit_types)
+        assert counted["villkor"] == 2
+        assert counted["igångsättning"] == 2
+        assert counted["upphävande"] == 1
+        assert sum(counted.values()) == 236
+
+    def test_no_label_fell_outside_the_mapping(self, permit_types):
+        assert [r["id"] for r in permit_types if r["typ"] == "annat"] == []
+
+    def test_an_unknown_wording_is_never_written_down(self, permit_types):
+        # The label is kept only where the mapping recognised it. An unknown
+        # wording is where a party's name could enter, so it is withheld.
+        for record in permit_types:
+            if record["typ"] == "annat":
+                assert record["etikett"] is None
+            else:
+                assert record["etikett"]
 
 
 class TestTheConditionBaselineHoldsItsClaim:

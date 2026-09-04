@@ -1159,6 +1159,58 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## Tillståndskorpusens typfördelning, verifierad 2026-09-04
+
+Kontroll 2 i `docs/VILLKORSSCHEMA.md` kräver att korpusen delas upp på
+beslutstyp och anger den väntade fördelningen som "länktexternas cirka
+160/38/15/14". Talet stod i prosa och fanns ingenstans i repot: manifestet från
+steg 23 bär identifierare, prövningsgrupp, storlek och kontrollsumma, men ingen
+typ. Steg 31 hämtar typen där dokumentet självt anger den, i länktexten på
+Jordbruksverkets sida, enligt samma princip som ADR-0007 tillämpar på bilagor.
+
+**Sidan och skörden stämmer exakt.** 236 beslut ligger på sidan och 236 finns i
+manifestet, identifierarna är desamma i båda, och ingenting har tillkommit eller
+försvunnit sedan hämtningen den 17 augusti 2026. Sidan listar 237 länkar,
+eftersom ett beslut förekommer två gånger under samma adress, vilket steg 23
+redan noterat.
+
+**Fjorton skrivningar, sju sorters beslut.**
+
+| Typ | Antal | Dokumenterat |
+| --- | --- | --- |
+| tillstånd | 162 | cirka 160 |
+| ändring | 40 | cirka 38 |
+| förlängning | 15 | 15 |
+| dom | 14 | 14 |
+| villkor | 2 | inte räknat |
+| igångsättning | 2 | inte räknat |
+| upphävande | 1 | inte räknat |
+
+Samtliga fyra dokumenterade tal håller, två av dem exakt. Skillnaderna på
+tillstånd och ändring beror på var gränsfallen läggs: en länk heter "Tillstånd
+samt återkallelse av del av tidigare tillstånd" och räknas som tillstånd, och
+fyra skrivningar utöver "Ändringstillstånd" betecknar ändringar, däribland en
+som delas av ett mjukt bindestreck och en som heter "Ändringsbeslut".
+
+**Tre typer som dokumentet inte räknade.** Två beslut om igångsättning, ett om
+upphävande av del av tillstånd och två som bara heter "Villkor" respektive
+"Slutliga villkor". Avsnitt 5 i VILLKORSSCHEMA nämner igångsättningsbeslut och
+upphävanden bland de typer som får sakna villkor, men räknar dem inte, och de
+två villkorsbesluten nämns inte alls. De är nu utskrivna, så att populationen
+är fullständigt deklarerad innan villkorsregistret byggs ovanpå den.
+
+**Vad steget inte gör.** Det säger ingenting om vad som står i dokumenten. Typen
+är utgivarens ord om handlingen, och den finns här för att kontroll 2 ska kunna
+köras och för att en textklassificerare senare ska ha ett oberoende facit att
+prövas mot.
+
+**En gräns som är värd att skriva ut.** Steget läser en levande sida vid varje
+körning, och korpusen växer när nya beslut publiceras. En avvikelse mot talen
+ovan är därför ett fynd om källan och inte ett trasigt test. Rätt åtgärd är att
+läsa de nya dokumenten och flytta talet, aldrig att vidga påståendet.
+
+---
+
 ## HFD-praxis som Kronoberg åberopar, prövad 2026-09-04
 
 Länsstyrelsen i Kronobergs beslut den 31 augusti 2026 åberopar fem avgöranden
