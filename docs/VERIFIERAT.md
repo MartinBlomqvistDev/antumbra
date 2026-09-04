@@ -1182,6 +1182,51 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## Prövotidsbesluten, en femte beslutsform, 2026-09-04
+
+De två beslut som utgivaren kallar "Villkor" och "Slutliga villkor" är lästa,
+och de visade sig höra ihop med ett av de nio ändringsbesluten. Alla tre är
+samma sak: ett beslut som avslutar en prövotid och fastställer de slutliga
+villkoren. En sökning på beslutsmeningen över hela korpusen ger fyra sådana
+beslut.
+
+| Id | Utgivarens etikett | Villkor beslutet sätter | Extraherade |
+| --- | --- | --- | --- |
+| `017a452fb59c` | Slutliga villkor | 14 och 15 | 1 |
+| `35ca1f69b1b1` | Villkor | 20 till 23 | 0 |
+| `af6b7fcd9ed7` | Ändringstillstånd | 33 och 34 | 0 |
+| `b3d95df7257f` | Ändringstillstånd | 30 till 32 | 0 |
+
+Besluten säger själva vad de gör: "Miljöprövningsdelegationen beslutar att
+fastställa följande slutliga villkor avseende rening av spol- och tvättvatten",
+"Utöver tidigare lämnade slutliga villkor gäller följande villkor: 14.",
+"Miljöprövningsdelegationen godkänner ingiven utredning och avslutar
+prövotiden". Alla fyra nämner prövotiden.
+
+**Formen är osynlig i projektets alla klassificeringar.** Utgivarens etiketter
+delar de fyra på tre olika namn. VILLKORSSCHEMA avsnitt 5 räknar upp vilka
+beslutstyper som får sakna villkor och nämner inte prövotidsbeslut. Steg 31:s
+sju typer har ingen plats för dem, så två hamnar under `villkor` och två under
+`ändring`.
+
+**Betydelsen är större än volymen.** Fyra av 236 beslut är lite, men ett
+prövotidsvillkor är det bindande villkoret: prövotiden finns för att frågan
+inte kunde avgöras när tillståndet gavs, och det slutliga villkoret ersätter
+den provisoriska föreskriften. Ett register som missar dem bär den provisoriska
+lydelsen där den gällande borde stå. Det gör felet till ett giltighetsfel.
+
+**Numreringen fortsätter grundtillståndets, precis som i ändringsbesluten.**
+Villkoren heter 14, 20 till 23, 30 till 32 och 33 till 34. Det bekräftar för
+tredje gången i dag att serien 1..N är fel kontroll för allt utom tillstånd och
+domar.
+
+**Minst tio villkor saknas i materialet av det här skälet.** Ett av fjorton
+extraheras. Ingen ändring är gjord; villkoret för en rättelse skrivs innan den
+körs, och den bör tas tillsammans med ändringsbesluten eftersom orsaken är
+densamma.
+
+---
+
 ## De nio sista ändringsbesluten lästa, och en rättelse av mitt eget svar
 
 De 31 ändringsbesluten utan extraherade villkor delades tidigare samma dag i
