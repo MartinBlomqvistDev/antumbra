@@ -478,10 +478,12 @@ inget numrerat villkor. Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt
 sifferserien 1..N, och varje beslut bär utfallet som `series_ok` och sin källa
 som `källa`.
 
-**Täckningen för själva huvudsiffran är däremot oförändrad.** 73 procent gäller
-segmenteringen, inte återanvändningsmåttet. Huvudsiffran räknas på de 120
-digitalt födda besluten, alltså 51 procent av korpusen, precis som före OCR:n.
-Det som tillkommit är en andra, separat mätning på 53 andra beslut.
+**Täckningen för själva huvudsiffran är däremot oförändrad.** Täckningstalet
+gäller segmenteringen, inte återanvändningsmåttet. Huvudsiffran räknades då på
+de 120 digitalt födda besluten, alltså 51 procent av korpusen, precis som före
+OCR:n, och det som tillkom var en andra, separat mätning på 53 andra beslut.
+Talen i det här stycket är från augusti; efter rättelsen den 4 september är de
+123 respektive 57.
 
 **OCR-läst text segmenteras sämre, och det är utskrivet i stället för utjämnat.**
 Obruten serie fås för 106 av 120 digitalt födda beslut, 88 procent, men bara 21
@@ -1240,8 +1242,9 @@ tillstånd med noll villkor är per definition en tyst trasig extraktion." Den h
 inte kunnat köras tidigare, eftersom typen per beslut saknades. Steg 32 kör den
 mot steg 31:s typer.
 
-**Täckningstalet 73 procent var sant och oanvändbart.** Steg 24 rapporterar att
-173 av 236 filer gick att segmentera. Uppdelat på typ säger materialet något
+**Täckningstalet 73 procent var sant och oanvändbart.** Steg 24 rapporterade då
+att 173 av 236 filer gick att segmentera; efter rättelsen samma dag är talet 180
+av 236. Uppdelat på typ säger materialet något
 annat:
 
 | Typ | Med villkor | Utan | Totalt | Noll tillåtet |
