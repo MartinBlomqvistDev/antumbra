@@ -25,13 +25,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DELIVERIES = ROOT / "data" / "leveranser"
 MANIFEST = ROOT / "data" / "leveranser_manifest.jsonl"
 
-# A delivery can arrive in any format, so nothing is skipped by an allowlist.
-# These few suffixes are the exception: no authority has ever sent an installer,
-# and a browser that saves one into this folder would otherwise put it in the
-# provenance record of the collection. It happened once, on 3 September 2026.
-# Skipped files are named on the way past rather than dropped in silence.
-NOT_A_DELIVERY = frozenset({".exe", ".msi", ".lnk", ".tmp", ".part", ".crdownload"})
-
 
 def sha256(path: Path) -> str:
     """The file's content hash."""
@@ -63,9 +56,6 @@ def main() -> int:
             if not path.is_file():
                 continue
             relative = path.relative_to(DELIVERIES).as_posix()
-            if path.suffix.lower() in NOT_A_DELIVERY:
-                print(f"not a delivery, skipped: {relative}")
-                continue
             digest = sha256(path)
             if relative in recorded:
                 if recorded[relative] != digest:
