@@ -1182,6 +1182,58 @@ får publiceras. Kvar står att bristmarkeringen inte är djurslagsuppdelad, och
 
 ---
 
+## De nio sista ändringsbesluten lästa, och en rättelse av mitt eget svar
+
+De 31 ändringsbesluten utan extraherade villkor delades tidigare samma dag i
+fyra grupper med ett sökuttryck, och nio blev oplacerade. De nio är nu lästa,
+alla i sin helhet. Samtliga tio citat nedan är verifierade ordagrant mot
+källdokumenten.
+
+**Rättelse av slutsatsen kl. 18:30.** Där står att en villkorsändring saknar
+numrerad serie och att "noll extraherade villkor är rätt svar". Det är riktigt
+för baselinemätningen, som mäter återanvändning av hela villkorsuppsättningar,
+och fel för registret. En villkorsändring skriver ut den ändrade lydelsen i sin
+helhet: "Miljöprövningsdelegationen bifaller delvis yrkandet om ändring av
+villkor 6 ... Villkoret ges följande lydelse: 6. Lagring av stallgödsel ska ske
+i gödselhus med tak, väggar och stängningsbara portar ...". Det är ett villkor
+med en ny lydelse och ett datum, alltså precis vad ett register med
+tidsdimension enligt VILLKORSSCHEMA avsnitt 2.5 ska bära. Rätt formulering är
+att besluten ligger utanför vad segmenteraren är byggd att hitta, inte att de
+saknar villkor.
+
+**Åtta av nio skriver ut minst ett villkors text.** Bara ett gör det inte.
+
+| Form | Antal | Beslutets egna ord |
+| --- | --- | --- |
+| ändrar ett namngivet villkor och skriver ut den nya lydelsen | 5 | "beslutar att ändra del av villkor 7 ... till följande lydelse" |
+| för över grundtillståndets villkor och ändrar samtidigt ett | 1 | "ska även gälla för ändringstillståndet. Villkor 2 ska dock ändras och ha nedanstående lydelse, samt ett nytt villkor" |
+| fastställer slutliga villkor efter prövotid | 1 | "godkänner ingiven utredning och avslutar prövotiden ... beslutar att fastställa följande slutliga villkor" |
+| meddelar ett enda villkor i löpande text | 1 | "Ändringen avser täckning vid lagring av gödsel" |
+| för över grundtillståndets villkor utan egna | 1 | "ska gälla även för detta tillstånd" |
+
+**Två av dem numrerar högt, som de föregående gjorde.** Prövotidsbeslutet sätter
+villkor 33 och 34. Det bekräftar mönstret från kontroll 1-avsnittet ovan och
+lägger till en form som inte var känd: ett beslut som avslutar en prövotid och
+fastställer slutliga villkor är inte ett ändringstillstånd i vanlig mening,
+men utgivaren har etiketterat det som ett.
+
+**Ett villkor skrivet i löpande text går inte att segmentera med nummerregeln.**
+I `28816f85c4d7` står villkoret som "Villkor 4, Gödsel från fjäderfä ska lagras
+på tät platta under tät täckning", alltså med komma efter numret i stället för
+punkt. Regeln `CONDITION_START` kräver punkt eller högerparentes. Gränsen är därmed
+känd och mätt.
+
+**Vad detta betyder för registret.** Av de 40 ändringsbesluten bär 9 en
+segmenterbar villkorsuppsättning. Av de 31 övriga är nu 16 lästa för hand, sju
+tidigare i dag och nio här, och **14 av de 16 skriver ut minst ett villkors
+lydelse**. De två som inte gör det för båda över grundtillståndets villkor utan
+att lägga till egna. De återstående 15 är placerade enbart med sökuttryck och
+inte lästa. Ett register som bara tar 1..N-listor missar varje ändrad lydelse i
+materialet. Ingen ändring är gjord i extraktionen; villkoret för en sådan ska
+skrivas innan den körs.
+
+---
+
 ## Kontroll 1 säger inte något om ändringsbeslut, 2026-09-04
 
 Handläsningen av ändringsbesluten visade att kontroll 1 tillämpas på handlingar
@@ -1237,7 +1289,10 @@ par namngivna villkor i ett tidigare tillstånd, med stöd av 24 kap. 8 § eller
 13 § miljöbalken. Formen är genomgående densamma: "Miljöprövningsdelegationen
 ändrar villkor 10 i tillståndet från den 8 oktober 2020", "Villkor 5 ändras till
 följande lydelse", "Miljöprövningsdelegationen upphäver villkor 4 och 18".
-Någon numrerad serie finns inte, och noll extraherade villkor är rätt svar.
+Någon numrerad serie finns inte, och noll extraherade villkor är rätt svar för
+baselinemätningen. **Rättat samma dag:** för registret är det fel svar, eftersom
+besluten skriver ut den ändrade lydelsen i sin helhet. Se avsnittet om de nio
+sista ändringsbesluten.
 
 **Ändringstillstånd som lägger till villkor, en av sju.** Beslutet meddelar nya
 villkor och numrerar dem vidare från grundtillståndet. I `982fb8530a1b` heter de
