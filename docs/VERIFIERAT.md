@@ -536,7 +536,7 @@ bara används när ingen rubrikrad finns i dokumentet, så att inget beslut som
 redan segmenterade kan förlora ett villkor på dem.
 
 **Villkoret för att behålla ändringen skrevs innan den kördes** och står i
-protokollloggen 2026-09-04 kl. 16:00: inget beslut fick tappa villkor. Utfallet
+protokollloggen som en egen rad: inget beslut fick tappa villkor. Utfallet
 blev sju nya beslut och noll som tappade. Fyra av de sju bär bruten sifferserie
 och är därmed flaggade av instrumentet självt, alltså utanför den rena
 delmängden. En av förutsägelserna slog fel och redovisas som sådan: andelen
@@ -1348,8 +1348,8 @@ fyra grupper med ett sökuttryck, och nio blev oplacerade. De nio är nu lästa,
 alla i sin helhet. Samtliga tio citat nedan är verifierade ordagrant mot
 källdokumenten.
 
-**Rättelse av slutsatsen kl. 18:30.** Där står att en villkorsändring saknar
-numrerad serie och att "noll extraherade villkor är rätt svar". Det är riktigt
+**Rättelse av slutsatsen om de sju handlästa ändringsbesluten.** Där står
+att en villkorsändring saknar numrerad serie och att "noll extraherade villkor är rätt svar". Det är riktigt
 för baselinemätningen, som mäter återanvändning av hela villkorsuppsättningar,
 och fel för registret. En villkorsändring skriver ut den ändrade lydelsen i sin
 helhet: "Miljöprövningsdelegationen bifaller delvis yrkandet om ändring av
