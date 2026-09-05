@@ -329,6 +329,8 @@ NOT_A_HEADING = re.compile(
 # A heading is words. An identifier is digits with separators, and the two are
 # told apart by which of them the line is mostly made of.
 HEADING_MIN_LETTERS = 3
+# A sentence ending and a heading on one line, split at the full stop.
+GLUED_HEADING = re.compile(r"^(.*?[a-zåäö])\.\s*([A-ZÅÄÖ(].*)$")
 
 
 def normalise(text: str) -> str:
@@ -400,10 +402,29 @@ def between_conditions(line: str, following: str) -> bool:
     return bool(CONDITION_START.match(following.strip()))
 
 
+def split_heading(line: str) -> tuple[str, str]:
+    """A line that is the tail of one sentence followed by the next heading.
+
+    The text layer sometimes ends a condition and opens the next heading on the
+    same line, "uppstår.Lagring av gödsel och spolvatten". The part before the
+    full stop belongs to the condition above and the part after is the heading;
+    until 5 September 2026 both were thrown away, which cut 25 conditions short
+    and stored the join as their heading. Returns the tail and the heading, and
+    an empty tail when the line is an ordinary heading.
+    """
+    match = GLUED_HEADING.match(line.strip())
+    if not match:
+        return "", line.strip()
+    return match.group(1) + ".", match.group(2).strip()
+
+
 def is_heading(line: str) -> bool:
     """Whether such a line names what the conditions below regulate."""
     line = line.strip()
-    if NOT_A_HEADING.search(line):
+    if NOT_A_HEADING.search(line) or page_head(line)[0]:
+        # A running head is never a heading, however it is met. The structural
+        # rule sees the line only when a numbered condition follows it, and
+        # there VÄSTRA GÖTALANDS LÄN looked like a name for what came next.
         return False
     letters = sum(character.isalpha() for character in line)
     digits = sum(character.isdigit() for character in line)
@@ -424,7 +445,10 @@ def page_head(line: str) -> tuple[bool, bool]:
     named = False
     for word in words:
         bare = word.lower().strip(".,:;()")
-        if bare in PAGE_HEAD_WORDS:
+        # Also without a final s, so that the genitive in a running head is
+        # recognised. VÄSTRA GÖTALANDS LÄN stood as the heading of nine
+        # conditions because Götalands was not the word in the list.
+        if bare in PAGE_HEAD_WORDS or bare.removesuffix("s") in PAGE_HEAD_WORDS:
             named = True
         elif not PAGE_HEAD_TOKEN.match(word):
             return False, False
@@ -479,11 +503,14 @@ def conditions(lines: list[str]) -> list[tuple[int, str, str | None]]:
             # closed here rather than swallowing it. Only a line that reads as a
             # name is kept as the heading; a page number is dropped and leaves
             # the previous heading standing.
+            tail, name = split_heading(line)
             if number is not None and current:
+                if tail:
+                    current.append(tail)
                 found.append((number, " ".join(current), heading))
                 number, current = None, []
-            if is_heading(line):
-                heading = line.strip()
+            if is_heading(name):
+                heading = name
         elif number is not None:
             # A page break, met either as the empty line between two pages or
             # as the running head itself, since the text layer does not always

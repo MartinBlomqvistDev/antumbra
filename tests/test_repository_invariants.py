@@ -924,12 +924,20 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
         # monitoring. A drop here means the heading rule stopped firing. It was
         # 1 691 under 161 headings until check 3 showed that 36 of them were
         # running heads: Miljöprövningsdelegationen, Anläggningsnummer, Örebro
-        # län, Aktbilaga 23, Skåne. Those are gone and no document word is.
+        # län, Aktbilaga 23, Skåne. Reading all 155 that survived, before the
+        # typology could be built on them, found seven more: a county's running
+        # head in the genitive, and six headings with the tail of the previous
+        # sentence glued in front of them. 148 now, and no document word lost.
         headings = [r["rubrik"] for r in register if r["rubrik"]]
         assert len(headings) == 1655
-        assert len(set(headings)) == 155
+        assert len(set(headings)) == 148
         assert Counter(headings).most_common(1)[0] == ("Allmänt", 269)
-        assert not {"Miljöprövningsdelegationen", "Skåne"} & set(headings)
+        junk = {"Miljöprövningsdelegationen", "Skåne", "VÄSTRA GÖTALANDS LÄN"}
+        assert not junk & set(headings)
+        # The delegated matters, which VILLKORSSCHEMA section 2.4 gives a table
+        # of their own, only became visible as a heading once the glued tails
+        # were split off.
+        assert Counter(headings)["Delegation"] == 10
 
     def test_the_noise_values_are_the_set_the_corpus_closed_on(self, register):
         # Canary 2 of VILLKORSSCHEMA section 5. The schema opened the set as

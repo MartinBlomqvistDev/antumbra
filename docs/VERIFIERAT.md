@@ -510,11 +510,25 @@ en rubrik. Rubrikerna är dessutom det fält VILLKORSSCHEMA avsnitt 2.2 vill ha
 bevarat, så de gick förlorade två gånger om. Regeln som infördes är strukturell:
 en kort rad inne i avsnittet som inte inleder ett villkor, inte slutar som en
 mening och följs av ett numrerat villkor tillhör det som kommer efter den.
-**1 655 av 2 347 villkor bär sin rubrik, 155 olika.** Talet var 1 691 under 161
+**1 655 av 2 347 villkor bär sin rubrik, 148 olika.** Talet var 1 691 under 161
 rubriker fram till kontroll 3 samma dag, som visade att 36 av dem var sidhuvuden
 och inte rubriker: Miljöprövningsdelegationen, Anläggningsnummer, Örebro län,
-Aktbilaga 23 och Skåne. De är borta, och inget ord som beslutet självt skrev
-försvann med dem.
+Aktbilaga 23 och Skåne. En genomläsning av de 155 som blev kvar, gjord innan
+typologin byggs på dem, hittade sju till: ett läns löpande sidrubrik i genitiv,
+VÄSTRA GÖTALANDS LÄN, och sex rubriker med föregående menings slut klistrat
+framför sig, som `uppstår.Lagring av gödsel och spolvatten`. Förledet hör till
+villkoret ovanför och läggs nu tillbaka där, vilket gav femton villkor sitt
+meningsslut åter, och rubriken blir det som står efter punkten. **Delegation
+framträdde först då som egen rubrik**, tio villkor plus fem under formen med
+parentes, och det är den rubrik VILLKORSSCHEMA avsnitt 2.4 gett en egen tabell.
+Inget ord som beslutet självt skrev försvann med något av detta.
+
+**Vad som inte rättas är OCR:ns egna felläsningar av riktiga rubriker.**
+`Ålbhnänt`, `Allnänt`, `Alhnänt` och `Allmant` är alla Allmänt, och `Lagring av
+godsel` och `Sk yddszoner` är lika genomskinliga. De står kvar som registret
+läste dem, eftersom fältet ska bära vad textlagret säger och en tyst
+omskrivning av källan är en annan sorts fel. De hanteras i typkartan i stället,
+deklarerat där.
 
 **Båda de förregistrerade villkoren höll.** Inget beslut tappade villkor, och
 det okulära stickprovet på 25 av de 823 borttagna raderna innehöll ingen
