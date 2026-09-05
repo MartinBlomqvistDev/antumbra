@@ -1307,15 +1307,26 @@ diarienumret med sig in i texten. Det fjärde: ett villkorsnummer sist på en si
 gav en tom text som lästes som en avslutad mening, vilket lämnade själva
 villkoret utan hem.
 
-**Det andra felet hade lagt ett personnamn i ett committat register.** I
-`1c8347c55318` villkor 4 följdes villkorstexten av ett bifogat rättelsebeslut
-med två namngivna tjänstemän. Ett annat filnamn i en sidfot, i `097f049b82b6`,
-bar en handläggares för- och efternamn. Båda är borta ur registret, och steg 33
-screenar nu även filändelser. Ett filnamn hör aldrig hemma i en villkorstext,
-så formen är entydig på ett sätt som ett par versaler aldrig blir, och
-namnkontrollen kan därför fortsatt utebli. Filen var committad
-och pushad innan felet upptäcktes, så namnen finns kvar i historiken på GitHub i
-ett privat repo. Frågan om historiken ska skrivas om ligger hos Martin.
+**Ett personnamn hade nått ett committat register.** Ett filnamn i en sidfot, i
+`097f049b82b6` villkor 2, bar en handläggares för- och efternamn, och raden är
+committad och pushad i a32fda2. Det andra sidhuvudsfelet lade dessutom ett
+bifogat rättelsebeslut med två namngivna tjänstemän i `1c8347c55318` villkor 4,
+men den texten uppstod i en mellanversion under själva rättningen och nådde
+aldrig git. Båda är borta ur registret, och steg 33 screenar nu även
+filändelser: ett filnamn hör aldrig hemma i en villkorstext, så formen är
+entydig på ett sätt som ett par versaler aldrig blir, och namnkontrollen kan
+därför fortsatt utebli.
+
+**Historiken skrivs inte om.** Namnet står kvar i trädet för varje commit från
+a32fda2 till och med rättningen, och de commitarna är pushade. ADR-0003 gör
+historiken append-only, och Martin bekräftade regeln utan undantag den
+5 september 2026, så undantagsmeningen där om personuppgifter används inte.
+Skillnaden mot de fem commits som skrevs om enligt ADR-0018 är att de aldrig
+hade pushats och alltså aldrig var historik. Kvar står den andra halvan av
+ADR-0003:s konsekvens, att händelsen dokumenteras öppet, vilket är vad det här
+avsnittet gör. Före publicering finns en följd att ta ställning till: ett
+tjänstemannanamn blir då sökbart ur ett filnamn i en sidfot, vilket är precis
+det ADR-0018 valde bort.
 
 **Sidfotsmarkörerna utökades med två former.** Den engelska sidmarkören `Page N
 of M`, 72 rader i 30 beslut, satt där den svenska sitter och missades för att

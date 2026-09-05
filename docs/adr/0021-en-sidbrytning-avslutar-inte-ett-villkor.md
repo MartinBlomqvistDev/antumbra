@@ -41,9 +41,11 @@ lämnade själva villkoret utan hem i sju OCR-lästa beslut.
 
 Det andra av dessa fel hade en följd som inte är statistisk. I `1c8347c55318`
 villkor 4 följdes villkorstexten av ett bifogat rättelsebeslut med två
-namngivna tjänstemän, och texten stod i `data/villkor.jsonl`, som är committad
-och pushad. Ett filnamn i en sidfot i `097f049b82b6` bar en handläggares för-
-och efternamn på samma sätt.
+namngivna tjänstemän. Den texten nådde aldrig git: den uppstod i en
+mellanversion under själva rättningen och var borta innan något skrevs till
+`data/villkor.jsonl`. Ett filnamn i en sidfot i `097f049b82b6` gjorde det
+däremot. Där stod en handläggares för- och efternamn inne i villkor 2, och
+raden är committad och pushad i a32fda2.
 
 ## Skäl
 
@@ -97,6 +99,14 @@ får ut 40 tecken ur 34 sidor, och dess 31 villkor är därmed inte kontrollerad
 på någon andra väg. `13df613f9802` villkor 4 bär en sidfot som OCR förvanskat så
 att ingen markör träffar den.
 
-Personnamnen är borta ur registret och steg 33 screenar nu även filändelser,
-men de finns kvar i git-historiken på GitHub i ett privat repo. Om historiken
-ska skrivas om avgörs av Martin, eftersom det kräver en tvingad push.
+Namnet är borta ur registret och steg 33 screenar nu även filändelser, men det
+står kvar i trädet för varje commit från a32fda2 till och med rättningen, och de
+commitarna är pushade. **Historiken skrivs inte om.** ADR-0003 gör den
+append-only och Martin bekräftade regeln utan undantag den 5 september 2026, så
+undantagsmeningen i ADR-0003 om personuppgifter används inte; se tillägget där.
+Skillnaden mot de fem commits som skrevs om enligt ADR-0018 är att de aldrig
+hade pushats, alltså aldrig var historik. Det som återstår är den andra halvan
+av ADR-0003:s konsekvens, att händelsen dokumenteras öppet, och den här raden
+är den dokumentationen. Följden att ta ställning till före publicering är att
+ett tjänstemannanamn då blir sökbart ur ett filnamn i en sidfot, vilket är
+precis det ADR-0018 valde bort.
