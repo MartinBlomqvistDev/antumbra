@@ -19,6 +19,12 @@ warehouse = ["pyarrow>=17"]
 # Tesseract binary and its language packs, which are not Python packages; see
 # docs/DGSANTE.md for how they are installed and where the language data lives.
 ocr = ["pymupdf>=1.24"]
+# The permit decisions. pdfplumber reads the vector geometry a masking leaves
+# behind in step 18, the species table in step 20, and the second, independent
+# text layer that step 34 checks the conditions register against; pymupdf reads
+# the text layer everywhere else. Undeclared until 5 September 2026, when
+# step 34 needed it and nothing said where it came from.
+permits = ["pdfplumber>=0.11", "pymupdf>=1.24"]
 # Step 14 embeds the paragraph corpus locally. The query module needs only
 # numpy unless a question is actually asked, so the model dependency is
 # opt-in and CI runs the retrieval tests without it.

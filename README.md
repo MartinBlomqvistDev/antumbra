@@ -176,6 +176,7 @@ python pipeline/30_draw_species_sample.py  # the blind sample the species rule i
 python pipeline/31_permit_decision_types.py   # what the publisher calls each permit decision
 python pipeline/32_check_condition_coverage.py # does every decision carry the conditions it should?
 python pipeline/33_condition_register.py      # the conditions themselves, verbatim, with their headings
+python pipeline/34_verify_conditions.py       # check 3: read the register back against a second extractor
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write
