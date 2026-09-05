@@ -67,3 +67,4 @@ dbt/logs/
 dbt/package-lock.yml
 src/antumbra.egg-info/
 data/hf/
+data/p12/

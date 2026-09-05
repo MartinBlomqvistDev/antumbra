@@ -178,6 +178,7 @@ python pipeline/32_check_condition_coverage.py # does every decision carry the c
 python pipeline/33_condition_register.py      # the conditions themselves, verbatim, with their headings
 python pipeline/34_verify_conditions.py       # check 3: read the register back against a second extractor
 python pipeline/35_condition_types.py         # every heading placed by hand against the schema's typology
+python pipeline/36_build_p12_packets.py       # P12: one packet per authority, out of the registers
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write
