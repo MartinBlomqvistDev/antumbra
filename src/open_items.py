@@ -143,7 +143,10 @@ INTERNAL = frozenset(
 )
 
 # Aggregate rows describe a batch or the project itself, not one request.
-NOT_A_REQUEST = frozenset({"flera", "samtliga"})
+# "länsstyrelserna" is the same thing under a word invented on 5 September 2026
+# for seven rows about the conditions layer. The log is append-only, so the word
+# stays and is read here; new internal rows use "samtliga".
+NOT_A_REQUEST = frozenset({"flera", "länsstyrelserna", "samtliga"})
 
 # An authority event that puts the next move on us, with its deadline in
 # working days. Longest key first, so a compound name matches its own rule.
@@ -245,14 +248,25 @@ def unmapped(rows: list[dict]) -> set[str]:
 
 
 def by_request(rows: list[dict]) -> dict[tuple[str, str], list[dict]]:
-    """Events per request, expanding rows that cover more than one class."""
+    """Events per request, expanding rows that cover more than one class.
+
+    A track whose events are all internal is not a request. Every request opens
+    with an avsändning, so nothing real is lost, and without this a row about
+    the project's own work builds a request that nobody ever sent: on
+    5 September 2026 seven such rows produced a phantom item under a P3 deadline
+    19 days overdue, at the top of the list that says what to do next.
+    """
     tracks: dict[tuple[str, str], list[dict]] = {}
     for row in rows:
         if row["myndighet"] in NOT_A_REQUEST:
             continue
         for klass in row["begaran"].split("+"):
             tracks.setdefault((row["myndighet"], klass), []).append(row)
-    return tracks
+    return {
+        key: events
+        for key, events in tracks.items()
+        if any(event["handelse"] not in INTERNAL for event in events)
+    }
 
 
 def answer_deadline(handelse: str) -> tuple[int, str] | None:

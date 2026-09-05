@@ -386,6 +386,39 @@ class TestOpenItemsKnowsEveryEvent:
             "out of the check."
         )
 
+    def test_every_authority_name_is_one_the_report_can_place(self):
+        # An invented myndighet builds a request nobody sent. On 5 September
+        # 2026 seven internal rows about the conditions layer were logged under
+        # "länsstyrelserna", and the report answered with a phantom item under a
+        # P3 deadline 19 days overdue, first in the list of what to do next.
+        # The log is append-only, so the guard belongs here and in the code that
+        # reads it, never in the rows.
+        from open_items import NOT_A_REQUEST, load
+
+        allowed = re.compile(r"^(Länsstyrelsen i .+|Jordbruksverket)$")
+        strays = {
+            row["myndighet"]
+            for row in load()
+            if row["myndighet"] not in NOT_A_REQUEST
+            and not allowed.match(row["myndighet"])
+        }
+        assert not strays, (
+            f"myndighet values the report cannot place: {sorted(strays)}. Add a "
+            "real authority to the pattern deliberately, or an aggregate word to "
+            "NOT_A_REQUEST, so that the choice is made and not inherited from a "
+            "typo."
+        )
+
+    def test_no_request_is_built_out_of_internal_rows_alone(self):
+        from open_items import INTERNAL, by_request, load
+
+        phantom = {
+            key
+            for key, events in by_request(load()).items()
+            if all(event["handelse"] in INTERNAL for event in events)
+        }
+        assert not phantom, sorted(phantom)
+
     def test_acknowledging_service_does_not_close_the_appeal_window(self):
         # The authority asks for a receipt, so the receipt is an event of ours.
         # Counting any event of ours as an answer made the P9 deadline vanish
