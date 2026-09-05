@@ -772,3 +772,10 @@ utanför mängden larmar för granskning men fäller inte raden; fyra dokument
 räcker inte för att sluta mängden. Mängden fastställs mot hela korpusen i
 första fullkörningen och betraktas som sluten först därefter, varefter en
 OCR-läsning av 40 som 49 larmar omedelbart.
+
+**Den körningen är gjord 2026-09-05, och mängden är stängd.** 504 förekomster
+och sju värden, 37, 40, 42, 45, 47, 50 och 55. De tre som schemat inte hade sett
+kommer alla ur ett och samma beslut, `aa2cbc78989b` villkor 9, som lägger hela
+trappan tre decibel lägre än de övriga. Mängden står som invariant i
+`tests/test_repository_invariants.py`. Utfallet av hela kontroll 3 står i
+`docs/VERIFIERAT.md`, och regeln som kom ur den i ADR-0021.

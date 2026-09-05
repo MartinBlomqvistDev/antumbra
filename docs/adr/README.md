@@ -27,3 +27,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0018](0018-tjanstemans-namn-stannar-i-kallhandlingen.md) | Tjänstemäns namn stannar i källhandlingen | beslutad |
 | [0019](0019-ett-rubrikband-ar-inte-en-maskning.md) | Ett rubrikband är inte en maskning | beslutad |
 | [0020](0020-mallens-fasta-element-utesluts-ur-bildmetoden.md) | Mallens fasta element utesluts ur bildmetoden | beslutad |
+| [0021](0021-en-sidbrytning-avslutar-inte-ett-villkor.md) | En sidbrytning avslutar inte ett villkor | beslutad |
