@@ -1322,6 +1322,69 @@ registret byggs.
 
 ---
 
+## Villkorstypologin mot korpusen: nio typer räcker inte, 2026-09-05
+
+VILLKORSSCHEMA avsnitt 2.2 fastställer nio villkorstyper, satta utifrån fyra
+beslut. Registret bär nu 148 olika rubriker ur 180 beslut, så frågan om nio
+räcker går att ställa mot underlaget i stället för mot fyra dokument. Steg 35
+placerar **varje rubrik för hand**, ingen av dem med en ordmatchning, och
+kartan ligger i koden så att en läsare kan vara oense om en enskild placering
+utan att först behöva lista ut en regel.
+
+**Så fördelar sig de 1 655 villkoren med rubrik över schemats nio:**
+
+| Typ | Villkor | Andel |
+| --- | --- | --- |
+| gödsel | 592 | 35,8 % |
+| allmänt | 297 | 17,9 % |
+| kemikalier och avfall | 155 | 9,4 % |
+| kontroll | 140 | 8,5 % |
+| buller | 82 | 5,0 % |
+| vatten | 71 | 4,3 % |
+| övrigt | 56 | 3,4 % |
+| luft | 40 | 2,4 % |
+| avveckling | 33 | 2,0 % |
+| **summa** | **1 466** | **88,6 %** |
+
+**Sex ämnen återkommer som ingen av de nio namnger**, och alla sex har nio
+villkor eller fler: djurstall 64, förbränning och energi 69, transporter 13,
+biotopskydd och naturvärden 10, döda djur 9, markarbeten i förorenad mark 9.
+Tillsammans 174 villkor, 10,5 procent. De föreslås som tillägg i stället för
+att läggas i övrigt, eftersom övrigt är dit ett ämne går för att sluta räknas.
+Schemat säger att vokabulären är additiv och att en befintlig typ aldrig byter
+betydelse, så ett tillägg kostar ingen omextraktion.
+
+**Förutsägelsen höll till hälften.** Före körningen skrevs att minst fyra
+sådana ämnen skulle saknas och att över 15 procent av villkoren med rubrik
+skulle falla till övrigt om bara de nio används. Det blev sex ämnen, alltså mer
+än förutsagt, men 13,9 procent, alltså under tröskeln. Riktningen höll och
+tröskeln föll.
+
+**Två placeringar är rena bedömningar och står utskrivna i koden.** Skyddszoner
+ligger under vatten och inte under gödsel, eftersom villkoret läggs på marken
+intill vattnet och motiveras med vattnet, trots att det reglerar spridning.
+Biogasanläggningen ligger under energi och inte under gödsel, trots att
+substratet är gödsel. Båda går att invända mot, och det är därför de står som
+kommentarer på sina rader.
+
+**Aska hör till kemikalier och avfall.** Schemat avgör det uttryckligen med
+Motala 2021 villkor 9 som belägg. Min första placering var luft och var fel mot
+schemats egen text; rättad. Där rubriken nämner rökgasrening och aska
+tillsammans är rökgasen ämnet, och de raderna ligger kvar under luft.
+
+**Femton villkor bär rubriken Delegation** och räknas inte som en typ, eftersom
+avsnitt 2.4 ger de delegerade frågorna en egen tabell: en delegation är
+myndigheten som håller en fråga öppen, inte ett krav på verksamhetsutövaren.
+Rubriken syntes först sedan de påklistrade meningsförleden lossats samma dag.
+
+**Kartan säger ingenting om innehållet.** Schemat säger själv att rubrik och sak
+skiljer sig: Motala 2021 villkor 12 står under Övrigt men är i sak samma
+avvecklingsvillkor som Stora Markies villkor 13 under Avveckling. Att mäta det
+kräver handläst facit och är nästa steg. **692 villkor saknar dessutom rubrik
+helt** och når ingen typ den här vägen.
+
+---
+
 ## Kontroll 3: registret läst tillbaka mot dokumenten, 2026-09-05
 
 Kontroll 1 prövar att villkorsnumren bildar serien 1..N. Kontroll 2 prövar att

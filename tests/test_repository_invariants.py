@@ -939,6 +939,29 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
         # were split off.
         assert Counter(headings)["Delegation"] == 10
 
+    def test_every_heading_is_placed_in_the_typology(self, register):
+        """Step 35's map and the register must not drift apart.
+
+        The map places all 148 headings by hand, which is the point: a reader
+        can disagree with one placement without reverse-engineering a rule. A
+        heading that appears in a later delivery and is not placed would
+        otherwise be counted as nothing at all.
+        """
+        import importlib.util
+
+        path = ROOT / "pipeline" / "35_condition_types.py"
+        spec = importlib.util.spec_from_file_location("condition_types", path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+
+        headings = {r["rubrik"] for r in register if r["rubrik"]}
+        assert headings == set(module.HEADING_TYPE)
+        placed = set(module.HEADING_TYPE.values())
+        allowed = (
+            set(module.SCHEMA_TYPES) | set(module.PROPOSED_TYPES) | set(module.ROUTED)
+        )
+        assert placed <= allowed, sorted(placed - allowed)
+
     def test_the_noise_values_are_the_set_the_corpus_closed_on(self, register):
         # Canary 2 of VILLKORSSCHEMA section 5. The schema opened the set as
         # {40, 45, 50} equivalent plus 55 momentary from four documents and
