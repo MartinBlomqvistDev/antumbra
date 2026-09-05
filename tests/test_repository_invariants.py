@@ -884,14 +884,37 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
             assert record["källa"] in {"text", "ocr"}
 
     def test_the_headings_are_the_documents_own_words(self, register):
-        # 1 691 of the conditions sit under a heading the decision wrote, and
+        # 1 655 of the conditions sit under a heading the decision wrote, and
         # the vocabulary is what VILLKORSSCHEMA section 2.2 predicted from four
         # decisions: the general condition, manure, air, chemicals, noise,
-        # monitoring. A drop here means the heading rule stopped firing.
+        # monitoring. A drop here means the heading rule stopped firing. It was
+        # 1 691 under 161 headings until check 3 showed that 36 of them were
+        # running heads: Miljöprövningsdelegationen, Anläggningsnummer, Örebro
+        # län, Aktbilaga 23, Skåne. Those are gone and no document word is.
         headings = [r["rubrik"] for r in register if r["rubrik"]]
-        assert len(headings) == 1691
-        assert len(set(headings)) == 161
+        assert len(headings) == 1655
+        assert len(set(headings)) == 155
         assert Counter(headings).most_common(1)[0] == ("Allmänt", 269)
+        assert not {"Miljöprövningsdelegationen", "Skåne"} & set(headings)
+
+    def test_the_noise_values_are_the_set_the_corpus_closed_on(self, register):
+        # Canary 2 of VILLKORSSCHEMA section 5. The schema opened the set as
+        # {40, 45, 50} equivalent plus 55 momentary from four documents and
+        # said it would be fixed against the whole corpus in the first full
+        # run. That run was 5 September 2026 and added three values, 37, 42 and
+        # 47, all of them from one decision, aa2cbc78989b condition 9, which
+        # sets every level three decibels below the usual 50/45/45/40. Read by
+        # hand in the source. The set is closed now, so an OCR reading of 40 as
+        # 49 has to fail here.
+        pattern = re.compile(r"(\d{2,3})\s*dB\s*\(?A\)?", re.IGNORECASE)
+        values = Counter(
+            int(match.group(1))
+            for record in register
+            for match in pattern.finditer(record["text"])
+        )
+        assert set(values) == {37, 40, 42, 45, 47, 50, 55}
+        assert sum(values.values()) == 504
+        assert values[45] == 174
 
 
 class TestThePermitCorpusDecomposesAsDocumented:
@@ -1059,10 +1082,16 @@ class TestTheConditionBaselineHoldsItsClaim:
         owners = self.owners(rows)
         shared = {h: ids for h, ids in owners.items() if len(ids) > 1}
         repeated = sum(1 for r in rows if len(owners[r["text_hash"]]) > 1)
-        assert len(owners) == 1301
-        assert len(shared) == 237
-        assert repeated == 698
-        assert round(repeated / len(rows), 2) == 0.40
+        # The figures moved on 5 September 2026, when check 3 found that a
+        # page break threw away the rest of 209 conditions. Repairing it raised
+        # measured reuse rather than lowering it, against the prediction
+        # written down before the run: two decisions that carried the same
+        # condition had been cut at different points, so the truncation was
+        # hiding matches.
+        assert len(owners) == 1269
+        assert len(shared) == 253
+        assert repeated == 746
+        assert round(repeated / len(rows), 2) == 0.42
 
     def test_reuse_stays_inside_a_permit_division(self, conditions):
         groups = {r["id"]: r["prövningsgrupp"] for r in conditions}
@@ -1076,8 +1105,8 @@ class TestTheConditionBaselineHoldsItsClaim:
             )
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
-        assert inside["text"] == (222, 237)
-        assert inside["ocr"] == (49, 51)
+        assert inside["text"] == (238, 253)
+        assert inside["ocr"] == (50, 52)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

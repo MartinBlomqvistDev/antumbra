@@ -53,12 +53,18 @@ OUT = ROOT / "data" / "villkor.jsonl"
 
 # What may never reach the repository. The name test is deliberately absent:
 # a capitalised pair is a place, an authority or a statute far more often than a
-# person, and a check that cries wolf is a check nobody reads. The three below
+# person, and a check that cries wolf is a check nobody reads. The four below
 # are unambiguous, and they are the shapes the corpus actually carried.
 FORBIDDEN = {
     "e-postadress": re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}"),
     "personnummer": re.compile(r"\b(?:19|20)\d{6}[-+]\d{4}\b"),
     "telefonnummer": re.compile(r"\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b"),
+    # Added 5 September 2026, after check 3 found an official's given and
+    # family name in the committed register. It came in inside the file name a
+    # county board prints in its footer, "551-21649-13 Beslut. <namn>.docx".
+    # A file name is never part of a condition, so the shape is unambiguous
+    # where a capitalised pair of words is not, and the name test stays absent.
+    "filnamn": re.compile(r"\.(docx?|pdf|rtf|xlsx?)\b", re.IGNORECASE),
 }
 
 

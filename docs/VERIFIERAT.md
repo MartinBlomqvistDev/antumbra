@@ -496,10 +496,10 @@ ut men bär ingen slutsats.
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 301 | 698 (40 %) | 64 % |
-| ur textlagret, obruten serie | 1 602 | 108 | 1 186 | 633 (40 %) | 64 % |
-| enbart OCR-lästa | 585 | 57 | 502 | 134 (23 %) | 78 % |
-| poolat, bär ingen slutsats | 2 347 | 180 | 1 748 | 897 (38 %) | 67 % |
+| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 269 | 746 (42 %) | 62 % |
+| ur textlagret, obruten serie | 1 602 | 108 | 1 157 | 676 (42 %) | 62 % |
+| enbart OCR-lästa | 585 | 57 | 501 | 136 (23 %) | 75 % |
+| poolat, bär ingen slutsats | 2 347 | 180 | 1 712 | 951 (41 %) | 64 % |
 
 **Rättelse 2026-09-05: avsnittsrubriken låg i villkorstexten.** Tabellen är
 omräknad. Före rättelsen stod huvudsiffran på 615 delade villkor, 35 procent,
@@ -510,7 +510,11 @@ en rubrik. Rubrikerna är dessutom det fält VILLKORSSCHEMA avsnitt 2.2 vill ha
 bevarat, så de gick förlorade två gånger om. Regeln som infördes är strukturell:
 en kort rad inne i avsnittet som inte inleder ett villkor, inte slutar som en
 mening och följs av ett numrerat villkor tillhör det som kommer efter den.
-**1 691 av 2 347 villkor bär nu sin rubrik, 161 olika.**
+**1 655 av 2 347 villkor bär sin rubrik, 155 olika.** Talet var 1 691 under 161
+rubriker fram till kontroll 3 samma dag, som visade att 36 av dem var sidhuvuden
+och inte rubriker: Miljöprövningsdelegationen, Anläggningsnummer, Örebro län,
+Aktbilaga 23 och Skåne. De är borta, och inget ord som beslutet självt skrev
+försvann med dem.
 
 **Båda de förregistrerade villkoren höll.** Inget beslut tappade villkor, och
 det okulära stickprovet på 25 av de 823 borttagna raderna innehöll ingen
@@ -519,7 +523,7 @@ fällde däremot en första version av regeln, som räknade sidnummer, diarienum
 och anläggningsnummer som rubriker; 58 av 231 kandidater var sådana. Att ta bort
 raderna ur villkorstexten är rätt oavsett, så borttagningen behölls och en andra
 regel avgör vad som också får sparas som rubrik. Efter den finns noll
-identifierare bland de 161 rubrikerna.
+identifierare bland rubrikerna.
 
 **Förutsägelsen slog in.** Antalet villkor och beslut står oförändrat, andelen
 delad text steg märkbart, och koncentrationen inom prövningsgrupp håller både
@@ -549,8 +553,8 @@ raden är identiska före och efter att 53 beslut lades till underlaget, vilket 
 ska vara, eftersom raden räknas på oförändrade dokument. Det är kontrollen på
 att OCR-tillskottet är additivt och inte har rört det som redan var mätt.
 
-**Nollhypotesen faller.** 1 065 av 1 762 villkor, 60 procent, förekommer i ett
-enda beslut, och medianbeslutet har egen text i 64 procent av sina villkor. Ett
+**Nollhypotesen faller.** 1 016 av 1 762 villkor, 58 procent, förekommer i ett
+enda beslut, och medianbeslutet har egen text i 62 procent av sina villkor. Ett
 villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
 är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
 ingenting annat normaliserat, siffervärden avsiktligt bevarade: **det kan bara
@@ -558,39 +562,39 @@ underskatta återanvändningen**, aldrig överskatta den. Ett segmenteringsfel s
 delar ett villkor i två drar åt samma håll, alltså mot mer skenbar egenart, så
 båda felkällorna gör slutsatsen försiktigare och ingen av dem gör den starkare.
 
-**Den delade texten är inte korta fragment.** Delade texter har median 209
-tecken mot 257 för de egna, och 10 av 237 ligger under 80 tecken. Det är hela
+**Den delade texten är inte korta fragment.** Delade texter har median 223
+tecken mot 264 för de egna, och 10 av 253 ligger under 80 tecken. Det är hela
 villkor som återanvänds, inte gemensamma formuleringar som halkat med.
 
 **Den återanvändning som finns är gruppintern, och det är inte en
-storlekseffekt.** Av de 237 texter som förekommer i mer än ett beslut stannar
-**222 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
-med prövningsgruppernas faktiska storlekar bevarade, väntas 27,1 och den 95:e
-percentilen ligger på 35; noll av 2 000 permutationer nådde 222 (`p < 0,0005`).
+storlekseffekt.** Av de 253 texter som förekommer i mer än ett beslut stannar
+**238 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
+med prövningsgruppernas faktiska storlekar bevarade, väntas 28,7 och den 95:e
+percentilen ligger på 37; noll av 2 000 permutationer nådde 238 (`p < 0,0005`).
 Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
 Götaland bär hälften av korpusen.
 
 **Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
 besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
-annat instrument. Där stannar **49 av 51 delade texter inom en enda
-prövningsgrupp** mot 6,3 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 49. Att andelen delad text är lägre i den mängden, 23 mot
-40 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
+annat instrument. Där stannar **50 av 52 delade texter inom en enda
+prövningsgrupp** mot 6,5 väntat under samma permutation, och noll av 2 000
+omfördelningar nådde 50. Att andelen delad text är lägre i den mängden, 23 mot
+42 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
 **Den konkurrerande förklaringen prövad.** Ett ändringsbeslut upprepar
 originalets villkor, och det skulle ge gruppintern återanvändning utan att någon
-mall finns. Den förklaringen räcker för par, som är 148 av de 237 klustren, men
+mall finns. Den förklaringen räcker för par, som är 157 av de 253 klustren, men
 inte för de breda: den vidaste texten delas av **28 beslut, varav 24 i Västra
 Götalands län**, och den näst vidaste av 13 beslut, varav 7 i Örebro med
 Värmland. Ändringskedjor hos en och samma verksamhetsutövare blir inte 24
 beslut.
 Omvänt gäller att de allra vidaste texterna är de som korsar gruppgränser,
-medan den typiska delade texten stannar; av de 18 klustren med minst fem beslut
-ligger 14 inom en enda grupp.
+medan den typiska delade texten stannar; av de 27 klustren med minst fem beslut
+ligger 23 inom en enda grupp.
 
 Mallar finns alltså, de är prövningsgruppens snarare än landets, och de
-förklarar drygt en tredjedel av villkoren. Det är i sig ekvivalensfrågan ställd
+förklarar drygt fyra tiondelar av villkoren. Det är i sig ekvivalensfrågan ställd
 på kravsidan.
 
 **OCR på tillståndskorpusen, körd 2026-08-17 och om 2026-08-18.** Steg 25 läste
@@ -1254,6 +1258,100 @@ ibland som ett nytt villkor med samma nummer. Schemat är byggt för det, med
 `number` som sträng och `position` som heltal, men baselinemåttet skiljer dem
 inte åt. Ingen åtgärd i dag; gränsen står här i stället för att upptäckas när
 registret byggs.
+
+---
+
+## Kontroll 3: registret läst tillbaka mot dokumenten, 2026-09-05
+
+Kontroll 1 prövar att villkorsnumren bildar serien 1..N. Kontroll 2 prövar att
+antalen stämmer mot korpusen. Ingen av dem kan se ett villkor vars text är fel,
+eftersom en förvanskad sträng numreras rätt och räknas rätt. Steg 34 läser
+texten tillbaka.
+
+**Den digitalfödda halvan läses av ett annat bibliotek.** Registret är
+segmenterat ur pymupdfs textlager; här läses varje digitalfött beslut om med
+pdfplumber, och varje lagrat villkor söks i den utskriften. Att två bibliotek
+är överens om en sträng säger något om dokumentet; att ett bibliotek är överens
+med sig självt säger ingenting. Den OCR-lästa halvan har ingen andra väg,
+eftersom den igenkända texten är den enda text som finns, och mäts därför mot
+samma fil som segmenteringen läste. Den kontrollen är svagare och redovisas som
+sådan: den kan fånga fel i hopfogningen och i sidfotsbortfallet, men den
+replikerar ingen läsning.
+
+**Ett villkor matchas i delar.** En sidfot som tagits bort
+mitt i ett villkor lämnar den lagrade texten som två bitar av dokumentet med ett
+hål emellan, så ett vanligt delsträngstest skulle falla just på de beslut där
+sidfotsregeln gjorde sitt jobb. Texten konsumeras i stället glupskt: längsta
+prefix som finns kvar i råströmmen tas, sökningen fortsätter efter det, och
+antalet bitar redovisas.
+
+**Utfall.** 0,9914 av 544 793 tecken återfanns i den digitalfödda halvan och
+0,9990 av 227 860 i den OCR-lästa. Ett beslut, `361be3bd133c`, ligger utanför
+måttet: pdfplumber får ut 40 tecken ur 34 sidor, vilket mäter biblioteket och
+inte registret, och att sådana beslut redovisas för sig skrevs in i
+förregistreringen före körningen. Det beslutets 31 villkor är alltså ännu inte
+kontrollerade på någon andra väg. 44 villkor ligger under 95 procent och är
+genomgångna ett och ett. Nästan alla är nedsänkta tecken som de två biblioteken
+läser i olika ordning, `Leq`, `NH4-N`, `CO2`, `O2`, plus radavstånd i
+bullertabellerna. Ett är en verklig rest: `13df613f9802` villkor 4, där OCR
+förvanskat sidfoten så illa att ingen markör träffar den.
+
+**Fyra fel som ingen tidigare kontroll kunde se.** Det första var det stora: en
+tomrad i textlagret är en sidbrytning lika ofta som ett mellanrum mellan två
+villkor, och den stängde alltid villkoret. Resten av texten efter tomraden föll
+då bort helt, i **209 villkor i 126 beslut**, varje gång mitt i en mening. Det
+andra: sidhuvudet kommer ibland utan tomrad före sig och lästes då som
+villkorstext. Det tredje: sidhuvudets länsnamn stod inte i ordlistan, så
+överhoppningen slutade mitt i huvudet och tog länsnamnet, datumet och
+diarienumret med sig in i texten. Det fjärde: ett villkorsnummer sist på en sida
+gav en tom text som lästes som en avslutad mening, vilket lämnade själva
+villkoret utan hem.
+
+**Det andra felet hade lagt ett personnamn i ett committat register.** I
+`1c8347c55318` villkor 4 följdes villkorstexten av ett bifogat rättelsebeslut
+med två namngivna tjänstemän. Ett annat filnamn i en sidfot, i `097f049b82b6`,
+bar en handläggares för- och efternamn. Båda är borta ur registret, och steg 33
+screenar nu även filändelser. Ett filnamn hör aldrig hemma i en villkorstext,
+så formen är entydig på ett sätt som ett par versaler aldrig blir, och
+namnkontrollen kan därför fortsatt utebli. Filen var committad
+och pushad innan felet upptäcktes, så namnen finns kvar i historiken på GitHub i
+ett privat repo. Frågan om historiken ska skrivas om ligger hos Martin.
+
+**Sidfotsmarkörerna utökades med två former.** Den engelska sidmarkören `Page N
+of M`, 72 rader i 30 beslut, satt där den svenska sitter och missades för att
+korpusen är svensk. Filändelser, 4 rader i 4 beslut, är den andra.
+
+**Förutsägelsen slog fel, och det är i sig ett resultat.** Före körningen skrevs
+att andelen delad text skulle falla, eftersom längre texter är mindre troliga
+att matcha exakt. Den steg, från 40 till 42 procent, och koncentrationen inom
+prövningsgrupp från 222 av 237 till 238 av 253. Skälet är att två beslut med
+samma villkor kapades på olika ställen, så avhuggningen dolde matchningar.
+**Instrumentets fel drog alltså mot att underskatta likheten mellan olika
+besluts villkor**, vilket är den försiktiga riktningen.
+
+**Avhuggningen, kanariet för det containment inte kan se.** Ett villkor som
+kapats finns fortfarande i dokumentet, så delsträngstestet ser det aldrig.
+Måttet är i stället sista tecknet: 133 av 2 347 villkor slutar utan
+skiljetecken, 5,7 procent, mot 268 av 2 347 och 11,4 procent när kontrollen
+började. Taket i förregistreringen var 10 procent.
+
+**Kanarie 1, villkor per beslut, OCR mot digitalfött inom samma
+prövningsgrupp.** Riktningen var förutsagd: OCR lägre, eftersom OCR bryter rader
+och tappar nummer. Den håller i fem av åtta jämförbara grupper, Skåne med
+Blekinge 13 mot 7, Örebro med Värmland 16 mot 7, Västra Götaland 17 mot 12,
+Kalmar med Kronoberg 21 mot 18 och Uppsala med flera 10 mot 6. Två grupper är
+lika, och Halland går åt andra hållet, 11 mot 13. Kanariet larmar alltså inte,
+men det visar att OCR-halvan inte är utbytbar mot den digitalfödda.
+
+**Kanarie 2, bullervärdena, är nu stängt.** VILLKORSSCHEMA öppnade mängden som
+40, 45 och 50 dB(A) ekvivalent samt 55 momentant utifrån fyra dokument och sade
+att den fastställs mot hela korpusen i första fullkörningen. Den körningen är
+gjord: 504 förekomster och sju värden, 37, 40, 42, 45, 47, 50 och 55. De tre nya
+kommer alla ur ett och samma beslut, `aa2cbc78989b` villkor 9, som skriver
+"47 dB(A) vardagar kl. 07.00 - 18.00 42 dB(A) lördagar, söndagar och helgdagar
+kl. 07.00 - 18.00 42 dB(A) kvällstid kl. 18.00 - 22.00 37 dB(A) nattetid kl.
+22.00 - 07.00", alltså tre decibel under den vanliga trappan hela vägen. Mängden
+står nu som invariant, så att en OCR-läsning av 40 som 49 faller direkt.
 
 ---
 

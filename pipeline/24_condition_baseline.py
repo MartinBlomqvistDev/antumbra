@@ -17,6 +17,20 @@ data before the text could be stored: the only e-mail addresses, telephone
 numbers and personnummer-shaped strings in the whole corpus were the boards'
 own, and all of them arrived this way.
 
+**A page break no longer ends a condition.** An empty line in the text layer is
+a page break as often as it is a gap between two conditions, and until check 3
+read the register back it always closed the condition. Everything after the
+break was then dropped, in 209 conditions across 126 decisions, every one of
+them cut in the middle of a sentence. The running head that follows the break is
+now identified as a block and stepped over, and a condition whose own sentence
+has not finished is carried across it. Three faults in the same family came out
+with it: a head that arrives without an empty line before it was read as
+condition text, the county name in the head was missing from the word list so
+the step ended inside the head, and a condition number standing last on a page
+gave an empty text that was read as a finished sentence. The first of those had
+put an appended correction decision, and the two officials who signed it, inside
+a condition of `1c8347c55318`.
+
 **The conditions section is bounded, not searched for everywhere.** A first
 version segmented on any line opening with a number and a full stop, anywhere
 in the document, and 12 decisions of 144, 8 per cent, then produced an unbroken
@@ -139,7 +153,14 @@ SECTION_STOP = re.compile(
     r"|upplysning|hur man överklagar|överklagande|kungörelse"
     r"|beskrivning av ärendet|bakgrund|ärendets handläggning"
     r"|sökandens|yttrande|delgivning|avgift|bilaga|sändlista|kopia"
-    r"|detta beslut|information)",
+    r"|detta beslut|information"
+    # The deferred questions, added 5 September 2026. They stand after the
+    # conditions in the same section and are the opposite of a condition: the
+    # delegation postpones the decision and orders the applicant to
+    # investigate. Only the heading form is a stop word; the bare word prövotid
+    # opens a wrapped sentence in one decision, and stopping there would cut
+    # that decision in the middle of its own condition list.
+    r"|uppskjutna frågor|uppskjuten fråga)",
     re.IGNORECASE,
 )
 # Two fallbacks for a section that never gets a heading line of its own. They
@@ -172,7 +193,7 @@ SECTION_INTRO = re.compile(
 # prose, not in a column of labels.
 PAGE_FOOTER = re.compile(
     r"postadress|bes[öo]ksadress|bankgiro|plusgiro|telefax|v[äa]xel"
-    r"|\borg\.? ?nr\b|organisationsnummer|www\.|@|\bvx\b|hemsida|webbadress"
+    r"|\borg\.? ?nr\b|organisationsnummer|\bwww\b|@|\bvx\b|hemsida|webbadress"
     # Added 5 September 2026, after step 33 refused to write the register.
     # These are the naked continuation lines of the same block, plus the
     # page number, which sits in the same place and breaks a condition the
@@ -182,9 +203,98 @@ PAGE_FOOTER = re.compile(
     r"|\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b"
     r"|\b\d{3} ?\d{2} [A-ZÅÄÖ][A-ZÅÄÖa-zåäö]{2,}"
     r"|\(fax\)|telefon/fax"
-    r"|\bsid(a|an)?\.? ?\d|\b\d{1,2} ?\( ?\d{1,2} ?\)",
+    r"|\bsid(a|an)?\.? ?\d|\b\d{1,2} ?\( ?\d{1,2} ?\)"
+    # Added later the same day, after check 3 read the register back. The
+    # English page marker sits where the Swedish one does and was missed
+    # because the corpus is Swedish: 72 lines in 30 decisions. A file name is
+    # never part of a condition, and all four in the corpus stand in a footer;
+    # one of them carries an official's given and family name, which is how a
+    # personal name reached a committed file.
+    r"|\bpage \d+ of \d+\b"
+    r"|\.(docx?|pdf|rtf|xlsx?)\b",
     re.IGNORECASE,
 )
+
+# The block printed at the top of every page. It matters only at a page break
+# inside a condition, where the text continues after it, so it is skipped rather
+# than read as a boundary. A line counts as page furniture only when every word
+# in it is one of these, a number or a case number, which keeps a sentence that
+# happens to open with Beslut from being thrown away.
+PAGE_HEAD_WORDS = frozenset(
+    {
+        "aktbil",
+        "aktbilaga",
+        "anl",
+        "anläggningsnr",
+        "anläggningsnummer",
+        "avdelning",
+        "beteckning",
+        "beslut",
+        "bilaga",
+        "datum",
+        "diarienummer",
+        "dnr",
+        "inkom",
+        "målnr",
+        "länsstyrelsen",
+        "miljöprövningsdelegationen",
+        "nr",
+        "sid",
+        "sida",
+        "tingsrätt",
+        "ärendebeteckning",
+        "ärendenummer",
+        # The running head names the county under the authority, one word per
+        # line in the text layer. Without these the head block ends at the
+        # county name and the condition resumes there, taking the name, the
+        # date and the case number into its text. The last five are the seats
+        # of the land and environment courts, which stamp their own head on a
+        # decision that has been appealed.
+        "blekinge",
+        "dalarna",
+        "gotland",
+        "gävleborg",
+        "götaland",
+        "halland",
+        "jämtland",
+        "jönköping",
+        "kalmar",
+        "kronoberg",
+        "län",
+        "norrbotten",
+        "skåne",
+        "stockholm",
+        "södermanland",
+        "uppsala",
+        "värmland",
+        "västerbotten",
+        "västernorrland",
+        "västmanland",
+        "västra",
+        "örebro",
+        "östergötland",
+        "nacka",
+        "umeå",
+        "vänersborg",
+        "vänersborgs",
+        "växjö",
+        "östersund",
+    }
+)
+PAGE_HEAD_TOKEN = re.compile(r"^[\d()./:,-]+$")
+# The cap on how many lines a head block may run to. Every line in it has to be
+# furniture already, so the cap is a backstop and not the test; it was six until
+# the block above an appended correction decision turned out to be eight, which
+# left the correction, and the two officials who signed it, inside a condition,
+# and the tallest heads in the corpus put the authority, the word Beslut, the
+# date, the case number and the facility number on separate lines with blanks
+# between them.
+MAX_HEAD_LINES = 16
+# What counts as a finished condition when a page break is met. Only a full
+# stop and its relatives: a colon means a list follows on the next page, and
+# a closing bracket sits in the middle of a sentence as often as at its end.
+# Reading them as endings closed conditions that had not ended.
+SENTENCE_END = (".", "!", "?", "”")
 
 # A condition opens with its number. The text can follow on the same line or on
 # the next one, which is how the decisions that amend a single condition are set.
@@ -300,13 +410,63 @@ def is_heading(line: str) -> bool:
     return letters >= HEADING_MIN_LETTERS and letters > digits
 
 
+def page_head(line: str) -> tuple[bool, bool]:
+    """Whether a line is page furniture, and whether it names the page block.
+
+    Two answers rather than one, because a line of digits alone is furniture in
+    a running head and a table row anywhere else. The caller steps over a block
+    only when one of its lines carried a word, which is what keeps a column of
+    measured values from being read as a page head.
+    """
+    words = line.strip().split()
+    if not words or len(line) > 80:
+        return False, False
+    named = False
+    for word in words:
+        bare = word.lower().strip(".,:;()")
+        if bare in PAGE_HEAD_WORDS:
+            named = True
+        elif not PAGE_HEAD_TOKEN.match(word):
+            return False, False
+    return True, named
+
+
+def head_block(lines: list[str], start: int) -> int | None:
+    """The first line after a running head, or None if there is no head here.
+
+    The block between two pages is empty lines and the head the county board
+    prints on every one. It is identified, not judged: the caller decides
+    whether the condition goes on across it or ends at it. None means no head
+    was found, either because the first line is ordinary text or because the
+    run of furniture is longer than any head in the corpus.
+    """
+    index = start
+    stepped = 0
+    named = False
+    while index < len(lines) and stepped <= MAX_HEAD_LINES:
+        stripped = lines[index].strip()
+        if CONDITION_START.match(stripped) or SECTION_STOP.match(stripped):
+            # The head ends at the next condition. Where that happens the
+            # caller closes the condition above rather than carrying it on.
+            return index if named else None
+        if stripped and not page_head(stripped)[0]:
+            return index if named else None
+        if stripped:
+            named = named or page_head(stripped)[1]
+        index += 1
+        stepped += 1
+    return None
+
+
 def conditions(lines: list[str]) -> list[tuple[int, str, str | None]]:
     """Number, text and heading of every condition in the bounded section."""
     found: list[tuple[int, str, str | None]] = []
     number: int | None = None
     current: list[str] = []
     heading: str | None = None
-    for position, line in enumerate(lines):
+    position = 0
+    while position < len(lines):
+        line = lines[position]
         following = lines[position + 1] if position + 1 < len(lines) else ""
         match = CONDITION_START.match(line)
         if match:
@@ -325,12 +485,48 @@ def conditions(lines: list[str]) -> list[tuple[int, str, str | None]]:
             if is_heading(line):
                 heading = line.strip()
         elif number is not None:
+            # A page break, met either as the empty line between two pages or
+            # as the running head itself, since the text layer does not always
+            # put a blank line before it. Until 5 September 2026 the empty line
+            # always closed the condition, which silently threw away the rest
+            # of 209 conditions in 126 decisions, every one of them cut in the
+            # middle of a sentence; and a head that arrived without an empty
+            # line before it was read as condition text, which put a running
+            # head and, in one decision, an appended correction carrying two
+            # officials' names inside the stored text. The block is stepped
+            # over either way. A condition that has not reached a full stop is
+            # carried across it, and an empty one is too, since a condition
+            # whose number stood at the foot of the page has not ended a
+            # sentence either.
+            resume = (
+                head_block(lines, position + (0 if line else 1))
+                if not line or page_head(line)[0]
+                else None
+            )
+            if resume is not None:
+                # The head is stepped over in every case. The condition goes on
+                # across it only when its own sentence is unfinished and what
+                # follows the head is more prose; a new condition on the other
+                # side ends it here.
+                unfinished = not " ".join(current).rstrip().endswith(SENTENCE_END)
+                opens = CONDITION_START.match(lines[resume]) or SECTION_STOP.match(
+                    lines[resume].strip()
+                )
+                if unfinished and not opens:
+                    position = resume
+                    continue
+                if current:
+                    found.append((number, " ".join(current), heading))
+                number, current = None, []
+                position = resume
+                continue
             if not line:
                 if current:
                     found.append((number, " ".join(current), heading))
                 number, current = None, []
             else:
                 current.append(line)
+        position += 1
     if number is not None and current:
         found.append((number, " ".join(current), heading))
     # The text is returned as it stands in the decision. Normalising is the

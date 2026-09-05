@@ -125,8 +125,18 @@ INTERNAL = frozenset(
         "kompletterande leverans arkiverad",
         "leverans arkiverad",
         # A test condition written down before its outcome is known, so that
-        # the bar cannot be moved to meet the result.
+        # the bar cannot be moved to meet the result. "förregistrering" is the
+        # same event under a shorter name, used from 5 September 2026; the
+        # longer one stays because rows already carry it and the log is never
+        # rewritten.
         "förregistrerat prövningsvillkor",
+        "förregistrering",
+        # What such a condition resolved to, kept apart from the condition
+        # itself so that the two can be read against each other.
+        "utfall",
+        # Personal data found inside the repository, and what was done about
+        # it. Internal, since no authority owes anything on it.
+        "personuppgift",
         "protokollavvikelse",
         "tillämpningsnot skriven",
     }
