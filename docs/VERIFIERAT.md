@@ -786,6 +786,53 @@ byter status. Avslutade går från 35 till 34.
 
 ---
 
+## Samma uppgift lämnas ut av de flesta och maskas av några, 2026-09-05
+
+Tillämpningsnot 6 säger att ett beslut överklagas enligt P9:s kriterium (b)
+endast om beslutet självt namnger den maskerade uppgiftstypen, så att
+jämförelsen kan göras på fältnivå mot de län som lämnat ut helt omaskade
+dokument i klass A. Kronobergs beslut namnger två typer: "Länsstyrelsen har
+maskerat uppgifter om djurbesättningens storlek och vissa uppgifter om de
+brister som framkom vid kontrolltillfällena." Om jämförelsen går att göra var
+en mätfråga som ingen ställt, och villkoret för den skrevs före körningen.
+
+**Jämförelsemängden är 47 helt omaskade A-dokument i sex län**, Dalarna,
+Gävleborg, Jämtland, Södermanland, Uppsala och Västerbotten. Not 6 räknade 17
+dokument i fem län den 23 augusti; mängden har vuxit med senare leveranser och
+med Västerbotten, som ADR-0019 lade till.
+
+| Uppgiftstyp | Län med minst ett dokument i klartext | Dokument |
+| --- | --- | --- |
+| djurbesättningens storlek | **5 av 6** | 23 av 47 |
+| brister vid kontrollen | **6 av 6** | 45 av 47 |
+
+Villkoret var minst tre län per typ, samma tal som kriteriet självt använder.
+Båda klarar det. Uppsala är det enda länet utan besättningsstorlek i klartext.
+
+**Förutsägelsen slog in för brister och bara delvis för besättningsstorlek.**
+Före körningen skrevs att båda typerna skulle finnas i de flesta län, eftersom
+en kontrollrapport som lämnas ut hel med nödvändighet innehåller de brister den
+är skriven för att redovisa. Brister finns i 45 av 47 dokument. Besättningens
+storlek står däremot i under hälften, 23 av 47, alltså svagare på dokumentnivå
+än väntat, medan länsnivån är den villkoret gällde.
+
+**Mätningen läser inga svärtningar.** Not 6 skriver att ett tidigare försök att
+härleda uppgiftstyp ur texten runt varje svärtning övergavs sedan det visat sig
+dra enskildas namn genom analysen. Den här mätningen går den andra vägen och
+läser bara dokument som lämnats ut hela, och den redovisar enbart antal. Ingen
+mening ur något dokument är utskriven, eftersom kringtexten kan namnge en
+enskild.
+
+**Fyndet är större än den fråga som ställdes.** För protokollet betyder det att
+kriterium (b) är drivbart på fältnivå mot Kronoberg. För öppenhetslagret
+betyder det något som står oberoende av om något överklagas: **samma
+uppgiftstyp, i samma handlingsklass, under samma bestämmelse, lämnas ut i
+klartext av de flesta länen och maskas av andra.** Det är olikvärdighet mätt i
+stället för påstådd, och det är den formen av påstående projektet finns för att
+kunna göra.
+
+---
+
 ## P9:s kriterier prövade, 2026-08-20
 
 Not 4 gör P9:s kriterier till utlösaren för varje P8-skrivelse, och prövningen
