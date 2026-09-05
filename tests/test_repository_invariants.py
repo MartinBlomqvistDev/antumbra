@@ -304,6 +304,7 @@ class TestNoPersonalDataIsCommitted:
         "dold_text.jsonl",
     )
     ROLES: ClassVar[set[str]] = {
+        "administratör",
         "arkivarie",
         "avdelningschef",
         "enhetschef",
