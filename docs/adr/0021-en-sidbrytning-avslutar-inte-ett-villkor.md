@@ -110,3 +110,23 @@ av ADR-0003:s konsekvens, att händelsen dokumenteras öppet, och den här raden
 är den dokumentationen. Följden att ta ställning till före publicering är att
 ett tjänstemannanamn då blir sökbart ur ett filnamn i en sidfot, vilket är
 precis det ADR-0018 valde bort.
+
+## Tillägg 2026-09-05, senare samma dag: sju rubriker till
+
+Talen om rubriker ovan gäller utfallet av den här ändringen och står kvar som
+de mättes. De stod sig några timmar. Genomläsningen av de 155 rubriker som blev
+kvar, gjord innan villkorstypologin byggdes på dem, hittade sju fel till i samma
+familj: ett läns löpande sidrubrik i genitiv, VÄSTRA GÖTALANDS LÄN, som
+ordlistan inte kände igen, och sex rubriker med föregående menings slut
+klistrat framför sig, som `uppstår.Lagring av gödsel och spolvatten`.
+
+Två regler kom ur det. Ett ord i sidhuvudet prövas även utan avslutande s, och
+en rad som är sidhuvud kan aldrig vara rubrik, oavsett var i segmenteringen den
+möts. Förledet före punkten läggs tillbaka på villkoret ovanför, vilket gav
+femton villkor sitt meningsslut åter och sänkte avhuggningen från 133 till 125
+av 2 347, alltså 5,3 procent.
+
+**Aktuella tal är därmed 1 655 villkor under 148 rubriker**, inte 155.
+Delegation framträdde först då som egen rubrik, femton villkor, och det är den
+rubrik VILLKORSSCHEMA avsnitt 2.4 gett en egen tabell. Baselinens tal rörde sig
+inte alls av den här ändringen. Utfallet står i `docs/VERIFIERAT.md`.
