@@ -1188,3 +1188,59 @@ veckor, och den låter ingen begäran med löpande frist nå slutstatus. Den ger
 heller ingen myndighet en sämre redovisning: uteblivet svar redovisas som just
 det, och P10:s bestämmelse att en eventuell JO-anmälan övervägs först efter
 publicering, enhetligt för alla, står oförändrad.
+
+### Tillämpningsnot 8, 2026-09-05: att öppna repot är publicering enligt P12
+
+Skriven dag 24, innan publiceringsdatumet är valt och innan det är känt vilka
+myndigheter som förblir tysta, av samma skäl som not 3, not 5, not 6 och not 7:
+regeln ska sättas medan den varken gynnar eller missgynnar någon bestämd
+myndighet, och medan den fortfarande är obekväm åt båda hållen.
+
+**Problemet.** P12 lyder att *"Varje berörd myndighet får sina egna resultat
+före publicering, med tre veckors svarstid."* Not 3 och ADR-0005 säger att
+repot är privat till minst dag 40 och att publicering dag 40 eller senare
+förutsätter stängd insamling. De två reglerna handlar om olika saker. Not 3 och
+ADR-0005 skyddar mätningen mot observatörseffekt; P12 ger myndigheten rätt att
+se sitt eget resultat innan någon annan gör det. Ingenstans står vad som händer
+när repot växlas till publikt, och repot innehåller `docs/VERIFIERAT.md` med
+varje myndighets egna tal, `data/maskning.jsonl`, `data/beslut.jsonl` och hela
+protokollloggen. Läst som enbart en metodgräns kunde dag 40 därför bli det
+datum då tjugotvå myndigheters resultat blir läsbara för vem som helst utan att
+någon av dem fått den svarstid P12 ger dem.
+
+**Vad protokollet självt säger om saken.** P12 knyter svarstiden till
+publicering och inte till någon viss kanal. Not 7 slår fast att den *"förkortar
+inte P12:s tre veckor"*, alltså att tre veckor är ett golv som andra regler inte
+äter upp. Avsnitt 9 motiverar hela upplägget med att ingenting hålls undan från
+myndigheterna. Luckan är därför inte ett val mellan två läsningar utan en
+oskriven följd, och noten sluter den i den riktning protokollets egen text redan
+pekar.
+
+**Regeln.** Publicering enligt P12 är varje åtgärd som gör en berörd myndighets
+egna resultat läsbara för någon utanför projektet. Att växla repot till publikt
+är en sådan åtgärd, och det är också en publik dashboard, en webbplats, ett
+dataset hos en tredje part, ett inlägg i sociala medier och att visa resultaten
+för en journalist eller en tilltänkt arbetsgivare. Ingen sådan yta öppnas förrän
+tre veckor gått sedan P12-utskicket nått samtliga berörda myndigheter.
+
+**När P12 skickas.** När insamlingen är stängd enligt not 3 och not 7. Paketet
+ska innehålla det som kommer att publiceras om myndigheten, inklusive dess plats
+i jämförelsen mellan län, och den platsen rör sig med varje leverans som ännu
+kan komma in. Att skicka tidigare vore att be om genmäle på tal som fortfarande
+kan ändras.
+
+**Följden i datum, räknad och inte bedömd.** Dag 40 är måndag 2026-09-28. Går
+P10:s sista påminnelse ut den dagen når en tyst begäran slutstatus tio
+arbetsdagar senare, måndag 2026-10-12, enligt not 7. Skickas P12 då löper
+svarstiden ut måndag 2026-11-02, och det är tidigast repot kan öppnas. Stängs
+insamlingen tidigare flyttas alla tre datumen framåt i samma takt; noten
+fastställer regeln och inte datumet.
+
+**Vad noten inte gör.** Den flyttar inte dag 40 och ändrar inte skälet i
+ADR-0005. Den hindrar inte att arbetet fortsätter i det privata repot, och den
+hindrar inte att resultat delas med en myndighet som redan fått sitt eget paket.
+Den ger ingen myndighet veto över publiceringen: not 7 kapar tystnaden vid tio
+arbetsdagar efter P10-påminnelsen, och P12:s tre veckor löper oavsett om ett
+genmäle kommer. Den rör inte not 7:s regel att ett pågående mål i kammarrätten
+inte skjuter upp publiceringen. Den säger heller ingenting om vad paketet ska
+innehålla utöver att det är det som kommer att publiceras om myndigheten.
