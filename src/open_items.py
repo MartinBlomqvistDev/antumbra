@@ -43,6 +43,14 @@ LOG = ROOT / "data" / "protokoll_logg.jsonl"
 
 DAY_ZERO = date(2026, 8, 3)
 PUBLICATION_DAY = 40
+# What the protocol and the ADRs tell the project to do, and has not been
+# done. The log records what happened; this records what was promised. It
+# exists because KR Jönköping 549-19 was to be requested "samtidigt" with the
+# Sundsvall ruling on 2 August 2026, the instruction was rewritten to "before
+# publication" the next day without the deferral being declared, and nothing
+# surfaced it for 36 days. The report shows what authorities owe us; without
+# this it shows nothing of what we owe ourselves.
+PLEDGES = LOG.parent / "atagande.jsonl"
 
 # Who moved. An event name that is in neither set is a hole in this mapping,
 # and the report says so rather than guessing a side.
@@ -97,6 +105,11 @@ THEIRS = frozenset(
         # sender is the kammarrätt, not the county, but the event belongs to
         # the request whose decision was appealed, and nothing is asked of us.
         "målregistrering i kammarrätten",
+        # The court sending in what it has received and offering a chance to
+        # comment. It does ask something of us, but not on any protocol clock:
+        # the deadline is the court's own and is tracked in data/atagande.jsonl
+        # with the other obligations the project owes rather than owes to it.
+        "underrättelse från kammarrätten",
         # The authority passing an appeal on to the court after finding it in
         # time. It ends the authority's own part of the appeal and asks
         # nothing of us, so it starts no clock here.
@@ -239,6 +252,13 @@ def add_working_days(start: date, count: int) -> date:
 def load(path: Path = LOG) -> list[dict]:
     """Every logged event, in logged order."""
     return [json.loads(line) for line in path.read_text("utf-8").splitlines()]
+
+
+def pledges(path: Path = PLEDGES) -> list[dict]:
+    """Every obligation the project has written down for itself."""
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
 
 
 def unmapped(rows: list[dict]) -> set[str]:
@@ -458,6 +478,29 @@ def report(rows: list[dict], today: date) -> list[str]:
         "  "
         + ", ".join(f"{a.replace('Länsstyrelsen i ', '')} {k}" for a, k in delivered)
     )
+
+    own = [p for p in pledges() if p["status"] != "gjort"]
+    dated = [p for p in own if p.get("frist")]
+    open_now = [p for p in own if p["status"] == "öppet" and not p.get("frist")]
+    waiting = [p for p in own if p["status"] == "väntar" and not p.get("frist")]
+    lines.append("")
+    lines.append(f"EGNA ÅTAGANDEN ({len(own)})")
+    # A pledge with a deadline is not a pledge any more, it is a deadline, so it
+    # is printed first and with the days left.
+    for pledge in sorted(dated, key=lambda p: p["frist"]):
+        left = (date.fromisoformat(pledge["frist"]) - today).days
+        lines.append(f"  FRIST {pledge['frist']}, om {left} dagar")
+        lines.append(f"      {pledge['atagande']}")
+        lines.append(f"      {pledge['kalla']}")
+    for pledge in sorted(open_now, key=lambda p: p["oppnat"]):
+        age = (today - date.fromisoformat(pledge["oppnat"])).days
+        lines.append(f"  {pledge['atagande']}")
+        lines.append(
+            f"      {pledge['kalla']}, öppet sedan {pledge['oppnat']}, {age} dagar"
+        )
+    for pledge in sorted(waiting, key=lambda p: p["oppnat"]):
+        lines.append(f"  [väntar] {pledge['atagande']}")
+        lines.append(f"      {pledge['kalla']}")
     return lines
 
 

@@ -387,6 +387,47 @@ class TestOpenItemsKnowsEveryEvent:
             "out of the check."
         )
 
+    def test_the_projects_own_pledges_are_readable_and_placed(self):
+        """The register of what the project owes itself, guarded like the log.
+
+        It exists because an instruction in the protocol sat unexecuted for 36
+        days: KR Jönköping 549-19 was to be requested at the same time as the
+        Sundsvall ruling on 2 August 2026, the wording was changed to "before
+        publication" the next day without the deferral being declared, and
+        nothing surfaced it. A register nobody can trust surfaces nothing
+        either, so the shape is checked here.
+        """
+        from datetime import date as _date
+
+        from open_items import pledges
+
+        rows = pledges()
+        assert rows, "data/atagande.jsonl är tom"
+        fields = {
+            "id",
+            "kalla",
+            "atagande",
+            "status",
+            "oppnat",
+            "stangt",
+            "frist",
+            "notering",
+        }
+        seen = set()
+        for row in rows:
+            assert set(row) == fields, sorted(set(row) ^ fields)
+            assert row["status"] in {"öppet", "väntar", "gjort"}, row["status"]
+            assert row["id"] not in seen, row["id"]
+            seen.add(row["id"])
+            _date.fromisoformat(row["oppnat"])
+            if row["status"] == "gjort":
+                assert row["stangt"], f"{row['id']} är gjort utan datum"
+                _date.fromisoformat(row["stangt"])
+            else:
+                assert row["stangt"] is None, f"{row['id']} är öppet med slutdatum"
+            if row["frist"]:
+                _date.fromisoformat(row["frist"])
+
     def test_every_authority_name_is_one_the_report_can_place(self):
         # An invented myndighet builds a request nobody sent. On 5 September
         # 2026 seven internal rows about the conditions layer were logged under
