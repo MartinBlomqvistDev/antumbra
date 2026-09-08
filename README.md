@@ -179,6 +179,7 @@ python pipeline/33_condition_register.py      # the conditions themselves, verba
 python pipeline/34_verify_conditions.py       # check 3: read the register back against a second extractor
 python pipeline/35_condition_types.py         # every heading placed by hand against the schema's typology
 python pipeline/36_build_p12_packets.py       # P12: one packet per authority, out of the registers
+python pipeline/37_build_day40_letters.py     # P10's last reminder and P11's question, prepared for day 40
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write

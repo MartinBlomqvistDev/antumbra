@@ -68,3 +68,4 @@ dbt/package-lock.yml
 src/antumbra.egg-info/
 data/hf/
 data/p12/
+data/dag40/
