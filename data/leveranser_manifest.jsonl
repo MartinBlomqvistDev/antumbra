@@ -653,3 +653,6 @@
 {"path": "vastra_gotaland_beslut/33706-2026 Beslut om avslag.pdf", "bytes": 123353, "sha256": "e6ff349d1217071259433a51fea8c664f4a9abbe413ce743ee09cdbbfe3312c0", "recorded": "2026-09-05"}
 {"path": "kammarratten_jonkoping_3249-26/Jönköping_KR_3249-26_Aktbil_13.pdf", "bytes": 189226, "sha256": "af35e71506e6868313b9d96abce15be5b3cc57647d937495ad2485335d2d266a", "recorded": "2026-09-08"}
 {"path": "kammarratten_jonkoping_3249-26/Brev från Kammarrätten i Jönköping i 3249-26.zip", "bytes": 366614, "sha256": "d3f1398b7b686f9196ae9202919f38bc134aec4d40e17f165ac994e03ae8f197", "recorded": "2026-09-08"}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 1491-19 Slutligt beslut 2019-06-13.pdf", "bytes": 1293514, "sha256": "946fc2725c6813081af55cb962e5f02399641a740e8e53e6e3cb1be13f56bc01", "recorded": "2026-09-09"}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 3900-18 Dom 2019-06-10.pdf", "bytes": 1301158, "sha256": "30a2ce9c32b7f935bddf7af55cfec4ca6937b6f2ab91a41f749ee4764d1f0fda", "recorded": "2026-09-09"}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 549-19 Dom 2019-06-13.pdf", "bytes": 1544362, "sha256": "76d771df7059e47d0116db841b9b174886638138e550c590469374856f5764d7", "recorded": "2026-09-09"}

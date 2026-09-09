@@ -61,6 +61,10 @@ OURS = frozenset(
         "avstående",
         "avstående från överklagande",
         "överklagande",
+        # Our written comment in a pending case, filed on the court's own
+        # invitation. The court's deadline is not a protocol deadline and is
+        # tracked in data/atagande.jsonl.
+        "yttrande till kammarrätten",
         "beslutsbegäran",
         "beslutsbegäran och fråga om uttagets fullständighet",
         "beslutsbegäran upprepad",

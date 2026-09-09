@@ -280,9 +280,15 @@ av mallen undantog fotobilagor. Det var fel av tre skäl.
 
 Rättspraxis behandlar text och bild lika. KR Sundsvall 2682-21 gällde en
 kontrollrapport **och en fotobilaga** som bilagor till ett beslut, och båda
-ansågs falla utanför sekretessen. I den motsatta linjen, KR Jönköping 549-19
-med flera, skyddades uttryckligen "beskrivningar och bilder av konstaterade
-brister". Utan bilderna täcker mätningen bara hälften av rättsfrågan.
+ansågs falla utanför sekretessen. Utan bilderna täcker mätningen bara hälften
+av rättsfrågan.
+
+**Rättelse 2026-09-09.** Här stod tidigare att i den motsatta linjen, KR
+Jönköping 549-19 med flera, skyddades uttryckligen "beskrivningar och bilder
+av konstaterade brister". Alla tre avgörandena i den linjen är nu lästa i
+fulltext och ordet bilder finns inte i något av dem; formuleringen kom ur
+referatet. Motiveringen ovan vilar därför på 2682-21 ensam, som är verifierad,
+och det räcker: den domen gällde uttryckligen en fotobilaga.
 
 Uteslutningen skulle dessutom radera varians. Att undanhålla en hel bilaga är
 den kraftigaste maskning som finns, och en myndighet som gör det skulle få
@@ -704,15 +710,59 @@ län, djurslag och kontrolltyp.
 
 **Källkritiskt förbehåll:** samtliga referat nedan kommer från allmanhandling.se,
 en specialistsajt som följer utlämnandemål. **KR Sundsvall 2682-21 är kontrollerad
-i fulltext 2026-08-03**, se verifieringen under referatet; övriga domar är det
-inte. KR Jönköping 549-19 bör begäras ut som motpol innan någon publicerad text
-lutar sig mot den.
+i fulltext 2026-08-03** och **KR Jönköping 549-19, 1491-19 och 3900-18 den
+9 september 2026**, se verifieringarna under respektive referat. KR Göteborg
+6077-19, 4309-20 och 3503-19 är fortfarande bara referat.
 
 Fristående kontrollrapport, maskning har hållit:
 
 - KR Jönköping 549-19, 1491-19, 3900-18 (2019): tre kontrollrapporter från
   djurskyddskontroller på gårdar. Beskrivningar och bilder av konstaterade
   brister skyddades som affärs- och driftförhållanden.
+
+**Verifierade i fulltext 2026-09-09.** Kopior begärda samma dag och
+expedierade av kammarrätten fyrtiosex minuter senare. Referatet håller inte,
+och fyra saker skiljer sig från det.
+
+1. **1491-19 är inget domslut.** Det är ett slutligt beslut. Referatet och
+   texten ovan kallar alla tre domar.
+2. **Två av tre saknar egna skäl.** 549-19:s hela motivering är
+   *"Kammarrätten instämmer i länsstyrelsens bedömning. Vad [klaganden] anfört
+   i kammarrätten föranleder inte något annat ställningstagande. Överklagandet
+   ska således avslås."* 1491-19:s är *"Kammarrätten instämmer i
+   länsstyrelsens bedömning. Överklagandet ska således avslås."* Sakskälen står
+   i bilaga A, alltså i länsstyrelsens eget beslut. En ettmeningsbekräftelse
+   är svagare auktoritet än ett resonerat avgörande, och den fastställer just
+   den sorts beslut projektet bestrider.
+3. **3900-18 gick delvis klagandens väg**, vilket referatet inte nämner.
+   Kammarrätten upphävde beslutet och visade målet åter i fråga om sidorna 5
+   till 7, med skälet att *"Länsstyrelsen har på fråga från kammarrätten
+   uppgett att myndigheten inte längre har tillgång till den maskerade version
+   som lämnats ut"*. Domstolen var därför förhindrad att pröva den delen.
+   Myndigheten kunde inte visa vad den själv hade lämnat ut. Endast i 3900-18
+   är skälen kammarrättens egna, och de är avgränsade: *"Visserligen finns även
+   ett mindre antal uppgifter som inte omfattas av sekretess, men det rör sig
+   då om enstaka ord som det inte vore meningsfullt att lämna ut."*
+4. **3900-18 gällde ingen gård.** Verksamheten var en försöksdjursanläggning
+   med kaniner, och personuppgiftsmaskningen vilade på 21 kap. 3 § OSL med
+   hänvisning till *"den generella hotbilden mot försöksdjursverksamhet"*. Det
+   sammanhanget bär en del av utfallet och finns inte i referatet.
+
+**Ordet bilder finns inte i någon av de tre.** Klagandena talar om vilka
+brister som uppmärksammats. Formuleringen om att beskrivningar och bilder
+skyddades uttryckligen kommer ur referatet och inte ur avgörandena, och den
+används i avsnitt 5 som andra ben i motiveringen till att fotobilagor ingår i
+A och B; det benet faller. Beslutet att ta med bilagor står ändå kvar på det
+första benet, KR Sundsvall 2682-21, som gällde en kontrollrapport **och en
+fotobilaga** och är läst i fulltext. Vad som inte lästs: sista bilagesidan i
+549-19, två bilagesidor i 1491-19, en i 3900-18 och
+överklagandehänvisningarna.
+
+**Ett nytt avgörande att begära ut.** Länsstyrelsen i Västra Götalands beslut
+i 3900-18 tar stöd i *"Kammarrättens domar från 10 september 2018, mål nr
+2605-18 och mål 2803-18"*. Det första är samma dom myndigheten åberopar i sitt
+beslut mot detta projekt den 4 september 2026. Det andra, 2803-18, står
+ingenstans i det här avsnittet.
 - KR Göteborg 6077-19 (2020): tillsynsrapport om banveterinärverksamhet, brister
   i djurhållning bedömda som affärshemligheter.
 - KR Göteborg 4309-20 (2021): delvis utlämnande; diarienummer och veterinärs
