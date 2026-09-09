@@ -1,0 +1,120 @@
+{"ordning": 1, "id": "478a56d3a944", "position": 10, "typ": "air", "notering": "stoft i rökgaser från fastbränslepanna"}
+{"ordning": 2, "id": "7eaf09a67ae4", "position": 12, "typ": "air", "notering": "ammoniakavgång från stall"}
+{"ordning": 3, "id": "f7b9b63ef249", "position": 10, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 4, "id": "0b76120ecfff", "position": 3, "typ": "manure", "notering": ""}
+{"ordning": 5, "id": "2812a9383f80", "position": 5, "typ": "water", "notering": "tvätt- och spolvatten, lagringskapacitet"}
+{"ordning": 6, "id": "349f6ac370ab", "position": 4, "typ": "manure", "notering": ""}
+{"ordning": 7, "id": "24ab1609a6cd", "position": 2, "typ": "manure", "notering": ""}
+{"ordning": 8, "id": "fd78eaebf55b", "position": 1, "typ": "manure", "notering": "avtal om spridningsareal"}
+{"ordning": 9, "id": "236cf2f3fa83", "position": 4, "typ": "manure", "notering": "växtnäringsanalys, ämnet är gödseln"}
+{"ordning": 10, "id": "aa9349a67b80", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 11, "id": "d2bb967d36a1", "position": 19, "typ": "monitoring", "notering": "kontrollprogram"}
+{"ordning": 12, "id": "132c9352f872", "position": 7, "typ": "manure", "notering": ""}
+{"ordning": 13, "id": "097f049b82b6", "position": 4, "typ": "kan inte avgöra", "notering": "flera villkor sammanfogade i ett block: gödsel, aska, tvättvatten, stoft och kemikalier"}
+{"ordning": 14, "id": "47e4a0500a8b", "position": 2, "typ": "manure", "notering": ""}
+{"ordning": 15, "id": "349f6ac370ab", "position": 7, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 16, "id": "486f0758082c", "position": 6, "typ": "manure", "notering": "gödslingsplan"}
+{"ordning": 17, "id": "258af83170ca", "position": 6, "typ": "decommissioning", "notering": "avvecklingsanmälan; igångsättningstid och verkställighet hänger med i samma block"}
+{"ordning": 18, "id": "1948e37b26fc", "position": 19, "typ": "manure", "notering": "rapportering, men ämnet är gödselavyttringen"}
+{"ordning": 19, "id": "b713c795e6cc", "position": 19, "typ": "chemicals_waste", "notering": "bekämpningsmedel"}
+{"ordning": 20, "id": "aa00050d7188", "position": 15, "typ": "water", "notering": ""}
+{"ordning": 21, "id": "56c0d94c148b", "position": 11, "typ": "manure", "notering": ""}
+{"ordning": 22, "id": "04b64597535a", "position": 4, "typ": "chemicals_waste", "notering": "bekämpningsmedel"}
+{"ordning": 23, "id": "70629e513c09", "position": 19, "typ": "decommissioning", "notering": "avvecklingsplan; rubriken Delegationer hänger med sist"}
+{"ordning": 24, "id": "44d5abd33863", "position": 14, "typ": "noise", "notering": ""}
+{"ordning": 25, "id": "4d6a7564223c", "position": 5, "typ": "water", "notering": ""}
+{"ordning": 26, "id": "f61b323aa3c2", "position": 4, "typ": "energy", "notering": "efterrötkammare med gasuppsamling; texten är avhuggen"}
+{"ordning": 27, "id": "ed591f3ca06d", "position": 6, "typ": "manure", "notering": ""}
+{"ordning": 28, "id": "768eb35bc3f2", "position": 13, "typ": "manure", "notering": "markkartering som underlag för gödsling; kunde läsas som soil"}
+{"ordning": 29, "id": "7e13889f1c04", "position": 8, "typ": "chemicals_waste", "notering": "aska som restprodukt; sprids dock som gödselmedel"}
+{"ordning": 30, "id": "061c7e9bb517", "position": 6, "typ": "housing", "notering": ""}
+{"ordning": 31, "id": "061c7e9bb517", "position": 4, "typ": "manure", "notering": ""}
+{"ordning": 32, "id": "2d9e3b9e7116", "position": 10, "typ": "monitoring", "notering": "kontrollprogram"}
+{"ordning": 33, "id": "e707d9968fb0", "position": 7, "typ": "decommissioning", "notering": "avveckling och efterbehandling; tidigare tillstånd och igångsättningstid hänger med i samma block"}
+{"ordning": 34, "id": "24ab1609a6cd", "position": 8, "typ": "noise", "notering": "texten är avhuggen före tabellen"}
+{"ordning": 35, "id": "073b890ef134", "position": 5, "typ": "kan inte avgöra", "notering": "sammanfogat block: gödselanalys och kontrollprogram är två villkor i ett"}
+{"ordning": 36, "id": "e723c2608924", "position": 13, "typ": "energy", "notering": "driftstörningsplan för biogasanläggningen; materialet är gödsel och slakteriavfall"}
+{"ordning": 37, "id": "375a0f8ee07e", "position": 8, "typ": "manure", "notering": ""}
+{"ordning": 38, "id": "1948e37b26fc", "position": 16, "typ": "manure", "notering": "spridningsareal"}
+{"ordning": 39, "id": "00b6f9b9e64f", "position": 5, "typ": "manure", "notering": "blocket öppnar med tvättvatten men handlar i huvudsak om gödsellagring"}
+{"ordning": 40, "id": "d93ddc9bc364", "position": 17, "typ": "manure", "notering": ""}
+{"ordning": 41, "id": "777f4fcb9746", "position": 3, "typ": "manure", "notering": "lagring under tak för att begränsa ammoniakavgång; kunde läsas som air"}
+{"ordning": 42, "id": "6f5ac43b3c20", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 43, "id": "f0df20445b99", "position": 11, "typ": "manure", "notering": "skyddsavstånd vid spridning; kunde läsas som water"}
+{"ordning": 44, "id": "dbb5b0df754f", "position": 5, "typ": "manure", "notering": "spridningstidpunkt, lukt och ammoniak"}
+{"ordning": 45, "id": "85f59705885d", "position": 2, "typ": "noise", "notering": ""}
+{"ordning": 46, "id": "8c6fb0989be8", "position": 12, "typ": "monitoring", "notering": "kontrollprogram"}
+{"ordning": 47, "id": "f61b323aa3c2", "position": 2, "typ": "other", "notering": "vilka substrat som får tas emot; typologin saknar omfattnings- eller produktionsvillkor"}
+{"ordning": 48, "id": "70629e513c09", "position": 12, "typ": "manure", "notering": "spridningsareal"}
+{"ordning": 49, "id": "bfe5a33606e9", "position": 2, "typ": "manure", "notering": ""}
+{"ordning": 50, "id": "ff2a4dc60233", "position": 7, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 51, "id": "098f327727da", "position": 3, "typ": "manure", "notering": ""}
+{"ordning": 52, "id": "2d9e3b9e7116", "position": 5, "typ": "manure", "notering": ""}
+{"ordning": 53, "id": "d5d6092cea4a", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 54, "id": "97f4155b20eb", "position": 9, "typ": "manure", "notering": "spridningskontrakt"}
+{"ordning": 55, "id": "04b64597535a", "position": 1, "typ": "noise", "notering": ""}
+{"ordning": 56, "id": "3af32e28bd6c", "position": 8, "typ": "chemicals_waste", "notering": "aska från biobränslepanna; kunde läsas som energy eller monitoring"}
+{"ordning": 57, "id": "0f0ffd04394a", "position": 3, "typ": "other", "notering": "flugor och lukt; lukt läses ofta som air men flugor har ingen typ"}
+{"ordning": 58, "id": "aa2cbc78989b", "position": 10, "typ": "noise", "notering": ""}
+{"ordning": 59, "id": "b525da45015f", "position": 2, "typ": "manure", "notering": ""}
+{"ordning": 60, "id": "bbf7acf0d06e", "position": 11, "typ": "manure", "notering": "gödslingsplan"}
+{"ordning": 61, "id": "2e5f2009a298", "position": 6, "typ": "housing", "notering": "ströbädd, stalltemperatur och ventilation"}
+{"ordning": 62, "id": "1d292320542f", "position": 10, "typ": "energy", "notering": "energieffektiva komponenter vid nyinvestering"}
+{"ordning": 63, "id": "0f0ffd04394a", "position": 11, "typ": "manure", "notering": "skyddsavstånd vid spridning; kunde läsas som water"}
+{"ordning": 64, "id": "b88c95fee141", "position": 10, "typ": "noise", "notering": ""}
+{"ordning": 65, "id": "777f4fcb9746", "position": 9, "typ": "noise", "notering": ""}
+{"ordning": 66, "id": "38cec8b43c23", "position": 3, "typ": "manure", "notering": ""}
+{"ordning": 67, "id": "419ae6f109a7", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 68, "id": "0fe92f8e7486", "position": 8, "typ": "water", "notering": "bevuxen skyddszon längs vattendrag; schemat pekar själv ut valet mellan water och manure"}
+{"ordning": 69, "id": "522ce460745c", "position": 12, "typ": "water", "notering": ""}
+{"ordning": 70, "id": "24fa29afced5", "position": 8, "typ": "manure", "notering": "täckning av flytgödselbehållare mot ammoniak och lukt"}
+{"ordning": 71, "id": "d1427f6e0278", "position": 2, "typ": "noise", "notering": ""}
+{"ordning": 72, "id": "9814c96c2381", "position": 5, "typ": "manure", "notering": "texten är avhuggen och en sidfot med telefonnummer hänger med"}
+{"ordning": 73, "id": "b713c795e6cc", "position": 3, "typ": "manure", "notering": "stuka"}
+{"ordning": 74, "id": "bbf7acf0d06e", "position": 2, "typ": "manure", "notering": "utfodring med fytas för att sänka fosfor och kväve i gödseln; typologin saknar foder"}
+{"ordning": 75, "id": "9327fb75e98f", "position": 4, "typ": "manure", "notering": "spridningsareal"}
+{"ordning": 76, "id": "4d6a7564223c", "position": 18, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 77, "id": "9327fb75e98f", "position": 1, "typ": "general", "notering": "allmänna villkoret; nästa rubrik hänger med sist"}
+{"ordning": 78, "id": "71417065a82d", "position": 21, "typ": "monitoring", "notering": "besiktning; blocket sväljer delegation, statusrapport, igångsättningstid och upplysningar"}
+{"ordning": 79, "id": "52f5102c8830", "position": 8, "typ": "manure", "notering": "sammanfogat block med flera villkor, alla om gödsel och spridning; öppnar mitt i en mening efter ett sidhuvud"}
+{"ordning": 80, "id": "ce247b90da2d", "position": 19, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 81, "id": "7e13889f1c04", "position": 11, "typ": "noise", "notering": ""}
+{"ordning": 82, "id": "9ba369229e82", "position": 12, "typ": "chemicals_waste", "notering": ""}
+{"ordning": 83, "id": "78681974f707", "position": 8, "typ": "monitoring", "notering": "kontrollprogram; delegation och verkställighet hänger med"}
+{"ordning": 84, "id": "aee6ec54ed25", "position": 3, "typ": "chemicals_waste", "notering": "ett sidhuvud står mitt inne i texten"}
+{"ordning": 85, "id": "d93ddc9bc364", "position": 19, "typ": "decommissioning", "notering": ""}
+{"ordning": 86, "id": "5bada2737863", "position": 5, "typ": "air", "notering": "ventilation mot lukt och buller; träffar både air och noise"}
+{"ordning": 87, "id": "aa00050d7188", "position": 9, "typ": "water", "notering": "bevuxen skyddszon längs vattendrag"}
+{"ordning": 88, "id": "97f4155b20eb", "position": 11, "typ": "monitoring", "notering": "kontrollprogram; delegation och verkställighet hänger med"}
+{"ordning": 89, "id": "ce247b90da2d", "position": 7, "typ": "manure", "notering": "fosforgiva i fosforklass V"}
+{"ordning": 90, "id": "b713c795e6cc", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 91, "id": "1c8347c55318", "position": 4, "typ": "manure", "notering": "täckning av flytgödselbehållare mot ammoniak och lukt"}
+{"ordning": 92, "id": "d2bb967d36a1", "position": 20, "typ": "manure", "notering": "markkartering; kunde läsas som soil"}
+{"ordning": 93, "id": "7291b07d9ace", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 94, "id": "fe325be9efeb", "position": 3, "typ": "air", "notering": "gödselkylning i nya stallar för att sänka ammoniakavgången; träffar air, manure och housing"}
+{"ordning": 95, "id": "4d6a7564223c", "position": 19, "typ": "monitoring", "notering": "journalföring över hela verksamheten"}
+{"ordning": 96, "id": "cae9b2d4c4a0", "position": 4, "typ": "air", "notering": "ventilation mot ammoniak, damm och lukt; träffar även housing"}
+{"ordning": 97, "id": "111fe3df2737", "position": 10, "typ": "manure", "notering": "spridningstid"}
+{"ordning": 98, "id": "21bde06c76ea", "position": 3, "typ": "housing", "notering": "ströbädd, golvvärme och vattennipplar"}
+{"ordning": 99, "id": "c357ac195bc7", "position": 6, "typ": "manure", "notering": "spridningstid"}
+{"ordning": 100, "id": "a97850847fef", "position": 1, "typ": "general", "notering": "allmänna villkoret"}
+{"ordning": 101, "id": "662c5ebb921f", "position": 19, "typ": "water", "notering": "oljeavskiljare för tvättvatten"}
+{"ordning": 102, "id": "74dc6b5987fc", "position": 3, "typ": "manure", "notering": "lagring och transport av foder och gödsel; syftet är skydd av yt- och grundvatten"}
+{"ordning": 103, "id": "111fe3df2737", "position": 13, "typ": "manure", "notering": "skyddsavstånd vid spridning"}
+{"ordning": 104, "id": "bfe5a33606e9", "position": 3, "typ": "manure", "notering": ""}
+{"ordning": 105, "id": "a6363cf365e6", "position": 2, "typ": "manure", "notering": "utfodring med fytas för att sänka fosfor och kväve i gödseln; typologin saknar foder"}
+{"ordning": 106, "id": "78681974f707", "position": 3, "typ": "manure", "notering": ""}
+{"ordning": 107, "id": "7eaf09a67ae4", "position": 13, "typ": "water", "notering": ""}
+{"ordning": 108, "id": "f7b9b63ef249", "position": 7, "typ": "manure", "notering": "stallbalans"}
+{"ordning": 109, "id": "e35053a78bed", "position": 4, "typ": "manure", "notering": "spridningstid"}
+{"ordning": 110, "id": "68f45cac645e", "position": 5, "typ": "manure", "notering": "lagring under tak mot ammoniakavgång"}
+{"ordning": 111, "id": "949fceb500c3", "position": 15, "typ": "water", "notering": "bevuxen skyddszon längs vattendrag"}
+{"ordning": 112, "id": "aee6ec54ed25", "position": 10, "typ": "monitoring", "notering": "kontrollprogram"}
+{"ordning": 113, "id": "bbf7acf0d06e", "position": 25, "typ": "monitoring", "notering": "kontrollprogram och besiktning; blocket sväljer delegering och statusrapport"}
+{"ordning": 114, "id": "3af32e28bd6c", "position": 7, "typ": "air", "notering": "stoft i rökgaser från halm- och flispanna"}
+{"ordning": 115, "id": "f7b9b63ef249", "position": 4, "typ": "manure", "notering": "lagringsvolym för flytgödsel"}
+{"ordning": 116, "id": "24fa29afced5", "position": 5, "typ": "chemicals_waste", "notering": "avfallssortering"}
+{"ordning": 117, "id": "349f6ac370ab", "position": 8, "typ": "monitoring", "notering": "kontrollprogram"}
+{"ordning": 118, "id": "f7b9b63ef249", "position": 6, "typ": "manure", "notering": ""}
+{"ordning": 119, "id": "7291b07d9ace", "position": 14, "typ": "monitoring", "notering": "journalföring över hela verksamheten; övervägande gödsel"}
+{"ordning": 120, "id": "253fd3e4bff7", "position": 11, "typ": "water", "notering": "släckvatten och dagvatten"}

@@ -1322,6 +1322,100 @@ registret byggs.
 
 ---
 
+## Facit för rubrik mot sak: rubriken bär typen i tre fall av fem, 2026-09-09
+
+Beslutsloggen i VILLKORSSCHEMA avsnitt 3 förkastar alternativet att härleda
+villkorstypen ur rubriken med skälet att den "klassar fel och kraschar på
+rubriklösa beslut". Belägget var ett enda exempel: Motala 2021 villkor 12 står
+under Övrigt och är i sak ett avvecklingsvillkor. Registret bär nu 2 347
+villkor, så skälet går att mäta i stället för att åberopas.
+
+**Upplägget står i protokollloggen före körningen.** 120 villkor i fyra strata
+om 30, korsat på källa, textlager mot OCR, och på om villkoret har rubrik.
+Stratifieringen är avsiktligt inte proportionell mot korpusen, eftersom facit
+ska vara precist där instrumentet är svagast. Urvalet dras med fast frö,
+20260909, och ordningen slumpas över beslut. **Blindheten är mekanisk och inte
+en avsikt:** steg 38 skriver identifierare, position och villkorstext till fil,
+aldrig rubriken, och rubriken fogas till först av `--score`. Samtliga 120 svar
+låg skrivna i `data/villkor_facit.jsonl` innan sammanställningen kördes en enda
+gång.
+
+**Tre lästolkningsregler formulerades under de första trettio villkoren och
+innan något svar skrevs till fil.** Den första: typen följer det som regleras
+och inte verbet, så ett villkor om analys av gödselns växtnäring är gödsel och
+inte kontroll, medan kontroll används för kontrollprogram, besiktning och
+journalföring som saknar eget ämne. Den andra: ett block som segmenteringen
+fogat samman av flera villkor med olika ämne och utan ett som dominerar får
+svaret kan inte avgöra. Den tredje: ett ämne som vokabulären inte namnger får
+Övrigt med ämnet antecknat, eftersom det är ett fynd om typologin och inte om
+texten. Inget av de trettio första svaren berördes av den tredje regeln, så
+inget svar har skrivits om.
+
+**Villkoret för att facit skulle vara användbart höll.** Det skrevs före
+körningen att jag ska kunna sätta en typ ur texten ensam för minst 90 procent
+av de 120. Utfallet är **118 av 120, alltså 98,3 procent**. De två som föll är
+båda sammanfogade block: `097f049b82b6` villkor 10, som bär gödsel, aska,
+tvättvatten, stoft och kemikalier i ett stycke, och `073b890ef134` villkor 7,
+där en gödselanalys och ett kontrollprogram är två villkor i ett.
+
+**Förutsägelsen om överensstämmelsen föll.** Före körningen skrevs minst 80
+procent för de 60 med rubrik. Av de 59 som fick en typ satt ur texten stämmer
+rubrikens typ i **36, alltså 61,0 procent**. Delat på källa är det 19 av 29 för
+de OCR-lästa och 17 av 30 för de digitalfödda, och vägt med korpusens egen
+fördelning av villkor med rubrik, 361 OCR mot 1 294 text, blir talet **58,6
+procent**. Urvalet överviktar alltså det stratum som stämmer bäst, och
+korpustalet är sämre än stickprovets.
+
+**Förutsägelsen om Övrigt bekräftades inte.** Det skrevs att Övrigt blir den
+enskilda rubrik som stämmer sämst. Övrigt föll i 1 av 1, vilket inte skiljer
+den från Stallar som föll i 2 av 2. Den rubrik som bär massan av felen är i
+stället **Allmänt: 6 av 9**, följd av Djurstall med 3 av 4.
+
+**De 23 oenigheterna delar sig i två familjer.** Den uppdelningen gjordes med
+rubrikerna synliga och är därför inte blind; den redovisas som en efterhandsläsning
+av utfallet och inte som en del av mätningen. I tio fall namnger rubriken en
+plats eller ett kapitel och texten ett annat ämne: en gödslingsplan under
+Allmänt, en skyddszon under Ålbhnänt, en gödselstuka under Stallarna, ett
+avvecklingsvillkor under Övrigt. I tretton fall är båda placeringarna
+försvarbara och tvisten gäller typologins egna gränser: tvättvatten från
+stallrengöring under gödsel eller vatten, en bevuxen skyddszon under gödsel
+eller vatten, markkartering under kontroll eller gödsel, ventilation som
+motiveras med både lukt och buller. **Hårda rubrikfel är alltså 10 av 59, 17
+procent, och gränsdragningar 13 av 59, 22 procent.** Den andra siffran är ett
+fynd om schemat och inte om rubriken.
+
+**Allmänt är inte instrumentets fel.** Rubriken kunde ha släpat efter i
+segmenteringen, och det prövades: i `486f0758082c`, `c357ac195bc7`,
+`0fe92f8e7486`, `777f4fcb9746` och `9327fb75e98f` bryter senare rubriker igenom
+korrekt, Utsläpp till vatten, Buller, Egenkontroll och Övrigt. Besluten lägger
+själva tolv villkor i rad under Allmänt: gödselhantering, lagring, spridning,
+skyddszoner, spridningsavtal och tvättvatten. **297 villkor i korpusen står
+under en rubrik ur Allmänt-familjen, i 103 beslut, och exakt 103 av dem står på
+position 1.** De övriga **194 är alltså inte det allmänna villkoret**, och en
+rubrikhärledd typ skulle kalla vart och ett av dem allmänt. 28 beslut lägger
+fler än tre villkor under Allmänt, tillsammans 180 villkor. Formuleringarna
+återkommer ordagrant mellan besluten, så felet är en mall som upprepas och inte
+brus: det skulle blåsa upp allmänt och krympa gödsel systematiskt över en hel
+prövningsgrupp.
+
+**Den andra halvan av skälet mäts på de rubriklösa.** Där ger rubrikvägen inget
+alls. Ur texten ensam fick **59 av 60** en typ, och fördelningen liknar
+korpusens: 23 gödsel, 8 kemikalier och avfall, 6 kontroll, 5 vatten, 5 allmänt,
+4 buller, 3 luft, 3 avveckling. **692 av 2 347 villkor, 29,5 procent, saknar
+rubrik helt.**
+
+**Beslutsloggens rad står kvar och vilar nu på en mätning.** Båda leden i skälet
+håller: rubriken klassar fel i minst 17 procent av fallen där den finns, och den
+saknas för nästan vart tredje villkor, medan texten räcker för 98 procent.
+
+**Vad facit inte säger.** Det är en läsare och ingen andra läsare, så det finns
+inget mått på hur två bedömare skulle skilja sig åt. Mina egna svar är
+referensen, och i de tretton gränsfallen kan de vara fel utan att någon
+upptäcker det. 120 villkor av 2 347 är 5,1 procent, och talen ovan bär
+stickprovets osäkerhet. Bedömningarna är MANUAL enligt avsnitt 2.8, aldrig RULE.
+
+---
+
 ## Villkorstypologin mot korpusen: nio typer räcker inte, 2026-09-05
 
 VILLKORSSCHEMA avsnitt 2.2 fastställer nio villkorstyper, satta utifrån fyra
