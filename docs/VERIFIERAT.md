@@ -1322,6 +1322,105 @@ registret byggs.
 
 ---
 
+## Textlager som inte läser sidan, och två tjänstemän i en sidfot, 2026-09-10
+
+Kontroll 3 lämnade ett beslut utanför sitt mått, `361be3bd133c`, eftersom
+pdfplumber får ut 40 tecken ur dess 34 sidor. Att stänga det gapet ledde till
+tre fynd, och det tredje är en personuppgift.
+
+### Två beslut vars textlager inte är en läsning av sidan
+
+`källa: text` i registret betyder bara att pymupdf fick ut minst 200 tecken per
+sida. Det betyder inte att texten återger sidan, och två beslut visar skillnaden.
+
+**`361be3bd133c` deklarerar inget typsnitt.** Sidan har ingen `/Font` i sina
+resurser och `get_fonts` ger tom lista, men pymupdf får ut 73 459 tecken medan
+pdfplumber, pypdf och pdfminer alla får ut några punkttecken. Ordrutorna är
+orimliga, ett ord på 81 punkters höjd, och ord bryts mitt itu. Ett svep över
+alla 236 tillstånds-PDF:er ställde pymupdf mot pdfplumber: **ett enda beslut
+ligger under tio procent**, detta på 0,0005, och nästa ligger på 0,882, med
+medianen 0,983. Sikten efter sidor med text men utan typsnitt träffar samma
+beslut på 21 av 34 sidor och ingen annan fil på en enda sida.
+
+**`13df613f9802` har tappat å, ä och ö.** Inte ett av 981 bokstäver. Medianbeslutet
+ligger på 5,4 procent och det näst lägsta på 4,3. Texten passerar steg 24:s
+teckenräkning, och ett andra bibliotek läser samma stympade tecken, så inget
+före detta kunde se det.
+
+**Andra vägen är den tryckta sidan.** Steg 39 renderar sidorna och läser dem med
+Tesseract på samma villkor som steg 25, och mäter varje lagrat villkor mot den
+läsningen med kontroll 3:s egen uppdelning, med å, ä och ö vikta till a, a och o
+på båda sidor. Villkoret skrevs före körningen: median minst 0,90 och inget
+villkor under 0,50. Golvet är lägre än kontroll 3:s 0,99 med avsikt, eftersom
+en teckenström jämförs med en läsning av en bild.
+
+| Beslut | Villkor | Konfidens | Median | Lägsta | Rak median |
+| --- | --- | --- | --- | --- | --- |
+| `361be3bd133c` | 31 | 95,0 | 0,989 | 0,636 | 0,988 |
+| `13df613f9802` | 4 | 95,3 | 0,922 | 0,743 | 0,320 |
+
+**Villkoret håller för båda. Orden i registret är riktiga; tecknen är det inte
+överallt.** I `361be3bd133c` handlästes de tre svagaste. I två av dem är det OCR
+som läst fel, `NH 4 - N` som `nf4l-n` och `timmar` som `tummar`. I det tredje
+är registret riktigt i ord men bär mellanslag inne i ord, `f å r` och `hel g
+dagsaftnar`, vilket är vad trasig glyfgeometri ger. 15 av 31 villkor bär minst
+en sådan lös bokstav. Fem av de 31 matchar ett villkor i ett annat beslut, och
+de är fortfarande fem när lösa bokstäver limmas ihop på båda sidor, så felet
+flyttar inte måttet på delad text. I `13df613f9802` är varje ord med å, ä eller
+ö fel i registret; den raka täckningen ligger under 0,5 för alla fyra villkor,
+som förutsagt. Frågan om beslutet ska läsas ur OCR i stället står som öppet
+åtagande.
+
+Första versionen av steg 39 läste domen på fel kolumn, den gemena i stället för
+den vikta, och skrev ut att villkoret föll för `13df613f9802`. Koden är rättad
+till det som förregistrerades. Måttet är dessutom girigt och kan ge olika tal
+för samma korta villkor beroende på skiftläge: för villkor 8 i `361be3bd133c`
+ger den raka läsningen 0,945 och den vikta 0,636.
+
+### Två namngivna tjänstemän i registret
+
+**Sex villkor i `data/villkor.jsonl` bar två tjänstemäns för- och efternamn och
+deras e-postadresser.** Sikten som hittade dem letade efter webbadresser i
+sidfoten, inte efter namn. Alla sex är OCR-lästa beslut från Länsstyrelsen i
+Halland, och alla bar raden `Kontakta i detta ärende:` som tredje rad i
+sidfotsblocket. De två raderna ovanför den fångas av befintliga markörer; den
+tredje saknar postnummer och telefonnummer, och OCR har läst snabel-a som
+vänsterparentes följd av Q, så varken sidfotsmarkören i steg 24 eller
+screeningen i steg 33 såg den. Kontroll 3 kan inte se felet, eftersom den
+OCR-lästa halvan mäts mot samma fil som segmenteringen läste.
+
+Raderna kom in med `a32fda2` och är pushade. Historiken skrivs inte om. Beslutet
+och skälen står i ADR-0022: en markör för kontaktraden och för en adress som OCR
+läser den, samma form i screeningen, och en invariant över registret och
+facitfilerna.
+
+**Rättningen ändrar exakt de sex villkoren.** Inget beslut tappar ett villkor:
+2 347 villkor i 180 beslut och 1 655 med rubrik, före och efter. Förutsägelsen
+att texterna skulle bli längre föll; de blev 465 tecken kortare sammanlagt,
+eftersom kontaktraden avslutade sidan. Huvudsiffran rör sig inte: 42 procent
+delad text i den digitalfödda halvan och 238 av 253 texter inom en
+prövningsgrupp. Den OCR-lästa halvan går från 136 till 137 delade villkor,
+eftersom `Utgödsling av stallarna ska ske minst två gånger per vecka.` står i
+tre beslut men matchade i två så länge det tredje bar kontaktraden.
+
+### Kontroll 3 omkörd, och ett tal som var inaktuellt
+
+| | Digitalfödd, pdfplumber | OCR, samma fil |
+| --- | --- | --- |
+| publicerat 2026-09-05 | 0,9914 av 544 793 | 0,9990 av 227 860 |
+| före dagens rättning | | 0,9970 av 227 734 |
+| efter dagens rättning | 0,9914 av 546 284 | 0,9974 av 227 269 |
+
+Avhuggningen står på 121 av 2 347, 5,2 procent, och villkoret för kontroll 3 är
+uppfyllt. **Talet 0,9990 i avsnittet om kontroll 3 och i ADR-0021 mättes före
+tillägget i ADR-0021 samma dag**, och kontroll 3 kördes inte om efter det. Mätt
+på registret som det stod före dagens rättning är talet 0,9970, så fallet kom
+med tillägget och dagens ändring höjde talet igen. Vad i tillägget som sänkte
+det är inte undersökt och står som öppet åtagande. Talen i de äldre avsnitten
+står kvar som de mättes.
+
+---
+
 ## Facit för rubrik mot sak: rubriken bär typen i tre fall av fem, 2026-09-09
 
 Beslutsloggen i VILLKORSSCHEMA avsnitt 3 förkastar alternativet att härleda
