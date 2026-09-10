@@ -290,6 +290,11 @@ fulltext och ordet bilder finns inte i något av dem; formuleringen kom ur
 referatet. Motiveringen ovan vilar därför på 2682-21 ensam, som är verifierad,
 och det räcker: den domen gällde uttryckligen en fotobilaga.
 
+**Tillägg 2026-09-10.** Formuleringen finns, i en annan dom än referatet angav.
+KR Göteborg 2605-18 skriver att klaganden *"efterfrågat uppgifter i form av
+beskrivningar och bilder på konstaterade brister"* och håller de maskade delarna
+hemliga; se avsnitt 11. Det andra benet står därmed åter, med rätt källa.
+
 Uteslutningen skulle dessutom radera varians. Att undanhålla en hel bilaga är
 den kraftigaste maskning som finns, och en myndighet som gör det skulle få
 samma utfall som en som lämnar ut, eftersom ingen av dem tillfrågats.
@@ -712,7 +717,10 @@ län, djurslag och kontrolltyp.
 en specialistsajt som följer utlämnandemål. **KR Sundsvall 2682-21 är kontrollerad
 i fulltext 2026-08-03** och **KR Jönköping 549-19, 1491-19 och 3900-18 den
 9 september 2026**, se verifieringarna under respektive referat. KR Göteborg
-6077-19, 4309-20 och 3503-19 är fortfarande bara referat.
+6077-19, 4309-20 och 3503-19 är fortfarande bara referat. *Tillägg 2026-09-10:*
+de tre är nu lästa i fulltext, liksom 2605-18 och 2803-18, se verifieringen
+efter referatet om 3503-19. Inget kammarrättsavgörande i avsnittet vilar
+längre på ett referat.
 
 Fristående kontrollrapport, maskning har hållit:
 
@@ -804,6 +812,60 @@ Allt innehåll är inte affärshemlighet:
 - KR Göteborg 3503-19 (2019): cirkuskontroll; vilka djur som fanns på plats var
   inga företagshemligheter och hela rapporten lämnades ut.
 
+**Verifierade i fulltext 2026-09-10: de fem avgörandena från Kammarrätten i
+Göteborg.** Kopior begärda samma dag och expedierade sexton minuter senare, alla
+fem betecknade dom. Inget av dem gäller en kontroll av nötkreatur, gris eller
+fjäderfä: två gäller en minkfarm, ett en cirkus, ett en travbana och ett
+besiktning inför slakt. Av de tre referaten håller ett, 3503-19; de två andra
+missar något som bär. 2605-18 och 2803-18 var bara kända som hänvisningar.
+
+1. **2605-18 och 2803-18 gäller en minkfarm i Hallands län.** Båda är
+   överklaganden av Länsstyrelsen i Hallands läns beslut från juni 2018,
+   meddelade samma dag av samma avdelning och samma tre ledamöter, och båda
+   avslås. Skälen är kammarrättens egna men korta. I 2605-18: *"Kammarrätten
+   anser att de delar av handlingarna som omfattar brister hos minkfarmen är
+   sådana uppgifter som rör den enskildes affärs- och driftförhållanden. Enligt
+   kammarrättens bedömning kan det antas att den enskilde lider skada om
+   uppgifterna lämnas ut."* 2803-18 är i sak likalydande. 2605-18 är den dom
+   Länsstyrelsen i Västra Götaland åberopar mot projektet i beslutet den 4
+   september 2026, och båda åberopas i länsstyrelsens beslut i 3900-18. Att
+   2803-18 hör till Kammarrätten i Göteborg var tidigare bara härlett.
+2. **Formuleringen om beskrivningar och bilder kommer ur 2605-18.** Klaganden
+   hade begärt *"beskrivningar och bilder avseende konstaterade brister"*, och
+   kammarrätten skriver att klaganden *"efterfrågat uppgifter i form av
+   beskrivningar och bilder på konstaterade brister. Länsstyrelsen har i de
+   handlingar som lämnats ut maskerat bl.a. dessa uppgifter."* Det referatet
+   knöt till KR Jönköping står alltså i en dom från Göteborg, och där omfattade
+   det som hölls hemligt även bilder.
+3. **6077-19 vägde in sökandens ändamål.** Handlingen var en rapport över
+   banveterinärverksamheten på en travbana, Länsstyrelsen i Skåne län.
+   Kammarrätten prövar om uppgiften *"typiskt sett"* kan skada, enligt
+   förarbetena, och skriver sedan: *"Kammarrätten bedömer med hänsyn härtill samt
+   vad som angetts om ändamålet med den aktuella begäran att enskild kan lida
+   skada om uppgifterna lämnas ut."* Referatet kallar bristerna affärshemligheter;
+   domen säger affärs- och driftförhållanden.
+4. **4309-20 är meddelad 2020-10-01, inte 2021, och gick längre än referatet
+   säger.** Handlingarna var iakttagelser vid besiktning inför slakt, översända
+   från Livsmedelsverket, och Länsstyrelsen i Värmlands län hade maskat dem.
+   Bristerna på sidan 2 hölls hemliga. Resten ska lämnas ut, nämligen
+   *"information i handlingarna som gäller djurägare och djur, uppgifter om
+   slakteriet och transport till detsamma, datum och diarienummer för aktuell
+   kontroll samt namn och kontaktuppgifter för den veterinär som utfört
+   kontrollen"*, med skälet *"Kammarrätten anser inte att den enskilde kan antas
+   lida skada av ett utlämnande av dessa uppgifter."*
+5. **3503-19 stämmer med referatet.** Överklagandet gällde Länsstyrelsen i
+   Hallands läns beslut och bifölls. De maskade uppgifterna, *"bl.a. information
+   om vilka djur som finns på den kontrollerade cirkusverksamheten"*, är enligt
+   kammarrätten *"inte av sådan karaktär att det finns skäl att anta att den
+   enskilde lider skada om de röjs."*
+
+**Underinstansernas beslut ligger i bilaga A** och är lästa, i fyra av fem
+genom OCR eftersom sidorna är inskannade. De tre besluten från Länsstyrelsen i
+Hallands län, från 2018 och 2019, bär samma bedömningsmening ordagrant: *"samt
+att det kan antas att sökanden/bolaget som tillsynen gäller lider ska om
+uppgiften röjs."* Meningen är kontrollerad mot sidbilden i 2605-18, och
+skrivfelet står i originalet. Vad som inte lästs: överklagandehänvisningarna.
+
 **Inget avgörande från Högsta förvaltningsdomstolen finns.** Kammarrätterna har
 gått åt olika håll, rättsläget är oavgjort, och det är i sig en slutsats
 projektet ska kunna dra. I publicerad text beskrivs en myndighet som maskar
@@ -819,7 +881,10 @@ den beskrivs inte som lagbrytare, eftersom prejudikat saknas.
    kontrollerats. P5 är skriven för att fungera under båda tolkningarna.
 2. **Gränsen för "beslut i ärenden" i det enskilda fallet.** Kammarrättspraxis
    ger nu en delning mellan fristående rapport och beslutsbilaga, men den bygger
-   på referat, inte fulltext, och HFD har inte prövat frågan. Var gränsen går
+   på referat, inte fulltext, och HFD har inte prövat frågan. *Tillägg
+   2026-09-10:* samtliga kammarrättsavgöranden i avsnittet är nu lästa i
+   fulltext, och delningen står kvar; inget av de fem från Göteborg gäller
+   dock en kontroll av nötkreatur, gris eller fjäderfä. Var gränsen går
    för en rapport som beslutstexten hänvisar till utan att bilägga är oklart.
 3. **Vad som är rutinbetonade åtgärder i registrets fall.** 2 kap. 6 § andra
    stycket TF är verifierad ordagrant, men om just korstabellen i C kan tas fram
@@ -831,7 +896,10 @@ den beskrivs inte som lagbrytare, eftersom prejudikat saknas.
    djurskyddskontroll. Om den grunden, eller någon annan, bär namnmaskning i
    utlämnade handlingar är inte verifierat; KR Göteborg 4309-20 antyder enligt
    referatet att veterinärs kontaktuppgifter är offentliga. Åberopad grund
-   loggas per maskning och redovisas empiriskt.
+   loggas per maskning och redovisas empiriskt. *Tillägg 2026-09-10:* 4309-20
+   är läst i fulltext. Veterinärens namn och kontaktuppgifter ska lämnas ut,
+   men prövningen gällde 30 kap. 23 § OSL och skadan för den enskilde, inte
+   9 b § OSF. Den frågan är fortfarande oprövad.
 5. **Prövningstillstånd i kammarrätten.** Enligt gängse ordning krävs inte
    prövningstillstånd när ett myndighetsbeslut överklagas direkt dit, men det
    har inte verifierats mot förvaltningsprocesslagen här.

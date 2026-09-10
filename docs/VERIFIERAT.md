@@ -2159,6 +2159,16 @@ som till skillnad från punkt 107 bär den uttryckliga begränsningen "sekretess
 gäller inte beslut i ärenden". Avgörandet säger ingenting om punkt 30 och
 ingenting om A/B-designens tes.
 
+*Tillägg 2026-09-10, efter beslutet att inte överklaga:* KR Göteborg 4309-20,
+läst i fulltext i dag, lät lämna ut *"information i handlingarna som gäller
+djurägare och djur"* ur handlingar från besiktning inför slakt, med skälet att
+den enskilde inte kan antas lida skada. Det försvagar det andra av de tre
+skälen mot ett överklagande av Kronoberg, att besättningsstorlek ligger nära
+det RÅ 2010 ref. 77 höll hemligt. Avgörandet är från en annan kammarrätt och
+en annan sorts handling. Det första skälet, att P9 rangordnar Kronoberg sist
+av de sex, och det tredje, not 6:s hellre tystnad än ett förlorat mål, rörs
+inte.
+
 **Domstolen är densamma.** Kronobergs län ligger i Kammarrätten i Jönköpings
 domkrets, samma domstol som redan har Kalmaröverklagandet som mål 3249-26 och
 som får Jordbruksverkets. Det är också den kammarrätt vars dom i 2010 års mål
