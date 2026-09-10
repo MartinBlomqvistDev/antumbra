@@ -59,6 +59,15 @@ registret mäts mot samma fil som segmenteringen läste. Ett sidfotsblock som
 svalts av ett villkor matchar då perfekt. Kontroll 3 redovisar den svagheten i
 klartext sedan den skrevs; det här är första gången den kostat något.
 
+**Felformen var känd sedan registret skrevs och blev ingen regel.**
+`docs/VERIFIERAT.md` beskriver hur steg 33 vägrade skriva registret första
+gången, och ett av skälen var
+en namngiven handläggare med en adress som OCR gjort oigenkännlig för
+e-postmönstret. Den raden stoppades av mönstret för telefonnummer och inte av
+mönstret för adress. Att adressformen passerade screeningen syntes alltså redan
+då, men den gjordes inte till ett eget mönster, och de sex raderna från Halland
+bar inget telefonnummer.
+
 **Namnet var också ett mätfel.** Villkoret `Utgödsling av stallarna ska ske
 minst två gånger per vecka.` står i tre beslut. Före rättningen matchade bara
 två av dem varandra, eftersom det tredje bar kontaktraden i sin text. Gruppen
@@ -83,13 +92,19 @@ och kontroll 2 är oförändrade.
 här rättningen, och de commitarna är pushade. Skillnaden mot de fem commits som
 skrevs om enligt ADR-0018 är densamma som i ADR-0021: de hade aldrig pushats.
 Det som återstår är ADR-0003:s andra halva, att händelsen dokumenteras öppet,
-och den här filen är den dokumentationen. Följden att ta ställning till före
-publicering är att två tjänstemannanamn då blir sökbara ur en sidfot, vilket är
-precis det ADR-0018 valde bort.
+och den här filen är den dokumentationen. Följden är den som tillägget till
+ADR-0003 redan tagit ställning till: blir repot publikt blir namnen läsbara i
+historiken, och det är priset för regeln. Tillägget skrevs om ett namn och säger
+att regeln gäller oavsett vad en commit bär, så att det nu är tre personers namn
+ändrar ingenting i den.
 
-Det är tredje gången ett personnamn nått registret: en gång ur ett filnamn i en
-sidfot, en gång ur ett bifogat rättelsebeslut som aldrig nådde git, och nu ur
-en kontaktrad i en sidfot. Alla tre kom in samma väg, som text på en sida som
+Det är fjärde gången ett personnamn hamnat i en villkorstext och andra gången
+det nått git. Namnen har kommit ur ett filnamn i en sidfot, som nådde git; ur
+ett bifogat rättelsebeslut, som aldrig gjorde det; ur en sidfotsrad med en
+namngiven handläggare och en adress som OCR förvanskat, som screeningen stoppade
+när registret skrevs första gången bara därför att ett telefonnummer stod på
+samma rad; och nu ur en kontaktrad utan telefonnummer. Alla fyra kom in samma
+väg, som text på en sida som
 inte är villkorstext, och ingen av dem kom in genom ett fält som är avsett att
 bära ett namn. Sikten som hittade dessa sex letade inte efter namn utan efter
 webbadresser, och det är värt att notera: **den screening som fångar

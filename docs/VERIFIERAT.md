@@ -1285,6 +1285,13 @@ adresserna är länsstyrelsernas registratorsadresser, alltså länets namn föl
 av myndighetens domän, de personnummerliknande talen är organisationsnummer som
 202100-2270, och telefonnumren är myndigheternas växlar. Ingen enskild person förekommer i någon villkorstext.
 
+**Rättelse 2026-09-10: påståendet höll inte.** Screeningen sökte adresser med
+snabel-a, och i OCR-läst text har tecknet blivit en vänsterparentes följd av Q.
+Sex villkor i sex OCR-lästa beslut bar länsstyrelsens kontaktrad med två
+namngivna tjänstemän och deras e-postadresser, och ingen av dem gav träff. De
+hittades den 9 september; se avsnittet om textlager som inte läser sidan nedan och
+ADR-0022. Meningen står kvar som den skrevs.
+
 ### Men screeningen hittade något annat
 
 Alla dessa uppgifter kom in samma väg: **länsstyrelsens sidfot ligger inuti
@@ -1644,6 +1651,13 @@ ADR-0003:s konsekvens, att händelsen dokumenteras öppet, vilket är vad det h�
 avsnittet gör. Före publicering finns en följd att ta ställning till: ett
 tjänstemannanamn blir då sökbart ur ett filnamn i en sidfot, vilket är precis
 det ADR-0018 valde bort.
+
+*Tillägg 2026-09-10:* frågan är inte öppen. Tillägget till ADR-0003, skrivet
+samma dag, avgör den: historiken skrivs aldrig om, oavsett vad en commit bär, och
+namnet blir läsbart som ett medvetet pris. Avsnittet om villkorsregistret nedan
+beskriver dessutom en adress som OCR gjort oigenkännlig och som stoppades bara
+därför att ett telefonnummer stod på samma rad. Formen blev då ingen egen regel,
+och sex villkor utan telefonnummer passerade senare på just den; se ADR-0022.
 
 **Sidfotsmarkörerna utökades med två former.** Den engelska sidmarkören `Page N
 of M`, 72 rader i 30 beslut, satt där den svenska sitter och missades för att

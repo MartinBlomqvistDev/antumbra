@@ -130,3 +130,11 @@ av 2 347, alltså 5,3 procent.
 Delegation framträdde först då som egen rubrik, femton villkor, och det är den
 rubrik VILLKORSSCHEMA avsnitt 2.4 gett en egen tabell. Baselinens tal rörde sig
 inte alls av den här ändringen. Utfallet står i `docs/VERIFIERAT.md`.
+
+## Tillägg 2026-09-10: frågan före publicering är avgjord, och två namn till
+
+Stycket ovan om en följd att ta ställning till före publicering står kvar som
+det skrevs. Tillägget till ADR-0003 samma dag avgör den: historiken skrivs
+aldrig om, och namnet blir läsbart som ett medvetet pris. Den 9 september
+hittades dessutom två tjänstemäns namn och e-postadresser i sex villkor, i
+trädet sedan a32fda2. Beslutet om dem står i ADR-0022.
