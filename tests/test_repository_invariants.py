@@ -334,6 +334,37 @@ class TestNoPersonalDataIsCommitted:
                     offenders.append(f"{name}: {found}")
         assert not offenders, f"e-mail addresses in the protocol data: {offenders}"
 
+    # The condition register is built from recognised text, and OCR reads an
+    # at sign as a left parenthesis followed by Q. The EMAIL pattern above
+    # therefore does not see an address in it. On 9 September 2026 six
+    # conditions in the register carried two officials' names and their
+    # addresses in that shape, committed since a32fda2. See ADR-0022.
+    OCR_EMAIL: ClassVar[re.Pattern[str]] = re.compile(
+        r"[\w.]+ ?[\(\[][QO0][\w.-]*\.(?:se|com|nu)", re.IGNORECASE
+    )
+    CONTACT_LINE: ClassVar[re.Pattern[str]] = re.compile(
+        r"kontakta i detta [äa]rende", re.IGNORECASE
+    )
+    CONDITION_DATA: ClassVar[tuple[str, ...]] = (
+        "villkor.jsonl",
+        "villkor_facit_urval.jsonl",
+        "villkor_facit.jsonl",
+    )
+
+    def test_no_contact_block_in_the_condition_register(self):
+        offenders = []
+        for name in self.CONDITION_DATA:
+            path = ROOT / "data" / name
+            if not path.exists():
+                continue
+            text = path.read_text("utf-8")
+            offenders += [f"{name}: {m}" for m in self.OCR_EMAIL.findall(text)]
+            if self.CONTACT_LINE.search(text):
+                offenders.append(f"{name}: the county board's contact line")
+        assert not offenders, (
+            f"a footer contact block reached the register: {offenders}"
+        )
+
     def test_a_decision_names_a_role_and_never_a_person(self):
         # CONTRIBUTING: the names stay in the source document, the repo carries
         # the role. A new decision pasted in with its names fails here.

@@ -798,7 +798,7 @@
 {"id": "4c9789f748b8", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 13, "tecken": 171, "källa": "text", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "ea9d4c6642865a6c"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 190, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "4b0de8a85cc818aa"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
-{"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 217, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "d49bac3f4083d8dd"}
+{"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 138, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "0eeebedec3c20e0d"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 267, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "28ff2e825aeab691"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 81, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "4b4d9f965e7add89"}
 {"id": "4d6a7564223c", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 425, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "9981ec81972add58"}
@@ -1131,7 +1131,7 @@
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 123, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "756b2e64a0f4b08e"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 156, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "12290bbaab87e086"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 135, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "19c044a41d4aa7b0"}
-{"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 310, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "990f8fcab5e0c107"}
+{"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 238, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "a2150a6679ede475"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 290, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "afba1bfd1f24896a"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 8, "tecken": 171, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "d07ec8e87bb753b8"}
 {"id": "7291b07d9ace", "prövningsgrupp": "Hallands län", "villkorsnummer": 9, "tecken": 106, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "fd78c52971e0920d"}
@@ -1198,7 +1198,7 @@
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 155, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "3d96578dc78c49d1"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 59, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "b223c42ac98c8ee6"}
-{"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 226, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "403026649474c715"}
+{"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 147, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "ab9bda8abcd4c00a"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 16, "tecken": 2294, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "fdcc2af962b014c1"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 17, "tecken": 271, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "2ca43855b0c00b87"}
 {"id": "78681974f707", "prövningsgrupp": "Hallands län", "villkorsnummer": 18, "tecken": 958, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "083145727daeac80"}
@@ -1283,7 +1283,7 @@
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 192, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "4d9f7f977b09ff40"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 155, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "3d96578dc78c49d1"}
-{"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 138, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "b0df16f61475f26f"}
+{"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 59, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "b223c42ac98c8ee6"}
 {"id": "80a607999316", "prövningsgrupp": "Hallands län", "villkorsnummer": 16, "tecken": 2354, "källa": "ocr", "rubrik": null, "series_ok": false, "serie_prövas": true, "text_hash": "ac0fa719ded4cf9d"}
 {"id": "82c38262d46d", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 183, "källa": "text", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "cc6af19b9ae635af"}
 {"id": "82c38262d46d", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 545, "källa": "text", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "711687a705726e7a"}
@@ -1544,7 +1544,7 @@
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 59, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "b223c42ac98c8ee6"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 142, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "abb45032d780fceb"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 130, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "cacf704d77d34cb6"}
-{"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 213, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "dc9a304191218062"}
+{"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 7, "tecken": 136, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "01f9159178f2b439"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 8, "tecken": 139, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "0d5b13d293dbb28a"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 9, "tecken": 161, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "7172ff82d3a104f3"}
 {"id": "a7529f8c30ee", "prövningsgrupp": "Hallands län", "villkorsnummer": 10, "tecken": 167, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "f908921361058061"}
@@ -2296,7 +2296,7 @@
 {"id": "f6f4fb4fcef5", "prövningsgrupp": "Skåne län och Blekinge län", "villkorsnummer": 13, "tecken": 676, "källa": "text", "rubrik": "Återställning", "series_ok": true, "serie_prövas": true, "text_hash": "de9a000b22da2c33"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 1, "tecken": 190, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "4b0de8a85cc818aa"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 2, "tecken": 245, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "30cd6c55017dd17f"}
-{"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 373, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "68c63523c6da19fa"}
+{"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 3, "tecken": 294, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "4a7d625894208aaa"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 4, "tecken": 194, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "7aee1fb5d25ced2f"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 5, "tecken": 169, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "a3438cd7b0e723dc"}
 {"id": "f7b9b63ef249", "prövningsgrupp": "Hallands län", "villkorsnummer": 6, "tecken": 80, "källa": "ocr", "rubrik": null, "series_ok": true, "serie_prövas": true, "text_hash": "8def6371e57c73b7"}

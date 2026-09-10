@@ -65,6 +65,13 @@ FORBIDDEN = {
     # A file name is never part of a condition, so the shape is unambiguous
     # where a capitalised pair of words is not, and the name test stays absent.
     "filnamn": re.compile(r"\.(docx?|pdf|rtf|xlsx?)\b", re.IGNORECASE),
+    # Added 9 September 2026. The pattern above requires an at sign, and OCR
+    # reads that character as a left parenthesis followed by Q, so six contact
+    # lines with two officials' names passed the screen and were committed.
+    # This is the same address shape as it survives recognition.
+    "e-postadress, som OCR läser den": re.compile(
+        r"[\w.]+ ?[\(\[][QO0][\w.-]*\.(se|com|nu)\b", re.IGNORECASE
+    ),
 }
 
 

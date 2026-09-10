@@ -211,7 +211,16 @@ PAGE_FOOTER = re.compile(
     # one of them carries an official's given and family name, which is how a
     # personal name reached a committed file.
     r"|\bpage \d+ of \d+\b"
-    r"|\.(docx?|pdf|rtf|xlsx?)\b",
+    r"|\.(docx?|pdf|rtf|xlsx?)\b"
+    # Added 9 September 2026, after a screen of the register found two named
+    # officials in it. The county board prints a third footer line, "Kontakta i
+    # detta ärende: <given name> <family name>, <address>", below the address
+    # block. The two lines above it are dropped by the markers already here; the
+    # third carries no postcode, no telephone number and, once OCR has read the
+    # at sign as a parenthesis and a Q, no at sign either, so nothing caught it.
+    # Both shapes are added: the line itself, and an at sign as OCR renders it.
+    r"|kontakta i detta [äa]rende"
+    r"|[\w.]+ ?[\(\[][QO0][\w.-]*\.(se|com|nu)\b",
     re.IGNORECASE,
 )
 
