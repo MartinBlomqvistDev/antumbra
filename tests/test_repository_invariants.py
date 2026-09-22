@@ -307,6 +307,7 @@ class TestNoPersonalDataIsCommitted:
         "administratör",
         "arkivarie",
         "avdelningschef",
+        "chefsjurist",
         "enhetschef",
         "länsjurist",
         "djurskyddshandläggare",
