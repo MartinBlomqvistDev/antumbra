@@ -118,6 +118,10 @@ THEIRS = frozenset(
         # time. It ends the authority's own part of the appeal and asks
         # nothing of us, so it starts no clock here.
         "överlämnande till kammarrätten",
+        # The authority asking again for a delgivningskvitto it has not
+        # had. It puts the receipt on us, but on the authority's own date
+        # and not on any protocol clock.
+        "påminnelse om delgivning",
         "mottagningsbesked",
         # A delivery that replaces a defective one. Distinct from "leverans"
         # because it does not start the collection, it repairs it, and the
@@ -368,11 +372,19 @@ def state(events: list[dict], today: date) -> dict:
         (last_ours["datum"], last_ours["klockslag"])
         > (last_theirs["datum"], last_theirs["klockslag"])
     )
-    appeal = appeal_deadline(last_theirs["handelse"])
-    appeal_closed = any(
+    # The appeal clock belongs to the decision, not to whatever the authority
+    # happened to send last. A delgivningspåminnelse or an autosvar logged
+    # after a refusal would otherwise stand as the last event and silence P9's
+    # deadline: Gotland 3287-2026 was received on 28 August 2026, read on
+    # 22 September, and the report said the decision had not been issued.
+    last_decision = next(
+        (e for e in reversed(theirs) if appeal_deadline(e["handelse"])), None
+    )
+    appeal = appeal_deadline(last_decision["handelse"]) if last_decision else None
+    appeal_closed = last_decision is not None and any(
         e["handelse"] in APPEAL_CLOSERS
         and (e["datum"], e["klockslag"])
-        > (last_theirs["datum"], last_theirs["klockslag"])
+        > (last_decision["datum"], last_decision["klockslag"])
         for e in events
     )
     deadline = answer_deadline(last_theirs["handelse"])
@@ -380,11 +392,11 @@ def state(events: list[dict], today: date) -> dict:
         days, step = appeal
         item["waiting_on"] = "dig"
         item["step"] = step
-        item["due"] = date.fromisoformat(last_theirs["datum"]) + timedelta(days=days)
+        item["due"] = date.fromisoformat(last_decision["datum"]) + timedelta(days=days)
         item["note"] = "avslagsbeslut, pröva P9:s kriterier"
         # The decision is what requires the move, so it is what the line
         # names, however many acknowledgements have been logged since.
-        item["last_event"] = last_theirs
+        item["last_event"] = last_decision
     elif deadline and not answered:
         days, step = deadline
         item["waiting_on"] = "dig"
