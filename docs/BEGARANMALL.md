@@ -902,7 +902,13 @@ den beskrivs inte som lagbrytare, eftersom prejudikat saknas.
    9 b § OSF. Den frågan är fortfarande oprövad.
 5. **Prövningstillstånd i kammarrätten.** Enligt gängse ordning krävs inte
    prövningstillstånd när ett myndighetsbeslut överklagas direkt dit, men det
-   har inte verifierats mot förvaltningsprocesslagen här.
+   har inte verifierats mot förvaltningsprocesslagen här. *Tillägg 2026-09-22:*
+   verifierat. 34 a § förvaltningsprocesslagen (1971:291) gäller överklagande
+   av ett beslut "som förvaltningsrätten har meddelat i målet", alltså inte ett
+   länsstyrelsebeslut som enligt 6 kap. 8 § OSL överklagas direkt till
+   kammarrätt. Prövningstillstånd krävs därför inte. Enligt 35 § krävs det
+   däremot i Högsta förvaltningsdomstolen. Frågan är därmed avgjord och
+   åtagandet stängt; underlaget står i `docs/VERIFIERAT.md`.
 6. **JO:s skyndsamhetspraxis.** Att besked normalt ska lämnas samma dag och att
    endast några dagars dröjsmål godtas vid sekretessprövning är väletablerat,
    men specifika JO-beslut har inte verifierats. Fristerna i P2 och P3 är satta

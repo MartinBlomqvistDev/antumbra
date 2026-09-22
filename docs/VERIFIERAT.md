@@ -847,6 +847,77 @@ kunna göra.
 
 ---
 
+## Instansen och prövningstillståndet, verifierade i författningstext 2026-09-22
+
+Överklagandet av Länsstyrelsen i Gotlands läns beslut dnr 3287-2026 vilar på
+båda frågorna, och den andra var rättsfråga 5 i `docs/BEGARANMALL.md` avsnitt
+11, öppen sedan 2026-08-02. Båda författningarna är lästa i Regeringskansliets
+fulltext via riksdagen.se, förordningen i lydelse till och med SFS 2026:798.
+
+### Vilken kammarrätt ett länsstyrelsebeslut går till
+
+Förordningen (1977:937) om allmänna förvaltningsdomstolars behörighet m.m.
+1 § ordagrant, första punkten: *"Överklagande till kammarrätt tas upp 1. av
+Kammarrätten i Stockholm när beslut i närmast föregående instans har meddelats
+av Förvaltningsrätten i Stockholm, Förvaltningsrätten i Uppsala eller av en
+förvaltningsmyndighet som är belägen inom dessa förvaltningsrätters
+domkretsar"*. Avgörande är alltså var myndigheten ligger, inte vad länet heter.
+5 § lägger Gotlands län i Förvaltningsrätten i Stockholms domkrets.
+
+Härlett för de sex län som fått en P8-skrivelse:
+
+| Länsstyrelse | Förvaltningsrätt enligt 5 § | Kammarrätt enligt 1 § |
+| --- | --- | --- |
+| Gotland | Stockholm | **Stockholm** |
+| Kalmar | Växjö | Jönköping |
+| Kronoberg | Växjö | Jönköping |
+| Södermanland | Linköping | Jönköping |
+| Halland | Göteborg | Göteborg |
+| Västra Götaland | Göteborg | Göteborg |
+
+Två av raderna är bekräftade av verkligheten: Kalmaröverklagandet ligger som
+mål 3249-26 i Jönköping och Hallandsöverklagandet som mål 5937-26 i Göteborg.
+Kalmar län är delat i 5 §, där Vimmerby och Västervik hör till Linköping,
+vilket inte ändrar utfallet eftersom länsstyrelsen ligger i Kalmar kommun.
+
+**Detta ersätter en svagare kontroll.** Avsnittet om HFD-praxis skriver att
+Kronobergs domkrets är kontrollerad mot två andrahandskällor och inte mot
+domstolens egen förteckning. Den frågan är nu avgjord i primärkällan, och
+svaret är detsamma.
+
+**Följden för öppenhetslagret.** Gotland ger en fjärde kammarrätt, utöver
+Jönköping som har Kalmar och Jordbruksverkets C-mål och Göteborg som har
+Halland. Avsnitt 11 slår fast att kammarrätterna gått åt olika håll och att
+inget HFD-avgörande finns om A/B-frågan; en fjärde domstol breddar den kartan
+oavsett hur målet slutar.
+
+### Prövningstillstånd krävs inte, och rättsfråga 5 är därmed besvarad
+
+34 a § förvaltningsprocesslagen (1971:291) ordagrant, första stycket: *"För de
+mål där det är särskilt föreskrivet krävs prövningstillstånd för att
+kammarrätten ska pröva ett överklagande av ett beslut som förvaltningsrätten
+har meddelat i målet. Detsamma gäller förvaltningsrättens beslut i en fråga som
+har ett direkt samband med ett sådant mål."*
+
+Bestämmelsen gäller alltså överklagande av ett beslut som en förvaltningsrätt
+har meddelat. Ett beslut av en länsstyrelse att inte lämna ut en allmän
+handling överklagas enligt 6 kap. 8 § OSL direkt till kammarrätt och är inte
+ett sådant beslut. Något prövningstillstånd krävs därför inte, vilket är den
+gängse ordning avsnitt 11 antog utan att ha kontrollerat den.
+
+Ett steg upp gäller det motsatta. 35 § ordagrant: *"Ett överklagande av
+kammarrättens beslut i ett mål som har inletts i kammarrätten genom
+överklagande, underställning eller ansökan prövas av Högsta
+förvaltningsdomstolen endast om prövningstillstånd har meddelats."* Förloras
+något av de tre målen är nästa steg alltså villkorat.
+
+**Vad verifieringen inte säger.** Ingenting om utsikterna i sak. Åtagandet
+noterade att tre ingivna och upptagna överklaganden är en indikation och inte
+en verifiering; det är fortfarande riktigt, och det är författningstexten och
+inte handläggningen som avgör frågan.
+
+---
+
 ## P9:s kriterier prövade, 2026-08-20
 
 Not 4 gör P9:s kriterier till utlösaren för varje P8-skrivelse, och prövningen
@@ -2176,6 +2247,10 @@ Regeringsrätten fastställde. Domkretsen är kontrollerad mot två andrahandsk�
 som är eniga om Kronoberg, inte mot domstolens egen förteckning, som inte gick
 att nå; att Kalmar ligger i samma domkrets är däremot bekräftat av att
 Kalmaröverklagandet togs upp där.
+
+*Tillägg 2026-09-22:* domkretsen är nu läst i primärkällan, 1 § och 5 §
+förordningen (1977:937), och svaret är detsamma. Se avsnittet om instansen och
+prövningstillståndet.
 
 ### Vad som återstår att kontrollera
 

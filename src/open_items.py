@@ -159,6 +159,10 @@ INTERNAL = frozenset(
         # it. Internal, since no authority owes anything on it.
         "personuppgift",
         "protokollavvikelse",
+        # An open legal question in BEGARANMALL section 11 read against the
+        # statute itself and written into docs/VERIFIERAT.md. Internal: it
+        # closes a pledge of ours and asks nothing of any authority.
+        "rättsfråga verifierad",
         "tillämpningsnot skriven",
     }
 )
