@@ -902,6 +902,22 @@ som inte är projektets. Avsnitt 11 slår fast att kammarrätterna gått åt oli
 håll och att inget HFD-avgörande finns om A/B-frågan; en tredje domstol breddar
 den kartan oavsett hur målet slutar.
 
+**Tillägg 2026-09-23: härledningen är bekräftad av utfallet.** Överklagandet
+gavs in till Länsstyrelsen i Gotlands län den 22 september och registrerades
+dagen därpå av Kammarrätten i Stockholm som mål 6901-26, avdelning 03. Tre av
+tabellens sex rader är därmed bekräftade av var målen faktiskt ligger, och
+ingen av dem motsäger 1 §.
+
+**Samma meddelande flyttar en risk in i projektet.** Med det följer
+informationsbladet om förenklad delgivning, vars regel lyder ordagrant: *"Du är
+delgiven två veckor efter att domstolen skickade handlingarna. Tiden för att
+till exempel svara eller överklaga räknas från den dagen."* I de tre pågående
+målen löper alltså frister utan att någon bekräftelse behöver lämnas, till
+skillnad från länsstyrelsernas e-delgivningar, som alla har begärt kvitto.
+Bladet ålägger mottagaren att kontrollera posten *"minst varannan vecka"*.
+Avvikelsen den 22 september, där ett beslut låg oläst i 25 dagar, hade under
+den regeln kostat hela fristen utan att något påminnelsemejl kommit.
+
 ### Prövningstillstånd krävs inte, och rättsfråga 5 är därmed besvarad
 
 34 a § förvaltningsprocesslagen (1971:291) ordagrant, första stycket: *"För de
