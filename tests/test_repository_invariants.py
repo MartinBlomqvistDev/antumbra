@@ -1699,6 +1699,27 @@ class TestEveryRefusalDecisionIsInTheRegister:
                     provision, record["citat_bestammelser"]
                 )
 
+    def test_a_registered_case_carries_its_number(self, decisions, protocol):
+        # The report reads the running court cases out of the register, so a
+        # case number that stays in the log is a case nobody watches. On
+        # 23 September 2026 Jordbruksverket's row lacked 3339-26, registered
+        # thirteen days earlier, and the watch found three cases where there
+        # were four.
+        registered = {
+            (row["myndighet"], row["begaran"])
+            for row in protocol
+            if row["handelse"] == "målregistrering i kammarrätten"
+        }
+        held = {
+            (row["myndighet"], row["klass"]): row.get("malnummer") for row in decisions
+        }
+        for key in registered:
+            assert key in held, f"{key} har en målregistrering utan beslutsrad"
+            assert held[key], (
+                f"{key} har en målregistrering i loggen men inget malnummer i "
+                "registret, så bevakningen av målet räknar det inte"
+            )
+
     def test_the_five_appeal_cap_is_not_exceeded(self, decisions):
         appealed = [r for r in decisions if r["overklagas"]]
         assert len(appealed) <= 5

@@ -51,6 +51,22 @@ PUBLICATION_DAY = 40
 # surfaced it for 36 days. The report shows what authorities owe us; without
 # this it shows nothing of what we owe ourselves.
 PLEDGES = LOG.parent / "atagande.jsonl"
+# The decisions we have appealed. The register carries the case number the
+# court gave it, so the running cases are derivable and do not have to be
+# remembered.
+DECISIONS = LOG.parent / "beslut.jsonl"
+
+# A court that uses förenklad delgivning deems a document served two weeks
+# after it was sent, whether or not it was read, so a letter nobody opens still
+# starts a deadline. Kammarrätten i Stockholm's leaflet in case 6901-26 says it
+# in those words and instructs the recipient to check the post "minst varannan
+# vecka". The report cannot read the mailbox, so it watches the one thing it
+# can: when a sweep of it was last logged. The rule exists because Länsstyrelsen
+# i Gotlands decision of 28 August 2026 sat unread for 25 days and only surfaced
+# through the authority's reminder, which a court under förenklad delgivning
+# would never have sent.
+SWEEP_EVENT = "brevlådan genomgången"
+SWEEP_DAYS = 14
 
 # Who moved. An event name that is in neither set is a hole in this mapping,
 # and the report says so rather than guessing a side.
@@ -159,6 +175,10 @@ INTERNAL = frozenset(
         # it. Internal, since no authority owes anything on it.
         "personuppgift",
         "protokollavvikelse",
+        # A full pass through the mailbox, thread by thread, logged so that the
+        # interval between passes is visible. Internal: nothing is owed to
+        # anyone by it.
+        SWEEP_EVENT,
         # An open legal question in BEGARANMALL section 11 read against the
         # statute itself and written into docs/VERIFIERAT.md. Internal: it
         # closes a pledge of ours and asks nothing of any authority.
@@ -299,6 +319,33 @@ def by_request(rows: list[dict]) -> dict[tuple[str, str], list[dict]]:
         for key, events in tracks.items()
         if any(event["handelse"] not in INTERNAL for event in events)
     }
+
+
+def decisions(path: Path = DECISIONS) -> list[dict]:
+    """The decision register, or an empty list before the first decision."""
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+def running_cases(path: Path = DECISIONS) -> list[dict]:
+    """Appealed decisions whose case has a number and no ruling yet.
+
+    A case leaves this list when its row gets an `avgorande_datum`, so the
+    report never asks about a case that is over, and a ruling cannot be left
+    out of the register without the case staying on the list.
+    """
+    return [
+        row
+        for row in decisions(path)
+        if row.get("malnummer") and not row.get("avgorande_datum")
+    ]
+
+
+def last_sweep(rows: list[dict]) -> date | None:
+    """The date of the most recently logged pass through the mailbox."""
+    dates = [row["datum"] for row in rows if row["handelse"] == SWEEP_EVENT]
+    return max((date.fromisoformat(d) for d in dates), default=None)
 
 
 def answer_deadline(handelse: str) -> tuple[int, str] | None:
@@ -447,6 +494,36 @@ def report(rows: list[dict], today: date) -> list[str]:
         f"avgiftsstoppade. "
         f"Publiceringsgräns {publication.isoformat()}."
     )
+
+    cases = running_cases()
+    if cases:
+        swept = last_sweep(rows)
+        since = (today - swept).days if swept else None
+        lines.append("")
+        if since is None:
+            lines.append(
+                f"BREVLÅDAN: ingen genomgång är loggad, och {len(cases)} mål löper "
+                "under förenklad delgivning. GÖR EN GENOMGÅNG OCH LOGGA DEN."
+            )
+        elif since > SWEEP_DAYS:
+            lines.append(
+                f"BREVLÅDAN: senast genomgången {swept.isoformat()}, {since} dagar "
+                f"sedan, alltså över {SWEEP_DAYS}. GÖR EN GENOMGÅNG NU: en handling "
+                "i ett mål är delgiven två veckor efter att domstolen skickat den, "
+                "oavsett om den lästs."
+            )
+        else:
+            nxt = (swept + timedelta(days=SWEEP_DAYS)).isoformat()
+            lines.append(
+                f"BREVLÅDAN: senast genomgången {swept.isoformat()}, {since} dagar "
+                f"sedan. Nästa senast {nxt}."
+            )
+        for row in sorted(cases, key=lambda r: r["malnummer"]):
+            court = row.get("instans_dit_det_stalldes") or "?"
+            lines.append(
+                f"  mål {row['malnummer']} i {court}, {row['myndighet']} "
+                f"{row['klass']}, dnr {row['diarienummer']}"
+            )
 
     due = sorted(
         ((key, i) for key, i in items.items() if i["waiting_on"] == "dig"),
