@@ -106,29 +106,47 @@ FORBIDDEN_PATTERNS = {
     "telefonnummer": re.compile(r"\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b"),
 }
 
-COUNTIES = [
-    "Blekinge",
-    "Dalarna",
-    "Gotland",
-    "Gävleborg",
-    "Halland",
-    "Jämtland",
-    "Jönköping",
-    "Kalmar",
-    "Kronoberg",
-    "Norrbotten",
-    "Skåne",
-    "Stockholm",
-    "Södermanland",
-    "Uppsala",
-    "Värmland",
-    "Västerbotten",
-    "Västernorrland",
-    "Västmanland",
-    "Västra Götaland",
-    "Örebro",
-    "Östergötland",
-]
+# The county in the file name, and the authority exactly as the address line
+# of 3 August 2026 wrote it. The two differ: the protocol log calls the track
+# "Länsstyrelsen i Blekinge", the letter that went out said "Länsstyrelsen i
+# Blekinge län". Decision 9 makes the letters fixed and alike, so a later
+# letter in the same correspondence cannot address the authority by another
+# name than the first one did, and the quoted request must carry the line the
+# recipient actually holds. Every line below is read out of the sent mail,
+# except Kalmar's, whose 3 August message the mailbox search cannot return;
+# it follows the other twenty and the authority's own signature block.
+COUNTIES = {
+    "Blekinge": "Länsstyrelsen i Blekinge län",
+    "Dalarna": "Länsstyrelsen i Dalarnas län",
+    "Gotland": "Länsstyrelsen i Gotlands län",
+    "Gävleborg": "Länsstyrelsen i Gävleborgs län",
+    "Halland": "Länsstyrelsen i Hallands län",
+    "Jämtland": "Länsstyrelsen i Jämtlands län",
+    "Jönköping": "Länsstyrelsen i Jönköpings län",
+    "Kalmar": "Länsstyrelsen i Kalmar län",
+    "Kronoberg": "Länsstyrelsen i Kronobergs län",
+    "Norrbotten": "Länsstyrelsen i Norrbottens län",
+    "Skåne": "Länsstyrelsen i Skåne län",
+    "Stockholm": "Länsstyrelsen i Stockholms län",
+    "Södermanland": "Länsstyrelsen i Södermanlands län",
+    "Uppsala": "Länsstyrelsen i Uppsala län",
+    "Värmland": "Länsstyrelsen i Värmlands län",
+    "Västerbotten": "Länsstyrelsen i Västerbottens län",
+    "Västernorrland": "Länsstyrelsen i Västernorrlands län",
+    "Västmanland": "Länsstyrelsen i Västmanlands län",
+    "Västra Götaland": "Länsstyrelsen i Västra Götalands län",
+    "Örebro": "Länsstyrelsen i Örebro län",
+    "Östergötland": "Länsstyrelsen i Östergötlands län",
+}
+
+
+def address(myndighet: str) -> str:
+    """The authority as the first letter addressed it, from its track name."""
+    county = myndighet.removeprefix("Länsstyrelsen i ")
+    if county not in COUNTIES:
+        raise SystemExit(f"okänd myndighet i loggen: {myndighet}")
+    return COUNTIES[county]
+
 
 MONTHS = (
     "januari",
@@ -185,16 +203,16 @@ MINE_PLAIN = {
     "påminnelse": "påminde jag om begäran",
 }
 
-# P5's fixed narrowing, per request class, in the protocol's own words.
+# P5's fixed narrowing, per request class, in the protocol's own words. The
+# longer wording that stood here until 28 September 2026, with "räknat efter
+# kontrolldatum" inside it, is not P5's; it comes from tillämpningsnot 1's
+# composed answers to questions about scope, and it went to some counties and
+# not to others. Blekinge and Västmanland were narrowed with exactly the words
+# below, so a reminder that restated their narrowing with an added clause
+# described their own request back to them in words they had never read.
 NARROWING = {
-    "A": (
-        "de fem senast genomförda kontrollerna, räknat efter kontrolldatum, "
-        "under samma period"
-    ),
-    "B": (
-        "de fem senast meddelade besluten, räknat efter beslutsdatum, under "
-        "samma period"
-    ),
+    "A": "de fem senast genomförda kontrollerna under samma period",
+    "B": "de fem senast meddelade besluten under samma period",
 }
 
 # P11's question, quoted from the protocol so that it cannot drift.
@@ -225,7 +243,7 @@ def quoted_request(klass: str, myndighet: str) -> str:
     block = text.index("```", start) + 3
     end = text.index("```", block)
     request = text[block:end].strip("\n")
-    return request.replace("Till Länsstyrelsen i [län]", f"Till {myndighet}")
+    return request.replace("Till Länsstyrelsen i [län]", f"Till {address(myndighet)}")
 
 
 def p10_recipients(rows: list[dict]) -> list[tuple[str, str, list[dict]]]:
@@ -282,7 +300,7 @@ def p10_letter(myndighet: str, klass: str, events: list[dict]) -> str:
     body = textwrap.wrap(" ".join(said), width=72)
     return "\n".join(
         [
-            f"Till {myndighet}",
+            f"Till {address(myndighet)}",
             "",
             "Hej!",
             "",
@@ -310,12 +328,16 @@ def p11_letter(county: str) -> str:
     """The denominator question, identical to all 21 but never saying so."""
     return "\n".join(
         [
-            f"Till Länsstyrelsen i {county}",
+            f"Till {COUNTIES[county]}",
             "",
             "Hej!",
             "",
-            "Jag återkommer i det ärende där jag den 3 augusti 2026 begärde",
-            "handlingar hos er. Jag har en avslutande fråga:",
+            *textwrap.wrap(
+                "Jag återkommer om de två begärandena om allmänna handlingar "
+                "som jag skickade till er den 3 augusti 2026. Jag har en "
+                "avslutande fråga:",
+                width=72,
+            ),
             "",
             *textwrap.wrap(P11_QUESTION, width=72),
             "",
