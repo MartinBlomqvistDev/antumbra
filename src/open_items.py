@@ -100,6 +100,11 @@ OURS = frozenset(
         # tillämpningsnot 7 gives it one reminder and then records the
         # denominator as missing.
         "nämnarfråga",
+        # A letter that withdraws an incorrect statement in an earlier letter of
+        # ours. It asks the authority for nothing and starts no clock.
+        "rättelse",
+        # Our answer to an authority that says the documents were already sent.
+        "svar på besked om tidigare leverans",
     }
 )
 THEIRS = frozenset(
