@@ -95,6 +95,11 @@ OURS = frozenset(
         "svar på förtydligande",
         "svar på förtydligandefråga",
         "svar på förtydligandefråga och accept av elektronisk leverans",
+        # P11's denominator question, sent on day 40 to all 21 county boards.
+        # It is not one of the 43 requests and carries no deadline of its own;
+        # tillämpningsnot 7 gives it one reminder and then records the
+        # denominator as missing.
+        "nämnarfråga",
     }
 )
 THEIRS = frozenset(
@@ -138,6 +143,11 @@ THEIRS = frozenset(
         # had. It puts the receipt on us, but on the authority's own date
         # and not on any protocol clock.
         "påminnelse om delgivning",
+        # An authority answering that the documents were already sent, in
+        # response to P10's last reminder. It asks nothing on a protocol clock.
+        "besked om tidigare leverans",
+        # An answer to P11's denominator question.
+        "svar på nämnarfrågan",
         "mottagningsbesked",
         # A delivery that replaces a defective one. Distinct from "leverans"
         # because it does not start the collection, it repairs it, and the
