@@ -37,6 +37,7 @@
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(4102-2024-6) (0).pdf", "source": "text", "counts": {"nöt": 1, "gris": 19, "fjäderfä": 0}, "present": ["gris"], "dominant": "gris", "readable": true}
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(4871-2024-3) (0).pdf", "source": "text", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "gotland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(5340-2024-4) (0).pdf", "source": "text", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "gotland_beslut/Beslut om avslag(3287-2026-6).pdf", "source": "text", "counts": {"nöt": 1, "gris": 1, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
 {"path": "gotland_X/5132-2025.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
 {"path": "gotland_X/5215-2025(3287-2026-2.2) (0) ny maskning_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "gotland_X/5238-2025(3287-2026-2.3) ny maskning (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 2, "fjäderfä": 1}, "present": ["gris"], "dominant": "gris", "readable": true}
@@ -116,8 +117,24 @@
 {"path": "kalmar_A/5931-2026, kontrollrapport.pdf", "source": "ocr", "counts": {"nöt": 2, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kalmar_avgiftsbeslut/Beslut om avgift för utlämnande av allmänna handlingar(9147-2025-2) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "kalmar_avslagsbeslut/Beslut om avslag(6666-2026-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kalmar_B/10333-2025, föreläggande.pdf", "source": "text", "counts": {"nöt": 11, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "kalmar_B/10345-2025, föreläggande.pdf", "source": "text", "counts": {"nöt": 19, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "kalmar_B/10381-2025, föreläggande.pdf", "source": "text", "counts": {"nöt": 19, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "kalmar_B/3314-2026, föreläggande.pdf", "source": "text", "counts": {"nöt": 29, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "kalmar_B/9580-2025, föreläggande.pdf", "source": "text", "counts": {"nöt": 45, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kammarratten_goteborg_5937-26/Göteborg_KR_5937-26_Aktbil_6.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_goteborg_praxis/Göteborg KR 2605-18 Dom 2018-09-10.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_goteborg_praxis/Göteborg KR 2803-18 Dom 2018-09-10.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_goteborg_praxis/Göteborg KR 3503-19 Dom 2019-09-12.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_goteborg_praxis/Göteborg KR 4309-20 Dom 2020-10-01.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_goteborg_praxis/Göteborg KR 6077-19 Dom 2020-01-30.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "kammarratten_jonkoping_3249-26/Jönköping KR 3249-26 Aktbil 9.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_jonkoping_3249-26/Jönköping_KR_3249-26_Aktbil_13.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_jonkoping_3339-26/Jönköping KR 3339-26 Aktbil 20.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 1491-19 Slutligt beslut 2019-06-13.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 3900-18 Dom 2019-06-10.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_jonkoping_praxis/Jönköping KR 549-19 Dom 2019-06-13.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
+{"path": "kammarratten_stockholm_6901-26/Stockholm KR 6901-26 Aktbil 4.pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7440-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 3, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7446-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 5}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "kronoberg_A/Extra offentlig kontroll, uppföljning normal kontroll - kontrollrapport(7484-2025-1) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 14, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
@@ -174,6 +191,7 @@
 {"path": "sodermanland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(7904-2025-4) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 16}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "sodermanland_B/Föreläggande enligt 8 kap 9 § djurskyddslagen(9388-2024-6) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 15}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "sodermanland_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(8874-2025-5) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 11}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
+{"path": "sodermanland_beslut/Beslut om utlämnande av allmän handling(6102-2026-2) (0).pdf", "source": "text", "counts": {"nöt": 1, "gris": 1, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
 {"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(58984-2025-2).pdf", "source": "ocr", "counts": {"nöt": 1, "gris": 9, "fjäderfä": 1}, "present": ["gris"], "dominant": "gris", "readable": true}
 {"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(58991-2025-2).pdf", "source": "ocr", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "stockholm_A/Normal kontroll, risk - kontrollrapport(59072-2025-5).pdf", "source": "ocr", "counts": {"nöt": 30, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
@@ -307,3 +325,4 @@
 {"path": "vastra_gotaland_B/19875-2025-3 Föreläggande med vite enligt 8 kap 9 § djurskyddslagen.pdf", "source": "text", "counts": {"nöt": 14, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "vastra_gotaland_B/23293-2025-9 Föreläggande med vite enligt 8 kap 9 § djurskyddslagen_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 9, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "vastra_gotaland_B/24878-2025-6 Föreläggande enligt 8 kap 9 § djurskyddslagen.pdf", "source": "text", "counts": {"nöt": 11, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "vastra_gotaland_beslut/33706-2026 Beslut om avslag.pdf", "source": "text", "counts": {"nöt": 4, "gris": 4, "fjäderfä": 4}, "present": ["fjäderfä", "gris", "nöt"], "dominant": null, "readable": true}

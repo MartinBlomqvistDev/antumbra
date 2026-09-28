@@ -667,3 +667,8 @@
 {"path": "kammarratten_stockholm_6901-26/Stockholm KR 6901-26 Aktbil 4.pdf", "bytes": 350130, "sha256": "f5376def95cf8fd0555add6c24bf06bd41902b27252a344cd5eedaa98efc0b24", "recorded": "2026-09-23"}
 {"path": "kammarratten_stockholm_6901-26/Brev från Kammarrätten i Stockholm i 6901-26.eml", "bytes": 493307, "sha256": "6868c10e4459613167807428e121fe11637c503c8c6e54eaecb3494fb1deff1c", "recorded": "2026-09-23"}
 {"path": "kammarratten_stockholm_6901-26/Brev från Kammarrätten i Stockholm i 6901-26.html", "bytes": 6941, "sha256": "531f64177bc9f12f93f03dbf0163f7f3727d9e59ecca5fabc5954ecc75693976", "recorded": "2026-09-23", "notering": "Filnamnet ur exporten bar avsändarens e-postadress, vilket repots invariant mot e-postadresser i protokolldata fäller. Filen är oförändrad och sha256 är densamma; bara namnet är kortat"}
+{"path": "kalmar_B/3314-2026, föreläggande.pdf", "bytes": 228261, "sha256": "db739bc52cb44008be1d3faa6d8b49c5e837f8614bbfe1c1a870b9338bcefa42", "recorded": "2026-09-28"}
+{"path": "kalmar_B/9580-2025, föreläggande.pdf", "bytes": 111609, "sha256": "9d954ea32c2087a7c1155bf5925b91ef125e91fe03bd32d7f4ac491cf3f067c4", "recorded": "2026-09-28"}
+{"path": "kalmar_B/10333-2025, föreläggande.pdf", "bytes": 100856, "sha256": "bb71ce23607c9c508ad2dfab6a6a2113ae10cd61ea048b006740a0ecdd950f63", "recorded": "2026-09-28"}
+{"path": "kalmar_B/10345-2025, föreläggande.pdf", "bytes": 266566, "sha256": "0cf5fd7b7e956d3c0c6b1835c0f218d24108a054911fe82b166f13890649cd41", "recorded": "2026-09-28"}
+{"path": "kalmar_B/10381-2025, föreläggande.pdf", "bytes": 104468, "sha256": "d46999de44fc74744b383f81059ca7818812076688701287a55d43c3cd2d9675", "recorded": "2026-09-28"}

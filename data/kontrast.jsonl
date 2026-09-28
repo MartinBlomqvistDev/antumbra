@@ -22,6 +22,7 @@
 {"myndighet": "jamtland", "djurslag": "nöt", "begaran": "A", "dokument": 19, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "jamtland", "djurslag": "nöt", "begaran": "B", "dokument": 8, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "kalmar", "djurslag": "nöt", "begaran": "A", "dokument": 5, "maskade": 5, "andel_maskade": 1.0, "andel_yta": 0.10292}
+{"myndighet": "kalmar", "djurslag": "nöt", "begaran": "B", "dokument": 5, "maskade": 5, "andel_maskade": 1.0, "andel_yta": 0.00133}
 {"myndighet": "kronoberg", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.07209}
 {"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "A", "dokument": 3, "maskade": 3, "andel_maskade": 1.0, "andel_yta": 0.00194}
 {"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 1, "andel_maskade": 0.25, "andel_yta": 0.0}
@@ -32,7 +33,7 @@
 {"myndighet": "sodermanland", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.09709}
 {"myndighet": "sodermanland", "djurslag": "fjäderfä", "begaran": "B", "dokument": 5, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "sodermanland", "djurslag": "gris", "begaran": "A", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
-{"myndighet": "sodermanland", "djurslag": "nöt", "begaran": "A", "dokument": 10, "maskade": 5, "andel_maskade": 0.5, "andel_yta": 0.04036}
+{"myndighet": "sodermanland", "djurslag": "nöt", "begaran": "A", "dokument": 10, "maskade": 5, "andel_maskade": 0.5, "andel_yta": 0.03968}
 {"myndighet": "sodermanland", "djurslag": "nöt", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "stockholm", "djurslag": "fjäderfä", "begaran": "B", "dokument": 2, "maskade": 1, "andel_maskade": 0.5, "andel_yta": 3e-05}
 {"myndighet": "stockholm", "djurslag": "gris", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.00511}
