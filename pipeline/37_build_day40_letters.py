@@ -35,6 +35,19 @@ final status through note 3 point 2, not through note 7's silence, however
 literally it lacks both documents and a decision. Kalmar B is that shape and has
 answered eight times; a filter would have sent it the wrong letter.
 
+**An authority that has delivered anything is refused, and the letter is written
+by hand.** P10's reminder ends by saying that no documents have been received,
+and that sentence has no source to check it against: it is appended
+unconditionally. On 28 September 2026 it went to Länsstyrelsen i Västmanlands
+län, which had sent nine documents on 5 August, four of them kontrollrapporter
+and therefore class A material, logged under B because the authority handles
+both requests as one. P0b attributes the response time to both requests but
+keeps the class measures per document class, so the delivery row's own class
+label cannot decide what was received. The step cannot know what a delivery
+contained, so where any delivery exists for the authority in either class it
+refuses and names the rows, and a person writes that letter with the specifics
+in it.
+
 Writes data/dag40/, which is gitignored. Nothing is sent, and the sending date
 is set by the protocol, not by this step.
 
@@ -246,14 +259,38 @@ def quoted_request(klass: str, myndighet: str) -> str:
     return request.replace("Till Länsstyrelsen i [län]", f"Till {address(myndighet)}")
 
 
+def delivering_authorities(rows: list[dict]) -> dict[str, list[str]]:
+    """Authorities that have delivered anything, and when, in either class."""
+    out: dict[str, list[str]] = {}
+    for row in rows:
+        if row["handelse"] in DELIVERED:
+            out.setdefault(row["myndighet"], []).append(
+                f"{row['datum']} {row['begaran']}"
+            )
+    return out
+
+
 def p10_recipients(rows: list[dict]) -> list[tuple[str, str, list[dict]]]:
-    """The requests P10's reminder is for, and their events."""
+    """The requests P10's reminder is for, and their events.
+
+    An authority that has delivered anything is left out, whichever class the
+    delivery was logged under, because the letter asserts that nothing was
+    received and this step cannot see what a delivery contained.
+    """
+    delivered = delivering_authorities(rows)
     out = []
     for (myndighet, klass), events in sorted(by_request(rows).items()):
         if klass not in CLASS_SECTION:
             continue
         names = {e["handelse"] for e in events}
         if names & DELIVERED or names & DECIDED or names & FEE_STOPPED:
+            continue
+        if myndighet in delivered:
+            print(
+                f"  vägrar P10 till {myndighet} {klass}: myndigheten har "
+                f"levererat {', '.join(delivered[myndighet])}, och brevet "
+                "påstår att ingenting mottagits. Skriv det för hand."
+            )
             continue
         out.append((myndighet, klass, events))
     return out

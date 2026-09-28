@@ -185,6 +185,11 @@ INTERNAL = frozenset(
         # it. Internal, since no authority owes anything on it.
         "personuppgift",
         "protokollavvikelse",
+        # P0b's flag, recorded as an event so that it is readable by field and
+        # not only as prose inside a notering. It marks an authority that
+        # handles both requests as one; the response time is then attributed to
+        # both, while the class measures stay per document class.
+        "sammanslagning enligt P0b",
         # A full pass through the mailbox, thread by thread, logged so that the
         # interval between passes is visible. Internal: nothing is owed to
         # anyone by it.
