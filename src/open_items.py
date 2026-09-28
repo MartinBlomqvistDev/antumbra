@@ -217,7 +217,13 @@ INTERNAL = frozenset(
 # "länsstyrelserna" is the same thing under a word invented on 5 September 2026
 # for seven rows about the conditions layer. The log is append-only, so the word
 # stays and is read here; new internal rows use "samtliga".
-NOT_A_REQUEST = frozenset({"flera", "länsstyrelserna", "samtliga"})
+# The last two are my own slip of 28 September 2026: the class belongs in
+# begaran and the aggregate word alone in myndighet, and two internal rows
+# carry it the other way. The log is append-only, so the reader absorbs the
+# spelling instead of the rows being rewritten.
+NOT_A_REQUEST = frozenset(
+    {"flera", "länsstyrelserna", "samtliga", "samtliga B", "samtliga A+B"}
+)
 
 # An authority event that puts the next move on us, with its deadline in
 # working days. Longest key first, so a compound name matches its own rule.
