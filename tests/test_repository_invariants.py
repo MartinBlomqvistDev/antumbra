@@ -1265,10 +1265,10 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         # notices of a case number and Halland's transfer of the appeal to the
         # court. None of them belongs to request A or B, so all sit in "övrigt"
         # and none touches the A-against-B contrast, which stands at 108 of 155
-        # and 29 of 135 since the correction of 1 September 2026.
-        assert len(hidden_text) == 264
+        # and 34 of 140 since Kalmar's B delivery was found on 28 September 2026.
+        assert len(hidden_text) == 283
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 120, "övrigt": 19}
+        assert by_class == {"A": 125, "B": 125, "övrigt": 33}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to
@@ -1307,6 +1307,14 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
     A fell from 138 of 155 to 108 of 155 and B from 32 of 135 to 29 of 135. A
     figure that has been wrong once is a figure worth holding still.
 
+    B moved a second time on 28 September 2026, from 29 of 135 to 34 of 140,
+    when five förelägganden that Länsstyrelsen i Kalmar län had released on
+    13 August were found in the mailbox unlogged and unarchived. All five are
+    masked, so the class B share rose from 21 to 24 per cent. The reason it
+    mattered more than five documents usually would: Kalmar's class A reports
+    are masked and their decision is under appeal, so the county carries the
+    A/B contrast and was standing outside the measure.
+
     The split by method is pinned with them, because it is the part that says
     how much weight each fraction can carry. Every scanned class A document is
     judged masked, which is what a detector with a known false positive rate
@@ -1333,7 +1341,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         pairs = zip(found[("B", "text")], found[("B", "image")], strict=True)
         b = tuple(sum(x) for x in pairs)
         assert a == (108, 155)
-        assert b == (29, 135)
+        assert b == (34, 140)
 
     # ADR-0019 and ADR-0020 state these numbers, and the ADRs are what a reader
     # checks the measure against. A threshold quietly retuned in the code would
@@ -1377,7 +1385,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         found = self.shares(masking)
         assert found[("A", "text")] == (78, 125)
         assert found[("A", "image")] == (30, 30)
-        assert found[("B", "text")] == (18, 120)
+        assert found[("B", "text")] == (23, 125)
         assert found[("B", "image")] == (11, 15)
 
 
@@ -1581,8 +1589,13 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
     def test_the_register_is_closed(self, grounds, masking):
         covered = {(r["myndighet"], r["klass"]) for r in grounds}
         population = self.population(masking)
-        assert len(population) == 23
-        assert len(covered) == 25
+        # Both numbers moved by one on 28 September 2026, when a masked class
+        # B delivery from Kalmar was found unlogged and unarchived: one masked
+        # delivery joins the population and one hand-copied row joins the
+        # register. The gap between them is unchanged and still the two rows
+        # that outlived their population.
+        assert len(population) == 24
+        assert len(covered) == 26
         assert population - covered == self.MISSING
 
 

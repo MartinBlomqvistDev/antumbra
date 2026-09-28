@@ -328,7 +328,11 @@ verifierad okulärt: länsstyrelsens vapen på sidan ett är en solid svart skö
 49 gånger 9 bildpunkter vid 100 dpi, och den klarar varje krav detektorn ställer
 på en balk. Mot det rättade facit ger bildmetoden balk i 64 av de 155
 handlingar som textmetoden bedömer som omaskade, av materialets 261 digitalt
-födda; talet 155 är alltså ett annat än klass A:s 155.
+födda; talet 155 är alltså ett annat än klass A:s 155. *Tillägg 2026-09-28: de
+digitalt födda är nu 283, sedan Kalmars fem förelägganden och sjutton beslut,
+avgiftshandlingar och domstolsmeddelanden arkiverats. Steg 26 är omkört över
+alla 283: 236 dolda tecken i 42 handlingar, precis som förut, noll av dem i
+brödtext och noll bakom en ljus täckning.*
 
 **Åtgärdat samma kväll, till hälften.** Villkoret för att anta en
 uteslutningsregel skrevs i protokollloggen innan utfallet var känt, och
@@ -360,6 +364,32 @@ uppdelade på metod, eftersom de två halvorna är olika säkra:
 | A | 78 av 125, 62 % | 30 av 30, 100 % | 108 av 155, 70 % |
 | B | 18 av 120, 15 % | 11 av 15, 73 % | 29 av 135, 21 % |
 
+**Tillägg 2026-09-28: talen ovan är inaktuella, och klass B rör sig.** Fem
+förelägganden från Länsstyrelsen i Kalmar län lämnades ut den 13 augusti 2026
+och upptäcktes den 28 september; leveransen hade aldrig loggats eller
+arkiverats. Samtliga fem är digitalt födda och bedöms som maskade med sorten
+`text_removed`. Populationen växer från 290 till 295 handlingar och de nya
+talen är:
+
+| Klass | Digitalt födda | Skannade | Totalt |
+| --- | --- | --- | --- |
+| A | 78 av 125, 62 % | 30 av 30, 100 % | 108 av 155, 70 % |
+| B | 23 av 125, 18 % | 11 av 15, 73 % | **34 av 140, 24 %** |
+
+Klass A är oförändrad. Kontrasten mellan klasserna kvarstår och byter inte
+tecken; den smalnar från 70 mot 21 till 70 mot 24 procentenheter. Att just
+Kalmar saknades är det som gör felet allvarligt: länets fem kontrollrapporter i
+klass A är maskade och beslutet om dem är överklagat som mål 3249-26, så länet
+bär A/B-kontrasten och stod utanför den.
+
+Meningen ovan om att `data/maskning.jsonl` rymmer 16 dokument utanför klasserna
+gäller inte längre heller, och det beror inte på Kalmar. De är 33, fördelade på
+20 mappar: myndighetsbeslut, avgiftsbeslut och en avgiftsriktlinje, Gotlands
+och Kronobergs omprövade leveranser, kammarrättens meddelanden i de tre egna
+målen och de åtta praxisavgöranden som lästs i fulltext. Samtliga ligger
+utanför måttets population enligt P8, som förut. Filen har alltså 328 rader,
+varav 295 i klass A och B.
+
 Att varenda skannad A-handling bedöms som maskad är förenligt med bildmetodens
 falsklarmsfrekvens om 19 procent, och det är inte prövat mot handläsning för en
 enda av dem. Den digitalt födda halvan vilar på ett instrument som är prövat på
@@ -375,6 +405,16 @@ inom samma myndighet: 14 län har levererat i båda klasserna. Medianskillnaden
 dokument**. Inget av de fjorton länen har högre maskad yta i B än i A. Två
 vänder på andelsmåttet: Dalarna med 20 procent av A mot 80 procent av B, och
 Gävleborg med 0 mot 25 procent.
+
+*Tillägg 2026-09-28, efter Kalmars B-leverans:* femton län har levererat i
+båda klasserna, inte fjorton. Medianskillnaden är **2,12 procentenheter
+maskerad yta** och **60 procentenheter andel maskade dokument**. Inget av de
+femton har högre maskad yta i B än i A, vilket står kvar. Kalmars egen cell
+drar medianerna åt olika håll: andelen maskade dokument är 100 procent i båda
+klasserna, alltså noll skillnad, medan den maskade ytan är 10,16
+procentenheter högre i A. Det är den största ytskillnaden efter Västra
+Götalands 11,69 och det enda länet där andelsmåttet och ytmåttet säger helt
+olika saker.
 
 **Det förregistrerade måttets två öppna delar är sedan dess avgjorda, båda på
 annat sätt än planerat.** Maskningsgrad är förregistrerad som andel maskerad yta
@@ -434,6 +474,13 @@ båda:
 Talen är omräknade 2026-09-01 efter rättelsen längre upp. Före den stod +2,74
 och +0,73 procentenheter maskerad yta och +100 procentenheter andel för
 fjäderfä.
+
+*Tillägg 2026-09-28:* med Kalmars B-leverans blir nötraden tio län med median
++78 procentenheter andel och +3,08 procentenheter maskad yta, och cellerna med
+minst tre dokument i båda klasserna blir tolv i stället för elva.
+Fjäderfäraden och grisraden är oförändrade. Av de tolv cellerna pekar åtta åt
+samma håll, två visar ingen skillnad alls, en är negativ, och den nya,
+Kalmar nöt, visar ingen skillnad i andel men den näst största i yta.
 
 **Kontrasten är alltså inte en djurslagsartefakt.** Av de elva cellerna pekar
 åtta åt samma håll, två visar ingen skillnad alls och en är negativ. Den
@@ -956,7 +1003,12 @@ meddelande-id och en flagga för om citatet är fullständigt i källan.
 filen; varje rad är avskriven för hand ur ett följebrev, på samma villkor som det
 handlästa facit som bär bilageklassningen. Populationen är maskinellt definierad
 av `pipeline/29_check_grounds.py`: varje län och klass med minst ett maskat
-dokument ska ha en rad. **Täckningen är 25 av 25.** En enda rad saknar sitt
+dokument ska ha en rad. **Täckningen är 25 av 25.** *Tillägg 2026-09-28: talet
+gällde registret den dag det slöts och har varit inaktuellt sedan rättelsen den
+1 september, som tog bort Gävleborg A och Jämtland A ur populationen utan att
+den här meningen lästes om. Med Kalmars B-leverans står registret på 26 rader
+och 24 maskade leveranser, alltså täckning 24 av 24, och steg 29 rapporterar
+registret som slutet.* En enda rad saknar sitt
 citat, Kalmar A, vars följebrev inte går att hämta ur brevlådan trots att
 leveransen är loggad och filerna ligger på disk; raden finns ändå och bär
 flaggan `kalla_ej_atkomlig` i stället för att utelämnas.
@@ -973,6 +1025,24 @@ ange någon grund alls:** Gävleborg, Kronoberg, Södermanland, Uppsala och
 Västmanland. Det är ett fynd i sig, och det visar en egenskap hos kriteriet: ett
 län som inte anger grund kan aldrig träffas av (c), hur omfattande maskningen än
 är.
+
+**Tillägg 2026-09-28: prövat en gång till, mot Kalmars B-leverans, och (c) är
+fortfarande noll.** Elva län maskar nu i klass B i stället för tio, och sex i
+stället för fem gör det utan att ange någon grund alls, eftersom Kalmar
+tillkommit i båda uppräkningarna. Följebrevet lyder i sin helhet: *"Här kommer
+de fem senaste föreläggande, se bifogad fil."* Ingen bestämmelse åberopas, och
+(c) kräver uttryckligen 30 kap. 23 § OSL, så kriteriet kan inte träffa
+leveransen. Ingen P8-skrivelse följer heller, eftersom not 4 är konjunktiv och
+det första ledet saknas. Två omständigheter hör till bilden och redovisas i
+stället för att vägas: leveransen följde myndighetens eget erbjudande om
+avgiftsfri elektronisk leverans om personuppgifter maskas, ett erbjudande som
+accepterades utan att maskningen beställdes, och samma sak är sagd till
+Kammarrätten i Jönköping i yttrandet den 8 september i mål 3249-26, som inte
+bestrider att maskad elektronisk leverans accepterats. Vad de tre till sex
+rutorna per handling döljer går inte att läsa, eftersom texten under dem är
+borttagen; ytan är 0,07 till 0,17 procent per handling, vilket är samma
+storleksordning som Blekinges fyra digitalt födda B-handlingar och två
+tiopotenser under länets egna A-handlingar.
 
 **Kriterium (b) är uppfyllt, och det var det jag först trodde var omöjligt.**
 Sju län maskade klass A med stöd av 30 kap. 23 §: Gotland, Kronoberg, Värmland,
@@ -991,7 +1061,12 @@ affärs- eller driftförhållanden.
 bestämmelsenivå. En striktare läsning på fältnivå, alltså exakt vilken uppgift
 varje svärtning döljer, går inte att göra: i 124 av 294 dokument är texten under
 rutan borttagen, och ADR-0017 slog fast att handlingarna är prosa utan
-fältstruktur. Ett försök att härleda typen ur omgivande text övergavs sedan det
+fältstruktur. *Tillägg 2026-09-28: talet 124 av 294 är mätt före rättelsen den
+1 september, då mallens rubrikband ännu räknades som en ruta, och det går inte
+att reproducera i dagens data. Måttet i dag: 88 av 295 handlingar i klass A och
+B bär minst en ruta, och i ingen av dem står det text kvar under en ruta.
+Skälet som meningen bär står kvar, eftersom en ruta utan text under sig inte
+kan tillskrivas någon uppgiftstyp på fältnivå.* Ett försök att härleda typen ur omgivande text övergavs sedan det
 visat sig dra enskildas namn genom analysen.
 
 **Följden för P8 är liten, eftersom not 4 är konjunktiv.** Skrivelse skickas bara
@@ -1018,7 +1093,8 @@ inget P9-kriterium är uppfyllt: de anger ingen bestämmelse alls för sin maskn
 i klass B, och kriterium (c) kräver uttryckligen 30 kap. 23 §. **Det är en
 egenskap hos kriteriet värd att notera: ett län som maskar utan att ange grund
 kan inte träffas av (c), hur omfattande maskningen än är.** Blekinge är det
-enda län som maskat samtliga sina B-dokument.
+enda län som maskat samtliga sina B-dokument. *Tillägg 2026-09-28: inte längre.
+Kalmars fem förelägganden är också maskade, alla fem, så de är två län.*
 
 **Slutsats: fem P8-skrivelser är utlösta, och femtaket i P9 binder nätt och
 jämnt inte.** Västra Götaland tillkom när registret slöts den 22 augusti och

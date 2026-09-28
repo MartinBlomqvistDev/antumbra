@@ -1202,7 +1202,9 @@ beslutet, inte av skrivelsen, och fristen är tre veckor från delfåendet.
 23 § OSL ska träffa "en uppgiftstyp som minst tre andra länsstyrelser lämnat ut
 omaskad i samma handlingsklass". Kriteriet förutsätter alltså att den maskerade
 uppgiftstypen går att fastställa. Det gör den inte på fältnivå: i 124 av 294
-levererade dokument är texten under svärtningen borttagen, och ADR-0017 slog
+levererade dokument är texten under svärtningen borttagen (*tillägg 2026-09-28:
+88 av 295 efter rättelsen den 1 september och Kalmars leverans; ingen av dem
+har text kvar under en ruta*), och ADR-0017 slog
 fast att handlingarna är löpande prosa utan fältstruktur. Ett försök att härleda
 typen ur texten runt varje svärtning övergavs sedan det visat sig dra enskildas
 namn genom analysen.
@@ -1239,7 +1241,12 @@ dataskyddsförordningen berör inte (b), som är skriven mot 30 kap. 23 §.
 Västernorrland och Västra Götaland. Sex av dem har själva erbjudit ett
 överklagbart beslut och har därför fått en P8-skrivelse enligt not 4:s
 konjunktion; Värmland och Västernorrland har inte erbjudit något och får ingen.
-Kriterium (c) är noll, prövat mot varje maskad B-leverans. Kommer fler än fem
+Kriterium (c) är noll, prövat mot varje maskad B-leverans. *Tillägg 2026-09-28:
+prövat en gång till, sedan en maskad B-leverans från Kalmar den 13 augusti
+upptäckts oarkiverad och ologgad den 28 september. Den åberopar ingen
+bestämmelse, så (c) träffar den inte, och not 4:s första led saknas därmed
+också, alltså ingen P8-skrivelse. Underlaget står i `docs/VERIFIERAT.md`.*
+Kommer fler än fem
 kvalificerade beslut in gäller P9:s ordning: (c) först, därefter (a), därefter
 (b) i fallande avvikelsestorlek, mätt som skillnaden i maskad yta mot
 jämförelsemängden.
