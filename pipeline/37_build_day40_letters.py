@@ -112,9 +112,9 @@ FORBIDDEN_PATTERNS = {
 # Blekinge län". Decision 9 makes the letters fixed and alike, so a later
 # letter in the same correspondence cannot address the authority by another
 # name than the first one did, and the quoted request must carry the line the
-# recipient actually holds. Every line below is read out of the sent mail,
-# except Kalmar's, whose 3 August message the mailbox search cannot return;
-# it follows the other twenty and the authority's own signature block.
+# recipient actually holds. Every line below is read out of the sent mail.
+# Kalmar's own 3 August message is not returned by any mailbox search, so its
+# line is read from the copy quoted inside the reply of 4 August instead.
 COUNTIES = {
     "Blekinge": "Länsstyrelsen i Blekinge län",
     "Dalarna": "Länsstyrelsen i Dalarnas län",
