@@ -100,6 +100,12 @@ OURS = frozenset(
         # tillämpningsnot 7 gives it one reminder and then records the
         # denominator as missing.
         "nämnarfråga",
+        # A request for a decision that lapsed on a condition we set in writing
+        # ourselves. Kalmar B is the case: on 13 August 2026 the letter said the
+        # request for a fee decision lapses if the documents are released
+        # electronically without a fee, and they were, an hour and fifty-five
+        # minutes later. It ends the decision track without a decision.
+        "beslutsbegäran förfallen",
         # A letter that withdraws an incorrect statement in an earlier letter of
         # ours. It asks the authority for nothing and starts no clock.
         "rättelse",
@@ -240,6 +246,7 @@ DECISION_CLOSERS = frozenset(
         "avgiftsbeslut vägrat",
         "avslagsbeslut mottaget",
         "delvis avslagsbeslut mottaget",
+        "beslutsbegäran förfallen",
     }
 )
 
@@ -390,9 +397,10 @@ def state(events: list[dict], today: date) -> dict:
     delivered = bool(deliveries)
     partial = any(PARTIAL_MARK in (e.get("notering") or "").lower() for e in deliveries)
     fee_stopped = any("avgiftsstoppad" in (e.get("notering") or "") for e in events)
-    decision_closed = any(
-        e["handelse"] in DECISION_CLOSERS for e in events if e["handelse"] in THEIRS
-    )
+    # Not filtered on THEIRS: a decision track also ends when the request for a
+    # decision lapses on a condition the applicant set in writing, which is our
+    # own event and not theirs.
+    decision_closed = any(e["handelse"] in DECISION_CLOSERS for e in events)
     # A decision that has been asked for and not answered leaves the request
     # running, however much of it was delivered.
     asked = [e for e in events if e["handelse"] in DECISION_REQUESTS]
