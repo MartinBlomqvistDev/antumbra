@@ -1,4 +1,6 @@
+{"myndighet": "blekinge", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.09915}
 {"myndighet": "blekinge", "djurslag": "fjäderfä", "begaran": "B", "dokument": 2, "maskade": 2, "andel_maskade": 1.0, "andel_yta": 0.00024}
+{"myndighet": "blekinge", "djurslag": "nöt", "begaran": "A", "dokument": 4, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "blekinge", "djurslag": "nöt", "begaran": "B", "dokument": 2, "maskade": 2, "andel_maskade": 1.0, "andel_yta": 0.00046}
 {"myndighet": "dalarna", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.00164}
 {"myndighet": "dalarna", "djurslag": "fjäderfä", "begaran": "B", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.00024}
@@ -27,6 +29,8 @@
 {"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "A", "dokument": 3, "maskade": 3, "andel_maskade": 1.0, "andel_yta": 0.00194}
 {"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 1, "andel_maskade": 0.25, "andel_yta": 0.0}
 {"myndighet": "norrbotten", "djurslag": "fjäderfä", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
+{"myndighet": "norrbotten", "djurslag": "gris", "begaran": "A", "dokument": 2, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
+{"myndighet": "norrbotten", "djurslag": "nöt", "begaran": "A", "dokument": 8, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "ostergotland", "djurslag": "gris", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "ostergotland", "djurslag": "nöt", "begaran": "A", "dokument": 5, "maskade": 5, "andel_maskade": 1.0, "andel_yta": 0.06455}
 {"myndighet": "ostergotland", "djurslag": "nöt", "begaran": "B", "dokument": 8, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}

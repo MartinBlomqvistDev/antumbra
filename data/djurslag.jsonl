@@ -1,3 +1,8 @@
+{"path": "blekinge_A/Extra offentlig kontroll, befogad anmälan från allmänhet - kontrollrapport(5718-2025-3) (0)_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 23}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
+{"path": "blekinge_A/Normal kontroll, riktad - kontrollrapport(5703-2025-2) (0).pdf", "source": "text", "counts": {"nöt": 7, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "blekinge_A/Normal kontroll, slump - kontroll rapport, nötkreatur, Ronneby Kommun(5947-2025-1) (0).pdf", "source": "text", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "blekinge_A/Normal kontroll, slump - kontrollrapport(4960-2025-2) (0).pdf", "source": "text", "counts": {"nöt": 5, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "blekinge_A/Normal kontroll, slump - kontrollrapport(6071-2025-2) (0).pdf", "source": "text", "counts": {"nöt": 3, "gris": 0, "fjäderfä": 1}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "blekinge_B/Beslut_1191-2024_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 48}, "present": ["fjäderfä"], "dominant": "fjäderfä", "readable": true}
 {"path": "blekinge_B/Beslut_1992-2025_Bortredigerad.pdf", "source": "text", "counts": {"nöt": 37, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "blekinge_B/Beslut_3008-2025_Bortredigerad.pdf", "source": "ocr", "counts": {"nöt": 1, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
@@ -147,6 +152,16 @@
 {"path": "kronoberg_B/Föreläggande med vite enligt 8 kap 9 § djurskyddslagen(4114-2026-7) (0).pdf", "source": "text", "counts": {"nöt": 23, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "kronoberg_beslut/Beslut om utlämnande av allmän handling(4902-2026-4).pdf", "source": "text", "counts": {"nöt": 1, "gris": 1, "fjäderfä": 1}, "present": [], "dominant": null, "readable": true}
 {"path": "kronoberg_X/Handlingar för utlämnande(4902-2026-5).pdf", "source": "text", "counts": {"nöt": 26, "gris": 0, "fjäderfä": 16}, "present": ["fjäderfä", "nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/1153-2024(27623291) (0).pdf", "source": "text", "counts": {"nöt": 7, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/1154-2024(27635285) (0).pdf", "source": "text", "counts": {"nöt": 9, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/1318-2024(27691921) (0).pdf", "source": "text", "counts": {"nöt": 15, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/8535-2024(27706259) (0) (1).pdf", "source": "text", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/Extra offentlig kontroll, uppföljning anmärkning officiell veterinär på slakteri - kontrollrapport(27598437) (0).pdf", "source": "text", "counts": {"nöt": 8, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/Extra offentlig kontroll, uppföljning anmärkning officiell veterinär på slakteri - kontrollrapport(27606184) (0).pdf", "source": "text", "counts": {"nöt": 11, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/Extra offentlig kontroll, uppföljning befogad anmälan - kontrollrapport(419-2024-8) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 33, "fjäderfä": 5}, "present": ["fjäderfä", "gris"], "dominant": "gris", "readable": true}
+{"path": "norrbotten_A/Fotografi(419-2024-8.1) (0).pdf", "source": "text", "counts": {"nöt": 0, "gris": 3, "fjäderfä": 1}, "present": ["gris"], "dominant": "gris", "readable": true}
+{"path": "norrbotten_A/Normal kontroll, risk - kontrollrapport(27625243) (0).pdf", "source": "text", "counts": {"nöt": 4, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
+{"path": "norrbotten_A/Normal kontroll, risk - kontrollrapport(27696312) (0) (1).pdf", "source": "text", "counts": {"nöt": 6, "gris": 0, "fjäderfä": 0}, "present": ["nöt"], "dominant": "nöt", "readable": true}
 {"path": "norrbotten_B/Mapp1.pdf", "source": "text", "counts": {"nöt": 1, "gris": 6, "fjäderfä": 45}, "present": ["fjäderfä", "gris"], "dominant": "fjäderfä", "readable": true}
 {"path": "orebro_avgiftsbeslut/Beslut om avgift(13775-2026-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
 {"path": "orebro_avgiftsriktlinje/Riktlinje om avgiftsuttag vid utlämnande av allmän handling(5587-2023-2).pdf", "source": "text", "counts": {"nöt": 0, "gris": 0, "fjäderfä": 0}, "present": [], "dominant": null, "readable": true}
