@@ -113,6 +113,13 @@ def warehouse() -> dict:
 
 
 @pytest.fixture(scope="module")
+def image_reading() -> list[dict]:
+    """The hand-read verdict on each document where the two methods disagreed."""
+    path = ROOT / "data" / "bildlasning_facit.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def denominators() -> list[dict]:
     """One hand-copied record per authority that answered P11."""
     path = ROOT / "data" / "namnare.jsonl"
@@ -1931,3 +1938,52 @@ class TestTheRulesWrittenOnDay41AreStillWhereTheyWereWritten:
         source = (ROOT / "pipeline" / "36_build_p12_packets.py").read_text("utf-8")
         assert "MEASURE_CLOSES = 40" in source
         assert "censurerad" in source
+
+
+class TestTheHandReadingOfTheDisagreeingDocumentsStands:
+    """Eight documents were read by hand, and the verdict is pinned to them.
+
+    ADR-0023 rejected the image-method trigger and said the disagreement it
+    exposed would be settled by hand. It was, on 29 September 2026, against a
+    criterion written to the protocol log first: three verdicts were available,
+    maskning, fotografi or osäker, and all eight came back fotografi. The
+    verdict is what holds class A at 109 of 170, so it is pinned here: a later
+    run that quietly turns one of these documents into a redaction has to break
+    this test and rewrite the facit rather than move a published figure.
+    """
+
+    VERDICTS: ClassVar[set[str]] = {"maskning", "fotografi", "osäker"}
+
+    def test_all_eight_documents_are_judged(self, image_reading):
+        assert len(image_reading) == 8
+        assert {r["path"].split("/")[0] for r in image_reading} == {
+            "jamtland_A",
+            "norrbotten_A",
+        }
+        for record in image_reading:
+            assert record["dom"] in self.VERDICTS
+            assert record["sidor_sedda"]
+            assert record["notering"].strip()
+
+    def test_not_one_bar_was_a_redaction(self, image_reading):
+        assert {r["dom"] for r in image_reading} == {"fotografi"}
+
+    def test_the_second_reading_covers_every_bar(self, image_reading):
+        # 439 of 445 bars sit inside a raster image; the six that do not run
+        # across the seam between two adjacent pictures and were checked one by
+        # one. Both figures are pinned, because the gap between them is the
+        # part that needed a human.
+        assert sum(r["balkar"] for r in image_reading) == 445
+        assert sum(r["balkar_inuti_bild"] for r in image_reading) == 439
+
+    def test_the_documents_are_the_ones_the_text_method_calls_clean(
+        self, image_reading, masking
+    ):
+        judged = {r["path"] for r in image_reading}
+        for record in masking:
+            stem = record["path"].rsplit("/", 1)
+            folder = stem[0]
+            for path in judged:
+                start = path.split("/")[1]
+                if folder == path.split("/")[0] and stem[1].startswith(start):
+                    assert record["masked"] is False

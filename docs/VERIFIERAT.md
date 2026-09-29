@@ -408,6 +408,16 @@ i bilden är osynlig för den. Talen ovan står som mätta, men klass A:s andel 
 preliminär till dess utlösaren för bildmetoden är avgjord; villkoret för en
 ändring skrivs före körningen, som i ADR-0020.
 
+*Tillägg senare samma dag: avgjort, och talet är inte längre preliminärt.*
+Regeln föll på sitt eget villkor, och de åtta handlingar där text- och
+bildläsningen var oense är handlästa med kriteriet skrivet i förväg. Domen är
+fotografi för alla åtta: ingen av balkarna ligger i eller över en textrad, och
+439 av 445 balkar ligger innanför en rasterbild, medan de sex övriga löper över
+gränsen mellan två bilder och är kontrollerade en för en. Talen ovan står
+alltså som de är. Kvar står golvet från ADR-0016, att en balk ritad i en
+skannad sida är osynlig för textmetoden; underlaget, facit per handling i
+`data/bildlasning_facit.jsonl` och de avvisade reglerna står i ADR-0023.
+
 **Jämförelsemängden för P9:s kriterium (b) växer till åtta län.** Minst ett helt
 omaskat dokument i klass A finns nu hos Blekinge, Dalarna, Gävleborg, Jämtland,
 Norrbotten, Södermanland, Uppsala och Västerbotten, tillsammans 61 dokument.

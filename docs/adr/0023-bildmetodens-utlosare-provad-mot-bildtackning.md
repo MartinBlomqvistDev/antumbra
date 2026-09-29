@@ -75,6 +75,30 @@ ingen balk hittades, inte att ingenting undanhållits.
 
 **Vad som skulle avgöra frågan.** Handläsning av de åtta handlingarna i klass A
 där läsningarna är oense, alltså samma väg som djurslagsregeln och
-villkorsregistret prövats på. Det är åtta dokument och kostar en eftermiddag.
-Till dess är frågan öppen och redovisad som öppen, vilket är billigare än en
-regel som flyttar ett publicerat tal på en tröskel som materialet inte stöder.
+villkorsregistret prövats på.
+
+*Tillägg 2026-09-29, samma dag: handläsningen är gjord, och domen är fotografi
+för alla åtta.* Kriteriet skrevs i protokollloggen före första sidan och gav tre
+möjliga domar, maskning, fotografi eller osäker. Instrumentet var sidan renderad
+med varje balk bildmetoden hittat inramad, två sidor per handling, de med flest
+balkar. Ingen av de sedda balkarna ligger i eller över en textrad; de ligger på
+mörka djur, mörk gödsel, skugga under tak, mörkt nät och mörka plank. Facit står
+i `data/bildlasning_facit.jsonl` med sidnummer och skäl per handling.
+
+En andra, maskinell läsning täcker varje balk och inte bara de sedda sidorna:
+**439 av 445 balkar ligger innanför en rasterbild.** De sex övriga löper över
+gränsen mellan två intilliggande bilder, och alla sex är handkontrollerade var
+för sig, en svart kos flank, mörkt nät, ett mörkt djurs rygg, mörka plank, ett
+mörkt stall och en mörk ladugårdsöppning. Den läsningen krävde att sidans
+rotation räknades in; utan den jämförde den två koordinatsystem och gav 108
+falska avvikare, vilket är nedtecknat eftersom talet syntes i en körning innan
+felet hittades.
+
+**Följden.** Textmetodens utfall står för alla åtta, klass A:s tal står kvar på
+109 av 170, och ADR:ns bedömning att oenigheten är falsklarm är nu belagd av
+handläsning i stället för antagen. Kvar står golvet från ADR-0016: en balk som
+är ritad i en skannad sida är osynlig för textmetoden, och ingen prövad regel
+fångar den utan att samtidigt räkna fotografier som maskning. Att i stället
+bortse från balkar som ligger innanför en rasterbild vore en regel som fungerar
+här men blindar Halland, som ritar sina maskningar ovanpå fotografierna, vilket
+är samma skäl som ADR-0020 avvisade en fotografiregel på.
