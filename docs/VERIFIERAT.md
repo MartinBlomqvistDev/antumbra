@@ -340,7 +340,13 @@ utfallet står i ADR-0020. Vapnet och rubrikbandet utesluts numera även ur
 bildmetoden. Falsklarmen faller från 64 av 155 till **30 av 155**, alltså från
 41 till 19 procent, medan missarna står kvar på 1 av 88. Resten är fotografier:
 varje kvarvarande handling har minst en balk inuti en rasterbild, och det är den
-felkälla ADR-0016 skrev ut från början. En regel för fotografier är avvisad med
+felkälla ADR-0016 skrev ut från början. *Tillägg 2026-09-29: påståendet är nu
+mätt i stället för antaget, och i starkare form.* Över samtliga 35 falsklarm
+ligger 1 210 av 1 217 balkar innanför en rasterbild. De sju övriga finns i tre
+handlingar, löper över skarven mellan två intilliggande bilder och är handlästa
+var för sig; ingen av dem ligger i eller över en textrad. Falsklarmen är samtidigt
+omräknade på den växande korpusen: 35 av 176 omaskade digitalt födda handlingar,
+alltså 20 procent mot ADR-0020:s 19, med missarna kvar på 1. En regel för fotografier är avvisad med
 skäl, eftersom Halland har lämnat en fotobilaga där maskningarna är ritade
 ovanpå bilderna.
 

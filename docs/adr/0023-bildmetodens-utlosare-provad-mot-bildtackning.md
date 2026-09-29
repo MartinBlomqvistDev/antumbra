@@ -94,7 +94,24 @@ rotation räknades in; utan den jämförde den två koordinatsystem och gav 108
 falska avvikare, vilket är nedtecknat eftersom talet syntes i en körning innan
 felet hittades.
 
-**Följden.** Textmetodens utfall står för alla åtta, klass A:s tal står kvar på
+*Jämfört mot de tidigare analyserna, samma dag.* Handläsningen är ett stickprov
+ur en mängd som redan var mätt, och jämförelsen hör hit. `validate_image_method`
+ger nu **35 falsklarm av 176 omaskade digitalt födda handlingar, 20 procent**,
+mot ADR-0020:s 30 av 155 och 19 procent; missarna står kvar på 1. Korpusen har
+växt från 261 till 298 digitalt födda handlingar, och andelen höll. De åtta
+handlästa är alltså inte en egen sort utan **8 av 35 handlingar i samma
+kategori**, de med störst bildtäckning, vilket dagens tröskel valde ut.
+
+Containmenttestet är därför kört över alla 35: **1 217 balkar, varav 1 210
+innanför en rasterbild och 7 utanför.** De sju ligger i tre handlingar och är
+handlästa var för sig; alla sju löper över skarven mellan två intilliggande
+bilder. Sex fanns i de åtta, och den sjunde, `vasterbotten_A/11096-2025`, låg
+utanför dagens urval och är nu läst och förd till facit. Därmed är
+`docs/VERIFIERAT.md`:s tidigare påstående, att varje kvarvarande falsklarm har
+minst en balk inuti en rasterbild, mätt och inte bara antaget, och i en starkare
+form: nästan varje balk ligger där, och varje undantag är granskat.
+
+**Följden.** Textmetodens utfall står för alla nio handlästa, klass A:s tal står kvar på
 109 av 170, och ADR:ns bedömning att oenigheten är falsklarm är nu belagd av
 handläsning i stället för antagen. Kvar står golvet från ADR-0016: en balk som
 är ritad i en skannad sida är osynlig för textmetoden, och ingen prövad regel

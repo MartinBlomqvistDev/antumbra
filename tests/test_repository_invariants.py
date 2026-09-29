@@ -1954,11 +1954,17 @@ class TestTheHandReadingOfTheDisagreeingDocumentsStands:
 
     VERDICTS: ClassVar[set[str]] = {"maskning", "fotografi", "osäker"}
 
-    def test_all_eight_documents_are_judged(self, image_reading):
-        assert len(image_reading) == 8
+    def test_every_hand_read_document_is_judged(self, image_reading):
+        # Eight came from the threshold trial. The ninth, Västerbotten's
+        # 11096-2025, came from the screen over all 35 false alarms the image
+        # method produces on born-digital documents: it is the only one outside
+        # the trial's selection with a bar that lies outside every picture on
+        # its page, so it was read by hand on the same criterion.
+        assert len(image_reading) == 9
         assert {r["path"].split("/")[0] for r in image_reading} == {
             "jamtland_A",
             "norrbotten_A",
+            "vasterbotten_A",
         }
         for record in image_reading:
             assert record["dom"] in self.VERDICTS
@@ -1969,12 +1975,12 @@ class TestTheHandReadingOfTheDisagreeingDocumentsStands:
         assert {r["dom"] for r in image_reading} == {"fotografi"}
 
     def test_the_second_reading_covers_every_bar(self, image_reading):
-        # 439 of 445 bars sit inside a raster image; the six that do not run
+        # 496 of 503 bars sit inside a raster image; the seven that do not run
         # across the seam between two adjacent pictures and were checked one by
         # one. Both figures are pinned, because the gap between them is the
         # part that needed a human.
-        assert sum(r["balkar"] for r in image_reading) == 445
-        assert sum(r["balkar_inuti_bild"] for r in image_reading) == 439
+        assert sum(r["balkar"] for r in image_reading) == 503
+        assert sum(r["balkar_inuti_bild"] for r in image_reading) == 496
 
     def test_the_documents_are_the_ones_the_text_method_calls_clean(
         self, image_reading, masking
