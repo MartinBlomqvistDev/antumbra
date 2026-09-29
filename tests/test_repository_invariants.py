@@ -113,6 +113,13 @@ def warehouse() -> dict:
 
 
 @pytest.fixture(scope="module")
+def denominators() -> list[dict]:
+    """One hand-copied record per authority that answered P11."""
+    path = ROOT / "data" / "namnare.jsonl"
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line]
+
+
+@pytest.fixture(scope="module")
 def dashboard() -> str:
     """The generated dashboard page."""
     return (ROOT / "docs" / "dashboard.html").read_text("utf-8")
@@ -1829,3 +1836,98 @@ class TestTheSwedishDatasetsShareOnePopulation:
         # The sample is never redrawn, so it must keep resolving. A document
         # vanishing from step 20 would silently shrink the check.
         assert self.paths(species_sample) <= self.paths(species)
+
+
+class TestTheDenominatorRegisterKeepsEachCountysOwnReading:
+    """P11's answers are not one quantity, so each reading is recorded.
+
+    Tillämpningsnot 9 of 29 September 2026 settled what to do when an authority
+    asks whether hobby flocks belong in the count: the question's own words are
+    repeated, no reading is prescribed, and the reading each authority used is
+    recorded instead. The register is hand-copied from the log's verbatim
+    quotes, like the grounds register, which is legitimate only while its
+    population is pinned and its arithmetic is nobody's but the authority's.
+
+    The rule that matters most here is the one a future run could quietly
+    break: **nothing in this file is summed.** Västra Götaland reported 18
+    controls of flocks above 350 laying hens and 425 below; adding them would
+    invent a figure the county never wrote and would merge two readings the
+    note keeps apart. Kalmar reported 48 förelägganden and 16 with a penalty,
+    and the same applies.
+    """
+
+    READINGS: ClassVar[set[str]] = {
+        "utan storleksgräns",
+        "över 350 värphöns",
+        "okänd",
+        "kan inte tas fram",
+    }
+
+    def test_every_answer_in_the_log_has_a_row(self, denominators):
+        from open_items import load
+
+        answered = {
+            row["myndighet"].removeprefix("Länsstyrelsen i ")
+            for row in load()
+            if row["handelse"] == "svar på nämnarfrågan"
+        }
+        assert {r["myndighet"] for r in denominators} == answered
+
+    def test_every_row_is_well_formed(self, denominators):
+        for record in denominators:
+            assert record["lasning_fjaderfa"] in self.READINGS
+            assert record["meddelande_id"]
+            assert record["citat"].strip()
+            assert isinstance(record["kontroller"], dict)
+            assert isinstance(record["forelagganden"], dict)
+            if record["kan_inte_tas_fram"]:
+                assert not record["kontroller"]
+                assert not record["forelagganden"]
+
+    def test_no_figure_is_a_sum_of_two_readings(self, denominators):
+        # Västra Götaland is the only county that reported both size
+        # categories, and the two must stay apart. A key holding their sum, or
+        # a plain fjäderfä key beside them, would be arithmetic the county
+        # never did.
+        west = next(r for r in denominators if r["myndighet"] == "Västra Götaland")
+        above = west["kontroller"]["värphöns fler än 350 st"]
+        below = west["kontroller"]["värphöns färre än 350 st"]
+        assert (above, below) == (18, 425)
+        assert above + below not in west["kontroller"].values()
+        assert not any(key.strip() == "fjäderfä" for key in west["kontroller"])
+
+    def test_the_two_counties_that_cannot_answer_are_named(self, denominators):
+        missing = {
+            r["myndighet"]
+            for r in denominators
+            if r["lasning_fjaderfa"] == "kan inte tas fram"
+        }
+        assert missing == {"Skåne", "Norrbotten"}
+
+
+class TestTheRulesWrittenOnDay41AreStillWhereTheyWereWritten:
+    """Two rules were written before they were applied, so they are pinned.
+
+    Both were written on 29 September 2026: tillämpningsnot 9 on the
+    denominator's size reading, and the addition to note 7 saying that a
+    delivery after day 40 does not reopen the response-time measure. A rule
+    that lives only in a commit message is a rule that quietly stops applying,
+    and the second one is carried out by code, which makes the pair worth
+    guarding together.
+    """
+
+    def test_note_nine_is_in_the_protocol(self):
+        text = (ROOT / "docs" / "BEGARANMALL.md").read_text("utf-8")
+        assert "Tillämpningsnot 9, 2026-09-29" in text
+        assert "Läsningen registreras per län" in text
+        assert "Bara lika jämförs med lika" in text
+
+    def test_the_addition_to_note_seven_is_in_the_protocol(self):
+        text = (ROOT / "docs" / "BEGARANMALL.md").read_text("utf-8")
+        assert "Tillägg 2026-09-29: en leverans som kommer efter dag 40" in text
+        assert "öppnar inte det stängda måttet" in text
+
+    def test_the_packet_builder_carries_the_censoring(self):
+        source = (ROOT / "pipeline" / "36_build_p12_packets.py").read_text("utf-8")
+        assert "MEASURE_CLOSES = 40" in source
+        assert "censurerad" in source

@@ -53,6 +53,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from open_items import (  # noqa: E402
     DAY_ZERO,
     INTERNAL,
+    NOT_A_REQUEST,
     THEIRS,
     working_days_between,
 )
@@ -97,6 +98,12 @@ SLUG = {
 NAME = {
     slug: authority.replace("Länsstyrelsen i ", "") for authority, slug in SLUG.items()
 }
+
+# P10 closes the response-time collection on day 40, and the addition to
+# tillämpningsnot 7 of 29 September 2026 says a delivery after that day does not
+# reopen it: T2 is reported as censored at day 40 with the actual date beside
+# it. The document measures are untouched by this, since they follow note 3.
+MEASURE_CLOSES = 40
 
 # P1: "T1 = arbetsdagar till första substantiella besked per begäran
 # (leverans, avgiftsbesked, förtydligandefråga eller beslut; autosvar räknas
@@ -272,10 +279,21 @@ def packet(authority: str, data: dict) -> str:
             )
         if last:
             day = working_days_between(DAY_ZERO, date.fromisoformat(last["datum"]))
-            parts.append(
-                f"Avslutat enligt P1: **dag {day}**, {last['datum']}, "
-                f"loggat som {last['handelse']}."
-            )
+            if day > MEASURE_CLOSES:
+                parts.append(
+                    f"Avslutat {last['datum']}, alltså dag {day}, loggat som "
+                    f"{last['handelse']}. **Svarstiden redovisas som censurerad "
+                    f"vid dag {MEASURE_CLOSES}**, eftersom datainsamlingen för "
+                    "svarstidsmåttet stängdes den dagen enligt P10 och en "
+                    "leverans efter den inte öppnar måttet igen. Handlingarna "
+                    "ingår däremot fullt ut i maskningsmätningen. Regeln står i "
+                    "tillägget till tillämpningsnot 7."
+                )
+            else:
+                parts.append(
+                    f"Avslutat enligt P1: **dag {day}**, {last['datum']}, "
+                    f"loggat som {last['handelse']}."
+                )
         else:
             parts.append("Begäran är inte avslutad i skrivande stund.")
         parts.append("")
@@ -452,11 +470,11 @@ def main() -> int:
     del contrast
 
     authorities = sorted({r["myndighet"] for r in log if r["myndighet"] in SLUG})
-    unknown = {r["myndighet"] for r in log if r["myndighet"] not in SLUG} - {
-        "flera",
-        "samtliga",
-        "länsstyrelserna",
-    }
+    # The aggregate words come from open_items, so that a row logged under one
+    # of them can never build a packet for an authority that does not exist,
+    # and so that the two lists cannot drift apart.
+    unknown = {r["myndighet"] for r in log if r["myndighet"] not in SLUG}
+    unknown -= set(NOT_A_REQUEST)
     if unknown:
         print(f"myndigheter utan slug: {sorted(unknown)}")
         return 1
