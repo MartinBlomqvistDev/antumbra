@@ -1320,6 +1320,40 @@ heller ingen myndighet en sämre redovisning: uteblivet svar redovisas som just
 det, och P10:s bestämmelse att en eventuell JO-anmälan övervägs först efter
 publicering, enhetligt för alla, står oförändrad.
 
+**Tillägg 2026-09-29: en leverans som kommer efter dag 40.** Läget uppstod dag
+41, när Länsstyrelsen i Blekinge och Länsstyrelsen i Norrbotten besvarade P10:s
+påminnelse med de kontrollrapporter de haft att lämna sedan den 4 augusti. Noten
+skrivs innan något svarstidstal är räknat.
+
+Frågan är inte vilken slutstatus begäran får, eftersom den är avgjord: notens
+fjärde slutstatus kräver att ingen leverans och inget beslut kommit in, och en
+begäran som levererat faller på det första villkoret. Den når slutstatus
+levererad enligt not 3 punkt 1. Kvar står bara vad som händer med
+svarstidsmåttet, som P10 stängde dag 40.
+
+**Regeln.** En leverans efter dag 40 öppnar inte det stängda måttet. T2
+redovisas som censurerad vid dag 40, med leveransens faktiska dag utskriven
+bredvid, och begäran räknas aldrig som uteblivet svar, eftersom handlingarna
+kommit in. Dokumentmåtten är en annan sak: maskningsgrad, dokumentandel och
+kontrastmått har ingen dag 40 i sig, utan följer insamlingen enligt not 3, så
+handlingarna ingår i dem fullt ut.
+
+**Skälet till att måttet inte öppnas igen.** P10:s mening lyder att
+datainsamlingen för svarstidsmåttet stängs dag 40, och ett mått som stängs och
+öppnas när ett sent svar kommer in är inte stängt. Det skulle dessutom göra
+svarstiderna till en funktion av när sista brevet råkar komma, medan hela poängen
+med en fast dag är att varje myndighet mäts mot samma klocka. En censurerad
+observation är den hederliga formen för det som inte hänt när mätningen slutade.
+
+**Utfallet redovisas som det som hände.** Att påminnelsen gav två leveranser
+inom en arbetsdag efter trettionio arbetsdagars tystnad hör till resultatet, inte
+till en fotnot om metoden.
+
+**Vad tillägget inte gör.** Det flyttar inte dag 40, ändrar inte not 3:s
+slutstatus och rör inte P12:s tre veckor. Det säger heller ingenting om
+begäranden som fortfarande är tysta; för dem gäller notens tre villkor
+oförändrade.
+
 ### Tillämpningsnot 8, 2026-09-05: att öppna repot är publicering enligt P12
 
 Skriven dag 24, innan publiceringsdatumet är valt och innan det är känt vilka
@@ -1375,3 +1409,61 @@ arbetsdagar efter P10-påminnelsen, och P12:s tre veckor löper oavsett om ett
 genmäle kommer. Den rör inte not 7:s regel att ett pågående mål i kammarrätten
 inte skjuter upp publiceringen. Den säger heller ingenting om vad paketet ska
 innehålla utöver att det är det som kommer att publiceras om myndigheten.
+
+### Tillämpningsnot 9, 2026-09-29: nämnarens storleksläsning registreras, den föreskrivs inte
+
+Skriven dag 41, samma dag som frågan ställdes och innan något svar på den gått
+ut. Till skillnad från noterna 3, 5, 6 och 7 kunde den här inte skrivas i
+förväg, eftersom ingenting pekade på att storlek skulle bli en fråga. Det som
+håller den neutral är i stället att de åtta nämnarsvar som redan kommit in gavs
+utan att jag sagt ett ord om storlek, och att ingen läsning föreskrivs för
+någon.
+
+**Problemet.** Länsstyrelsen i Hallands län frågar den 29 september, innan de
+svarar på P11:s nämnarfråga, *"om du även vill att hobbybesättningar ingår i
+statistiken"*. Frågan har inget svar i protokollet. Begäran A gäller
+*"anläggningar som håller nötkreatur, grisar eller fjäderfä"* och P11 frågar om
+*"anläggningar med nötkreatur, grisar respektive fjäderfä"*; ingen av dem har en
+storleksgräns, och avsaknaden är ett val med skälet utskrivet i avsnitt 5, att
+ett storlekskriterium smyger in en bedömning hos registratorn.
+
+**Tre saker är mätta i materialet, och de drar isär.** Hobbybesättningar ligger
+redan i täljaren: två levererade handlingar beskriver själva djurhållningen som
+hållen för hobby och sällskap, en kontrollrapport i Jämtland A och ett
+föreläggande i Norrbotten B. C:s nämnare räknar dem inte, eftersom
+djurskyddskontrollregistrets checklistor delar fjäderfä i över 350 värphöns och
+slaktkyckling, och de nationella talen för värphöns är 42 kontroller 2024 och 52
+år 2025. Och länen svarar på olika läsningar utan att ha tillfrågats: Västra
+Götaland anger *"värphöns fler än 350 st 18, värphöns färre än 350 st 425"*,
+Gotland att *"checklistan för över 350 värphöns har använts 4 gånger"* och
+ingenting under, medan Blekinges *"9 kontroller av fjäderfän"* inte säger vilken
+läsning som använts.
+
+**Regeln, i fyra led.**
+
+1. **Svaret till en myndighet som frågar upprepar frågans egna ord och lägger
+   ingen gräns till.** Det följer av P4: omfånget ändras aldrig i det steget.
+   Samma text till var och en som frågar.
+2. **Läsningen registreras per län och per djurslag**, i `data/namnare.jsonl`,
+   med myndighetens egna ord som källa: *utan storleksgräns*, *över 350
+   värphöns*, *okänd* när svaret inte säger något, eller *kan inte tas fram*.
+   En läsning som inte framgår gissas inte.
+3. **Bara lika jämförs med lika.** Ett läns tal för över 350 värphöns ställs mot
+   C:s kategori över 350 värphöns. Läsningar summeras aldrig, och ett tal utan
+   storleksgräns ställs aldrig mot ett nationellt tal som har en.
+4. **Fjäderfänämnaren publiceras som läsningsberoende.** Där läsningen är okänd
+   redovisas nämnaren som okänd, aldrig uppskattad, vilket är samma ordning som
+   not 7 föreskriver för en nämnare som saknas.
+
+**Vad regeln inte rör.** Utlämningsgraden. P11 definierar den per begäran, som
+levererade handlingar delat med det lägre av taket och antalet som fanns, och
+taket binder i praktiskt taget varje län. Storleksläsningen rör jämförelsen mot
+C och Jordbruksverkets officiella statistik samt mixjusteringen, ingenting
+annat.
+
+**Det förkastade alternativet.** Att fastställa en läsning nu och skicka den till
+samtliga tjugoen. Den hade gett en gemensam nämnare på papperet, men bara för de
+nio län som ännu inte svarat, och de åtta som redan svarat hade fått en ny fråga
+om samma sak. P11 är en identisk fråga till alla; att dela upp mottagarna i två
+grupper efter vem som hunnit svara vore en större skada på jämförbarheten än den
+som regeln ovan redovisar öppet.

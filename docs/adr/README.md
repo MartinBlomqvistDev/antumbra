@@ -29,3 +29,4 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0020](0020-mallens-fasta-element-utesluts-ur-bildmetoden.md) | Mallens fasta element utesluts ur bildmetoden | beslutad |
 | [0021](0021-en-sidbrytning-avslutar-inte-ett-villkor.md) | En sidbrytning avslutar inte ett villkor | beslutad |
 | [0022](0022-en-ocr-forvanskad-adress-ar-fortfarande-en-adress.md) | En OCR-förvanskad adress är fortfarande en adress | beslutad |
+| [0023](0023-bildmetodens-utlosare-provad-mot-bildtackning.md) | Bildmetodens utlösare prövad mot bildtäckning, och regeln införs inte | beslutad |
