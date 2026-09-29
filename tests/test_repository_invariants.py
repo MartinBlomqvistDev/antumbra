@@ -1266,21 +1266,36 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         # court. None of them belongs to request A or B, so all sit in "övrigt"
         # and none touches the A-against-B contrast, which stands at 108 of 155
         # and 34 of 140 since Kalmar's B delivery was found on 28 September 2026.
-        assert len(hidden_text) == 283
+        assert len(hidden_text) == 298
         by_class = Counter(r["klass"] for r in hidden_text)
-        assert by_class == {"A": 125, "B": 125, "övrigt": 33}
+        assert by_class == {"A": 140, "B": 125, "övrigt": 33}
 
     def test_the_measure_still_sees_the_header_boxes(self, hidden_text):
         # The detector must keep finding the known true positives. Were it to
         # return nothing at all, the null below would be vacuous.
         with_hidden = [r for r in hidden_text if r["dolda"]]
-        assert len(with_hidden) == 42
-        assert sum(r["dolda"] for r in hidden_text) == 236
-        assert max(r["längsta_körning"] for r in hidden_text) == 13
+        assert len(with_hidden) == 45
+        # 236 of these characters are the header the template's own white box
+        # covers. The other 258 arrived on 29 September 2026 with Norrbotten's
+        # class A delivery, in three documents that are page images carrying an
+        # OCR text layer underneath: every glyph of that layer sits under the
+        # picture, so the detector calls it hidden by construction. They are a
+        # property of the layer, not a redaction, and the documents carry no
+        # redaction at all.
+        assert sum(r["dolda"] for r in hidden_text) == 494
+        assert max(r["längsta_körning"] for r in hidden_text) == 24
+
+    # The one document that trips the flag is named here rather than excluded
+    # quietly. It is an OCR text layer under a page image, described above, and
+    # the finding it would otherwise report does not exist: the document has no
+    # redaction, and the hidden run is report prose the picture shows in full.
+    OCR_LAYER_UNDER_AN_IMAGE = "norrbotten_A/8535-2024(27706259) (0) (1).pdf"
 
     def test_no_body_text_is_hidden(self, hidden_text):
-        assert [r["path"] for r in hidden_text if r["dold_av_ljus_täckning"]] == []
-        assert max(r["längsta_i_brödtext"] for r in hidden_text) == 0
+        flagged = [r for r in hidden_text if r["dold_av_ljus_täckning"]]
+        assert [r["path"] for r in flagged] == [self.OCR_LAYER_UNDER_AN_IMAGE]
+        rest = [r for r in hidden_text if r["path"] != self.OCR_LAYER_UNDER_AN_IMAGE]
+        assert max(r["längsta_i_brödtext"] for r in rest) == 0
 
     def test_hidden_text_is_only_ever_counted_never_stored(self, hidden_text):
         fields = {
@@ -1315,6 +1330,17 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
     are masked and their decision is under appeal, so the county carries the
     A/B contrast and was standing outside the measure.
 
+    Class A moved again on 29 September 2026, from 108 of 155 to 109 of 170,
+    when Länsstyrelsen i Blekinge and Länsstyrelsen i Norrbotten answered the
+    day 40 reminder with the reports they had owed since 4 August. Blekinge
+    masked one of five, Norrbotten none of ten, so the pooled class A share
+    fell from 70 to 64 per cent. **The new figure is provisional.** Six of the
+    fifteen documents are page images with an OCR text layer, and the method
+    column calls them text because a text layer exists; a bar drawn in the
+    picture is invisible to that instrument. The figure stands as measured
+    until the trigger for the image method is decided, and the decision is
+    recorded in docs/VERIFIERAT.md before any of it is published.
+
     The split by method is pinned with them, because it is the part that says
     how much weight each fraction can carry. Every scanned class A document is
     judged masked, which is what a detector with a known false positive rate
@@ -1340,7 +1366,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         a = tuple(sum(x) for x in pairs)
         pairs = zip(found[("B", "text")], found[("B", "image")], strict=True)
         b = tuple(sum(x) for x in pairs)
-        assert a == (108, 155)
+        assert a == (109, 170)
         assert b == (34, 140)
 
     # ADR-0019 and ADR-0020 state these numbers, and the ADRs are what a reader
@@ -1383,7 +1409,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
 
     def test_the_split_between_the_two_methods(self, masking):
         found = self.shares(masking)
-        assert found[("A", "text")] == (78, 125)
+        assert found[("A", "text")] == (79, 140)
         assert found[("A", "image")] == (30, 30)
         assert found[("B", "text")] == (23, 125)
         assert found[("B", "image")] == (11, 15)
@@ -1430,10 +1456,14 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
             county, _, klass = folder.rpartition("_")
             if klass == "A" and not record["masked"]:
                 clean.add(county)
-        assert len(clean) == 6
+        assert len(clean) == 8
+        # Blekinge and Norrbotten joined on 29 September 2026 with their own
+        # class A deliveries, four and ten unmasked documents.
         assert clean == {
+            "blekinge",
             "dalarna",
             "gavleborg",
+            "norrbotten",
             "jamtland",
             "sodermanland",
             "uppsala",
@@ -1594,8 +1624,8 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         # delivery joins the population and one hand-copied row joins the
         # register. The gap between them is unchanged and still the two rows
         # that outlived their population.
-        assert len(population) == 24
-        assert len(covered) == 26
+        assert len(population) == 25
+        assert len(covered) == 27
         assert population - covered == self.MISSING
 
 

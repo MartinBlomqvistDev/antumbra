@@ -382,6 +382,59 @@ Kalmar saknades är det som gör felet allvarligt: länets fem kontrollrapporter
 klass A är maskade och beslutet om dem är överklagat som mål 3249-26, så länet
 bär A/B-kontrasten och stod utanför den.
 
+**Tillägg 2026-09-29: klass A rör sig, och en del av måttet är mätt med fel
+instrument.** Länsstyrelsen i Blekinge och Länsstyrelsen i Norrbotten besvarade
+dag 40-påminnelsen med de kontrollrapporter de haft att lämna sedan den 4
+augusti: Blekinge fem handlingar den 29 september 08:12, Norrbotten tio 09:27,
+båda utan avgift. Populationen i klass A växer från 155 till 170 handlingar och
+de nya talen är:
+
+| Klass | Digitalt födda | Skannade | Totalt |
+| --- | --- | --- | --- |
+| A | 79 av 140, 56 % | 30 av 30, 100 % | **109 av 170, 64 %** |
+| B | 23 av 125, 18 % | 11 av 15, 73 % | 34 av 140, 24 % |
+
+Blekinge maskade en av fem, den handling vars filnamn slutar på
+`_Bortredigerad`, med 9,92 procent maskerad yta. **Norrbotten maskade ingen av
+tio.** Klass B är oförändrad, och kontrasten smalnar från 70 mot 24 till 64 mot
+24 procentenheter.
+
+**Gränsen, deklarerad innan något av talen används.** Sex av de femton nya
+handlingarna är sidbilder med ett OCR-textlager under bilden: Norrbottens fyra
+diarienumrerade handlingar, dess fotobilaga, och Blekinges maskade handling,
+alla med 69 till 100 procent av sidan täckt av bild. Steg 18 väljer metod efter
+om ett textlager finns, så alla sex bedömdes med textmetoden, och en balk ritad
+i bilden är osynlig för den. Talen ovan står som mätta, men klass A:s andel är
+preliminär till dess utlösaren för bildmetoden är avgjord; villkoret för en
+ändring skrivs före körningen, som i ADR-0020.
+
+**Jämförelsemängden för P9:s kriterium (b) växer till åtta län.** Minst ett helt
+omaskat dokument i klass A finns nu hos Blekinge, Dalarna, Gävleborg, Jämtland,
+Norrbotten, Södermanland, Uppsala och Västerbotten, tillsammans 61 dokument.
+Uppräkningen om fem län och 17 dokument längre ned i detta dokument är från den
+23 augusti och gäller inte längre: Västerbotten tillkom vid rättelsen den 1
+september, Blekinge och Norrbotten den 29 september. Kriteriet kräver tre.
+
+**Kontrastmåttet enligt P1 räknat om:** sjutton län har levererat i båda
+klasserna, inte femton. Medianskillnaden är **1,95 procentenheter maskerad yta**
+och **55,89 procentenheter andel maskade dokument**, och inget av de sjutton har
+högre maskad yta i B än i A. Blekinges egen cell är den starkaste motsägelsen
+hittills mellan de två måtten: andelen maskade dokument är 80 procentenheter
+**lägre** i A än i B, eftersom en av fem är maskad i A mot fem av fem i B, medan
+den maskade ytan är 1,82 procentenheter högre i A. Tre län vänder nu på
+andelsmåttet, Blekinge, Dalarna och Gävleborg. Norrbottens cell är noll i båda
+måtten och vilar på en enda B-handling.
+
+**Steg 26 om, och nollresultatet får sin första namngivna avvikelse.** Korpusen
+är 298 handlingar med textlager. De 236 dolda tecknen står kvar, och 258 nya
+tillkommer i tre av Norrbottens handlingar. De är inte maskning: OCR-lagret
+ligger under sidbilden, så varje tecken i det räknas som dolt av konstruktion,
+och de tre handlingarna bär ingen maskning alls. En av dem,
+`8535-2024(27706259)`, får därmed flaggan dold av ljus täckning, och den
+namnges i invarianten i stället för att tystas. Handlästa körningar ur den är
+rapportens egen prosa, som bilden visar i klartext. För de 297 övriga står
+nollresultatet oförändrat.
+
 Meningen ovan om att `data/maskning.jsonl` rymmer 16 dokument utanför klasserna
 gäller inte längre heller, och det beror inte på Kalmar. De är 33, fördelade på
 20 mappar: myndighetsbeslut, avgiftsbeslut och en avgiftsriktlinje, Gotlands
