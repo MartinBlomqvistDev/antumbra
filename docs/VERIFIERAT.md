@@ -1352,6 +1352,42 @@ hållet.
 | Slaktkyckling 2024 | 27 | 30 | +3 | 27 |
 | Slaktkyckling 2025 | 19 | 26 | +7 | 19 |
 
+**Tillägg 2026-09-29: nämnaren och täljaren räknar inte samma fjäderfä, och
+det är mätt och inte antaget.** Frågan väcktes av Länsstyrelsen i Hallands län
+den 29 september, som innan de svarar på P11:s nämnarfråga undrar *"om du även
+vill att hobbybesättningar ingår i statistiken"*. Tre saker är kontrollerade mot
+materialet.
+
+Begärandena innehåller ingen storleksgräns. A gäller *"anläggningar som håller
+nötkreatur, grisar eller fjäderfä"* och nämnarfrågan *"anläggningar med
+nötkreatur, grisar respektive fjäderfä"*; frånvaron av gräns är ett medvetet val
+med skälet utskrivet i avsnitt 5 i `docs/BEGARANMALL.md`.
+
+**Hobbybesättningar ligger därför redan i det utlämnade materialet.** Två av de
+levererade handlingarna gäller djurhållning som handlingen själv beskriver som
+hållen för hobby: en kontrollrapport i Jämtland A, där djuren hålls *"för
+sällskap och hobby"* och höns är ett av djurslagen, och ett föreläggande i
+Norrbotten B, där det står *"Djuren hålls för hobby och sällskap"* och
+besättningen omfattar sju hönor och två minigrisar. Båda är klassade av
+djurslagsregeln, den första som fjäderfä och den andra som gris.
+
+**C:s nämnare räknar inte dem.** Kontrollregistrets checklistor delar fjäderfä i
+över 350 värphöns och slaktkyckling, vilket är de kategorier hela C-uttaget och
+tabellerna ovan vilar på, och de nationella talen för värphöns är 42 kontroller
+2024 och 52 år 2025. Länsstyrelsen i Västra Götaland svarade ensamt *"värphöns
+färre än 350 st 425"* för perioden. Ett rikstal på 42 är oförenligt med att
+småbesättningarna skulle ligga i samma population.
+
+**Följden, som är en gräns och inte ett fel.** För fjäderfä finns ingen gemensam
+nämnare att dividera med: täljaren är utan storleksgräns, den nationella
+nämnaren är över 350 värphöns, och länens egna svar följer olika läsningar.
+Gotland svarade med *"checklistan för över 350 värphöns har använts 4 gånger"*
+och ingenting under, Västra Götaland med båda kategorierna var för sig, och
+Blekinges *"9 kontroller av fjäderfän"* säger inte vilken läsning som använts.
+Läsningen registreras därför per län och redovisas, i stället för att en läsning
+föreskrivs för ett län i efterhand. Svaret till Halland upprepar frågans egna
+ord och lägger ingen gräns till, enligt P4.
+
 **Det är i stället två av rapporterna som avviker, och båda i det oaviserade
 talet.** Rapporterna stämmer mot mejlen i sex av åtta celler. Gris 2024 ger 114
 oaviserade mot mejlens 87, och värphöns 2024 ger 30 mot 11.
