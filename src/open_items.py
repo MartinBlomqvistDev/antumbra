@@ -345,6 +345,51 @@ def unmapped(rows: list[dict]) -> set[str]:
     return {row["handelse"] for row in rows if row["handelse"] not in known}
 
 
+# P11 is a follow-up question and not one of the 43 requests: tillämpningsnot 7
+# says so in as many words, and adds that it carries no deadline of its own.
+# Logged under begaran "A+B" its events landed on the request tracks, where they
+# reopened requests that were delivered weeks ago and invented a P4 deadline the
+# note denies: Halland's question on 29 September and Västerbotten's on
+# 30 September each took two finished requests back to "kräver dig", which is
+# the very reading that decides when the collection is closed.
+P11_EVENTS = frozenset(
+    {
+        "nämnarfråga",
+        "svar på nämnarfrågan",
+        "förtydligandefråga om nämnaren",
+        "svar på förtydligandefråga om nämnaren",
+    }
+)
+
+# The two rows written before the event names above existed. The log is
+# append-only, so the reader carries the exception rather than the rows being
+# rewritten, the same way the malformed aggregate names are absorbed above.
+# Each is matched on authority, date and time, so no later row can slip in.
+P11_SUPERSEDED = frozenset(
+    {
+        ("Länsstyrelsen i Halland", "2026-09-29", "09:59"),
+        ("Länsstyrelsen i Västerbotten", "2026-09-30", "10:42"),
+    }
+)
+
+
+def is_p11(row: dict) -> bool:
+    """Whether an event belongs to the denominator question rather than a request."""
+    if row["handelse"] in P11_EVENTS:
+        return True
+    return (row["myndighet"], row["datum"], row["klockslag"]) in P11_SUPERSEDED
+
+
+def denominator_track(rows: list[dict]) -> dict[str, list[dict]]:
+    """The P11 events per authority, kept apart from the 43 requests."""
+    track: dict[str, list[dict]] = {}
+    for row in rows:
+        if row["myndighet"] in NOT_A_REQUEST or not is_p11(row):
+            continue
+        track.setdefault(row["myndighet"], []).append(row)
+    return track
+
+
 def by_request(rows: list[dict]) -> dict[tuple[str, str], list[dict]]:
     """Events per request, expanding rows that cover more than one class.
 
@@ -356,7 +401,7 @@ def by_request(rows: list[dict]) -> dict[tuple[str, str], list[dict]]:
     """
     tracks: dict[tuple[str, str], list[dict]] = {}
     for row in rows:
-        if row["myndighet"] in NOT_A_REQUEST:
+        if row["myndighet"] in NOT_A_REQUEST or is_p11(row):
             continue
         for klass in row["begaran"].split("+"):
             tracks.setdefault((row["myndighet"], klass), []).append(row)
@@ -523,6 +568,59 @@ def state(events: list[dict], today: date) -> dict:
     return item
 
 
+# Tillämpningsnot 7 for P11: one reminder ten working days after the question,
+# and if the answer still fails to come, ten more before the denominator is
+# recorded as missing. The note adds that it is never estimated.
+P11_REMINDER_DAYS = 10
+P11_SILENCE_DAYS = 10
+
+
+def denominator_lines(rows: list[dict], today: date) -> list[str]:
+    """The state of the denominator question, which has no deadline of its own."""
+    track = denominator_track(rows)
+    if not track:
+        return []
+    asked = {
+        authority: events[0]["datum"]
+        for authority, events in track.items()
+        if any(e["handelse"] == "nämnarfråga" for e in events)
+    }
+    answered = {
+        authority
+        for authority, events in track.items()
+        if any(e["handelse"] == "svar på nämnarfrågan" for e in events)
+    }
+    ours = {
+        authority
+        for authority, events in track.items()
+        if events[-1]["handelse"] in {"förtydligandefråga om nämnaren"}
+        or (authority, events[-1]["datum"], events[-1]["klockslag"]) in P11_SUPERSEDED
+    }
+    outstanding = sorted(
+        authority.replace("Länsstyrelsen i ", "")
+        for authority in asked
+        if authority not in answered and authority not in ours
+    )
+    lines = ["", f"NÄMNAREN, P11 ({len(answered)} av {len(asked)} svar inne)"]
+    if ours:
+        for authority in sorted(ours):
+            lines.append(
+                f"  {authority.replace('Länsstyrelsen i ', '')}: frågar tillbaka, "
+                "svaret följer tillämpningsnot 9"
+            )
+    if outstanding:
+        first = min(asked.values())
+        due = add_working_days(date.fromisoformat(first), P11_REMINDER_DAYS)
+        missing = add_working_days(due, P11_SILENCE_DAYS)
+        lines.append(f"  utan svar ({len(outstanding)}): {', '.join(outstanding)}")
+        lines.append(
+            f"  påminnelse tidigast {due.isoformat()}, saknad nämnare "
+            f"{missing.isoformat()}. Frågan saknar frist enligt not 7 och "
+            "skjuter inte upp publiceringen."
+        )
+    return lines
+
+
 def report(rows: list[dict], today: date) -> list[str]:
     """The report, most urgent first."""
     lines: list[str] = []
@@ -545,6 +643,8 @@ def report(rows: list[dict], today: date) -> list[str]:
         f"avgiftsstoppade. "
         f"Publiceringsgräns {publication.isoformat()}."
     )
+
+    lines.extend(denominator_lines(rows, today))
 
     cases = running_cases()
     if cases:

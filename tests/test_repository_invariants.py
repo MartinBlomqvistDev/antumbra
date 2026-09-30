@@ -1993,3 +1993,47 @@ class TestTheHandReadingOfTheDisagreeingDocumentsStands:
                 start = path.split("/")[1]
                 if folder == path.split("/")[0] and stem[1].startswith(start):
                     assert record["masked"] is False
+
+
+class TestTheDenominatorQuestionStaysOffTheRequestTracks:
+    """P11 is not one of the 43 requests, so its events may not sit on them.
+
+    Tillämpningsnot 7 says it in as many words: the denominator question is a
+    follow-up, P2 and P3 do not apply to it, and it carries no deadline. Logged
+    under begaran "A+B" its events landed on the request tracks anyway, where
+    they reopened requests delivered weeks earlier and produced a P4 deadline
+    the note denies. That corrupts the one reading that decides when the
+    collection is closed, so the separation is guarded here.
+    """
+
+    def test_no_denominator_event_reaches_a_request(self):
+        from open_items import by_request, is_p11, load
+
+        rows = load()
+        for events in by_request(rows).values():
+            assert not [event for event in events if is_p11(event)]
+
+    def test_every_county_asked_is_on_the_denominator_track(self):
+        from open_items import denominator_track, load
+
+        track = denominator_track(load())
+        asked = {
+            authority
+            for authority, events in track.items()
+            if any(event["handelse"] == "nämnarfråga" for event in events)
+        }
+        assert len(asked) == 21
+
+    def test_the_two_rows_written_before_the_names_existed_are_named(self):
+        # The log is append-only, so these two carry the old wording for ever
+        # and the reader holds the exception. Naming them keeps the exception
+        # from quietly growing into a rule that swallows P4 questions about the
+        # requests themselves.
+        from open_items import P11_SUPERSEDED
+
+        assert P11_SUPERSEDED == frozenset(
+            {
+                ("Länsstyrelsen i Halland", "2026-09-29", "09:59"),
+                ("Länsstyrelsen i Västerbotten", "2026-09-30", "10:42"),
+            }
+        )
