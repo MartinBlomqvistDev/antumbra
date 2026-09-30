@@ -73,6 +73,10 @@ SWEEP_DAYS = 14
 OURS = frozenset(
     {
         "avsändning",
+        # Our answer to an authority's question about the denominator. It sits
+        # on the P11 track and not on a request, since note 7 keeps the two
+        # apart, but it is still ours and must be placeable.
+        "svar på förtydligandefråga om nämnaren",
         "avsmalningssvar",
         "avstående",
         "avstående från överklagande",
@@ -116,6 +120,9 @@ OURS = frozenset(
 THEIRS = frozenset(
     {
         "arbetsbesked",
+        # An authority's question about the denominator, kept apart from a P4
+        # question about the requests themselves.
+        "förtydligandefråga om nämnaren",
         "autosvar",
         "avgift kvarstår",
         "avgiftsbesked",
