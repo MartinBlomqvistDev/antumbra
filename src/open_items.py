@@ -182,6 +182,9 @@ INTERNAL = frozenset(
     {
         "kompletterande leverans arkiverad",
         "leverans arkiverad",
+        # Our own finding that nothing is outstanding on a track, written with
+        # the authority's own words and what lies in data/leveranser.
+        "leverans fullgjord",
         # A test condition written down before its outcome is known, so that
         # the bar cannot be moved to meet the result. "förregistrering" is the
         # same event under a shorter name, used from 5 September 2026; the
@@ -289,6 +292,16 @@ DECISION_REQUESTS = frozenset(
 
 # A delivery whose own note says more is coming is not a finished delivery.
 PARTIAL_MARK = "inte avslutad"
+
+# What lifts that mark again. The log is append-only, so a row written while
+# more was expected keeps its wording for ever, and the arrival of the rest is
+# a later row. Without this the flag could only ever be set, which would make
+# a closed collection unreadable from the instrument: on 30 September 2026 two
+# of Södermanland's tracks and Västmanland's class A still counted as open
+# although every document was on disk. The event also carries the case where
+# an authority merged A and B under P0b, so one class holds every delivery row
+# and the other has none of its own.
+DELIVERY_COMPLETED = frozenset({"leverans fullgjord"})
 
 
 def working_days_between(start: date, end: date) -> int:
@@ -400,8 +413,12 @@ def appeal_deadline(handelse: str) -> tuple[int, str] | None:
 def state(events: list[dict], today: date) -> dict:
     """What one request is waiting for."""
     deliveries = [e for e in events if e["handelse"] == "leverans"]
-    delivered = bool(deliveries)
-    partial = any(PARTIAL_MARK in (e.get("notering") or "").lower() for e in deliveries)
+    completed = any(e["handelse"] in DELIVERY_COMPLETED for e in events)
+    delivered = bool(deliveries) or completed
+    partial = (
+        any(PARTIAL_MARK in (e.get("notering") or "").lower() for e in deliveries)
+        and not completed
+    )
     fee_stopped = any("avgiftsstoppad" in (e.get("notering") or "") for e in events)
     # Not filtered on THEIRS: a decision track also ends when the request for a
     # decision lapses on a condition the applicant set in writing, which is our
