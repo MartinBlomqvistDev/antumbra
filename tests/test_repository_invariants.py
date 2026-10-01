@@ -1957,6 +1957,26 @@ class TestTheRulesWrittenOnDay41AreStillWhereTheyWereWritten:
         assert "MEASURE_CLOSES = 40" in source
         assert "censurerad" in source
 
+    def test_the_packet_builder_takes_slutstatus_from_the_measure(self):
+        # The builder kept its own list of what ends a request, and it drifted
+        # from the measure's: on 1 October 2026 it lacked "avgiftsbeslut
+        # mottaget" and "leverans fullgjord", so three packets told their own
+        # authority the request was not concluded although Skåne's and Örebro's
+        # fee decisions had arrived and Västmanland's delivery was logged as
+        # complete. Built from the measure's sets, the two cannot drift apart
+        # again without this test failing.
+        source = (ROOT / "pipeline" / "36_build_p12_packets.py").read_text("utf-8")
+        assert "set(DELIVERY_COMPLETED)" in source
+        assert "set(DECISION_CLOSERS)" in source
+
+    def test_the_contrast_keeps_its_decimal(self):
+        # Printed as a whole number the contrast overstated two counties' own
+        # figure in a letter about them: Södermanland's 4,5 points read as 5
+        # and Uppsala's 55,9 as 56.
+        source = (ROOT / "pipeline" / "36_build_p12_packets.py").read_text("utf-8")
+        assert "def points(value: float)" in source
+        assert "points((share_a - share_b) * 100)" in source
+
 
 class TestTheHandReadingOfTheDisagreeingDocumentsStands:
     """Eight documents were read by hand, and the verdict is pinned to them.

@@ -52,6 +52,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from open_items import (  # noqa: E402
     DAY_ZERO,
+    DECISION_CLOSERS,
+    DELIVERY_COMPLETED,
     INTERNAL,
     NOT_A_REQUEST,
     THEIRS,
@@ -131,15 +133,20 @@ SUBSTANTIAL = {
     "avgiftsbeslut mottaget": "beslut",
     "avgiftsbeslut vägrat": "beslut",
 }
-# What ends a request: the documents in hand, or a final decision.
-FINAL = {
-    "leverans",
-    "rättad leverans",
-    "delvis avslag och kompletterande leverans",
-    "avslagsbeslut mottaget",
-    "delvis avslagsbeslut mottaget",
-    "avgiftsbeslut vägrat",
-}
+# What ends a request, in the four slutstatus tillämpningsnot 3 names: the
+# documents in hand, a delivery the authority itself reports as complete, or a
+# decision that closes the track of a request whose copies were waived when the
+# fee stood. Written out here by hand, the set drifted from the measure's own:
+# it lacked "avgiftsbeslut mottaget" and "leverans fullgjord", so on 1 October
+# 2026 three packets said the request was not concluded although Skåne's fee
+# decision had arrived on 5 August, Örebro's on 27 August, and Västmanland's
+# delivery was logged as complete on 30 September. It is taken from the measure
+# now instead of restated beside it.
+FINAL = (
+    {"leverans", "rättad leverans", "delvis avslag och kompletterande leverans"}
+    | set(DELIVERY_COMPLETED)
+    | set(DECISION_CLOSERS)
+)
 
 # The same screen step 33 runs, for the same reason.
 FORBIDDEN = {
@@ -321,6 +328,66 @@ def percent(value: float) -> str:
     return f"{value * 100:.1f}".replace(".", ",") + " %"
 
 
+# Neuter, because the noun they count is "län".
+COUNTED = ("inga", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta")
+
+
+def outside(log: list[dict], masking: list[dict], klass: str) -> str:
+    """Why the comparison holds fewer counties than the request was sent to.
+
+    A table of seventeen in a measure addressed to twenty-one invites the reader
+    to ask what happened to the other four, and the answer is not a gap in the
+    data. Three waived the copies when the fee stood after the narrowing, so
+    they have response times and fee figures but no documents; one handled both
+    requests as a single case and delivered under the other class. Counted from
+    the log every time the packets are built, so the sentence cannot say
+    seventeen after an eighteenth county has delivered.
+    """
+    counties = {a: slug for a, slug in SLUG.items() if a.startswith("Länsstyrelsen")}
+    folders = {row["path"].split("/")[0] for row in masking}
+    here = {f[:-2] for f in folders if f.endswith(f"_{klass}")}
+    elsewhere = {f[:-2] for f in folders if f.endswith("_A" if klass == "B" else "_B")}
+    waived = merged = 0
+    for authority, slug in counties.items():
+        if slug in here:
+            continue
+        names = {e["handelse"] for e in log if e["myndighet"] == authority}
+        if "avstående" in names:
+            waived += 1
+        elif slug in elsewhere:
+            merged += 1
+    said = [f"Jämförelsen omfattar {len(here)} av de {len(counties)} länsstyrelserna."]
+    if waived:
+        said.append(
+            f"{COUNTED[waived].capitalize()} län avstod från kopiorna sedan "
+            "avgiften kvarstod efter avsmalningen, och har därför svarstid och "
+            "avgiftsuppgift men inga handlingar i maskningsmätningen."
+        )
+    if merged:
+        said.append(
+            f"{COUNTED[merged].capitalize()} län hanterade de två begärandena som "
+            "ett ärende och lämnade handlingarna i klass "
+            f"{'B' if klass == 'A' else 'A'}, där de räknas."
+        )
+    said.append(
+        "Bortfallet redovisas öppet och räknas aldrig som ett utlämnande eller "
+        "som ett avslag."
+    )
+    return " ".join(said)
+
+
+def points(value: float) -> str:
+    """A difference in percentage points, with one decimal and a comma.
+
+    Printed as a whole number this overstated two counties' own contrast on
+    1 October 2026: Södermanland's 4,5 points read as 5 and Uppsala's 55,9 as
+    56. One decimal is as much precision as a difference between two fractions
+    of this size carries, and a figure in a letter to the authority it is about
+    should not be rounded in the direction of the finding.
+    """
+    return f"{value:.1f}".replace(".", ",")
+
+
 def area_percent(value: float) -> str:
     """A masked area, which needs more decimals than a document share.
 
@@ -440,7 +507,9 @@ def packet(authority: str, data: dict) -> str:
         parts.append(
             "som maskat när en fylld rektangel täcker text eller när text saknas"
         )
-        parts.append("under rektangeln.")
+        parts.append("under rektangeln. Ytan i tabellen är ett medelvärde över")
+        parts.append("klassens samtliga dokument, även de utan maskning, och inte")
+        parts.append("över de maskade dokumenten för sig.")
         parts.append("")
         parts.append("| Klass | Dokument | Med minst en maskning | Maskad yta |")
         parts.append("| --- | --- | --- | --- |")
@@ -479,8 +548,9 @@ def packet(authority: str, data: dict) -> str:
             share_b = sum(1 for r in b if r["masked"]) / len(b)
             parts.append(
                 f"Skillnaden inom er myndighet, som är projektets kontrastmått "
-                f"enligt P1, är **{(share_a - share_b) * 100:.0f} procentenheter** "
-                f"i andel maskade dokument mellan klass A och klass B."
+                f"enligt P1, är **{points((share_a - share_b) * 100)} "
+                f"procentenheter** i andel maskade dokument mellan klass A och "
+                f"klass B."
             )
             parts.append("")
 
@@ -511,6 +581,8 @@ def packet(authority: str, data: dict) -> str:
             f"ordningen står nedan, eftersom en placering utan de andra talen "
             f"inte går att bedöma."
         )
+        parts.append("")
+        parts.append(data["outside"][klass])
         parts.append("")
         parts.append("| Plats | Myndighet | Dokument | Med minst en maskning |")
         parts.append("| --- | --- | --- | --- |")
@@ -656,6 +728,7 @@ def main() -> int:
                 if r["myndighet"] == authority.replace("Länsstyrelsen i ", "")
             ],
             "rank": {klass: ranking(masking, klass) for klass in ("A", "B")},
+            "outside": {klass: outside(log, masking, klass) for klass in ("A", "B")},
             "slug": slug,
             "decisions": [r for r in decisions if r["myndighet"] == authority],
             "denominator": next(
