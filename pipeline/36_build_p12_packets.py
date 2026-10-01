@@ -56,7 +56,11 @@ from open_items import (  # noqa: E402
     DELIVERY_COMPLETED,
     INTERNAL,
     NOT_A_REQUEST,
+    P11_REMINDER_DAYS,
+    P11_SILENCE_DAYS,
     THEIRS,
+    add_working_days,
+    is_p11,
     working_days_between,
 )
 
@@ -286,10 +290,53 @@ def fee_lines(events: list[dict], delivered: bool) -> list[str]:
     return lines
 
 
-def denominator_lines(record: dict | None) -> list[str]:
-    """The authority's own answer to the closing question, quoted back."""
+def denominator_lines(record: dict | None, events: list[dict]) -> list[str]:
+    """The closing question: the authority's own answer, or that it is still out.
+
+    A county that has not answered gets the section too. What will be published
+    about it is that the denominator is missing for its part, and P12 says the
+    packet holds what will be published, so a silent county has to be told that
+    its silence is what gets reported. Two were silent on 1 October 2026,
+    Gävleborg and Uppsala, and Halland had asked about the question's scope
+    without sending figures.
+    """
     if not record:
-        return []
+        asked = [e for e in events if is_p11(e) and e["handelse"] == "nämnarfråga"]
+        if not asked:
+            return []
+        when = date.fromisoformat(asked[0]["datum"])
+        reminder = add_working_days(when, P11_REMINDER_DAYS)
+        missing = add_working_days(reminder, P11_SILENCE_DAYS)
+        back = [
+            e
+            for e in events
+            if is_p11(e)
+            and "förtydligande" in e["handelse"]
+            and e["datum"] >= asked[0]["datum"]
+        ]
+        lines = ["## Den avslutande frågan, som ännu är obesvarad", ""]
+        said = [
+            f"Den {in_swedish(asked[0]['datum'])} ställdes en likalydande fråga "
+            "till samtliga 21 länsstyrelser om antalet kontroller och "
+            "förelägganden. Något svar med tal har inte kommit in från er när "
+            "det här paketet byggs."
+        ]
+        if back:
+            said.append(
+                f"Ni återkom den {in_swedish(back[0]['datum'])} med frågor om "
+                "frågans omfång, och de besvarades samma dag."
+            )
+        said.append(
+            f"En påminnelse går ut tidigast den {in_swedish(reminder.isoformat())}. "
+            "Uteblir svar därefter redovisas nämnaren som saknad för er del den "
+            f"{in_swedish(missing.isoformat())}, enligt tillämpningsnot 7 i "
+            "projektets handläggningsprotokoll. Den redovisas då som en lucka: "
+            "den uppskattas aldrig, och den räknas aldrig som ett avslag. "
+            "Kommer svaret innan publiceringen förs det in ordagrant."
+        )
+        lines.append(" ".join(said))
+        lines.append("")
+        return lines
     lines = ["## Ert svar på den avslutande frågan", ""]
     lines.append(
         "Den 28 september 2026 ställdes en likalydande fråga till samtliga 21 "
@@ -588,7 +635,10 @@ def packet(authority: str, data: dict) -> str:
         parts.append("| --- | --- | --- | --- |")
         for slug_, count, share in table:
             position = sum(1 for row in table if row[2] > share) + 1
-            mark = " **(ni)**" if slug_ == data["slug"] else ""
+            # Spelled out rather than abbreviated to (ni): the marker has to
+            # say what it means to someone reading the table for the first
+            # time, and nothing else in the packet explains it.
+            mark = " **(er myndighet)**" if slug_ == data["slug"] else ""
             parts.append(
                 f"| {position} | {NAME.get(slug_, slug_)}{mark} | {count} "
                 f"| {percent(share)} |"
@@ -643,7 +693,7 @@ def packet(authority: str, data: dict) -> str:
             delivered=bool(data["masking"].get("A") or data["masking"].get("B")),
         )
     )
-    parts.extend(denominator_lines(data.get("denominator")))
+    parts.extend(denominator_lines(data.get("denominator"), data["events"]))
 
     if data["decisions"]:
         parts.append("## Beslut ni meddelat, ordagrant")
