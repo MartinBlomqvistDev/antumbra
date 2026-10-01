@@ -64,6 +64,7 @@ MASKING = ROOT / "data" / "maskning.jsonl"
 CONTRAST = ROOT / "data" / "kontrast.jsonl"
 DECISIONS = ROOT / "data" / "beslut.jsonl"
 GROUNDS = ROOT / "data" / "sekretessgrunder.jsonl"
+DENOMINATORS = ROOT / "data" / "namnare.jsonl"
 
 # The delivery directory each authority's documents sit under, and the short
 # name the other registers use. Written out rather than derived, because a
@@ -209,6 +210,109 @@ def timeline(events: list[dict]) -> list[str]:
         day = working_days_between(DAY_ZERO, date.fromisoformat(event["datum"]))
         who = "ni" if event["handelse"] in THEIRS else "jag"
         lines.append(f"| {event['datum']} | dag {day} | {who} | {event['handelse']} |")
+    return lines
+
+
+# The four outcomes tillämpningsnot 5 measures, written so that they follow
+# "Den 5 augusti 2026 ..." with the verb before the subject, as Swedish needs.
+FEE_OUTCOME = (
+    ("avgiftsbeslut mottaget", "meddelade ni ett överklagbart beslut i avgiftsfrågan"),
+    ("avgiftsbeslut vägrat", "meddelade ni att något beslut inte fattas"),
+    ("taxebeslut bifogat", "skickade ni myndighetens generella taxebeslut"),
+    ("riktlinje bifogad", "skickade ni en generell riktlinje om avgiftsuttag"),
+)
+
+MONTHS = (
+    "januari",
+    "februari",
+    "mars",
+    "april",
+    "maj",
+    "juni",
+    "juli",
+    "augusti",
+    "september",
+    "oktober",
+    "november",
+    "december",
+)
+
+
+def in_swedish(day: str) -> str:
+    """An ISO date as a Swedish reader writes it."""
+    when = date.fromisoformat(day)
+    return f"{when.day} {MONTHS[when.month - 1]} {when.year}"
+
+
+def fee_lines(events: list[dict], delivered: bool) -> list[str]:
+    """What the fee led to, in the protocol's own four outcomes."""
+    names = {event["handelse"] for event in events}
+    if not any(
+        name.startswith("avgiftsbesked")
+        or name in {"avgift kvarstår", "förtydligandefråga och avgiftsbesked"}
+        for name in names
+    ):
+        return []
+    lines = ["## Avgiften och vad den ledde till", ""]
+    body = [
+        "Projektets budget är noll kronor, vilket står i protokollet sedan före "
+        "utskicket. Vid varje avgiftsbesked smalnades begäran av enligt en fast "
+        "regel, lika mot alla, och kvarstod avgiften avstods kopiorna."
+    ]
+    for name, said in FEE_OUTCOME:
+        when = [e["datum"] for e in events if e["handelse"] == name]
+        if when:
+            body.append(f"Den {in_swedish(when[0])} {said}.")
+    if "avstående" in names and not delivered:
+        body.append(
+            "Begäran stannade därmed vid avgiften, och er myndighet bidrar med "
+            "svarstid och avgiftsuppgift men saknar handlingar i "
+            "maskningsmätningen. Bortfallet redovisas öppet och räknas aldrig "
+            "som ett utlämnande eller som ett avslag."
+        )
+    elif "avstående" in names and delivered:
+        body.append(
+            "Handlingar lämnades därefter ut utan avgift, och de ingår i mätningen."
+        )
+    lines.append(" ".join(body))
+    lines.append("")
+    return lines
+
+
+def denominator_lines(record: dict | None) -> list[str]:
+    """The authority's own answer to the closing question, quoted back."""
+    if not record:
+        return []
+    lines = ["## Ert svar på den avslutande frågan", ""]
+    lines.append(
+        "Den 28 september 2026 ställdes en likalydande fråga till samtliga 21 "
+        "länsstyrelser om antalet kontroller och förelägganden. Svaret jämförs "
+        "med Jordbruksverkets uppgifter, och avvikelser mellan källorna "
+        "redovisas utan att någon av dem rättas. Ni svarade:"
+    )
+    lines.append("")
+    lines.append(f"> {record['citat']}")
+    lines.append("")
+    if record["kan_inte_tas_fram"]:
+        lines.append(
+            "Svaret redovisas som att nämnaren saknas för er del. Den uppskattas "
+            "aldrig, och luckan redovisas som en lucka."
+        )
+        lines.append("")
+    elif record["lasning_fjaderfa"] != "okänd":
+        lines.append(
+            "Ert svar läses som att fjäderfätalet är "
+            f"{record['lasning_fjaderfa']}. Talen jämförs bara med andra läns "
+            "tal som vilar på samma läsning."
+        )
+        lines.append("")
+    else:
+        lines.append(
+            "Svaret säger inte om fjäderfätalet har någon gräns för "
+            "besättningsstorlek, så läsningen redovisas som okänd och talet "
+            "jämförs inte med län vars läsning är känd."
+        )
+        lines.append("")
     return lines
 
 
@@ -461,6 +565,14 @@ def packet(authority: str, data: dict) -> str:
                 )
                 parts.append("")
 
+    parts.extend(
+        fee_lines(
+            data.get("events", []),
+            delivered=bool(data["masking"].get("A") or data["masking"].get("B")),
+        )
+    )
+    parts.extend(denominator_lines(data.get("denominator")))
+
     if data["decisions"]:
         parts.append("## Beslut ni meddelat, ordagrant")
         parts.append("")
@@ -513,6 +625,7 @@ def main() -> int:
     contrast = read(CONTRAST)
     decisions = read(DECISIONS)
     grounds = read(GROUNDS)
+    denominators = read(DENOMINATORS)
     if not log:
         print("data/protokoll_logg.jsonl saknas")
         return 1
@@ -545,6 +658,15 @@ def main() -> int:
             "rank": {klass: ranking(masking, klass) for klass in ("A", "B")},
             "slug": slug,
             "decisions": [r for r in decisions if r["myndighet"] == authority],
+            "denominator": next(
+                (
+                    r
+                    for r in denominators
+                    if r["myndighet"] == authority.replace("Länsstyrelsen i ", "")
+                ),
+                None,
+            ),
+            "events": [e for e in log if e["myndighet"] == authority],
         }
         data["masking"] = {k: v for k, v in data["masking"].items() if v}
         built[authority] = packet(authority, data)
