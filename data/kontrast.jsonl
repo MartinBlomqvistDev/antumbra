@@ -10,7 +10,7 @@
 {"myndighet": "gavleborg", "djurslag": "fjäderfä", "begaran": "A", "dokument": 2, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "gavleborg", "djurslag": "gris", "begaran": "A", "dokument": 2, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "gavleborg", "djurslag": "nöt", "begaran": "A", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
-{"myndighet": "gavleborg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 1, "andel_maskade": 0.25, "andel_yta": 0.0}
+{"myndighet": "gavleborg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "gotland", "djurslag": "gris", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "gotland", "djurslag": "nöt", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.12518}
 {"myndighet": "gotland", "djurslag": "nöt", "begaran": "B", "dokument": 3, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
@@ -27,7 +27,7 @@
 {"myndighet": "kalmar", "djurslag": "nöt", "begaran": "B", "dokument": 5, "maskade": 5, "andel_maskade": 1.0, "andel_yta": 0.00133}
 {"myndighet": "kronoberg", "djurslag": "fjäderfä", "begaran": "A", "dokument": 1, "maskade": 1, "andel_maskade": 1.0, "andel_yta": 0.07209}
 {"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "A", "dokument": 3, "maskade": 3, "andel_maskade": 1.0, "andel_yta": 0.00194}
-{"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 1, "andel_maskade": 0.25, "andel_yta": 0.0}
+{"myndighet": "kronoberg", "djurslag": "nöt", "begaran": "B", "dokument": 4, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "norrbotten", "djurslag": "fjäderfä", "begaran": "B", "dokument": 1, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "norrbotten", "djurslag": "gris", "begaran": "A", "dokument": 2, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}
 {"myndighet": "norrbotten", "djurslag": "nöt", "begaran": "A", "dokument": 8, "maskade": 0, "andel_maskade": 0.0, "andel_yta": 0.0}

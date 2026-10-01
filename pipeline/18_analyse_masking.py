@@ -54,6 +54,7 @@ Usage:
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -72,6 +73,16 @@ MAX_BOX_SHARE = 0.5
 # with.
 MIN_BOX_HEIGHT = 3.0
 MARKERS = ("bortredigerad", "maskerad", "maskat", "sekretess", "xxxx")
+
+# The marker has to start where a word starts. Matched anywhere in a word,
+# "maskat" is also the end of "avmaskat", the Swedish for deworming, and on
+# 1 October 2026 that made two förelägganden about deworming cattle count as
+# redacted documents: one in Gävleborg B and one in Kronoberg B. A prefix match
+# at a word boundary still catches the inflections that matter, "sekretesslagen"
+# for "sekretess" and "maskerade" for "maskerad", while "avmaskat" no longer
+# counts. The filename marker is untouched; there the authority named the file
+# itself.
+MARKER_IN_TEXT = re.compile(r"\b(?:" + "|".join(MARKERS) + r")", re.IGNORECASE)
 
 # Image method. A bar is a solid dark rectangle at least 40 by 6 pixels at
 # 100 dpi, about 10 by 1.5 millimetres. Blocks covering more than a quarter of
@@ -377,7 +388,7 @@ def analyse(path: Path) -> dict:
                 text = (page.extract_text() or "").lower()
                 if text.strip():
                     record["pages_with_text"] += 1
-                if any(marker in text for marker in MARKERS):
+                if MARKER_IN_TEXT.search(text):
                     record["marker_in_text"] = True
                 record["chars"] += len(page.chars)
                 boxes = redaction_boxes(page)

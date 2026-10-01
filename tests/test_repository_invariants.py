@@ -1278,8 +1278,9 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         # appeals began producing documents of their own: two kammarrätter's
         # notices of a case number and Halland's transfer of the appeal to the
         # court. None of them belongs to request A or B, so all sit in "övrigt"
-        # and none touches the A-against-B contrast, which stands at 108 of 155
-        # and 34 of 140 since Kalmar's B delivery was found on 28 September 2026.
+        # and none touches the A-against-B contrast, which stands at 109 of 170
+        # and 32 of 140 after the marker was given a word boundary on 1 October
+        # 2026.
         assert len(hidden_text) == 298
         by_class = Counter(r["klass"] for r in hidden_text)
         assert by_class == {"A": 140, "B": 125, "övrigt": 33}
@@ -1344,6 +1345,15 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
     are masked and their decision is under appeal, so the county carries the
     A/B contrast and was standing outside the measure.
 
+    B moved a third time on 1 October 2026, from 34 of 140 to 32 of 140, when
+    the text marker was required to start where a word starts. Matched anywhere
+    in a word, "maskat" is also the end of "avmaskat", the Swedish for
+    deworming, and two förelägganden about deworming cattle were counted as
+    redacted on that word alone: one in Gävleborg B and one in Kronoberg B.
+    Neither carries a redaction box, a bar or a marker in its file name. Two
+    further documents lost the same marker without changing verdict, Halland A
+    and Kalmar B, because each is masked on removed text independently of it.
+
     Class A moved again on 29 September 2026, from 108 of 155 to 109 of 170,
     when Länsstyrelsen i Blekinge and Länsstyrelsen i Norrbotten answered the
     day 40 reminder with the reports they had owed since 4 August. Blekinge
@@ -1381,7 +1391,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         pairs = zip(found[("B", "text")], found[("B", "image")], strict=True)
         b = tuple(sum(x) for x in pairs)
         assert a == (109, 170)
-        assert b == (34, 140)
+        assert b == (32, 140)
 
     # ADR-0019 and ADR-0020 state these numbers, and the ADRs are what a reader
     # checks the measure against. A threshold quietly retuned in the code would
@@ -1425,7 +1435,7 @@ class TestThePublishedMaskingSharesHoldAgainstTheData:
         found = self.shares(masking)
         assert found[("A", "text")] == (79, 140)
         assert found[("A", "image")] == (30, 30)
-        assert found[("B", "text")] == (23, 125)
+        assert found[("B", "text")] == (21, 125)
         assert found[("B", "image")] == (11, 15)
 
 
@@ -1565,8 +1575,14 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
     # has a masked class A document left. The rows stay, because each one is an
     # authority's own covering sentence and both cite no provision at all,
     # which is exactly what a delivery without redaction looks like.
+    # A third row joined them on 1 October 2026 for a different reason:
+    # Gävleborg's one masked class B document was masked on the word "avmaskat"
+    # and nothing else, and the word boundary took it away. The county's two
+    # rows are the same covering sentence, which cites no provision either, so
+    # the same reasoning holds for B as for A.
     UNMASKED_AFTER_THE_CORRECTION: ClassVar[set[tuple[str, str]]] = {
         ("Gävleborg", "A"),
+        ("Gävleborg", "B"),
         ("Jämtland", "A"),
     }
 
@@ -1636,9 +1652,11 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
         # Both numbers moved by one on 28 September 2026, when a masked class
         # B delivery from Kalmar was found unlogged and unarchived: one masked
         # delivery joins the population and one hand-copied row joins the
-        # register. The gap between them is unchanged and still the two rows
-        # that outlived their population.
-        assert len(population) == 25
+        # register. The population lost one again on 1 October 2026, when
+        # Gävleborg B left it with the word boundary, so the gap is three rows
+        # rather than two. The register itself never shrinks: a row is an
+        # authority's own sentence, and the sentence was said.
+        assert len(population) == 24
         assert len(covered) == 27
         assert population - covered == self.MISSING
 

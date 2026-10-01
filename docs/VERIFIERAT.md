@@ -496,6 +496,66 @@ klassning per handling, och den finns sedan steg 20, prövad mot handläsning
 mäter något annat än den djurslagsuppdelade tabellen längre ned; vilket som
 avses ska sägas när talen används.
 
+**Tillägg 2026-10-01: ett ord om avmaskning räknades som en maskning, och
+klass B faller från 34 till 32 av 140.** Textmetoden känner igen en maskning
+inte bara på en fylld rektangel utan också på myndighetens egen markering, och
+en av markörerna är ordet `maskat`. Matchad var som helst i ett ord är `maskat`
+också slutet på *avmaskat*. Två förelägganden om avmaskning av nötkreatur
+räknades därmed som maskade handlingar på det ordet och ingenting annat.
+Gävleborg i klass B, 1180-2024-5, lyder *"du hade heller inte avmaskat
+djuren"*, och Kronobergs föreläggande med vite i klass B lyder *"uppgav vidare
+att djuren hade avmaskats inför betessläpp"*. Ingen av de två bär en
+maskningsruta, en balk eller en markör i filnamnet. Markören kräver nu att
+ordet börjar där ett ord börjar, vilket behåller *maskerade*, *maskats* och
+*sekretesslagen* och släpper *avmaskat* och *omaskat*.
+
+Villkoren skrevs före körningen och alla tre höll: ingen handling vars dom
+vilar på rutor eller balkar ändrades, exakt två handlingar i klass A eller B
+bytte dom och det var de två namngivna, och de elva handlingar vars markör står
+i filnamnet står kvar som maskade. Två handlingar till tappade markören utan
+att byta dom, Halland i klass A, *"länsstyrelsen frågade om korna avmaskats"*,
+och Kalmar i klass B, *"uppgav att alla kor och kvigor hade avmaskats och
+avlusats"*; båda är maskade på borttagen text oberoende av markören. De nya
+talen är:
+
+| Klass | Digitalt födda | Skannade | Totalt |
+| --- | --- | --- | --- |
+| A | 79 av 140, 56 % | 30 av 30, 100 % | 109 av 170, 64 % |
+| B | 21 av 125, 17 % | 11 av 15, 73 % | **32 av 140, 23 %** |
+
+Maskade handlingar i hela filen går från 163 till 161. Klass A är oförändrad,
+och kontrasten vidgas från 64 mot 24 till 64 mot 23 procentenheter.
+
+**Den första körningen var felaktig och ingenting ur den användes.** Ordgränsen
+skrevs in som ett enda styrtecken i stället för de två tecknen, så mönstret
+krävde ett tecken som inte finns i någon handling och matchade noll. Felet
+syntes på att sjutton handlingar tappade markören i stället för två, däribland
+femton myndighetsbeslut och kammarrättsdomar som ordagrant innehåller
+*"uppgifter maskerade"*, *"har maskats"* och *"offentlighets- och
+sekretesslagen"*. Registret byggdes om med rätt mönster, och mönstret är prövat
+mot båda sidor, de fyra avmaskningsmeningarna och de sex formerna det ska
+behålla, innan steget kördes.
+
+**Kontrastmåttet enligt P1 står still, men ett län lämnar motsägelsen.**
+Medianskillnaden är fortfarande **1,95 procentenheter maskerad yta** och
+**55,89 procentenheter andel maskade dokument** över sjutton län, och inget av
+dem har högre maskad yta i B än i A. Två län vänder nu på andelsmåttet,
+Blekinge och Dalarna, inte tre: Gävleborgs cell är 0 av 5 i A mot 0 av 4 i B,
+alltså noll mot noll, där den förut var 0 mot 25 procent.
+
+**Sekretessgrundsregistret får en tredje rad som överlevt sin population.**
+Gävleborg i klass B har inte längre någon maskad handling, medan länets rad
+står kvar. Den är samma följebrevsmening som länets A-rad, *"Har bifogat 5
+kontrollrapporter (normalkontroll, risk) samt 4 stycken föreläggande enligt 8
+kap 9§ djurskyddslagen"*, och åberopar ingen bestämmelse alls, vilket är precis
+hur en leverans utan maskning ser ut. Raden stryks inte: den är myndighetens
+egen mening och meningen sades.
+
+**Radräkningen ovan gäller inte längre.** Meningen om att filen har 328 rader,
+varav 295 i klass A och B, skrevs den 28 september och överlevde Blekinges och
+Norrbottens leveranser dagen efter. Filen har 343 rader, varav 310 i klass A
+och B och 33 utanför klasserna. Antalet utanför klasserna är oförändrat.
+
 ---
 
 ## Djurslag och kontrastmåttet inom djurslag
