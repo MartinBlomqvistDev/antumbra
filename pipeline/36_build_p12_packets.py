@@ -217,6 +217,21 @@ def percent(value: float) -> str:
     return f"{value * 100:.1f}".replace(".", ",") + " %"
 
 
+def area_percent(value: float) -> str:
+    """A masked area, which needs more decimals than a document share.
+
+    Dalarna redacts a personal identity number here and there and nothing else,
+    so its class means are 0.03 and 0.02 per cent. Printed with one decimal both
+    read 0,0 %, which beside "8 of 10 documents masked" says the opposite of
+    what was measured. Two decimals carry every county's figure, and a value
+    that is positive but smaller than the last digit is written out rather than
+    rounded away.
+    """
+    if value > 0 and value * 100 < 0.005:
+        return "under 0,01 %"
+    return f"{value * 100:.2f}".replace(".", ",") + " %"
+
+
 def ranking(masking: list[dict], klass: str) -> list[tuple[str, int, float]]:
     """Every authority's share of documents with at least one masking."""
     per: dict[str, list[dict]] = defaultdict(list)
@@ -333,9 +348,25 @@ def packet(authority: str, data: dict) -> str:
             area = sum(r["masked_area_share"] for r in rows) / len(rows)
             parts.append(
                 f"| {klass} | {len(rows)} | {masked} ({percent(masked / len(rows))}) "
-                f"| {percent(area)} |"
+                f"| {area_percent(area)} |"
             )
-        parts.append("")
+        # A class can hold masked documents and still measure zero area, when
+        # the masking was recognised from the authority's own marker and no
+        # filled rectangle could be measured. Beside a share of 25 per cent a
+        # bare 0,00 % reads as a contradiction, so the reason is written out.
+        for klass in ("A", "B"):
+            rows = data["masking"].get(klass, [])
+            if not rows:
+                continue
+            marked = [r for r in rows if r["masked"]]
+            if marked and not sum(r["masked_area_share"] for r in rows):
+                parts.append(
+                    f"I klass {klass} är maskningen igenkänd på er egen "
+                    "markering, i filnamnet eller i texten, utan att någon fylld "
+                    "rektangel kunnat mätas. Den maskade ytan blir därför noll, "
+                    "vilket säger något om mätningen och inte om handlingen."
+                )
+                parts.append("")
         both = all(data["masking"].get(k) for k in ("A", "B"))
         if both:
             a = data["masking"]["A"]
@@ -411,6 +442,24 @@ def packet(authority: str, data: dict) -> str:
             parts.append("")
             parts.append(f"> {row['citat']}")
             parts.append("")
+            # A quote that the archived copy cuts off, or whose covering letter
+            # cannot be fetched at all, is said to be exactly that. Printing it
+            # as a clean quotation would let an authority read its own sentence
+            # ending mid-word and conclude, fairly, that it had been misquoted.
+            if not row["citat_fullstandigt"]:
+                parts.append(
+                    "Citatet är avhugget i den kopia som finns i brevlådan och "
+                    "återges så långt det går att läsa. Vill ni att hela "
+                    "meningen återges ber jag om den."
+                )
+                parts.append("")
+            if row["kalla_ej_atkomlig"]:
+                parts.append(
+                    "Följebrevet går inte att hämta ur brevlådan, så citatet är "
+                    "avskrivet för hand när meddelandet lästes. Är ordalydelsen "
+                    "fel ber jag om den riktiga."
+                )
+                parts.append("")
 
     if data["decisions"]:
         parts.append("## Beslut ni meddelat, ordagrant")
