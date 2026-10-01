@@ -687,3 +687,6 @@
 {"path": "norrbotten_A/Fotografi(419-2024-8.1) (0).pdf", "bytes": 1856876, "sha256": "142a1e3abcb110275af53fb2bcf20039910976207979f902a677099f2c565a4c", "recorded": "2026-09-29"}
 {"path": "norrbotten_A/Normal kontroll, risk - kontrollrapport(27625243) (0).pdf", "bytes": 98944, "sha256": "fb1d6c56d189504a1508d277ad90daa89a15533e769586d5414805c42a46a817", "recorded": "2026-09-29"}
 {"path": "norrbotten_A/Normal kontroll, risk - kontrollrapport(27696312) (0) (1).pdf", "bytes": 97554, "sha256": "5e688b503936cef6e7ac0f6c02c50661ae37311ba698b2205737e8c1f06035a2", "recorded": "2026-09-29"}
+{"path": "jamtland_namnare/kontroller 24-25.xlsx", "bytes": 16061, "sha256": "089a93fc5008f5d9905a6ae14dec078bbbb72373aefc8ba88b2b21f0ff3676b6", "recorded": "2026-10-01"}
+{"path": "jamtland_namnare/förelägganden 22-23.xlsx", "bytes": 10212, "sha256": "a5da581731d0f360b5ffc932a628c6c26c55d16fc928d1bc98df0e90911492d6", "recorded": "2026-10-01"}
+{"path": "jamtland_namnare/förelägganden 24-25.xlsx", "bytes": 10282, "sha256": "283d021bd9af6f4a2eb9e9e2842070050b2a812dab018be0544677f07b34ce15", "recorded": "2026-10-01"}
