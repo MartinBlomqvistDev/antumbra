@@ -95,6 +95,10 @@ OURS = frozenset(
         "förfrågan om elektroniskt utlämnande",
         "förnyad begäran om avgiftsbeslut",
         "förtydligande",
+        # The pre-publication packet under P12, sent to the authority as a
+        # whole, and a correction to one that has already gone out.
+        "P12-paket avsänt",
+        "rättelse av P12-paket",
         "påminnelse",
         "svar på förtydligande",
         "svar på förtydligandefråga",
@@ -137,6 +141,7 @@ THEIRS = frozenset(
         "besked",
         "besked om att dimension 1 inte kan tas fram",
         "delvis avslag och kompletterande leverans",
+        "besked om vidarebefordran",
         "diarieföringsbesked",
         "förnyat avgiftserbjudande",
         "förtydligandefråga",
@@ -144,6 +149,7 @@ THEIRS = frozenset(
         "förtydligandefråga upprepad",
         "leverans",
         "manuellt svar",
+        "svar på P12-paket",
         # The court registering an appeal and giving it a case number. The
         # sender is the kammarrätt, not the county, but the event belongs to
         # the request whose decision was appealed, and nothing is asked of us.
@@ -395,6 +401,37 @@ def is_p11(row: dict) -> bool:
     return (row["myndighet"], row["datum"], row["klockslag"]) in P11_SUPERSEDED
 
 
+# P12 is the packet sent to each authority before publication. It belongs to
+# the authority and not to one of the 43 requests: it carries both classes at
+# once, and its three weeks are the project's own undertaking in
+# tillämpningsnot 8 and not a P1 or P4 deadline. Logged on the request tracks
+# these events would reopen requests that closed in August, which is the error
+# tillämpningsnot 7 fixed for P11.
+P12_EVENTS = frozenset(
+    {
+        "P12-paket avsänt",
+        "rättelse av P12-paket",
+        "svar på P12-paket",
+        "besked om vidarebefordran",
+    }
+)
+
+
+def is_p12(row: dict) -> bool:
+    """Whether an event belongs to the P12 packet rather than a request."""
+    return row["handelse"] in P12_EVENTS
+
+
+def packet_track(rows: list[dict]) -> dict[str, list[dict]]:
+    """The P12 events per authority, kept apart from the 43 requests."""
+    track: dict[str, list[dict]] = {}
+    for row in rows:
+        if row["myndighet"] in NOT_A_REQUEST or not is_p12(row):
+            continue
+        track.setdefault(row["myndighet"], []).append(row)
+    return track
+
+
 def denominator_track(rows: list[dict]) -> dict[str, list[dict]]:
     """The P11 events per authority, kept apart from the 43 requests."""
     track: dict[str, list[dict]] = {}
@@ -416,7 +453,7 @@ def by_request(rows: list[dict]) -> dict[tuple[str, str], list[dict]]:
     """
     tracks: dict[tuple[str, str], list[dict]] = {}
     for row in rows:
-        if row["myndighet"] in NOT_A_REQUEST or is_p11(row):
+        if row["myndighet"] in NOT_A_REQUEST or is_p11(row) or is_p12(row):
             continue
         for klass in row["begaran"].split("+"):
             tracks.setdefault((row["myndighet"], klass), []).append(row)
