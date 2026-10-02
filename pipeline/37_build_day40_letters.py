@@ -67,6 +67,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
 from open_items import THEIRS, by_request, load  # noqa: E402
+from recipients import COUNTIES, address  # noqa: E402
 
 OUT = ROOT / "data" / "dag40"
 PROTOCOL = ROOT / "docs" / "BEGARANMALL.md"
@@ -118,47 +119,6 @@ FORBIDDEN_PATTERNS = {
     "personnummer": re.compile(r"\b(?:19|20)\d{6}[-+]\d{4}\b"),
     "telefonnummer": re.compile(r"\b0\d{1,3}[-\s]\d{2,3}\s?\d{2}\s?\d{2}\b"),
 }
-
-# The county in the file name, and the authority exactly as the address line
-# of 3 August 2026 wrote it. The two differ: the protocol log calls the track
-# "Länsstyrelsen i Blekinge", the letter that went out said "Länsstyrelsen i
-# Blekinge län". Decision 9 makes the letters fixed and alike, so a later
-# letter in the same correspondence cannot address the authority by another
-# name than the first one did, and the quoted request must carry the line the
-# recipient actually holds. Every line below is read out of the sent mail.
-# Kalmar's own 3 August message is not returned by any mailbox search, so its
-# line is read from the copy quoted inside the reply of 4 August instead.
-COUNTIES = {
-    "Blekinge": "Länsstyrelsen i Blekinge län",
-    "Dalarna": "Länsstyrelsen i Dalarnas län",
-    "Gotland": "Länsstyrelsen i Gotlands län",
-    "Gävleborg": "Länsstyrelsen i Gävleborgs län",
-    "Halland": "Länsstyrelsen i Hallands län",
-    "Jämtland": "Länsstyrelsen i Jämtlands län",
-    "Jönköping": "Länsstyrelsen i Jönköpings län",
-    "Kalmar": "Länsstyrelsen i Kalmar län",
-    "Kronoberg": "Länsstyrelsen i Kronobergs län",
-    "Norrbotten": "Länsstyrelsen i Norrbottens län",
-    "Skåne": "Länsstyrelsen i Skåne län",
-    "Stockholm": "Länsstyrelsen i Stockholms län",
-    "Södermanland": "Länsstyrelsen i Södermanlands län",
-    "Uppsala": "Länsstyrelsen i Uppsala län",
-    "Värmland": "Länsstyrelsen i Värmlands län",
-    "Västerbotten": "Länsstyrelsen i Västerbottens län",
-    "Västernorrland": "Länsstyrelsen i Västernorrlands län",
-    "Västmanland": "Länsstyrelsen i Västmanlands län",
-    "Västra Götaland": "Länsstyrelsen i Västra Götalands län",
-    "Örebro": "Länsstyrelsen i Örebro län",
-    "Östergötland": "Länsstyrelsen i Östergötlands län",
-}
-
-
-def address(myndighet: str) -> str:
-    """The authority as the first letter addressed it, from its track name."""
-    county = myndighet.removeprefix("Länsstyrelsen i ")
-    if county not in COUNTIES:
-        raise SystemExit(f"okänd myndighet i loggen: {myndighet}")
-    return COUNTIES[county]
 
 
 MONTHS = (
