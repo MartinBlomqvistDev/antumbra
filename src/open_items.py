@@ -379,6 +379,10 @@ P11_EVENTS = frozenset(
 P11_SUPERSEDED = frozenset(
     {
         ("Länsstyrelsen i Halland", "2026-09-29", "09:59"),
+        # The answer to the question on the row above, written the same day and
+        # under the same old name. Without it the P12 packet could not see that
+        # the county's question had been answered and said so in the letter.
+        ("Länsstyrelsen i Halland", "2026-09-29", "16:22:13"),
         ("Länsstyrelsen i Västerbotten", "2026-09-30", "10:42"),
     }
 )

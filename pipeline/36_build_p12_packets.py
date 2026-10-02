@@ -309,9 +309,10 @@ def denominator_lines(record: dict | None, events: list[dict]) -> list[str]:
     A county that has not answered gets the section too. What will be published
     about it is that the denominator is missing for its part, and P12 says the
     packet holds what will be published, so a silent county has to be told that
-    its silence is what gets reported. Two were silent on 1 October 2026,
-    Gävleborg and Uppsala, and Halland had asked about the question's scope
-    without sending figures.
+    its silence is what gets reported. Two were silent on 2 October 2026,
+    Gävleborg and Halland, and both had asked about the question's scope without
+    sending figures. Halland's question was answered the same day; Gävleborg's
+    came in while the packets were being built and is still open.
     """
     if not record:
         asked = [e for e in events if is_p11(e) and e["handelse"] == "nämnarfråga"]
@@ -320,12 +321,25 @@ def denominator_lines(record: dict | None, events: list[dict]) -> list[str]:
         when = date.fromisoformat(asked[0]["datum"])
         reminder = add_working_days(when, P11_REMINDER_DAYS)
         missing = add_working_days(reminder, P11_SILENCE_DAYS)
+        # The authority's own question and our answer to it are separate events
+        # on the P11 track, and both carry the word förtydligande. They are told
+        # apart by name and not by substring: a letter that said the question
+        # was answered when it was not would be a claim about my own handling
+        # that the log does not carry.
         back = [
             e
             for e in events
             if is_p11(e)
-            and "förtydligande" in e["handelse"]
+            and e["handelse"].startswith("förtydligandefråga")
             and e["datum"] >= asked[0]["datum"]
+        ]
+        answered = [
+            e
+            for e in events
+            if is_p11(e)
+            and e["handelse"].startswith("svar på förtydligandefråga")
+            and back
+            and e["datum"] >= back[0]["datum"]
         ]
         lines = ["## Den avslutande frågan, som ännu är obesvarad", ""]
         said = [
@@ -334,10 +348,21 @@ def denominator_lines(record: dict | None, events: list[dict]) -> list[str]:
             "förelägganden. Något svar med tal har inte kommit in från er när "
             "det här paketet byggs."
         ]
-        if back:
+        if back and answered and answered[0]["datum"] == back[0]["datum"]:
             said.append(
                 f"Ni återkom den {in_swedish(back[0]['datum'])} med frågor om "
                 "frågans omfång, och de besvarades samma dag."
+            )
+        elif back and answered:
+            said.append(
+                f"Ni återkom den {in_swedish(back[0]['datum'])} med frågor om "
+                "frågans omfång, och de besvarades den "
+                f"{in_swedish(answered[0]['datum'])}."
+            )
+        elif back:
+            said.append(
+                f"Ni återkom den {in_swedish(back[0]['datum'])} med en fråga om "
+                "frågans omfång, som inte är besvarad när det här paketet byggs."
             )
         said.append(
             f"En påminnelse går ut tidigast den {in_swedish(reminder.isoformat())}. "
@@ -745,10 +770,24 @@ def packet(authority: str, data: dict) -> str:
         parts.append("## Beslut ni meddelat, ordagrant")
         parts.append("")
         for row in data["decisions"]:
+            # The register records what the decision itself states. Jordbruksverket
+            # names no title for the person presenting the case, and the register
+            # says so in words; interpolated as if it were a title, the sentence
+            # read "fattat av avdelningschef med titel anges inte som
+            # föredragande".
+            if row["foredragande"] == "titel anges inte":
+                who = (
+                    f"fattat av {row['beslutsfattare']}. Beslutet anger ingen "
+                    "titel för föredraganden"
+                )
+            else:
+                who = (
+                    f"fattat av {row['beslutsfattare']} med "
+                    f"{row['foredragande']} som föredragande"
+                )
             parts.append(
                 f"Beslut {row['diarienummer']}, {row['beslutsdatum']}, klass "
-                f"{row['klass']}, fattat av {row['beslutsfattare']} med "
-                f"{row['foredragande']} som föredragande. Namnen står i beslutet "
+                f"{row['klass']}, {who}. Namnen står i beslutet "
                 f"och återges inte här."
             )
             parts.append("")

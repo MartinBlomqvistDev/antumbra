@@ -2085,16 +2085,20 @@ class TestTheDenominatorQuestionStaysOffTheRequestTracks:
         }
         assert len(asked) == 21
 
-    def test_the_two_rows_written_before_the_names_existed_are_named(self):
-        # The log is append-only, so these two carry the old wording for ever
+    def test_the_rows_written_before_the_names_existed_are_named(self):
+        # The log is append-only, so these three carry the old wording for ever
         # and the reader holds the exception. Naming them keeps the exception
         # from quietly growing into a rule that swallows P4 questions about the
-        # requests themselves.
+        # requests themselves. Halland's answer to its own question joined the
+        # set on 2 October 2026: it was written under the old name too, and
+        # without it the P12 packet could not tell an answered question from an
+        # open one.
         from open_items import P11_SUPERSEDED
 
         assert P11_SUPERSEDED == frozenset(
             {
                 ("Länsstyrelsen i Halland", "2026-09-29", "09:59"),
+                ("Länsstyrelsen i Halland", "2026-09-29", "16:22:13"),
                 ("Länsstyrelsen i Västerbotten", "2026-09-30", "10:42"),
             }
         )
