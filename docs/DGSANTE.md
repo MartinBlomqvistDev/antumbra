@@ -478,6 +478,33 @@ sin grund och andel som besvarats:
 Nollan för 2025 är inget fel: åtgärdsplanerna för de nyaste revisionerna är
 ännu inte publicerade.
 
+## Två fält som inte mäter vad namnen antyder
+
+**`based_on_conclusions` är noll i varje rapport till och med 2013.** Fältet bär
+måttet `states_its_basis` i dimensionsmodellen och rubriken "anger sin grund" på
+dashboarden, och det fylls av ett mönster som bara finns i den nyare
+rapportmallen: 0 av 9 033 rekommendationer till och med 2013, 50 av 440 under
+2014, och 65 till 87 procent per år därefter. Andelen får därför bara redovisas
+för 2014 och framåt. Tabellen ovan bär den avgränsningen, och sida 2 i
+`docs/POWERBI.md` filtrerar på `Revision[year] >= 2014` av samma skäl.
+
+Utan avgränsningen mäter talet rapportens ålder före kommissionens formulering.
+Sverige har 70 av 369 rekommendationer som anger sin grund, 19 procent, och alla
+70 ligger från 2014 och framåt, där andelen är 70 av 100. De åtta svenska
+djurskyddsrevisionerna har 1 av 19, och 17 av de 19 är från tiden då fältet är
+noll av konstruktion. Ett land med gamla rapporter ser därför sämre ut än ett
+land med nya, utan att någon skillnad i formulering behöver finnas.
+
+**`legal_basis` bär inget mått.** Fältet är ifyllt i 340 av 11 999
+rekommendationer, 2,8 procent, medan 8 179 av texterna, 68,2 procent, innehåller
+orden Article, Annex, Directive eller Regulation. Av de 340 ifyllda slutar 110 i
+en siffra, och de värden som kommer först i filen är fragment av löpande text:
+"FOR THE MISSION The mission was carried out under the general provisions of
+Community legi" och "for quarantine measures to be imposed in the case of an
+outbreak. Such possible new Commun". Inget mått i modellen och ingenting på
+dashboarden läser fältet. Den som sätter etiketten "anger sin grund" på det får
+2,8 procent där måttet för 2014 och framåt ger 68.
+
 ## Retrieval: semantisk sökning som citatapparat
 
 Steg 14 beräknar embeddingar för samtliga 81 292 stycken med en lokal modell
