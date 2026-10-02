@@ -195,11 +195,23 @@ def first_substantial(events: list[dict]) -> dict | None:
 
 
 def concluded(events: list[dict]) -> dict | None:
-    """The event that ended the request, if one has."""
+    """The event that ended the request, if one has.
+
+    An event the timeline below does not show may not be the one the letter
+    names as the conclusion. Kalmar B ended on 13 August 2026 with both a
+    delivery and our own bookkeeping row "beslutsbegäran förfallen", and the
+    later timestamp belonged to the bookkeeping row, so the packet told the
+    county its request had concluded with an event the county could not see
+    and whose wording is the project's own. Where a visible closer exists on
+    the same track it is preferred, and only then the latest of the rest.
+    """
     ended = [e for e in events if e["handelse"] in FINAL]
     if not ended:
         return None
-    return sorted(ended, key=lambda e: (e["datum"], e["klockslag"]))[-1]
+    visible = [
+        e for e in ended if e["kanal"] == "e-post" and e["handelse"] not in INTERNAL
+    ]
+    return sorted(visible or ended, key=lambda e: (e["datum"], e["klockslag"]))[-1]
 
 
 def masking_rows(masking: list[dict], slug: str, klass: str) -> list[dict]:
@@ -477,12 +489,24 @@ def packet(authority: str, data: dict) -> str:
     parts = [
         f"# Resultat som rör {authority}",
         "",
-        "Detta är underlaget om er myndighet ur ett kunskapsunderlag om",
-        "djurskyddskontrollens likvärdighet, byggt på myndigheternas egna beslut",
-        "och kontrollhandlingar. Ni får det före publicering, med tre veckors",
-        "svarstid, enligt punkt P12 i projektets handläggningsprotokoll. Ett svar",
-        "publiceras oavkortat vid sidan av siffrorna. Uteblir svar publiceras",
-        "siffrorna som de står, och det antecknas att svar inte kommit.",
+        "Det här är vad som kommer att publiceras om er myndighet i ett",
+        "kunskapsunderlag om djurskyddskontrollens likvärdighet, byggt på",
+        "myndigheternas egna beslut och kontrollhandlingar. Ni får det före",
+        "publicering, med tre veckors svarstid, enligt punkt P12 i projektets",
+        "handläggningsprotokoll. Ett svar publiceras oavkortat vid sidan av",
+        "siffrorna. Uteblir svar publiceras siffrorna som de står, och det",
+        "antecknas att svar inte kommit.",
+        "",
+        "Publiceringen sker tidigast dagen efter svarstidens slut. Den omfattar",
+        "ett publikt kodarkiv på GitHub, en webbplats och ett dataset, och i",
+        "materialet ingår hela handläggningsprotokollet och hela",
+        "korrespondensloggen, alltså också de mejl ni har skickat i de här",
+        "ärendena, ordagrant. Namn på enskilda tjänstemän återges inte någonstans:",
+        "där ett beslut namnger beslutsfattare och föredragande skrivs rollen i",
+        "stället.",
+        "",
+        "Vill ni läsa metodbeskrivningen innan den publiceras skickar jag de",
+        "delar som rör er myndighet om ni hör av er.",
         "",
         "Varje uppgift nedan är antingen ett tal som går att räkna fram ur",
         "underlaget eller ett ordagrant citat ur er egen skrivelse. Ingenting är",
@@ -519,18 +543,29 @@ def packet(authority: str, data: dict) -> str:
             day = working_days_between(DAY_ZERO, date.fromisoformat(last["datum"]))
             if day > MEASURE_CLOSES:
                 parts.append(
-                    f"Avslutat {last['datum']}, alltså dag {day}, loggat som "
-                    f"{last['handelse']}. **Svarstiden redovisas som censurerad "
+                    f"Avslutat {last['datum']}, alltså dag {day}. "
+                    "**Svarstiden redovisas som censurerad "
                     f"vid dag {MEASURE_CLOSES}**, eftersom datainsamlingen för "
                     "svarstidsmåttet stängdes den dagen enligt P10 och en "
                     "leverans efter den inte öppnar måttet igen. Handlingarna "
                     "ingår däremot fullt ut i maskningsmätningen. Regeln står i "
                     "tillägget till tillämpningsnot 7."
                 )
-            else:
+            elif last["kanal"] == "e-post" and last["handelse"] not in INTERNAL:
                 parts.append(
                     f"Avslutat enligt P1: **dag {day}**, {last['datum']}, "
                     f"loggat som {last['handelse']}."
+                )
+            else:
+                # The track has no closing message of its own. Naming the
+                # project's own bookkeeping row here would tell the authority
+                # that its request ended with an event it cannot find in the
+                # correspondence below.
+                parts.append(
+                    f"Avslutat enligt P1: **dag {day}**, {last['datum']}. Den "
+                    "här begäran har ingen egen avslutande skrivelse i "
+                    "korrespondensen nedan; slutdatumet är satt utifrån era "
+                    "egna besked och det utlämnande de gäller."
                 )
         else:
             parts.append("Begäran är inte avslutad i skrivande stund.")
@@ -560,8 +595,8 @@ def packet(authority: str, data: dict) -> str:
             "som maskat när en fylld rektangel täcker text eller när text saknas"
         )
         parts.append("under rektangeln. Ytan i tabellen är ett medelvärde över")
-        parts.append("klassens samtliga dokument, även de utan maskning, och inte")
-        parts.append("över de maskade dokumenten för sig.")
+        parts.append("klassens samtliga dokument. Dokument utan maskning räknas då")
+        parts.append("som noll och drar ned medelvärdet.")
         parts.append("")
         parts.append("| Klass | Dokument | Med minst en maskning | Maskad yta |")
         parts.append("| --- | --- | --- | --- |")
@@ -606,6 +641,7 @@ def packet(authority: str, data: dict) -> str:
             )
             parts.append("")
 
+    said_about_counts = False
     for klass in ("A", "B"):
         table = data["rank"].get(klass) or []
         mine = [row for row in table if row[0] == data["slug"]]
@@ -629,7 +665,8 @@ def packet(authority: str, data: dict) -> str:
             f"Ordnat efter andelen dokument med minst en maskning ligger er "
             f"myndighet på plats **{place} av {len(table)}** bland dem som "
             f"levererat i klass {klass}{shared}. Myndigheter med samma andel "
-            f"delar plats, eftersom mätningen inte skiljer dem åt. Hela "
+            f"delar plats, eftersom mätningen inte skiljer dem åt. Ordningen "
+            f"följer måttet och innebär ingen bedömning av handläggningen. Hela "
             f"ordningen står nedan, eftersom en placering utan de andra talen "
             f"inte går att bedöma."
         )
@@ -654,7 +691,11 @@ def packet(authority: str, data: dict) -> str:
             "hade ett tak och några myndigheter tog ut en avgift som ledde till "
             "en avsmalning. Andelen är därför räknad på olika stora underlag, "
             "och det talet står i tabellen."
+            if not said_about_counts
+            else "Antalet dokument skiljer sig mellan myndigheter av samma skäl "
+            "som ovan."
         )
+        said_about_counts = True
         parts.append("")
 
     if data["grounds"]:
