@@ -40,11 +40,12 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
 from collections import defaultdict
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -374,6 +375,10 @@ def percent(value: float) -> str:
     """A share in Swedish, with a comma and a space before the sign."""
     return f"{value * 100:.1f}".replace(".", ",") + " %"
 
+
+# P12 gives three weeks, counted in calendar days as tillämpningsnot 8 counts
+# them: sent on 12 October the note has the time run out on 2 November.
+REPLY_DAYS = 21
 
 # Neuter, because the noun they count is "län".
 COUNTED = ("inga", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta")
@@ -709,13 +714,22 @@ def packet(authority: str, data: dict) -> str:
             parts.append(f"> {row['citat_bedomning']}")
             parts.append("")
 
+    if any("[...]" in line for line in parts):
+        parts.append(
+            "Tecknet [...] i ett citat ovan markerar att text har utelämnats "
+            "mellan två stycken i er egen skrivelse. Ingenting annat är ändrat, "
+            "och hela lydelsen finns i det meddelande eller beslut som anges."
+        )
+        parts.append("")
+
     parts.extend(
         [
             "## Vad underlaget inte påstår",
             "",
             "Projektet påstår inte att någon myndighet brutit mot lag. Frågan om",
             "sekretess i kontrollhandlingar saknar prejudikat från Högsta",
-            "förvaltningsdomstolen för den handlingstyp som mäts, och två beslut",
+            "förvaltningsdomstolen för den handlingstyp som mäts, och "
+            f"{COUNTED[data['appeals']]} beslut om maskning",
             "ligger hos kammarrätten. Där en avvikelse redovisas är den en",
             "avvikelse från befintlig kammarrättspraxis för beslutsbilagor,",
             "ingenting mer.",
@@ -725,7 +739,8 @@ def packet(authority: str, data: dict) -> str:
             "",
             "## Om ni vill svara",
             "",
-            "Svara på detta mejl inom tre veckor. Svaret publiceras oavkortat.",
+            f"Svara på detta mejl senast den {in_swedish(data['deadline'])}, tre",
+            "veckor efter att paketet skickades. Svaret publiceras oavkortat.",
             "Vill ni rätta en uppgift ber jag om den rättade uppgiften och var",
             "den kommer ifrån, så att rättelsen kan göras i underlaget och inte",
             "bara i texten.",
@@ -753,6 +768,24 @@ def main() -> int:
         return 1
     del contrast
 
+    # The reply deadline is three weeks from the day the packets go out, which
+    # is the day they are built unless the sender says otherwise. P12 gives
+    # three weeks and tillämpningsnot 8 makes them a floor, so the date is
+    # printed rather than left to the reader to count.
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--skickas",
+        default=date.today().isoformat(),
+        help="avsändningsdag, YYYY-MM-DD, förvalt i dag",
+    )
+    sent = date.fromisoformat(parser.parse_args().skickas)
+    deadline = (sent + timedelta(days=REPLY_DAYS)).isoformat()
+    # Counted from the decision register: it was written out as two and had
+    # been three since Gotland was appealed on 22 September 2026.
+    appeals = sum(
+        1 for row in decisions if row["klass"] == "A" and row.get("malnummer")
+    )
+
     authorities = sorted({r["myndighet"] for r in log if r["myndighet"] in SLUG})
     # The aggregate words come from open_items, so that a row logged under one
     # of them can never build a packet for an authority that does not exist,
@@ -778,6 +811,8 @@ def main() -> int:
                 if r["myndighet"] == authority.replace("Länsstyrelsen i ", "")
             ],
             "rank": {klass: ranking(masking, klass) for klass in ("A", "B")},
+            "appeals": appeals,
+            "deadline": deadline,
             "outside": {klass: outside(log, masking, klass) for klass in ("A", "B")},
             "slug": slug,
             "decisions": [r for r in decisions if r["myndighet"] == authority],
