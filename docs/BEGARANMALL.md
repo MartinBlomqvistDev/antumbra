@@ -1251,6 +1251,45 @@ kvalificerade beslut in gäller P9:s ordning: (c) först, därefter (a), däreft
 (b) i fallande avvikelsestorlek, mätt som skillnaden i maskad yta mot
 jämförelsemängden.
 
+**Tillägg 2026-10-02: två av notens tal är fel, och två P8-skrivelser uteblev
+av det.** Samtliga 27 rader i sekretessgrundsregistret är lästa mot sina
+källmejl sedan ett citat visat sig avhugget mitt i en mening. Sex rader bar
+samma fel: registret hade lagrat följebrevets första stycke och inte brevets
+övriga egna stycken. Två av dem ändrar den här noten.
+
+**Länsstyrelsen i Dalarna maskade klass A med stöd av 30 kap. 23 §.** Länets
+rad slutade mitt i meningen *"I en"*, och fortsättningen lyder *"I en av
+kontrollrapporterna har en angiven brist i djurtillsyn och verksamhet
+maskerats, och nekas således att bli utlämnad, med hänsyn till offentlighets-
+och sekretesslagen, 30 kap. 23 §."* Uppräkningen ovan om åtta län ska därmed
+vara nio.
+
+**Länsstyrelsen i Värmland erbjöd ett överklagbart beslut.** Noten skriver att
+Värmland och Västernorrland inte erbjudit något. Det stämmer för
+Västernorrland, vars brev slutar där citatet slutar, men inte för Värmland,
+vars brev fortsätter *"Är du inte nöjd kan du vända dig till länsstyrelsen och
+få ett skriftligt beslut som du kan överklaga."* Dalarna skriver på samma sätt
+*"Du kan begära ett överklagbart beslut om du inte är nöjd."*
+
+**Följden, utskriven i stället för hopräknad i tysthet.** Not 4:s konjunktion
+kräver att maskningsanalysen visar ett av P9:s kriterier och att myndigheten
+själv erbjudit ett överklagbart beslut. Åtta län uppfyller båda leden, inte
+sex: de sex som fick en P8-skrivelse den 21 till 23 augusti, plus Dalarna och
+Värmland. De två fick ingen skrivelse, och orsaken var inte en bedömning utan
+att erbjudandet låg i den del av brevet som aldrig lagrades.
+
+**Skrivelserna skickas inte i efterhand.** Samma fyra skäl som noten själv
+ställde upp 2026-08-12 gäller oförändrade: maskningsgraden mäts på första
+leveransen och är oskadd, P9:s femtak behöver långt färre beslut än antalet
+leveranser, kriterium (b) kräver jämförelsen som redan är gjord, och arbete
+som mätningen inte kräver läggs inte på myndigheterna. Till dem kommer ett
+femte som inte fanns i augusti: insamlingen är stängd enligt not 3 sedan den
+30 september, och en ny beslutsbegäran skulle öppna ett spår och skjuta
+publiceringen framför sig utan att tillföra måttet något. Utfallet redovisas
+som det är, nämligen att två län som uppfyllde villkoret inte tillfrågades på
+grund av ett fel i projektets eget register, och att det upptäcktes den
+2 oktober 2026 vid en genomgång av samtliga citat mot källan.
+
 ### Tillämpningsnot 7, 2026-08-31: när insamlingen är stängd trots att någon inte svarat
 
 Skriven dag 20, innan det är känt vilka myndigheter som förblir tysta, av samma

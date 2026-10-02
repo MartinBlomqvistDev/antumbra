@@ -273,6 +273,51 @@ i metoden i stället för att upptäckas av någon annan.
 
 ---
 
+## Samtliga citat prövade mot källan, 2026-10-02
+
+Prövningen gjordes sedan ett citat visat sig avhugget mitt i en mening, och
+den omfattar varje ordagrant citat som går ut i P12-paketen: 52 citat, varav
+30 ur myndigheternas beslut och 22 ur följebrev och nämnarsvar.
+
+**Beslutscitaten håller.** Samtliga 30 finns teckenidentiskt i beslutens egna
+PDF:er, kontrollerat per sida med `pymupdf`. Tre avvikelser av formkaraktär
+står kvar och är inte fel i sak: Västra Götalands bedömningsmening löper över
+en sidbrytning och återges utan det löpande sidhuvudet mellan styckena,
+medan Hallands och Västra Götalands uppräkningar av bestämmelser bär ett
+semikolon där beslutet självt punktlistar två rader. De två citat som utesluter
+text i mitten, Kronobergs och Jordbruksverkets, markerade det med tre punkter
+utan förklaring; markeringen är nu `[...]` och paketet säger vad den betyder.
+
+**Sex fel i sekretessgrundsregistret, alla av samma slag.** Registret hade
+lagrat följebrevets första stycke och inte brevets övriga egna stycken.
+
+| Rad | Vad som saknades | Följd |
+| --- | --- | --- |
+| Dalarna A | hela andra stycket, avhugget mitt i meningen *"I en"* | grunden 30 kap. 23 § och erbjudandet om överklagbart beslut saknades i registret |
+| Värmland A | *"Är du inte nöjd kan du vända dig till länsstyrelsen och få ett skriftligt beslut som du kan överklaga."* | erbjudandet saknades |
+| Västerbotten A | *"Om du begär det har du rätt att få ett skriftligt beslut av länsstyrelsen att vi nekar att lämna ut uppgifterna."* | erbjudandet saknades |
+| Stockholm B | grunden dataskyddsförordningen och erbjudandet att skicka omaskat med post | grunden saknades |
+| Halland A | sista meningen *"Du är i så fall välkommen att återkomma."* | inget tal rörs |
+| Västra Götaland B | två stycken sammanfogade utan markering | inget tal rörs |
+
+**Kalmar A har fått sin källa.** Raden bar flaggan att följebrevet inte gick
+att hämta ur brevlådan och ett citat avskrivet för hand. Brevet finns,
+meddelande 19fff706f0b80593 den 14 augusti 2026 08:42, och det handskrivna
+citatet visade sig teckenidentiskt med det. Raden bär nu meddelande-id, och
+paketet säger inte längre att källan saknas.
+
+**Två tal i tillämpningsnot 6 rättade, och två P8-skrivelser uteblev.** Nio
+län maskade klass A med stöd av 30 kap. 23 §, inte åtta, sedan Dalarna
+tillkommit. Åtta av dem erbjöd själva ett överklagbart beslut, inte sex, sedan
+Dalarna och Värmland tillkommit. Not 4:s konjunktion var alltså uppfylld för
+två län som aldrig fick någon skrivelse, och orsaken var projektets eget
+register och ingen bedömning. Noten bär ett daterat tillägg med skälen till
+att skrivelserna inte skickas i efterhand.
+
+**Vad prövningen inte omfattar.** Citat ur protokollloggens noteringar, som
+inte går ut i något paket, och de delar av myndigheternas brev som är
+logistik, länkar och signaturer och aldrig citerats.
+
 ## Maskningsmätningen: bildmetoden mot textlagret
 
 Verifierat 2026-08-14 genom körning över hela leveransmaterialet, steg 18.

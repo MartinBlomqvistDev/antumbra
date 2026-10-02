@@ -1495,12 +1495,19 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
         }
 
     def test_the_counties_invoking_30_23_in_class_a(self, grounds):
+        # Dalarna joined on 2 October 2026, when every quote in the register was
+        # read against its source e-mail. Its row had been cut off mid-sentence
+        # at "I en", and the rest of the county's own letter invokes 30 kap.
+        # 23 § and offers an appealable decision. Tillämpningsnot 6 names eight
+        # counties; the correction makes it nine, and the note carries a dated
+        # addition saying so.
         counties = {
             r["myndighet"]
             for r in grounds
             if r["klass"] == "A" and self.GROUND_30_23 in r["bestammelser"]
         }
         assert counties == {
+            "Dalarna",
             "Gotland",
             "Halland",
             "Kalmar",
@@ -1513,7 +1520,12 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
 
     def test_the_p8_list_is_the_intersection(self, grounds):
         # Not 4 is conjunctive: the criterion and the authority's own offer.
-        # Five counties meet both, and the list may only grow.
+        # Six counties were sent a P8 letter in August 2026. Two more meet the
+        # conjunction and were not: Dalarna and Värmland, whose offers of an
+        # appealable decision sat in the part of the covering letter the
+        # register had not stored. The set below is therefore what qualified,
+        # not what was sent, and the difference is reported as a deviation in
+        # the dated addition to tillämpningsnot 6.
         triggered = {
             r["myndighet"]
             for r in grounds
@@ -1522,6 +1534,16 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
             and r["erbjudet_beslut"]
         }
         assert triggered == {
+            "Dalarna",
+            "Gotland",
+            "Halland",
+            "Kalmar",
+            "Kronoberg",
+            "Södermanland",
+            "Värmland",
+            "Västra Götaland",
+        }
+        sent = {
             "Gotland",
             "Halland",
             "Kalmar",
@@ -1529,6 +1551,7 @@ class TestTheP9CriteriaRestOnQuotedGrounds:
             "Södermanland",
             "Västra Götaland",
         }
+        assert triggered - sent == {"Dalarna", "Värmland"}
 
 
 class TestTheGroundsRegisterKnowsItsOwnGaps:
