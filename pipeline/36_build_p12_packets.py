@@ -62,6 +62,7 @@ from open_items import (  # noqa: E402
     THEIRS,
     add_working_days,
     is_p11,
+    is_p12,
     working_days_between,
 )
 
@@ -176,14 +177,26 @@ def read(path: Path) -> list[dict]:
 
 
 def events_for(rows: list[dict], authority: str) -> dict[str, list[dict]]:
-    """The authority's own events, per request class, in logged order."""
+    """The authority's own events, per request class, in logged order.
+
+    A class with no avsändning is not a request. Every request this project
+    has opens with one, so nothing real is lost, and without the guard a single
+    row logged under the wrong class invents a request nobody sent: the two
+    rows about Jordbruksverket's P12 packet were logged as A+B, and the packet
+    grew an empty section for each telling an authority with one request that
+    two others had produced no substantial reply.
+    """
     tracks: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
         if row["myndighet"] != authority:
             continue
         for klass in row["begaran"].split("+"):
             tracks[klass].append(row)
-    return tracks
+    return {
+        klass: events
+        for klass, events in tracks.items()
+        if any(event["handelse"] == "avsändning" for event in events)
+    }
 
 
 def first_substantial(events: list[dict]) -> dict | None:
@@ -214,6 +227,35 @@ def concluded(events: list[dict]) -> dict | None:
     return sorted(visible or ended, key=lambda e: (e["datum"], e["klockslag"]))[-1]
 
 
+# A track can be closed by a disclosure that was logged under the other class.
+# Västmanland wrote on 4 August 2026 that it handled the two requests as one
+# case and delivered nine documents the next day under class B, so class A was
+# closed by the project's own bookkeeping row seven weeks later. The packet
+# printed that bookkeeping date as the conclusion and censored the response
+# time at day 40, which told a county that delivered on day 2 that its response
+# time could not be measured. A closer the authority cannot see is not a date
+# the letter may name.
+MERGED = "sammanslagning enligt P0b"
+
+
+def carried_closer(events: list[dict], tracks: dict[str, list[dict]]) -> dict | None:
+    """The visible disclosure that closes a merged track, if there is one."""
+    if not any(event["handelse"] == MERGED for event in events):
+        return None
+    visible = [
+        event
+        for klass, rows in tracks.items()
+        if klass in CLASSES
+        for event in rows
+        if event["handelse"] in FINAL
+        and event["kanal"] == "e-post"
+        and event["handelse"] not in INTERNAL
+    ]
+    if not visible:
+        return None
+    return sorted(visible, key=lambda event: (event["datum"], event["klockslag"]))[0]
+
+
 def masking_rows(masking: list[dict], slug: str, klass: str) -> list[dict]:
     """The measured documents of one authority in one class."""
     prefix = f"{slug}_{klass}/"
@@ -226,10 +268,16 @@ def timeline(events: list[dict]) -> list[str]:
     Internal events are left out. That a delivery was filed with a checksum is
     the project's own bookkeeping and belongs in the published log, not in a
     letter to the authority that sent it.
+
+    The P12 correspondence is left out too. This letter is the P12 packet, and
+    a timeline of the two requests that ends with the packet's own dispatch and
+    the autoreply to it describes the envelope rather than the case.
     """
     lines = []
     for event in sorted(events, key=lambda e: (e["datum"], e["klockslag"])):
         if event["kanal"] != "e-post" or event["handelse"] in INTERNAL:
+            continue
+        if is_p12(event):
             continue
         day = working_days_between(DAY_ZERO, date.fromisoformat(event["datum"]))
         who = "ni" if event["handelse"] in THEIRS else "jag"
@@ -564,7 +612,26 @@ def packet(authority: str, data: dict) -> str:
                 "eftersom P1 räknar leverans, avgiftsbesked, förtydligandefråga "
                 "eller beslut."
             )
-        if last:
+        hidden = last is not None and (
+            last["handelse"] in INTERNAL or last["kanal"] != "e-post"
+        )
+        carried = carried_closer(events, data["tracks"]) if hidden else None
+        if hidden and not carried:
+            raise SystemExit(
+                f"{authority} {klass}: slutstatus vilar på en rad myndigheten "
+                f"inte kan se, {last['handelse']} {last['datum']}, och ingen "
+                "synlig leverans bär den. Paketet skrivs inte."
+            )
+        if carried:
+            day = working_days_between(DAY_ZERO, date.fromisoformat(carried["datum"]))
+            parts.append(
+                f"Avslutat enligt P1: **dag {day}**, {carried['datum']}, loggat "
+                f"som {carried['handelse']}. Den leveransen bär båda "
+                "begärandena, eftersom ni hanterade dem som ett ärende, och "
+                "handlingarna mäts i klass B. Svarstiden för den här begäran är "
+                "mätt på den leveransen och är inte censurerad."
+            )
+        elif last:
             day = working_days_between(DAY_ZERO, date.fromisoformat(last["datum"]))
             if day > MEASURE_CLOSES:
                 parts.append(
