@@ -141,6 +141,7 @@ THEIRS = frozenset(
         "besked",
         "besked om att dimension 1 inte kan tas fram",
         "delvis avslag och kompletterande leverans",
+        "autosvar på P12-paket",
         "besked om vidarebefordran",
         "diarieföringsbesked",
         "förnyat avgiftserbjudande",
@@ -412,6 +413,7 @@ P12_EVENTS = frozenset(
         "P12-paket avsänt",
         "rättelse av P12-paket",
         "svar på P12-paket",
+        "autosvar på P12-paket",
         "besked om vidarebefordran",
     }
 )
