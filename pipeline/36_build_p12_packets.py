@@ -272,12 +272,20 @@ def timeline(events: list[dict]) -> list[str]:
     The P12 correspondence is left out too. This letter is the P12 packet, and
     a timeline of the two requests that ends with the packet's own dispatch and
     the autoreply to it describes the envelope rather than the case.
+
+    So is P11. Tillämpningsnot 7 says the denominator question "är en
+    uppföljningsfråga och inte en av de 43 begärandena", and the letter gives it
+    its own section. Inside a request's table its day 40 events read as handling
+    time on that request: Västmanland objected on 5 October 2026 that the two
+    tables showed "en så lång handläggningstid" although the documents were sent
+    on 5 August, and the day 40 rows are what the tables showed after it. No
+    figure moves, since neither T1 nor T2 is counted from a P11 event.
     """
     lines = []
     for event in sorted(events, key=lambda e: (e["datum"], e["klockslag"])):
         if event["kanal"] != "e-post" or event["handelse"] in INTERNAL:
             continue
-        if is_p12(event):
+        if is_p12(event) or is_p11(event):
             continue
         day = working_days_between(DAY_ZERO, date.fromisoformat(event["datum"]))
         who = "ni" if event["handelse"] in THEIRS else "jag"
