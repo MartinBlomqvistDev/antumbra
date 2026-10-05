@@ -99,6 +99,7 @@ OURS = frozenset(
         # whole, and a correction to one that has already gone out.
         "P12-paket avsänt",
         "rättelse av P12-paket",
+        "svar på invändning mot P12-paket",
         "påminnelse",
         "svar på förtydligande",
         "svar på förtydligandefråga",
@@ -412,6 +413,7 @@ P12_EVENTS = frozenset(
     {
         "P12-paket avsänt",
         "rättelse av P12-paket",
+        "svar på invändning mot P12-paket",
         "svar på P12-paket",
         "autosvar på P12-paket",
         "besked om vidarebefordran",
