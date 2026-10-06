@@ -34,10 +34,11 @@ conditions have been read out of the 180 files whose conditions section can be
 located, and every one of the 160 permits that carries conditions is among
 them. The whole population, not a sample.
 
-**The openness layer.** Three identically worded freedom-of-information
-requests, sent the same morning to all 21 county administrative boards and
-handled under a protocol written in advance: the same narrowing when a fee
-is raised, the same request for an appealable decision, the same deadlines.
+**The openness layer.** Three freedom-of-information requests sent the same
+morning, A and B identically worded to all 21 county administrative boards
+and C to the Board of Agriculture, each handled under a protocol written in
+advance: the same narrowing when a fee is raised, the same request for an
+appealable decision, the same deadlines.
 A concerns free-standing inspection reports, where appellate case law has
 accepted redaction. B concerns injunction decisions with annexes, where the
 secrecy provision does not apply to decisions. The contrast between A and B
@@ -121,6 +122,28 @@ deficiency field, however, sits on the control and not on the animal, and one of
 the eighteen records its faults in the horse facilities of a holding that also
 keeps birds. A deficiency share computed per species can therefore carry a fault
 found in an animal outside the three the project measures.
+
+**The pre-registered field measure could not be computed.** Redaction was
+pre-registered as masked area plus masked fields. The documents are running
+prose and carry no fields, so the field half was replaced on 17 August 2026 by
+a measure of covered content, decided in ADR-0017. Its outcome is a null: no
+document hides body text under a light covering, and the 236 covered
+characters are a page header under the authority's own white box.
+
+**The area measure points the wrong way for one redaction technique.** Where
+the text under the blacking has been removed, the area measures how the boxes
+were drawn and not how much is held back; for that technique the character
+count is the better measure. The limit belongs to the pre-registered area
+figure and is to be read beside it.
+
+**Half the pre-registered hypothesis cannot be tested.** The plan asks both for
+the correlation across counties and for the difference in deficiency share
+between unannounced and announced inspections within county, species and
+inspection type. The second needs the notice field crossed with the deficiency
+field, and that extract was not released. The pre-written null-result text
+asserts the outcome of that very test, so it is struck rather than reproduced,
+and the half that could be tested does not separate a weak positive
+correlation from none.
 
 **The law on redaction is unsettled.** The appellate courts have ruled in
 different directions and the Supreme Administrative Court has not decided
@@ -214,7 +237,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 152 tests carry guarantees beyond ordinary unit testing: the generated
+The 240 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false
@@ -245,11 +268,15 @@ English.
 
 ## Status
 
-As of 7 August 2026: the Swedish collection is running under the protocol
-(day 4: 43 requests sent, 14 of 21 county boards have delivered, 195 files
-verified, no fee paid), the comparison layer and the website are built, and
-no analytical result has been published. The repository stays private until
-the collection protocol closes.
+As of 6 October 2026: the Swedish collection is closed. All 43 requests went
+out on 3 August 2026 and all 43 have reached a final status under the
+protocol; day 40 fell on 28 September, the last two deliveries arrived on day
+41, and no fee was paid. Redaction is measured over 310 documents in the two
+classes. Each of the 22 authorities received its own figures on 2 October with
+three weeks to reply, which point P12 of the protocol requires, and the reply
+period ends on 23 October. No analytical result is published, and the
+repository stays private until then: opening it is itself publication, which
+the protocol settles in its eighth application note.
 
 ## License and citation
 
