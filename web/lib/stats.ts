@@ -18,7 +18,13 @@ export function swedenStats(): SwedenStats {
   const distinct = (rows: typeof log) =>
     new Set(rows.map((row) => row.myndighet)).size;
   return {
-    sent: log.filter((row) => row.handelse === "avsändning").length,
+    // The 43 requests, and only those. Two later requests for court rulings
+    // are logged as dispatches as well, under "samtliga" and both classes at
+    // once; counting them made the page say 45 requests were sent.
+    sent: log.filter(
+      (row) =>
+        row.handelse === "avsändning" && ["A", "B", "C"].includes(row.begaran),
+    ).length,
     files: readDeliveryManifest().length,
     deliveringAuthorities: distinct(
       log.filter((row) => row.handelse === "leverans"),
