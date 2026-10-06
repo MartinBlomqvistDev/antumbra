@@ -1,0 +1,2285 @@
+{
+  "byggd": "2026-10-06",
+  "p12": {
+    "avsant": "2026-10-02",
+    "svar_senast": "2026-10-23",
+    "publicering_tidigast": "2026-10-24",
+    "myndigheter": 22,
+    "svarat_substantiellt": 1
+  },
+  "klasser": {
+    "A": {
+      "dokument": 170,
+      "maskade": 109,
+      "andel": 0.6411764705882353,
+      "andel_text": "64,1 %",
+      "myndigheter": 17
+    },
+    "B": {
+      "dokument": 140,
+      "maskade": 32,
+      "andel": 0.22857142857142856,
+      "andel_text": "22,9 %",
+      "myndigheter": 18
+    }
+  },
+  "kontrast": {
+    "lan": 17,
+    "median_dokumentandel": 55.89225589225588,
+    "median_yta": 1.9542053872053873,
+    "hogre_dokumentandel_i_b": [
+      "Blekinge",
+      "Dalarna"
+    ],
+    "hogre_yta_i_b": []
+  },
+  "jamforelse": {
+    "A": {
+      "rader": [
+        {
+          "plats": 1,
+          "slug": "gotland",
+          "namn": "Gotland",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "halland",
+          "namn": "Halland",
+          "dokument": 23,
+          "maskade": 23,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.8568833815495732,
+            1.0
+          ],
+          "intervall_text": "85,7 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "kalmar",
+          "namn": "Kalmar",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "kronoberg",
+          "namn": "Kronoberg",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "stockholm",
+          "namn": "Stockholm",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "varmland",
+          "namn": "Värmland",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "vasternorrland",
+          "namn": "Västernorrland",
+          "dokument": 22,
+          "maskade": 22,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.8513451253913791,
+            1.0
+          ],
+          "intervall_text": "85,1 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "vastra_gotaland",
+          "namn": "Västra Götaland",
+          "dokument": 4,
+          "maskade": 4,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5101091635454027,
+            1.0
+          ],
+          "intervall_text": "51,0 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "ostergotland",
+          "namn": "Östergötland",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 10,
+          "slug": "uppsala",
+          "namn": "Uppsala",
+          "dokument": 27,
+          "maskade": 20,
+          "andel": 0.7407407407407407,
+          "andel_text": "74,1 %",
+          "intervall": [
+            0.5532142868544693,
+            0.868296254380928
+          ],
+          "intervall_text": "55,3 % till 86,8 %"
+        },
+        {
+          "plats": 11,
+          "slug": "sodermanland",
+          "namn": "Södermanland",
+          "dokument": 14,
+          "maskade": 7,
+          "andel": 0.5,
+          "andel_text": "50,0 %",
+          "intervall": [
+            0.26799202452413634,
+            0.7320079754758637
+          ],
+          "intervall_text": "26,8 % till 73,2 %"
+        },
+        {
+          "plats": 12,
+          "slug": "blekinge",
+          "namn": "Blekinge",
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        {
+          "plats": 12,
+          "slug": "dalarna",
+          "namn": "Dalarna",
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        {
+          "plats": 12,
+          "slug": "vasterbotten",
+          "namn": "Västerbotten",
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        {
+          "plats": 15,
+          "slug": "gavleborg",
+          "namn": "Gävleborg",
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        },
+        {
+          "plats": 15,
+          "slug": "jamtland",
+          "namn": "Jämtland",
+          "dokument": 20,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.16112515805281938
+          ],
+          "intervall_text": "0,0 % till 16,1 %"
+        },
+        {
+          "plats": 15,
+          "slug": "norrbotten",
+          "namn": "Norrbotten",
+          "dokument": 10,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.2775327998628892
+          ],
+          "intervall_text": "0,0 % till 27,8 %"
+        }
+      ],
+      "atskilda_par": 39,
+      "par": 136
+    },
+    "B": {
+      "rader": [
+        {
+          "plats": 1,
+          "slug": "blekinge",
+          "namn": "Blekinge",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 1,
+          "slug": "kalmar",
+          "namn": "Kalmar",
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        {
+          "plats": 3,
+          "slug": "dalarna",
+          "namn": "Dalarna",
+          "dokument": 10,
+          "maskade": 8,
+          "andel": 0.8,
+          "andel_text": "80,0 %",
+          "intervall": [
+            0.4901624715366418,
+            0.9433178485456247
+          ],
+          "intervall_text": "49,0 % till 94,3 %"
+        },
+        {
+          "plats": 4,
+          "slug": "sodermanland",
+          "namn": "Södermanland",
+          "dokument": 11,
+          "maskade": 5,
+          "andel": 0.45454545454545453,
+          "andel_text": "45,5 %",
+          "intervall": [
+            0.21271271622459764,
+            0.719908462590678
+          ],
+          "intervall_text": "21,3 % till 72,0 %"
+        },
+        {
+          "plats": 5,
+          "slug": "vastmanland",
+          "namn": "Västmanland",
+          "dokument": 9,
+          "maskade": 3,
+          "andel": 0.3333333333333333,
+          "andel_text": "33,3 %",
+          "intervall": [
+            0.1205838183869109,
+            0.6457978644196036
+          ],
+          "intervall_text": "12,1 % till 64,6 %"
+        },
+        {
+          "plats": 6,
+          "slug": "stockholm",
+          "namn": "Stockholm",
+          "dokument": 4,
+          "maskade": 1,
+          "andel": 0.25,
+          "andel_text": "25,0 %",
+          "intervall": [
+            0.045587260809700575,
+            0.6993581574175981
+          ],
+          "intervall_text": "4,6 % till 69,9 %"
+        },
+        {
+          "plats": 7,
+          "slug": "kronoberg",
+          "namn": "Kronoberg",
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        {
+          "plats": 7,
+          "slug": "vastra_gotaland",
+          "namn": "Västra Götaland",
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        {
+          "plats": 9,
+          "slug": "uppsala",
+          "namn": "Uppsala",
+          "dokument": 11,
+          "maskade": 2,
+          "andel": 0.18181818181818182,
+          "andel_text": "18,2 %",
+          "intervall": [
+            0.05136768974608512,
+            0.4769805619608442
+          ],
+          "intervall_text": "5,1 % till 47,7 %"
+        },
+        {
+          "plats": 10,
+          "slug": "halland",
+          "namn": "Halland",
+          "dokument": 10,
+          "maskade": 1,
+          "andel": 0.1,
+          "andel_text": "10,0 %",
+          "intervall": [
+            0.01787621309507289,
+            0.4041500267952385
+          ],
+          "intervall_text": "1,8 % till 40,4 %"
+        },
+        {
+          "plats": 11,
+          "slug": "gotland",
+          "namn": "Gotland",
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        },
+        {
+          "plats": 11,
+          "slug": "gavleborg",
+          "namn": "Gävleborg",
+          "dokument": 4,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.4898908364545973
+          ],
+          "intervall_text": "0,0 % till 49,0 %"
+        },
+        {
+          "plats": 11,
+          "slug": "jamtland",
+          "namn": "Jämtland",
+          "dokument": 10,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.2775327998628892
+          ],
+          "intervall_text": "0,0 % till 27,8 %"
+        },
+        {
+          "plats": 11,
+          "slug": "norrbotten",
+          "namn": "Norrbotten",
+          "dokument": 1,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.7934506856227626
+          ],
+          "intervall_text": "0,0 % till 79,3 %"
+        },
+        {
+          "plats": 11,
+          "slug": "varmland",
+          "namn": "Värmland",
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        },
+        {
+          "plats": 11,
+          "slug": "vasterbotten",
+          "namn": "Västerbotten",
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        },
+        {
+          "plats": 11,
+          "slug": "vasternorrland",
+          "namn": "Västernorrland",
+          "dokument": 26,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.1287289218592153
+          ],
+          "intervall_text": "0,0 % till 12,9 %"
+        },
+        {
+          "plats": 11,
+          "slug": "ostergotland",
+          "namn": "Östergötland",
+          "dokument": 9,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "intervall": [
+            0.0,
+            0.2991450484195441
+          ],
+          "intervall_text": "0,0 % till 29,9 %"
+        }
+      ],
+      "atskilda_par": 28,
+      "par": 153
+    }
+  },
+  "myndigheter": [
+    {
+      "myndighet": "Länsstyrelsen i Blekinge",
+      "slug": "blekinge",
+      "namn": "Blekinge",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "yta": 0.01983,
+          "yta_text": "1,98 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.0016060000000000002,
+          "yta_text": "0,16 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        }
+      },
+      "plats": {
+        "A": 12,
+        "B": 1
+      },
+      "kontrast": [
+        {
+          "myndighet": "blekinge",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.09915
+        },
+        {
+          "myndighet": "blekinge",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 2,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00024
+        },
+        {
+          "myndighet": "blekinge",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 4,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "blekinge",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 2,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00046
+        }
+      ],
+      "paket": {
+        "slug": "blekinge",
+        "path": "data/p12_avsant/blekinge.txt",
+        "bytes": 9145,
+        "sha256": "6b5ef97284e103df67e5dc5718d2fa385e1f62a722517071323fdb7f01d8ac10",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Dalarna",
+      "slug": "dalarna",
+      "namn": "Dalarna",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "yta": 0.000328,
+          "yta_text": "0,03 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        "B": {
+          "dokument": 10,
+          "maskade": 8,
+          "andel": 0.8,
+          "andel_text": "80,0 %",
+          "yta": 0.00018700000000000002,
+          "yta_text": "0,02 %",
+          "intervall": [
+            0.4901624715366418,
+            0.9433178485456247
+          ],
+          "intervall_text": "49,0 % till 94,3 %"
+        }
+      },
+      "plats": {
+        "A": 12,
+        "B": 3
+      },
+      "kontrast": [
+        {
+          "myndighet": "dalarna",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00164
+        },
+        {
+          "myndighet": "dalarna",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00024
+        },
+        {
+          "myndighet": "dalarna",
+          "djurslag": "gris",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "dalarna",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "dalarna",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 8,
+          "maskade": 7,
+          "andel_maskade": 0.875,
+          "andel_yta": 0.0002
+        }
+      ],
+      "paket": {
+        "slug": "dalarna",
+        "path": "data/p12_avsant/dalarna.txt",
+        "bytes": 8590,
+        "sha256": "53317b2f5f0aab1a58e87d6463de5e1164777871b63b5e6d0010805e251ce472",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Dalarna",
+          "datum": "2026-10-02",
+          "klockslag": "13:15:21",
+          "typ": "autosvar",
+          "meddelande": "1a0fc537db816a4d",
+          "avsandare": "dalarna@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tack, din e-post har nu kommit in till Länsstyrelsen i Dalarnas län. Vi hanterar inkommande post i turordning.\n\nVi strävar efter en digital ärendehantering och är därför tacksamma om du inte skickar handlingar både digitalt och på papper.\n\nOm du redan har ett pågående ärende kan du följa det via vårt webbdiarium. Om du vill komplettera eller yttra dig i ett pågående ärende, använd gärna denna e-tjänst .\n\nObservera att detta är en automatgenererad e-post som du inte kan svara på.\n\nDetta autosvar genereras endast första gången du är i kontakt med oss via denna e-postadress.\n\nMed vänlig hälsning\n\nLänsstyrelsen i Dalarnas län/County Administrative Board of Dalarna, Sweden\nVäxel: 010-225 00 00",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Gotland",
+      "slug": "gotland",
+      "namn": "Gotland",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.046972,
+          "yta_text": "4,70 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "gotland",
+          "djurslag": "gris",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "gotland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.12518
+        },
+        {
+          "myndighet": "gotland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "gotland",
+        "path": "data/p12_avsant/gotland.txt",
+        "bytes": 9257,
+        "sha256": "6841fa3021f126a6ebe14eb91b709184313d776ba888b41f729a8f914e4cbb81",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Gävleborg",
+      "slug": "gavleborg",
+      "namn": "Gävleborg",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        },
+        "B": {
+          "dokument": 4,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.4898908364545973
+          ],
+          "intervall_text": "0,0 % till 49,0 %"
+        }
+      },
+      "plats": {
+        "A": 15,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "gavleborg",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "gavleborg",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "gavleborg",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "gavleborg",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 4,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "gavleborg",
+        "path": "data/p12_avsant/gavleborg.txt",
+        "bytes": 8642,
+        "sha256": "89053209a2a70aa24968bb3dbc9d0e716974f695785277ee9ad04ab0e5389507",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Gävleborg",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:24",
+          "typ": "autosvar",
+          "meddelande": "1a0fc51b8a6fbdd2",
+          "avsandare": "gavleborg@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tack för ditt meddelande!\n(Detta är ett automatiskt meddelande som inte går att svara på.)\n\nVi läser inkommande e-post varje arbetsdag.\n\nAnvänd i första hand de e-tjänster som finns på vår webbplats när du söker kontakt med oss. Som till exempel:\n\n  * kompletteringar\n  * yttranden\n  * anmälningar\n  * ansökningar\n  * med mera.\nDå registreras handlingen direkt och når handläggare snabbare än vanlig e-post. På så sätt får du en effektivare handläggning av ditt ärende.\n\nSidan ”E-tjänster och blanketter” på vår webbplats\n\nAll post, även e-post, till Länsstyrelsen blir i princip allmän handling. Det innebär bland annat att allmänheten och massmedia normalt har rätt att ta del av innehållet i ditt meddelande.\n\nVi strävar efter en digital och miljövänlig ärendehantering, därför är vi tacksamma om du endast bifogar dina dokument digitalt.\n\nMed vänlig hälsning\nLänsstyrelsen Gävleborg\n\nVäxel: 010-225 10 00\ngavleborg@lansstyrelsen.se",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "myndighet": "Länsstyrelsen i Gävleborg",
+          "datum": "2026-10-02",
+          "klockslag": "15:00:59",
+          "typ": "besked",
+          "meddelande": "1a0fcb43c420e16a",
+          "avsandare": "gavleborg@lansstyrelsen.se",
+          "roll": "registrator",
+          "amnesrad": "Sv: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej,\nDitt mail har vidarebefordrats till enheten för djurskydd.\n\nMed vänlig hälsning\n\nRegistrator\n\nLänsstyrelsen Gävleborg\n010-225 10 00",
+          "bilagor": null,
+          "utelamnat": "den citerade kopian av mitt eget brev under meddelandet återges inte; brevet står i sin helhet i data/p12_avsant; länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "myndighet": "Länsstyrelsen i Gävleborg",
+          "datum": "2026-10-02",
+          "klockslag": "20:25:53",
+          "typ": "autosvar",
+          "meddelande": "1a0fdddb177b1c81",
+          "avsandare": "gavleborg@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tack för ditt meddelande!\n(Detta är ett automatiskt meddelande som inte går att svara på.)\n\nVi läser inkommande e-post varje arbetsdag.\n\nAnvänd i första hand de e-tjänster som finns på vår webbplats när du söker kontakt med oss. Som till exempel:\n\n  * kompletteringar\n  * yttranden\n  * anmälningar\n  * ansökningar\n  * med mera.\nDå registreras handlingen direkt och når handläggare snabbare än vanlig e-post. På så sätt får du en effektivare handläggning av ditt ärende.\n\nSidan ”E-tjänster och blanketter” på vår webbplats\n\nAll post, även e-post, till Länsstyrelsen blir i princip allmän handling. Det innebär bland annat att allmänheten och massmedia normalt har rätt att ta del av innehållet i ditt meddelande.\n\nVi strävar efter en digital och miljövänlig ärendehantering, därför är vi tacksamma om du endast bifogar dina dokument digitalt.\n\nMed vänlig hälsning\nLänsstyrelsen Gävleborg\n\nVäxel: 010-225 10 00\ngavleborg@lansstyrelsen.se",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten. Det andra autosvaret från samma brevlåda, på rättelsen 58 sekunder tidigare",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Halland",
+      "slug": "halland",
+      "namn": "Halland",
+      "klasser": {
+        "A": {
+          "dokument": 23,
+          "maskade": 23,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.07617521739130435,
+          "yta_text": "7,62 %",
+          "intervall": [
+            0.8568833815495732,
+            1.0
+          ],
+          "intervall_text": "85,7 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 10,
+          "maskade": 1,
+          "andel": 0.1,
+          "andel_text": "10,0 %",
+          "yta": 0.00504,
+          "yta_text": "0,50 %",
+          "intervall": [
+            0.01787621309507289,
+            0.4041500267952385
+          ],
+          "intervall_text": "1,8 % till 40,4 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 10
+      },
+      "kontrast": [
+        {
+          "myndighet": "halland",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.05137
+        },
+        {
+          "myndighet": "halland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "halland",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 3,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.07513
+        },
+        {
+          "myndighet": "halland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 9,
+          "maskade": 9,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.04969
+        },
+        {
+          "myndighet": "halland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 8,
+          "maskade": 1,
+          "andel_maskade": 0.125,
+          "andel_yta": 0.0063
+        }
+      ],
+      "paket": {
+        "slug": "halland",
+        "path": "data/p12_avsant/halland.txt",
+        "bytes": 9015,
+        "sha256": "1129b57d32dbc8b3c466f5bd84b25517302542d0e877863856a16d24fedc0c9b",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Jämtland",
+      "slug": "jamtland",
+      "namn": "Jämtland",
+      "klasser": {
+        "A": {
+          "dokument": 20,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.16112515805281938
+          ],
+          "intervall_text": "0,0 % till 16,1 %"
+        },
+        "B": {
+          "dokument": 10,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.2775327998628892
+          ],
+          "intervall_text": "0,0 % till 27,8 %"
+        }
+      },
+      "plats": {
+        "A": 15,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "jamtland",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "jamtland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "jamtland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 19,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "jamtland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 8,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "jamtland",
+        "path": "data/p12_avsant/jamtland.txt",
+        "bytes": 7549,
+        "sha256": "0d7afb0ed2f1650f78d731bfd05983a441ae1fb6cc45a20602b8c77c9d374dea",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Jönköping",
+      "slug": "jonkoping",
+      "namn": "Jönköping",
+      "klasser": {},
+      "plats": {},
+      "kontrast": [],
+      "paket": {
+        "slug": "jonkoping",
+        "path": "data/p12_avsant/jonkoping.txt",
+        "bytes": 5059,
+        "sha256": "5261ef57e9779759406d0c7d019acaadd48035bd3e5a3a93714e8c1f93f2cc28",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Kalmar",
+      "slug": "kalmar",
+      "namn": "Kalmar",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.102922,
+          "yta_text": "10,29 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.001334,
+          "yta_text": "0,13 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 1
+      },
+      "kontrast": [
+        {
+          "myndighet": "kalmar",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 5,
+          "maskade": 5,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.10292
+        },
+        {
+          "myndighet": "kalmar",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 5,
+          "maskade": 5,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00133
+        }
+      ],
+      "paket": {
+        "slug": "kalmar",
+        "path": "data/p12_avsant/kalmar.txt",
+        "bytes": 9569,
+        "sha256": "0549c949bbc76eccdfb720ee80545c669141a7b5ca6af044a7e2943adbd028ea",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Kronoberg",
+      "slug": "kronoberg",
+      "namn": "Kronoberg",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.015648000000000002,
+          "yta_text": "1,56 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "yta": 0.0027879999999999997,
+          "yta_text": "0,28 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 7
+      },
+      "kontrast": [
+        {
+          "myndighet": "kronoberg",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.07209
+        },
+        {
+          "myndighet": "kronoberg",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 3,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00194
+        },
+        {
+          "myndighet": "kronoberg",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 4,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "kronoberg",
+        "path": "data/p12_avsant/kronoberg.txt",
+        "bytes": 9209,
+        "sha256": "3ee273b6adb6a414e7fde483768a99c551752670104187c659d2a98486686e0f",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Kronoberg",
+          "datum": "2026-10-02",
+          "klockslag": "13:14:45",
+          "typ": "autosvar",
+          "meddelande": "1a0fc52ececda353",
+          "avsandare": "Kronoberg@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Observera att detta är en automatgenererad e-post som du inte kan svara på.\n\nHej,\n\nLänsstyrelsen har tagit emot ditt meddelande. Vi tar hand om ditt mejl, handlägger ärenden och svarar på frågor så snart som möjligt.\n\nI princip blir all post till Länsstyrelsen allmän handling. Det innebär bland annat att allmänheten och massmedier normalt har rätt att ta del av innehållet i ditt meddelande.\n\nVi strävar efter en digital ärendehantering och är därför tacksamma om du i största mån fortsätter skicka handlingar i digital form till oss.\n\nFör information om hur vi hanterar personuppgifter kan du läsa mer under nedanstående länk: www.lansstyrelsen.se/dataskydd\n\nVänliga hälsningar\n\nLänsstyrelsen i Kronobergs län\n\nLänsstyrelsen i Kronobergs län / County Administrative Board of Kronoberg\nSE-351 86 VÄXJÖ / Telefon: 010 223 70 00\nBesöksadress: Kungsgatan 8, Växjö",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Norrbotten",
+      "slug": "norrbotten",
+      "namn": "Norrbotten",
+      "klasser": {
+        "A": {
+          "dokument": 10,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.2775327998628892
+          ],
+          "intervall_text": "0,0 % till 27,8 %"
+        },
+        "B": {
+          "dokument": 1,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.7934506856227626
+          ],
+          "intervall_text": "0,0 % till 79,3 %"
+        }
+      },
+      "plats": {
+        "A": 15,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "norrbotten",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "norrbotten",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "norrbotten",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 8,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "norrbotten",
+        "path": "data/p12_avsant/norrbotten.txt",
+        "bytes": 8114,
+        "sha256": "1450af7eb2e1ff77b1580aa8732ad503ca393b711db76c8576d9682607684ac3",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Skåne",
+      "slug": "skane",
+      "namn": "Skåne",
+      "klasser": {},
+      "plats": {},
+      "kontrast": [],
+      "paket": {
+        "slug": "skane",
+        "path": "data/p12_avsant/skane.txt",
+        "bytes": 4647,
+        "sha256": "c119b83e55063ae866a9b156d12503e0acbe1bde62e61fa8e1dfff78dfacc94a",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Skåne",
+          "datum": "2026-10-02",
+          "klockslag": "13:14:32",
+          "typ": "autosvar",
+          "meddelande": "1a0fc52bcbe04e05",
+          "avsandare": "skane@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej!\n\nTack för ditt mejl. Vi läser e-post varje helgfri vardag och återkommer till dig så snart vi kan.\n\nVill du beställa en handling?\nDå ska du använda formuläret beställ allmän handling. Då får vi de uppgifter vi behöver för att ta fram rätt handling till dig.\n\nVill du komplettera ett ärende?\nOm du vill lägga till något i ett pågående ärende ska du göra det i e-tjänsten för komplettering eller yttrande i ärende.\n\nVill du ha information om ditt ärende?\nDu kan följa ditt ärende via vårt webbdiarium.\n\nE-post till Länsstyrelsen blir allmän handling. Det innebär att alla har rätt att begära att få ta del av innehållet i ditt mejl.\n\nDet här är ett automatgenererat e-postmeddelande som du inte kan svara på.\n\nMed vänlig hälsning\nLänsstyrelsen Skåne\nVäxel: 010-224 10 00",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten och raden med sociala medier",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Stockholm",
+      "slug": "stockholm",
+      "namn": "Stockholm",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.005554,
+          "yta_text": "0,56 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 4,
+          "maskade": 1,
+          "andel": 0.25,
+          "andel_text": "25,0 %",
+          "yta": 1.75e-05,
+          "yta_text": "under 0,01 %",
+          "intervall": [
+            0.045587260809700575,
+            0.6993581574175981
+          ],
+          "intervall_text": "4,6 % till 69,9 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 6
+      },
+      "kontrast": [
+        {
+          "myndighet": "stockholm",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 1,
+          "andel_maskade": 0.5,
+          "andel_yta": 3e-05
+        },
+        {
+          "myndighet": "stockholm",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00511
+        },
+        {
+          "myndighet": "stockholm",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 4,
+          "maskade": 4,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00566
+        },
+        {
+          "myndighet": "stockholm",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "stockholm",
+        "path": "data/p12_avsant/stockholm.txt",
+        "bytes": 8118,
+        "sha256": "7291190e42c622e2880205dae92571100a5f7565c930177e7084c9163d6083d0",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Södermanland",
+      "slug": "sodermanland",
+      "namn": "Södermanland",
+      "klasser": {
+        "A": {
+          "dokument": 14,
+          "maskade": 7,
+          "andel": 0.5,
+          "andel_text": "50,0 %",
+          "yta": 0.035797857142857145,
+          "yta_text": "3,58 %",
+          "intervall": [
+            0.26799202452413634,
+            0.7320079754758637
+          ],
+          "intervall_text": "26,8 % till 73,2 %"
+        },
+        "B": {
+          "dokument": 11,
+          "maskade": 5,
+          "andel": 0.45454545454545453,
+          "andel_text": "45,5 %",
+          "yta": 0.0023454545454545455,
+          "yta_text": "0,23 %",
+          "intervall": [
+            0.21271271622459764,
+            0.719908462590678
+          ],
+          "intervall_text": "21,3 % till 72,0 %"
+        }
+      },
+      "plats": {
+        "A": 11,
+        "B": 4
+      },
+      "kontrast": [
+        {
+          "myndighet": "sodermanland",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 1,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.09709
+        },
+        {
+          "myndighet": "sodermanland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 5,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "sodermanland",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "sodermanland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 10,
+          "maskade": 5,
+          "andel_maskade": 0.5,
+          "andel_yta": 0.03968
+        },
+        {
+          "myndighet": "sodermanland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "sodermanland",
+        "path": "data/p12_avsant/sodermanland.txt",
+        "bytes": 8863,
+        "sha256": "993e5f5298c67c113a8ecdc47f65da7ff4f98bfa2f914c60d822ec0d9cea45ca",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Uppsala",
+      "slug": "uppsala",
+      "namn": "Uppsala",
+      "klasser": {
+        "A": {
+          "dokument": 27,
+          "maskade": 20,
+          "andel": 0.7407407407407407,
+          "andel_text": "74,1 %",
+          "yta": 0.020442962962962965,
+          "yta_text": "2,04 %",
+          "intervall": [
+            0.5532142868544693,
+            0.868296254380928
+          ],
+          "intervall_text": "55,3 % till 86,8 %"
+        },
+        "B": {
+          "dokument": 11,
+          "maskade": 2,
+          "andel": 0.18181818181818182,
+          "andel_text": "18,2 %",
+          "yta": 0.000900909090909091,
+          "yta_text": "0,09 %",
+          "intervall": [
+            0.05136768974608512,
+            0.4769805619608442
+          ],
+          "intervall_text": "5,1 % till 47,7 %"
+        }
+      },
+      "plats": {
+        "A": 10,
+        "B": 9
+      },
+      "kontrast": [
+        {
+          "myndighet": "uppsala",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 2,
+          "maskade": 2,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00834
+        },
+        {
+          "myndighet": "uppsala",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "uppsala",
+          "djurslag": "gris",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "uppsala",
+          "djurslag": "gris",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "uppsala",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 13,
+          "maskade": 12,
+          "andel_maskade": 0.923,
+          "andel_yta": 0.03604
+        },
+        {
+          "myndighet": "uppsala",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 5,
+          "maskade": 1,
+          "andel_maskade": 0.2,
+          "andel_yta": 0.00034
+        }
+      ],
+      "paket": {
+        "slug": "uppsala",
+        "path": "data/p12_avsant/uppsala.txt",
+        "bytes": 7538,
+        "sha256": "3cba6e85c6c6ea3ba1891d36f96493c41814bde178244d49593b16dfd2e29ea0",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Uppsala",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:18",
+          "typ": "autosvar",
+          "meddelande": "1a0fc51a8deb91aa",
+          "avsandare": "uppsala@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tack för ditt mail. Länsstyrelsen har mottagit ditt meddelande och läser inkommande e-post varje arbetsdag.\n\nOm du vill lämna ett yttrande eller komplettera ditt ärende använd gärna vår e-tjänst \"Lämna komplettering eller yttrande i ärende\". I e-tjänsten anger du Länsstyrelsen i Uppsala län samt ärendets diarienummer.\n\nAlla våra e-tjänster hittar du i vår E-tjänstportal.\n\nDu hittar information om aktuella handläggningstider på vår web.\n\nDu kan läsa mer om vårt diarium och allmänna handlingar, söka själv i vårt webdiarium och beställa allmänna handlingar här.\n\nI princip blir all post till länsstyrelsen allmän handling. Det innebär bland annat att allmänheten och massmedier normalt har rätt att ta del av innehållet i ditt meddelande.\n\nLänsstyrelsen Uppsala län\n\n751 86 Uppsala\n\nBesök oss på Bäverns gränd 17",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten och raden med sociala medier",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Värmland",
+      "slug": "varmland",
+      "namn": "Värmland",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.0032280000000000004,
+          "yta_text": "0,32 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "varmland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "varmland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 3,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00422
+        },
+        {
+          "myndighet": "varmland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 4,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "varmland",
+        "path": "data/p12_avsant/varmland.txt",
+        "bytes": 7951,
+        "sha256": "67efbc97a5faa213ff673eba8cb079c1f66760cbe78f988d4826ce018e34291b",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Värmland",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:55",
+          "typ": "autosvar",
+          "meddelande": "1a0fc522a3fd5f8c",
+          "avsandare": "varmland@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej!\n\nLänsstyrelsen Värmland har tagit emot din e-post. Vi läser inkommande e-post varje helgfri vardag. Har du ställt frågor i ditt meddelande återkommer vi snarast till dig med ett svar.\n\nHar du ett pågående ärende hos någon länsstyrelse kan du följa det via vårt webbdiarium.\n\nPå vår webbplats har vi också e-tjänster för flera av våra verksamheter. Där kan du även lämna in kompletteringar om du har ett diarienummer.\n\nMed vänlig hälsning\nLänsstyrelsen Värmland\nVäxel: 010-224 70 00",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten och raden med sociala medier",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Västerbotten",
+      "slug": "vasterbotten",
+      "namn": "Västerbotten",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "yta": 0.021162,
+          "yta_text": "2,12 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.43448246478317476
+          ],
+          "intervall_text": "0,0 % till 43,4 %"
+        }
+      },
+      "plats": {
+        "A": 12,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "vasterbotten",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "vasterbotten",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "vasterbotten",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 2,
+          "maskade": 1,
+          "andel_maskade": 0.5,
+          "andel_yta": 0.05291
+        },
+        {
+          "myndighet": "vasterbotten",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "vasterbotten",
+        "path": "data/p12_avsant/vasterbotten.txt",
+        "bytes": 8424,
+        "sha256": "14def649970641bcb15fb5a2558ac29b0099cf0cff1a561a5389f13b7ab1d348",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Västerbotten",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:44",
+          "typ": "autosvar",
+          "meddelande": "1a0fc52018c04bbb",
+          "avsandare": "vasterbotten@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Länsstyrelsen Västerbotten har tagit emot ditt meddelande. Vi läser inkommande e-post varje helgfri vardag.\nDet finns även e-tjänster för en del av vår verksamhet och om du har ett ärende hos Länsstyrelsen kan du följa det via vårt webbdiarium.\nDet finns också en e-tjänst när du redan har ett ärende hos oss för att Komplettera, lämna yttrande eller följa ditt ärende på vår webbplats.\n\nDetta autosvar genereras endast första gången du är i kontakt med oss via denna e-postadress.\n\n____________\nLänsstyrelsen Västerbotten\nBesöksadress: Storgatan 71 B, 901 86 UMEÅ\nVäxel 010-225 40 00\nvasterbotten@lansstyrelsen.se",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Västernorrland",
+      "slug": "vasternorrland",
+      "namn": "Västernorrland",
+      "klasser": {
+        "A": {
+          "dokument": 22,
+          "maskade": 22,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.022857727272727276,
+          "yta_text": "2,29 %",
+          "intervall": [
+            0.8513451253913791,
+            1.0
+          ],
+          "intervall_text": "85,1 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 26,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.1287289218592153
+          ],
+          "intervall_text": "0,0 % till 12,9 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "vasternorrland",
+          "djurslag": "fjäderfä",
+          "begaran": "A",
+          "dokument": 4,
+          "maskade": 4,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.00911
+        },
+        {
+          "myndighet": "vasternorrland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 3,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "vasternorrland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 18,
+          "maskade": 18,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.02591
+        },
+        {
+          "myndighet": "vasternorrland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 21,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "vasternorrland",
+        "path": "data/p12_avsant/vasternorrland.txt",
+        "bytes": 7425,
+        "sha256": "bec6947327d5af0d7ff302a684b48e1ede1e3ab61f1effe9e9db5e184dab3a8e",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Västernorrland",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:38",
+          "typ": "autosvar",
+          "meddelande": "1a0fc51ef0d8123e",
+          "avsandare": "lansstyrelsen.vasternorrland@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej!\nLänsstyrelsen Västernorrland har tagit emot din e-post. Vi läser inkommande e-post varje helgfri vardag. Har du ställt frågor i e-posten så återkommer vi till dig med ett svar så snart som möjligt.\nDet finns även e-tjänster för en del av vår verksamhet och om du har ett ärende hos Länsstyrelsen så kan du följa det via vårt webbdiarium.\nDet finns också en e-tjänst för komplettering eller yttrande i ärende.\nSå här hanterar vi dina personuppgifter\n\nVänliga hälsningar\nLänsstyrelsen Västernorrland\nvasternorrland@lansstyrelsen.se\nSE-871 86 Härnösand\nBesöksadress: Länsstyrelsen, Pumpbacksgatan 19\nVäxel: +46 (0)611-34 90 00",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten och raderna med sociala medier",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Västmanland",
+      "slug": "vastmanland",
+      "namn": "Västmanland",
+      "klasser": {
+        "B": {
+          "dokument": 9,
+          "maskade": 3,
+          "andel": 0.3333333333333333,
+          "andel_text": "33,3 %",
+          "yta": 0.0028988888888888888,
+          "yta_text": "0,29 %",
+          "intervall": [
+            0.1205838183869109,
+            0.6457978644196036
+          ],
+          "intervall_text": "12,1 % till 64,6 %"
+        }
+      },
+      "plats": {
+        "B": 5
+      },
+      "kontrast": [
+        {
+          "myndighet": "vastmanland",
+          "djurslag": "fjäderfä",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 2,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.01304
+        },
+        {
+          "myndighet": "vastmanland",
+          "djurslag": "gris",
+          "begaran": "B",
+          "dokument": 2,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "vastmanland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 5,
+          "maskade": 1,
+          "andel_maskade": 0.2,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "vastmanland",
+        "path": "data/p12_avsant/vastmanland.txt",
+        "bytes": 6871,
+        "sha256": "8330d4e38113b5e0f2a414ef8f7ba2972f6a696c32b4c8dcd1abafc36612ed8e",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Västmanland",
+          "datum": "2026-10-05",
+          "klockslag": "18:26:49",
+          "typ": "substantiellt",
+          "meddelande": "1a10ce3c3e6a4e06",
+          "avsandare": "namngiven tjänsteman",
+          "roll": "enhetschef för vilt, veterinär och djurskydd",
+          "amnesrad": "Sv: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej Martin!\nBifogat finner skärmdumpar på de svar med handlingar vi skickade till dig den 5 augusti 2026. Du uppgav att du inte kunde hitta det ena i din e-post. Kanske för att filerna skickades med så kallat filskick\nAtt vi skulle ha en så lång handläggningstid för att lämna ut handlingarna i de två första tabellerna känns därför inte rättvisande när vi svarade den 5 augusti med filer enligt dina egna nedskärningar. Vi ställer oss frågande vad syftet är med den tolkning som du väljer att göra. Det får även oss att ifrågasätta hur tillförlitliga siffrorna är i din undersökning.",
+          "bilagor": "två skärmbilder av länets egna meddelanden den 5 augusti 2026; bilder publiceras aldrig",
+          "utelamnat": "signaturblocket med tjänstemannens namn, direktnummer och personliga adress är utbytt mot rollen enligt ADR-0018; den citerade kopian av mitt eget brev under meddelandet återges inte; brevet står i sin helhet i data/p12_avsant",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "myndighet": "Länsstyrelsen i Västmanland",
+          "datum": "2026-10-06",
+          "klockslag": "08:24:28",
+          "typ": "substantiellt",
+          "meddelande": "1a10fe2a00099534",
+          "avsandare": "namngiven tjänsteman",
+          "roll": "enhetschef för vilt, veterinär och djurskydd",
+          "amnesrad": "Sv: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tusen tack. Jag uppfattade det i ditt material som att korrigeringen redan hade skickats till dig men att du valt att inte göra någon justering i samband med det.",
+          "bilagor": null,
+          "utelamnat": "signaturblocket med tjänstemannens namn, direktnummer och personliga adress är utbytt mot rollen enligt ADR-0018; den citerade kopian av mitt eget brev under meddelandet återges inte; brevet står i sin helhet i data/p12_avsant",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": false
+    },
+    {
+      "myndighet": "Länsstyrelsen i Västra Götaland",
+      "slug": "vastra_gotaland",
+      "namn": "Västra Götaland",
+      "klasser": {
+        "A": {
+          "dokument": 4,
+          "maskade": 4,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.11723,
+          "yta_text": "11,72 %",
+          "intervall": [
+            0.5101091635454027,
+            1.0
+          ],
+          "intervall_text": "51,0 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 5,
+          "maskade": 1,
+          "andel": 0.2,
+          "andel_text": "20,0 %",
+          "yta": 0.00032,
+          "yta_text": "0,03 %",
+          "intervall": [
+            0.03622410863243013,
+            0.6244653702374747
+          ],
+          "intervall_text": "3,6 % till 62,4 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 7
+      },
+      "kontrast": [
+        {
+          "myndighet": "vastra_gotaland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 4,
+          "maskade": 4,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.11723
+        },
+        {
+          "myndighet": "vastra_gotaland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 5,
+          "maskade": 1,
+          "andel_maskade": 0.2,
+          "andel_yta": 0.00032
+        }
+      ],
+      "paket": {
+        "slug": "vastra_gotaland",
+        "path": "data/p12_avsant/vastra_gotaland.txt",
+        "bytes": 9486,
+        "sha256": "64778578d2fd7747ebc593b20d5e55b1816554c8165b47d44e8d3056ddb2a411",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Västra Götaland",
+          "datum": "2026-10-02",
+          "klockslag": "13:13:29",
+          "typ": "autosvar",
+          "meddelande": "1a0fc51c95613b45",
+          "avsandare": "vastragotaland@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "OBS! Du kan inte svara på det här meddelandet.\n\nLänsstyrelsen Västra Götaland har tagit emot din e-post och kommer att behandla ditt ärende eller din fråga så snart som möjligt. Har du skickat in ett ärende så kommer du få bekräftelse via e-post med ärendets diarienummer.\n\nNär du har ditt diarienummer kan du följa ditt ärende via vårt webbdiarium.\n\nKontakta oss via e-post om du behöver skicka stora filer (över 25Mb). Ange alltid ditt ärendes diarienummer när du kontaktar oss.\n\nOBS! Detta autosvar skickas endast en gång per avsändare.\n\nSå behandlar vi dina personuppgifter",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Örebro",
+      "slug": "orebro",
+      "namn": "Örebro",
+      "klasser": {},
+      "plats": {},
+      "kontrast": [],
+      "paket": {
+        "slug": "orebro",
+        "path": "data/p12_avsant/orebro.txt",
+        "bytes": 5104,
+        "sha256": "f062bd1b3ddbf8cae70d707eabaef93247ff4f79e8f36c01cc0f43d30483404b",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Örebro",
+          "datum": "2026-10-02",
+          "klockslag": "13:14:38",
+          "typ": "autosvar",
+          "meddelande": "1a0fc52d71cdedce",
+          "avsandare": "orebro@lansstyrelsen.se",
+          "roll": null,
+          "amnesrad": "Autosvar: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Tack för ditt meddelande.\nVi läser inkommande e-post varje dag.\nAnvänd i första hand de e-tjänster som finns på vår webbplats när du söker kontakt med oss. Som till exempel:\n\n  * Ansökningar\n  * Anmälningar\n  * Yttranden\n  * Kompletteringar\nDå registreras handlingen direkt och når handläggare snabbare än vanlig e-post. På så sätt får du en effektivare handläggning av ditt ärende.\nAll post, även e-post, till Länsstyrelsen blir i princip allmän handling. Det innebär bland annat att allmänheten och massmedia normalt har rätt att ta del av innehållet i ditt meddelande.\nMed vänlig hälsning\nLänsstyrelsen i Örebro län\nVäxel: 010-224 80 00",
+          "bilagor": null,
+          "utelamnat": "länkmålen bakom texten och raden med sociala medier",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Länsstyrelsen i Östergötland",
+      "slug": "ostergotland",
+      "namn": "Östergötland",
+      "klasser": {
+        "A": {
+          "dokument": 5,
+          "maskade": 5,
+          "andel": 1.0,
+          "andel_text": "100,0 %",
+          "yta": 0.064546,
+          "yta_text": "6,45 %",
+          "intervall": [
+            0.5655175352168252,
+            1.0
+          ],
+          "intervall_text": "56,6 % till 100,0 %"
+        },
+        "B": {
+          "dokument": 9,
+          "maskade": 0,
+          "andel": 0.0,
+          "andel_text": "0,0 %",
+          "yta": 0.0,
+          "yta_text": "0,00 %",
+          "intervall": [
+            0.0,
+            0.2991450484195441
+          ],
+          "intervall_text": "0,0 % till 29,9 %"
+        }
+      },
+      "plats": {
+        "A": 1,
+        "B": 11
+      },
+      "kontrast": [
+        {
+          "myndighet": "ostergotland",
+          "djurslag": "gris",
+          "begaran": "B",
+          "dokument": 1,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        },
+        {
+          "myndighet": "ostergotland",
+          "djurslag": "nöt",
+          "begaran": "A",
+          "dokument": 5,
+          "maskade": 5,
+          "andel_maskade": 1.0,
+          "andel_yta": 0.06455
+        },
+        {
+          "myndighet": "ostergotland",
+          "djurslag": "nöt",
+          "begaran": "B",
+          "dokument": 8,
+          "maskade": 0,
+          "andel_maskade": 0.0,
+          "andel_yta": 0.0
+        }
+      ],
+      "paket": {
+        "slug": "ostergotland",
+        "path": "data/p12_avsant/ostergotland.txt",
+        "bytes": 7904,
+        "sha256": "2062fe2ca8cd4b2d28e39af9bc49eb557d4423a0c1edbd4ba73e5e056273bacc",
+        "avsant": "2026-10-02"
+      },
+      "svar": [],
+      "svar_saknas": true
+    },
+    {
+      "myndighet": "Jordbruksverket",
+      "slug": "jordbruksverket",
+      "namn": "Jordbruksverket",
+      "klasser": {},
+      "plats": {},
+      "kontrast": [],
+      "paket": {
+        "slug": "jordbruksverket",
+        "path": "data/p12_avsant/jordbruksverket.txt",
+        "bytes": 4857,
+        "sha256": "27538a98491ba556325d6016558e2f5d4499a071e59fc5b1b7ae7749b7fde726",
+        "avsant": "2026-10-02"
+      },
+      "svar": [
+        {
+          "myndighet": "Jordbruksverket",
+          "datum": "2026-10-02",
+          "klockslag": "13:14:21",
+          "typ": "autosvar",
+          "meddelande": "1a0fc5294fde8c65",
+          "avsandare": "jordbruksverket@jordbruksverket.se",
+          "roll": null,
+          "amnesrad": "EXTERNT: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Jordbruksverket har tagit emot ditt meddelande. Vi läser inkommande e-post varje arbetsdag.\n\nI princip blir all post till Jordbruksverket allmän handling. Det innebär bland annat att allmänheten och massmedier normalt har rätt att ta del av innehållet i ditt meddelande.\n\nNär du kontaktar Jordbruksverket och lämnar dina personuppgifter kommer vi att behandla dessa enligt dataskyddsförordningen.\n\nMed vänlig hälsning\n\nTel: 036 -15 50 00 / e-post: jordbruksverket@jordbruksverket.se / Postadress: 551 82 Jönköping / Besöksadress: Skeppsbrogatan 2 / www.jordbruksverket.se",
+          "bilagor": "myndighetens logotyp som bild i signaturen",
+          "utelamnat": "bildreferensen till logotypen",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": true
+    }
+  ]
+}
