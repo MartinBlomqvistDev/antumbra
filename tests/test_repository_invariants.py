@@ -329,6 +329,7 @@ class TestNoPersonalDataIsCommitted:
         "jurist",
         "handläggare",
         "verksjurist",
+        "registrator",
         # Jordbruksverket's decision of 2 September 2026 names its presenter
         # without a title. Writing a plausible one would be an invention, and
         # leaving the field empty would look like an omission, so the register
@@ -396,6 +397,134 @@ class TestNoPersonalDataIsCommitted:
                     "leave the name in the source document"
                 )
             assert record["namn_utelamnade"] is True
+
+    # The P12 replies are published verbatim, so the authorities' own functional
+    # mailboxes stand in them: those are published contact details for a public
+    # body. A named official's address is a different thing, and the packets
+    # promised it would appear nowhere, which is what these two tests hold. The
+    # local parts are listed without the domain, so this file does not itself
+    # become a list of committed addresses.
+    FUNCTIONAL_LOCAL_PARTS: ClassVar[set[str]] = {
+        "dalarna",
+        "gavleborg",
+        "kronoberg",
+        "lansstyrelsen.vasternorrland",
+        "orebro",
+        "skane",
+        "uppsala",
+        "varmland",
+        "vasterbotten",
+        "vasternorrland",
+        "vastmanland",
+        "vastragotaland",
+    }
+    FUNCTIONAL_DOMAINS: ClassVar[set[str]] = {
+        "lansstyrelsen.se",
+        "jordbruksverket.se",
+    }
+
+    def test_only_functional_mailboxes_in_the_reply_register(self):
+        path = ROOT / "data" / "p12_svar.jsonl"
+        if not path.exists():
+            return
+        offenders = []
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            # The decoded text, not the raw line: a JSONL escape would otherwise
+            # glue an n onto the local part and hide what is really there.
+            fields = " ".join(
+                str(record.get(key) or "")
+                for key in ("text", "avsandare", "amnesrad", "bilagor", "utelamnat")
+            )
+            for found in self.EMAIL.findall(fields):
+                if found in self.ALLOWED_EMAILS:
+                    continue
+                local, _, domain = found.rpartition("@")
+                if (
+                    domain.lower() in self.FUNCTIONAL_DOMAINS
+                    and local.lower() in self.FUNCTIONAL_LOCAL_PARTS
+                ):
+                    continue
+                if (
+                    domain.lower() == "jordbruksverket.se"
+                    and local.lower() == domain.split(".")[0]
+                ):
+                    continue
+                offenders.append(found)
+        assert not offenders, (
+            f"an address that is not a published functional mailbox: {offenders}"
+        )
+
+    def test_a_reply_names_a_role_and_never_a_person(self):
+        path = ROOT / "data" / "p12_svar.jsonl"
+        if not path.exists():
+            return
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            if record["avsandare"] == "namngiven tjänsteman":
+                assert record["roll"], "a named sender must carry its role instead"
+            if record["roll"]:
+                first = record["roll"].split()[0]
+                assert first in self.ROLES, (
+                    f"the role {record['roll']!r} starts with {first!r}, which is "
+                    "not one of the roles the repository writes"
+                )
+            assert record["meddelande"], "every reply carries its message id"
+
+    def test_the_sent_packets_still_hash_to_what_was_sent(self):
+        import hashlib
+
+        manifest = ROOT / "data" / "p12_avsant_manifest.jsonl"
+        if not manifest.exists():
+            return
+        rows = [
+            json.loads(line)
+            for line in manifest.read_text("utf-8").splitlines()
+            if line
+        ]
+        assert len(rows) == 22, "one archived letter per authority that got one"
+        for row in rows:
+            letter = ROOT / row["path"]
+            assert letter.exists(), f"{row['path']} is missing"
+            raw = letter.read_bytes()
+            assert hashlib.sha256(raw).hexdigest() == row["sha256"], (
+                f"{row['path']} no longer hashes to what was sent"
+            )
+            assert len(raw) == row["bytes"]
+
+    def test_the_sweden_export_agrees_with_the_masking_register(self):
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        masking = ROOT / "data" / "maskning.jsonl"
+        if not export.exists():
+            return
+        rows = [
+            json.loads(line) for line in masking.read_text("utf-8").splitlines() if line
+        ]
+        data = json.loads(export.read_text("utf-8"))
+        for authority in data["myndigheter"]:
+            for klass, figures in authority["klasser"].items():
+                prefix = f"{authority['slug']}_{klass}/"
+                own = [row for row in rows if row["path"].startswith(prefix)]
+                assert figures["dokument"] == len(own), authority["slug"]
+                assert figures["maskade"] == sum(1 for row in own if row["masked"]), (
+                    authority["slug"]
+                )
+
+    def test_every_authority_in_the_export_has_a_reply_or_says_it_has_none(self):
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        if not export.exists():
+            return
+        data = json.loads(export.read_text("utf-8"))
+        assert len(data["myndigheter"]) == 22
+        for authority in data["myndigheter"]:
+            substantive = [
+                reply for reply in authority["svar"] if reply["typ"] == "substantiellt"
+            ]
+            assert authority["svar_saknas"] == (not substantive), authority["slug"]
 
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
