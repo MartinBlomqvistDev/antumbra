@@ -127,6 +127,9 @@ det stapeln redan visar och bränner den enda fria kanalen.
 
 ## 6. Innan .pbix committas
 
+- Filen sparas som `docs/antumbra.pbix`. `.gitignore` ignorerar `*.pbix` och
+  gör ett undantag för exakt den sökvägen, så en fil som ligger någon
+  annanstans försvinner tyst ur `git add`.
 - Ta bort alla dataanslutningar som pekar på absoluta sökvägar utanför repot.
 - Kontrollera att ingen personuppgift följt med. Lagret innehåller inga, men
   kontrollen görs ändå.

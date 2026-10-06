@@ -37,6 +37,10 @@ data/warehouse/
 data/*.parquet
 data/*.duckdb
 *.pbix
+# One exception: the reviewed Power BI file over the DG SANTE layer, which the
+# stack declaration puts in the repository. It is committed only after the
+# review in docs/POWERBI.md, and only under this one path.
+!docs/antumbra.pbix
 
 # Python
 __pycache__/
