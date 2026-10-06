@@ -149,9 +149,81 @@ export const sv: Copy = {
         "myndigheterna, inte frågorna.",
     },
     processNote:
-      "Insamlingen pågår. Det som visas här är processen i realtid, " +
-      "hämtad ur händelseloggen; resultaten och jämförelsen mellan länen " +
-      "publiceras när insamlingen är stängd.",
+      "Insamlingen är stängd. Samtliga 43 begäranden har nått ett " +
+      "slutstatus, och varje berörd myndighet fick sina egna tal den 2 " +
+      "oktober 2026 med tre veckors svarstid. Myndigheternas svar står " +
+      "ordagrant vid sidan av siffrorna på sidan Handlingar, och uteblivet " +
+      "svar skrivs ut som uteblivet svar.",
+    resultat: {
+      heading: "Maskningen i de två handlingsklasserna",
+      note:
+        "Ett dokument räknas som maskat när en fylld rektangel täcker text " +
+        "eller när text saknas under rektangeln. Måttet är maskinellt och " +
+        "beskrivet i sin helhet i metoden. Det mäter om myndigheten lämnade " +
+        "ut uppgiften, aldrig vad uppgiften är.",
+      classLabel: "Klass",
+      documents: "Dokument",
+      masked: "Med minst en maskning",
+      authorities: "Myndigheter",
+      classes: {
+        A: "A, kontrollrapporter med bilagor",
+        B: "B, beslut om föreläggande med bilagor",
+      },
+      contrast:
+        "Kontrastmåttet enligt protokollets punkt P1 är skillnaden inom " +
+        "samma myndighet. För de {counties} län som levererat i båda " +
+        "klasserna är medianskillnaden {share} procentenheter i andel " +
+        "maskade dokument och {area} procentenheter i maskad yta.",
+      contrastException:
+        "Två mått drar isär, och det redovisas i stället för att utjämnas " +
+        "av medianen: {names} maskar en större andel av sina dokument i " +
+        "klass B än i klass A. Inget län maskar en större yta i klass B.",
+      contrastNoException:
+        "Inget län maskar mer i klass B än i klass A, i något av de två " +
+        "måtten.",
+    },
+    lanJamforelse: {
+      heading: "Länen i den ordning måttet ger",
+      note:
+        "Ordningen är den varje myndighet fick i sitt eget underlag före " +
+        "publicering. Myndigheter med samma andel delar plats, eftersom " +
+        "mätningen inte skiljer dem åt, och ordningen innebär ingen " +
+        "bedömning av handläggningen.",
+      classHeading: {
+        A: "Klass A, kontrollrapporter",
+        B: "Klass B, beslut om föreläggande",
+      },
+      caption:
+        "Andelen dokument med minst en maskning, per myndighet. Antalet " +
+        "dokument skiljer sig mellan myndigheter, eftersom begäran hade ett " +
+        "tak och några myndigheter tog ut en avgift som ledde till en " +
+        "avsmalning.",
+      intervalNote:
+        "Intervallet är ett 95-procentigt Wilson-intervall. Det behandlar " +
+        "en myndighets dokument som oberoende dragningar, vilket de inte " +
+        "är, så det är ett golv för osäkerheten och inget påstående om " +
+        "myndighetens praxis.",
+      separated:
+        "Måttet skiljer {separated} av {pairs} länspar; de övriga paren har " +
+        "överlappande intervall och hålls isär av ingenting.",
+      headers: {
+        place: "Plats",
+        authority: "Myndighet",
+        documents: "Dokument",
+        share: "Med minst en maskning",
+        interval: "Intervall",
+      },
+    },
+    notShown: {
+      heading: "Vad sidan inte visar",
+      items: [
+        "Handlingarna själva. De innehåller personuppgifter och publiceras aldrig; förteckningen med kontrollsumma per fil står på sidan Handlingar.",
+        "Något påstående om att en myndighet brutit mot lag. Rättsläget är oavgjort, Högsta förvaltningsdomstolen har inte prövat frågan, och fyra mål ligger hos kammarrätterna.",
+        "Tre län som avstod från kopiorna sedan en avgift kvarstod efter avsmalningen. De bär svarstid och avgiftsuppgift men inga dokument i maskningsmätningen, och bortfallet räknas aldrig som ett utlämnande eller som ett avslag.",
+        "Gris som jämförelse. Sexton dokument har gris som dominerande djurslag, utspridda på tio län, så inget län har underlag på båda sidor.",
+        "De gränser måttet har. De står i metoden, tillsammans med avvikelserna från förregistreringen och de fel som rättats under arbetet.",
+      ],
+    },
     overview: {
       heading: "Läget i siffror",
       sent: "begäranden avsända",
@@ -351,6 +423,47 @@ export const sv: Copy = {
       "Vad som begärts ut, vad som lämnats ut, vad som inte lämnats ut " +
       "och varför. Dokumenten innehåller personuppgifter och publiceras " +
       "inte; förteckningen gör leveranserna verifierbara utan dem.",
+    tavla: {
+      heading: "Myndigheterna, en i taget",
+      note:
+        "Talen är de som myndigheten själv fick före publicering, och " +
+        "svaret står ordagrant under dem. Namn på enskilda tjänstemän " +
+        "återges inte: där ett svar är undertecknat skrivs rollen i stället.",
+      classWord: "Klass",
+      documents: "Dokument",
+      masked: "Maskade",
+      area: "Maskad yta",
+      interval: "Intervall",
+      place: "Plats",
+      placeOf: "i jämförelsen",
+      noFigures:
+        "Inga dokument i maskningsmätningen. Myndigheten bär svarstid och " +
+        "avgiftsuppgift, och bortfallet räknas aldrig som ett utlämnande " +
+        "eller som ett avslag.",
+      reply: {
+        heading: "Myndighetens svar",
+        none: "Inget svar har kommit in",
+        kinds: {
+          autosvar: "autosvar",
+          besked: "besked om handläggningen",
+          substantiellt: "svar i sak",
+        },
+        from: "från",
+        subject: "Ämnesrad:",
+        attachments: "Bilagor:",
+        omitted: "Återges inte:",
+        message: "Meddelande",
+      },
+      packet: {
+        heading: "Underlaget myndigheten fick",
+        note:
+          "Brevet som skickades ligger arkiverat med kontrollsumma. Koden " +
+          "som bygger breven är rättad två gånger sedan utskicket, så ett " +
+          "brev byggt i dag är inte brevet som gick; rättelserna står i " +
+          "händelseloggen.",
+        sent: "Avsänt",
+      },
+    },
     deliveries: {
       heading: "Levererade handlingar",
       note:

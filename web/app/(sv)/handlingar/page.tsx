@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/shell";
+import { AuthorityBoard } from "@/components/sweden";
 import { sv } from "@/content/sv";
 import { readDeliveryManifest } from "@/lib/log";
+import { readSweden } from "@/lib/sverige";
 
 const copy = sv.handlingar!;
 
@@ -9,6 +11,7 @@ export const metadata: Metadata = { title: copy.title };
 
 export default function Handlingar() {
   const manifest = readDeliveryManifest();
+  const sweden = readSweden();
   const count = new Intl.NumberFormat("sv-SE");
 
   const folders = new Map<string, typeof manifest>();
@@ -20,6 +23,24 @@ export default function Handlingar() {
   return (
     <div className="space-y-12">
       <PageIntro title={copy.title} lead={copy.lead} />
+      <section className="space-y-3">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {copy.tavla.heading}
+        </h2>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.tavla.note}
+        </p>
+        <div className="space-y-2">
+          {sweden.myndigheter.map((authority) => (
+            <AuthorityBoard
+              key={authority.slug}
+              authority={authority}
+              labels={copy.tavla}
+              locale="sv-SE"
+            />
+          ))}
+        </div>
+      </section>
       <section className="space-y-3">
         <h2 className="font-display text-2xl font-semibold tracking-tight">
           {copy.deliveries.heading}

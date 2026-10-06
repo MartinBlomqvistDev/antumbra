@@ -21,9 +21,7 @@ export default function Metod() {
         <h2 className="font-display text-2xl font-semibold tracking-tight">
           {sv.metod.avvikelser.heading}
         </h2>
-        <p className="text-sm text-ink-secondary">
-          {sv.metod.avvikelser.note}
-        </p>
+        <p className="text-sm text-ink-secondary">{sv.metod.avvikelser.note}</p>
         <dl className="space-y-3">
           {sv.metod.avvikelser.items.map((item) => (
             <div key={item.title} className="space-y-1">

@@ -52,6 +52,34 @@ export type Copy = {
   sverige?: PageCopy & {
     design: { heading: string; body: string };
     processNote: string;
+    resultat: {
+      heading: string;
+      note: string;
+      classLabel: string;
+      documents: string;
+      masked: string;
+      authorities: string;
+      classes: { A: string; B: string };
+      contrast: string;
+      contrastException: string;
+      contrastNoException: string;
+    };
+    lanJamforelse: {
+      heading: string;
+      note: string;
+      classHeading: { A: string; B: string };
+      caption: string;
+      intervalNote: string;
+      separated: string;
+      headers: {
+        place: string;
+        authority: string;
+        documents: string;
+        share: string;
+        interval: string;
+      };
+    };
+    notShown: { heading: string; items: string[] };
     overview: {
       heading: string;
       sent: string;
@@ -141,6 +169,29 @@ export type Copy = {
     };
   };
   handlingar?: PageCopy & {
+    tavla: {
+      heading: string;
+      note: string;
+      classWord: string;
+      documents: string;
+      masked: string;
+      area: string;
+      interval: string;
+      place: string;
+      placeOf: string;
+      noFigures: string;
+      reply: {
+        heading: string;
+        none: string;
+        kinds: { autosvar: string; besked: string; substantiellt: string };
+        from: string;
+        subject: string;
+        attachments: string;
+        omitted: string;
+        message: string;
+      };
+      packet: { heading: string; note: string; sent: string };
+    };
     deliveries: {
       heading: string;
       note: string;

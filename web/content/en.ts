@@ -87,10 +87,85 @@ export const en: Copy = {
         "the authorities, not the questions.",
     },
     processNote:
-      "The collection is ongoing. What is shown here is the process in " +
-      "real time, drawn from the event log; the results and the " +
-      "county-by-county comparison are published once the collection " +
-      "has closed.",
+      "The collection is closed. All 43 requests reached a final status, " +
+      "and every authority concerned received its own figures on 2 October " +
+      "2026 with three weeks to reply. The authorities' replies stand " +
+      "verbatim beside the figures on the Swedish page Handlingar, and a " +
+      "missing reply is written out as a missing reply.",
+    resultat: {
+      heading: "Redaction in the two document classes",
+      note:
+        "A document counts as redacted when a filled rectangle covers text " +
+        "or when text is missing under the rectangle. The measure is " +
+        "machine-made and described in full in the method. It measures " +
+        "whether the authority released the information, never what the " +
+        "information is.",
+      classLabel: "Class",
+      documents: "Documents",
+      masked: "With at least one redaction",
+      authorities: "Authorities",
+      classes: {
+        A: "A, inspection reports with annexes",
+        B: "B, injunction decisions with annexes",
+      },
+      contrast:
+        "The contrast measure under point P1 of the protocol is the " +
+        "difference inside the same authority. Across the {counties} " +
+        "counties that delivered in both classes the median difference is " +
+        "{share} percentage points in the share of redacted documents and " +
+        "{area} percentage points in redacted area.",
+      contrastException:
+        "The two measures pull apart, and that is reported rather than " +
+        "evened out by the median: {names} redact a larger share of their " +
+        "class B documents than of their class A documents. No county " +
+        "redacts a larger area in class B.",
+      contrastNoException:
+        "No county redacts more in class B than in class A, on either " +
+        "measure.",
+    },
+    lanJamforelse: {
+      heading: "The counties in the order the measure gives",
+      note:
+        "The order is the one every authority received in its own material " +
+        "before publication. Authorities with the same share share a place, " +
+        "because the measure does not separate them, and the order implies " +
+        "no judgement of their handling.",
+      classHeading: {
+        A: "Class A, inspection reports",
+        B: "Class B, injunction decisions",
+      },
+      caption:
+        "The share of documents with at least one redaction, per authority. " +
+        "The number of documents differs between authorities, because the " +
+        "request had a cap and some authorities raised a fee that led to a " +
+        "narrowing.",
+      intervalNote:
+        "The interval is a 95 per cent Wilson interval. It treats one " +
+        "authority's documents as independent draws, which they are not, so " +
+        "it is a floor on the uncertainty and no statement about the " +
+        "authority's practice.",
+      separated:
+        "The measure separates {separated} of {pairs} pairs of counties; the " +
+        "remaining pairs have overlapping intervals and are held apart by " +
+        "nothing.",
+      headers: {
+        place: "Place",
+        authority: "Authority",
+        documents: "Documents",
+        share: "With at least one redaction",
+        interval: "Interval",
+      },
+    },
+    notShown: {
+      heading: "What this page does not show",
+      items: [
+        "The documents themselves. They contain personal data and are never published; the listing with a checksum per file is on the Swedish page Handlingar.",
+        "Any claim that an authority has broken the law. The law is unsettled, the Supreme Administrative Court has not decided the question, and four cases are before the administrative courts of appeal.",
+        "Three counties that declined the copies once a fee remained after the narrowing. They carry a response time and a fee figure but no documents in the redaction measure, and the loss is never counted as a release or as a refusal.",
+        "Pigs as a comparison. Sixteen documents have pigs as their dominant animal, spread across ten counties, so no county has material on both sides.",
+        "The limits of the measure. They are in the method, together with the deviations from the pre-registration and the errors corrected during the work.",
+      ],
+    },
     overview: {
       heading: "The state of play in numbers",
       sent: "requests sent",
