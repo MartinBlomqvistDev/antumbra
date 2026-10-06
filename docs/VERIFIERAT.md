@@ -318,6 +318,91 @@ att skrivelserna inte skickas i efterhand.
 inte går ut i något paket, och de delar av myndigheternas brev som är
 logistik, länkar och signaturer och aldrig citerats.
 
+## Tre fel i P12-paketen, funna 2 till 6 oktober 2026
+
+Paketen gick den 2 oktober mellan 13:12:22 och 13:15:24. Felen nedan hittades
+efter utskicket, ett av dem av mottagaren själv. De står här därför att varje
+brev hänvisar hit för de gränser måttet har *"tillsammans med de fel som rättats
+under arbetet"*, och därför att ett fel som bara ligger i protokollloggen är
+svårare att hitta än ett som ligger i dokumentationen.
+
+**1. Ett påstående om projektets egen handläggning var hårdkodat.** Avsnittet om
+den avslutande frågan skrev att en förtydligandefråga från myndigheten
+besvarades samma dag, oavsett vad loggen bar. Formuleringen kom ur Hallands
+fall, där den var sann. Steg 36 läser nu länets fråga och projektets svar som
+två skilda händelser och skriver antingen samma dag, eller svarsdatumet, eller
+att frågan är obesvarad när paketet byggs. Tre loggrader skrevs innan de
+händelsenamn som skiljer frågorna fanns, och de bärs som undantag i läsaren i
+stället för att skrivas om, eftersom loggen är append-only.
+
+**2. Västmanland A vilade på en rad myndigheten inte kan se.** Brevet sade att
+begäran A avslutades 2026-09-30, dag 42, och att svarstiden därför redovisas som
+censurerad vid dag 40. Länet levererade 2026-08-05 11:21, dag 2, nio handlingar
+i en samlad försändelse för båda begärandena, efter att självt ha skrivit
+2026-08-04 13:42: *"Jag hanterar dina mejl som en och samma begäran."* Datumet
+30 september är projektets egen bokföringsrad `leverans fullgjord` och ingen
+händelse hos länet. Steg 36 valde den raden därför att A-spåret saknar en synlig
+avslutande händelse: leveransen ligger loggad under B enligt P0b, som säger att
+svarstiden tillskrivs båda begärandena.
+
+Steget är ändrat på två punkter. En slutstatus som vilar på en rad myndigheten
+inte kan se namnges inte längre som avslutsdatum; i stället pekas den synliga
+leverans ut som bär ett sammanslaget ärende, och finns ingen sådan vägrar steget
+skriva paketet i stället för att falla tillbaka på en intern rad. Kontrollerat
+över samtliga 43 spår är Västmanland A det enda som vilade på en intern rad.
+Blekinge A och Norrbotten A avslutas dag 41 med synliga leveranser, så deras
+censurering vid dag 40 står kvar enligt tillägget till tillämpningsnot 7.
+
+**Ingen siffra i maskningsmätningen rör sig.** Det som ändras är svarstiden för
+Västmanland A, som går från censurerad vid dag 40 till mätt till dag 2. Inget
+T1- eller T2-tal var publicerat när felet hittades.
+
+**3. Två rader om Jordbruksverket bar fel begäran, och brevet växte två tomma
+avsnitt.** Raderna om Jordbruksverkets P12-paket, 13:13:59 och 13:14:21 den
+2 oktober, skrevs med begäran A+B. Jordbruksverket har bara begäran C, så
+paketet byggde ett avsnitt för A och ett för B som sade att inget substantiellt
+besked registrerats för två begäranden som aldrig skickades dit. Steg 36 räknar
+nu bara ett spår som en begäran om spåret bär en avsändning, så en felskriven
+klass kan inte uppfinna en begäran.
+
+**P12-händelserna öppnade alla 43 avslutade begäranden.** Loggade på
+begärandespåren läste instrumentet dem som nya händelser i ärenden som stängt i
+augusti, vilket är samma fel som tillämpningsnot 7 rättade för P11. P12 har
+därför ett eget spår i `src/open_items.py`: paketet tillhör myndigheten och inte
+någon av de 43 begärandena, det bär båda klasserna samtidigt, och dess tre
+veckor är projektets eget åtagande i not 8 och ingen frist i P1 eller P4. Samma
+händelser filtreras också ur varje begärans egen tidslinje i paketen, så att
+tidsförloppet för en begäran bara visar händelser i den begäran.
+
+**Myndighetens egen läsning av felet.** Länsstyrelsen i Västmanland invände den
+5 oktober 18:26 mot påståendet om begäran A och bifogade skärmbilder av sina två
+meddelanden den 5 augusti. En rättelse gick 19:44 och ett svar på invändningen
+20:37, båda lästa och avsända av Martin. Länet avslutade frågan den 6 oktober
+08:24, i sin helhet: *"Tusen tack. Jag uppfattade det i ditt material som att
+korrigeringen redan hade skickats till dig men att du valt att inte göra någon
+justering i samband med det."* Invändningen bar också en andra sak, som är
+riktig: P11:s och P12:s händelser hörde inte i begärans eget tidsförlopp.
+
+**En avvikelse hos projektet självt, mot avsnitt 7.** Rättelsen av de två
+Jordbruksverket-raderna gjordes först genom att skriva om fältet i två redan
+committade rader, i `f321bc9`. Avsnitt 7 lyder att *"Raderna läggs till och
+ändras aldrig"* och att en rättelse skrivs som en egen rad. Avvikelsen lagas
+inte med en ny ändring: de två raderna står kvar som de nu är committade och ska
+läsas som begäran C, git-historiken bär båda lydelserna, och avvikelsen är
+deklarerad som en egen rad i loggen. De 40 senaste commitarna som rör loggen är
+kontrollerade, och `f321bc9` är den enda som ändrat en befintlig rad. Härefter
+skrivs varje rättelse som en ny rad även före commit; gränsen jag tillämpade var
+commiten, och avsnitt 7 drar ingen sådan gräns.
+
+**Gävleborgs paket gick 19 sekunder efter svaret på länets egen fråga**,
+13:12:28 mot 13:12:09, så brevet säger att frågan är obesvarad. Påståendet var
+sant vid byggtidpunkten 13:05 men går inte att läsa ut ur brevet, och länet fick
+två meddelanden inom 19 sekunder där det ena besvarar frågan och det andra säger
+att den inte är besvarad. En rättelse gick samma dag 20:24. Paketet borde ha
+byggts om en andra gång efter att svaret gick.
+
+---
+
 ## Maskningsmätningen: bildmetoden mot textlagret
 
 Verifierat 2026-08-14 genom körning över hela leveransmaterialet, steg 18.
