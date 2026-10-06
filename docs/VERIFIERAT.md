@@ -403,6 +403,62 @@ byggts om en andra gång efter att svaret gick.
 
 ---
 
+## Avgiftsmåttet och utlämningsgraden, 2026-10-06
+
+Två mått som protokollet förklarade och som ingen hade räknat. Reglerna skrevs
+i steg 42:s huvud innan steget kördes.
+
+### Avgiftsmåttet, tillämpningsnot 5
+
+Noten deklarerar måttet i samma andetag som regeln: antal skrivelser i
+avgiftsfrågan fram till ett överklagbart beslut, och utfall i fyra klasser, för
+samtliga 21 länsstyrelser oavsett utfall.
+
+**41 skrivelser i avgiftsfrågan**, fördelade på de 16 län som aviserade en
+avgift. Fem län aviserade ingen. Flest skrivelser krävdes i Jönköping, Kalmar
+och Örebro med fem var.
+
+| Utfall | Län |
+| --- | --- |
+| Beslut meddelat | 2, Skåne och Örebro |
+| Beslut vägrat | 1, Jönköping |
+| Generellt styrdokument i stället för beslut | 1, Kalmar |
+| Uteblivet svar | 0 |
+| Avgiften föll efter avsmalningen | 12 |
+| Ingen avgift aviserad | 5 |
+
+**Två klasser fick läggas till, och det är ett resultat om noten själv.** De
+fyra förskrivna klasserna hade ingen plats för det som hände i tolv län:
+myndigheten aviserade en avgift, projektets avsmalningssvar gick ut enligt P5,
+och handlingarna kom därefter utan avgift. Att kalla det uteblivet svar hade
+lagt en tystnad på myndigheten som den aldrig höll. Klassen heter därför
+*avgiften föll efter avsmalningen* och läses bara där ingen avgift kvarstod,
+vilket loggen märker med en egen händelse. Den sjätte klassen är de fem län som
+aldrig aviserade någon avgift, som noten kräver ska redovisas ändå.
+
+### Utlämningsgraden, P11: en lucka med sitt skäl
+
+P11 definierar måttet som *"levererade handlingar delat med det lägre av taket
+och antalet som fanns"*. Nämnaren finns: taket är 20 i klass A och 10 i klass B,
+fem i vardera efter en avsmalning enligt P5, och länens egna tal ligger i
+`data/namnare.jsonl` för 19 av 21 län.
+
+**Täljaren finns inte i takets enhet.** Taket räknar kontroller och beslut,
+medan leveransen kommer som filer, och en kontroll kan vara en rapport plus
+fotobilagor. Nio av de 42 kombinationerna av län och klass har fler filer än
+taket tillåter kontroller: tydligast Uppsala med 27 filer i klass A mot ett tak
+på 20 kontroller, och Västernorrland med 26 filer i klass B mot ett tak på 10
+beslut. Ingenting i materialet växlar mellan enheterna, eftersom inget fält
+knyter en fil till en kontroll.
+
+Måttet redovisas därför som en lucka med skälet utskrivet, i
+`data/utlamningsgrad.jsonl`, en rad per län och klass med taket, om begäran
+smalnats av, om länet lämnat en egen nämnare och hur många filer som kom.
+Luckan uppskattas aldrig. En invariant i testsviten fäller om fältet fylls i
+utan att skälet försvinner först.
+
+---
+
 ## Jämförelsens upplösning, mätt 2026-10-06
 
 Risk 10 i `docs/BEGARANMALL.md` har motmedlet *"intervall redovisas alltid;

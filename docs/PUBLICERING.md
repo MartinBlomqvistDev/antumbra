@@ -93,10 +93,11 @@ som inte följde med. Varken flaggan eller måtten finns i någon fil. Den
 maskningsmätning som är gjord mäter dokument och sidyta, inte bilagor.
 
 **Utlämningsgraden.** P11: *"levererade handlingar delat med det lägre av taket
-och antalet som fanns"*. Nämnarna ligger i `data/namnare.jsonl` för 19 av 21
-län, täljarna i leveransmanifestet, och kvoten beräknas inte någonstans. Not 9
-slår fast att storleksläsningen inte rör utlämningsgraden, eftersom taket binder
-i praktiskt taget varje län.
+och antalet som fanns"*. **Prövad 2026-10-06 och redovisad som en lucka.**
+Nämnaren finns för 19 av 21 län, men täljaren finns inte i takets enhet: taket
+räknar kontroller och beslut, leveransen kommer som filer, och nio län och
+klasser har fler filer än taket tillåter kontroller. Skälet och underlaget står
+i `docs/VERIFIERAT.md` och `data/utlamningsgrad.jsonl`.
 
 **Dubbelförekomsten.** P1 och ombyggnad 1 varv 2: par där samma
 kontrolltillfälle förekommer både som fristående rapport i A och som bilaga i B
@@ -106,8 +107,10 @@ par. Utfallet kan bli noll identifierade par, och noll är då resultatet.
 **Avgiftsskrivelsemåttet.** Tillämpningsnot 5 deklarerar måttet samtidigt som
 regeln: antal skrivelser i avgiftsfrågan fram till ett överklagbart beslut i
 ärendet, och utfall i fyra klasser, *"för samtliga 21 länsstyrelser oavsett
-utfall, inklusive de län där noll skrivelser behövdes"*. Händelserna finns i
-loggen, sexton län har minst en, och sammanställningen finns inte.
+utfall, inklusive de län där noll skrivelser behövdes"*. **Räknat 2026-10-06**
+av steg 42: 41 skrivelser, och sex utfallsklasser i stället för fyra. Talen och
+skälet till de två tillagda klasserna står i `docs/VERIFIERAT.md`. Kvar står att
+ställa måttet på en publicerad yta.
 
 ---
 

@@ -526,6 +526,52 @@ class TestNoPersonalDataIsCommitted:
             ]
             assert authority["svar_saknas"] == (not substantive), authority["slug"]
 
+    # Tillämpningsnot 5 declares the fee measure for all 21 counties, whatever
+    # the outcome, and tillämpningsnot 7 forbids estimating a figure that is
+    # missing. These two hold both halves: every county is in the register, and
+    # the release rate stays an open gap with its reason until something in the
+    # material converts files into controls.
+    FEE_OUTCOMES: ClassVar[set[str]] = {
+        "beslut meddelat",
+        "beslut vägrat",
+        "generellt styrdokument",
+        "uteblivet svar",
+        "avgiften föll efter avsmalningen",
+        "ingen avgift aviserad",
+    }
+
+    def test_the_fee_measure_covers_every_county(self):
+        path = ROOT / "data" / "avgiftsskrivelser.jsonl"
+        if not path.exists():
+            return
+        rows = [
+            json.loads(line) for line in path.read_text("utf-8").splitlines() if line
+        ]
+        assert len(rows) == 21, (
+            "the measure is reported for all 21, whatever the outcome"
+        )
+        assert len({row["myndighet"] for row in rows}) == 21
+        for row in rows:
+            assert row["utfall"] in self.FEE_OUTCOMES, row["utfall"]
+            if row["avgiftsbesked"] == 0:
+                assert row["utfall"] == "ingen avgift aviserad", row["myndighet"]
+                assert row["skrivelser"] == 0
+
+    def test_the_release_rate_stays_a_gap_with_its_reason(self):
+        path = ROOT / "data" / "utlamningsgrad.jsonl"
+        if not path.exists():
+            return
+        rows = [
+            json.loads(line) for line in path.read_text("utf-8").splitlines() if line
+        ]
+        assert len(rows) == 42, "one row per county and class"
+        for row in rows:
+            assert row["utlamningsgrad"] is None, (
+                "P11's rate is not computed; filling it in silently would put a "
+                "count of files over a cap that counts controls"
+            )
+            assert row["skal"], "a gap carries the reason it is a gap"
+
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
         assert not pdfs, (
