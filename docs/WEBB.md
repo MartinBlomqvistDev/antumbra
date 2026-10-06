@@ -107,6 +107,17 @@ Två klockor styr ordningen: BigQuery-sandlådan går ut runt 2 oktober, så
 exporten görs först och siten är därefter GCP-fri i bygget; protokollet
 tillåter ingenting publikt före dag 40 (måndag 28 september).
 
+**Tillägg 2026-10-06: båda klockorna har ändrats, och ingen av dem står
+kvar som den skrevs.** Faktureringen aktiverades 2026-08-06 och samma dag
+verifierades att inget dataset och ingen tabell i `antumbra-504411` har
+någon utgångstid, så sandlådans sextio dagar gäller inte och exporten är
+inte längre tidsstyrd. Publiceringsgolvet flyttades av tillämpningsnot 8,
+som slår fast att öppnandet av en yta är publicering enligt P12: dag 40 är
+inte längre datumet, utan dagen efter att P12:s tre veckor löpt ut. P12
+gick 2026-10-02 med svarstid till den 23 oktober, så varje *tidigast dag
+40* i det här dokumentet ska läsas som tidigast lördag 2026-10-24.
+Ordningen på publiceringsdagen står i `docs/PUBLICERING.md`.
+
 1. **AP1 Dataexport:** aggregat per land/år/ämne, underlag per land på
    styckenivå som separata filer, korpusartefakterna för HF-datasetet;
    committad JSON med manifest och radantal, rerunnbar.
