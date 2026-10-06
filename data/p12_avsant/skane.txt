@@ -1,0 +1,118 @@
+Till Länsstyrelsen i Skåne län
+
+Hej!
+
+Det här är vad som kommer att publiceras om er myndighet i ett
+kunskapsunderlag om djurskyddskontrollens likvärdighet, byggt på
+myndigheternas egna beslut och kontrollhandlingar. Ni får det före
+publicering, med tre veckors svarstid, enligt punkt P12 i projektets
+handläggningsprotokoll. Ett svar publiceras oavkortat vid sidan av
+siffrorna. Uteblir svar publiceras siffrorna som de står, och det
+antecknas att svar inte kommit.
+
+Publiceringen sker tidigast dagen efter svarstidens slut. Den omfattar
+ett publikt kodarkiv på GitHub, en webbplats och ett dataset, och i
+materialet ingår hela handläggningsprotokollet och hela
+korrespondensloggen, alltså också de mejl ni har skickat i de här
+ärendena, ordagrant. Namn på enskilda tjänstemän återges inte
+någonstans: där ett beslut namnger beslutsfattare och föredragande
+skrivs rollen i stället.
+
+Vill ni läsa metodbeskrivningen innan den publiceras skickar jag de
+delar som rör er myndighet om ni hör av er.
+
+Varje uppgift nedan är antingen ett tal som går att räkna fram ur
+underlaget eller ett ordagrant citat ur er egen skrivelse. Ingenting är
+en karaktärisering av myndigheten.
+
+Begäran och tidsförlopp
+
+Begäran skickades måndag 2026-08-03, samma dag till samtliga 21
+länsstyrelser och till Jordbruksverket, som dag 0. Arbetsdagar räknas
+därifrån.
+
+Begäran A, kontrollrapporter med bilagor
+
+Första substantiella besked enligt P1: dag 0, 2026-08-03, loggat som
+avgiftsbesked. Avslutat enligt P1: dag 2, 2026-08-05, loggat som
+avgiftsbeslut mottaget.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-03 dag 0 ni avgiftsbesked
+2026-08-04 dag 1 jag avsmalningssvar
+2026-08-04 dag 1 ni avgift kvarstår
+2026-08-04 dag 1 jag avstående
+2026-08-05 dag 2 ni diarieföringsbesked
+2026-08-05 dag 2 ni avgiftsbeslut mottaget
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni svar på nämnarfrågan
+
+Begäran B, beslut om föreläggande
+
+Första substantiella besked enligt P1: dag 0, 2026-08-03, loggat som
+avgiftsbesked. Avslutat enligt P1: dag 2, 2026-08-05, loggat som
+avgiftsbeslut mottaget.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-03 dag 0 ni avgiftsbesked
+2026-08-04 dag 1 jag avsmalningssvar
+2026-08-04 dag 1 ni avgift kvarstår
+2026-08-04 dag 1 jag avstående
+2026-08-05 dag 2 ni diarieföringsbesked
+2026-08-05 dag 2 ni avgiftsbeslut mottaget
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni svar på nämnarfrågan
+
+Maskningsmätningen
+
+Inga handlingar från er myndighet ingår i maskningsmätningen, eftersom
+ingen leverans har arkiverats.
+
+Avgiften och vad den ledde till
+
+Projektets budget är noll kronor, vilket står i protokollet sedan före
+utskicket. Vid varje avgiftsbesked smalnades begäran av enligt en fast
+regel, lika mot alla, och kvarstod avgiften avstods kopiorna. Den 5
+augusti 2026 meddelade ni ett överklagbart beslut i avgiftsfrågan.
+Begäran stannade därmed vid avgiften, och er myndighet bidrar med
+svarstid och avgiftsuppgift men saknar handlingar i maskningsmätningen.
+Bortfallet redovisas öppet och räknas aldrig som ett utlämnande eller
+som ett avslag.
+
+Ert svar på den avslutande frågan
+
+Den 28 september 2026 ställdes en likalydande fråga till samtliga 21
+länsstyrelser om antalet kontroller och förelägganden. Svaret jämförs
+med Jordbruksverkets uppgifter, och avvikelser mellan källorna redovisas
+utan att någon av dem rättas. Ni svarade:
+
+  Vi har tyvärr ingen möjlighet att ta fram svar på nedanstående frågor
+  då våra djurskyddskontroller inte registreras kopplat till djurslag.
+
+Svaret redovisas som att nämnaren saknas för er del. Den uppskattas
+aldrig, och luckan redovisas som en lucka.
+
+Vad underlaget inte påstår
+
+Projektet påstår inte att någon myndighet brutit mot lag. Frågan om
+sekretess i kontrollhandlingar saknar prejudikat från Högsta
+förvaltningsdomstolen för den handlingstyp som mäts, och tre beslut om
+maskning ligger hos kammarrätten. Där en avvikelse redovisas är den en
+avvikelse från befintlig kammarrättspraxis för beslutsbilagor, ingenting
+mer.
+
+Måttet är maskinellt och har kända gränser, som redovisas i
+dokumentationen tillsammans med de fel som rättats under arbetet.
+
+Om ni vill svara
+
+Svara på detta mejl senast den 23 oktober 2026, tre veckor efter att
+paketet skickades. Svaret publiceras oavkortat. Vill ni rätta en uppgift
+ber jag om den rättade uppgiften och var den kommer ifrån, så att
+rättelsen kan göras i underlaget och inte bara i texten.
+
+Med vänliga hälsningar,
+Martin Blomqvist
+cm.blomqvist@gmail.com

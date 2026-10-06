@@ -1,0 +1,174 @@
+Till Länsstyrelsen i Västmanlands län
+
+Hej!
+
+Det här är vad som kommer att publiceras om er myndighet i ett
+kunskapsunderlag om djurskyddskontrollens likvärdighet, byggt på
+myndigheternas egna beslut och kontrollhandlingar. Ni får det före
+publicering, med tre veckors svarstid, enligt punkt P12 i projektets
+handläggningsprotokoll. Ett svar publiceras oavkortat vid sidan av
+siffrorna. Uteblir svar publiceras siffrorna som de står, och det
+antecknas att svar inte kommit.
+
+Publiceringen sker tidigast dagen efter svarstidens slut. Den omfattar
+ett publikt kodarkiv på GitHub, en webbplats och ett dataset, och i
+materialet ingår hela handläggningsprotokollet och hela
+korrespondensloggen, alltså också de mejl ni har skickat i de här
+ärendena, ordagrant. Namn på enskilda tjänstemän återges inte
+någonstans: där ett beslut namnger beslutsfattare och föredragande
+skrivs rollen i stället.
+
+Vill ni läsa metodbeskrivningen innan den publiceras skickar jag de
+delar som rör er myndighet om ni hör av er.
+
+Varje uppgift nedan är antingen ett tal som går att räkna fram ur
+underlaget eller ett ordagrant citat ur er egen skrivelse. Ingenting är
+en karaktärisering av myndigheten.
+
+Begäran och tidsförlopp
+
+Begäran skickades måndag 2026-08-03, samma dag till samtliga 21
+länsstyrelser och till Jordbruksverket, som dag 0. Arbetsdagar räknas
+därifrån.
+
+Begäran A, kontrollrapporter med bilagor
+
+Första substantiella besked enligt P1: dag 0, 2026-08-03, loggat som
+avgiftsbesked och förtydligande. Avslutat 2026-09-30, alltså dag 42.
+Svarstiden redovisas som censurerad vid dag 40, eftersom datainsamlingen
+för svarstidsmåttet stängdes den dagen enligt P10 och en leverans efter
+den inte öppnar måttet igen. Handlingarna ingår däremot fullt ut i
+maskningsmätningen. Regeln står i tillägget till tillämpningsnot 7.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-03 dag 0 ni avgiftsbesked och förtydligande
+2026-08-04 dag 1 jag avsmalningssvar
+2026-08-04 dag 1 ni förtydligandefråga
+2026-08-04 dag 1 jag svar på förtydligandefråga
+2026-09-28 dag 40 jag påminnelse
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni besked om tidigare leverans
+2026-09-28 dag 40 jag rättelse
+2026-09-28 dag 40 ni besked om tidigare leverans
+2026-10-01 dag 43 ni svar på nämnarfrågan
+
+Begäran B, beslut om föreläggande
+
+Första substantiella besked enligt P1: dag 0, 2026-08-03, loggat som
+avgiftsbesked och förtydligande. Avslutat enligt P1: dag 2, 2026-08-05,
+loggat som leverans.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-03 dag 0 ni avgiftsbesked och förtydligande
+2026-08-04 dag 1 jag avsmalningssvar
+2026-08-04 dag 1 ni förtydligandefråga
+2026-08-04 dag 1 jag svar på förtydligandefråga
+2026-08-05 dag 2 ni leverans
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni besked om tidigare leverans
+2026-10-01 dag 43 ni svar på nämnarfrågan
+
+Maskningsmätningen
+
+Måttet är maskinellt och beskrivet i sin helhet i projektets
+dokumentation. Två tal redovisas: andelen dokument med minst en
+maskning, och andelen av sidytan som är maskad. Ett dokument räknas som
+maskat när en fylld rektangel täcker text eller när text saknas under
+rektangeln. Ytan i tabellen är ett medelvärde över klassens samtliga
+dokument. Dokument utan maskning räknas då som noll och drar ned
+medelvärdet.
+
+Klass Dokument Med minst en maskning Maskad yta
+B 9 3 (33,3 %) 0,29 %
+
+Er plats i jämförelsen, klass B
+
+Ordnat efter andelen dokument med minst en maskning ligger er myndighet
+på plats 5 av 18 bland dem som levererat i klass B. Myndigheter med
+samma andel delar plats, eftersom mätningen inte skiljer dem åt.
+Ordningen följer måttet och innebär ingen bedömning av handläggningen.
+Hela ordningen står nedan, eftersom en placering utan de andra talen
+inte går att bedöma.
+
+Jämförelsen omfattar 18 av de 21 länsstyrelserna. Tre län avstod från
+kopiorna sedan avgiften kvarstod efter avsmalningen, och har därför
+svarstid och avgiftsuppgift men inga handlingar i maskningsmätningen.
+Bortfallet redovisas öppet och räknas aldrig som ett utlämnande eller
+som ett avslag.
+
+Plats Myndighet Dokument Med minst en maskning
+1 Blekinge 5 100,0 %
+1 Kalmar 5 100,0 %
+3 Dalarna 10 80,0 %
+4 Södermanland 11 45,5 %
+5 Västmanland (er myndighet) 9 33,3 %
+6 Stockholm 4 25,0 %
+7 Kronoberg 5 20,0 %
+7 Västra Götaland 5 20,0 %
+9 Uppsala 11 18,2 %
+10 Halland 10 10,0 %
+11 Gotland 5 0,0 %
+11 Gävleborg 4 0,0 %
+11 Jämtland 10 0,0 %
+11 Norrbotten 1 0,0 %
+11 Värmland 5 0,0 %
+11 Västerbotten 5 0,0 %
+11 Västernorrland 26 0,0 %
+11 Östergötland 9 0,0 %
+
+Antalet dokument skiljer sig mellan myndigheter, eftersom begäran hade
+ett tak och några myndigheter tog ut en avgift som ledde till en
+avsmalning. Andelen är därför räknad på olika stora underlag, och det
+talet står i tabellen.
+
+Vad ni skrev när handlingarna lämnades ut, ordagrant
+
+Klass B, utan åberopad bestämmelse i följebrevet:
+
+  Bifogat har du nio handlingar, det är fem föreläggande samt fyra
+  kontrollrapporter enligt begäran.
+
+Avgiften och vad den ledde till
+
+Projektets budget är noll kronor, vilket står i protokollet sedan före
+utskicket. Vid varje avgiftsbesked smalnades begäran av enligt en fast
+regel, lika mot alla, och kvarstod avgiften avstods kopiorna.
+
+Ert svar på den avslutande frågan
+
+Den 28 september 2026 ställdes en likalydande fråga till samtliga 21
+länsstyrelser om antalet kontroller och förelägganden. Svaret jämförs
+med Jordbruksverkets uppgifter, och avvikelser mellan källorna redovisas
+utan att någon av dem rättas. Ni svarade:
+
+  Nötkreatur, 18 föreläggande, 93 kontroller Gris, 3 föreläggande, 21
+  kontroller Fjäderfä, 5 föreläggande, 38 kontroller.
+
+Svaret säger inte om fjäderfätalet har någon gräns för
+besättningsstorlek, så läsningen redovisas som okänd och talet jämförs
+inte med län vars läsning är känd.
+
+Vad underlaget inte påstår
+
+Projektet påstår inte att någon myndighet brutit mot lag. Frågan om
+sekretess i kontrollhandlingar saknar prejudikat från Högsta
+förvaltningsdomstolen för den handlingstyp som mäts, och tre beslut om
+maskning ligger hos kammarrätten. Där en avvikelse redovisas är den en
+avvikelse från befintlig kammarrättspraxis för beslutsbilagor, ingenting
+mer.
+
+Måttet är maskinellt och har kända gränser, som redovisas i
+dokumentationen tillsammans med de fel som rättats under arbetet.
+
+Om ni vill svara
+
+Svara på detta mejl senast den 23 oktober 2026, tre veckor efter att
+paketet skickades. Svaret publiceras oavkortat. Vill ni rätta en uppgift
+ber jag om den rättade uppgiften och var den kommer ifrån, så att
+rättelsen kan göras i underlaget och inte bara i texten.
+
+Med vänliga hälsningar,
+Martin Blomqvist
+cm.blomqvist@gmail.com

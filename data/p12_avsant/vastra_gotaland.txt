@@ -1,0 +1,239 @@
+Till Länsstyrelsen i Västra Götalands län
+
+Hej!
+
+Det här är vad som kommer att publiceras om er myndighet i ett
+kunskapsunderlag om djurskyddskontrollens likvärdighet, byggt på
+myndigheternas egna beslut och kontrollhandlingar. Ni får det före
+publicering, med tre veckors svarstid, enligt punkt P12 i projektets
+handläggningsprotokoll. Ett svar publiceras oavkortat vid sidan av
+siffrorna. Uteblir svar publiceras siffrorna som de står, och det
+antecknas att svar inte kommit.
+
+Publiceringen sker tidigast dagen efter svarstidens slut. Den omfattar
+ett publikt kodarkiv på GitHub, en webbplats och ett dataset, och i
+materialet ingår hela handläggningsprotokollet och hela
+korrespondensloggen, alltså också de mejl ni har skickat i de här
+ärendena, ordagrant. Namn på enskilda tjänstemän återges inte
+någonstans: där ett beslut namnger beslutsfattare och föredragande
+skrivs rollen i stället.
+
+Vill ni läsa metodbeskrivningen innan den publiceras skickar jag de
+delar som rör er myndighet om ni hör av er.
+
+Varje uppgift nedan är antingen ett tal som går att räkna fram ur
+underlaget eller ett ordagrant citat ur er egen skrivelse. Ingenting är
+en karaktärisering av myndigheten.
+
+Begäran och tidsförlopp
+
+Begäran skickades måndag 2026-08-03, samma dag till samtliga 21
+länsstyrelser och till Jordbruksverket, som dag 0. Arbetsdagar räknas
+därifrån.
+
+Begäran A, kontrollrapporter med bilagor
+
+Första substantiella besked enligt P1: dag 2, 2026-08-05, loggat som
+förtydligandefråga och avgiftsbesked. Avslutat enligt P1: dag 24,
+2026-09-04, loggat som avslagsbeslut mottaget.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-03 dag 0 ni autosvar
+2026-08-05 dag 2 ni förtydligandefråga och avgiftsbesked
+2026-08-05 dag 2 jag avsmalningssvar
+2026-08-06 dag 3 ni leverans
+2026-08-23 dag 14 jag beslutsbegäran och fråga om uttagets fullständighet
+2026-09-04 dag 24 ni avslagsbeslut mottaget
+2026-09-05 dag 24 jag delgivningskvitto
+2026-09-05 dag 24 ni autosvar
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni svar på nämnarfrågan
+
+Begäran B, beslut om föreläggande
+
+Första substantiella besked enligt P1: dag 2, 2026-08-05, loggat som
+förtydligandefråga och avgiftsbesked. Avslutat enligt P1: dag 3,
+2026-08-06, loggat som leverans.
+
+Datum Arbetsdag Vem Händelse
+2026-08-03 dag 0 jag avsändning
+2026-08-05 dag 2 ni förtydligandefråga och avgiftsbesked
+2026-08-05 dag 2 jag avsmalningssvar
+2026-08-06 dag 3 ni leverans
+2026-09-28 dag 40 jag nämnarfråga
+2026-09-28 dag 40 ni svar på nämnarfrågan
+
+Maskningsmätningen
+
+Måttet är maskinellt och beskrivet i sin helhet i projektets
+dokumentation. Två tal redovisas: andelen dokument med minst en
+maskning, och andelen av sidytan som är maskad. Ett dokument räknas som
+maskat när en fylld rektangel täcker text eller när text saknas under
+rektangeln. Ytan i tabellen är ett medelvärde över klassens samtliga
+dokument. Dokument utan maskning räknas då som noll och drar ned
+medelvärdet.
+
+Klass Dokument Med minst en maskning Maskad yta
+A 4 4 (100,0 %) 11,72 %
+B 5 1 (20,0 %) 0,03 %
+
+Skillnaden inom er myndighet, som är projektets kontrastmått enligt P1,
+är 80,0 procentenheter i andel maskade dokument mellan klass A och klass
+B.
+
+Er plats i jämförelsen, klass A
+
+Ordnat efter andelen dokument med minst en maskning ligger er myndighet
+på plats 1 av 17 bland dem som levererat i klass A, delad med 8 andra
+myndigheter. Myndigheter med samma andel delar plats, eftersom mätningen
+inte skiljer dem åt. Ordningen följer måttet och innebär ingen bedömning
+av handläggningen. Hela ordningen står nedan, eftersom en placering utan
+de andra talen inte går att bedöma.
+
+Jämförelsen omfattar 17 av de 21 länsstyrelserna. Tre län avstod från
+kopiorna sedan avgiften kvarstod efter avsmalningen, och har därför
+svarstid och avgiftsuppgift men inga handlingar i maskningsmätningen.
+Ett län hanterade de två begärandena som ett ärende och lämnade
+handlingarna i klass B, där de räknas. Bortfallet redovisas öppet och
+räknas aldrig som ett utlämnande eller som ett avslag.
+
+Plats Myndighet Dokument Med minst en maskning
+1 Gotland 5 100,0 %
+1 Halland 23 100,0 %
+1 Kalmar 5 100,0 %
+1 Kronoberg 5 100,0 %
+1 Stockholm 5 100,0 %
+1 Värmland 5 100,0 %
+1 Västernorrland 22 100,0 %
+1 Västra Götaland (er myndighet) 4 100,0 %
+1 Östergötland 5 100,0 %
+10 Uppsala 27 74,1 %
+11 Södermanland 14 50,0 %
+12 Blekinge 5 20,0 %
+12 Dalarna 5 20,0 %
+12 Västerbotten 5 20,0 %
+15 Gävleborg 5 0,0 %
+15 Jämtland 20 0,0 %
+15 Norrbotten 10 0,0 %
+
+Antalet dokument skiljer sig mellan myndigheter, eftersom begäran hade
+ett tak och några myndigheter tog ut en avgift som ledde till en
+avsmalning. Andelen är därför räknad på olika stora underlag, och det
+talet står i tabellen.
+
+Er plats i jämförelsen, klass B
+
+Ordnat efter andelen dokument med minst en maskning ligger er myndighet
+på plats 7 av 18 bland dem som levererat i klass B, delad med en annan
+myndighet. Myndigheter med samma andel delar plats, eftersom mätningen
+inte skiljer dem åt. Ordningen följer måttet och innebär ingen bedömning
+av handläggningen. Hela ordningen står nedan, eftersom en placering utan
+de andra talen inte går att bedöma.
+
+Jämförelsen omfattar 18 av de 21 länsstyrelserna. Tre län avstod från
+kopiorna sedan avgiften kvarstod efter avsmalningen, och har därför
+svarstid och avgiftsuppgift men inga handlingar i maskningsmätningen.
+Bortfallet redovisas öppet och räknas aldrig som ett utlämnande eller
+som ett avslag.
+
+Plats Myndighet Dokument Med minst en maskning
+1 Blekinge 5 100,0 %
+1 Kalmar 5 100,0 %
+3 Dalarna 10 80,0 %
+4 Södermanland 11 45,5 %
+5 Västmanland 9 33,3 %
+6 Stockholm 4 25,0 %
+7 Kronoberg 5 20,0 %
+7 Västra Götaland (er myndighet) 5 20,0 %
+9 Uppsala 11 18,2 %
+10 Halland 10 10,0 %
+11 Gotland 5 0,0 %
+11 Gävleborg 4 0,0 %
+11 Jämtland 10 0,0 %
+11 Norrbotten 1 0,0 %
+11 Värmland 5 0,0 %
+11 Västerbotten 5 0,0 %
+11 Västernorrland 26 0,0 %
+11 Östergötland 9 0,0 %
+
+Antalet dokument skiljer sig mellan myndigheter av samma skäl som ovan.
+
+Vad ni skrev när handlingarna lämnades ut, ordagrant
+
+Klass A, med åberopad bestämmelse 30 kap. 23 § OSL,
+dataskyddsförordningen:
+
+  Länsstyrelsen kan inte lämna ut all information i handlingarna du
+  begär. Detta beror på att handlingarna omfattas av sekretess enligt 30
+  kapitel 23 § offentlighets- och sekretesslagen. Därför har vi maskat
+  delar av handlingarnas innehåll. Om du inte är nöjd med detta besked
+  så kan du återkomma och begära ett skriftligt avslagsbeslut från
+  Länsstyrelsen. Uppgifter i handlingarna har också tagits bort enligt
+  dataskyddsförordningen.
+
+Klass B, med åberopad bestämmelse 18 kap. 1 § OSL, 18 kap. 3 § OSL,
+dataskyddsförordningen:
+
+  Länsstyrelsen kan inte lämna ut alla handlingar som du begär, detta
+  beror på att 2 av de senaste registrerade besluten omfattas av
+  sekretess enligt 18 kapitel 1 och 3 §§ offentlighets- och
+  sekretesslagen (OSL) [...] Uppgifter i handlingarna har också tagits
+  bort enligt dataskyddsförordningen.
+
+Avgiften och vad den ledde till
+
+Projektets budget är noll kronor, vilket står i protokollet sedan före
+utskicket. Vid varje avgiftsbesked smalnades begäran av enligt en fast
+regel, lika mot alla, och kvarstod avgiften avstods kopiorna.
+
+Ert svar på den avslutande frågan
+
+Den 28 september 2026 ställdes en likalydande fråga till samtliga 21
+länsstyrelser om antalet kontroller och förelägganden. Svaret jämförs
+med Jordbruksverkets uppgifter, och avvikelser mellan källorna redovisas
+utan att någon av dem rättas. Ni svarade:
+
+  nötkreatur 1 082, gris 89, värphöns fler än 350 st 18, värphöns färre
+  än 350 st 425, slaktkyckling 9
+
+Ert svar läses som att fjäderfätalet är utan storleksgräns. Talen
+jämförs bara med andra läns tal som vilar på samma läsning.
+
+Beslut ni meddelat, ordagrant
+
+Beslut 33706-2026, 2026-09-04, klass A, fattat av avdelningschef med
+administratör som föredragande. Namnen står i beslutet och återges inte
+här.
+
+  De efterfrågade uppgifterna avser i den del de sekretessbelagts sådana
+  förhållanden som avses i 30 kap. 23 § offentlighets- och
+  sekretesslagen. Det kan antas att bolaget lider skada om uppgifterna
+  röjs. De aktuella uppgifterna ska därför inte lämnas ut.
+
+Tecknet [...] i ett citat ovan markerar att text har utelämnats mellan
+två stycken i er egen skrivelse. Ingenting annat är ändrat, och hela
+lydelsen finns i det meddelande eller beslut som anges.
+
+Vad underlaget inte påstår
+
+Projektet påstår inte att någon myndighet brutit mot lag. Frågan om
+sekretess i kontrollhandlingar saknar prejudikat från Högsta
+förvaltningsdomstolen för den handlingstyp som mäts, och tre beslut om
+maskning ligger hos kammarrätten. Där en avvikelse redovisas är den en
+avvikelse från befintlig kammarrättspraxis för beslutsbilagor, ingenting
+mer.
+
+Måttet är maskinellt och har kända gränser, som redovisas i
+dokumentationen tillsammans med de fel som rättats under arbetet.
+
+Om ni vill svara
+
+Svara på detta mejl senast den 23 oktober 2026, tre veckor efter att
+paketet skickades. Svaret publiceras oavkortat. Vill ni rätta en uppgift
+ber jag om den rättade uppgiften och var den kommer ifrån, så att
+rättelsen kan göras i underlaget och inte bara i texten.
+
+Med vänliga hälsningar,
+Martin Blomqvist
+cm.blomqvist@gmail.com
