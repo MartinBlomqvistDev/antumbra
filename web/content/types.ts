@@ -117,6 +117,11 @@ export type Copy = {
   };
   metod: PageCopy & {
     ai: { heading: string; body: string };
+    avvikelser: {
+      heading: string;
+      note: string;
+      items: { title: string; body: string }[];
+    };
     adr: { heading: string; note: string };
     log: {
       heading: string;

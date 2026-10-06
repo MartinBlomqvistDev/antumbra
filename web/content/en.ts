@@ -224,6 +224,49 @@ export const en: Copy = {
         "model as its source; everything traces to a source document " +
         "with a checksum.",
     },
+    avvikelser: {
+      heading: "Deviations from the pre-registration",
+      note:
+        "The measures and the hypothesis were timestamped in the repository " +
+        "before any request was sent. Three parts could not be carried out " +
+        "as written. They stand here, on top, with what was done instead.",
+      items: [
+        {
+          title: "The field measure could not be computed literally",
+          body:
+            "Redaction was pre-registered as masked area plus masked " +
+            "fields. The documents are running prose and carry no field " +
+            "structure, so the field half cannot be computed. It was " +
+            "replaced on 17 August 2026 by a measure of covered content, " +
+            "decided in ADR-0017, and the outcome was a null result: no " +
+            "document hides body text under a light covering, and the 236 " +
+            "covered characters are a page header under the authority's own " +
+            "white box.",
+        },
+        {
+          title: "The area measure points the wrong way for one technique",
+          body:
+            "Where the text under the blacking has been removed, the area " +
+            "measures how the boxes were drawn and not how much is held " +
+            "back. For that technique the character count is the better " +
+            "measure. The limit belongs to the pre-registered area figure " +
+            "and is to be read beside every area number.",
+        },
+        {
+          title: "Half the unannounced hypothesis cannot be tested",
+          body:
+            "The pre-registration asks both for the correlation across " +
+            "counties and for the difference in deficiency share between " +
+            "unannounced and announced inspections within county, species " +
+            "and inspection type. The second needs the notice field crossed " +
+            "with the deficiency field, and that extract was not released. " +
+            "The pre-written null-result text asserts the outcome of that " +
+            "very test, so it is struck rather than reproduced. The half " +
+            "that could be tested does not separate a weak positive " +
+            "correlation from none.",
+        },
+      ],
+    },
     adr: {
       heading: "Decision log (ADR)",
       note:

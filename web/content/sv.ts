@@ -279,6 +279,47 @@ export const sv: Copy = {
         "språkmodell som källa; allt spåras till källdokument med " +
         "kontrollsumma.",
     },
+    avvikelser: {
+      heading: "Avvikelser från förregistreringen",
+      note:
+        "Måtten och hypotesen tidsstämplades i repot innan någon begäran " +
+        "skickades. Tre delar gick inte att genomföra som de var skrivna. " +
+        "De står här, överst, med vad som gjordes i stället.",
+      items: [
+        {
+          title: "Fältmåttet gick inte att räkna bokstavligt",
+          body:
+            "Maskningsgrad förregistrerades som andel maskerad yta plus " +
+            "andel maskerade fält. Handlingarna är löpande prosa utan " +
+            "fältstruktur, så fältdelen går inte att beräkna. Den ersattes " +
+            "den 17 augusti 2026 av ett mått på täckt innehåll enligt " +
+            "ADR-0017, och utfallet blev ett nollresultat: noll dokument " +
+            "döljer brödtext bakom en ljus täckning, och de 236 dolda tecken " +
+            "som finns är sidhuvud under myndighetens egen vita ruta.",
+        },
+        {
+          title: "Ytmåttet pekar fel för en av maskningsteknikerna",
+          body:
+            "Där texten under svärtningen är borttagen mäter ytan hur " +
+            "rutorna ritats, inte hur mycket som hålls inne. För den " +
+            "tekniken är antalet tecken det bättre måttet. Gränsen gäller " +
+            "det förregistrerade ytmåttet och ska läsas tillsammans med " +
+            "varje ytsiffra.",
+        },
+        {
+          title: "Halva oanmäld-hypotesen går inte att pröva",
+          body:
+            "Förregistreringen begär både sambandet över län och skillnaden " +
+            "i bristandel mellan oanmälda och föranmälda kontroller inom " +
+            "samma län, djurslag och kontrolltyp. Den andra delen kräver " +
+            "aviseringsfältet korsat med bristfältet, och det uttaget " +
+            "lämnades inte ut. Den förskrivna nollresultatstexten påstår " +
+            "utfallet av just den prövningen och är struken i stället för " +
+            "återgiven. Den del som gick att pröva skiljer inte ett svagt " +
+            "positivt samband från inget samband.",
+        },
+      ],
+    },
     adr: {
       heading: "Beslutslogg (ADR)",
       note:

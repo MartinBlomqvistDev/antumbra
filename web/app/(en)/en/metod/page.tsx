@@ -17,6 +17,22 @@ export default function Method() {
   return (
     <div className="space-y-12">
       <PageIntro title={en.metod.title} lead={en.metod.lead} />
+      <section className="max-w-2xl space-y-3">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {en.metod.avvikelser.heading}
+        </h2>
+        <p className="text-sm text-ink-secondary">
+          {en.metod.avvikelser.note}
+        </p>
+        <dl className="space-y-3">
+          {en.metod.avvikelser.items.map((item) => (
+            <div key={item.title} className="space-y-1">
+              <dt className="text-sm font-semibold">{item.title}</dt>
+              <dd className="text-sm text-ink-secondary">{item.body}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
       <section className="max-w-2xl space-y-2">
         <h2 className="font-display text-2xl font-semibold tracking-tight">
           {en.metod.ai.heading}
