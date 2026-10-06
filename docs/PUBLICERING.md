@@ -18,6 +18,36 @@ infria.
 
 ---
 
+## 0. Vad som byggdes den 6 oktober
+
+Listan nedan skrevs samma dag och är redan delvis infriad. Det som landade:
+
+- **Resultatytan per myndighet.** Sidan Handlingar bär en tavla per myndighet
+  med talen myndigheten själv fick, intervallet, platsen i jämförelsen och
+  myndighetens eget svar ordagrant, eller noteringen att svar inte kommit.
+- **Siffrorna och jämförelsen på sidan Sverige**, med båda klassernas tal,
+  kontrastmåttet, båda jämförelsetabellerna med intervall och ett avsnitt om vad
+  sidan inte visar. Engelsk spegel på plats för sidan Sverige.
+- **Svarsregistret** `data/p12_svar.jsonl`: samtliga femton svar som kommit in,
+  ordagrant, med meddelande-id, roll i stället för namn och en utskriven rad om
+  vad som inte återges.
+- **Arkivet över de avsända breven**, `data/p12_avsant/` med kontrollsumma per
+  brev, eftersom steg 36 är rättat två gånger sedan utskicket och alltså inte
+  längre skriver de brev som gick.
+- **Avvikelserna från förregistreringen** på metodsidan, på båda språken.
+- **Oktoberfelen i `docs/VERIFIERAT.md`**, tillsammans med jämförelsens
+  upplösning: måttet skiljer 39 av 136 länspar i klass A och 28 av 153 i klass B.
+- **Steg 41**, som bygger webbens underlag ur samma funktioner som skrev
+  paketen, så att en siffra på sidan är den siffra myndigheten fick.
+- **Ett fel på en publik yta**, rättat: sidan Sverige räknade 45 avsända
+  begäranden, eftersom de två senare begärandena till kammarrätterna också är
+  loggade som avsändningar. Talet är 43.
+
+Kvar står korrespondensloggen, de fyra oräknade måtten i avsnitt 2 och de tre
+besluten i avsnitt 7.
+
+---
+
 ## 1. Vad de avsända breven binder projektet till
 
 Breven är skickade och kan inte ändras. Fem meningar i dem är utfästelser, och

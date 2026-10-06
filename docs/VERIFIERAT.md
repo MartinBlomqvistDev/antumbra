@@ -403,6 +403,40 @@ byggts om en andra gång efter att svaret gick.
 
 ---
 
+## Jämförelsens upplösning, mätt 2026-10-06
+
+Risk 10 i `docs/BEGARANMALL.md` har motmedlet *"intervall redovisas alltid;
+indexet rangordnar inte myndigheter vars intervall överlappar"*. P12-breven bar
+en ordnad tabell utan intervall, så intervallen är räknade i efterhand och
+läggs bredvid samma ordning i stället för att ersätta den; att byta ordning
+hade gjort de avsända breven osanna.
+
+**Måttet.** Ett 95-procentigt Wilson-intervall kring andelen dokument med minst
+en maskning, per myndighet och klass. Wilson i stället för normalapproximationen
+därför att andelarna ligger på noll och ett, där normalintervallet saknar bredd
+och löper utanför enhetsintervallet. Fem dokument med fem maskningar är det
+vanliga fallet här, och intervallet måste säga att ett sådant län inte går att
+skilja från ett på 80 procent.
+
+**Vad intervallet inte är.** Det behandlar en myndighets dokument som oberoende
+dragningar. De är de inte: de är de senaste ärendena, ofta hos samma
+handläggare. Intervallet är därför ett golv för osäkerheten och inget påstående
+om myndighetens praxis.
+
+**Utfallet.** I klass A skiljer måttet 39 av 136 länspar. I klass B skiljer det
+28 av 153. I de övriga paren överlappar intervallen, och ordningen mellan dem
+vilar på ingenting. Talen är räknade av `pipeline/41_export_sweden_web_data.py`
+och publiceras tillsammans med tabellen.
+
+**Kontrasten håller i median men inte i varje län.** För de 17 län som levererat
+i båda klasserna är medianskillnaden 55,89 procentenheter i andel maskade
+dokument och 1,95 procentenheter i maskad yta. Två län går åt andra hållet i
+dokumentandel: Blekinge maskar 20 procent i klass A mot 100 i klass B, och
+Dalarna 20 mot 80. Inget län maskar en större yta i klass B än i klass A.
+Undantagen redovisas vid sidan av medianen i stället för att utjämnas av den.
+
+---
+
 ## Maskningsmätningen: bildmetoden mot textlagret
 
 Verifierat 2026-08-14 genom körning över hela leveransmaterialet, steg 18.
