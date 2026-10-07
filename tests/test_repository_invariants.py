@@ -338,6 +338,9 @@ class TestNoPersonalDataIsCommitted:
         "handläggare",
         "verksjurist",
         "registrator",
+        # Jämtland signs with this exact wording, which is a coordinating
+        # role across the central registry and the archive.
+        "samordnare centraldiarium/arkiv",
         # Jordbruksverket's decision of 2 September 2026 names its presenter
         # without a title. Writing a plausible one would be an invention, and
         # leaving the field empty would look like an omission, so the register
