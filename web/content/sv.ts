@@ -518,8 +518,223 @@ export const sv: Copy = {
   data: {
     title: "Data",
     lead:
-      "Nedladdningsbara aggregat och schemadokumentation. Granskningsbar " +
-      "utifrån betyder att vem som helst kan räkna om.",
+      "Varje härledd fil projektet publicerar, med radantal mätt i bygget. " +
+      "Granskningsbar utifrån betyder att vem som helst kan räkna om.",
+    note:
+      "Filerna ligger i kodarkivets katalog data/ och är radvis JSON. " +
+      "Handlingarna själva publiceras aldrig: de innehåller personuppgifter, " +
+      "och det som publiceras om dem är förteckningen med kontrollsumma per " +
+      "fil. Namn på enskilda tjänstemän återges ingenstans; där en källa " +
+      "namnger en person skrivs rollen i stället.",
+    headers: {
+      file: "Fil",
+      rows: "Rader",
+      bytes: "Byte",
+      description: "Innehåll",
+    },
+    missing: "ligger utanför kodarkivet, se metoden",
+    groups: [
+      {
+        heading: "Öppenhetslagret",
+        note:
+          "De tre begärandena, handläggningen och maskningsmätningen. " +
+          "Händelseloggen är den fullständiga redovisningen av vad som " +
+          "hänt i ärendena, i den ordning det loggades.",
+        files: [
+          {
+            path: "data/protokoll_logg.jsonl",
+            beskrivning:
+              "Händelseloggen. En rad per händelse med datum, klockslag, " +
+              "kanal, myndighet, begäran och notering.",
+          },
+          {
+            path: "data/korrespondens.jsonl",
+            beskrivning:
+              "Myndigheternas egna meddelanden, ordagrant, med meddelande-id.",
+          },
+          {
+            path: "data/p12_avsant_manifest.jsonl",
+            beskrivning:
+              "De 22 paket som skickades före publicering, med kontrollsumma " +
+              "per brev.",
+          },
+          {
+            path: "data/leveranser_manifest.jsonl",
+            beskrivning:
+              "Varje mottagen fil med sha256. Append-only: en post läggs " +
+              "till och ändras aldrig.",
+          },
+          {
+            path: "data/maskning.jsonl",
+            beskrivning:
+              "Maskningsmätningen per dokument: rutor, balkar, tecken under " +
+              "rutorna, maskad yta och vilken metod som läst sidan.",
+          },
+          {
+            path: "data/kontrast.jsonl",
+            beskrivning:
+              "Kontrastmåttet per myndighet, djurslag och handlingsklass.",
+          },
+          {
+            path: "data/djurslag.jsonl",
+            beskrivning:
+              "Vilket djurslag varje dokument handlar om, och hur det avgjordes.",
+          },
+          {
+            path: "data/dold_text.jsonl",
+            beskrivning:
+              "Täckt innehåll: text som ligger kvar under något som inte är " +
+              "svart. Måttet som ersatte det förregistrerade fältmåttet.",
+          },
+          {
+            path: "data/sekretessgrunder.jsonl",
+            beskrivning:
+              "De bestämmelser myndigheterna åberopat, med följebrevets egna " +
+              "ord och meddelande-id.",
+          },
+          {
+            path: "data/namnare.jsonl",
+            beskrivning:
+              "Länens egna tal om antal kontroller och förelägganden, med " +
+              "citatet och hur storleksfrågan lästs.",
+          },
+          {
+            path: "data/beslut.jsonl",
+            beskrivning:
+              "De överklagbara besluten: diarienummer, delfående, åberopad " +
+              "grund och roll i stället för namn.",
+          },
+          {
+            path: "data/avgiftsskrivelser.jsonl",
+            beskrivning:
+              "Avgiftsmåttet: antal skrivelser och utfall per länsstyrelse, " +
+              "för alla 21 oavsett utfall.",
+          },
+          {
+            path: "data/utlamningsgrad.jsonl",
+            beskrivning:
+              "Taket, nämnaren och antalet filer per län och klass. Kvoten " +
+              "är en lucka, och raden bär skälet.",
+          },
+          {
+            path: "data/dubbelforekomst.jsonl",
+            beskrivning:
+              "Ärenden som förekommer i båda handlingsklasserna, och hur de " +
+              "maskats i vardera.",
+          },
+          {
+            path: "data/bristandel.jsonl",
+            beskrivning:
+              "Andelen kontroller med brist per län, år och djurslag.",
+          },
+          {
+            path: "data/foranmalda.jsonl",
+            beskrivning:
+              "Aviserade och oaviserade kontroller per län, år och djurslag, " +
+              "ur myndighetens eget uttag.",
+          },
+          {
+            path: "data/oanmald_hypotes.jsonl",
+            beskrivning:
+              "Prövningen av den förregistrerade hypotesen, med varje " +
+              "delmått och dess utfall.",
+          },
+          {
+            path: "data/atagande.jsonl",
+            beskrivning:
+              "Projektets egna åtaganden: vad som lovats, när det öppnades " +
+              "och när det stängdes.",
+          },
+        ],
+      },
+      {
+        heading: "Kravlagret",
+        note:
+          "Tillståndsbesluten för stora gris- och fjäderfäanläggningar, och " +
+          "villkoren lästa ordagrant ur dem.",
+        files: [
+          {
+            path: "data/villkor.jsonl",
+            beskrivning:
+              "Varje villkor ordagrant, med rubriken beslutet självt skrev.",
+          },
+          {
+            path: "data/villkor_baseline.jsonl",
+            beskrivning:
+              "Baselinetestet: delar villkoret text med ett annat beslut?",
+          },
+          {
+            path: "data/villkor_facit.jsonl",
+            beskrivning:
+              "Handläst facit för rubrik mot sak, läst blint mot rubriken.",
+          },
+          {
+            path: "data/tillstand_manifest.jsonl",
+            beskrivning:
+              "Varje hämtad tillståndshandling med sha256 och källänk.",
+          },
+          {
+            path: "data/tillstand_typ.jsonl",
+            beskrivning: "Vad utgivaren själv kallar varje beslut.",
+          },
+          {
+            path: "data/tillstand_ocr_index.jsonl",
+            beskrivning:
+              "OCR-körningen över de inskannade besluten, med konfidens per fil.",
+          },
+        ],
+      },
+      {
+        heading: "Jämförelselagret",
+        note:
+          "Kommissionens revisioner av medlemsstaternas kontrollsystem, " +
+          "parsade till rekommendationer, citeringar och åtaganden.",
+        files: [
+          {
+            path: "data/dgsante_details.jsonl",
+            beskrivning: "En rad per revision: land, år, ämne, länkar.",
+          },
+          {
+            path: "data/dgsante_recommendations.jsonl",
+            beskrivning:
+              "11 999 rekommendationer ordagrant, med nummer och rapport.",
+          },
+          {
+            path: "data/dgsante_graph.jsonl",
+            beskrivning:
+              "Citeringsgrafen: en rad per kant, med det citerade stycket bredvid.",
+          },
+          {
+            path: "data/dgsante_action_plans.jsonl",
+            beskrivning:
+              "Medlemsstaternas svar, kopplade till rekommendationen de svarar på.",
+          },
+          {
+            path: "data/dgsante_manifest.jsonl",
+            beskrivning: "Varje nedladdad fil med sha256 och källänk.",
+          },
+          {
+            path: "data/dgsante_annex_classes.jsonl",
+            beskrivning:
+              "Bilagorna klassade på sina egna ord, med citatet som bär klassningen.",
+          },
+          {
+            path: "data/dgsante_ocr_index.jsonl",
+            beskrivning:
+              "OCR över de skannade bilagorna, med språk och konfidens per fil.",
+          },
+        ],
+      },
+    ],
+    licence: {
+      heading: "Licens och återanvändning",
+      body:
+        "Koden är AGPL-3.0 och de härledda datafilerna CC BY 4.0. Mottagna " +
+        "myndighetshandlingar sprids inte vidare i någon form. Kommissionens " +
+        "dokument är återanvändbara med attribution enligt beslut " +
+        "2011/833/EU. Schemat för varje fil framgår av stegen i pipelinen, " +
+        "som är numrerade och körs i ordning.",
+    },
   },
   building: "Sidan är under uppbyggnad.",
 };

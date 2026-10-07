@@ -211,6 +211,16 @@ export type Copy = {
       headers: { file: string; bytes: string; sha256: string };
     };
   };
-  data?: PageCopy;
+  data?: PageCopy & {
+    note: string;
+    headers: { file: string; rows: string; bytes: string; description: string };
+    missing: string;
+    groups: {
+      heading: string;
+      note: string;
+      files: { path: string; beskrivning: string }[];
+    }[];
+    licence: { heading: string; body: string };
+  };
   building: string;
 };
