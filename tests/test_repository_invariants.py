@@ -320,7 +320,14 @@ class TestNoPersonalDataIsCommitted:
     )
     ROLES: ClassVar[set[str]] = {
         "administratör",
+        # Västmanland signs with this exact title, and the register said
+        # "administratör" for two of its letters until 8 October 2026. A role
+        # that stands in for a name has to be the one the letter gives.
+        "administrativ handläggare",
         "arkivarie",
+        # Dalarna signs as a function and not a title, and the register
+        # writes the wording the letter uses rather than the nearest title.
+        "arkivfunktionen",
         "avdelningschef",
         "chefsjurist",
         "enhetschef",

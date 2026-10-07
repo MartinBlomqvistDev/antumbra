@@ -419,9 +419,26 @@ från den 3 augusti 2026 och framåt. Mina egna brev ingår inte i registret: de
 
 **Vad en rad bär.** Datum och klockslag ur meddelandehuvudet, omräknat till
 svensk tid. Myndigheten. Om avsändaren är en funktionsbrevlåda eller en
-namngiven tjänsteman. Rollen, där brevet undertecknas av en person. Ämnesraden.
+namngiven tjänsteman. Rollen, med den lydelse brevet självt undertecknas med.
+Ämnesraden.
 Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
+
+**Rollfältet, preciserat 8 oktober 2026.** Den första lydelsen sade *rollen, där
+brevet undertecknas av en person*, vilket läser fältet som en maskningsuppgift:
+något som fylls bara när ett namn har tagits bort. Registret har i praktiken
+fyllt det bredare, och den bredare läsningen är den användbara, så den gäller nu
+och är skriven här. Fältet bär den befattning eller funktion brevet undertecknas
+med, oavsett om en person namnges. Där en person namnges ersätter rollen namnet
+enligt ADR-0018. Där ingen namnges, som i Gotlands *Registrator* eller Dalarnas
+*Arkivfunktionen*, är rollen myndighetens egen uppgift om vem som hanterar
+ärendet, och den står kvar i texten också.
+
+Lydelsen tas ur brevet och översätts inte till närmaste befattning. Det fällde
+två rader den 8 oktober 2026: Västmanlands två brev undertecknas *Administrativ
+handläggare*, och registret skrev *administratör*, som är en annan befattning i
+länsstyrelsernas egen nomenklatur. Rollerna är rättade och båda lydelserna står
+nu i den invariant som vaktar att ingen roll hittas på.
 
 **Tre saker utelämnas, och varje rad skriver ut vilka av dem som gäller.**
 
