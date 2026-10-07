@@ -479,6 +479,13 @@ kontrollrapporter och fotobilagor inte tagits med."* Där är den uteblivna
 bilagan en följd av projektets egen avsmalning enligt P5, inte av ett
 undanhållande. Brevet står i sin helhet i korrespondensloggen.
 
+**Ett fjärde skäl, också myndighetens eget.** Länsstyrelsen i Östergötland
+skriver den 7 augusti 2026, ordagrant: *"Det finns kontrollrapporter och foton
+i ärendena men att dessa inte ligger som bilagor till besluten. Underlaget till
+ett föreläggande (kontrollrapporter, bildbilagor med mera) framgår i regel av
+underrättelsen som djurägaren normalt får innan beslutet."* Bilagan finns
+alltså, men inte som bilaga till den handling som begärts ut.
+
 **Därför kan materialet inte skilja en undanhållen bilaga från en som aldrig
 fanns.** Till det kommer att ingenting knyter en bilagefil till det dokument den
 hör till, att bilagefilen läses ur filnamnet och därmed är ett golv, och att 45
