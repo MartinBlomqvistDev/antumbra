@@ -683,6 +683,9 @@ def denominator_lines(rows: list[dict], today: date) -> list[str]:
 # out, counted from the day the packets went. Before the packets go, day 40 is
 # the only floor there is, and the report says so.
 REPLY_WEEKS = 21
+# Not 8 sets a floor and not a date. The day chosen on 7 October 2026 is the
+# Monday after it, and the reasons are in docs/PUBLICERING.md.
+CHOSEN_DAY = "2026-10-26"
 
 
 def publication_lines(rows: list[dict], today: date) -> list[str]:
@@ -710,8 +713,8 @@ def publication_lines(rows: list[dict], today: date) -> list[str]:
     }
     lines = [
         "",
-        f"PUBLICERING: tidigast {floor.isoformat()}, enligt tillämpningsnot 8. "
-        f"P12-paketen gick {dispatch.isoformat()} till "
+        f"PUBLICERING: tidigast {floor.isoformat()}, enligt tillämpningsnot 8, "
+        f"vald dag {CHOSEN_DAY}. P12-paketen gick {dispatch.isoformat()} till "
         f"{len({row['myndighet'] for row in sent})} myndigheter, svarstiden går "
         f"ut {deadline.isoformat()}.",
     ]

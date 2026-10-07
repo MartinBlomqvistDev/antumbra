@@ -607,23 +607,29 @@ class TestNoPersonalDataIsCommitted:
                 assert row["parade_maskade_a"] <= row["parade_dokument_a"]
                 assert row["parade_maskade_b"] <= row["parade_dokument_b"]
 
-    def test_the_readme_states_the_number_of_tests_there_are(self, request):
+    def test_the_readme_states_how_many_tests_there_are(self):
         # The figure has gone stale twice, 152 against 240 and 249 against 250,
-        # because nothing counted it. pytest knows the number during the run, so
-        # the claim is checked against the run itself rather than against memory.
-        config = request.config
-        if config.option.keyword or config.option.markexpr:
-            pytest.skip("a filtered run collects a subset")
-        if any("::" in str(arg) for arg in config.args):
-            pytest.skip("a single test was selected")
-        collected = request.session.testscollected
-        if not collected:
-            pytest.skip("nothing collected")
+        # because nothing counted it. The first guard counted collected cases
+        # and failed in CI: five cases are parametrised out of delivery folders
+        # that live outside git, so the collected number is 251 here and 246
+        # there. What is the same everywhere is the number of test functions in
+        # the files, so that is what the README states and this counts.
+        import ast
+
+        total = 0
+        for path in sorted((ROOT / "tests").glob("test_*.py")):
+            tree = ast.parse(path.read_text("utf-8"))
+            total += sum(
+                1
+                for node in ast.walk(tree)
+                if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+                and node.name.startswith("test_")
+            )
         text = (ROOT / "README.md").read_text("utf-8")
         found = re.search(r"The (\d+) tests carry", text)
         assert found, "the README no longer states a test count"
-        assert int(found.group(1)) == collected, (
-            f"the README says {found.group(1)} tests, the suite collects {collected}"
+        assert int(found.group(1)) == total, (
+            f"the README says {found.group(1)} tests, the files hold {total}"
         )
 
     def test_no_source_pdfs_are_tracked(self):

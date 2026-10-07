@@ -54,6 +54,8 @@ OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 P12_SENT = "2026-10-02"
 P12_DEADLINE = "2026-10-23"
 PUBLICATION_FLOOR = "2026-10-24"
+# The floor is the rule, the chosen day is the decision; see docs/PUBLICERING.md.
+PUBLICATION_DAY = "2026-10-26"
 
 CLASSES = ("A", "B")
 
@@ -281,6 +283,7 @@ def build() -> dict:
             "avsant": P12_SENT,
             "svar_senast": P12_DEADLINE,
             "publicering_tidigast": PUBLICATION_FLOOR,
+            "publicering_vald": PUBLICATION_DAY,
             "myndigheter": len(step36.SLUG),
             "svarat_substantiellt": sum(
                 1 for item in authorities if not item["svar_saknas"]

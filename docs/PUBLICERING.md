@@ -6,7 +6,12 @@ med en invändning mot en siffra, så att listan inte formas av vad myndighetern
 råkar svara.
 
 Tidigaste publiceringsdag är **lördag 2026-10-24**, dagen efter svarstidens
-slut. Regeln är tillämpningsnot 8: publicering enligt P12 är varje åtgärd som
+slut. **Vald dag är måndag 2026-10-26**, två dagar senare. Not 8 säger tidigast,
+så en senare dag kräver ingen annan motivering än att den loggas, och tre skäl
+talar för måndagen: mottagarna är myndigheter och journalister som läser på
+vardagar, den saknade nämnaren redovisas ändå den 26:e så materialet blir
+fullständigt på dag ett i stället för att kompletteras två dagar senare, och en
+lördagslansering lägger materialet på den enda dag ingen läser det. Regeln är tillämpningsnot 8: publicering enligt P12 är varje åtgärd som
 gör en berörd myndighets egna resultat läsbara för någon utanför projektet, och
 ingen sådan yta öppnas förrän tre veckor gått sedan paketen nådde samtliga
 berörda myndigheter. Paketen gick 2026-10-02 mellan 13:12:22 och 13:15:24, med
@@ -202,11 +207,12 @@ Ytorna öppnas i ett enda snitt. Skälet är not 8: den första yta som öppnas 
 publicering för samtliga myndigheter, så en utspridd öppning ger de myndigheter
 som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
 
-**Före snittet, den 22 och 23 oktober**
+**Före snittet, den 22 och 23 oktober, och en sista kontroll den 26:e**
 
 1. Sista brevlådegenomgången, från posten till loggen och aldrig tvärtom, tråd
    för tråd per myndighet. Ett svar som kommer den 23 oktober är ett svar i tid
-   och ska vara inne i materialet innan något öppnas.
+   och ska vara inne i materialet innan något öppnas. Genomgången görs om på
+   morgonen den 26:e, eftersom helgen ligger mellan fristen och snittet.
 2. PII-svep över hela ytlistan, inte bara repot: varje committad `data/*.jsonl`,
    varje fil i `docs/`, webbplatsens exporterade JSON, dataset-kortet, README.
    Sökningen gäller namn, adresser, telefonnummer, personnummer och filnamn.
@@ -216,7 +222,7 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
    kedja som en commit. Webbygget körs separat.
 5. `antumbra.org` registreras. Domänen är en förberedelse och ingen yta.
 
-**Snittet, den 24 oktober**
+**Snittet, måndag den 26 oktober**
 
 6. Repot växlas till publikt. Historiken publiceras orörd enligt ADR-0005 och
    ADR-0003; ingen force-push, ingen omskrivning.

@@ -403,6 +403,50 @@ byggts om en andra gång efter att svaret gick.
 
 ---
 
+## Korrespondensloggen: regeln, skriven innan den första raden fanns
+
+P12-paketen säger att det publicerade materialet rymmer *"hela
+handläggningsprotokollet och hela korrespondensloggen, alltså också de mejl ni
+har skickat i de här ärendena, ordagrant"*. Handläggningsprotokollet har funnits
+sedan dag 0 i `data/protokoll_logg.jsonl`. Korrespondensloggen är ny, och den
+här regeln skrevs den 7 oktober 2026 innan den första raden hämtades.
+
+**Vad som ingår.** Varje meddelande som kommit in till projektet från en
+länsstyrelse, från Jordbruksverket eller från en kammarrätt i de här ärendena,
+från den 3 augusti 2026 och framåt. Mina egna brev ingår inte i registret: de
+är redan publicerade i sin helhet, mallarna i `docs/BEGARANMALL.md`, dag
+40-breven i steg 37 och P12-paketen i `data/p12_avsant/`.
+
+**Vad en rad bär.** Datum och klockslag ur meddelandehuvudet, omräknat till
+svensk tid. Myndigheten. Om avsändaren är en funktionsbrevlåda eller en
+namngiven tjänsteman. Rollen, där brevet undertecknas av en person. Ämnesraden.
+Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
+ordagrant. Vad som utelämnats och varför.
+
+**Tre saker utelämnas, och varje rad skriver ut vilka av dem som gäller.**
+
+1. **Den citerade historiken** under meddelandet, alltså kopian av mitt eget
+   brev. Den är publicerad på annat håll och skulle tredubbla registret.
+2. **Signaturblockets personuppgifter** när en namngiven tjänsteman skriver:
+   namn, direktnummer och personlig adress byts mot rollen, enligt ADR-0018.
+   Myndighetens egen funktionsbrevlåda, växel och webbadress står kvar, eftersom
+   de är en myndighets publicerade kontaktuppgifter och inte en enskilds.
+3. **Länkmålen** bakom texten, som e-postklienten renderar som adresser i
+   vinkelparenteser mitt i meningarna.
+
+**Vad som aldrig görs.** Ingen sammanfattning, ingen karaktärisering, ingen
+rättning av stavning eller av myndighetens egna tal. Där ett meddelande
+innehåller en uppgift som rör en enskild djurhållare utelämnas den uppgiften och
+utelämnandet skrivs ut i raden; inget sådant fall har påträffats när registret
+byggdes, och skulle det inträffa är det raden som bär noteringen.
+
+**Källan är brevlådan, inte protokollet.** Registret byggs tråd för tråd ur
+Gmail och inte ur protokollloggen, av samma skäl som bevakningsregeln: en
+händelse som aldrig loggades syns inte i loggen. Två meddelanden hittades på det
+sättet den 7 oktober och fördes in i protokollloggen samma dag.
+
+---
+
 ## Bilagorna och de parade ärendena, mätt 2026-10-06
 
 Två förregistrerade mått som ingen hade räknat. Reglerna står i huvudet på
