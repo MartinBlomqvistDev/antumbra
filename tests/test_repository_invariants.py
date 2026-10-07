@@ -661,8 +661,15 @@ class TestNoPersonalDataIsCommitted:
             if record["avsandare"] == "namngiven tjänsteman":
                 assert record["roll"], f"{record['meddelande']}: a name needs a role"
             if record["roll"]:
+                # A role is either one of the known words, or one of them
+                # followed by the unit the letter spells out ("enhetschef för
+                # vilt, veterinär och djurskydd"). The stand-in for a letter
+                # that gives no title at all is a phrase, so it is matched
+                # whole before the first word is tried.
                 first = record["roll"].split()[0]
-                assert first in self.ROLES, f"unknown role {record['roll']!r}"
+                assert record["roll"] in self.ROLES or first in self.ROLES, (
+                    f"unknown role {record['roll']!r}"
+                )
             for found in self.EMAIL.findall(record["text"]):
                 if found.lower() in allowed:
                     continue
