@@ -337,6 +337,12 @@ class TestNoPersonalDataIsCommitted:
         # says what the source says.
         "titel anges inte",
     }
+    # The rule in docs/VERIFIERAT.md says a row records whether the sender is a
+    # functional mailbox or a named official, and nothing else. Thirteen rows
+    # from the first batch carried the mailbox address instead, which is a
+    # second vocabulary for the same field; they were normalised on 7 October
+    # 2026 and this invariant keeps the field to the two documented values.
+    SENDERS: ClassVar[set[str]] = {"funktionsbrevlåda", "namngiven tjänsteman"}
 
     def test_no_addresses_in_the_swedish_protocol_data(self):
         # The e-mail scan above skips .jsonl, and the protocol log is exactly
@@ -648,6 +654,10 @@ class TestNoPersonalDataIsCommitted:
             record = json.loads(line)
             assert record["meddelande"], "every row carries its message id"
             assert record["utelamnat"], "every row says what it leaves out"
+            assert record["avsandare"] in self.SENDERS, (
+                f"{record['meddelande']}: {record['avsandare']!r} is not one of "
+                "the two senders the rule allows"
+            )
             if record["avsandare"] == "namngiven tjänsteman":
                 assert record["roll"], f"{record['meddelande']}: a name needs a role"
             if record["roll"]:

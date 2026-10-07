@@ -440,6 +440,23 @@ innehåller en uppgift som rör en enskild djurhållare utelämnas den uppgiften
 utelämnandet skrivs ut i raden; inget sådant fall har påträffats när registret
 byggdes, och skulle det inträffa är det raden som bär noteringen.
 
+**Rättat 7 oktober 2026, två fel som registret självt visade.** Fältet som
+säger om avsändaren är en funktionsbrevlåda eller en namngiven tjänsteman bar två
+olika vokabulärer: de tretton första raderna skrev brevlådans adress i stället för
+ordet, vilket gör fältet omöjligt att räkna på. De är normaliserade till de två
+lydelser regeln ovan anger, och en invariant i `tests/` håller fältet till dem.
+Skärmningen i verktyget som skriver raderna jämförde dessutom mot `namngiven
+tjansteman` utan prickar, så kontrollen att ett namn alltid bär en roll hade aldrig
+kunnat falla ut; den är lagad, och invarianten i `tests/` som gör samma kontroll har
+hela tiden varit stavad rätt.
+
+Parningen mot protokollloggen fällde en tredje sak, i loggen och inte i registret:
+Västra Götalands autosvar står loggat 2026-08-03 10:01:49 på begäran A, medan
+brevlådan rymmer ett enda autosvar från länet i augusti, 10:03:26 i tråden för
+begäran B. Klockslaget och klassen går inte att belägga mot källan. Loggen är
+append-only, så raden står kvar och rättelsen är en ny rad med skälet utskrivet.
+Inget mått rör sig: autosvar räknas inte som kontakt enligt P1.
+
 **Källan är brevlådan, inte protokollet.** Registret byggs tråd för tråd ur
 Gmail och inte ur protokollloggen, av samma skäl som bevakningsregeln: en
 händelse som aldrig loggades syns inte i loggen. Två meddelanden hittades på det
