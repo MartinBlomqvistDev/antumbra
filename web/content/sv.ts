@@ -214,6 +214,47 @@ export const sv: Copy = {
         interval: "Intervall",
       },
     },
+    par: {
+      heading: "Samma ärenden i båda klasserna",
+      note:
+        "Protokollets punkt P1 pekar ut den starkaste jämförelsen: ärenden där " +
+        "samma kontrolltillfälle finns både som fristående rapport i klass A " +
+        "och som handling i klass B. Då är myndigheten, perioden och ärendena " +
+        "desamma, och det som skiljer är handlingens rättsliga status.",
+      finding:
+        "{counties} län har myndighetens egna ärendenummer i filnamnen i båda " +
+        "klasserna, och i ett av dem, {county}, förekommer samma ärenden i " +
+        "båda. Där finns {pairs} sådana ärenden: {maskedA} av {documentsA} " +
+        "kontrollrapporter i klass A är maskade, mot {maskedB} av " +
+        "{documentsB} dokument ur samma ärenden i klass B. Klasserna bär " +
+        "olika handlingar ur samma ärende, inte samma handling mätt två " +
+        "gånger.",
+      limit:
+        "Jämförelsen går inte att göra i övriga län. {unnumbered} av {files} " +
+        "filer saknar ärendenummer i namnet, och utan det finns ingenting som " +
+        "knyter en rapport till ett beslut.",
+    },
+    bilagor: {
+      heading: "Bilagorna",
+      note:
+        "Begäran omfattade bilagor, och att undanhålla en hel bilaga är den " +
+        "kraftigaste maskning som finns. Bilagor mäts därför för sig och slås " +
+        "aldrig ihop med ytmåttet.",
+      finding:
+        "{files} bilagefiler kom in i hela insamlingen, från {counties} län. " +
+        "{refers} dokument hänvisar till innehåll i en bilaga, och {template} " +
+        "av dem gör det med en mening ur den nationella kontrollrapportmallen: " +
+        "att foton som togs finns i bilaga. Den meningen står i mallen oavsett " +
+        "om något foto togs.",
+      limit:
+        "Därför går de förregistrerade bilagemåtten inte att beräkna, och de " +
+        "redovisas som en lucka med skälet utskrivet. Materialet skiljer inte " +
+        "en bilaga som hållits inne från en som aldrig fanns, ingenting knyter " +
+        "en bilagefil till sitt dokument, bilagefilen läses ur filnamnet och " +
+        "är därmed ett golv, och {unreadable} filer saknar läsbart textlager. " +
+        "Att ta reda på vilket som gäller kräver en fråga till myndigheterna, " +
+        "och den ställs inte.",
+    },
     notShown: {
       heading: "Vad sidan inte visar",
       items: [

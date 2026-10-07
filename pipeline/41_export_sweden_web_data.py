@@ -44,6 +44,8 @@ MASKING = ROOT / "data" / "maskning.jsonl"
 CONTRAST = ROOT / "data" / "kontrast.jsonl"
 REPLIES = ROOT / "data" / "p12_svar.jsonl"
 SENT = ROOT / "data" / "p12_avsant_manifest.jsonl"
+ANNEXES = ROOT / "data" / "bilagor.jsonl"
+PAIRS = ROOT / "data" / "dubbelforekomst.jsonl"
 OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 
 # Facts about the dispatch rather than choices made here: the packets went out
@@ -269,6 +271,10 @@ def build() -> dict:
             "myndigheter": len({row["path"].split("/")[0] for row in rows}),
         }
 
+    annexes = read(ANNEXES) if ANNEXES.exists() else []
+    pairs = read(PAIRS) if PAIRS.exists() else []
+    paired = [row for row in pairs if row["par"]]
+
     return {
         "byggd": date.today().isoformat(),
         "p12": {
@@ -289,6 +295,46 @@ def build() -> dict:
                 "par": len(rows) * (len(rows) - 1) // 2,
             }
             for klass, rows in comparison.items()
+        },
+        # The annex measures are a gap, so what the site carries is the
+        # evidence for the gap and not a figure per county: the files that came,
+        # and what the documents' own references turned out to be.
+        "bilagor": {
+            "mappar": len(annexes),
+            "bilagefiler": sum(row["bilagefiler"] for row in annexes),
+            "lan_med_bilagefil": len(
+                {row["myndighet"] for row in annexes if row["bilagefiler"]}
+            ),
+            "hanvisar_till_innehall": sum(
+                row["hanvisar_till_bilaga"] for row in annexes
+            ),
+            "endast_formell_hanvisning": sum(
+                row["endast_formell_hanvisning"] for row in annexes
+            ),
+            "slag": {
+                kind: sum(row["hanvisningens_slag"].get(kind, 0) for row in annexes)
+                for kind in ("fotomening ur mallen", "den ifyllda checklistan", "annat")
+            },
+            "utan_lasbar_text": sum(row["utan_lasbar_text"] for row in annexes),
+        },
+        "par": {
+            "lan": [
+                {
+                    "myndighet": row["myndighet"],
+                    "namn": step36.NAME.get(row["myndighet"], row["myndighet"]),
+                    "par": row["par"],
+                    "dokument_a": row["parade_dokument_a"],
+                    "maskade_a": row["parade_maskade_a"],
+                    "dokument_b": row["parade_dokument_b"],
+                    "maskade_b": row["parade_maskade_b"],
+                }
+                for row in paired
+            ],
+            "lan_med_nummer_i_bada": sum(
+                1 for row in pairs if row["arenden_i_a"] and row["arenden_i_b"]
+            ),
+            "utan_arendenummer": sum(row["utan_arendenummer"] for row in pairs),
+            "filer": sum(row["filer"] for row in pairs),
         },
         "myndigheter": authorities,
     }

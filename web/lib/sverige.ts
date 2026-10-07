@@ -96,6 +96,29 @@ export type Sweden = {
     hogre_dokumentandel_i_b: string[];
     hogre_yta_i_b: string[];
   };
+  bilagor: {
+    mappar: number;
+    bilagefiler: number;
+    lan_med_bilagefil: number;
+    hanvisar_till_innehall: number;
+    endast_formell_hanvisning: number;
+    slag: Record<string, number>;
+    utan_lasbar_text: number;
+  };
+  par: {
+    lan: {
+      myndighet: string;
+      namn: string;
+      par: number;
+      dokument_a: number;
+      maskade_a: number;
+      dokument_b: number;
+      maskade_b: number;
+    }[];
+    lan_med_nummer_i_bada: number;
+    utan_arendenummer: number;
+    filer: number;
+  };
   jamforelse: Record<
     "A" | "B",
     { rader: RankingRow[]; atskilda_par: number; par: number }

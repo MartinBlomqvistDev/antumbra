@@ -73,3 +73,13 @@ src/antumbra.egg-info/
 data/hf/
 data/p12/
 data/dag40/
+
+# The annex register. Its figures are published as a gap in docs/VERIFIERAT.md,
+# because the material cannot separate an annex that was held back from one that
+# never existed. The rows carry a flag per county and class that no claim rests
+# on, and that would be read as a claim anyway, so they stay on disk;
+# pipeline/43 writes them again from the deliveries.
+data/bilagor.jsonl
+
+# Session configuration for the local preview, not project content.
+.claude/

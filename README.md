@@ -207,6 +207,8 @@ python pipeline/38_condition_type_facit.py    # blind hand-read facit: condition
 python pipeline/39_verify_broken_text_layer.py  # decisions whose text layer is not a reading of the page, read by OCR
 python pipeline/40_build_p12_letters.py       # P12: the packets rendered as the letters that are sent
 python pipeline/41_export_sweden_web_data.py  # the Swedish layer for the site, out of the packet functions
+python pipeline/42_fee_track_and_release_rate.py  # the fee measure, and P11's release rate as the gap it is
+python pipeline/43_annexes_and_pairs.py       # annexes withheld, and the same case in both classes
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write
@@ -239,7 +241,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 245 tests carry guarantees beyond ordinary unit testing: the generated
+The 249 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false

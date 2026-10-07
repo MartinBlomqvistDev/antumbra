@@ -79,6 +79,18 @@ export type Copy = {
         interval: string;
       };
     };
+    par: {
+      heading: string;
+      note: string;
+      finding: string;
+      limit: string;
+    };
+    bilagor: {
+      heading: string;
+      note: string;
+      finding: string;
+      limit: string;
+    };
     notShown: { heading: string; items: string[] };
     overview: {
       heading: string;

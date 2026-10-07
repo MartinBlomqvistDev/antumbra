@@ -28,6 +28,28 @@ export default function Sweden() {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
+  const pair = sweden.par.lan[0];
+  const pairFinding = pair
+    ? copy.par.finding
+        .replace("{county}", pair.namn)
+        .replace("{counties}", count.format(sweden.par.lan_med_nummer_i_bada))
+        .replace("{pairs}", count.format(pair.par))
+        .replace("{maskedA}", count.format(pair.maskade_a))
+        .replace("{documentsA}", count.format(pair.dokument_a))
+        .replace("{maskedB}", count.format(pair.maskade_b))
+        .replace("{documentsB}", count.format(pair.dokument_b))
+    : "";
+  const pairLimit = copy.par.limit
+    .replace("{unnumbered}", count.format(sweden.par.utan_arendenummer))
+    .replace("{files}", count.format(sweden.par.filer));
+  const annexFinding = copy.bilagor.finding
+    .replace("{files}", count.format(sweden.bilagor.bilagefiler))
+    .replace("{counties}", count.format(sweden.bilagor.lan_med_bilagefil))
+    .replace("{refers}", count.format(sweden.bilagor.hanvisar_till_innehall))
+    .replace(
+      "{template}",
+      count.format(sweden.bilagor.slag["fotomening ur mallen"] ?? 0),
+    );
   const contrast = copy.resultat.contrast
     .replace("{counties}", count.format(sweden.kontrast.lan))
     .replace(
@@ -167,6 +189,27 @@ export default function Sweden() {
             />
           </div>
         ))}
+      </section>
+      <section className="max-w-2xl space-y-2">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {copy.par.heading}
+        </h2>
+        <p className="text-sm text-ink-secondary">{copy.par.note}</p>
+        <p className="text-sm">{pairFinding}</p>
+        <p className="text-sm text-ink-secondary">{pairLimit}</p>
+      </section>
+      <section className="max-w-2xl space-y-2">
+        <h2 className="font-display text-2xl font-semibold tracking-tight">
+          {copy.bilagor.heading}
+        </h2>
+        <p className="text-sm text-ink-secondary">{copy.bilagor.note}</p>
+        <p className="text-sm">{annexFinding}</p>
+        <p className="text-sm text-ink-secondary">
+          {copy.bilagor.limit.replace(
+            "{unreadable}",
+            count.format(sweden.bilagor.utan_lasbar_text),
+          )}
+        </p>
       </section>
       <section className="max-w-2xl space-y-3">
         <h2 className="font-display text-2xl font-semibold tracking-tight">

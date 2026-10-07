@@ -1,5 +1,5 @@
 {
-  "byggd": "2026-10-06",
+  "byggd": "2026-10-07",
   "p12": {
     "avsant": "2026-10-02",
     "svar_senast": "2026-10-23",
@@ -536,6 +536,35 @@
       "atskilda_par": 28,
       "par": 153
     }
+  },
+  "bilagor": {
+    "mappar": 35,
+    "bilagefiler": 6,
+    "lan_med_bilagefil": 3,
+    "hanvisar_till_innehall": 114,
+    "endast_formell_hanvisning": 72,
+    "slag": {
+      "fotomening ur mallen": 42,
+      "den ifyllda checklistan": 12,
+      "annat": 60
+    },
+    "utan_lasbar_text": 45
+  },
+  "par": {
+    "lan": [
+      {
+        "myndighet": "vasternorrland",
+        "namn": "Västernorrland",
+        "par": 20,
+        "dokument_a": 20,
+        "maskade_a": 20,
+        "dokument_b": 20,
+        "maskade_b": 0
+      }
+    ],
+    "lan_med_nummer_i_bada": 6,
+    "utan_arendenummer": 177,
+    "filer": 310
   },
   "myndigheter": [
     {

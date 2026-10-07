@@ -48,6 +48,32 @@ besluten i avsnitt 7.
 
 ---
 
+## 0b. Beslut 2026-10-07: vad som får namnge ett län
+
+De tre mått som räknades den 6 oktober fanns inte i P12-paketen den 2 oktober,
+och P12 ger varje myndighet dess egna resultat före publicering. Inga fler brev
+skickas; myndigheterna har fått ett paket och i två fall en rättelse. Frågan
+avgjordes därför mått för mått.
+
+**Avgiftsutfallet namnger län.** Varje händelse i avgiftsspåret ligger i
+protokollloggen, och paketen säger själva att hela loggen publiceras ordagrant
+med myndighetens namn. Måttet räknar rader som redan är utlovade som publika,
+och tillför ingen ny uppgift om länet.
+
+**Parmåttet namnger länet.** Länets eget paket redovisade 22 dokument och 100
+procent maskade i klass A mot 26 dokument och 0 procent i klass B. Parläsningen
+är en delmängd av samma dokument åt samma håll.
+
+**Bilagemåttet namnger ingen, eftersom det inte mäter något.** En räkning av
+meningarna bakom träffarna visade att den vanligaste hänvisningen är en mening
+ur den nationella kontrollrapportmallen, som står där oavsett om något foto
+togs. Materialet skiljer alltså inte en undanhållen bilaga från en som aldrig
+fanns. Måttet redovisas som en lucka, och `data/bilagor.jsonl` stannar utanför
+git: den bär en flagga per län som inget påstående vilar på, och som skulle läsas
+som ett påstående ändå.
+
+---
+
 ## 1. Vad de avsända breven binder projektet till
 
 Breven är skickade och kan inte ändras. Fem meningar i dem är utfästelser, och
@@ -87,10 +113,12 @@ räknas redovisas som en lucka med skälet utskrivet; det uppskattas aldrig och
 utelämnas aldrig i tysthet.
 
 **Bilagemåtten.** Avsnitt 5: *"andel bilagor helt undanhållna"* och *"andel
-bilagor levererade i bearbetat skick"*, redovisade skilt från textmåttet, per
-begäran, plus flaggan `utan_bilaga` när beslutstexten hänvisar till en bilaga
-som inte följde med. Varken flaggan eller måtten finns i någon fil. Den
-maskningsmätning som är gjord mäter dokument och sidyta, inte bilagor.
+bilagor levererade i bearbetat skick"*. **Prövade 2026-10-06 och redovisade som
+en lucka den 7 oktober.** Sex bilagefiler kom in i hela insamlingen, och av de
+114 dokument som hänvisar till innehåll i en bilaga gör 42 det med en mening ur
+den nationella kontrollrapportmallen, som står där oavsett om något foto togs.
+Materialet skiljer därför inte en undanhållen bilaga från en som aldrig fanns.
+Skälet och talen står i `docs/VERIFIERAT.md`.
 
 **Utlämningsgraden.** P11: *"levererade handlingar delat med det lägre av taket
 och antalet som fanns"*. **Prövad 2026-10-06 och redovisad som en lucka.**
@@ -101,8 +129,10 @@ i `docs/VERIFIERAT.md` och `data/utlamningsgrad.jsonl`.
 
 **Dubbelförekomsten.** P1 och ombyggnad 1 varv 2: par där samma
 kontrolltillfälle förekommer både som fristående rapport i A och som bilaga i B
-är kontrastens starkaste jämförelse och ska redovisas separat. Ingen kod letar
-par. Utfallet kan bli noll identifierade par, och noll är då resultatet.
+är kontrastens starkaste jämförelse och ska redovisas separat. **Räknad
+2026-10-06.** Paren går att läsa ur myndighetens eget ärendenummer i filnamnet,
+och bara ett län, Västernorrland, har nummer som överlappar mellan klasserna:
+20 ärenden, 20 av 20 dokument maskade i klass A och 0 av 20 i klass B.
 
 **Avgiftsskrivelsemåttet.** Tillämpningsnot 5 deklarerar måttet samtidigt som
 regeln: antal skrivelser i avgiftsfrågan fram till ett överklagbart beslut i

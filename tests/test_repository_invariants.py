@@ -572,6 +572,41 @@ class TestNoPersonalDataIsCommitted:
             )
             assert row["skal"], "a gap carries the reason it is a gap"
 
+    def test_the_annex_register_reads_both_kinds_of_reference(self):
+        path = ROOT / "data" / "bilagor.jsonl"
+        if not path.exists():
+            return
+        rows = [
+            json.loads(line) for line in path.read_text("utf-8").splitlines() if line
+        ]
+        for row in rows:
+            # A folder cannot have more annex files than files, and the flag is
+            # the conjunction it is defined as: a reference to content, and no
+            # annex file at all.
+            assert row["bilagefiler"] <= row["filer"], row["myndighet"]
+            assert row["utan_bilaga"] == (
+                row["hanvisar_till_bilaga"] > 0 and row["bilagefiler"] == 0
+            ), f"{row['myndighet']} {row['begaran']}"
+            assert (
+                sum(row["hanvisningens_slag"].values()) == row["hanvisar_till_bilaga"]
+            ), f"{row['myndighet']} {row['begaran']}"
+            assert row["lasning"], "the reading carries what it cannot see"
+
+    def test_a_pair_is_the_same_case_in_both_classes(self):
+        path = ROOT / "data" / "dubbelforekomst.jsonl"
+        if not path.exists():
+            return
+        rows = [
+            json.loads(line) for line in path.read_text("utf-8").splitlines() if line
+        ]
+        for row in rows:
+            assert row["par"] <= min(row["arenden_i_a"], row["arenden_i_b"])
+            assert len(row["arendenummer"]) == row["par"]
+            if row["par"]:
+                assert row["parade_dokument_a"] >= row["par"], row["myndighet"]
+                assert row["parade_maskade_a"] <= row["parade_dokument_a"]
+                assert row["parade_maskade_b"] <= row["parade_dokument_b"]
+
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
         assert not pdfs, (

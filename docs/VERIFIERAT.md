@@ -403,6 +403,81 @@ byggts om en andra gång efter att svaret gick.
 
 ---
 
+## Bilagorna och de parade ärendena, mätt 2026-10-06
+
+Två förregistrerade mått som ingen hade räknat. Reglerna står i huvudet på
+`pipeline/43_annexes_and_pairs.py` och skrevs före körningen; den ena av dem
+skärptes efter en handläsning samma dag, och skärpningen är utskriven där.
+
+### Bilagorna: ett förregistrerat mått som inte går att beräkna
+
+Avsnitt 5 mäter bilagor som en egen klass, eftersom *"att undanhålla en hel
+bilaga är den kraftigaste maskning som finns"*, med två tal: andel bilagor helt
+undanhållna och andel levererade i bearbetat skick. Inget av dem går att
+beräkna ur det myndigheterna lämnade, och det är resultatet.
+
+**Sex bilagefiler kom in i hela insamlingen**, från tre län, med tre, två
+respektive en fil. Det talet är säkert och bygger på filernas egna namn.
+
+**Hänvisningarna i dokumenten bär inte måttet.** 114 dokument hänvisar till
+innehåll i en bilaga, och 42 av dem gör det med en och samma mening ur den
+nationella kontrollrapportmallen: *"Vid kontrollen användes nationella
+checklistor. Foton som togs finns i bilaga."* Meningen står i mallen oavsett om
+något foto togs vid den kontrollen. Tolv hänvisar till den ifyllda checklistan
+och 60 till annat. Ytterligare 72 dokument hänvisar bara till formalia, alltså
+överklagandehänvisningen eller lagstiftningsförteckningen.
+
+**Därför kan materialet inte skilja en undanhållen bilaga från en som aldrig
+fanns.** Till det kommer att ingenting knyter en bilagefil till det dokument den
+hör till, att bilagefilen läses ur filnamnet och därmed är ett golv, och att 45
+filer saknar läsbart textlager. Måttet redovisas som en lucka med skälet
+utskrivet, på samma sätt som P11:s utlämningsgrad. Att ta reda på vilket som
+gäller kräver en fråga till myndigheterna om vilka kontroller som gav foton, och
+den ställs inte: insamlingen är stängd och en ny våg vore en ny mätning.
+
+**Läsningen rättades två gånger, och båda rättelserna deklareras.** Den första
+räknade varje förekomst av ordet bilaga och gav 193 dokument. En handläsning av
+22 träffar den 6 oktober skilde hänvisningar till innehåll från hänvisningar
+till formalia, vilket gav 139. En räkning av meningarna bakom träffarna dagen
+därpå visade dels att lagstiftningsförteckningen räknats som innehåll i 33 fall,
+dels att mallmeningen om foton dominerade resten. Efter den andra rättelsen är
+talet 114, och måttet är en lucka i stället för ett fynd.
+
+### De parade ärendena, och mätningens renaste jämförelse
+
+P1 pekar ut jämförelsen: *"par där samma kontrolltillfälle förekommer i både A
+och B redovisas separat"*, vilket avsnitt 13 kallar kontrastens starkaste
+jämförelse. Paren läses ur myndighetens eget ärendenummer i filnamnet, i formen
+(12392-2025-11), där de två första delarna är ärendet.
+
+**Länsstyrelsen i Västernorrland är det enda län där jämförelsen går att göra.**
+Där förekommer 20 ärenden i båda klasserna, och utfallet är:
+
+| Klass | Dokument i de parade ärendena | Maskade |
+| --- | --- | --- |
+| A, kontrollrapporter | 20 | 20 |
+| B, beslut med bilagor | 20 | 0 |
+
+Myndigheten, ärendena och perioden är desamma i båda raderna, och det som
+skiljer dem är handlingens rättsliga status. Dokumenten är inte desamma: klass A
+bär kontrollrapporterna och klass B de handlingar samma ärenden gav i
+beslutsspåret. I övriga län går jämförelsen inte att göra, så den här cellen
+står ensam och bär ingen vikt utöver det ena länet.
+
+**Varför bara ett län.** 177 av 310 filer saknar ärendenummer i namnet. Sex län
+har nummer i båda klasserna, och bara i Västernorrland överlappar de. Resten av
+materialet kan inte paras, och det redovisas som en gräns i stället för att
+skattas.
+
+**Varför länet namnges.** P12 ger varje myndighet dess egna resultat före
+publicering, och den här läsningen fanns inte i paketet. Talen i den gör den
+inte heller: länets eget paket den 2 oktober redovisade klass A med 22 dokument
+och 100 procent maskade mot klass B med 26 dokument och 0 procent. Parläsningen
+är en delmängd av samma dokument och pekar åt samma håll, så ingen uppgift om
+länet blir ny genom att publiceras.
+
+---
+
 ## Avgiftsmåttet och utlämningsgraden, 2026-10-06
 
 Två mått som protokollet förklarade och som ingen hade räknat. Reglerna skrevs
@@ -416,7 +491,7 @@ samtliga 21 länsstyrelser oavsett utfall.
 
 **41 skrivelser i avgiftsfrågan**, fördelade på de 16 län som aviserade en
 avgift. Fem län aviserade ingen. Flest skrivelser krävdes i Jönköping, Kalmar
-och Örebro med fem var.
+och Örebro, med fem var.
 
 | Utfall | Län |
 | --- | --- |
@@ -426,6 +501,10 @@ och Örebro med fem var.
 | Uteblivet svar | 0 |
 | Avgiften föll efter avsmalningen | 12 |
 | Ingen avgift aviserad | 5 |
+
+Länen namnges här därför att varje händelse i avgiftsspåret ligger i
+protokollloggen, som P12-paketen själva säger publiceras ordagrant med
+myndighetens namn. Måttet räknar rader som redan är utlovade som publika.
 
 **Två klasser fick läggas till, och det är ett resultat om noten själv.** De
 fyra förskrivna klasserna hade ingen plats för det som hände i tolv län:

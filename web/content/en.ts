@@ -156,6 +156,50 @@ export const en: Copy = {
         interval: "Interval",
       },
     },
+    par: {
+      heading: "The same cases in both classes",
+      note:
+        "Point P1 of the protocol names the strongest comparison: cases where " +
+        "the same inspection appears both as a free-standing report in class A " +
+        "and as a document in class B. The authority, the period and the cases " +
+        "are then the same, and what differs is the document's legal status.",
+      finding:
+        "{counties} counties carry the authority's own case numbers in their " +
+        "file names in both classes, and in one of them, {county}, the same " +
+        "cases appear in both. It has {pairs} such cases: {maskedA} of " +
+        "{documentsA} " +
+        "inspection reports are redacted in class A, against {maskedB} of " +
+        "{documentsB} documents from the same cases in class B. The classes " +
+        "hold different documents from one case, not the same document " +
+        "measured twice.",
+      limit:
+        "The comparison cannot be made in the other counties. {unnumbered} of " +
+        "{files} files carry no case number in the name, and without it " +
+        "nothing ties a report to a decision.",
+    },
+    bilagor: {
+      heading: "The annexes",
+      note:
+        "The request covered annexes, and withholding a whole annex is the " +
+        "strongest redaction there is. Annexes are therefore measured on their " +
+        "own and never pooled with the area measure.",
+      finding:
+        "{files} annex files arrived in the whole collection, from {counties} " +
+        "counties. {refers} documents refer to content in an annex, and " +
+        "{template} of them do so with one sentence from the national " +
+        "inspection report template: that photographs taken are in an annex. " +
+        "That sentence stands in the template whether or not a photograph was " +
+        "taken.",
+      limit:
+        "The pre-registered annex measures therefore cannot be computed, and " +
+        "they are reported as a gap with the reason written out. The material " +
+        "does not separate an annex that was held back from one that never " +
+        "existed, nothing links an annex file to its document, the annex file " +
+        "is read from the file name and is therefore a floor, and " +
+        "{unreadable} files have no text layer to read. Finding out which " +
+        "applies would take a question to the authorities, and it is not " +
+        "asked.",
+    },
     notShown: {
       heading: "What this page does not show",
       items: [
