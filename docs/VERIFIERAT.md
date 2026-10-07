@@ -424,6 +424,31 @@ namngiven tjänsteman. Rollen, med den lydelse brevet självt undertecknas med.
 Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
+**Stående autosvar och förekomster, skrivet 8 oktober 2026.** En brevlådas
+automatiska svar är samma text varje gång, och flera län skickade sitt tre eller
+fyra gånger under augusti trots att texten i två fall själv säger att den går ut
+endast en gång per avsändare. Registret återger texten en gång, på den rad som
+skrevs först, och lägger varje ytterligare meddelande som en förekomst på samma
+rad med sitt eget datum, klockslag, meddelande-id och ämnesrad. Två texter slås
+ihop bara när de är identiska tecken för tecken efter samma utelämnanden; skiljer
+de sig på en punkt är det två rader.
+
+Radens datum och klockslag hör till det meddelande vars text raden återger, inte
+till den tidigaste förekomsten. Ordningen följer alltså hur registret byggdes och
+inte kronologin, och därför bär varje förekomst sitt eget datum i stället för att
+gömmas bakom radens. Ett brev med samma lydelse som ett annat men i ett eget
+ärende är inte en förekomst utan en egen rad: så står Gotlands två avgiftsbesked,
+Västerbottens två och Skånes två beslut, var för sig, med en notering om att
+lydelsen är densamma.
+
+En förekomst är ett inkommet meddelande som alla andra, så den paras mot
+handläggningsprotokollet på samma sätt. Invarianten gjorde det först bara för
+raderna, vilket gjorde förekomstlistan till en väg runt kontrollen. När den
+utvidgades den 8 oktober 2026 föll fyra autosvar ut som aldrig hade loggats, från
+Gävleborg, Örebro, Västmanland och Skåne; de är införda i loggen med
+meddelandehuvudenas klockslag omräknade till svensk tid, och inget mått rör sig,
+eftersom P1 räknar första substantiella besked.
+
 **Rollfältet, preciserat 8 oktober 2026.** Den första lydelsen sade *rollen, där
 brevet undertecknas av en person*, vilket läser fältet som en maskningsuppgift:
 något som fylls bara när ett namn har tagits bort. Registret har i praktiken

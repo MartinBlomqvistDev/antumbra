@@ -714,8 +714,18 @@ class TestNoPersonalDataIsCommitted:
             .splitlines()
             if line
         ]
-        missing = []
+        # A standing autoreply is written once and its repeats are appended to
+        # that row as occurrences. An occurrence is an incoming message like any
+        # other, so it is paired here too; without this the occurrence list
+        # would be a way around the check.
+        paired = []
         for row in rows:
+            paired.append(row)
+            for item in row.get("forekomster", []):
+                paired.append({**row, **item})
+
+        missing = []
+        for row in paired:
             same_day = [
                 entry
                 for entry in log
