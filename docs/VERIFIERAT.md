@@ -486,6 +486,16 @@ ett föreläggande (kontrollrapporter, bildbilagor med mera) framgår i regel av
 underrättelsen som djurägaren normalt får innan beslutet."* Bilagan finns
 alltså, men inte som bilaga till den handling som begärts ut.
 
+**Ett femte skäl, och det starkaste: avgiften.** Länsstyrelsen i Skåne skriver
+den 4 augusti 2026, ordagrant: *"De fem senaste besluten om föreläggande i
+djurskyddsärenden omfattar 5 filer med beslut och 18 filer med fotobilagor.
+Avgiften för elektroniska kopior av samtliga handlingar är 50 kr + 18 x 2 kr =
+88 kr. Avgiften för elektroniska kopior av endast besluten exklusive separata
+fotobilagor är 50 kr + 1 x 2 kr = 52 kr."* Fotobilagorna fanns alltså, de var
+räknade och prissatta, och det som hindrade dem var projektets egen regel om
+noll kronor i P5. Där är den uteblivna bilagan en följd av mätningens eget
+upplägg.
+
 **Därför kan materialet inte skilja en undanhållen bilaga från en som aldrig
 fanns.** Till det kommer att ingenting knyter en bilagefil till det dokument den
 hör till, att bilagefilen läses ur filnamnet och därmed är ett golv, och att 45
