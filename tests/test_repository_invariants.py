@@ -292,6 +292,7 @@ class TestNoPersonalDataIsCommitted:
     ALLOWED_EMAILS: ClassVar[set[str]] = {
         "cm.blomqvist@gmail.com",
         "kammarrattenisundsvall@dom.se",
+        "djurvalfard@jordbruksverket.se",
         "Kammarratten.Goteborg@dom.se",
     }
 
@@ -631,6 +632,40 @@ class TestNoPersonalDataIsCommitted:
         assert int(found.group(1)) == total, (
             f"the README says {found.group(1)} tests, the files hold {total}"
         )
+
+    def test_the_correspondence_log_keeps_names_out(self):
+        # The packets promise the authorities' own messages verbatim, and
+        # ADR-0018 keeps the officials out of them. The register is built by
+        # hand from the mailbox, so the guard belongs here and not only in the
+        # tool that appends rows.
+        path = ROOT / "data" / "korrespondens.jsonl"
+        if not path.exists():
+            return
+        allowed = {address.lower() for address in self.ALLOWED_EMAILS}
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            assert record["meddelande"], "every row carries its message id"
+            assert record["utelamnat"], "every row says what it leaves out"
+            if record["avsandare"] == "namngiven tjänsteman":
+                assert record["roll"], f"{record['meddelande']}: a name needs a role"
+            if record["roll"]:
+                first = record["roll"].split()[0]
+                assert first in self.ROLES, f"unknown role {record['roll']!r}"
+            for found in self.EMAIL.findall(record["text"]):
+                if found.lower() in allowed:
+                    continue
+                local, _, domain = found.rpartition("@")
+                if (
+                    domain.lower() in self.FUNCTIONAL_DOMAINS
+                    and "."
+                    not in local.replace("lansstyrelsen.", "").replace("djurskydd.", "")
+                ):
+                    continue
+                raise AssertionError(
+                    f"{record['meddelande']}: {found} is not a functional mailbox"
+                )
 
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
