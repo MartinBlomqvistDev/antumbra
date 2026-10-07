@@ -607,6 +607,25 @@ class TestNoPersonalDataIsCommitted:
                 assert row["parade_maskade_a"] <= row["parade_dokument_a"]
                 assert row["parade_maskade_b"] <= row["parade_dokument_b"]
 
+    def test_the_readme_states_the_number_of_tests_there_are(self, request):
+        # The figure has gone stale twice, 152 against 240 and 249 against 250,
+        # because nothing counted it. pytest knows the number during the run, so
+        # the claim is checked against the run itself rather than against memory.
+        config = request.config
+        if config.option.keyword or config.option.markexpr:
+            pytest.skip("a filtered run collects a subset")
+        if any("::" in str(arg) for arg in config.args):
+            pytest.skip("a single test was selected")
+        collected = request.session.testscollected
+        if not collected:
+            pytest.skip("nothing collected")
+        text = (ROOT / "README.md").read_text("utf-8")
+        found = re.search(r"The (\d+) tests carry", text)
+        assert found, "the README no longer states a test count"
+        assert int(found.group(1)) == collected, (
+            f"the README says {found.group(1)} tests, the suite collects {collected}"
+        )
+
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
         assert not pdfs, (
@@ -716,6 +735,33 @@ class TestOpenItemsKnowsEveryEvent:
             if all(event["handelse"] in INTERNAL for event in events)
         }
         assert not phantom, sorted(phantom)
+
+    def test_the_publication_floor_follows_the_packets_and_not_day_40(self):
+        # Tillämpningsnot 8: publication is any surface that makes an authority's
+        # own results readable, and no surface opens until P12's three weeks have
+        # run. The instrument printed day 40 as the floor until 7 October 2026,
+        # which is the date the protocol stopped meaning.
+        from datetime import date
+
+        from open_items import publication_lines
+
+        rows = [
+            {
+                "datum": "2026-10-02",
+                "klockslag": "13:12:22",
+                "myndighet": "Länsstyrelsen i Uppsala",
+                "begaran": "A+B",
+                "handelse": "P12-paket avsänt",
+                "notering": "",
+            }
+        ]
+        printed = " ".join(publication_lines(rows, date(2026, 10, 7)))
+        assert "2026-10-24" in printed, printed
+        assert "2026-10-23" in printed, printed
+
+        empty = " ".join(publication_lines([], date(2026, 9, 1)))
+        assert "2026-09-28" in empty, empty
+        assert "not 8" in empty, empty
 
     def test_acknowledging_service_does_not_close_the_appeal_window(self):
         # The authority asks for a receipt, so the receipt is an event of ours.

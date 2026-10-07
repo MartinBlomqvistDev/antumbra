@@ -677,6 +677,58 @@ def denominator_lines(rows: list[dict], today: date) -> list[str]:
     return lines
 
 
+# P12 gives every authority three weeks on its own results, and tillämpningsnot
+# 8 says that publication is any surface that makes those results readable. Day
+# 40 is therefore not the floor: the floor is the day after the three weeks run
+# out, counted from the day the packets went. Before the packets go, day 40 is
+# the only floor there is, and the report says so.
+REPLY_WEEKS = 21
+
+
+def publication_lines(rows: list[dict], today: date) -> list[str]:
+    """When the earliest surface may open, and what the packets are waiting for."""
+    sent = [
+        row
+        for row in rows
+        if row["handelse"] == "P12-paket avsänt" and row["myndighet"] != "samtliga"
+    ]
+    if not sent:
+        floor = add_working_days(DAY_ZERO, PUBLICATION_DAY)
+        return [
+            f"PUBLICERING: tidigast {floor.isoformat()}, dag {PUBLICATION_DAY}, "
+            "och först när P12-paketen gått och tre veckor löpt enligt not 8."
+        ]
+
+    dispatch = max(date.fromisoformat(row["datum"]) for row in sent)
+    deadline = dispatch + timedelta(days=REPLY_WEEKS)
+    floor = deadline + timedelta(days=1)
+    answered = {
+        row["myndighet"]
+        for row in rows
+        if row["handelse"] == "svar på P12-paket"
+        and row.get("notering", "").find("Autosvar") != 0
+    }
+    lines = [
+        "",
+        f"PUBLICERING: tidigast {floor.isoformat()}, enligt tillämpningsnot 8. "
+        f"P12-paketen gick {dispatch.isoformat()} till "
+        f"{len({row['myndighet'] for row in sent})} myndigheter, svarstiden går "
+        f"ut {deadline.isoformat()}.",
+    ]
+    if today <= deadline:
+        left = (deadline - today).days
+        lines.append(
+            f"  {left} dagar kvar av svarstiden. Substantiella svar inne: "
+            f"{len(answered)}. Ett autosvar är inget svar enligt P1."
+        )
+    else:
+        lines.append(
+            f"  Svarstiden är ute. Substantiella svar inne: {len(answered)}. "
+            "Ett svar som kommer efter fristen publiceras också, oavkortat."
+        )
+    return lines
+
+
 def report(rows: list[dict], today: date) -> list[str]:
     """The report, most urgent first."""
     lines: list[str] = []
@@ -690,15 +742,14 @@ def report(rows: list[dict], today: date) -> list[str]:
     tracks = by_request(rows)
     items = {key: state(events, today) for key, events in sorted(tracks.items())}
     day = working_days_between(DAY_ZERO, today)
-    publication = add_working_days(DAY_ZERO, PUBLICATION_DAY)
     lines.append(
         f"Dag {day} av {PUBLICATION_DAY}. {len(tracks)} begäranden, "
         f"{sum(1 for i in items.values() if i['closed'])} avslutade enligt not 3, "
         f"{sum(1 for i in items.values() if i['partial'])} delleveranser, "
         f"{sum(1 for i in items.values() if i['fee_stopped'] and not i['closed'])} "
-        f"avgiftsstoppade. "
-        f"Publiceringsgräns {publication.isoformat()}."
+        f"avgiftsstoppade."
     )
+    lines.extend(publication_lines(rows, today))
 
     lines.extend(denominator_lines(rows, today))
 
