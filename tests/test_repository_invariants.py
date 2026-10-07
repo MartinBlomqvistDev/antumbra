@@ -667,6 +667,46 @@ class TestNoPersonalDataIsCommitted:
                     f"{record['meddelande']}: {found} is not a functional mailbox"
                 )
 
+    def test_every_registered_message_is_also_a_logged_event(self):
+        # Avsnitt 7: every event is logged. The correspondence log is built from
+        # the mailbox and the protocol log from the handling, so a message in
+        # one and not the other means the watch missed something. Two such
+        # messages were found on 7 October 2026 and logged the same day.
+        korrespondens = ROOT / "data" / "korrespondens.jsonl"
+        if not korrespondens.exists():
+            return
+        rows = [
+            json.loads(line)
+            for line in korrespondens.read_text("utf-8").splitlines()
+            if line
+        ]
+        log = [
+            json.loads(line)
+            for line in (ROOT / "data" / "protokoll_logg.jsonl")
+            .read_text("utf-8")
+            .splitlines()
+            if line
+        ]
+        missing = []
+        for row in rows:
+            same_day = [
+                entry
+                for entry in log
+                if entry["myndighet"] == row["myndighet"]
+                and entry["datum"] == row["datum"]
+                and (entry.get("klockslag") or "")[:5] == row["klockslag"][:5]
+            ]
+            by_id = [
+                entry
+                for entry in log
+                if row["meddelande"] in (entry.get("notering") or "")
+            ]
+            if not same_day and not by_id:
+                missing.append(f"{row['datum']} {row['klockslag']} {row['myndighet']}")
+        assert not missing, (
+            f"messages in the correspondence log with no logged event: {missing}"
+        )
+
     def test_no_source_pdfs_are_tracked(self):
         pdfs = [p.name for p in tracked_files() if p.suffix.lower() == ".pdf"]
         assert not pdfs, (
