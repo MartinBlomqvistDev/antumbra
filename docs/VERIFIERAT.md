@@ -471,6 +471,14 @@ något foto togs vid den kontrollen. Tolv hänvisar till den ifyllda checklistan
 och 60 till annat. Ytterligare 72 dokument hänvisar bara till formalia, alltså
 överklagandehänvisningen eller lagstiftningsförteckningen.
 
+**Korrespondensen bär ett tredje skäl, och det är myndighetens eget.**
+Länsstyrelsen i Västra Götaland skriver den 6 augusti 2026, ordagrant: *"På
+grund av att du vill begränsa din begäran för att inte komma upp i det antal
+som innebär en avgift så har bilagor till besluten, till exempel
+kontrollrapporter och fotobilagor inte tagits med."* Där är den uteblivna
+bilagan en följd av projektets egen avsmalning enligt P5, inte av ett
+undanhållande. Brevet står i sin helhet i korrespondensloggen.
+
 **Därför kan materialet inte skilja en undanhållen bilaga från en som aldrig
 fanns.** Till det kommer att ingenting knyter en bilagefil till det dokument den
 hör till, att bilagefilen läses ur filnamnet och därmed är ett golv, och att 45
