@@ -88,7 +88,7 @@ var och en har en yta som måste finnas den 24 oktober.
 3. *"I materialet ingår hela handläggningsprotokollet och hela
    korrespondensloggen, alltså också de mejl ni har skickat i de här ärendena,
    ordagrant."* Handläggningsprotokollet finns committat i
-   `data/protokoll_logg.jsonl`, 539 rader. En korrespondenslogg med
+   `data/protokoll_logg.jsonl`, 542 rader den 7 oktober 2026. En korrespondenslogg med
    myndigheternas egna meddelanden i sin helhet finns inte; loggens noteringar
    bär ordagranna utdrag, inte hela meddelanden.
 4. *"Namn på enskilda tjänstemän återges inte någonstans: där ett beslut
