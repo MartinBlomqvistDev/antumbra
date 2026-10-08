@@ -179,6 +179,11 @@ THEIRS = frozenset(
         # because it does not start the collection, it repairs it, and the
         # distinction has to survive in the published log.
         "rättad leverans",
+        # A delivery that arrives as its own message after the notice that
+        # announced it. Jordbruksverket sent the completed spreadsheet sixteen
+        # minutes after the letter that explained it, and the log had the
+        # notice and the archiving but not the message's own arrival.
+        "kompletterande leverans",
         # A written, appealable refusal, which is what P8 asks for. It ends
         # the decision track and starts P9's own clock.
         "avslagsbeslut mottaget",

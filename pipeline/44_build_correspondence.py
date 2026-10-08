@@ -39,8 +39,11 @@ LINK_TARGET = re.compile(r"<(?:https?://|mailto:)[^>]*>")
 # The quoted history starts at the first of these, and everything after it is
 # the copy of my own letter or the authority's earlier one, published elsewhere.
 HISTORY = (
-    re.compile(r"^Från: Martin Blomqvist", re.MULTILINE),
-    re.compile(r"^Från: Länsstyrelsen", re.MULTILINE),
+    # Outlook opens every quoted letter with this header, whoever sent it. The
+    # first version matched only my own name and the counties', and a letter
+    # forwarded inside Jordbruksverket therefore kept its history, address and
+    # all. Anything after the header is a copy of a letter published elsewhere.
+    re.compile(r"^Från: ", re.MULTILINE),
     re.compile(r"^On \w{3}, \w{3} \d{1,2}, \d{4}", re.MULTILINE),
 )
 # The file list the Filskick service writes into the body, and its link.
