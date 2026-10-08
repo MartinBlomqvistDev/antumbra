@@ -838,6 +838,28 @@ class TestNoPersonalDataIsCommitted:
         )
 
     @staticmethod
+    def _same_party(entry: dict, row: dict) -> bool:
+        """Whether a logged event and a register row concern the same party.
+
+        A court's message in one of the appeals is logged under the county,
+        because the case is the county's refusal, and the note says outright who
+        sent it: "Avsändaren är Kammarrätten i Jönköping, inte länsstyrelsen."
+        The register says who wrote the letter, so the two fields differ by
+        design. Writing extra log rows under the court's name to satisfy this
+        check would let a test shape the handling protocol, so the check learns
+        the convention instead: a row from a court pairs with an event whose
+        handling concerns a court.
+        """
+        if entry["myndighet"] == row["myndighet"]:
+            return True
+        if not row["myndighet"].startswith(("Kammarrätten", "Sveriges Domstolar")):
+            return False
+        return (
+            "kammarrätt" in entry["handelse"].lower()
+            or "kammarrätt" in (entry.get("notering") or "").lower()
+        )
+
+    @staticmethod
     def _same_minute(logged: str, header: str) -> bool:
         """Whether a logged time and a header time are the same event.
 
@@ -889,7 +911,7 @@ class TestNoPersonalDataIsCommitted:
             same_day = [
                 entry
                 for entry in log
-                if entry["myndighet"] == row["myndighet"]
+                if self._same_party(entry, row)
                 and entry["datum"] == row["datum"]
                 and self._same_minute(entry.get("klockslag") or "", row["klockslag"])
             ]
