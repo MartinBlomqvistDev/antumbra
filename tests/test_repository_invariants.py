@@ -328,6 +328,8 @@ class TestNoPersonalDataIsCommitted:
         # Dalarna signs as a function and not a title, and the register
         # writes the wording the letter uses rather than the nearest title.
         "arkivfunktionen",
+        # Kalmar signs simply as the archive.
+        "arkivet",
         "avdelningschef",
         "chefsjurist",
         "enhetschef",
