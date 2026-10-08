@@ -424,6 +424,31 @@ namngiven tjänsteman. Rollen, med den lydelse brevet självt undertecknas med.
 Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
+**Registret är ofullständigt, och så här långt är det kommet.** Den 8 oktober
+2026 06:37:57 bär `data/korrespondens.jsonl` 109 rader och 11 förekomster, alltså
+120 inkomna meddelanden. Hur många som återstår är i skrivande stund inte
+fastställt, och skälet är ett fel i arbetsordningen: registret byggdes mot en
+arbetslista över inkomna meddelanden som visade sig vara ofullständig. Kalmars
+egna brev citerar tre besked från den 3, 4 och 5 augusti som inte fanns i listan,
+och en sökning per motpart visade ett autosvar från länet den 3 augusti som inte
+heller fanns där. Listan är alltså inte en förteckning att lita på.
+
+Det är samma fel som avvikelsen den 29 september: en genomgång som läste en sida
+av brevlådan utan att hämta nästa. Rättelsen är att förteckningen byggs om tråd
+för tråd, med meddelandeantalet per tråd läst ur källan och jämfört mot vad
+sökningen faktiskt listade, eftersom en trådlistning bara visar de fem senaste
+meddelandena. Till dess säger den här texten vad registret rymmer och inte vad
+det påstår sig rymma.
+
+**Vad detta inte rör.** Måtten i öppenhetslagret vilar på
+`data/protokoll_logg.jsonl` och leveransmanifestet, inte på det här registret.
+Protokollloggen har förts löpande sedan dag 0 och är genomgången tre gånger på
+oberoende vägar, senast den 7 oktober. Korrespondensregistret är en
+publiceringsyta som P12-paketen utfäster, och dess lucka ändrar inget tal om
+svarstid, maskning eller avgifter. Där registret och loggen har parats mot
+varandra har parningen tvärtom hittat fel i loggen: ett felaktigt klockslag hos
+Västra Götaland och sex autosvar som aldrig loggats, alla rättade som nya rader.
+
 **Stående autosvar och förekomster, skrivet 8 oktober 2026.** En brevlådas
 automatiska svar är samma text varje gång, och flera län skickade sitt tre eller
 fyra gånger under augusti trots att texten i två fall själv säger att den går ut
