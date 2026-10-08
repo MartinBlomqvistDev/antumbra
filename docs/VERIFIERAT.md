@@ -425,7 +425,7 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är ofullständigt, och så här långt är det kommet.** Registret bär
-124 av de 261 inkomna meddelanden förteckningen känner, alltså 137 kvar. Talen
+128 av de 259 inkomna meddelanden förteckningen känner, alltså 131 kvar. Talen
 står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
 `data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
 om den här meningen inte stämmer med filerna.
@@ -449,6 +449,21 @@ att den ser hel ut. Förteckningen bär meddelande-id, tidpunkt ur
 meddelandehuvudet, myndighet och avsändarkategori, aldrig en adress; för 32
 meddelanden från en namngiven tjänsteman står myndigheten som okänd till dess
 brevet läses, eftersom den inte går att härleda utan att skriva ut adressen.
+
+**Avgränsningen, och de två meddelanden som ligger utanför den.** Registret bär
+korrespondensen i projektets egna ärenden: de tjugoen länens begäran A och B,
+Jordbruksverkets begäran C, och de fyra överklaganden som följde av avslagen,
+inklusive kammarrätternas egna meddelanden i dem. Två meddelanden i förteckningen
+ligger utanför och är markerade så, med skälet i raden: autosvaret den 2 augusti
+2026 på en begäran om kammarrättens avgörande i mål 2682-21, och handlingarna i
+det målet som kom dagen därpå. Det målet är inte projektets ärende utan en
+rättskälla som hämtades innan begärandena skickades, för att veta vad rättsläget
+säger om avgifter för elektroniska kopior; händelsen står i protokollloggen som
+*rättsfråga verifierad*. De fördes först in i registret den 8 oktober 2026 och
+togs ut samma dag när avgränsningen prövades mot regeln, som säger att registret
+rymmer korrespondens *i de här ärendena*. En invariant i `tests/` ser till att
+ingenting utanför avgränsningen står i registret och att varje undantag bär sitt
+skäl, och räknaren ovan räknar bara det som är inom den.
 
 **Vad detta inte rör.** Måtten i öppenhetslagret vilar på
 `data/protokoll_logg.jsonl` och leveransmanifestet, inte på det här registret.

@@ -719,6 +719,13 @@ class TestNoPersonalDataIsCommitted:
             assert not self.EMAIL.findall(line), (
                 f"{row['meddelande']}: the inventory must carry no address"
             )
+            assert "inom_avgransningen" in row, (
+                f"{row['meddelande']}: every row says whether it is in scope"
+            )
+            if not row["inom_avgransningen"]:
+                assert row.get("skal"), (
+                    f"{row['meddelande']}: out of scope needs a reason"
+                )
             known[row["meddelande"]] = row
 
         seen = set()
@@ -732,15 +739,19 @@ class TestNoPersonalDataIsCommitted:
                 assert message in known, (
                     f"{message} is in the register but not in the inventory"
                 )
+                assert known[message]["inom_avgransningen"], (
+                    f"{message} is out of scope and does not belong in the register"
+                )
                 seen.add(message)
 
         # The count the docs state has to be the count the files hold.
         text = (ROOT / "docs" / "VERIFIERAT.md").read_text("utf-8")
         found = re.search(r"(\d+) av de (\d+) inkomna meddelanden", text)
         assert found, "docs/VERIFIERAT.md no longer states how far the register is"
-        assert (int(found.group(1)), int(found.group(2))) == (len(seen), len(known)), (
+        in_scope = sum(1 for row in known.values() if row["inom_avgransningen"])
+        assert (int(found.group(1)), int(found.group(2))) == (len(seen), in_scope), (
             f"the docs say {found.group(1)} of {found.group(2)}, the files hold "
-            f"{len(seen)} of {len(known)}"
+            f"{len(seen)} of {in_scope}"
         )
 
     def test_every_registered_message_is_also_a_logged_event(self):
