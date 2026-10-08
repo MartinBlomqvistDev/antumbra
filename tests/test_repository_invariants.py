@@ -301,6 +301,8 @@ class TestNoPersonalDataIsCommitted:
         "kammarrattenijonkoping@dom.se",
         "jordbruksverket@jordbruksverket.se",
         "noreply@dom.se",
+        # Kammarrätten i Stockholm writes from its division's mailbox.
+        "avd3.kst@dom.se",
     }
 
     def test_no_third_party_email_addresses(self):
