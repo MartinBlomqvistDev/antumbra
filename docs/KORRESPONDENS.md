@@ -72,11 +72,22 @@ skriver *Administrativ handläggare*, inte *administratör*. Namnges ingen perso
 **`text`** är ordagrann. Ingen sammanfattning, ingen karaktärisering, ingen
 rättning av stavning eller av myndighetens egna tal.
 
-**`utelamnat`** säger vad raden lämnar ute och varför. Tre saker utelämnas
+**`utelamnat`** säger vad raden lämnar ute och varför. Fyra saker utelämnas
 regelmässigt: den citerade historiken, signaturblockets personuppgifter enligt
-ADR-0018, och länkmålen. Myndighetens egen funktionsbrevlåda, växel och
-webbadress står kvar, eftersom de är publicerade kontaktuppgifter och inte en
-enskilds.
+ADR-0018, länkmålen, och en rad som inte var något annat än en länk.
+Myndighetens egen funktionsbrevlåda, växel och webbadress står kvar när de står
+som text, eftersom de är publicerade kontaktuppgifter och inte en enskilds.
+
+Den fjärde regeln kom den 8 oktober 2026 och den har ett skäl som väger mer än
+prydlighet. En rad som bara bar en länk, till exempel `Central e-post` med sitt
+mejlmål efter sig, blir en lös etikett när målet tas bort, och den ser ut som en
+mening myndigheten skrivit. Registrets handskrivna rader kapade sådana rader
+från början, medan steg 44 lät dem stå, och samma stående autosvar kom därför
+att bäras i två former: Örebros autosvar på 639 tecken som handskriven rad och
+på 719 tecken genom steget. Nu kapar steget dem, tretton rader är skrivna om
+efter samma regel, och tre rader som bar ett autosvar som redan fanns i
+registret är inlagda som förekomster hos sin bärare i stället. En naken
+webbadress som myndigheten själv skrivit som text är inte en länk och står kvar.
 
 **`forekomster`** bär en brevlådas stående autosvar när texten är identisk
 tecken för tecken. En förekomst måste bära meddelandets `sizeEstimate` ur

@@ -51,6 +51,16 @@ HISTORY = (
     re.compile(r"^Från: ", re.MULTILINE),
     re.compile(r"^On \w{3}, \w{3} \d{1,2}, \d{4}", re.MULTILINE),
 )
+# A line that was nothing but a link: a label and its target, or a target and a
+# label and another target, and no other words. Stripping the targets alone
+# would leave a dangling label such as "Central e-post" standing as if the
+# authority had written it as a sentence. The register's hand-written rows cut
+# those lines from the start, and from 8 October 2026 the step does the same, so
+# the same standing autoreply is not carried in two shapes.
+ONLY_LINK = re.compile(
+    r"^[^<>]{0,70}<(?:https?://|mailto:)[^>]*>"
+    r"(?:[^<>]{0,70}<(?:https?://|mailto:)[^>]*>)*$"
+)
 # The file list the Filskick service writes into the body, and its link. The
 # service writes the header in Swedish or in English depending on the
 # message, and Jordbruksverket's delivery of 336 files came in English.
@@ -186,6 +196,10 @@ def normalise(
 ) -> tuple[str, list[str]]:
     """The text as the register carries it, and what was taken out of it."""
     taken = []
+    kept = [line for line in text.splitlines() if not ONLY_LINK.match(line.strip())]
+    if len(kept) != len(text.splitlines()):
+        taken.append("raderna som bara var länkar till myndighetens kontaktuppgifter")
+    text = NEWLINE.join(kept)
     body, under = strip_history(text)
     taken.extend(under)
     body, had_signature = strip_signature(body, judgement, message)

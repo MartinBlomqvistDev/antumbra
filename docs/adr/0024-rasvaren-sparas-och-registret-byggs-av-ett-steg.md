@@ -75,3 +75,23 @@ ger samma text.
 
 Det här är samma hållning som resten av steget: det som går att räkna räknas i
 kod, och det som kräver en läsare lämnas till läsaren och skrivs ner.
+
+## Tillägg 2026-10-08, senare samma dag: en rad som bara var en länk kapas
+
+De 124 handskrivna raderna kapade de rader som inte bar något annat än en länk,
+alltså en etikett som `Central e-post` med sitt mejlmål efter sig. Steget tog
+bara bort målet och lät etiketten stå. Skillnaden syntes först när Örebros
+stående autosvar kom in en gång till den 28 augusti: bäraren i registret var
+639 tecken, steget gav 719, och samma autosvar hade då burits i två former i
+stället för som en bärare med förekomster.
+
+Steget kapar nu en rad vars hela innehåll var en eller flera länkar, och säger
+det i `utelamnat`. Tretton rader byggda av steget är skrivna om efter samma
+regel, och tre rader som bar ett autosvar som redan fanns i registret är lagda
+som förekomster hos sin bärare. En naken webbadress som myndigheten skrivit som
+text är inte en länk och står kvar, eftersom den är myndighetens egna tecken och
+inte e-postklientens återgivning av en länk.
+
+Regeln är inte en prydlighetsfråga. Ett register som bär samma text i två former
+beroende på vilket år raden skrevs låter löftet om ordagrannhet se ut som en
+smaksak.
