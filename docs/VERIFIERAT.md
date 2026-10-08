@@ -425,7 +425,7 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är ofullständigt, och så här långt är det kommet.** Registret bär
-130 av de 259 inkomna meddelanden förteckningen känner, alltså 129 kvar. Talen
+132 av de 259 inkomna meddelanden förteckningen känner, alltså 127 kvar. Talen
 står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
 `data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
 om den här meningen inte stämmer med filerna.
@@ -482,6 +482,16 @@ skrevs först, och lägger varje ytterligare meddelande som en förekomst på sa
 rad med sitt eget datum, klockslag, meddelande-id och ämnesrad. Två texter slås
 ihop bara när de är identiska tecken för tecken efter samma utelämnanden; skiljer
 de sig på en punkt är det två rader.
+
+Att en förekomst är identisk ska vara belagt och inte antaget. Den 8 oktober 2026
+skrevs först två förekomster vars text aldrig hade hämtats, och när verktyget
+sedan fick jämföra texten gick det att kringgå genom att mata in bärarens egen
+text på båda sidor, vilket också skedde en gång. Alla tre kontrollerades i
+efterhand samma dag och var riktiga, men utfallet är inte poängen. Verktyget
+kräver nu meddelandets `sizeEstimate` ur API-svaret för varje ny förekomst, ett
+tal som inte går att känna till utan att ha hämtat meddelandet, och det lagras i
+förekomsten så att kontrollen går att göra om. De förekomster som skrevs före den
+regeln bär inget sådant tal; de är kontrollerade för hand.
 
 Radens datum och klockslag hör till det meddelande vars text raden återger, inte
 till den tidigaste förekomsten. Ordningen följer alltså hur registret byggdes och
