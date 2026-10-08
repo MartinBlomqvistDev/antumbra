@@ -51,6 +51,12 @@ HISTORY = (
     re.compile(r"^Från: ", re.MULTILINE),
     re.compile(r"^On \w{3}, \w{3} \d{1,2}, \d{4}", re.MULTILINE),
 )
+# The courts' Säker e-post notice carries a one-time link with a token that
+# opens the message as the addressee. It is a personal access link, not a
+# published address, so it is taken out and the omission is declared. The link
+# expires 30 days after the message, and the register says so rather than
+# leaving a credential standing in a published file.
+SECURE_LINK = re.compile(r"^https://securemail\.domstol\.se/\S+$", re.MULTILINE)
 # A line that was nothing but a link: a label and its target, or a target and a
 # label and another target, and no other words. Stripping the targets alone
 # would leave a dangling label such as "Central e-post" standing as if the
@@ -96,6 +102,7 @@ IMAGE_LINE = re.compile(r"^\[(?:cid:)?[^\]]*\]$", re.MULTILINE)
 NOT_A_NAME = (
     "Länsstyrelsen",
     "Kammarrätten",
+    "Sveriges",
     "Jordbruksverket",
     "Enheten",
     "Enhet",
@@ -208,6 +215,12 @@ def normalise(
             "signaturblocket med tjänstemannens namn och det som följer det "
             "enligt ADR-0018"
         )
+    if SECURE_LINK.search(body):
+        taken.append(
+            "engångslänken till domstolens tjänst Säker e-post, som är en "
+            "personlig åtkomstlänk och inte en publicerad adress"
+        )
+        body = SECURE_LINK.sub("", body)
     if LINK_TARGET.search(body) or MARKDOWN_LINK.search(body):
         taken.append("länkmålen bakom texten")
         body = LINK_TARGET.sub("", body)

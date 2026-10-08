@@ -89,6 +89,13 @@ efter samma regel, och tre rader som bar ett autosvar som redan fanns i
 registret är inlagda som förekomster hos sin bärare i stället. En naken
 webbadress som myndigheten själv skrivit som text är inte en länk och står kvar.
 
+En femte sak utelämnas sedan den 8 oktober 2026, och den gäller bara
+domstolarna: engångslänken i aviseringen från tjänsten Säker e-post. Den
+öppnar meddelandet som adressat och är alltså en personlig åtkomstlänk, inte
+en publicerad adress. Länkarna upphör att gälla 30 dagar efter meddelandet,
+men ett publicerat register ska inte bära dem ens utgångna, och en invariant
+fäller en rad som gör det.
+
 **`forekomster`** bär en brevlådas stående autosvar när texten är identisk
 tecken för tecken. En förekomst måste bära meddelandets `sizeEstimate` ur
 API-svaret, som bevis på att meddelandet är hämtat och inte antaget identiskt.

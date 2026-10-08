@@ -710,6 +710,7 @@ class TestNoPersonalDataIsCommitted:
     NOT_A_NAME: ClassVar[tuple[str, ...]] = (
         "Länsstyrelsen",
         "Kammarrätten",
+        "Sveriges",
         "Jordbruksverket",
         "Enheten",
         "Enhet",
@@ -780,6 +781,22 @@ class TestNoPersonalDataIsCommitted:
                         f"{record['meddelande']}: {stripped!r} looks like a "
                         "person's name and must be replaced by the role"
                     )
+
+    def test_no_one_time_court_link_is_published(self):
+        # The courts' Säker e-post notice carries a one-time link that opens the
+        # message as the addressee. It is a personal access link, so the step
+        # takes it out and the row says so. A published register must not carry
+        # it even expired, and this guard holds whether the row was built by the
+        # step or written by hand.
+        for name in ("korrespondens.jsonl", "korrespondens_forteckning.jsonl"):
+            path = ROOT / "data" / name
+            if not path.exists():
+                continue
+            text = path.read_text("utf-8")
+            assert "securemail.domstol.se" not in text, (
+                f"{name} carries a one-time court link, which is a personal "
+                "access link and never published"
+            )
 
     def test_the_signature_judgements_carry_a_judgement_and_never_a_word(self):
         # ADR-0024's addendum of 8 October 2026: a signature whose first line is
