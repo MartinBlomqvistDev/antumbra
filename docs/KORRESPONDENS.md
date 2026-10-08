@@ -40,7 +40,10 @@ publiceras under den rubriken, och hur långt det är kommet står i
 8. **Grindarna**, var och en som sitt eget kommando med exitkoden läst:
    `ruff check .`, `ruff format --check .`, `pytest`. Aldrig i ett rör och
    aldrig i en kedja som låter commit följa oavsett utfall.
-9. **Commit och push**, och läs CI efteråt.
+9. **Commit och push**, och läs CI efteråt. Stega hela arbetskopian, aldrig
+   en enskild sökväg: steg 5 skriver i `data/` och steg 7 i `docs/`, så en
+   `git add data/` lämnar talet kvar och CI faller på invarianten fast
+   pytest var grön lokalt.
 
 ## Reglerna per fält
 
