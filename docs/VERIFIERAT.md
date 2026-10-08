@@ -517,12 +517,20 @@ tjansteman` utan prickar, så kontrollen att ett namn alltid bär en roll hade a
 kunnat falla ut; den är lagad, och invarianten i `tests/` som gör samma kontroll har
 hela tiden varit stavad rätt.
 
-Parningen mot protokollloggen fällde en tredje sak, i loggen och inte i registret:
-Västra Götalands autosvar står loggat 2026-08-03 10:01:49 på begäran A, medan
-brevlådan rymmer ett enda autosvar från länet i augusti, 10:03:26 i tråden för
-begäran B. Klockslaget och klassen går inte att belägga mot källan. Loggen är
-append-only, så raden står kvar och rättelsen är en ny rad med skälet utskrivet.
-Inget mått rör sig: autosvar räknas inte som kontakt enligt P1.
+Parningen mot protokollloggen tycktes fälla en tredje sak, och där blev rättelsen
+själv ett fel som fick återtas dagen därpå. Påståendet var att Västra Götalands
+autosvar på begäran A, loggat 2026-08-03 10:01:49, inte gick att belägga, eftersom
+brevlådan bara tycktes rymma ett autosvar från länet i augusti. A-autosvaret finns,
+meddelande 19fc6a4bf66af543 med meddelandehuvudet 08:01:49 UTC, alltså 10:01:49
+svensk tid och med ämnesraden för begäran A. Loggraden var riktig på båda punkterna.
+
+Felet uppstod därför att slutsatsen drogs ur den ofullständiga arbetslistan i
+stället för ur brevlådan, alltså samma fel som listan själv bär, och det är värre
+när det sker i en rättelse än i en vanlig rad. Både den felaktiga rättelsen och
+återtagandet står kvar i loggen enligt ADR-0003, och inget mått rör sig: autosvar
+räknas inte som kontakt enligt P1. Lärdomen är skriven in i arbetsordningen: en
+rättelse ska vila på källan, läst i sin helhet, och aldrig på en förteckning över
+källan.
 
 **Källan är brevlådan, inte protokollet.** Registret byggs tråd för tråd ur
 Gmail och inte ur protokollloggen, av samma skäl som bevakningsregeln: en
