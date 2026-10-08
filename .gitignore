@@ -83,3 +83,7 @@ data/bilagor.jsonl
 
 # Session configuration for the local preview, not project content.
 .claude/
+
+# Raw correspondence replies: they carry officials names and personal
+# addresses, so only the manifest with sha256 per file is committed (ADR-0024).
+data/korrespondens_raw/
