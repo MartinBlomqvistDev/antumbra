@@ -330,6 +330,8 @@ class TestNoPersonalDataIsCommitted:
         "arkivfunktionen",
         # Kalmar signs simply as the archive.
         "arkivet",
+        # Kronoberg signs as the registry itself, the same kind of wording.
+        "diariet",
         "avdelningschef",
         "chefsjurist",
         "enhetschef",
