@@ -424,21 +424,31 @@ namngiven tjänsteman. Rollen, med den lydelse brevet självt undertecknas med.
 Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
-**Registret är ofullständigt, och så här långt är det kommet.** Den 8 oktober
-2026 06:37:57 bär `data/korrespondens.jsonl` 109 rader och 11 förekomster, alltså
-120 inkomna meddelanden. Hur många som återstår är i skrivande stund inte
-fastställt, och skälet är ett fel i arbetsordningen: registret byggdes mot en
-arbetslista över inkomna meddelanden som visade sig vara ofullständig. Kalmars
-egna brev citerar tre besked från den 3, 4 och 5 augusti som inte fanns i listan,
-och en sökning per motpart visade ett autosvar från länet den 3 augusti som inte
-heller fanns där. Listan är alltså inte en förteckning att lita på.
+**Registret är ofullständigt, och så här långt är det kommet.** Registret bär
+124 av de 261 inkomna meddelanden förteckningen känner, alltså 137 kvar. Talen
+står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
+`data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
+om den här meningen inte stämmer med filerna.
 
-Det är samma fel som avvikelsen den 29 september: en genomgång som läste en sida
-av brevlådan utan att hämta nästa. Rättelsen är att förteckningen byggs om tråd
-för tråd, med meddelandeantalet per tråd läst ur källan och jämfört mot vad
-sökningen faktiskt listade, eftersom en trådlistning bara visar de fem senaste
-meddelandena. Till dess säger den här texten vad registret rymmer och inte vad
-det påstår sig rymma.
+**Förteckningen, och varför den fick byggas om.** Registret byggdes först mot en
+arbetslista över inkomna meddelanden som var ofullständig. Kalmars egna brev
+citerade tre besked från den 3, 4 och 5 augusti som inte fanns i listan. Värre:
+ett av de meddelanden som fattades var Västra Götalands autosvar på begäran A, och
+eftersom det inte fanns i listan skrevs en rättelse som påstod att loggens
+klockslag för det var obelagt. Rättelsen var fel och fick återtas. Ett fel i en
+förteckning blir på det sättet ett fel i sakinnehållet.
+
+`data/korrespondens_forteckning.jsonl` är ombyggnaden, gjord den 8 oktober 2026
+tråd för tråd i stället för meddelande för meddelande: 171 trådar från den 2
+augusti 2026 och framåt, med trådens eget meddelandeantal läst ur källan och
+jämfört mot hur många meddelanden sökningen faktiskt listade. Elva trådar visade
+sig trunkerade, eftersom en trådlistning bara återger fem meddelanden, och alla
+elva hämtades i sin helhet. Det är den mekaniska kontrollen som behövdes: att
+jämföra det hämtade mot det lästa, och inte lita på att en lista är hel bara för
+att den ser hel ut. Förteckningen bär meddelande-id, tidpunkt ur
+meddelandehuvudet, myndighet och avsändarkategori, aldrig en adress; för 32
+meddelanden från en namngiven tjänsteman står myndigheten som okänd till dess
+brevet läses, eftersom den inte går att härleda utan att skriva ut adressen.
 
 **Vad detta inte rör.** Måtten i öppenhetslagret vilar på
 `data/protokoll_logg.jsonl` och leveransmanifestet, inte på det här registret.

@@ -696,6 +696,53 @@ class TestNoPersonalDataIsCommitted:
                     f"{record['meddelande']}: {found} is not a functional mailbox"
                 )
 
+    def test_the_register_is_measured_against_the_inventory(self):
+        # The register was built against a work list that turned out to be
+        # incomplete, and a wrong correction was written on the strength of it.
+        # The inventory in data/korrespondens_forteckning.jsonl is the mailbox
+        # read thread for thread, with every truncated thread fetched whole, and
+        # it is what the register is measured against. Two things are checked:
+        # no row may cite a message the inventory does not have, and no personal
+        # address may reach the inventory.
+        forteckning = ROOT / "data" / "korrespondens_forteckning.jsonl"
+        register = ROOT / "data" / "korrespondens.jsonl"
+        if not forteckning.exists() or not register.exists():
+            return
+        known = {}
+        for line in forteckning.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            row = json.loads(line)
+            assert row["avsandare"] in self.SENDERS, (
+                f"{row['meddelande']}: {row['avsandare']!r} is not one of the two"
+            )
+            assert not self.EMAIL.findall(line), (
+                f"{row['meddelande']}: the inventory must carry no address"
+            )
+            known[row["meddelande"]] = row
+
+        seen = set()
+        for line in register.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            row = json.loads(line)
+            for message in [row["meddelande"]] + [
+                item["meddelande"] for item in row.get("forekomster", [])
+            ]:
+                assert message in known, (
+                    f"{message} is in the register but not in the inventory"
+                )
+                seen.add(message)
+
+        # The count the docs state has to be the count the files hold.
+        text = (ROOT / "docs" / "VERIFIERAT.md").read_text("utf-8")
+        found = re.search(r"(\d+) av de (\d+) inkomna meddelanden", text)
+        assert found, "docs/VERIFIERAT.md no longer states how far the register is"
+        assert (int(found.group(1)), int(found.group(2))) == (len(seen), len(known)), (
+            f"the docs say {found.group(1)} of {found.group(2)}, the files hold "
+            f"{len(seen)} of {len(known)}"
+        )
+
     def test_every_registered_message_is_also_a_logged_event(self):
         # Avsnitt 7: every event is logged. The correspondence log is built from
         # the mailbox and the protocol log from the handling, so a message in
