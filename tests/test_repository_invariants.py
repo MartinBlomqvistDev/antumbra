@@ -696,6 +696,89 @@ class TestNoPersonalDataIsCommitted:
                     f"{record['meddelande']}: {found} is not a functional mailbox"
                 )
 
+    # A line of exactly two capitalised words, in a letter, is almost always a
+    # person signing it. The signature block is stripped by hand, so what this
+    # catches is a name left in the body, which the P12 letters promise is
+    # nowhere in the published material. Authority names match the same shape,
+    # so the words they start with are excluded; the register was clean when the
+    # invariant was written, and it exists to keep it that way.
+    NAME_LINE: ClassVar[re.Pattern[str]] = re.compile(
+        r"^[A-ZÅÄÖ][a-zåäöé]+ [A-ZÅÄÖ][a-zåäöé]+$"
+    )
+    NOT_A_NAME: ClassVar[tuple[str, ...]] = (
+        "Länsstyrelsen",
+        "Kammarrätten",
+        "Jordbruksverket",
+        "Enheten",
+        "Enhet",
+        "Avdelningen",
+        "Avdelning",
+        "Diarium",
+        "Diariet",
+        "Central",
+        "Säker",
+        "Med",
+        "Vänliga",
+        "Observera",
+        "Hej",
+        "Tack",
+        "Telefon",
+        "Växel",
+        "Besöksadress",
+        "Postadress",
+        "Arkivet",
+        "Arkivfunktionen",
+        "Registrator",
+        "Registraturen",
+        "Webbplats",
+        "Så",
+        "Vill",
+        "Det",
+        "Du",
+        "Jag",
+        "Vi",
+        "Alla",
+        "Bifogar",
+        "Här",
+        "Sidan",
+        "Mer",
+        "Information",
+        "För",
+        "Om",
+        "När",
+        "Har",
+        "Begär",
+        "Sammanlagt",
+        "Exempel",
+        "Avgift",
+        "Din",
+        "Dessa",
+        "Normal",
+        "Extra",
+        "Föreläggande",
+        "Beslut",
+    )
+
+    def test_no_official_is_named_in_a_registered_letter(self):
+        # ADR-0018 and the P12 letters: an official's name is never reproduced.
+        # The guard on addresses does not catch a name written as text.
+        path = ROOT / "data" / "korrespondens.jsonl"
+        if not path.exists():
+            return
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            for text_line in (record["text"] or "").splitlines():
+                stripped = text_line.strip()
+                if self.NAME_LINE.match(stripped) and not stripped.startswith(
+                    self.NOT_A_NAME
+                ):
+                    raise AssertionError(
+                        f"{record['meddelande']}: {stripped!r} looks like a "
+                        "person's name and must be replaced by the role"
+                    )
+
     def test_the_register_is_measured_against_the_inventory(self):
         # The register was built against a work list that turned out to be
         # incomplete, and a wrong correction was written on the strength of it.
