@@ -36,7 +36,9 @@ CEST = (datetime(2026, 3, 29, tzinfo=UTC), datetime(2026, 10, 25, tzinfo=UTC))
 
 # A link target the mail client renders after the link text, and an address in
 # angle brackets. Both are dropped; the text that carried them stays.
-LINK_TARGET = re.compile(r"<(?:https?://|mailto:)[^>]*>")
+# The mail client also renders a target without its scheme, as <www.…>, which
+# the courts' signatures use. It is the same thing and goes the same way.
+LINK_TARGET = re.compile(r"<(?:https?://|mailto:|www\.)[^>]*>")
 # The same thing in the other syntax: the system notices from the counties'
 # shared no_reply address render a link as [text](url). The link text is the
 # authority's own word and stays; only the target goes.

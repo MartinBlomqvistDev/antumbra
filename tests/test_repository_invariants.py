@@ -294,6 +294,13 @@ class TestNoPersonalDataIsCommitted:
         "kammarrattenisundsvall@dom.se",
         "djurvalfard@jordbruksverket.se",
         "Kammarratten.Goteborg@dom.se",
+        # The courts' own registry mailboxes and the shared no-reply address
+        # they send standing replies from. They stand in the courts' letters,
+        # which P12 publishes verbatim, and they are published contact details
+        # for a public authority rather than anyone's own address.
+        "kammarrattenijonkoping@dom.se",
+        "jordbruksverket@jordbruksverket.se",
+        "noreply@dom.se",
     }
 
     def test_no_third_party_email_addresses(self):
