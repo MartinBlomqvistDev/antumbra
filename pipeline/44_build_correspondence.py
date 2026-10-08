@@ -57,6 +57,9 @@ GREETING = re.compile(
 )
 NAME_LINE = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+ [A-ZÅÄÖ][a-zåäöé]+$")
 NEWLINE = chr(10)
+# An inline image the mail client renders as a placeholder on its own line:
+# the authority's logo, not its words.
+IMAGE_LINE = re.compile(r"^\[(?:cid:)?[^\]]*\]$", re.MULTILINE)
 NOT_A_NAME = (
     "Länsstyrelsen",
     "Kammarrätten",
@@ -135,7 +138,13 @@ def normalise(text: str) -> tuple[str, list[str]]:
     if LINK_TARGET.search(body):
         taken.append("länkmålen bakom texten")
         body = LINK_TARGET.sub("", body)
+    if IMAGE_LINE.search(body):
+        taken.append("myndighetens bildsignatur")
+        body = IMAGE_LINE.sub("", body)
     body = "\n".join(line.rstrip() for line in body.splitlines())
+    # Removing a line leaves the blank lines that framed it; a letter never
+    # has three breaks in a row, so they collapse to one blank line.
+    body = re.sub(NEWLINE + "{3,}", NEWLINE * 2, body)
     return body.strip(), taken
 
 
