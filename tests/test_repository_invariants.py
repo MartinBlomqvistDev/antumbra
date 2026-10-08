@@ -837,6 +837,23 @@ class TestNoPersonalDataIsCommitted:
             f"{len(seen)} of {in_scope}"
         )
 
+    @staticmethod
+    def _same_minute(logged: str, header: str) -> bool:
+        """Whether a logged time and a header time are the same event.
+
+        Most of the log is kept to the minute, with no seconds, and a minute
+        written by hand is rounded either way: Södermanland's delivery at
+        11:27:48 is logged 11:28. Where the log does carry seconds the match is
+        exact, so the tolerance never widens beyond what the rounding needs.
+        """
+        if not logged:
+            return False
+        if len(logged.split(":")) == 3:
+            return logged[:5] == header[:5]
+        logged_minutes = int(logged[:2]) * 60 + int(logged[3:5])
+        header_minutes = int(header[:2]) * 60 + int(header[3:5])
+        return abs(logged_minutes - header_minutes) <= 1
+
     def test_every_registered_message_is_also_a_logged_event(self):
         # Avsnitt 7: every event is logged. The correspondence log is built from
         # the mailbox and the protocol log from the handling, so a message in
@@ -874,7 +891,7 @@ class TestNoPersonalDataIsCommitted:
                 for entry in log
                 if entry["myndighet"] == row["myndighet"]
                 and entry["datum"] == row["datum"]
-                and (entry.get("klockslag") or "")[:5] == row["klockslag"][:5]
+                and self._same_minute(entry.get("klockslag") or "", row["klockslag"])
             ]
             by_id = [
                 entry
