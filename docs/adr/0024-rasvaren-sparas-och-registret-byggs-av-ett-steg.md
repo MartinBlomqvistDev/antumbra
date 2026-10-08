@@ -55,3 +55,23 @@ De 124 rader som skrevs före beslutet har inget sparat råsvar och kan inte
 byggas om utan att hämtas igen. De står kvar som de är. Manifestet säger därför
 vilka rader som har proveniens och vilka som inte har det, och skillnaden
 redovisas i stället för att jämnas ut.
+
+## Tillägg 2026-10-08: en signatur på ett enda ord bedöms, inte gissas
+
+Steget kapar en signatur vars första rad är två versalinledda ord, eftersom det
+nästan alltid är en person som skriver under. Ett enda ord går inte att avgöra
+på formen. Brevlådan rymmer tre fall, alla från samma vecka: Södermanland
+skriver under med titeln *Djurskyddshandläggare*, Halland med enheten
+*Veterinärenheten* och Gävleborg med ett förnamn. Ett försök att skilja dem med
+en lista över ändelser kapade Södermanlands titel, alltså myndighetens egna ord,
+och hade släppt igenom ett förnamn som råkat sakna en sådan ändelse.
+
+Beslutet är att steget inte avgör frågan. Bedömningen läses per meddelande ur
+`data/korrespondens_signaturer.jsonl`, där fältet `signaturen` är antingen
+`namn` eller `befattning eller enhet`, och ett meddelande utan rad stoppar
+steget med sitt id. Filen bär bedömningen och aldrig ordet, så inget namn når
+repot, och körningen blir ändå deterministisk: samma råsvar och samma bedömning
+ger samma text.
+
+Det här är samma hållning som resten av steget: det som går att räkna räknas i
+kod, och det som kräver en läsare lämnas till läsaren och skrivs ner.

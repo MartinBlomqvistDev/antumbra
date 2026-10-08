@@ -31,11 +31,18 @@ publiceras under den rubriken, och hur långt det är kommet står i
    gitignorerat och bär personuppgifter (ADR-0024).
 4. **Kör steg 44.** Det räknar svensk tid ur meddelandehuvudet, tar bort
    länkmål, kapar citerad historik och kapar signaturblocket där signaturen
-   namnger en person.
+   namnger en person. Står det ett enda ord under hälsningen stannar
+   steget: ordet kan vara ett förnamn, en titel eller enheten själv, och
+   bedömningen skrivs som en rad i `data/korrespondens_signaturer.jsonl`
+   med `signaturen` satt till `namn` eller `befattning eller enhet`. Filen
+   bär bedömningen och aldrig ordet (ADR-0024).
 5. **Skriv raden** med det som är omdöme: myndighet, roll, bilagor och de
    anmärkningar som bara en läsare kan göra, till exempel att en felstavning
    står som myndigheten skrev den.
-6. **Logga** eventuella autosvar som saknas i protokollloggen.
+6. **Logga** eventuella autosvar som saknas i protokollloggen. Bär brevet
+   ett besked som hör i en egen tabell, till exempel länets tal på
+   nämnarfrågan, förs det in där också och det steg som läser tabellen
+   körs om.
 7. **Uppdatera talet** i `VERIFIERAT.md`.
 8. **Grindarna**, var och en som sitt eget kommando med exitkoden läst:
    `ruff check .`, `ruff format --check .`, `pytest`. Aldrig i ett rör och

@@ -425,7 +425,7 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är ofullständigt, och så här långt är det kommet.** Registret bär
-171 av de 259 inkomna meddelanden förteckningen känner, alltså 88 kvar. Talen
+173 av de 260 inkomna meddelanden förteckningen känner, alltså 87 kvar. Talen
 står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
 `data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
 om den här meningen inte stämmer med filerna.
@@ -716,7 +716,8 @@ aldrig aviserade någon avgift, som noten kräver ska redovisas ändå.
 P11 definierar måttet som *"levererade handlingar delat med det lägre av taket
 och antalet som fanns"*. Nämnaren finns: taket är 20 i klass A och 10 i klass B,
 fem i vardera efter en avsmalning enligt P5, och länens egna tal ligger i
-`data/namnare.jsonl` för 19 av 21 län.
+`data/namnare.jsonl` för samtliga 21 län sedan den 8 oktober 2026, då
+Halland svarade sist och Gävleborg dagen före.
 
 **Täljaren finns inte i takets enhet.** Taket räknar kontroller och beslut,
 medan leveransen kommer som filer, och en kontroll kan vara en rapport plus

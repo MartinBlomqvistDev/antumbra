@@ -25,6 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "korrespondens_raw"
 MANIFEST = ROOT / "data" / "korrespondens_manifest.jsonl"
+SIGNATURES = ROOT / "data" / "korrespondens_signaturer.jsonl"
 
 # The header time is UTC and the register is Swedish local time. August to
 # October 2026 is CEST throughout, so the offset is a constant two hours; a
@@ -59,6 +60,15 @@ GREETING = re.compile(
     re.MULTILINE,
 )
 NAME_LINE = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+ [A-ZÅÄÖ][a-zåäöé]+$")
+# A signature whose first line is a single capitalised word is either a first
+# name, a title or the unit itself, and nothing in the word says which: this
+# mailbox holds both Djurskyddshandläggare and signers who write only their
+# first name. The step does not guess. The judgement is read per message out
+# of data/korrespondens_signaturer.jsonl, which carries the judgement and
+# never the word, and a message without one stops the step.
+ONE_WORD = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+$")
+A_NAME = "namn"
+NOT_A_PERSON = "befattning eller enhet"
 NEWLINE = chr(10)
 # An inline image the mail client renders as a placeholder on its own line:
 # the authority's logo, not its words.
@@ -99,17 +109,43 @@ def swedish_time(stamp: str) -> tuple[str, str]:
     return local.date().isoformat(), local.time().isoformat()
 
 
-def strip_signature(text: str) -> tuple[str, bool]:
+def load_judgements() -> dict[str, str]:
+    """How a one-word signature was judged, per message id."""
+    if not SIGNATURES.exists():
+        return {}
+    judged = {}
+    for line in SIGNATURES.read_text("utf-8").splitlines():
+        if line:
+            row = json.loads(line)
+            judged[row["meddelande"]] = row["signaturen"]
+    return judged
+
+
+def strip_signature(
+    text: str, judgement: str | None = None, message: str = ""
+) -> tuple[str, bool]:
     """The letter without a signature that names a person, and whether one was cut.
 
     The greeting itself is kept, since it is the authority's own word; what goes
-    is everything after it when the next line is a person's name.
+    is everything after it when the next line is a person's name. A one-word
+    signature is cut only where the judgement says it is a name.
     """
     for found in GREETING.finditer(text):
         after = text[found.end() :].lstrip(NEWLINE)
         first = after.split(NEWLINE, 1)[0].strip() if after else ""
-        if NAME_LINE.match(first) and not first.startswith(NOT_A_NAME):
+        if first.startswith(NOT_A_NAME):
+            continue
+        if NAME_LINE.match(first):
             return text[: found.end()].rstrip(), True
+        if ONE_WORD.match(first):
+            if judgement is None:
+                raise SystemExit(
+                    f"{message}: signaturens forsta rad ar ett enda ord och "
+                    f"saknar bedomning. Skriv en rad i {SIGNATURES.name} med "
+                    f'signaturen satt till "{A_NAME}" eller "{NOT_A_PERSON}"'
+                )
+            if judgement == A_NAME:
+                return text[: found.end()].rstrip(), True
     return text, False
 
 
@@ -126,13 +162,15 @@ def strip_history(text: str) -> tuple[str, bool]:
     return text[:cut].rstrip(), cut < len(text)
 
 
-def normalise(text: str) -> tuple[str, list[str]]:
+def normalise(
+    text: str, judgement: str | None = None, message: str = ""
+) -> tuple[str, list[str]]:
     """The text as the register carries it, and what was taken out of it."""
     taken = []
     body, had_history = strip_history(text)
     if had_history:
         taken.append("den citerade historiken under meddelandet")
-    body, had_signature = strip_signature(body)
+    body, had_signature = strip_signature(body, judgement, message)
     if had_signature:
         taken.append(
             "signaturblocket med tjänstemannens namn och det som följer det "
@@ -166,11 +204,14 @@ def main() -> int:
         print(f"{RAW} finns inte an; inga rasvar sparade")
         return 0
 
+    judged = load_judgements()
     rows = []
     for path in sorted(RAW.glob("*.json")):
         raw = json.loads(path.read_text("utf-8"))
         datum, klockslag = swedish_time(raw["date"])
-        body, taken = normalise(raw.get("plaintextBody") or "")
+        body, taken = normalise(
+            raw.get("plaintextBody") or "", judged.get(raw["id"]), raw["id"]
+        )
         rows.append(
             {
                 "meddelande": raw["id"],

@@ -779,6 +779,31 @@ class TestNoPersonalDataIsCommitted:
                         "person's name and must be replaced by the role"
                     )
 
+    def test_the_signature_judgements_carry_a_judgement_and_never_a_word(self):
+        # ADR-0024's addendum of 8 October 2026: a signature whose first line is
+        # a single word is judged per message, because the word itself does not
+        # say whether it is a first name, a title or the unit. The file carries
+        # the judgement and the message id, and nothing else, so a name cannot
+        # reach the repository through it.
+        path = ROOT / "data" / "korrespondens_signaturer.jsonl"
+        if not path.exists():
+            return
+        seen = set()
+        for line in path.read_text("utf-8").splitlines():
+            if not line:
+                continue
+            record = json.loads(line)
+            assert set(record) == {"meddelande", "signaturen"}, (
+                f"{record} carries a field beyond the judgement and the id"
+            )
+            assert record["signaturen"] in {"namn", "befattning eller enhet"}, (
+                f"{record['meddelande']}: {record['signaturen']!r} is not a judgement"
+            )
+            assert record["meddelande"] not in seen, (
+                f"{record['meddelande']} is judged twice"
+            )
+            seen.add(record["meddelande"])
+
     def test_the_register_is_measured_against_the_inventory(self):
         # The register was built against a work list that turned out to be
         # incomplete, and a wrong correction was written on the strength of it.
@@ -2499,6 +2524,25 @@ class TestTheDenominatorRegisterKeepsEachCountysOwnReading:
         assert (above, below) == (18, 425)
         assert above + below not in west["kontroller"].values()
         assert not any(key.strip() == "fjäderfä" for key in west["kontroller"])
+
+    def test_the_prose_says_how_many_counties_answered(self, denominators):
+        # The denominator was incomplete for ten days and the prose said so.
+        # Gävleborg answered on 7 October 2026 and Halland on 8 October, which
+        # made the sentence wrong without anything in the data changing shape.
+        # The count is therefore read out of the file, the same way the
+        # register's reach is.
+        text = (ROOT / "docs" / "VERIFIERAT.md").read_text("utf-8")
+        found = re.search(
+            r"`data/namnare\.jsonl` för (samtliga 21|\d+ av 21) län", text
+        )
+        assert found, "docs/VERIFIERAT.md no longer says how many counties answered"
+        said = found.group(1)
+        expected = (
+            "samtliga 21" if len(denominators) == 21 else f"{len(denominators)} av 21"
+        )
+        assert said == expected, (
+            f"the docs say {said} län, the table holds {len(denominators)}"
+        )
 
     def test_the_two_counties_that_cannot_answer_are_named(self, denominators):
         missing = {
