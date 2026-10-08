@@ -37,6 +37,10 @@ CEST = (datetime(2026, 3, 29, tzinfo=UTC), datetime(2026, 10, 25, tzinfo=UTC))
 # A link target the mail client renders after the link text, and an address in
 # angle brackets. Both are dropped; the text that carried them stays.
 LINK_TARGET = re.compile(r"<(?:https?://|mailto:)[^>]*>")
+# The same thing in the other syntax: the system notices from the counties'
+# shared no_reply address render a link as [text](url). The link text is the
+# authority's own word and stays; only the target goes.
+MARKDOWN_LINK = re.compile(r"\[([^\]]+)\]\((?:https?://|mailto:)[^)]*\)")
 # The quoted history starts at the first of these, and everything after it is
 # the copy of my own letter or the authority's earlier one, published elsewhere.
 HISTORY = (
@@ -47,8 +51,14 @@ HISTORY = (
     re.compile(r"^Från: ", re.MULTILINE),
     re.compile(r"^On \w{3}, \w{3} \d{1,2}, \d{4}", re.MULTILINE),
 )
-# The file list the Filskick service writes into the body, and its link.
-FILE_LIST = re.compile(r"^Dessa filer är bifogade i meddelandet:", re.MULTILINE)
+# The file list the Filskick service writes into the body, and its link. The
+# service writes the header in Swedish or in English depending on the
+# message, and Jordbruksverket's delivery of 336 files came in English.
+FILE_LIST = re.compile(
+    r"^(?:Dessa filer är bifogade i meddelandet:|"
+    r"The following files are attached to this message:)",
+    re.MULTILINE,
+)
 # A greeting ends the letter's own words. What follows is the signature, and
 # where that signature names a person ADR-0018 keeps the name out, so the cut
 # is made after the greeting whenever the next line looks like a name. The
@@ -149,17 +159,26 @@ def strip_signature(
     return text, False
 
 
-def strip_history(text: str) -> tuple[str, bool]:
-    """The letter's own text, and whether a quoted history was cut away."""
+def strip_history(text: str) -> tuple[str, list[str]]:
+    """The letter's own text, and what was cut away under it.
+
+    Two different things sit under a letter: the quoted history, and the file
+    list the Filskick service writes with its download link. They were reported
+    under one label until 8 October 2026, which said quoted history about a
+    message that had none.
+    """
     cut = len(text)
+    taken = []
     for pattern in HISTORY:
         found = pattern.search(text)
-        if found:
-            cut = min(cut, found.start())
+        if found and found.start() < cut:
+            cut = found.start()
+            taken = ["den citerade historiken under meddelandet"]
     found = FILE_LIST.search(text)
-    if found:
-        cut = min(cut, found.start())
-    return text[:cut].rstrip(), cut < len(text)
+    if found and found.start() < cut:
+        cut = found.start()
+        taken = ["filskicktjänstens förteckning över filerna och dess länk"]
+    return text[:cut].rstrip(), taken
 
 
 def normalise(
@@ -167,18 +186,18 @@ def normalise(
 ) -> tuple[str, list[str]]:
     """The text as the register carries it, and what was taken out of it."""
     taken = []
-    body, had_history = strip_history(text)
-    if had_history:
-        taken.append("den citerade historiken under meddelandet")
+    body, under = strip_history(text)
+    taken.extend(under)
     body, had_signature = strip_signature(body, judgement, message)
     if had_signature:
         taken.append(
             "signaturblocket med tjänstemannens namn och det som följer det "
             "enligt ADR-0018"
         )
-    if LINK_TARGET.search(body):
+    if LINK_TARGET.search(body) or MARKDOWN_LINK.search(body):
         taken.append("länkmålen bakom texten")
         body = LINK_TARGET.sub("", body)
+        body = MARKDOWN_LINK.sub("\\1", body)
     if IMAGE_LINE.search(body):
         taken.append("myndighetens bildsignatur")
         body = IMAGE_LINE.sub("", body)
