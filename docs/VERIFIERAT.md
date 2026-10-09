@@ -2230,6 +2230,64 @@ flyttar inte måttet på delad text. I `13df613f9802` är varje ord med å, ä e
 som förutsagt. Frågan om beslutet ska läsas ur OCR i stället står som öppet
 åtagande.
 
+### Varför textlagret i `13df613f9802` inte är en läsning av sidan, mätt 2026-10-09
+
+Två åtaganden stod öppna om det här beslutet, ett om sidfoten i villkor 4 och ett
+om beslutet ska läsas ur OCR. Båda hänger på samma fråga, och den är nu mätt.
+
+**Beslutet är två handlingar i samma fil.** Sidorna 20 till 33 bär var sin bild
+som täcker hela sidan, bildytan 1,00 av sidan; sidorna 1 till 19 och 34 har
+ingen sådan bild, 0,00 till 0,02. Diakriterna följer samma gräns: 5,4 till 7,3
+procent å, ä och ö på de digitalfödda sidorna, 0,23 procent på sida 20 och noll
+på sidorna 21 till 33. Textlagret på de inskannade sidorna är alltså inte filens
+eget utan en teckenläsning som någon annan har klistrat in, och den läsningen
+tappade diakriterna.
+
+**Felen i det inklistrade lagret är en teckenläsares och inte ett typsnitts.**
+Sju ord i blocket bär q där svenska har g, `Orqanisationsnummer`,
+`Ostqotaqatan`, `avfatlsfraqor`, `hansynsreqler`, och ett av dem bär tre fel på
+en gång: `bedornnlnq` för *bedömning*, med rn för m, l för i och q för g. Ett
+typsnitt som saknar glyfer tappar tecken; en teckenläsare förväxlar dem med
+andra som ser lika ut.
+
+**Alla fyra villkoren sitter på sida 20, alltså på en inskannad sida.** Av 178
+ord i de fyra villkoren är 58 fel i registret, nämligen varje ord som bär en
+diakrit, och två av felen är grövre: `rar` för *får* och `jarnn` för *jämn*.
+Projektets egen OCR av samma beslut ligger på 6,02 procent diakriter, alltså vid
+korpusens median, och steg 39 har redan mätt dess kvalitet mot registret. Den
+läsningen har egna fel: `(>2594` där textlagret har `(>25%`, punkt i stället för
+komma på tre ställen, och ett bindestreck som tankstreck. Ingen av de två
+läsningarna är alltså felfri, men de är fel på olika sätt: textlagret är fel i
+var tredje ord, OCR i en handfull tecken.
+
+**Sidfotsfrågan är därmed besvarad utan att en markör behöver skrivas.** De fem
+sidfotsrader som står kvar inne i villkor 4 fångas inte av en enda markör i steg
+24, och skälet är inte en lucka i markörerna utan att det inklistrade lagret har
+förvanskat just de ord markörerna söker: `Orqanisationsnummer` i stället för
+organisationsnummer, `Ostqotaqatan` i stället för gatunamnet, och en webbadress
+utan både snabel-a och www. Läses samma sidfot ur projektets egen OCR träffar tre
+av de fem raderna befintliga markörer och två gör det inte. Sidfoten är alltså
+ett symptom på källan.
+
+**Hur många beslut det kan gälla, och vad svepet inte avgör.** Fjorton av de 236
+besluten har minst en sida som är helt täckt av en bild och ändå bär text, och
+163 av registrets 2 347 villkor kommer från de fjorton. Men bara två av dem bär
+symptomet noll diakriter på en sida med text, `13df613f9802` med tretton sidor
+och `3d59186a51bc` med fem, och i det andra beslutet sitter alla åtta villkoren
+på sidorna 1 och 2, som är digitalfödda. Skadan i registret är därför fyra
+villkor av 2 347. För de övriga elva besluten avgör svepet inte om textlagret är
+producentens teckenläsning eller filens eget: en helsidesbild kan också vara en
+inskannad brevhuvudsida eller en stämpel under ett äkta textlager. Den frågan
+kräver sitt eget mått och står öppen.
+
+**Rekommendationen, och den är Martins att ta.** Läs `13df613f9802` ur projektets
+egen OCR. Skälet är inte att OCR är bättre i allmänhet utan att textlagret för de
+sidorna bevisligen inte är en läsning av sidan, och registret lovar ordagrannhet.
+Priset är fyra villkorstexter som byter felmängd, från 58 felstavade ord till en
+handfull feltecken, och det mäts om efter bytet. Ingen publicerad siffra om
+maskning, baseline eller delad text rör sig av de fyra villkoren, men de ingår i
+de tal som räknas om, och därför byts källan inte tyst.
+
 Första versionen av steg 39 läste domen på fel kolumn, den gemena i stället för
 den vikta, och skrev ut att villkoret föll för `13df613f9802`. Koden är rättad
 till det som förregistrerades. Måttet är dessutom girigt och kan ge olika tal
