@@ -106,6 +106,14 @@ NAME_LINE = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+ [A-ZÅÄÖ][a-zåäöé]+$")
 # of data/korrespondens_signaturer.jsonl, which carries the judgement and
 # never the word, and a message without one stops the step.
 ONE_WORD = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+$")
+# A rule of underscores or dashes between the greeting and the signer, which
+# Västerbotten writes. It is not a line of words, so it is skipped before the
+# signer's line is looked at, and it goes with the signature.
+# The hyphen is written last in the class on purpose: next to another
+# character it would open a range from the equals sign to an en dash, which
+# once matched every letter,
+# which cut four signatures that name nobody.
+SEPARATOR = re.compile("^[_=" + chr(8211) + chr(8212) + r"\s" + chr(45) + "]+$")
 A_NAME = "namn"
 NOT_A_PERSON = "befattning eller enhet"
 NEWLINE = chr(10)
@@ -177,8 +185,10 @@ def strip_signature(
         if not rest.startswith(NOT_A_NAME):
             return text[: found.start()].rstrip(), True
     for found in GREETING.finditer(text):
-        after = text[found.end() :].lstrip(NEWLINE)
-        first = after.split(NEWLINE, 1)[0].strip() if after else ""
+        lines = text[found.end() :].lstrip(NEWLINE).split(NEWLINE)
+        while lines and (not lines[0].strip() or SEPARATOR.match(lines[0])):
+            lines.pop(0)
+        first = lines[0].strip() if lines else ""
         if first.startswith(NOT_A_NAME):
             continue
         if NAME_LINE.match(first):
