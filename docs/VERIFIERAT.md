@@ -787,6 +787,19 @@ elva återstående ligger på dag 4 eller senare: Uppsala och Södermanland på 
 i båda klasserna, Kronoberg på dag 6 i klass A, Dalarna på dag 5 i klass B, och
 Västernorrland, Jämtland och Halland på dag 4.
 
+**Preciseringskravet, verifierat samma dag.** Avsnitt 5 i protokollet lutade sig
+mot praxis om att myndigheten inte behöver göra omfattande efterforskningar, utan
+att ha läst den. Samma beslutssamling ger lydelsen, JO 2021/22:JO1 s. 401, dnr
+7480-2019, beslut den 31 augusti 2020: en begäran *"får dock anses tillräckligt
+preciserad om den avser en begränsad grupp av handlingar, t.ex. samtliga beslut
+som under en viss tidsperiod fattats i en viss typ av mål eller ärenden"*. Det är
+begäran B ordagrant och A med dokumenttyp i stället för beslutstyp. Beslutet
+lägger till en skyldighet åt andra hållet: är en begäran för obestämd *"kan
+myndigheten emellertid inte nöja sig med att konstatera detta"*, eftersom
+serviceskyldigheten gäller. Tio av de 21 länen ställde förtydligandefrågor, 17 i
+antal, vilket är den skyldigheten i praktiken; ingen begäran avvisades som
+oprecis.
+
 **Vad det inte säger.** I tio av de elva långsamma spåren är det första
 substantiella beskedet själva leveransen, alltså det utlämnandet som ett besked
 hade handlat om; det enda undantaget är Kronobergs klass A, där dag 6 är ett

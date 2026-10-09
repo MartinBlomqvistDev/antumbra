@@ -253,7 +253,26 @@ handlingarna ska kunna identifieras direkt i ärendesystemet. Kravet på
 precisering framgår inte av någon enskild paragraf utan av praxis om att
 myndigheten inte behöver göra omfattande efterforskningar; den praxisen har
 inte verifierats mot rättsfall här, men begäran ligger med god marginal på rätt
-sida.
+sida. *Tillägg 2026-10-09:* verifierat, och den verifierade lydelsen är skarpare
+än omskrivningen ovan. JO 2021/22:JO1 s. 401, beslut den 31 augusti 2020 av JO
+Per Lennerbrant, dnr 7480-2019, läst i ämbetsberättelsen: *"Som en allmän
+förutsättning för att en myndighet ska vara skyldig att bistå allmänheten enligt
+reglerna i tryckfrihetsförordningen gäller att den som önskar få del av en
+handling kan precisera vilken handling som avses eller åtminstone lämna så
+detaljerade upplysningar om handlingen och dess innehåll att myndigheten utan
+större svårighet kan identifiera den. Myndigheten måste få klart för sig vilka
+handlingar som efterfrågas. En begäran får dock anses tillräckligt preciserad om
+den avser en begränsad grupp av handlingar, t.ex. samtliga beslut som under en
+viss tidsperiod fattats i en viss typ av mål eller ärenden. (Se JO 1994/95 s.
+571.)"* Den sista meningen beskriver begäran B ordagrant, och A med dokumenttyp
+i stället för beslutstyp. Beslutet lägger också till en skyldighet som
+protokollet inte kände: *"Skulle en framställning om att få ut en allmän
+handling vara alltför obestämd för att kunna besvaras kan myndigheten emellertid
+inte nöja sig med att konstatera detta. Myndigheter har en allmän
+serviceskyldighet och ska hjälpa den enskilde på ett sådant sätt att han eller
+hon kan ta till vara sina intressen."* Normen är alltså inte bara att begäran
+ska vara precis nog, utan att en för obestämd begäran ska redas ut med frågor.
+Tio av de 21 länen gjorde just det, med sammanlagt 17 förtydligandefrågor.
 
 **Preciseringen av B.** Föremålet är beslut om föreläggande, med 8 kap. 9 §
 djurskyddslagen (2018:1192) som huvudgrund; paragrafen är verifierad 2026-08-02
