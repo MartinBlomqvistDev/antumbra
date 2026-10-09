@@ -341,6 +341,8 @@ class TestNoPersonalDataIsCommitted:
         "arkivet",
         # Kronoberg signs as the registry itself, the same kind of wording.
         "diariet",
+        # Jönköping signs as the registry office.
+        "registraturen",
         "avdelningschef",
         "chefsjurist",
         "enhetschef",
