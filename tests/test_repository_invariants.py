@@ -306,12 +306,17 @@ class TestNoPersonalDataIsCommitted:
     }
 
     def test_no_third_party_email_addresses(self):
+        # The comparison ignores case, because a mailbox is the same mailbox
+        # whichever way an authority writes it: the courts sign
+        # Kammarratten.Goteborg@dom.se and the pipeline's own screen holds the
+        # same address in lower case.
+        allowed = {address.lower() for address in self.ALLOWED_EMAILS}
         offenders = []
         for path in tracked_files():
             if path.suffix not in {".md", ".py", ".toml", ".cff", ".yml", ".yaml"}:
                 continue
             for found in self.EMAIL.findall(path.read_text("utf-8", errors="ignore")):
-                if found not in self.ALLOWED_EMAILS:
+                if found.lower() not in allowed:
                     offenders.append(f"{path.name}: {found}")
         assert not offenders, f"third-party e-mail addresses committed: {offenders}"
 
@@ -867,10 +872,12 @@ class TestNoPersonalDataIsCommitted:
             known[row["meddelande"]] = row
 
         seen = set()
+        lines = 0
         for line in register.read_text("utf-8").splitlines():
             if not line:
                 continue
             row = json.loads(line)
+            lines += 1
             for message in [row["meddelande"]] + [
                 item["meddelande"] for item in row.get("forekomster", [])
             ]:
@@ -890,6 +897,14 @@ class TestNoPersonalDataIsCommitted:
         assert (int(found.group(1)), int(found.group(2))) == (len(seen), in_scope), (
             f"the docs say {found.group(1)} of {found.group(2)}, the files hold "
             f"{len(seen)} of {in_scope}"
+        )
+        # The row count is in the same sentence and is a different number, since
+        # a standing autoreply is one row with its repeats as occurrences. It is
+        # checked too, so neither figure can drift.
+        rows = re.search(r"kvar, på\s+(\d+) rader", text)
+        assert rows, "docs/VERIFIERAT.md no longer states how many rows there are"
+        assert int(rows.group(1)) == lines, (
+            f"the docs say {rows.group(1)} rows, the register holds {lines}"
         )
 
     @staticmethod

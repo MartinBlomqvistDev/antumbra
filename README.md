@@ -209,6 +209,11 @@ python pipeline/40_build_p12_letters.py       # P12: the packets rendered as the
 python pipeline/41_export_sweden_web_data.py  # the Swedish layer for the site, out of the packet functions
 python pipeline/42_fee_track_and_release_rate.py  # the fee measure, and P11's release rate as the gap it is
 python pipeline/43_annexes_and_pairs.py       # annexes withheld, and the same case in both classes
+python pipeline/44_build_correspondence.py    # the correspondence register: Swedish time, the letter's own words, a manifest
+python pipeline/45_append_correspondence.py   # a row is screened before it is written: no name, no personal address
+python pipeline/46_build_correspondence_row.py  # one row's payload out of a saved raw reply
+python pipeline/47_append_standing_autoreply.py  # a repeat of a standing autoreply, as an occurrence on its carrier
+python pipeline/48_write_register_progress.py  # the register's figures written into the docs out of the files
 ```
 
 Two reports are not pipeline steps, because they derive nothing and write

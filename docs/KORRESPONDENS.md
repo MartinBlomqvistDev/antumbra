@@ -23,6 +23,20 @@ registret samtliga inkomna meddelanden förteckningen känner. Arbetsgången ned
 gäller ändå oförändrad: nya meddelanden kommer in så länge ärendena lever, och
 de förs in på samma sätt.
 
+## Stegen som gör arbetet
+
+Fyra steg i `pipeline/` sedan den 9 oktober 2026, och de låg i en temporär mapp
+innan dess, vilket var samma kostnad ADR-0024 skrevs för att slippa:
+
+- `44_build_correspondence.py` räknar tid, kapar och skriver manifestet.
+- `46_build_correspondence_row.py` bygger en rads nyttolast ur ett sparat
+  råsvar, med omdömesfälten som argument.
+- `45_append_correspondence.py` granskar och lägger till raden, eller lägger en
+  förekomst hos sin bärare.
+- `47_append_standing_autoreply.py` hittar bäraren åt ett stående autosvar och
+  skriver förekomstens nyttolast, och vägrar när ingen bärare har identisk text.
+- `48_write_register_progress.py` skriver talen i `VERIFIERAT.md` ur filerna.
+
 ## Arbetsgången, i ordning
 
 1. **Nästa meddelande** läses ur `data/korrespondens_forteckning.jsonl`, äldst
