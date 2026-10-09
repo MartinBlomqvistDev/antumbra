@@ -18,7 +18,10 @@ styr allt annat.
 
 *Hela* är ett löfte om fullständighet. Ett ofullständigt register kan inte
 publiceras under den rubriken, och hur långt det är kommet står i
-`VERIFIERAT.md`, läst ur filerna av en invariant.
+`VERIFIERAT.md`, läst ur filerna av en invariant. Sedan den 9 oktober 2026 bär
+registret samtliga inkomna meddelanden förteckningen känner. Arbetsgången nedan
+gäller ändå oförändrad: nya meddelanden kommer in så länge ärendena lever, och
+de förs in på samma sätt.
 
 ## Arbetsgången, i ordning
 

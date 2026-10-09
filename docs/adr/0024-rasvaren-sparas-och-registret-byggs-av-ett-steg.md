@@ -95,3 +95,23 @@ inte e-postklientens återgivning av en länk.
 Regeln är inte en prydlighetsfråga. Ett register som bär samma text i två former
 beroende på vilket år raden skrevs låter löftet om ordagrannhet se ut som en
 smaksak.
+
+## Tillägg 2026-10-09: läget när registret blev komplett
+
+Registret bär nu 260 av 260 inkomna meddelanden på 196 rader. 107 av
+meddelandena har sitt råsvar sparat och sin sha256 i manifestet; de övriga 153
+skrevs för hand innan det här beslutet fattades. Talet 124 ovan var antalet
+sådana rader den 8 oktober och är alltså inte aktuellt; det aktuella talet står
+i `VERIFIERAT.md` och går att räkna ur filerna.
+
+Fem mekaniska regler kom till under införandet, alla av ett brev som inte
+passade den förra: en rad som inte bar något annat än en länk, domstolarnas
+engångslänk till tjänsten Säker e-post, en hälsning som bär underskriften på
+samma rad, en rad av understreck mellan hälsning och underskrift, och ett
+signaturblock utan hälsning över sig. Mönstret är tydligt nog att skriva ner:
+varje ny regel kom inte av ett principiellt resonemang utan av ett brev som
+visade att den förra regeln inte räckte, och varje gång gav manifestets diff
+svaret på om den nya regeln rörde något som redan var skrivet. En gång gjorde
+den det av misstag, när ett bindestreck mitt i en teckenklass öppnade ett
+intervall som matchade varje bokstav och kapade fyra signaturer som inte namnger
+någon. Felet syntes i diffen och aldrig i registret.
