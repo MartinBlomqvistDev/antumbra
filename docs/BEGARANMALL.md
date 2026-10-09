@@ -938,7 +938,27 @@ den beskrivs inte som lagbrytare, eftersom prejudikat saknas.
 6. **JO:s skyndsamhetspraxis.** Att besked normalt ska lämnas samma dag och att
    endast några dagars dröjsmål godtas vid sekretessprövning är väletablerat,
    men specifika JO-beslut har inte verifierats. Fristerna i P2 och P3 är satta
-   med marginal och vilar inte på enskilda beslut.
+   med marginal och vilar inte på enskilda beslut. *Tillägg 2026-10-09:*
+   verifierat mot två beslut av chefsJO Erik Nymansson, båda lästa i fulltext.
+   I dnr 3911-2024, beslut 2025-02-26, och ordagrant likalydande i dnr
+   7677-2025, beslut 2026-03-30, står regeln under rubriken Rättslig reglering:
+   *"JO har i ett flertal beslut uttalat att ett besked i en utlämnandefråga
+   normalt bör lämnas samma dag som framställningen görs. Någon eller några
+   dagars fördröjning kan dock godtas om det är nödvändigt för att ta ställning
+   till om ett utlämnande får ske. Ett visst ytterligare dröjsmål kan vara
+   ofrånkomligt om framställningen avser eller kräver genomgång av ett
+   omfattande material."* Om sekretessprövningen som skäl säger båda besluten,
+   likalydande: *"En viss fördröjning kan vara godtagbar om den är hänförlig
+   till själva sekretessprövningen, men tidsåtgången får inte bero på formerna
+   för myndighetens arbete. Det förhållandet att en myndighet tar emot ett stort
+   antal utlämnandeframställningar innebär inte att kraven på myndigheten kan
+   sättas ned."* Det senare beslutet lägger till: *"Det är ett grundläggande
+   krav att handläggningen av en utlämnandebegäran påbörjas skyndsamt efter att
+   begäran har gjorts."* Påståendet i stycket ovan är därmed belagt ord för ord,
+   med den precisering som inte stod där: undantaget gäller den tid prövningen
+   faktiskt kräver, inte den tid myndighetens organisation kräver. Fristerna i
+   P2 och P3 ändras inte, eftersom de är satta med marginal mot en strängare
+   norm än den de nu är mätta mot.
 
 ---
 

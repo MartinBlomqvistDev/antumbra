@@ -758,6 +758,44 @@ lagt en tystnad på myndigheten som den aldrig höll. Klassen heter därför
 vilket loggen märker med en egen händelse. Den sjätte klassen är de fem län som
 aldrig aviserade någon avgift, som noten kräver ska redovisas ändå.
 
+### Skyndsamhetskravet, måttet mot en verifierad norm, 2026-10-09
+
+Rättsfråga 6 i `BEGARANMALL.md` stod öppen i 68 dagar: att besked normalt ska
+lämnas samma dag och att några dagars dröjsmål godtas vid sekretessprövning var
+antaget men inte belagt. Två beslut av chefsJO Erik Nymansson är nu lästa i
+fulltext, dnr 3911-2024 av den 26 februari 2025 och dnr 7677-2025 av den 30 mars
+2026, och de bär samma formulering ord för ord: *"JO har i ett flertal beslut
+uttalat att ett besked i en utlämnandefråga normalt bör lämnas samma dag som
+framställningen görs. Någon eller några dagars fördröjning kan dock godtas om
+det är nödvändigt för att ta ställning till om ett utlämnande får ske. Ett visst
+ytterligare dröjsmål kan vara ofrånkomligt om framställningen avser eller kräver
+genomgång av ett omfattande material."*
+
+**Preciseringen som inte stod i protokollet.** Båda besluten tillägger att
+*"[e]n viss fördröjning kan vara godtagbar om den är hänförlig till själva
+sekretessprövningen, men tidsåtgången får inte bero på formerna för myndighetens
+arbete"*, och att ett stort antal framställningar inte sänker kraven. Undantaget
+gäller alltså den tid prövningen kräver, inte den tid organisationen kräver.
+
+**Mätt mot den normen, och med måttets eget förbehåll utskrivet.** Projektets
+T1, första substantiella besked enligt P1, är inte samma sak som JO:s besked i
+utlämnandefrågan: P1 räknar också ett avgiftsbesked och en förtydligandefråga
+som besked, alltså kontakter som inte avgör utlämnandet. Måttet är därför om
+något mildare mot myndigheten än normen. Av de 42 A- och B-spåren ligger 18 på
+dag 0 och 8 på dag 1, alltså 26 inom en arbetsdag, och 5 till på dag 2. De
+elva återstående ligger på dag 4 eller senare: Uppsala och Södermanland på dag 7
+i båda klasserna, Kronoberg på dag 6 i klass A, Dalarna på dag 5 i klass B, och
+Västernorrland, Jämtland och Halland på dag 4.
+
+**Vad det inte säger.** I tio av de elva långsamma spåren är det första
+substantiella beskedet själva leveransen, alltså det utlämnandet som ett besked
+hade handlat om; det enda undantaget är Kronobergs klass A, där dag 6 är ett
+avgiftsbesked. Ett län som levererar på dag 4 utan föregående besked har gjort
+något annat än ett län som är tyst i fyra dagar, och måttet skiljer dem inte åt.
+Projektet påstår därför inte att något län brutit mot skyndsamhetskravet: det
+kräver en prövning av det enskilda fallet som bara JO eller en domstol gör.
+Det som redovisas är normen ordagrant, och de dagar som är loggade.
+
 ### Utlämningsgraden, P11: en lucka med sitt skäl
 
 P11 definierar måttet som *"levererade handlingar delat med det lägre av taket
