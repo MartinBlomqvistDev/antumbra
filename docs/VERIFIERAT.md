@@ -2274,9 +2274,51 @@ Avhuggningen står på 121 av 2 347, 5,2 procent, och villkoret för kontroll 3 
 uppfyllt. **Talet 0,9990 i avsnittet om kontroll 3 och i ADR-0021 mättes före
 tillägget i ADR-0021 samma dag**, och kontroll 3 kördes inte om efter det. Mätt
 på registret som det stod före dagens rättning är talet 0,9970, så fallet kom
-med tillägget och dagens ändring höjde talet igen. Vad i tillägget som sänkte
-det är inte undersökt och står som öppet åtagande. Talen i de äldre avsnitten
+med tillägget och dagens ändring höjde talet igen. Talen i de äldre avsnitten
 står kvar som de mättes.
+
+### Vad i tillägget som sänkte talet, mätt 2026-10-09
+
+Frågan stod som öppet åtagande i en månad och är nu mätt i stället för
+resonerad. Registret togs ur git vid de två commitarna, `30db0c8` före tillägget
+och `1112321` efter, och kördes genom steg 34:s egen sönderdelning mot samma
+OCR-filer. Talen blev 0,9990 av 227 860 tecken före och 0,9970 av 227 734 efter,
+alltså exakt de publicerade paren. Reproduktionen är därmed ingen uppskattning.
+
+**Hela fallet sitter i tre villkor och i 450 tecken.** Tappet i den OCR-lästa
+halvan går från 223 till 673 tecken, och ökningen ligger i `1948e37b26fc`
+villkor 3 med 239 tecken, `d5d6092cea4a` villkor 10 med 188 och `349f6ac370ab`
+villkor 12 med 23. Inget annat villkor i halvan tappar ett tecken mer än
+tidigare.
+
+**Orsaken är tilläggets regel att en sidhuvudsrad aldrig är rubrik, prövad även
+i genitiv.** Det är den regeln som gör att raden `VÄSTRA GÖTALANDS LÄN` känns
+igen. Raden stod inne i villkorstexten i sex villkor i den OCR-lästa halvan, och
+efter tillägget kapas den ur alla sex, vilket är riktigt: raden är inte
+beslutets egna ord. Varje sådan text blir 21 tecken kortare.
+
+**Tre av de sex betalar för det, tre gör det inte, och skillnaden ligger i var
+hålet faller.** Den lagrade texten är med avsikt inte längre en sammanhängande
+kopia av råtexten, och steg 34:s giriga sönderdelning betalar för ett hål med de
+ord som ligger över skarven, men bara när den inte kan återanknyta rent efter
+hålet. I `00b6f9b9e64f` villkor 4, `1948e37b26fc` villkor 20 och `349f6ac370ab`
+villkor 3 kostar hålet ingenting. I det värsta av de tre som kostar går markören
+dessutom förbi fortsättningen, så de sista 73 tecknen inte hittas alls: tappet
+står på fem tecken före tillägget och 244 efter, och antalet bitar på två mot
+nio.
+
+**Avgörande prov.** Läggs raden tillbaka i just de tre villkoren, och ingenting
+annat ändras, står talet på 0,9990 igen. Attributionen är därmed inte en
+slutsats dragen ur en korrelation.
+
+**Vad det betyder, och vad det inte betyder.** Inget tecken har försvunnit ur
+registret; varje tappat ord finns i handlingen och är bara inte nåbart för en
+markör som bara går framåt. Villkoret för kontroll 3 är uppfyllt i båda lägena,
+och ingen publicerad siffra om maskning, villkor eller baseline rör sig. Det
+måttet mäter är alltså delvis sammanhang och inte bara trohet, och det straffar
+den rättelse det byggdes för att tillåta. Om steg 34 ska återanknyta efter ett
+hål i stället för att gå vidare framåt är en egen fråga; den avgörs inte här,
+och talet 0,9974 står som det är mätt.
 
 ---
 
