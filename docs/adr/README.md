@@ -30,3 +30,5 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0021](0021-en-sidbrytning-avslutar-inte-ett-villkor.md) | En sidbrytning avslutar inte ett villkor | beslutad |
 | [0022](0022-en-ocr-forvanskad-adress-ar-fortfarande-en-adress.md) | En OCR-förvanskad adress är fortfarande en adress | beslutad |
 | [0023](0023-bildmetodens-utlosare-provad-mot-bildtackning.md) | Bildmetodens utlösare prövad mot bildtäckning, och regeln införs inte | beslutad |
+| [0024](0024-rasvaren-sparas-och-registret-byggs-av-ett-steg.md) | Råsvaren sparas och korrespondensregistret byggs av ett steg | beslutad |
+| [0025](0025-ett-textlager-utan-diakriter-ar-ingen-lasning.md) | Ett textlager utan å, ä och ö är ingen läsning av sidan | beslutad |
