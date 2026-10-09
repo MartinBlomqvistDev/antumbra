@@ -424,11 +424,28 @@ namngiven tjänsteman. Rollen, med den lydelse brevet självt undertecknas med.
 Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
-**Registret är ofullständigt, och så här långt är det kommet.** Registret bär
-253 av de 260 inkomna meddelanden förteckningen känner, alltså 7 kvar. Talen
-står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
-`data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
-om den här meningen inte stämmer med filerna.
+**Registret är komplett mot förteckningen sedan den 9 oktober 2026.** Registret
+bär 260 av de 260 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
+196 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
+förekomster hos den. Talen står inte i prosan på förtroende: en invariant i
+`tests/` läser dem ur `data/korrespondens.jsonl` och
+`data/korrespondens_forteckning.jsonl` och faller om den här meningen inte
+stämmer med filerna.
+
+**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 107 av
+de 260 meddelandena har sitt råsvar sparat och sin sha256 i
+`data/korrespondens_manifest.jsonl`. De övriga skrevs för hand innan ADR-0024
+fattades och kan inte byggas om utan att hämtas igen. Manifestet säger därför
+vilka rader som har proveniens och vilka som inte har det.
+
+**Två fel i förteckningens myndighetsfält hittades när registret läste varje
+meddelande.** Sex meddelanden från Östergötland stod som Gotland, eftersom
+förteckningen matchade adressen på ordet gotland, som ligger inne i
+ostergotland. Fyra meddelanden från kammarrätterna stod som Sveriges Domstolar
+efter avsändardomänen, medan brevet är den enskilda domstolens. Alla tio är
+rättade, och skälet står i radens eget `skal`-fält. Felen rörde inget mått:
+förteckningen är en arbetslista över inkomna meddelanden, och myndighetsfältet
+i registret läses ur brevet.
 
 **Förteckningen, och varför den fick byggas om.** Registret byggdes först mot en
 arbetslista över inkomna meddelanden som var ofullständig. Kalmars egna brev
