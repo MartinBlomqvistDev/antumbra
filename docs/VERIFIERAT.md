@@ -1120,6 +1120,42 @@ talen är:
 Maskade handlingar i hela filen går från 163 till 161. Klass A är oförändrad,
 och kontrasten vidgas från 64 mot 24 till 64 mot 23 procentenheter.
 
+### Vad kontrasten tål om bildmetoden misstros, mätt 2026-10-09
+
+Åtagandet om bildmetodens falsklarm stod öppet i 38 dagar. Frågan var vad som
+görs åt dem, och svaret kräver först ett tal på hur mycket som hänger på
+metoden. Validatorn `src/validate_image_method.py` är körd om mot dagens korpus:
+över 298 digitalt födda dokument ger bildmetoden balk i 35 av de 178 som
+textmetoden bedömer som omaskade, alltså 20 procent, mot 19 procent när talet
+senast skrevs och korpusen var mindre. Felen går dessutom åt två håll, vilket
+inte har stått här förut: av de 26 dokument som bara bär en markör hittar
+bildmetoden 11 och missar 15. Den är alltså inte bara för känslig.
+
+| Mått | A | B | Skillnad |
+| --- | --- | --- | --- |
+| poolat, som publicerat | 109 av 170, 64,1 % | 32 av 140, 22,9 % | 41,2 |
+| bara textmetoden | 79 av 140, 56,4 % | 21 av 125, 16,8 % | 39,6 |
+| bilddomarna med 20 procents avdrag | 103 av 170, 60,6 % | 30 av 140, 21,4 % | 39,2 |
+
+**Slutsatsen vilar inte på bildmetoden.** Kontrasten står på 41, 40 eller 39
+procentenheter beroende på hur hårt metoden misstros, och riktningen vänder i
+inget av lägena. Den tredje raden är ett grovt överslag och inget mått: den drar
+av 20 procent av de maskade bilddomarna i båda klasserna, alltså antar att
+falsklarmsfrekvensen från den digitalt födda halvan gäller rakt över den
+skannade, vilket inte är prövat. Den står här för att visa storleksordningen,
+inte för att redovisas som ett resultat.
+
+**Ingen regel införs för fotografier, och metoden behålls.** De falsklarm som
+återstår efter ADR-0020 är fotografier, och en regel som undantar dem gör
+metoden blind för maskning som läggs över ett fotografi, vilket är en vanlig
+maskning i det här materialet. Att lämna de 45 skannade handlingarna omätta är
+sämre än att mäta dem med en deklarerad felmarginal, vilket ADR-0016 avgjorde
+redan när metoden infördes. Det som åtagandet efterfrågade är därför gjort på
+redovisningens sida och inte i instrumentet: talen står kvar uppdelade per
+metod, falsklarmsfrekvensen är omräknad och daterad, missarna är utskrivna, och
+robusthetsraderna visar vad som händer med slutsatsen om metoden misstros.
+Ingen publicerad siffra ändras av det här avsnittet.
+
 **Den första körningen var felaktig och ingenting ur den användes.** Ordgränsen
 skrevs in som ett enda styrtecken i stället för de två tecknen, så mönstret
 krävde ett tecken som inte finns i någon handling och matchade noll. Felet
