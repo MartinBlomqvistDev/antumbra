@@ -121,28 +121,59 @@ NEWLINE = chr(10)
 # the authority's logo, not its words.
 IMAGE_LINE = re.compile(r"^\[(?:cid:)?[^\]]*\]$", re.MULTILINE)
 NOT_A_NAME = (
-    "Länsstyrelsen",
-    "Kammarrätten",
-    "Sveriges",
-    "Jordbruksverket",
-    "Enheten",
-    "Enhet",
-    "Avdelningen",
-    "Avdelning",
-    "Diarium",
-    "Diariet",
-    "Central",
-    "Säker",
+    "Alla",
     "Arkivet",
     "Arkivfunktionen",
+    "Avdelning",
+    "Avdelningen",
+    "Avgift",
+    "Begär",
+    "Beslut",
+    "Besöksadress",
+    "Bifogar",
+    "Central",
+    "Dessa",
+    "Det",
+    "Diariet",
+    "Diarium",
+    "Din",
+    "Djurvälfärdsenheten",
+    "Du",
+    "Enhet",
+    "Enheten",
+    "Exempel",
+    "Extra",
+    "För",
+    "Föreläggande",
+    "Har",
+    "Hej",
+    "Här",
+    "Information",
+    "Jag",
+    "Jordbruksverket",
+    "Kammarrätten",
+    "Länsstyrelsen",
+    "Med",
+    "Mer",
+    "Normal",
+    "När",
+    "Observera",
+    "Om",
+    "Postadress",
     "Registrator",
     "Registraturen",
-    "Webbplats",
-    "Besöksadress",
-    "Postadress",
+    "Sammanlagt",
+    "Sidan",
+    "Sveriges",
+    "Säker",
+    "Så",
+    "Tack",
     "Telefon",
+    "Vi",
+    "Vill",
+    "Vänliga",
     "Växel",
-    "Djurvälfärdsenheten",
+    "Webbplats",
 )
 
 
@@ -202,6 +233,15 @@ def strip_signature(
                 )
             if judgement == A_NAME:
                 return text[: found.end()].rstrip(), True
+    # A signature with no greeting above it at all: the letter ends and the
+    # signer's name stands on its own line. The invariant in tests/ fails any
+    # row that carries a line of two capitalised words, so such a line can
+    # never be published, and the step cuts from it rather than leaving the
+    # omission to be noticed by hand.
+    for line in text.split(NEWLINE):
+        stripped = line.strip()
+        if NAME_LINE.match(stripped) and not stripped.startswith(NOT_A_NAME):
+            return text[: text.index(line)].rstrip(), True
     return text, False
 
 
