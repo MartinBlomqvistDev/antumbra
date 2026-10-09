@@ -87,6 +87,17 @@ GREETING = re.compile(
     r"Vänlig hälsning|Vänligen|Hälsningar|Mvh)[,!]?$",
     re.MULTILINE,
 )
+# A greeting with the signer on the same line, as in "Mvh <name>/Länsstyrelsen".
+# The greeting is then not a line of its own, so the signature rule below never
+# sees it, and the name would stay in the text. The line is cut whole, greeting
+# included, and the omission is declared. The word Vänligen is deliberately not
+# in the list: it opens a request in the authorities' own letters ("Vänligen
+# återkoppla om det fungerar"), and cutting that would cut their words.
+INLINE_SIGN = re.compile(
+    r"^(?:Mvh|Med vänlig hälsning|Med vänliga hälsningar|Vänlig hälsning|"
+    r"Vänliga hälsningar|Hälsningar)[ 	]+(\S.*)$",
+    re.MULTILINE,
+)
 NAME_LINE = re.compile(r"^[A-ZÅÄÖ][a-zåäöé]+ [A-ZÅÄÖ][a-zåäöé]+$")
 # A signature whose first line is a single capitalised word is either a first
 # name, a title or the unit itself, and nothing in the word says which: this
@@ -159,6 +170,12 @@ def strip_signature(
     is everything after it when the next line is a person's name. A one-word
     signature is cut only where the judgement says it is a name.
     """
+    for found in INLINE_SIGN.finditer(text):
+        # "Med vänliga hälsningar Länsstyrelsen i Jönköpings län" is the
+        # authority signing itself, not a person, and it stays.
+        rest = found.group(1).strip()
+        if not rest.startswith(NOT_A_NAME):
+            return text[: found.start()].rstrip(), True
     for found in GREETING.finditer(text):
         after = text[found.end() :].lstrip(NEWLINE)
         first = after.split(NEWLINE, 1)[0].strip() if after else ""

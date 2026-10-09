@@ -425,7 +425,7 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är ofullständigt, och så här långt är det kommet.** Registret bär
-232 av de 260 inkomna meddelanden förteckningen känner, alltså 28 kvar. Talen
+235 av de 260 inkomna meddelanden förteckningen känner, alltså 25 kvar. Talen
 står inte i prosan på förtroende: en invariant i `tests/` läser dem ur
 `data/korrespondens.jsonl` och `data/korrespondens_forteckning.jsonl` och faller
 om den här meningen inte stämmer med filerna.
