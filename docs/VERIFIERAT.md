@@ -719,6 +719,36 @@ Länen namnges här därför att varje händelse i avgiftsspåret ligger i
 protokollloggen, som P12-paketen själva säger publiceras ordagrant med
 myndighetens namn. Måttet räknar rader som redan är utlovade som publika.
 
+**Vilken taxa som gäller ett elektroniskt utlämnande, kontrollerat 2026-10-09.**
+Rättsfråga 1 i `BEGARANMALL.md` stod öppen i 68 dagar med motiveringen att ESV:s
+vägledning inte var kontrollerad. Den är kontrollerad nu, och de tre källorna
+säger samma sak. ESV svarar på sin egen fråga om 15-23 §§ kan användas för ett
+elektroniskt utlämnande: *"Nej det är inte möjligt."* Stödet ligger i stället i
+4 § första stycket 8, och *"det ekonomiska målet upp till full kostnadstäckning,
+vilket innebär att det finns ett utrymme för att inte ta ut någon avgift alls."*
+Förordningstexten är läst i regeringens egen författningssamling: 4 § 8 gäller
+*"automatisk databehandlingsinformation i annan form än utskrift"* och bara
+verksamhet *"av tillfällig natur eller av mindre omfattning"*, medan 16 §
+avslutas med att dess stycken *"gäller även när en handling sänds till
+beställaren via telefax"*. HFD 2013 ref. 21 är läst i original och avgör
+överklagandevägen, inte avgiftens storlek; avgiften i målet togs ut med stöd av
+4 § och motsvarade beloppsmässigt papperskopior.
+
+**Vad länen aviserade, mätt mot det.** Varje begäran i den här insamlingen bad
+om handlingarna i elektronisk form. De aviserade beloppen följer ändå
+papperstaxan i 16 §: 50 kronor för tio handlingar och 2 kronor därefter. Två län
+avviker från den, och åt olika håll: Värmland aviserade 5 kronor per handling
+utöver den tionde, alltså mer än taxan, och Dalarna tidsdebitering med 80 kronor
+per påbörjad tiominutersperiod från den elfte minuten. Ingen skrivelse i
+avgiftsspåret anger vilken paragraf avgiften vilar på; de som nämner en
+författning nämner avgiftsförordningen som helhet. Det är allt som går att mäta
+ur skrivelserna, och projektet drar inte slutsatsen att något län tagit ut en
+avgift i strid med förordningen: vilken paragraf en myndighet tillämpat går inte
+att läsa ur ett belopp, och ESV:s vägledning är vägledning och inte prejudikat.
+Vad som kan sägas är att taxan i 16 § enligt den vägledning förordningen vilar
+på inte är tillgänglig för ett elektroniskt utlämnande, och att beloppen i
+avgiftsspåret ändå är den taxans.
+
 **Två klasser fick läggas till, och det är ett resultat om noten själv.** De
 fyra förskrivna klasserna hade ingen plats för det som hände i tolv län:
 myndigheten aviserade en avgift, projektets avsmalningssvar gick ut enligt P5,

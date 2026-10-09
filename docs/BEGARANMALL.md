@@ -879,6 +879,32 @@ den beskrivs inte som lagbrytare, eftersom prejudikat saknas.
    myndighet får ta betalt för PDF per sida är därmed oreglerat i
    förordningstexten, och praxis varierar. ESV:s vägledning har inte
    kontrollerats. P5 är skriven för att fungera under båda tolkningarna.
+   *Tillägg 2026-10-09:* vägledningen är nu kontrollerad, och den säger nej. På
+   frågan *"Kan en myndighet ta ut avgifter med stöd av 15-23 §§
+   avgiftsförordningen för utlämnande av allmänna handlingar i elektronisk
+   form?"* svarar ESV: *"Nej det är inte möjligt. I 15-24 §§
+   avgiftsförordningen finns stöd för uttag av avgifter för utlämnande av
+   allmänna handlingar på annat sätt än i elektronisk form. [...] Regleringen
+   handlar framförallt om kopior av allmänna handlingar som lämnas ut på
+   papper."* Om den elektroniska formen: *"Stödet för avgiftsuttag för
+   utlämnande av allmänna handlingar i elektronisk form finns i 4 § punkt 8 i
+   avgiftsförordningen. Här är det ekonomiska målet upp till full
+   kostnadstäckning, vilket innebär att det finns ett utrymme för att inte ta ut
+   någon avgift alls."* Lydelserna är kontrollerade mot regeringens egen
+   författningssamling: 4 § första stycket 8 gäller *"automatisk
+   databehandlingsinformation i annan form än utskrift"* och andra stycket
+   begränsar det till verksamhet *"av tillfällig natur eller av mindre
+   omfattning"*, medan 16 § avslutas med att dess stycken *"gäller även när en
+   handling sänds till beställaren via telefax"* och inte nämner någon annan
+   överföringsform. HFD 2013 ref. 21 är läst i original och avgör något annat än
+   avgiftens storlek: *"En tingsrätts beslut om avgift för utlämnande av allmän
+   handling i elektronisk form har ansetts vara ett sådant administrativt beslut
+   som kan överklagas hos Domstolsverket."* Avgiften i det målet togs ut med stöd
+   av 4 §, och den motsvarade beloppsmässigt vad papperskopior hade kostat.
+   Vägledningen är inte ett prejudikat, men den är den myndighets vägledning som
+   förordningen vilar på, och frågan är därmed inte längre oundersökt. P5 står
+   kvar oförändrad, eftersom den redan var skriven för att fungera under båda
+   tolkningarna.
 2. **Gränsen för "beslut i ärenden" i det enskilda fallet.** Kammarrättspraxis
    ger nu en delning mellan fristående rapport och beslutsbilaga, men den bygger
    på referat, inte fulltext, och HFD har inte prövat frågan. *Tillägg
