@@ -90,6 +90,14 @@ would therefore fall for an instrument reason and not a factual one. The
 born-digital figure is printed first and labelled as the headline, the OCR set
 is reported beside it, and the pooled figure is printed last carrying nothing.
 
+**A text layer is not believed just because it has characters.** One decision
+of the 236 carries a recognition that its producer pasted over fourteen scanned
+pages: the character count per page is met, a second library reads the same
+crippled characters, and not one å, ä or ö survives in its conditions. Since 10
+October 2026 the step measures that, on the conditions rather than on the page,
+and sends such a decision to the project's own OCR. The rule, the sweep behind
+it and what it did to the register are in ADR-0026 and ADR-0027.
+
 **Reuse staying inside one permit division is tested against chance.** Two
 divisions hold half the corpus, so a shared text landing inside one division is
 common by chance and the raw count means nothing on its own. The clusters are
@@ -127,11 +135,22 @@ SERIES_NOT_TESTED = frozenset({"ändring"})
 SOURCE = ROOT / "pdf" / "jordbruksverket"
 MANIFEST = ROOT / "data" / "tillstand_manifest.jsonl"
 OCR_DIR = ROOT / "ocr" / "tillstand"
+# Step 39's reading of a decision whose text layer is not a reading of the
+# page. Same engine and same terms as step 25, kept apart because the two
+# steps screen for different defects.
+OCR_CHECK_DIR = ROOT / "ocr" / "tillstand_kontroll"
 OCR_INDEX = ROOT / "data" / "tillstand_ocr_index.jsonl"
 OUT = ROOT / "data" / "villkor_baseline.jsonl"
 
 MIN_CHARS_PER_PAGE = 200
 MIN_CONDITION_CHARS = 40
+# ADR-0026. Swedish administrative prose is about five per cent å, ä and ö,
+# and the measure is laid on the conditions because they are what the
+# register publishes as quotation. The corpus median is 0,054 and the lowest
+# but one 0,043, against zero in the one decision the rule exists for, so any
+# line between nought and four per cent picks out the same single file.
+DIACRITICS = frozenset("åäöÅÄÖ")
+MIN_CONDITION_LETTERS = 200
 MAX_CONDITION_CHARS = 4000
 
 # The permutation that tells a real concentration from a size effect. Fixed so
@@ -220,7 +239,15 @@ PAGE_FOOTER = re.compile(
     # at sign as a parenthesis and a Q, no at sign either, so nothing caught it.
     # Both shapes are added: the line itself, and an at sign as OCR renders it.
     r"|kontakta i detta [äa]rende"
-    r"|[\w.]+ ?[\(\[][QO0][\w.-]*\.(se|com|nu)\b",
+    r"|[\w.]+ ?[\(\[][QO0][\w.-]*\.(se|com|nu)\b"
+    # Added 10 October 2026, when ADR-0026 sent one decision to the project's
+    # own OCR and the registry address came back without the bracket the line
+    # above needs: a bare Q for the at sign, on one line with the web address
+    # and the organisation number. The number is the marker, because the
+    # screening on 4 September found that every personnummer-shaped string in
+    # the corpus was an authority's organisation number standing in a footer.
+    # The shape sits on one line in all of the conditions windows, that one.
+    r"|\b\d{6}-\d{4}\b",
     re.IGNORECASE,
 )
 
@@ -347,6 +374,31 @@ def normalise(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().casefold()
 
 
+def a_reading(text: str) -> bool:
+    """Whether the conditions in a text layer are a reading of the printed page.
+
+    ADR-0026. A text layer can carry characters enough and still not be the
+    file's own: a producer who scans a decision and pastes a recognition over
+    it leaves a layer that passes the character count and reads q for g and
+    rn for m. The tell is the letters Swedish cannot do without. Conditions at
+    this length with not one å, ä or ö have lost them, and the measure is laid
+    on the conditions rather than on the page because they are the text the
+    register publishes as quotation.
+
+    The segmentation this calls is defined further down the module. The order
+    is the pipeline's and not the call graph's: this is a question about the
+    source, and it is answered where the source is chosen.
+    """
+    window = section(text.split("\n"))
+    if not window:
+        return True
+    body = " ".join(raw for _, raw, _ in conditions(window))
+    letters = sum(character.isalpha() for character in body)
+    if letters < MIN_CONDITION_LETTERS:
+        return True
+    return any(character in DIACRITICS for character in body)
+
+
 def document_text(path: Path) -> tuple[str, str]:
     """The text of one decision and where it came from.
 
@@ -354,15 +406,28 @@ def document_text(path: Path) -> tuple[str, str]:
     OCR output is used if it exists. Which of the two a decision was read from
     is carried through to every row, because OCR text segments worse and a
     figure that pooled the two silently would hide that.
+
+    A text layer whose conditions are not a reading of the page is passed
+    over even when it has characters enough, which is ADR-0026. Where the
+    project has no reading of its own to put in its place the step stops
+    rather than drop the decision out of the register unseen.
     """
     with pymupdf.open(path) as document:
         pages = len(document)
         text = "\n".join(page.get_text() for page in document)
-    if len(text) >= MIN_CHARS_PER_PAGE * pages:
+    enough = len(text) >= MIN_CHARS_PER_PAGE * pages
+    if enough and a_reading(text):
         return text, "text"
-    recognised = OCR_DIR / f"{path.stem}.txt"
-    if recognised.exists():
-        return recognised.read_text("utf-8"), "ocr"
+    for directory in (OCR_DIR, OCR_CHECK_DIR):
+        recognised = directory / f"{path.stem}.txt"
+        if recognised.exists():
+            return recognised.read_text("utf-8"), "ocr"
+    if enough:
+        raise SystemExit(
+            f"{path.stem}: villkoren i textlagret bär inga diakriter och "
+            "projektet har ingen egen OCR av beslutet. Kör "
+            "pipeline/39_verify_broken_text_layer.py först."
+        )
     return "", ""
 
 

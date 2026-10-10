@@ -101,3 +101,27 @@ underlag som inte räcker. Frågan är värd ett eget mått och står öppen.
 **Att låta det stå.** Då publicerar registret 58 felstavade ord som citat ur ett
 myndighetsbeslut, och måttet på delad text räknar fyra villkor som unika av ett
 skäl som ligger i filen och inte i besluten.
+
+## Tillägg 2026-10-09, senare samma dag: regeln införs inte
+
+Utlösaren kördes mot alla 236 besluten igen, den här gången som predikat över
+varje sida i varje fil och med samma sidläsning steg 24 använder, och den
+träffar två beslut: `13df613f9802` med tretton
+sidor och 30 140 bokstäver, och `3d59186a51bc` med fem sidor och 1 674
+bokstäver. Det är samma två som svepet före beslutet fann, så träffmängden står.
+Det som inte står är posten ovan om vad träffen gör med registret.
+
+`3d59186a51bc`:s åtta villkor bär 4 till 17 diakriter var, på 66 till 250
+bokstäver. De är alltså en läsning av sidan och inte en inklistrad
+teckenläsning. Posten ovan drog av det slutsatsen att registret inte byter text
+där, och den slutsatsen gäller sidorna men inte källvalet: steg 24 väljer källa
+för hela beslutet, så en träff på sidorna 30 till 34 flyttar också villkoren på
+sidorna 1 och 2 till en annan läsning. Projektet har dessutom ingen egen OCR av
+`3d59186a51bc`, så med regeln som den är skriven hittar steget ingen text alls
+och de åtta villkoren lämnar registret.
+
+Förregistrerat villkor 1 faller därmed, och villkor 4 med det. Orsaken är inte
+okänd, den är mätt, men utfallet är detsamma: **regeln införs inte.** Beslutet i
+ADR-0026 mäter utlösaren på villkoren i stället för på sidan och träffar då ett
+enda beslut. Skälen, sammanhanget och de avvisade alternativen ovan står kvar
+och bärs vidare dit.

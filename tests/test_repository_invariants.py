@@ -1606,7 +1606,7 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
     ):
         # Step 33 imports step 24 rather than repeating its rules, and the hash
         # is what proves the two files describe the same conditions.
-        assert len(register) == len(conditions) == 2347
+        assert len(register) == len(conditions) == 2359
         assert {r["id"] for r in register} == {r["id"] for r in conditions}
         assert Counter(r["text_hash"] for r in register) == Counter(
             r["text_hash"] for r in conditions
@@ -1631,7 +1631,7 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
             assert record["källa"] in {"text", "ocr"}
 
     def test_the_headings_are_the_documents_own_words(self, register):
-        # 1 655 of the conditions sit under a heading the decision wrote, and
+        # 1 667 of the conditions sit under a heading the decision wrote, and
         # the vocabulary is what VILLKORSSCHEMA section 2.2 predicted from four
         # decisions: the general condition, manure, air, chemicals, noise,
         # monitoring. A drop here means the heading rule stopped firing. It was
@@ -1640,11 +1640,14 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
         # län, Aktbilaga 23, Skåne. Reading all 155 that survived, before the
         # typology could be built on them, found seven more: a county's running
         # head in the genitive, and six headings with the tail of the previous
-        # sentence glued in front of them. 148 now, and no document word lost.
+        # sentence glued in front of them. 148 then. Two more left on 10
+        # October 2026, Allmant and Lagring av godsel, when ADR-0026 sent the
+        # decision whose pasted text layer misspelled them to the project's own
+        # OCR: 146 now, and no document word lost.
         headings = [r["rubrik"] for r in register if r["rubrik"]]
-        assert len(headings) == 1655
-        assert len(set(headings)) == 148
-        assert Counter(headings).most_common(1)[0] == ("Allmänt", 269)
+        assert len(headings) == 1667
+        assert len(set(headings)) == 146
+        assert Counter(headings).most_common(1)[0] == ("Allmänt", 270)
         junk = {"Miljöprövningsdelegationen", "Skåne", "VÄSTRA GÖTALANDS LÄN"}
         assert not junk & set(headings)
         # The delegated matters, which VILLKORSSCHEMA section 2.4 gives a table
@@ -1655,7 +1658,7 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
     def test_every_heading_is_placed_in_the_typology(self, register):
         """Step 35's map and the register must not drift apart.
 
-        The map places all 148 headings by hand, which is the point: a reader
+        The map places all 146 headings by hand, which is the point: a reader
         can disagree with one placement without reverse-engineering a rule. A
         heading that appears in a later delivery and is not placed would
         otherwise be counted as nothing at all.
@@ -1691,8 +1694,13 @@ class TestTheConditionRegisterCarriesTextAndNothingElse:
             for match in pattern.finditer(record["text"])
         )
         assert set(values) == {37, 40, 42, 45, 47, 50, 55}
-        assert sum(values.values()) == 504
-        assert values[45] == 174
+        # 504 until 10 October 2026, when ADR-0026 sent one decision to the
+        # project's own OCR and twelve conditions entered the register with
+        # it. The five values they add are 40, 45, 50 and 55, all in the set,
+        # which is the test this canary exists to be: a new reading of a page
+        # may add occurrences and may not add a value.
+        assert sum(values.values()) == 509
+        assert values[45] == 176
 
 
 class TestThePermitCorpusDecomposesAsDocumented:
@@ -1779,7 +1787,7 @@ class TestTheConditionBaselineHoldsItsClaim:
     def test_the_corpus_is_the_one_the_document_describes(self, conditions, permits):
         assert len(permits) == 236
         assert len({p["sha256"] for p in permits}) == 235
-        assert len(conditions) == 2347
+        assert len(conditions) == 2359
         assert len({r["id"] for r in conditions}) == 180
 
     def test_the_two_sources_are_kept_apart(self, conditions):
@@ -1788,9 +1796,9 @@ class TestTheConditionBaselineHoldsItsClaim:
         # the reuse share for an instrument reason. Both counts are pinned so
         # that a pooled headline cannot appear unnoticed.
         by_source = Counter(r["källa"] for r in conditions)
-        assert by_source == {"text": 1762, "ocr": 585}
-        assert len({r["id"] for r in conditions if r["källa"] == "text"}) == 123
-        assert len({r["id"] for r in conditions if r["källa"] == "ocr"}) == 57
+        assert by_source == {"text": 1758, "ocr": 601}
+        assert len({r["id"] for r in conditions if r["källa"] == "text"}) == 122
+        assert len({r["id"] for r in conditions if r["källa"] == "ocr"}) == 58
 
     def test_no_condition_row_carries_text(self, conditions):
         # The corpus is outside version control because the file names carry
@@ -1828,7 +1836,7 @@ class TestTheConditionBaselineHoldsItsClaim:
             if sorted(ns) == list(range(1, max(ns) + 1))
         }
         # OCR segments worse, and the gap is the reason the sources stay apart.
-        assert sum(1 for i in clean if source[i] == "text") == 108
+        assert sum(1 for i in clean if source[i] == "text") == 107
         assert sum(1 for i in clean if source[i] == "ocr") == 22
 
     def test_the_series_check_reports_what_it_can_speak_about(self, conditions):
@@ -1842,8 +1850,8 @@ class TestTheConditionBaselineHoldsItsClaim:
         born = {r["id"] for r in conditions if r["källa"] == "text"}
         clean = {r["id"] for r in conditions if r["series_ok"]}
         assert len(born - tested) == 9
-        assert len(born & tested) == 114
-        assert len(born & tested & clean) == 105
+        assert len(born & tested) == 113
+        assert len(born & tested & clean) == 104
         for record in conditions:
             assert record["series_ok"] == (record["id"] in clean)
 
@@ -1866,7 +1874,7 @@ class TestTheConditionBaselineHoldsItsClaim:
         # written down before the run: two decisions that carried the same
         # condition had been cut at different points, so the truncation was
         # hiding matches.
-        assert len(owners) == 1269
+        assert len(owners) == 1265
         assert len(shared) == 253
         assert repeated == 746
         assert round(repeated / len(rows), 2) == 0.42
@@ -1884,7 +1892,7 @@ class TestTheConditionBaselineHoldsItsClaim:
         # The OCR set shares no document with the born-digital one, so its own
         # concentration is a replication and not a restatement.
         assert inside["text"] == (238, 253)
-        assert inside["ocr"] == (50, 52)
+        assert inside["ocr"] == (52, 54)
 
 
 class TestNoDocumentHidesBodyTextBehindALightCover:

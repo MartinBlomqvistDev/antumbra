@@ -32,3 +32,5 @@ ha ett daterat skäl skrivet före resultaten, inte rekonstruerat efter dem.
 | [0023](0023-bildmetodens-utlosare-provad-mot-bildtackning.md) | Bildmetodens utlösare prövad mot bildtäckning, och regeln införs inte | beslutad |
 | [0024](0024-rasvaren-sparas-och-registret-byggs-av-ett-steg.md) | Råsvaren sparas och korrespondensregistret byggs av ett steg | beslutad |
 | [0025](0025-ett-textlager-utan-diakriter-ar-ingen-lasning.md) | Ett textlager utan å, ä och ö är ingen läsning av sidan | beslutad |
+| [0026](0026-utlosaren-mats-pa-villkoren-inte-pa-sidan.md) | Utlösaren mäts på villkoren, inte på sidan | beslutad |
+| [0027](0027-den-stympade-lasningen-forklarar-villkorsantalet.md) | Den stympade läsningen förklarar villkorsantalet, och källbytet står | beslutad |

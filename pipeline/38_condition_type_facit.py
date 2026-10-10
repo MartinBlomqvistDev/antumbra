@@ -5,7 +5,7 @@ rests on without anyone having made it. The row "Rubrik" in VILLKORSSCHEMA
 section 3 rejects deriving the condition type from the heading, with the reason
 that it "klassar fel och kraschar på rubriklösa beslut", and the evidence is a
 single example: Motala 2021 condition 12 sits under Övrigt and is in substance a
-decommissioning condition. There are now 2 347 conditions to measure it on.
+decommissioning condition. There are now 2 359 conditions to measure it on.
 
 **The blindness is mechanical, not an intention.** With no flag, the step prints
 the identifier, the position and the condition text, never the heading, in an

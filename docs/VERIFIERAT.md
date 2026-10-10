@@ -1282,18 +1282,20 @@ källorna: 123 av 164 digitalt födda och 57 av 72 OCR-lästa, alltså 75 respek
 beskrevs som 60 filer utan villkorsrubrik som gick att hitta och 3 med rubrik men
 inget numrerat villkor. Verifiering är kontroll 1 i `VILLKORSSCHEMA.md` avsnitt 5,
 sifferserien 1..N, och varje beslut bär utfallet som `series_ok` och sin källa
-som `källa`.
+som `källa`. **Efter källbytet den 10 oktober 2026 är talen 2 359 villkor**,
+median 13 per beslut, och 122 av 164 digitalt födda mot 58 av 72 OCR-lästa; ett
+beslut flyttade källa, och avsnittet om källbytet längre ned bär skälet.
 
 **Täckningen för själva huvudsiffran är däremot oförändrad.** Täckningstalet
 gäller segmenteringen, inte återanvändningsmåttet. Huvudsiffran räknades då på
 de 120 digitalt födda besluten, alltså 51 procent av korpusen, precis som före
 OCR:n, och det som tillkom var en andra, separat mätning på 53 andra beslut.
 Talen i det här stycket är från augusti; efter rättelsen den 4 september är de
-123 respektive 57.
+123 respektive 57, och efter källbytet den 10 oktober 122 respektive 58.
 
 **OCR-läst text segmenteras sämre, och det är utskrivet i stället för utjämnat.**
-Obruten serie fås för 106 av 120 digitalt födda beslut, 88 procent, men bara 21
-av 53 OCR-lästa, 40 procent. OCR bryter dessutom ord över radslut, så två
+Obruten serie fås för 107 av 122 digitalt födda beslut, 88 procent, men bara 22
+av 58 OCR-lästa, 38 procent. OCR bryter dessutom ord över radslut, så två
 identiska villkor överlever sällan som identiska strängar när ett av dem lästs
 med OCR. Därför poolas källorna aldrig i huvudsiffran; det poolade talet skrivs
 ut men bär ingen slutsats.
@@ -1302,10 +1304,15 @@ ut men bär ingen slutsats.
 
 | Underlag | Villkor | Beslut | Olika texter | Delad text | Egna villkor, median per beslut |
 | --- | --- | --- | --- | --- | --- |
-| **huvudsiffra, ur textlagret** | 1 762 | 123 | 1 269 | 746 (42 %) | 62 % |
-| ur textlagret, obruten serie | 1 602 | 108 | 1 157 | 676 (42 %) | 62 % |
-| enbart OCR-lästa | 585 | 57 | 501 | 136 (23 %) | 75 % |
-| poolat, bär ingen slutsats | 2 347 | 180 | 1 712 | 951 (41 %) | 64 % |
+| **huvudsiffra, ur textlagret** | 1 758 | 122 | 1 265 | 746 (42 %) | 62 % |
+| ur textlagret, obruten serie | 1 598 | 107 | 1 153 | 676 (42 %) | 62 % |
+| enbart OCR-lästa | 601 | 58 | 506 | 149 (25 %) | 75 % |
+| poolat, bär ingen slutsats | 2 359 | 180 | 1 711 | 964 (41 %) | 64 % |
+
+Tabellen är omräknad efter källbytet den 10 oktober 2026. Före bytet stod
+raderna på 1 762 / 123 / 1 269 / 746, 1 602 / 108 / 1 157 / 676, 585 / 57 /
+501 / 136 och 2 347 / 180 / 1 712 / 951. Andelen delad text står stilla i tre
+av fyra rader, och den fjärde är OCR-raden, som växte med ett beslut.
 
 **Rättelse 2026-09-05: avsnittsrubriken låg i villkorstexten.** Tabellen är
 omräknad. Före rättelsen stod huvudsiffran på 615 delade villkor, 35 procent,
@@ -1316,7 +1323,7 @@ en rubrik. Rubrikerna är dessutom det fält VILLKORSSCHEMA avsnitt 2.2 vill ha
 bevarat, så de gick förlorade två gånger om. Regeln som infördes är strukturell:
 en kort rad inne i avsnittet som inte inleder ett villkor, inte slutar som en
 mening och följs av ett numrerat villkor tillhör det som kommer efter den.
-**1 655 av 2 347 villkor bär sin rubrik, 148 olika.** Talet var 1 691 under 161
+**1 667 av 2 359 villkor bär sin rubrik, 146 olika.** Talet var 1 691 under 161
 rubriker fram till kontroll 3 samma dag, som visade att 36 av dem var sidhuvuden
 och inte rubriker: Miljöprövningsdelegationen, Anläggningsnummer, Örebro län,
 Aktbilaga 23 och Skåne. En genomläsning av de 155 som blev kvar, gjord innan
@@ -1330,11 +1337,14 @@ parentes, och det är den rubrik VILLKORSSCHEMA avsnitt 2.4 gett en egen tabell.
 Inget ord som beslutet självt skrev försvann med något av detta.
 
 **Vad som inte rättas är OCR:ns egna felläsningar av riktiga rubriker.**
-`Ålbhnänt`, `Allnänt`, `Alhnänt` och `Allmant` är alla Allmänt, och `Lagring av
-godsel` och `Sk yddszoner` är lika genomskinliga. De står kvar som registret
-läste dem, eftersom fältet ska bära vad textlagret säger och en tyst
-omskrivning av källan är en annan sorts fel. De hanteras i typkartan i stället,
-deklarerat där.
+`Ålbhnänt`, `Allnänt` och `Alhnänt` är alla Allmänt, och `Sk yddszoner` är lika
+genomskinlig. De står kvar som registret läste dem, eftersom fältet ska bära
+vad textlagret säger och en tyst omskrivning av källan är en annan sorts fel.
+De hanteras i typkartan i stället, deklarerat där. Två av dem är borta sedan
+den 10 oktober 2026, `Allmant` och `Lagring av godsel`: båda kom ur ett
+textlager som var en inklistrad teckenläsning, och beslutet läses nu ur
+projektets egen OCR, där orden är rättstavade. Talet 148 rubriker blev 146 av
+det.
 
 **Båda de förregistrerade villkoren höll.** Inget beslut tappade villkor, och
 det okulära stickprovet på 25 av de 823 borttagna raderna innehöll ingen
@@ -1373,7 +1383,7 @@ raden är identiska före och efter att 53 beslut lades till underlaget, vilket 
 ska vara, eftersom raden räknas på oförändrade dokument. Det är kontrollen på
 att OCR-tillskottet är additivt och inte har rört det som redan var mätt.
 
-**Nollhypotesen faller.** 1 016 av 1 762 villkor, 58 procent, förekommer i ett
+**Nollhypotesen faller.** 1 012 av 1 758 villkor, 58 procent, förekommer i ett
 enda beslut, och medianbeslutet har egen text i 62 procent av sina villkor. Ett
 villkorsregister mäter alltså något som varierar, och arbetet med att bygga det
 är motiverat. Måttet är exakt likhet efter gemener och kollapsat blanktecken,
@@ -1383,22 +1393,22 @@ delar ett villkor i två drar åt samma håll, alltså mot mer skenbar egenart, 
 båda felkällorna gör slutsatsen försiktigare och ingen av dem gör den starkare.
 
 **Den delade texten är inte korta fragment.** Delade texter har median 223
-tecken mot 264 för de egna, och 10 av 253 ligger under 80 tecken. Det är hela
+tecken mot 268 för de egna, och 10 av 253 ligger under 80 tecken. Det är hela
 villkor som återanvänds, inte gemensamma formuleringar som halkat med.
 
 **Den återanvändning som finns är gruppintern, och det är inte en
 storlekseffekt.** Av de 253 texter som förekommer i mer än ett beslut stannar
 **238 inom en enda prövningsgrupp**. Under slumpmässig omfördelning av besluten,
-med prövningsgruppernas faktiska storlekar bevarade, väntas 28,7 och den 95:e
+med prövningsgruppernas faktiska storlekar bevarade, väntas 28,8 och den 95:e
 percentilen ligger på 37; noll av 2 000 permutationer nådde 238 (`p < 0,0005`).
 Koncentrationen är alltså inte en följd av att Skåne med Blekinge och Västra
 Götaland bär hälften av korpusen.
 
-**Koncentrationen replikerar på en oberoende dokumentmängd.** De 57 OCR-lästa
-besluten delar inga dokument med de 123 digitalt födda och är lästa med ett
-annat instrument. Där stannar **50 av 52 delade texter inom en enda
-prövningsgrupp** mot 6,5 väntat under samma permutation, och noll av 2 000
-omfördelningar nådde 50. Att andelen delad text är lägre i den mängden, 23 mot
+**Koncentrationen replikerar på en oberoende dokumentmängd.** De 58 OCR-lästa
+besluten delar inga dokument med de 122 digitalt födda och är lästa med ett
+annat instrument. Där stannar **52 av 54 delade texter inom en enda
+prövningsgrupp** mot 6,2 väntat under samma permutation, och noll av 2 000
+omfördelningar nådde 52. Att andelen delad text är lägre i den mängden, 23 mot
 42 procent, är väntat och pekar åt rätt håll: exakt matchning missgynnar OCR-text
 och kan bara underskatta återanvändningen där.
 
@@ -1433,11 +1443,11 @@ Radstrukturen återskapas nu ur Tesseracts block-, stycke- och radnummer; samma
 beslut blev då 642 rader och gav femton villkor.
 
 **Gränserna, oförkortade.** Rubrik- och stopplistorna är heuristik över de
-layouter som faktiskt finns i korpusen, inte en specifikation. De 14 digitalt
+layouter som faktiskt finns i korpusen, inte en specifikation. De 15 digitalt
 födda beslut som faller på seriekontrollen gör det av tre skäl som gått att läsa
 i texten: ett strönummer mitt i serien, en andra numrerad lista efter villkoren
 som stoppordet missar, och ändringsbeslut som lagligen börjar på villkor 35
-eller 12. Bland de OCR-lästa faller 32 av 53, och där är orsaken en annan:
+eller 12. Bland de OCR-lästa faller 36 av 58, och där är orsaken en annan:
 tecken och hela nummerrader går förlorade i inläsningen. Den största kvarvarande
 luckan är nu de 60 filer där ingen villkorsrubrik hittas, alltså 25 procent av
 korpusen, och den ligger i dokumenttypen snarare än i texttillgången. Deras egna
@@ -2494,6 +2504,104 @@ måttet mäter är alltså delvis sammanhang och inte bara trohet, och det straf
 den rättelse det byggdes för att tillåta. Om steg 34 ska återanknyta efter ett
 hål i stället för att gå vidare framåt är en egen fråga; den avgörs inte här,
 och talet 0,9974 står som det är mätt.
+
+### Källbytet för `13df613f9802`, kört 2026-10-10
+
+Regeln skrevs i [ADR-0025](adr/0025-ett-textlager-utan-diakriter-ar-ingen-lasning.md),
+mättes, föll på ett förregistrerat villkor och skrevs om i
+[ADR-0026](adr/0026-utlosaren-mats-pa-villkoren-inte-pa-sidan.md). Utfallet av
+körningen avgörs i
+[ADR-0027](adr/0027-den-stympade-lasningen-forklarar-villkorsantalet.md). Det
+här avsnittet är talen.
+
+**Utlösaren och svepet, kört före bytet.** Ett beslut läses ur projektets egen
+OCR när de villkor steg 24 segmenterar ur textlagret bär minst 200 bokstäver och
+inte en enda å, ä eller ö. Av de 236 besluten har 123 ett textlager med villkor
+som går att segmentera, och utlösaren träffar ett enda: `13df613f9802` med
+0,0000 diakriter på 981 bokstäver, mot 0,0426 för nästa beslut i ordningen och
+0,0540 i median. Varje tröskel mellan noll och fyra procent väljer alltså samma
+handling.
+
+**Sidregeln i ADR-0025 träffade två beslut och infördes aldrig.** Mätt på sidorna
+i stället för på villkoren träffar samma idé också `3d59186a51bc`, vars åtta
+villkor bär 4 till 17 diakriter var och alltså är en läsning av sidan. Steg 24
+väljer källa för hela beslutet, så en träff på sidorna 30 till 34 hade flyttat
+villkoren på sidorna 1 och 2 till en annan läsning, och projektet har ingen egen
+OCR av det beslutet att flytta dem till.
+
+**Vad bytet gjorde med registret.**
+
+| | före | efter |
+| --- | --- | --- |
+| villkor | 2 347 | 2 359 |
+| med rubrik | 1 655 | 1 667 |
+| olika rubriker | 148 | 146 |
+| beslut ur textlagret | 123 | 122 |
+| OCR-lästa beslut | 57 | 58 |
+| villkor i `13df613f9802` | 4 | 16 |
+
+Inget annat beslut byter villkorstext och inget annat byter källa. De fyra
+texter som byter bär 8, 10, 21 och 24 diakriter efter bytet, mot noll före.
+
+**Antalet steg därför att den gamla läsningen var stympad, inte bara
+felstavad.** Villkorsfönstret ur textlagret är 39 rader och slutar i beslutets
+egen sidfot, läst som `Ostqotaqatan 3` och `E-DOSt:`. ADR-0021:s regel bär ett
+villkor över en sidbrytning genom att känna igen sidhuvudet som block, och ett
+huvud vars ord är förvanskade känns inte igen, så fönstret stängde vid den
+första brytningen. Numrerade radstarter finns i textlagret på sidorna 14, 21, 22
+och 34, alltså fanns villkoren i filen men utanför fönstret. Ur OCR läser steget
+numren 1 till 15 med beslutets egna rubriker, och en rad numrerad 20 på 2 981
+tecken som bär texten i villkoren mellan 16 och 20 i ett stycke. Den raden gör
+beslutets serie bruten, vilket 51 av 180 beslut redan är, 36 av dem OCR-lästa.
+
+**Delad text, omräknad.** Huvudsiffran står på 1 758 villkor i 122 beslut och
+746 delade, 42 procent, alltså samma andel som före bytet. Den OCR-lästa
+delmängden växer från 585 till 601 villkor och från 136 till 149 delade, 25
+procent. Koncentrationen inom prövningsgrupp håller i båda: 238 av 253 texter i
+huvudsiffran mot 28,8 väntat, och 52 av 54 i OCR-mängden mot 6,2 väntat, båda
+med `p < 0,0005` över 2 000 permutationer.
+
+**Kontroll 3 kördes om över 2 359 villkor och villkoret är uppfyllt.**
+Digitalfödd mot pdfplumber 0,9915 av 545 086 tecken, OCR mot samma fil 0,9974 av
+227 269. Avhuggningen faller från 121 av 2 347, 5,2 procent, till 119 av 2 359,
+5,0 procent.
+
+**Sidfoten i villkor 4, åtagandet som väntade på källbytet.** Ur projektets egen
+OCR står en enda sidfotsrad kvar inne i villkorsfönstret,
+`ostergotlandQlansstyrelsen.se lansstyrelsen.se/ostergotland 202100-2270`, och
+markörerna missade den därför att formen för snabel-a som OCR läser den kräver en
+parentes före Q. Markörlistan i steg 24 fick i stället organisationsnummerformen,
+sex siffror, bindestreck, fyra siffror, med skälet att screeningen den 4
+september visade att varje personnummerliknande sträng i hela korpusen var ett
+organisationsnummer i en sidfot. Formen finns på en enda rad i samtliga
+villkorsfönster, just den. De tre förregistrerade villkoren höll: exakt ett
+villkor byter text, `13df613f9802` villkor 4 från 605 till 533 tecken, och de 72
+tecknen är sidfotens tre element; antalet villkor står kvar på 2 359; ingen annan
+rad i registret ändras.
+
+**Det som blev sämre står här.** `13df613f9802` faller ut ur kontroll 3:s mått,
+eftersom registertexten nu kommer ur `ocr/tillstand_kontroll/` och den andra
+vägen för ett OCR-läst beslut är steg 25:s OCR, som inte finns för en fil som
+bär ett textlager. Utanför måttet står därmed två beslut med 47 villkor av 2
+359, det här och `361be3bd133c`. Att låta kontrollen läsa samma fil som texten
+kommer ur vore en jämförelse med sig själv.
+
+**Steg 39:s sikt 2 träffar nu noll beslut av 180.** Sikten letar villkorstext
+som förlorat å, ä och ö, och den var det instrument som fann felet den 9
+oktober. Att den inte längre finner något är siktens egen kvittens på att felet
+är borta ur registret. Sikt 1 står kvar vid `361be3bd133c`, vars 31 villkor
+håller median 0,989 mot en ny OCR-läsning.
+
+**Typerna räknas om och rör sig knappt.** Schemats nio täcker 1 478 villkor med
+rubrik, 88,7 procent, mot 1 466 och 88,6 före. De ämnen korpusen lägger till står
+på 174, 10,4 procent, delegationen på 15, och 692 villkor saknar rubrik, exakt
+som före. Typkartan tappade två placeringar, `Allmant` och `Lagring av godsel`,
+som bara fanns därför att textlagret stavade fel; steg 35 stoppar på en
+placering utan rubrik i registret, och det var så drivningen upptäcktes.
+
+**Personuppgiftsscreeningen passerades av de tolv nya raderna.** Steg 33 kör den
+vid varje bygge, med alla fem mönstren, och skrev registret först när den gick
+igenom.
 
 ---
 

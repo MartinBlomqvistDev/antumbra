@@ -27,11 +27,17 @@ keeping a question open rather than a requirement on the operator. The heading
 is placed as DELEGATION here so that those rows can be routed, and they are
 reported apart from the types.
 
-**OCR read four headings wrong and they are placed anyway.** `Ålbhnänt`,
-`Allnänt`, `Alhnänt` and `Allmant` are all the word Allmänt, and `Lagring av
-godsel` and `Sk yddszoner` are as plain. The register stores what the text
-layer says, because rewriting the source silently is a worse fault than a
-misspelling; the correction belongs here, in the map, where it is declared.
+**OCR read three headings wrong and they are placed anyway.** `Ålbhnänt`,
+`Allnänt` and `Alhnänt` are all the word Allmänt, and `Sk yddszoner` is as
+plain. The register stores what the text layer says, because rewriting the
+source silently is a worse fault than a misspelling; the correction belongs
+here, in the map, where it is declared.
+
+Two placements left the map on 10 October 2026, `Allmant` and `Lagring av
+godsel`. Both came from `13df613f9802`, whose text layer was a recognition
+pasted over a scan, and ADR-0026 sends that decision to the project's own OCR
+instead. The headings are spelled correctly in the register from then on, and a
+placement with no heading left in the register is drift this step stops on.
 
 Nothing here writes to data/. The step reports, and the map is the artefact.
 
@@ -77,7 +83,6 @@ HEADING_TYPE: dict[str, str] = {
     "Ålbhnänt": "general",  # OCR of Allmänt
     "Allnänt": "general",  # OCR of Allmänt
     "Alhnänt": "general",  # OCR of Allmänt
-    "Allmant": "general",  # OCR of Allmänt
     # --- manure: storage, handling, spreading, disposal, nutrient balance --
     "Lagring och spridning av gödsel": "manure",
     "Gödselspridning": "manure",
@@ -113,7 +118,6 @@ HEADING_TYPE: dict[str, str] = {
     "Stallbalans": "manure",  # the nutrient balance of the house, not the house
     "Växtnäring": "manure",
     "Lagring och hantering av stallgödsel": "manure",
-    "Lagring av godsel": "manure",  # OCR of gödsel
     "Lagring och annan hantering av organiska gödselmedel": "manure",
     "Spridning av gödselmedel": "manure",
     "Lagring och spridning av organiska gödselmedel": "manure",
