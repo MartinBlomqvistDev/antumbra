@@ -153,7 +153,10 @@ export const sv: Copy = {
       "slutstatus, och varje berörd myndighet fick sina egna tal den 2 " +
       "oktober 2026 med tre veckors svarstid. Myndigheternas svar står " +
       "ordagrant vid sidan av siffrorna på sidan Handlingar, och uteblivet " +
-      "svar skrivs ut som uteblivet svar.",
+      "svar skrivs ut som uteblivet svar. En väg är fortfarande öppen: " +
+      "Jordbruksverkets avslag på begäran C är överklagat och ligger hos " +
+      "Kammarrätten i Jönköping som mål 3339-26, registrerat den 10 " +
+      "september 2026 och ännu inte avgjort.",
     resultat: {
       heading: "Maskningen i de två handlingsklasserna",
       note:
