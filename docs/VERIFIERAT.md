@@ -1269,7 +1269,8 @@ sifferserie 1..N. Numrerade listor finns över hela besluten, i redogörelsen oc
 upplysningarna, så det måttet togs över en blandning av villkor och annan text.
 Den version som gäller söker villkorsrubriken, läser till nästa avsnittsrubrik
 och segmenterar bara innanför det fönstret: då ger **88 procent** av de digitalt
-födda besluten en obruten serie, 106 av 120. Att rubriken inte alltid går att
+födda besluten en obruten serie, 107 av 122 efter källbytet den 10 oktober 2026
+och 106 av 120 när jämförelsen gjordes. Att rubriken inte alltid går att
 hitta stämmer med att `VILLKORSSCHEMA.md` avsnitt 2.2 redan skriver att rubriker
 varierar och kan saknas.
 
@@ -1449,8 +1450,11 @@ i texten: ett strönummer mitt i serien, en andra numrerad lista efter villkoren
 som stoppordet missar, och ändringsbeslut som lagligen börjar på villkor 35
 eller 12. Bland de OCR-lästa faller 36 av 58, och där är orsaken en annan:
 tecken och hela nummerrader går förlorade i inläsningen. Den största kvarvarande
-luckan är nu de 60 filer där ingen villkorsrubrik hittas, alltså 25 procent av
-korpusen, och den ligger i dokumenttypen snarare än i texttillgången. Deras egna
+luckan är de filer där ingen villkorsrubrik hittas, 53 stycken sedan rättelsen
+den 4 september 2026 tog sju av dem, plus 3 med rubrik men inget numrerat
+villkor, alltså 56 av 236 filer och 24 procent av korpusen. Luckan ligger i
+dokumenttypen snarare än i texttillgången. Analysen nedan är gjord på de 60 som
+den var då. Deras egna
 korta rader handlar om att ändra enstaka villkor och inte om att meddela en
 uppsättning: "villkorsändring" på tio, "ändring av villkor i tillstånd" på åtta,
 "villkoret ska ha följande ändrade lydelse" och "villkor N ändras till följande

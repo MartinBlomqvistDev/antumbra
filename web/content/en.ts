@@ -239,7 +239,13 @@ export const en: Copy = {
         "Requests where a fee remained after the protocol's narrowing. " +
         "Copies are then declined, a written decision on the fee is " +
         "requested, and the outcome is documented. No fee has been " +
-        "paid.",
+        "paid. The fee question took 41 written exchanges, spread over " +
+        "the 16 counties that announced a fee, most of them in " +
+        "Jönköping, Kalmar and Örebro with five each. The outcomes: the " +
+        "fee fell away after the narrowing in 12 counties, no fee was " +
+        "announced in 5, a decision was issued in 2, a decision was " +
+        "refused in 1, one county answered with a general policy " +
+        "document, and no county left the question unanswered.",
     },
     toHandlingar:
       "Every received file is listed with its checksum on the Swedish " +

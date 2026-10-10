@@ -9,7 +9,7 @@ Tidigaste publiceringsdag är **lördag 2026-10-24**, dagen efter svarstidens
 slut. **Vald dag är måndag 2026-10-26**, två dagar senare. Not 8 säger tidigast,
 så en senare dag kräver ingen annan motivering än att den loggas, och tre skäl
 talar för måndagen: mottagarna är myndigheter och journalister som läser på
-vardagar, den saknade nämnaren redovisas ändå den 26:e så materialet blir
+vardagar, nämnarens läge redovisas ändå den 26:e så materialet blir
 fullständigt på dag ett i stället för att kompletteras två dagar senare, och en
 lördagslansering lägger materialet på den enda dag ingen läser det. Regeln är tillämpningsnot 8: publicering enligt P12 är varje åtgärd som
 gör en berörd myndighets egna resultat läsbara för någon utanför projektet, och
@@ -144,8 +144,11 @@ regeln: antal skrivelser i avgiftsfrågan fram till ett överklagbart beslut i
 ärendet, och utfall i fyra klasser, *"för samtliga 21 länsstyrelser oavsett
 utfall, inklusive de län där noll skrivelser behövdes"*. **Räknat 2026-10-06**
 av steg 42: 41 skrivelser, och sex utfallsklasser i stället för fyra. Talen och
-skälet till de två tillagda klasserna står i `docs/VERIFIERAT.md`. Kvar står att
-ställa måttet på en publicerad yta.
+skälet till de två tillagda klasserna står i `docs/VERIFIERAT.md`. **Ställt på en
+publicerad yta den 10 oktober 2026:** avsnittet om avgiftsstoppade begäranden på
+sidan Sverige bär nu de 41 skrivelserna, de 16 län som aviserade en avgift, de
+tre länen med flest skrivelser och alla sex utfallsklasserna, i båda
+språkversionerna.
 
 ---
 
@@ -237,8 +240,14 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
 
 11. Ett svar som kommer efter den 23 oktober publiceras också, oavkortat, som en
     egen rad med sitt datum. Svarstiden löper inte om.
-12. Den 26 oktober redovisas saknad nämnare för de län som inte svarat, som en
-    lucka och aldrig som ett avslag, enligt not 7 och not 9.
+12. Den 26 oktober redovisas nämnarens läge, som en lucka och aldrig som ett
+    avslag, enligt not 7 och not 9. **Mätt 2026-10-10 har samtliga 21 län
+    svarat**, nitton med tal och två med att talet inte går att ta fram: Skåne
+    därför att djurskyddskontrollerna inte registreras kopplat till djurslag, och
+    Norrbotten med hänvisning till serviceskyldigheten i förvaltningslagen. Vad
+    som redovisas är alltså inte uteblivna svar utan två nämnare som myndigheten
+    själv säger inte finns sammanställda, med svaren ordagrant i
+    `data/namnare.jsonl`.
 13. JO-anmälan övervägs först nu, enhetligt för alla myndigheter som fortfarande
     inte svarat, enligt P10. Ingen anmälan under mätperioden.
 14. Målen i kammarrätterna redovisas som pågående med diarienummer och yrkande.
@@ -277,10 +286,14 @@ med källa. Inget påstående om lagbrott. Nollresultaten överst.
 
 ## 7. Beslut som återstår
 
-1. **Korrespondensloggens omfång.** Antingen byggs en logg med myndigheternas
-   meddelanden i sin helhet, ordagrant och screenad, eller så står det på den
-   publicerade ytan vilka delar som inte återges, nämligen logistik, länkar och
-   signaturer. Brevens lydelse pekar på det första.
+1. **Korrespondensloggens omfång. Avgjort 2026-10-10, och båda leden är
+   uppfyllda.** Registret `data/korrespondens.jsonl` bär samtliga 260 meddelanden
+   på 196 rader, ordagrant och screenade, och varje rad säger i fältet
+   `utelamnat` vad den lämnar ute. Datasidan säger numera samma sak i text: den
+   citerade historiken, signaturblockets personuppgifter enligt ADR-0018,
+   länkmålen, en rad som inte var annat än en länk, och domstolarnas
+   engångslänkar, medan myndighetens egen funktionsbrevlåda och växel står kvar.
+   Reglerna står i `docs/KORRESPONDENS.md` och i ADR-0024.
 2. **Vad som är datasetet** i brevens mening: de svenska aggregaten, DG
    SANTE-korpusen hos Hugging Face, eller båda.
 3. **Om publiceringen sker den 24 oktober eller senare.** Datumet är ett golv

@@ -291,7 +291,13 @@ export const sv: Copy = {
       note:
         "Begäranden där en avgift kvarstod efter protokollets " +
         "avsmalning. Kopior avstås då, ett skriftligt beslut om avgiften " +
-        "begärs, och utfallet dokumenteras. Ingen avgift har betalats.",
+        "begärs, och utfallet dokumenteras. Ingen avgift har betalats. " +
+        "Avgiftsfrågan krävde 41 skrivelser, fördelade på de 16 län som " +
+        "aviserade en avgift, flest i Jönköping, Kalmar och Örebro med " +
+        "fem var. Utfallen: avgiften föll efter avsmalningen i 12 län, " +
+        "ingen avgift aviserades i 5, beslut meddelades i 2, beslut " +
+        "vägrades i 1, ett län svarade med ett generellt styrdokument, " +
+        "och inget län lämnade frågan obesvarad.",
     },
     toHandlingar:
       "Varje mottagen fil är förtecknad med kontrollsumma på sidan " +
@@ -553,7 +559,12 @@ export const sv: Copy = {
           {
             path: "data/korrespondens.jsonl",
             beskrivning:
-              "Myndigheternas egna meddelanden, ordagrant, med meddelande-id.",
+              "Myndigheternas egna meddelanden, ordagrant, med " +
+              "meddelande-id. Varje rad säger själv vad den utelämnar: " +
+              "den citerade historiken, signaturblockets personuppgifter, " +
+              "länkmålen, en rad som inte var annat än en länk, och " +
+              "domstolarnas engångslänkar. Myndighetens egen " +
+              "funktionsbrevlåda och växel står kvar.",
           },
           {
             path: "data/p12_avsant_manifest.jsonl",
