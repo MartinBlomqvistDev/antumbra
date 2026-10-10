@@ -91,11 +91,11 @@ export const en: Copy = {
       "and every authority concerned received its own figures on 2 October " +
       "2026 with three weeks to reply. The authorities' replies stand " +
       "verbatim beside the figures on the Swedish page Handlingar, and a " +
-      "missing reply is written out as a missing reply. One route is " +
-      "still open: the refusal of request C by the Swedish Board of " +
-      "Agriculture is under appeal, registered on 10 September 2026 as " +
-      "case 3339-26 before the Administrative Court of Appeal in " +
-      "Jönköping and not yet decided.",
+      "missing reply is written out as a missing reply. The refusal of " +
+      "request C by the Swedish Board of Agriculture is under appeal " +
+      "before the Administrative Court of Appeal in Jönköping, " +
+      "registered on 10 September 2026 as case 3339-26 and not yet " +
+      "decided.",
     resultat: {
       heading: "Redaction in the two document classes",
       note:

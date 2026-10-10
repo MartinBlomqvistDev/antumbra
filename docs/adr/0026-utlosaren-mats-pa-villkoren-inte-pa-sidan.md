@@ -142,3 +142,22 @@ tecken i ett annat OCR-läst beslut.
 Villkor 2 säger att ett ändrat antal är en egen fråga som ska mätas innan
 registret byter källa. Frågan är mätt ovan och avgörs i
 [ADR-0027](0027-den-stympade-lasningen-forklarar-villkorsantalet.md).
+
+## Tillägg 2026-10-10, efter en granskning av talen: kontexttalen räknade in beslutet självt
+
+Tillägget ovan skriver att den sammansmälta raden inte är ny i registret och
+belägger det med 51 beslut med bruten serie, 36 av dem OCR-lästa, 79 rader med
+nummerhopp, 62 av dem i OCR-lästa beslut, och 32 rader längre än 1 500 tecken.
+**De talen är mätta efter bytet och räknar därför in `13df613f9802` självt.**
+Före bytet var samma tal 50, 35, 78, 61 och 31. Jämförelsen håller fortfarande,
+men den ska läsas som 50 andra beslut och inte 51, och som 35 andra OCR-lästa
+och inte 36.
+
+Samma granskning reproducerade talet 58 felaktiga ord av 178, som kommer ur
+ADR-0025. Ordantalet 178 stämmer exakt. Antalet beror på metoden: en mekanisk
+prövning, där varje ord i den gamla registertexten jämförs mot projektets egen
+OCR med å, ä och ö fällda, ger **55 ord som saknar en diakrit OCR-läsningen
+har**. Resten av avståndet till 58 ligger i ord som är fel på grövre sätt än en
+struken diakrit, som `rar` för *får* och `jarnn` för *jämn*, vilka inte kan
+matchas på det sättet. Talet 55 är det reproducerbara, och det står i
+`VERIFIERAT.md` med metoden angiven.

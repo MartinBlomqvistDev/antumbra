@@ -2552,7 +2552,10 @@ första brytningen. Numrerade radstarter finns i textlagret på sidorna 14, 21, 
 och 34, alltså fanns villkoren i filen men utanför fönstret. Ur OCR läser steget
 numren 1 till 15 med beslutets egna rubriker, och en rad numrerad 20 på 2 981
 tecken som bär texten i villkoren mellan 16 och 20 i ett stycke. Den raden gör
-beslutets serie bruten, vilket 51 av 180 beslut redan är, 36 av dem OCR-lästa.
+beslutets serie bruten, och det var 50 av 180 beslut redan före bytet, 35 av dem
+OCR-lästa; efter bytet är talen 51 och 36, eftersom det här beslutet nu räknas
+med. Samma sak gäller de andra kontexttalen: 78 rader med nummerhopp blev 79, och
+31 rader längre än 1 500 tecken blev 32.
 
 **Delad text, omräknad.** Huvudsiffran står på 1 758 villkor i 122 beslut och
 746 delade, 42 procent, alltså samma andel som före bytet. Den OCR-lästa
@@ -2560,6 +2563,24 @@ delmängden växer från 585 till 601 villkor och från 136 till 149 delade, 25
 procent. Koncentrationen inom prövningsgrupp håller i båda: 238 av 253 texter i
 huvudsiffran mot 28,8 väntat, och 52 av 54 i OCR-mängden mot 6,2 väntat, båda
 med `p < 0,0005` över 2 000 permutationer.
+
+**Var beslutet går in i talen.** Huvudsiffran räknas på beslut ur textlagret, så
+efter bytet ligger `13df613f9802` utanför den helt. Den OCR-lästa delmängden tar
+in dess sexton villkor, och replikeringen rör sig därmed från 50 av 52 delade
+texter inom en prövningsgrupp till 52 av 54. De två nya klustren delas av det här
+beslutet och `486f0758082c`, båda i prövningsgruppen Östergötlands län och
+Jönköpings län, alltså båda inom en grupp: andelen går från 96,2 till 96,3
+procent. Ingen huvudsiffra vilar på bytet, och den delmängd som tar in det
+redovisar sin rörelse här.
+
+**Felstavningarna, reproducerade mekaniskt.** ADR-0025 skrev 58 fel ord av 178.
+Ordantalet 178 stämmer exakt. Antalet felaktiga beror på metoden: prövas varje
+ord i den gamla registertexten mot projektets egen OCR med å, ä och ö fällda blir
+det **55 ord som saknar en diakrit OCR-läsningen har**, till exempel
+`foreskrivs`, `overensstammelse` och `ansokningshandlingarna`. Avståndet till 58
+ligger i ord som är fel på grövre sätt än en struken diakrit, `rar` för får och
+`jarnn` för jämn, vilka den prövningen inte kan matcha. Talet 55 är det
+reproducerbara.
 
 **Kontroll 3 kördes om över 2 359 villkor och villkoret är uppfyllt.**
 Digitalfödd mot pdfplumber 0,9915 av 545 086 tecken, OCR mot samma fil 0,9974 av

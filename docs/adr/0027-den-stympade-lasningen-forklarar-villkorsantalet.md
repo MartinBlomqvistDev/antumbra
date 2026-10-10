@@ -88,3 +88,29 @@ osäkerheten hör i `series_ok`, inte i en tystad rad.
 
 **Att rätta de fyra raderna för hand.** Samma svar som i ADR-0026: registret
 byggs av ett steg, och en hand-lagd rad går inte att bygga om.
+
+## Tillägg 2026-10-10, efter en granskning av talen
+
+**Kontexttalen räknar in beslutet självt.** Posten skriver 51
+beslut med bruten serie, 36 av dem OCR-lästa, och talar på två ställen om "de 36
+andra". Talen är mätta efter bytet och räknar in `13df613f9802` självt. Före
+bytet var de 50 och 35, så jämförelsemängden är 50 andra beslut med bruten serie
+och 35 andra OCR-lästa. Att kasta raden som bryter serien hade träffat 79 rader i
+51 beslut, och där är talet rätt, eftersom regeln skulle gälla registret som det
+står nu.
+
+**En mening i skälen tar i för mycket.** Där står att felstavningen är synlig för
+den som läser texten och stympningen osynlig för alla. Det senare gäller den som
+läser registret. Den som läser beslutet ser att villkoren fortsätter, och steg
+24:s egen utskrift räknade dem aldrig som saknade, eftersom den inte kan veta hur
+många som finns. Påståendet är alltså sant om registret och inte om handlingen.
+
+**Var beslutet går in i talen, och var det inte gör det.** Huvudsiffran räknas på
+beslut ur textlagret, och efter bytet ligger `13df613f9802` utanför den helt. Den
+OCR-lästa delmängden tar in dess sexton villkor, och replikeringen av
+koncentrationen rör sig från 50 av 52 delade texter inom en prövningsgrupp till
+52 av 54. De två nya klustren delas av det här beslutet och `486f0758082c`, båda
+i prövningsgruppen Östergötlands län och Jönköpings län, alltså båda inom en
+grupp: andelen går från 96,2 till 96,3 procent. Kontroll 3 lämnar beslutet
+utanför sitt mått. Ingen publicerad huvudsiffra vilar alltså på det bytet, och
+den delmängd som gör det redovisar sin rörelse här.
