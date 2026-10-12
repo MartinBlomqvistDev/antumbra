@@ -237,6 +237,10 @@ INTERNAL = frozenset(
         # Internal: nothing has reached an authority yet.
         "förberedelse",
         "tillämpningsnot skriven",
+        # A choice the project makes about itself, written down on the day it
+        # is made: what the dataset is, which day the surfaces open. Internal,
+        # since no authority owes anything on it and no deadline runs from it.
+        "beslut",
     }
 )
 
