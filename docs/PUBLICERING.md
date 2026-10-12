@@ -275,9 +275,11 @@ AI-deklarationen, de förskrivna nollresultaten och avvikelserna från
 förregistreringen. Inga kakor, ingen spårning, ljust och mörkt läge, WCAG 2.1
 AA, allt utom livesöket utan JavaScript.
 
-**Datasetet.** Aggregaten som filer med schemadokumentation och licens, så att
-vem som helst kan räkna om. Mottagna myndighetsdokument sprids aldrig vidare;
-det publicerade är manifestet med kontrollsumma per fil.
+**Datasetet.** De svenska aggregaten som filer med schemadokumentation och
+licens, så att vem som helst kan räkna om. Kortet ligger i `docs/DATASET.md`:
+24 filer med radantal, kornighet per fil, metod, licens och de deklarerade
+luckorna. Mottagna myndighetsdokument sprids aldrig vidare; det publicerade är
+manifestet med kontrollsumma per fil.
 
 **Språket på varje yta.** Aldrig en karaktärisering, alltid ett ordagrant citat
 med källa. Inget påstående om lagbrott. Nollresultaten överst.
@@ -294,7 +296,14 @@ med källa. Inget påstående om lagbrott. Nollresultaten överst.
    länkmålen, en rad som inte var annat än en länk, och domstolarnas
    engångslänkar, medan myndighetens egen funktionsbrevlåda och växel står kvar.
    Reglerna står i `docs/KORRESPONDENS.md` och i ADR-0024.
-2. **Vad som är datasetet** i brevens mening: de svenska aggregaten, DG
-   SANTE-korpusen hos Hugging Face, eller båda.
-3. **Om publiceringen sker den 24 oktober eller senare.** Datumet är ett golv
-   och inget tak. Skjuts det upp loggas uppskjutandet, enligt not 3.
+2. **Vad som är datasetet. Avgjort 2026-10-12: de svenska aggregaten.**
+   Breven säger ett kodarkiv, en webbplats och *ett* dataset, i singular, och
+   det de berörda myndigheterna fick siffror om är den svenska mätningen. DG
+   SANTE-korpusen är kommissionens eget publicerade material; projektets bidrag
+   där är parsningen och modellen, och den ligger kvar som ett eget dataset med
+   eget kort i `docs/HF_DATASET.md`, publicerat på egna villkor och inte bundet
+   till snittet. Följden för den 26:e: de svenska aggregaten behöver ett eget
+   kort med schema per fil och licens, så att vem som helst kan räkna om talen.
+3. **Publiceringsdagen. Avgjord 2026-10-12: måndag den 26 oktober.** Den 24:e
+   är golvet enligt not 8, och måndagen var redan vald dag i avsnitt 0; nu är
+   den bekräftad och ingen uppskjutning ska loggas enligt not 3.
