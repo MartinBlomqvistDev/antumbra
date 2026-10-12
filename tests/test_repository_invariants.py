@@ -303,6 +303,14 @@ class TestNoPersonalDataIsCommitted:
         "noreply@dom.se",
         # Kammarrätten i Stockholm writes from its division's mailbox.
         "avd3.kst@dom.se",
+        # Västernorrland answers P12 from a mailbox that spells out the county,
+        # and the reply is published verbatim.
+        "lansstyrelsen.vasternorrland@lansstyrelsen.se",
+        # Two Polish border inspection posts, quoted inside a recommendation in
+        # a published Commission report: a city and an office abbreviation, not
+        # a person. They are here because the test below reads this file too.
+        "gdansk.griw@wetgiw.gov.pl",
+        "terespol.griw@wetgiw.gov.pl",
     }
 
     def test_no_third_party_email_addresses(self):
@@ -319,6 +327,34 @@ class TestNoPersonalDataIsCommitted:
                 if found.lower() not in allowed:
                     offenders.append(f"{path.name}: {found}")
         assert not offenders, f"third-party e-mail addresses committed: {offenders}"
+
+    # A natural person's work address has the shape forename.surname@domain.
+    # Every dotted address the repository is allowed to carry belongs to an
+    # authority or to Martin, and they are the ones listed in ALLOWED_EMAILS.
+    NAME_SHAPED = re.compile(r"^[a-z]{2,}[._][a-z]{3,}@", re.IGNORECASE)
+
+    def test_no_named_persons_address_stands_in_a_tracked_file(self):
+        """A named official's address may not leave the source document.
+
+        ADR-0018 keeps officials' names in the source, and the rule holds for
+        the European layer too. On 12 October 2026 the publication plan's own
+        sweep, run over every tracked file rather than the file types the test
+        above covers, found three in `data/dgsante_annex_classes.jsonl`: the
+        annexes are letters, and step 5 had stored the head of the letter as the
+        evidence for its class. The step screens addresses out of that excerpt
+        now, and this test is what keeps them out.
+        """
+        offenders = []
+        for path in tracked_files():
+            if path.suffix in {".png", ".jpg", ".ico", ".pbix", ".woff2"}:
+                continue
+            for found in self.EMAIL.findall(path.read_text("utf-8", errors="ignore")):
+                if not self.NAME_SHAPED.match(found):
+                    continue
+                if found.lower() in {a.lower() for a in self.ALLOWED_EMAILS}:
+                    continue
+                offenders.append(f"{path.name}: {found}")
+        assert not offenders, f"a named person's address is committed: {offenders}"
 
     # The Swedish collection's own files. The DG SANTE datasets are excluded on
     # purpose: they quote published Commission audit reports, which name

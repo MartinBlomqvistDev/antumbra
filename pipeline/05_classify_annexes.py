@@ -10,6 +10,23 @@ Every record carries how the class was derived and the quoted evidence for
 it, so a reader can check the call instead of trusting it. Files with no
 extractable text are classed as needing OCR rather than guessed at.
 
+**The quoted evidence carries no e-mail addresses.** The annexes are letters,
+and a letter's head holds the writer's address. Three of the 1 974 hold a named
+official's own work address. ADR-0018 keeps officials' names in the source
+document, and a file this project commits is not the source document, so the
+stored excerpt replaces every address with a marker. The evidence exists to show
+the phrase the class was read from, and that phrase never needs an address
+beside it. 29 of the 1 974 excerpts change.
+
+**Telephone numbers are left as they stand, and that was measured rather than
+assumed.** A screen wide enough to catch how 27 countries write their numbers
+changed 220 excerpts and ate what it was not aimed at, among them the mission
+reference `602/287 03-18` and dates written as two digit groups. The numbers in
+these letter heads are switchboards and fax lines printed on the authority's own
+letterhead, so the screen would have cost evidence without removing anyone's
+personal detail. The excerpt is otherwise verbatim, and both calls are measured
+in `docs/VERIFIERAT.md`.
+
 Writes data/dgsante_annex_classes.jsonl, one line per numbered annex.
 
 Usage:
@@ -31,6 +48,9 @@ OUT = ROOT / "data" / "dgsante_annex_classes.jsonl"
 OCR_DIR = ROOT / "ocr" / "dgsante"
 
 IMAGE_FORMATS = {".gif", ".jpg", ".jpeg", ".tif", ".tiff"}
+# The e-mail address a letter's head carries, replaced in the stored excerpt.
+# The shape is exact, so it takes addresses and nothing else.
+ADDRESS = re.compile(r"[\w.\-]+@[\w.-]+\.[a-z]{2,}", re.IGNORECASE)
 MIN_CHARS = 40
 
 # A document is classed on how it introduces itself, not on words that happen
@@ -327,7 +347,7 @@ def main() -> int:
                 "chars": len(text.strip()),
                 "class": name,
                 "method": method,
-                "evidence": evidence[:300],
+                "evidence": ADDRESS.sub("[e-postadress]", evidence)[:300],
             }
         )
         if i % 250 == 0:

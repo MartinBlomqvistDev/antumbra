@@ -1253,6 +1253,48 @@ för mätningen och inte döljas.
 
 ---
 
+## PII-svepet repeterat före publiceringen, 2026-10-12
+
+Publiceringsplanen avsnitt 5 punkt 2 föreskriver ett svep över hela ytlistan
+före snittet. Det kördes fjorton dagar i förväg som repetition, eftersom ett
+svep som görs första gången på publiceringsdagen är en risk och inte en
+kontroll. Sökningen gick över **samtliga 269 spårade filer**, inte bara de
+filtyper invarianten täckte: varje committad `data/*.jsonl`, allt i `docs/`,
+webbplatsens exporterade JSON, sidkopian, README och CITATION.
+
+**Fyndet: tre namngivna tjänstemäns arbetsadresser i
+`data/dgsante_annex_classes.jsonl`.** De numrerade bilagorna är brev, och steg 5
+lagrade brevhuvudet som evidens för sin klassning, alltså det stycke klassen
+lästes ur. I 29 av 1 974 rader stod en e-postadress i det stycket, och tre av
+dem är en namngiven persons egen: en handläggare vid det franska
+jordbruksministeriet och två vid det tyska Bundesamt für Verbraucherschutz und
+Lebensmittelsicherheit. Adresserna återges inte här, av samma skäl som de inte
+får stå i en datafil. Att kommissionen själv publicerat bilagan gör den inte
+till projektets handling:
+ADR-0018 säger att tjänstemäns namn stannar i källhandlingen.
+
+**Åtgärden och de förregistrerade villkoren, skrivna före körningen.** Steg 5
+ersätter varje e-postadress i den lagrade evidensen med `[e-postadress]`, och
+filen är byggd om av steget. Alla tre villkoren håller: inget annat fält än
+`evidence` ändrades i någon av de 1 974 raderna, de publicerade talen står kvar
+med 89 åtgärdsplaner, och ingen spårad fil bär längre en namnformad adress
+utanför den tillåtna mängden. En ny invariant fäller det i framtiden.
+
+**Telefonnumren står kvar, och det är mätt och inte antaget.** En skärm vid nog
+för hur 27 länder skriver sina nummer ändrade 220 av de 1 974 evidensstyckena
+och åt upp det den inte var riktad mot, bland annat uppdragsreferensen
+`602/287 03-18` och datum skrivna som två siffergrupper. Numren i brevhuvudena
+är växlar och faxnummer tryckta på myndighetens eget papper, så skärmen hade
+kostat evidens utan att ta bort någons personuppgift.
+
+**Vad svepet inte rör.** De övriga DG SANTE-filerna citerar myndigheters egna
+funktionsadresser ur publicerade kommissionsrapporter, och de står kvar: att
+maska en publicerad källa är en annan sorts ohederlighet, vilket invarianten
+sagt sedan den skrevs. Skillnaden mot det svenska lagret är att det svenska
+materialet är begärt av projektet och inte publicerat av någon annan.
+
+---
+
 ## Villkorslagret: baselinetestet mot standardtext
 
 Mätt 2026-08-17 med `pipeline/24_condition_baseline.py` över de 236 hämtade
