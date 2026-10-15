@@ -697,6 +697,26 @@ REPLY_WEEKS = 21
 CHOSEN_DAY = "2026-10-26"
 
 
+def runbook_dates(rows: list[dict]) -> list[date]:
+    """The days the publication plan fixes a mailbox pass to, in order.
+
+    `docs/PUBLICERING.md` section 5 puts a pass on the last day of the reply
+    period and another on the morning of the cut, because the weekend lies
+    between them and an answer that arrives on the deadline has to be in the
+    material before any surface opens. Those two days override the fourteen-day
+    interval, which knows about service of process and nothing about the plan.
+    """
+    sent = [
+        row
+        for row in rows
+        if row["handelse"] == "P12-paket avsänt" and row["myndighet"] != "samtliga"
+    ]
+    if not sent:
+        return []
+    dispatch = max(date.fromisoformat(row["datum"]) for row in sent)
+    return [dispatch + timedelta(days=REPLY_WEEKS), date.fromisoformat(CHOSEN_DAY)]
+
+
 def publication_lines(rows: list[dict], today: date) -> list[str]:
     """When the earliest surface may open, and what the packets are waiting for."""
     sent = [
@@ -783,11 +803,18 @@ def report(rows: list[dict], today: date) -> list[str]:
                 "oavsett om den lästs."
             )
         else:
-            nxt = (swept + timedelta(days=SWEEP_DAYS)).isoformat()
+            due = swept + timedelta(days=SWEEP_DAYS)
+            fixed = [day for day in runbook_dates(rows) if today <= day < due]
             lines.append(
                 f"BREVLÅDAN: senast genomgången {swept.isoformat()}, {since} dagar "
-                f"sedan. Nästa senast {nxt}."
+                f"sedan. Nästa senast {min([*fixed, due]).isoformat()}."
             )
+            if fixed:
+                lines.append(
+                    "  Datumet kommer ur publiceringsplanen avsnitt 5 och inte ur "
+                    f"intervallet på {SWEEP_DAYS} dagar: planen lägger en genomgång "
+                    "på svarstidens sista dag och en på snittets morgon."
+                )
         for row in sorted(cases, key=lambda r: r["malnummer"]):
             court = row.get("instans_dit_det_stalldes") or "?"
             lines.append(
