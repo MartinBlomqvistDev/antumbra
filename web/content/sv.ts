@@ -504,6 +504,11 @@ export const sv: Copy = {
         attachments: "Bilagor:",
         omitted: "Återges inte:",
         message: "Meddelande",
+        context:
+          "Hänvisar svaret till ett tal eller ett förlopp som inte står " +
+          "ovan? Varje händelse i ärendet, med datum och klockslag, står i " +
+          "händelseloggen, och måttens gränser i metoden.",
+        contextLink: "Metod och händelselogg",
       },
       packet: {
         heading: "Underlaget myndigheten fick",

@@ -201,6 +201,8 @@ export type Copy = {
         attachments: string;
         omitted: string;
         message: string;
+        context: string;
+        contextLink: string;
       };
       packet: { heading: string; note: string; sent: string };
     };

@@ -36,6 +36,8 @@ export type BoardLabels = {
     attachments: string;
     omitted: string;
     message: string;
+    context: string;
+    contextLink: string;
   };
   packet: { heading: string; note: string; sent: string };
 };
@@ -224,6 +226,14 @@ export function AuthorityBoard({
               </div>
             ))
           )}
+          {authority.svar.length > 0 ? (
+            <p className="text-xs text-ink-secondary">
+              {labels.reply.context}{" "}
+              <a className="underline" href="/metod/">
+                {labels.reply.contextLink}
+              </a>
+            </p>
+          ) : null}
         </div>
 
         {authority.paket ? (
