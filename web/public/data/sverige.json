@@ -1,12 +1,12 @@
 {
-  "byggd": "2026-10-07",
+  "byggd": "2026-10-22",
   "p12": {
     "avsant": "2026-10-02",
     "svar_senast": "2026-10-23",
     "publicering_tidigast": "2026-10-24",
     "publicering_vald": "2026-10-26",
     "myndigheter": 22,
-    "svarat_substantiellt": 1
+    "svarat_substantiellt": 2
   },
   "klasser": {
     "A": {
@@ -1384,8 +1384,23 @@
         "sha256": "1450af7eb2e1ff77b1580aa8732ad503ca393b711db76c8576d9682607684ac3",
         "avsant": "2026-10-02"
       },
-      "svar": [],
-      "svar_saknas": true
+      "svar": [
+        {
+          "myndighet": "Länsstyrelsen i Norrbotten",
+          "datum": "2026-10-20",
+          "klockslag": "15:21:40",
+          "typ": "substantiellt",
+          "meddelande": "1a15979ad6a2579b",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Sv: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej Martin!\nBifogat finner bilder på det svar med handlingar vi skickade till dig den 4 augusti 2026 kl 14:11 på din begäran om handlingar du skickade den 3 augusti 2026, och den 29 september 2026 kl. 9:20 med handlingar som svar på din begäran inskickad den 28 september 2026.\nAtt vi skulle ha en så lång handläggningstid för att lämna ut handlingarna i de två första tabellerna känns därför inte rättvisande när vi svarade den 4 augusti med filer enligt dina egna nedskärningar (endast de senaste besluten) samt en utlämning igen den 28.e september 2026 efter en ny begäran.\n\nMed vänliga hälsningar\n\nLänsstyrelsen i Norrbotten\n\nKontaktuppgifter Länsstyrelsen i Norrbottens län\nVäxel: 010-225 50 00",
+          "bilagor": "fyra jpg-bilder av myndighetens tidigare svar, 1.jpg till 4.jpg",
+          "utelamnat": "raderna som bara var länkar till myndighetens kontaktuppgifter; den citerade historiken under meddelandet; brevet de citerar står i sin helhet i data/p12_avsant/norrbotten.txt",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ],
+      "svar_saknas": false
     },
     {
       "myndighet": "Länsstyrelsen i Skåne",

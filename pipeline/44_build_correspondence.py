@@ -52,6 +52,12 @@ HISTORY = (
     # all. Anything after the header is a copy of a letter published elsewhere.
     re.compile(r"^Från: ", re.MULTILINE),
     re.compile(r"^On \w{3}, \w{3} \d{1,2}, \d{4}", re.MULTILINE),
+    # A P12 reply that pastes the packet back without any header of its own.
+    # Added 22 October 2026, when Norrbotten answered and Outlook put my whole
+    # letter under the reply as plain text. The anchor is the letter's own first
+    # line, written by step 40 and identical in all 22 packets, so it matches my
+    # text and nothing an authority wrote.
+    re.compile(r"^Till (Länsstyrelsen i |Jordbruksverket)", re.MULTILINE),
 )
 # The courts' Säker e-post notice carries a one-time link with a token that
 # opens the message as the addressee. It is a personal access link, not a

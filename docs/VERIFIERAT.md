@@ -425,15 +425,15 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är komplett mot förteckningen sedan den 9 oktober 2026.** Registret
-bär 260 av de 260 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
-196 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
+bär 261 av de 261 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
+197 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
 förekomster hos den. Talen står inte i prosan på förtroende: en invariant i
 `tests/` läser dem ur `data/korrespondens.jsonl` och
 `data/korrespondens_forteckning.jsonl` och faller om den här meningen inte
 stämmer med filerna.
 
-**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 107 av
-de 260 meddelandena har sitt råsvar sparat och sin sha256 i
+**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 108 av
+de 261 meddelandena har sitt råsvar sparat och sin sha256 i
 `data/korrespondens_manifest.jsonl`. De övriga skrevs för hand innan ADR-0024
 fattades och kan inte byggas om utan att hämtas igen. Manifestet säger därför
 vilka rader som har proveniens och vilka som inte har det.
@@ -1250,6 +1250,41 @@ och Västerbotten fjäderfä, där båda klasserna är helt omaskade. För gris 
 helt, vilket stämmer med att Dalarna uttryckligen svarat att någon
 kontrollrapport för gris inte påträffats, och det ska redovisas som en gräns
 för mätningen och inte döljas.
+
+---
+
+## Norrbottens invändning mot svarstidsläsningen, prövad 2026-10-22
+
+Länsstyrelsen i Norrbotten svarade på P12-paketet den 20 oktober 2026 klockan
+15:21 och invände mot hur svarstiden framställs. Ordagrant: att det *"känns
+därför inte rättvisande"* att handläggningstiden för de två första tabellerna
+redovisas som lång, *"när vi svarade den 4 augusti med filer enligt dina egna
+nedskärningar (endast de senaste besluten) samt en utlämning igen den 28.e
+september 2026 efter en ny begäran"*. Svaret publiceras oavkortat vid sidan av
+siffrorna, och projektet lägger ingen kommentar bredvid det. Prövningen står
+här.
+
+**Underlaget säger vilken leverans som var vilken.** Leveransmanifestet har en
+fil i klass B registrerad 2026-08-04 och tio filer i klass A registrerade
+2026-09-29. Protokollloggen har leveransen i klass B den 4 augusti 14:11 med
+noteringen att svarstiden blev en arbetsdag, och leveransen i klass A den 29
+september 09:27. Myndighetens egen beskrivning av vad de skickade, *"endast de
+senaste besluten"*, är klass B, eftersom begäran B avser beslut om föreläggande
+och begäran A avser kontrollrapporter.
+
+**Det paketet redan sade.** P12-brevets två tabeller redovisar begäran B som
+avslutad dag 1 och begäran A som avslutad dag 41, var för sig. Ingen av dem
+säger att myndigheten var tyst i fyrtio dagar i båda spåren.
+
+**Det myndigheten kallar en ny begäran** är P10:s sista påminnelse på den
+ursprungliga begäran, avsänd 2026-09-28 klockan 10:30:32, och P11:s nämnarfråga
+klockan 10:33:03. Påminnelsen begär ingenting nytt, och nämnarfrågan begär tal
+och inte handlingar.
+
+**Utfallet: ingen publicerad uppgift ändras.** Svarstiden i klass A står kvar
+som censurerad vid dag 40, klass B som en arbetsdag, och maskningstalen rörs
+inte alls. Om myndigheten lämnar en rättad uppgift med källa, vilket brevet ber
+om, görs rättelsen i underlaget och inte bara i texten.
 
 ---
 
