@@ -1253,6 +1253,35 @@ för mätningen och inte döljas.
 
 ---
 
+## Måttets enhet är den levererade filen, och två filer rymmer fler, mätt 2026-10-22
+
+Maskningsmåttet räknar dokument, och ett dokument är den fil myndigheten
+levererade. Frågan vad som händer när en myndighet lägger flera handlingar i en
+enda PDF stod inte utskriven någonstans, och den kom upp när Norrbottens
+invändning prövades.
+
+**Svepet, kört över samtliga 343 mätta filer.** En handling från en svensk
+myndighet numrerar sina sidor som `1 (n)`, så en fil som bär flera sådana
+förstasidor rymmer flera handlingar. Två filer gör det, och båda bär fem
+handlingar var: `norrbotten_B/Mapp1.pdf` på 39 sidor, och
+`kronoberg_X/Handlingar för utlämnande(4902-2026-5).pdf` på 29 sidor. Den andra
+ligger i en `_X`-mapp, utanför klassernas tal, så den rör ingen publicerad
+siffra. Medianfilen i materialet är 8 sidor och den tjockaste 41.
+
+**Följden, med riktningen utskriven.** Norrbottens klass B står på ett dokument
+där myndigheten lämnade ut fem beslut. Antalet underskattas alltså för det länet
+och den klassen. Andelen maskade påverkas inte, eftersom alla fem är omaskade
+och andelen är 0,0 procent vare sig enheten är filen eller handlingen. Hade
+bunten varit blandad hade andelen rört sig, och då hade det inte gått att
+redovisa som en ren underskattning av antalet.
+
+**Varför enheten inte ändras nu.** Att dela buntar i efterhand vore att mäta två
+län med ett annat instrument än de nitton andra, fyra dagar före publicering.
+Begränsningen redovisas i stället, här och på sidan Sverige under vad sidan inte
+visar, med de två filerna utpekade.
+
+---
+
 ## Norrbottens invändning mot svarstidsläsningen, prövad 2026-10-22
 
 Länsstyrelsen i Norrbotten svarade på P12-paketet den 20 oktober 2026 klockan

@@ -262,7 +262,6 @@ docs/VILLKORSSCHEMA.md data contract with rationale and checks
 docs/DGSANTE.md        the comparison corpus, structure and volume
 docs/WEBB.md           the website plan, in decision form
 docs/adr/              dated decisions on scope and method
-docs/POWERBI.md        build notes for the .pbix over the same model
 docs/DATASET.md        the Swedish aggregates as a dataset: files, grain, limits
 docs/HF_DATASET.md     the same for the European comparison corpus
 dbt/                   staging and marts on top of the star schema

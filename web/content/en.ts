@@ -211,6 +211,7 @@ export const en: Copy = {
         "Any claim that an authority has broken the law. The law is unsettled, the Supreme Administrative Court has not decided the question, and four cases are before the administrative courts of appeal.",
         "Three counties that declined the copies once a fee remained after the narrowing. They carry a response time and a fee figure but no documents in the redaction measure, and the loss is never counted as a release or as a refusal.",
         "Pigs as a comparison. Sixteen documents have pigs as their dominant animal, spread across ten counties, so no county has material on both sides.",
+        "What a document is when an authority bundles several into one file. The measure counts the delivered file, and two of the 343 files hold five documents each. One is Norrbotten's class B delivery, which therefore stands at one document where the county released five decisions; the redaction share is unaffected, since all five are unredacted. The other sits outside the class figures.",
         "The limits of the measure. They are in the method, together with the deviations from the pre-registration and the errors corrected during the work.",
       ],
     },
