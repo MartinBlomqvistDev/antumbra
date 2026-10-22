@@ -1253,6 +1253,50 @@ för mätningen och inte döljas.
 
 ---
 
+## Varför Norrbottens kontrollrapporter tog 41 dagar, läst ur trådarna 2026-10-22
+
+Norrbottens invändning fick en andra läsning, den här gången av båda
+mejltrådarna i sin helhet i stället för av protokollloggens noteringar. Orsaken
+till de 39 arbetsdagarnas tystnad i klass A står i trådarna, och en del av den
+ligger på projektets sida.
+
+**Myndigheten svarade på båda begärandena i ett enda meddelande.** Den 3 augusti
+08:46 svarade djurskyddsenheten i tråden för begäran om beslut, och svaret
+gäller uttryckligen båda: *"Vi kan inte sortera ut förelägganden eller
+kontrollrapporter för ett visst typ av djurslag i vårt system."* Två alternativ
+erbjöds, och det andra var en avgift.
+
+**Projektet svarade i två trådar, till två brevlådor, samma minut.**
+Avsmalningen för besluten gick 12:36:41 till `djurskydd.norrbotten`, alltså till
+den handläggare som skrev, och avsmalningen för kontrollrapporterna gick
+12:36:44 till myndighetens registratorsbrevlåda. Det följer protokollets egna
+val: beslutslogg rad 11 adresserar officiella brevlådor och rad 13 kräver
+separata brev utan korshänvisningar, så att de två begärandena möter identiska
+betingelser.
+
+**Vad som hände sedan.** Handläggaren svarade 13:19 i beslutstråden, *"Jag fixar
+detta"*, och levererade besluten 14:11 samma dag. I kontrollrapportstråden finns
+inget meddelande från myndigheten alls mellan den 3 augusti och leveransen den
+29 september 09:27, som kom från arkivfunktionen dagen efter P10:s sista
+påminnelse.
+
+**Vad det betyder för måttet.** T2 mäter arbetsdagar till fullgjort utlämnande
+per begäran, och för klass A är det 41 dagar. Talet står kvar, eftersom det är
+utbytet som det faktiskt löpte. Men orsaken är inte enbart myndighetens: den
+avsmalning som behövdes för att kontrollrapporterna kunde tas fram gick till en
+brevlåda som inte deltog i samtalet, medan den handläggare som hade ärendet
+framför sig fick den andra. Designen som håller begärandena oberoende av
+varandra kostar alltså svarstid när en myndighet väljer att besvara båda i en
+tråd, och Norrbotten är fallet där det går att mäta.
+
+**Vad som inte publiceras.** Ingen svarstid per län står på webbplatsen. Talen
+som publiceras per myndighet är maskningsmåtten, platsen i ordningen och
+myndighetens eget svar ordagrant. Svarstiderna finns i protokollloggen, som
+publiceras i sin helhet, med varje händelse och varje klockslag, inklusive
+projektets egna två avsmalningssvar och vilken brevlåda var och en gick till.
+
+---
+
 ## Måttets enhet är den levererade filen, och två filer rymmer fler, mätt 2026-10-22
 
 Maskningsmåttet räknar dokument, och ett dokument är den fil myndigheten
