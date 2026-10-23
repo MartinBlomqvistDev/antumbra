@@ -10,14 +10,16 @@
     "directory": "./out"
   },
   "workers_dev": true,
-  "preview_urls": true
-  // The custom domain is antumbraprojektet.se, registered 23 October 2026. A
-  // custom domain for a Worker requires the zone to sit in Cloudflare, so
-  // these two routes are enabled once the nameservers have moved there, and
-  // not before: a deploy with routes on a zone Cloudflare does not hold
-  // fails. Until then the Worker answers on its workers.dev name.
-  // "routes": [
-  //   { "pattern": "antumbraprojektet.se", "custom_domain": true },
-  //   { "pattern": "www.antumbraprojektet.se", "custom_domain": true }
-  // ]
+  "preview_urls": true,
+  // The custom domain is antumbraprojektet.se, registered 23 October 2026 and
+  // moved to Cloudflare's nameservers the same day. A custom domain for a
+  // Worker requires the zone to sit in Cloudflare, and the deploy creates the
+  // DNS record for each pattern itself. One.com's own A records for the apex
+  // and www were deleted from the zone first: they pointed at their web
+  // hosting, which this project does not use, and a record already on the
+  // name makes the custom domain fail to attach.
+  "routes": [
+    { "pattern": "antumbraprojektet.se", "custom_domain": true },
+    { "pattern": "www.antumbraprojektet.se", "custom_domain": true }
+  ]
 }
