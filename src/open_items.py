@@ -804,7 +804,7 @@ def report(rows: list[dict], today: date) -> list[str]:
             )
         else:
             due = swept + timedelta(days=SWEEP_DAYS)
-            fixed = [day for day in runbook_dates(rows) if today <= day < due]
+            fixed = [day for day in runbook_dates(rows) if swept < day < due]
             lines.append(
                 f"BREVLÅDAN: senast genomgången {swept.isoformat()}, {since} dagar "
                 f"sedan. Nästa senast {min([*fixed, due]).isoformat()}."
