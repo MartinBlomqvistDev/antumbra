@@ -1,11 +1,12 @@
 # Antumbra: begäranmallar och handläggningsprotokoll
 
 Projektnamn beslutat 2026-08-02. **Antumbra**, domän `antumbra.org`, registreras
-när det finns något att visa. **Domänen blev i stället `antumbra.se`, avgjort
-2026-10-23:** `antumbra.org` registrerades av någon annan den 23 augusti 2026,
-tre veckor efter att den kontrollerats ledig, och `.com`, `.io` och `.si` var
-redan tagna. `.se` säger dessutom vad materialet är, eftersom mottagarna är
-svenska myndigheter. Produkten heter fortfarande öppenhetsindexet.
+när det finns något att visa. **Domänen blev i stället `antumbraprojektet.se`,
+registrerad 2026-10-23:** `antumbra.org` togs av någon annan den 23 augusti
+2026, tre veckor efter att den kontrollerats ledig, och `antumbra.se`,
+`antumbra.com`, `antumbra.io` och `antumbra.si` var alla upptagna.
+Toppdomänen är `.se` därför att mottagarna är svenska myndigheter och sajten
+är svenskprimär. Produkten heter fortfarande öppenhetsindexet.
 Undertitel utåt: *att göra tillsynen mätbar*. Formuleringen "tillsyn över
 tillsynen" är projektets analytiska kärna och stannar i interna anteckningar;
 den gör dig till motpart innan någon läst en rad.

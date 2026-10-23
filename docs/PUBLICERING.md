@@ -223,9 +223,13 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
    `git log --format='%an <%ae>' | sort -u` ska ge en enda rad.
 4. De tre grindarna körda var för sig med varje avslutskod läst, aldrig i samma
    kedja som en commit. Webbygget körs separat.
-5. `antumbra.se` registreras. Domänen är en förberedelse och ingen yta.
-   `antumbra.org` stod i planen till den 23 oktober 2026, då den visade sig
-   registrerad av någon annan sedan den 23 augusti.
+5. **`antumbraprojektet.se` är registrerad 2026-10-23** hos One.com, med
+   namnservrarna ns01 och ns02 hos One.com och utgång 2027-10-23. Domänen är
+   en förberedelse och ingen yta. `antumbra.org` stod i planen till samma dag,
+   då den visade sig tagen sedan den 23 augusti, och `antumbra.se` är tagen
+   sedan 2025-10-22. Kvar att göra före snittet: flytta zonen till Cloudflare,
+   eftersom en Worker med egen domän kräver att zonen ligger där, och lägg in
+   de två routerna i `web/wrangler.jsonc`.
 
 **Snittet, måndag den 26 oktober**
 

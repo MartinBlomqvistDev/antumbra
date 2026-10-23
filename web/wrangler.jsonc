@@ -11,10 +11,13 @@
   },
   "workers_dev": true,
   "preview_urls": true
-  // Custom domain routes are added when antumbra.org is registered at
-  // launch:
+  // The custom domain is antumbraprojektet.se, registered 23 October 2026. A
+  // custom domain for a Worker requires the zone to sit in Cloudflare, so
+  // these two routes are enabled once the nameservers have moved there, and
+  // not before: a deploy with routes on a zone Cloudflare does not hold
+  // fails. Until then the Worker answers on its workers.dev name.
   // "routes": [
-  //   { "pattern": "antumbra.org", "custom_domain": true },
-  //   { "pattern": "www.antumbra.org", "custom_domain": true }
+  //   { "pattern": "antumbraprojektet.se", "custom_domain": true },
+  //   { "pattern": "www.antumbraprojektet.se", "custom_domain": true }
   // ]
 }
