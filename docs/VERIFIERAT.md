@@ -425,15 +425,15 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är komplett mot förteckningen sedan den 9 oktober 2026.** Registret
-bär 261 av de 261 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
-197 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
+bär 262 av de 262 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
+198 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
 förekomster hos den. Talen står inte i prosan på förtroende: en invariant i
 `tests/` läser dem ur `data/korrespondens.jsonl` och
 `data/korrespondens_forteckning.jsonl` och faller om den här meningen inte
 stämmer med filerna.
 
-**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 108 av
-de 261 meddelandena har sitt råsvar sparat och sin sha256 i
+**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 109 av
+de 262 meddelandena har sitt råsvar sparat och sin sha256 i
 `data/korrespondens_manifest.jsonl`. De övriga skrevs för hand innan ADR-0024
 fattades och kan inte byggas om utan att hämtas igen. Manifestet säger därför
 vilka rader som har proveniens och vilka som inte har det.
@@ -1282,12 +1282,29 @@ påminnelse.
 
 **Vad det betyder för måttet.** T2 mäter arbetsdagar till fullgjort utlämnande
 per begäran, och för klass A är det 41 dagar. Talet står kvar, eftersom det är
-utbytet som det faktiskt löpte. Men orsaken är inte enbart myndighetens: den
-avsmalning som behövdes för att kontrollrapporterna kunde tas fram gick till en
-brevlåda som inte deltog i samtalet, medan den handläggare som hade ärendet
-framför sig fick den andra. Designen som håller begärandena oberoende av
-varandra kostar alltså svarstid när en myndighet väljer att besvara båda i en
-tråd, och Norrbotten är fallet där det går att mäta.
+utbytet som det faktiskt löpte.
+
+**Rättelse samma dag 13:55, och den kommer från myndigheten själv.** Ett svar
+till myndigheten den 22 oktober 13:13 beskrev orsaken som att avsmalningen för
+kontrollrapporterna gick till en brevlåda som inte deltog i samtalet.
+Myndigheten rättade det 42 minuter senare, ordagrant: *"Då är det en
+missuppfattning. Det var handläggare som mottog samtliga mail. Mail till
+myndigheten avseende utlämningar skickas alltid till handläggare, det kommer
+till en e-postbrevlåda som bemannas av handläggare. Du har prata med en och
+samma person i samtliga mail i det första utlämnandet och i det senare
+utlämnandet en annan handläggare."* Påståendet om brevlådan var alltså en
+slutsats om myndighetens interna rutin, och projektet kan inte se den rutinen.
+Det stryks.
+
+**Vad som står kvar efter rättelsen.** Att myndigheten besvarade båda
+begärandena i ett meddelande den 3 augusti. Att projektets två avsmalningssvar
+gick till två adresser samma minut, vilket protokollets rad 11 och 13 föreskriver.
+Att besluten levererades 14:11 samma dag och kontrollrapporterna den 29
+september 09:27, av en annan handläggare. Att det i kontrollrapportstråden inte
+finns något meddelande från myndigheten mellan den 3 augusti och leveransen.
+Varför det blev så ligger inne i myndigheten, och myndighetens egen beskrivning
+är den som publiceras: handlingarna nådde handläggare, och så länge myndigheten
+svarar och skickar handlingar kommer inga fler meddelanden.
 
 **Vad som inte publiceras.** Ingen svarstid per län står på webbplatsen. Talen
 som publiceras per myndighet är maskningsmåtten, platsen i ordningen och
