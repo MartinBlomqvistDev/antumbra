@@ -2,19 +2,32 @@ import Link from "next/link";
 import { ChainExample } from "@/components/chain-example";
 import { sv } from "@/content/sv";
 import { readHeadline } from "@/lib/data";
-import { swedenStats } from "@/lib/stats";
+import { readSweden } from "@/lib/sverige";
 
 export default function Home() {
   const headline = readHeadline();
-  const stats = swedenStats();
+  const sverige = readSweden();
   const count = new Intl.NumberFormat("sv-SE");
   const percent = new Intl.NumberFormat("sv-SE", {
     style: "percent",
     maximumFractionDigits: 1,
   });
+  // The finding first: the same kind of information, under the same
+  // provision, released in one class and redacted in the other. The figures
+  // are read from the export, never typed in here.
+  const classLabel = (template: string, klass: "A" | "B") =>
+    template
+      .replace("{dokument}", count.format(sverige.klasser[klass].dokument))
+      .replace("{lan}", count.format(sverige.klasser[klass].myndigheter));
   const sweden = [
-    { value: count.format(stats.sent), label: sv.home.swedenLabels!.sent },
-    { value: count.format(stats.files), label: sv.home.swedenLabels!.files },
+    {
+      value: percent.format(sverige.klasser.A.andel),
+      label: classLabel(sv.home.swedenLabels!.classA, "A"),
+    },
+    {
+      value: percent.format(sverige.klasser.B.andel),
+      label: classLabel(sv.home.swedenLabels!.classB, "B"),
+    },
     {
       value: sv.home.swedenLabels!.paidValue,
       label: sv.home.swedenLabels!.paid,

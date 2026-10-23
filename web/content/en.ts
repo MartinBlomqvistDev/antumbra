@@ -30,18 +30,22 @@ export const en: Copy = {
     title: "Antumbra",
     kicker: "A measurement of Swedish animal welfare supervision",
     lead:
-      "Three identically worded freedom-of-information requests to all " +
-      "21 county administrative boards, handled under a pre-written " +
-      "protocol: the differences in the answers are the measurement. " +
-      "The baseline is the EU's audits of member state controls, where " +
-      "every figure can be clicked down to the exact sentence in the " +
-      "source document.",
-    swedenHeading: "Sweden, collection in progress",
+      "Two identically worded freedom-of-information requests to all 21 " +
+      "county administrative boards and a third to the Swedish Board of " +
+      "Agriculture, handled under a pre-written protocol: the differences " +
+      "in the answers are the measurement. The baseline is the EU's audits " +
+      "of member state controls, where every figure can be clicked down to " +
+      "the exact sentence in the source document.",
+    swedenHeading: "Sweden, collection closed",
     euHeading: "The EU comparison, 1998–2026",
     swedenLabels: {
-      sent: "requests sent on 3 August 2026",
-      files: "files received, verified with sha256",
-      paid: "fees paid",
+      classA:
+        "of the inspection reports carry at least one redaction, " +
+        "{dokument} documents from {lan} counties",
+      classB:
+        "of the enforcement decisions carry at least one redaction, " +
+        "{dokument} documents from {lan} counties",
+      paid: "fees paid in the whole collection",
       paidValue: "0 kr",
     },
     numberLabels: {
@@ -54,7 +58,10 @@ export const en: Copy = {
       intro:
         "The same path sits behind every figure on this site: from the " +
         "aggregate, through the rows, to the verbatim paragraph and the " +
-        "document's checksum.",
+        "document's checksum. The Swedish half ends at the checksum. Those " +
+        "documents carry personal data and are never published, so what " +
+        "stands open is the manifest with a sha256 per file and the " +
+        "authorities' own replies verbatim.",
       steps: {
         figure: "The figure",
         rows: "The rows behind it",

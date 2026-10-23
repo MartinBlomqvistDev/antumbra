@@ -26,8 +26,8 @@ export type Copy = {
     swedenHeading?: string;
     euHeading?: string;
     swedenLabels?: {
-      sent: string;
-      files: string;
+      classA: string;
+      classB: string;
       paid: string;
       paidValue: string;
     };

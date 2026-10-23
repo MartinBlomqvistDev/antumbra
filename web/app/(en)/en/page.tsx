@@ -2,19 +2,30 @@ import Link from "next/link";
 import { ChainExample } from "@/components/chain-example";
 import { en } from "@/content/en";
 import { readHeadline } from "@/lib/data";
-import { swedenStats } from "@/lib/stats";
+import { readSweden } from "@/lib/sverige";
 
 export default function Home() {
   const headline = readHeadline();
-  const stats = swedenStats();
+  const sverige = readSweden();
   const count = new Intl.NumberFormat("en-GB");
   const percent = new Intl.NumberFormat("en-GB", {
     style: "percent",
     maximumFractionDigits: 1,
   });
+  // Same order as the Swedish page: the finding first, read from the export.
+  const classLabel = (template: string, klass: "A" | "B") =>
+    template
+      .replace("{dokument}", count.format(sverige.klasser[klass].dokument))
+      .replace("{lan}", count.format(sverige.klasser[klass].myndigheter));
   const sweden = [
-    { value: count.format(stats.sent), label: en.home.swedenLabels!.sent },
-    { value: count.format(stats.files), label: en.home.swedenLabels!.files },
+    {
+      value: percent.format(sverige.klasser.A.andel),
+      label: classLabel(en.home.swedenLabels!.classA, "A"),
+    },
+    {
+      value: percent.format(sverige.klasser.B.andel),
+      label: classLabel(en.home.swedenLabels!.classB, "B"),
+    },
     {
       value: en.home.swedenLabels!.paidValue,
       label: en.home.swedenLabels!.paid,

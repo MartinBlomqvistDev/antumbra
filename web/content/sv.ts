@@ -95,17 +95,22 @@ export const sv: Copy = {
     title: "Antumbra",
     kicker: "En mätning av den svenska djurskyddstillsynen",
     lead:
-      "Tre likalydande begäranden om allmänna handlingar till samtliga " +
-      "21 länsstyrelser, förda efter ett förskrivet protokoll: " +
-      "skillnaderna i svar är måttet. Som jämförelsegrund står EU:s " +
-      "revisioner av medlemsstaternas kontroll, där varje tal kan " +
-      "klickas ned till den exakta meningen i källdokumentet.",
-    swedenHeading: "Sverige, pågående insamling",
+      "Två likalydande begäranden om allmänna handlingar till samtliga " +
+      "21 länsstyrelser och en tredje till Jordbruksverket, förda efter " +
+      "ett förskrivet protokoll: skillnaderna i svar är måttet. Som " +
+      "jämförelsegrund står EU:s revisioner av medlemsstaternas kontroll, " +
+      "där varje tal kan klickas ned till den exakta meningen i " +
+      "källdokumentet.",
+    swedenHeading: "Sverige, insamlingen stängd",
     euHeading: "EU-jämförelsen, 1998–2026",
     swedenLabels: {
-      sent: "begäranden avsända 3 augusti 2026",
-      files: "filer mottagna, verifierade med sha256",
-      paid: "betald avgift",
+      classA:
+        "av kontrollrapporterna bär minst en maskning, " +
+        "{dokument} dokument från {lan} län",
+      classB:
+        "av besluten bär minst en maskning, " +
+        "{dokument} dokument från {lan} län",
+      paid: "betald avgift i hela insamlingen",
       paidValue: "0 kr",
     },
     numberLabels: {
@@ -118,7 +123,10 @@ export const sv: Copy = {
       intro:
         "Samma väg finns bakom varje tal på sajten: från aggregatet, via " +
         "raderna, till det ordagranna stycket och dokumentets " +
-        "kontrollsumma.",
+        "kontrollsumma. Den svenska halvan slutar i kontrollsumman. De " +
+        "handlingarna bär personuppgifter och publiceras aldrig, så det " +
+        "som står öppet är manifestet med sha256 per fil och " +
+        "myndigheternas egna svar ordagrant.",
       steps: {
         figure: "Siffran",
         rows: "Raderna bakom den",
