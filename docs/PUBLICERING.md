@@ -223,7 +223,9 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
    `git log --format='%an <%ae>' | sort -u` ska ge en enda rad.
 4. De tre grindarna körda var för sig med varje avslutskod läst, aldrig i samma
    kedja som en commit. Webbygget körs separat.
-5. `antumbra.org` registreras. Domänen är en förberedelse och ingen yta.
+5. `antumbra.se` registreras. Domänen är en förberedelse och ingen yta.
+   `antumbra.org` stod i planen till den 23 oktober 2026, då den visade sig
+   registrerad av någon annan sedan den 23 augusti.
 
 **Snittet, måndag den 26 oktober**
 

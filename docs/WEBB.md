@@ -135,7 +135,7 @@ Ordningen på publiceringsdagen står i `docs/PUBLICERING.md`.
 9. **AP9 README på engelska, CITATION.cff, licenser, GitHub-metadata.**
 10. **AP10 HF-dataset med kort.**
 11. **Lanseringschecklista, tidigast dag 40:** PII-svep över hela ytlistan,
-    författarskapsrevision på hela historiken, antumbra.org registreras,
+    författarskapsrevision på hela historiken, antumbra.se registreras,
     Cloudflare- och Cloud Run-deploy, LinkedIn-post.
 12. **Fas 2:** länsdimensionen på /jamforelse och /handlingar, den svenska
     berättelsen, outreach till journalister och Statskontoret i god tid
@@ -148,7 +148,8 @@ ungefär vid dag 40 om AP1 startar nu.
 
 1. **Fas 0, nu:** byggs lokalt i privata repot; ingenting publiceras.
 2. **Fas 1, tidigast dag 40:** EU-lagret i full bredd enligt byggplanen;
-   antumbra.org registreras först här.
+   antumbra.se registreras först här. Domänen var `antumbra.org` till den 23
+   oktober 2026; se noten i `BEGARANMALL.md`.
 3. **Fas 2, när den svenska analysen är klar:** länsdimensionen, den
    svenska berättelsen, outreach.
 
