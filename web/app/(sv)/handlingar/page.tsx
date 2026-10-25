@@ -24,7 +24,7 @@ export default function Handlingar() {
     <div className="space-y-12">
       <PageIntro title={copy.title} lead={copy.lead} />
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.tavla.heading}
         </h2>
         <p className="max-w-2xl text-sm text-ink-secondary">
@@ -42,7 +42,7 @@ export default function Handlingar() {
         </div>
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.deliveries.heading}
         </h2>
         <p className="max-w-2xl text-sm text-ink-secondary">
@@ -54,7 +54,7 @@ export default function Handlingar() {
             .map(([folder, rows]) => (
               <details
                 key={folder}
-                className="rounded-lg border border-border-soft bg-surface-raised"
+                className="-lg border border-border-soft"
               >
                 <summary className="cursor-pointer p-3 text-sm font-semibold">
                   {folder}
@@ -65,7 +65,7 @@ export default function Handlingar() {
                 <div className="overflow-x-auto border-t border-border-soft p-3">
                   <table className="w-full min-w-[40rem] border-collapse text-xs">
                     <thead>
-                      <tr className="border-b border-border-soft text-left uppercase tracking-wide text-ink-secondary">
+                      <tr className="border-b border-border-soft text-left fieldname">
                         <th scope="col" className="py-1.5 pr-4">
                           {copy.deliveries.headers.file}
                         </th>

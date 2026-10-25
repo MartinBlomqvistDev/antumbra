@@ -87,23 +87,23 @@ export default function Sweden() {
     <div className="space-y-12">
       <PageIntro title={copy.title} lead={copy.lead} />
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.design.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.design.body}</p>
         <p className="text-sm text-ink-secondary">{copy.processNote}</p>
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.overview.heading}
         </h2>
         <dl className="grid gap-6 sm:grid-cols-3">
           {overview.map((item) => (
             <div
               key={item.label}
-              className="border-t-2 border-accent bg-surface-raised p-5"
+              className="border-t-2 border-ink p-5"
             >
-              <dd className="font-display text-3xl font-semibold tabular-nums">
+              <dd className="text-3xl font-semibold tabular-nums">
                 {item.value}
               </dd>
               <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
@@ -113,14 +113,14 @@ export default function Sweden() {
         <p className="text-sm text-ink-secondary">
           <Link
             href="/handlingar/"
-            className="text-accent underline underline-offset-2"
+            className="text-ink underline underline-offset-2"
           >
             {copy.toHandlingar}
           </Link>
         </p>
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.resultat.heading}
         </h2>
         <p className="max-w-2xl text-sm text-ink-secondary">
@@ -129,7 +129,7 @@ export default function Sweden() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
-              <tr className="border-b border-border-soft text-left uppercase tracking-wide text-ink-secondary">
+              <tr className="border-b border-border-soft text-left fieldname">
                 <th scope="col" className="py-1.5 pr-4">
                   {copy.resultat.classLabel}
                 </th>
@@ -169,7 +169,7 @@ export default function Sweden() {
         <p className="max-w-2xl text-sm text-ink-secondary">{exception}</p>
       </section>
       <section className="space-y-6">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.lanJamforelse.heading}
         </h2>
         <p className="max-w-2xl text-sm text-ink-secondary">
@@ -177,7 +177,7 @@ export default function Sweden() {
         </p>
         {CLASSES.map((klass) => (
           <div key={klass} className="space-y-2">
-            <h3 className="font-display text-xl font-semibold tracking-tight">
+            <h3 className="text-xl font-semibold tracking-tight">
               {copy.lanJamforelse.classHeading[klass]}
             </h3>
             <ComparisonTable
@@ -191,7 +191,7 @@ export default function Sweden() {
         ))}
       </section>
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.par.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.par.note}</p>
@@ -199,7 +199,7 @@ export default function Sweden() {
         <p className="text-sm text-ink-secondary">{pairLimit}</p>
       </section>
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.bilagor.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.bilagor.note}</p>
@@ -212,7 +212,7 @@ export default function Sweden() {
         </p>
       </section>
       <section className="max-w-2xl space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.wordings.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.wordings.note}</p>
@@ -220,7 +220,7 @@ export default function Sweden() {
           {copy.wordings.items.map((item) => (
             <details
               key={item.label}
-              className="rounded-lg border border-border-soft bg-surface-raised"
+              className="-lg border border-border-soft"
             >
               <summary className="cursor-pointer p-3 text-sm font-semibold">
                 {item.label}
@@ -236,7 +236,7 @@ export default function Sweden() {
         </div>
       </section>
       <section className="max-w-2xl space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.feeStopped.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.feeStopped.note}</p>
@@ -249,7 +249,7 @@ export default function Sweden() {
         </ul>
       </section>
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.notShown.heading}
         </h2>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink-secondary">

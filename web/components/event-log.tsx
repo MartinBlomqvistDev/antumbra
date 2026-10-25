@@ -28,7 +28,7 @@ export function EventLog({
         <select
           value={authority}
           onChange={(event) => setAuthority(event.target.value)}
-          className="rounded-md border border-border-soft bg-surface px-2 py-1 text-sm"
+          className="-md border border-border-soft bg-surface px-2 py-1 text-sm"
         >
           <option value="">{labels.all}</option>
           {authorities.map((name) => (
@@ -41,7 +41,7 @@ export function EventLog({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[56rem] border-collapse text-sm">
           <thead>
-            <tr className="border-b-2 border-ink text-left text-xs uppercase tracking-wide text-ink-secondary">
+            <tr className="border-b-2 border-ink text-left fieldname">
               <th scope="col" className="py-2 pr-3">
                 {labels.headers.date}
               </th>

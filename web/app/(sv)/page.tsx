@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ChainExample } from "@/components/chain-example";
+import { FigureTable } from "@/components/shell";
 import { sv } from "@/content/sv";
 import { readHeadline } from "@/lib/data";
 import { readSweden } from "@/lib/sverige";
@@ -45,56 +45,24 @@ export default function Home() {
     },
   ];
   return (
-    <div className="space-y-12 py-6">
-      <div className="max-w-3xl space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-          {sv.home.kicker}
-        </p>
-        <h1 className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
+    <div className="space-y-14">
+      <div className="max-w-[34rem] space-y-5">
+        <p className="fieldname">{sv.home.kicker}</p>
+        <h1 className="text-[2.6rem] font-semibold leading-[1.1] tracking-tight sm:text-5xl">
           {sv.site.tagline}
         </h1>
-        <p className="max-w-2xl text-lg text-ink-secondary">{sv.home.lead}</p>
+        <p className="text-lg text-ink-secondary">{sv.home.lead}</p>
       </div>
-      <section className="space-y-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-secondary">
-          <Link href="/sverige/" className="hover:text-ink">
-            {sv.home.swedenHeading}
-          </Link>
-        </h2>
-        <dl className="grid gap-6 sm:grid-cols-3">
-          {sweden.map((item) => (
-            <div
-              key={item.label}
-              className="border-t-2 border-accent bg-surface-raised p-5"
-            >
-              <dd className="font-display text-4xl font-semibold tabular-nums">
-                {item.value}
-              </dd>
-              <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
-            </div>
-          ))}
-        </dl>
-      </section>
-      <section className="space-y-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-secondary">
-          <Link href="/jamforelse/" className="hover:text-ink">
-            {sv.home.euHeading}
-          </Link>
-        </h2>
-        <dl className="grid gap-6 sm:grid-cols-3">
-          {eu.map((item) => (
-            <div
-              key={item.label}
-              className="border-t-2 border-accent-warm bg-surface-raised p-5"
-            >
-              <dd className="font-display text-4xl font-semibold tabular-nums">
-                {item.value}
-              </dd>
-              <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FigureTable
+        caption={sv.home.swedenHeading!}
+        rows={sweden}
+        href="/sverige/"
+      />
+      <FigureTable
+        caption={sv.home.euHeading!}
+        rows={eu}
+        href="/jamforelse/"
+      />
       <ChainExample copy={sv} locale="sv-SE" hrefBase="/jamforelse/" />
     </div>
   );

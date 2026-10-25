@@ -38,12 +38,12 @@ export default async function Country({
         <p className="text-sm">
           <Link
             href="/en/jamforelse/"
-            className="text-accent underline underline-offset-2"
+            className="text-ink underline underline-offset-2"
           >
             {en.chain.backToTable}
           </Link>
         </p>
-        <h1 className="font-display text-4xl font-semibold tracking-tight">
+        <h1 className="text-4xl font-semibold tracking-tight">
           {underlag.country}
         </h1>
         <p className="text-ink-secondary">

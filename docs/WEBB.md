@@ -71,6 +71,41 @@ läge; allt utom livesöket fungerar utan JavaScript; utskriftsstilmall,
 eftersom läsekretsen skriver ut; sökfrågor loggas inte, och det sägs på
 sidan.
 
+## Formen om, 2026-10-25: handlingen i stället för instrumentpanelen
+
+Den första formen var teknikens standardutseende: IBM Plex Sans, mörk
+produktyta, tre kort i rad med ett blått streck över och en stor siffra i
+varje. Den säger SaaS, och materialet är myndighetshandlingar. Formen är
+därför gjord om, och besluten står här.
+
+**Papper, inte produktmörkt.** Ljus varm yta som grund, svart bläck,
+hårfina linjer. Mörkt läge är samma sida inverterad och inte ett eget
+språk.
+
+**En röst för allt en människa skrivit.** Source Serif 4 i brödtext,
+rubriker och tal. Ingen andra brödtextfamilj; skillnaden mellan rubrik och
+text bärs av storlek och vikt. IBM Plex Mono används enbart för det ingen
+människa formulerat: filnamn, kontrollsummor, meddelande-id, klockslag,
+fältnamn. Den som ser monospace på sidan ser maskindata.
+
+**Inga kort.** Tal står i tabeller med hårlinjer, som i en statistisk
+bilaga: värdet till vänster, underlaget till höger. Ett kort med färgad
+överkant är en produktkomponent och säger ingenting om innehållet.
+
+**Ingen accentfärg i kromet.** Länkar är understrukna i bläck. De två
+validerade färgerna #2A78D6 och #EB6834 lever kvar, men bara i diagrammens
+märken, där validering mot färgblindhet gjordes. Chromet har noll färg, och
+betoning kommer ur storlek, linjer och vitrum.
+
+**Ett ornament, och det är projektets eget.** Den svarta rektangeln är vad
+mätningen räknar. Den används en enda gång, som märke före ordbilden i
+sidhuvudet, och ingen annanstans. CSS-klassen `.redaction` finns för text
+som ska täckas med behållen markerbarhet, på samma sätt som i de handlingar
+som mäts.
+
+Allt i avsnittet Form ovan gäller fortfarande: inga kakor, ingen spårning,
+tabellalternativ, "Vad sidan inte visar", WCAG 2.1 AA, utskriftsstilmall.
+
 ## Teknik
 
 Next.js statiskt på Cloudflare för allt utom söket, enligt samma mönster som

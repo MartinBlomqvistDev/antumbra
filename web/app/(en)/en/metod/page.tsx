@@ -18,7 +18,7 @@ export default function Method() {
     <div className="space-y-12">
       <PageIntro title={en.metod.title} lead={en.metod.lead} />
       <section className="max-w-2xl space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {en.metod.avvikelser.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{en.metod.avvikelser.note}</p>
@@ -32,13 +32,13 @@ export default function Method() {
         </dl>
       </section>
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {en.metod.ai.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{en.metod.ai.body}</p>
       </section>
       <section className="max-w-2xl space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {en.metod.adr.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{en.metod.adr.note}</p>
@@ -49,7 +49,7 @@ export default function Method() {
         </ol>
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {en.metod.log.heading}
         </h2>
         <p className="max-w-2xl text-sm text-ink-secondary">

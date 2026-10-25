@@ -51,12 +51,12 @@ export function Search({
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
           maxLength={500}
-          className="w-full rounded-md border border-border-soft bg-surface px-3 py-2 text-sm"
+          className="w-full -md border border-border-soft bg-surface px-3 py-2 text-sm"
         />
         <button
           type="submit"
           disabled={state === "searching"}
-          className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
+          className="-md bg-ink px-4 py-2 text-sm font-semibold text-surface disabled:opacity-60"
         >
           {state === "searching"
             ? labels.search.searching

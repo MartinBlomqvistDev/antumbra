@@ -18,7 +18,7 @@ export function ChainAudit({
   return (
     <section className="space-y-4">
       <div>
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {audit.ref}
           {audit.year !== null ? (
             <span className="ml-2 font-normal text-ink-secondary">
@@ -67,7 +67,7 @@ function ChainRecommendation({
       ? `${recommendation.text.slice(0, 160)}…`
       : recommendation.text;
   return (
-    <details className="rounded-lg border border-border-soft bg-surface-raised">
+    <details className="-lg border border-border-soft">
       <summary className="cursor-pointer p-4 text-sm">
         <span className="font-semibold">
           {labels.recommendationLabel} {recommendation.number}.
@@ -87,7 +87,7 @@ function ChainRecommendation({
             {recommendation.citations.map((citation, index) => (
               <blockquote
                 key={index}
-                className="border-l-2 border-accent pl-3"
+                className="border-l-2 border-ink pl-3"
               >
                 {citation.text !== null ? (
                   <p>{citation.text}</p>
@@ -111,7 +111,7 @@ function ChainRecommendation({
             {recommendation.responses.map((response, index) => (
               <blockquote
                 key={index}
-                className="border-l-2 border-accent-warm pl-3"
+                className="border-l-2 border-ink pl-3"
               >
                 <p>{response.response}</p>
               </blockquote>

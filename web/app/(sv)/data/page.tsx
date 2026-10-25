@@ -15,14 +15,14 @@ export default function DataPage() {
       <p className="max-w-2xl text-sm text-ink-secondary">{copy.note}</p>
       {copy.groups.map((group) => (
         <section key={group.heading} className="space-y-3">
-          <h2 className="font-display text-2xl font-semibold tracking-tight">
+          <h2 className="text-2xl font-semibold tracking-tight">
             {group.heading}
           </h2>
           <p className="max-w-2xl text-sm text-ink-secondary">{group.note}</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[46rem] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-border-soft text-left uppercase tracking-wide text-ink-secondary">
+                <tr className="border-b border-border-soft text-left fieldname">
                   <th scope="col" className="py-1.5 pr-4">
                     {copy.headers.file}
                   </th>
@@ -68,7 +68,7 @@ export default function DataPage() {
         </section>
       ))}
       <section className="max-w-2xl space-y-2">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {copy.licence.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.licence.body}</p>

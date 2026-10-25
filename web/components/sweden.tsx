@@ -68,7 +68,7 @@ export function ComparisonTable({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>
-            <tr className="border-b border-border-soft text-left uppercase tracking-wide text-ink-secondary">
+            <tr className="border-b border-border-soft text-left fieldname">
               <th scope="col" className="py-1.5 pr-4">
                 {labels.headers.place}
               </th>
@@ -124,7 +124,7 @@ export function AuthorityBoard({
   const count = new Intl.NumberFormat(locale);
   const classes = Object.entries(authority.klasser);
   return (
-    <details className="rounded-lg border border-border-soft bg-surface-raised">
+    <details className="-lg border border-border-soft">
       <summary className="cursor-pointer p-3 text-sm font-semibold">
         {authority.namn}
         <span className="ml-2 font-normal text-ink-secondary">
@@ -140,7 +140,7 @@ export function AuthorityBoard({
           <div className="overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-xs">
               <thead>
-                <tr className="border-b border-border-soft text-left uppercase tracking-wide text-ink-secondary">
+                <tr className="border-b border-border-soft text-left fieldname">
                   <th scope="col" className="py-1.5 pr-4">
                     {labels.classWord}
                   </th>
@@ -207,7 +207,7 @@ export function AuthorityBoard({
                 <p className="text-ink-secondary">
                   {labels.reply.subject} {reply.amnesrad}
                 </p>
-                <pre className="overflow-x-auto whitespace-pre-wrap rounded border border-border-soft p-2 font-mono text-xs">
+                <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
                   {reply.text}
                 </pre>
                 {reply.bilagor ? (

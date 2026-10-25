@@ -29,7 +29,7 @@ export function CountryTable({
           {labels.caption}
         </caption>
         <thead>
-          <tr className="border-b-2 border-ink text-left text-xs uppercase tracking-wide text-ink-secondary">
+          <tr className="border-b-2 border-ink text-left fieldname">
             <th scope="col" className="py-2 pr-4 font-semibold">
               {labels.country}
             </th>
@@ -53,7 +53,7 @@ export function CountryTable({
               <th scope="row" className="py-2 pr-4 text-left font-normal">
                 <Link
                   href={`${hrefBase}${row.slug}/`}
-                  className="text-accent underline underline-offset-2"
+                  className="text-ink underline underline-offset-2"
                 >
                   {row.country}
                 </Link>

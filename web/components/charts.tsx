@@ -118,16 +118,16 @@ export function ShareBars({
           >
             <Link
               href={`${hrefBase}${row.slug}/`}
-              className="truncate text-accent underline underline-offset-2"
+              className="truncate underline underline-offset-2"
             >
               {row.label}
             </Link>
             <div
-              className="h-3 rounded-sm bg-surface-raised"
+              className="h-3 "
               title={`${row.label}: ${percent.format(share)}`}
             >
               <div
-                className="h-3 rounded-sm bg-accent"
+                className="h-3 -sm bg-accent"
                 style={{ width: `${Math.max(share * 100, 0.5)}%` }}
               />
             </div>
@@ -157,7 +157,7 @@ export function ChartSection({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="font-display text-2xl font-semibold tracking-tight">
+      <h2 className="text-2xl font-semibold tracking-tight">
         {title}
       </h2>
       {note ? (
@@ -171,7 +171,7 @@ export function ChartSection({
         <div className="mt-2 overflow-x-auto">
           <table className="min-w-[24rem] border-collapse text-sm">
             <thead>
-              <tr className="border-b-2 border-ink text-left text-xs uppercase tracking-wide text-ink-secondary">
+              <tr className="border-b-2 border-ink text-left fieldname">
                 {table.headers.map((header) => (
                   <th key={header} scope="col" className="py-1.5 pr-6">
                     {header}

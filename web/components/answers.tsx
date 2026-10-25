@@ -35,7 +35,7 @@ export function AnswerList({
       {answers.map((answer) => (
         <blockquote
           key={`${answer.ref}-${answer.number}-${answer.score}`}
-          className="border-l-2 border-accent pl-3"
+          className="border-l-2 border-ink pl-3"
         >
           <p className="text-sm">{answer.text}</p>
           <footer className="mt-1 text-xs text-ink-secondary">

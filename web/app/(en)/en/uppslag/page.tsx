@@ -14,7 +14,7 @@ export default function Reference() {
   return (
     <div className="space-y-8">
       <PageIntro title={en.uppslag.title} lead={en.uppslag.lead} />
-      <p className="max-w-2xl rounded-lg border border-border-soft bg-surface-raised p-4 text-sm">
+      <p className="max-w-2xl -lg border border-border-soft p-4 text-sm">
         {en.uppslag.banner}
       </p>
       {apiBase ? (
@@ -25,14 +25,14 @@ export default function Reference() {
         </p>
       )}
       <section className="max-w-2xl space-y-3">
-        <h2 className="font-display text-2xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           {en.uppslag.examplesHeading}
         </h2>
         {examples.map((example, index) => (
           <details
             key={example.question}
             open={index === 0}
-            className="rounded-lg border border-border-soft bg-surface-raised"
+            className="-lg border border-border-soft"
           >
             <summary className="cursor-pointer p-4 text-sm font-semibold">
               {example.question}

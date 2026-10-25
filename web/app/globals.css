@@ -1,29 +1,40 @@
 @import "tailwindcss";
 
 /*
- * The validated palette: #2A78D6 and #EB6834 with dark-mode variants. The
- * dark steps are provisional until the chart work runs the palette
- * validator against both surfaces; tokens are the only place they live.
- * A manual theme toggle is added with the chart work; until then the site
- * follows the system preference.
+ * The surface is paper, not product dark. What the site publishes is a
+ * record built from authority documents, so the page is ink on paper with
+ * hairlines instead of cards, one typeface for everything a person wrote
+ * and a monospace for everything a machine did: file names, checksums,
+ * message ids, clock times.
+ *
+ * The two accent colours stay in the file because the charts were validated
+ * for colour blindness on them, and nothing else uses them now. The chrome
+ * has no accent colour at all: emphasis comes from size, from rules, and
+ * from the one black rectangle the project's own subject supplies.
  */
 :root {
-  --surface: #fdfdfc;
-  --surface-raised: #f4f4f2;
-  --ink: #1b1b1a;
-  --ink-secondary: #565654;
-  --border: #e4e4e1;
+  --surface: #f6f4ef;
+  --surface-raised: #efece4;
+  --ink: #14130f;
+  --ink-secondary: #514d44;
+  --border: #cdc7ba;
+  /* A redaction is solid ink in both schemes: it is the thing the
+     measurement counts, and it may never read as decoration. */
+  --redaction: #14130f;
+  --flag: #8a1c13;
   --accent: #2a78d6;
   --accent-warm: #eb6834;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface: #131314;
-    --surface-raised: #1d1d1f;
-    --ink: #ececea;
-    --ink-secondary: #a5a5a1;
-    --border: #2d2d30;
+    --surface: #14130f;
+    --surface-raised: #1c1a15;
+    --ink: #ece8de;
+    --ink-secondary: #a39d90;
+    --border: #36322a;
+    --redaction: #ece8de;
+    --flag: #d1705f;
     --accent: #5697e2;
     --accent-warm: #e06a3a;
   }
@@ -32,21 +43,25 @@
 /* Manual override from the theme toggle; wins over the system preference
    in both directions. Stored in localStorage, never in a cookie. */
 :root[data-theme="light"] {
-  --surface: #fdfdfc;
-  --surface-raised: #f4f4f2;
-  --ink: #1b1b1a;
-  --ink-secondary: #565654;
-  --border: #e4e4e1;
+  --surface: #f6f4ef;
+  --surface-raised: #efece4;
+  --ink: #14130f;
+  --ink-secondary: #514d44;
+  --border: #cdc7ba;
+  --redaction: #14130f;
+  --flag: #8a1c13;
   --accent: #2a78d6;
   --accent-warm: #eb6834;
 }
 
 :root[data-theme="dark"] {
-  --surface: #131314;
-  --surface-raised: #1d1d1f;
-  --ink: #ececea;
-  --ink-secondary: #a5a5a1;
-  --border: #2d2d30;
+  --surface: #14130f;
+  --surface-raised: #1c1a15;
+  --ink: #ece8de;
+  --ink-secondary: #a39d90;
+  --border: #36322a;
+  --redaction: #ece8de;
+  --flag: #d1705f;
   --accent: #5697e2;
   --accent-warm: #e06a3a;
 }
@@ -57,18 +72,89 @@
   --color-ink: var(--ink);
   --color-ink-secondary: var(--ink-secondary);
   --color-border-soft: var(--border);
+  --color-redaction: var(--redaction);
+  --color-flag: var(--flag);
   --color-accent: var(--accent);
   --color-accent-warm: var(--accent-warm);
+  /* One voice for everything a person wrote. The sans token maps to the
+     same stack, so a stray font-sans cannot reintroduce a second voice. */
   --font-sans:
-    "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, sans-serif;
-  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman",
+    serif;
+  --font-display:
+    "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman",
+    serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
 body {
   background: var(--surface);
   color: var(--ink);
   font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  font-variant-numeric: lining-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings are the same face as the text, separated by size and weight and
+   not by a second typeface. */
+h1,
+h2,
+h3 {
+  font-optical-sizing: auto;
+  text-wrap: balance;
+  letter-spacing: -0.012em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* A link is underlined, in ink. No colour in the chrome carries meaning. */
+main a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--border);
+}
+
+main a:hover {
+  text-decoration-color: var(--ink);
+}
+
+/* Machine data: anything no person phrased. */
+.record {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+}
+
+/* The running label above a section or a figure, in the register a form
+   uses for its field names. */
+.fieldname {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+/* The one ornament the project owns. A redaction covers the words and the
+   words stay in the page, exactly as in the documents being measured. */
+.redaction {
+  background: var(--redaction);
+  color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.12em;
+  border-radius: 1px;
+}
+
+.redaction::selection {
+  background: var(--flag);
+  color: var(--surface);
 }
 
 @media print {

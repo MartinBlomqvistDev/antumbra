@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Shell } from "@/components/shell";
 import { sv } from "@/content/sv";
-import "@fontsource-variable/ibm-plex-sans";
-import "@fontsource/ibm-plex-serif/400.css";
-import "@fontsource/ibm-plex-serif/600.css";
+import "@fontsource-variable/source-serif-4";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
 import "../globals.css";
 
 export const metadata: Metadata = {

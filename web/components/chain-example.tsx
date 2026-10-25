@@ -47,7 +47,7 @@ export function ChainExample({
       label: labels.steps.figure,
       body: (
         <p>
-          <span className="font-display text-3xl font-semibold tabular-nums">
+          <span className="text-3xl font-semibold tabular-nums">
             {count.format(totals.recommendations)}
           </span>{" "}
           <span className="text-ink-secondary">{labels.figureLead}</span>
@@ -78,7 +78,7 @@ export function ChainExample({
     {
       label: labels.steps.paragraph,
       body: (
-        <blockquote className="border-l-2 border-accent pl-3 text-sm">
+        <blockquote className="border-l-2 border-ink pl-3 text-sm">
           <p>{citation.text}</p>
           <footer className="mt-1 text-xs text-ink-secondary">
             {citation.cites}
@@ -105,7 +105,7 @@ export function ChainExample({
   ];
   return (
     <section className="space-y-4">
-      <h2 className="font-display text-2xl font-semibold tracking-tight">
+      <h2 className="text-2xl font-semibold tracking-tight">
         {labels.heading}
       </h2>
       <p className="max-w-2xl text-sm text-ink-secondary">{labels.intro}</p>
@@ -113,11 +113,11 @@ export function ChainExample({
         {steps.map((step, index) => (
           <li
             key={step.label}
-            className={`border-l-2 border-accent pl-4 ${
+            className={`border-l-2 border-ink pl-4 ${
               index < steps.length - 1 ? "pb-5" : ""
             }`}
           >
-            <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+            <p className="fieldname">
               {index + 1} · {step.label}
             </p>
             <div className="mt-1">{step.body}</div>
@@ -127,7 +127,7 @@ export function ChainExample({
       <p className="text-sm">
         <Link
           href={`${hrefBase}sweden/`}
-          className="text-accent underline underline-offset-2"
+          className="text-ink underline underline-offset-2"
         >
           {labels.toCountry}
         </Link>
