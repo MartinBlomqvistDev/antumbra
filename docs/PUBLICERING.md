@@ -51,6 +51,15 @@ Listan nedan skrevs samma dag och är redan delvis infriad. Det som landade:
 Kvar står korrespondensloggen, de fyra oräknade måtten i avsnitt 2 och de tre
 besluten i avsnitt 7.
 
+*Tillägg 2026-10-26.* Svarsregistret bär 18 rader på publiceringsdagen och inte
+femton: svaren fortsatte komma in efter den 6 oktober, och en rad lades till i
+dag sedan Jordbruksverkets mottagningsbesked den 5 oktober visat sig saknas just
+där, fast det hela tiden legat ordagrant i protokollloggen och i
+korrespondensregistret. Skälet att rätta det före snittet var inte
+fullständigheten utan likabehandlingen: Gävleborgs likartade manuella svar låg i
+registret och Jordbruksverkets inte. Ingen publicerad siffra rör sig av
+tillägget, eftersom raden är ett besked och inte ett svar i sak.
+
 ---
 
 ## 0b. Beslut 2026-10-07: vad som får namnge ett län

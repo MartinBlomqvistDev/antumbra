@@ -384,6 +384,10 @@ class TestNoPersonalDataIsCommitted:
         "diariet",
         # Jönköping signs as the registry office.
         "registraturen",
+        # Jordbruksverket's receipt for the P12 packet signs with the unit that
+        # handles animal welfare and names no person, which is the authority's
+        # own statement of who has the matter.
+        "djurvälfärdsenheten",
         "avdelningschef",
         "chefsjurist",
         "enhetschef",

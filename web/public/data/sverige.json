@@ -2378,6 +2378,20 @@
           "bilagor": "myndighetens logotyp som bild i signaturen",
           "utelamnat": "bildreferensen till logotypen",
           "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "myndighet": "Jordbruksverket",
+          "datum": "2026-10-05",
+          "klockslag": "16:05:22",
+          "typ": "besked",
+          "meddelande": "1a10c62484408587",
+          "avsandare": "funktionsbrevlåda",
+          "roll": "djurvälfärdsenheten",
+          "amnesrad": "Sv: EXTERNT: Kunskapsunderlag om djurskyddskontroll: era resultat inför publicering, svar senast 2026-10-23",
+          "text": "Hej Martin!\n\nVi vill bekräfta att vi har tagit emot ditt mail.\n\nMed vänliga hälsningar\n\nDjurvälfärdsenheten\nJordbruksverket\nBesöksadress: Skeppsbrogatan 2, 553 29 Jönköping\nTfn 036-15 50 00",
+          "bilagor": "myndighetens logotyp som bild i signaturen",
+          "utelamnat": "den citerade historiken under meddelandet, som är hela P12-paketet; paketet publiceras i sin helhet som avsänt i data/p12_avsant. Myndighetens bildsignatur och länkmålen bakom kontaktuppgifterna. Ingen fråga ställs och inget besked om innehållet lämnas, så P12:s svarstid löper oförändrad till 2026-10-23 och myndigheten räknas inte som att den svarat i sak.",
+          "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
       "svar_saknas": true,
