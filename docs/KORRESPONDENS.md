@@ -186,6 +186,30 @@ Fem i `tests/test_repository_invariants.py`:
 5. Registret mäts mot förteckningen, ingenting utanför avgränsningen står i
    det, och talet i `VERIFIERAT.md` stämmer med filerna.
 
+### Tillagt 2026-10-26: mina egna identitetsuppgifter stannar utanför registret
+
+Ett överklagande till kammarrätt måste bära partsuppgifter. De fyra
+överklagandena bär därför mitt personnummer, min bostadsadress och mitt
+telefonnummer, skrivna till en domstol. Registret publicerar mina brev som de
+skrevs, och det första överklagandet var på väg in i registret med alla tre.
+
+Regeln är nu densamma som för alla andra: de tre uppgifterna klipps av steg 52,
+och klippet står i radens `utelamnat`. Det som står kvar är namnet och den
+e-postadress jag skrev från, eftersom det är vad samtliga 22 myndigheter såg,
+och mätningen vilar på vem som frågade.
+
+En rad som gäller för mig själv är lika bindande som den som gäller
+tjänstemännen. Skillnaden är bara att ADR-0018 skrevs om någon annans namn.
+
+Spärren ligger på två ställen, eftersom en regel som bara finns i det steg som
+råkar köras gäller till dess att någon skriver en rad på ett annat sätt. Steg 52
+klipper, och en invariant i `tests/test_repository_invariants.py` fäller varje
+spårad fil som bär ett personnummer. Invariantens första version matchade sex
+siffror och en skiljetecken och rapporterade sex myndigheters
+organisationsnummer, bland dem 202100-2270. Ett personnummer inleds med ett
+datum, och statens egna nummer bär månadssiffra 20 eller högre just för att
+kunna skiljas från personnummer, så mönstret kräver giltig månad och dag.
+
 ### Tillagt 2026-10-26: avstämningen frågade inte efter alla brev
 
 Steg 53 stämmer av registret mot protokollloggen. Den filtrerade loggen på en

@@ -11,8 +11,16 @@ address. A letter to a named official is recorded as having gone to a named
 official and nothing more, because writing to someone does not make their
 address mine to publish.
 
-What it keeps: my own signature, name and address. The measurement rests on who
-asked, and masking that would hide the one thing the authorities could see.
+What it keeps: my own signature, my name and the e-mail address I wrote from.
+The measurement rests on who asked, and masking that would hide the one thing
+all twenty-two authorities could see.
+
+What it removes even though it is mine: the identity block an appeal to an
+administrative court of appeal has to carry, which is a personal identity
+number, a home address and a daytime telephone number. Those were written for
+one court, not for a public register, and a line that makes sense in a filing
+does not become publishable because the person who wrote it is the one
+publishing. The cut is declared in the row like every other.
 """
 
 from __future__ import annotations
@@ -49,6 +57,19 @@ QUOTE = re.compile(
 TARGET = re.compile(r"<(?:https?|mailto):[^>\s]+>")
 # A line that was nothing but a link once its target is gone.
 BARE = re.compile(r"^\s*(?:https?://\S+|\[cid:[^\]]+\])\s*$", re.M)
+# The identity block of an appeal: the labelled lines a filing to a court has
+# to carry. Four appeals went, each one carrying these three lines, and the
+# register is published.
+IDENTITY = re.compile(
+    r"^(?:Personnummer|Adress|Telefon(?: dagtid)?|Postadress)\s*:.*$",
+    re.M | re.I,
+)
+# A personal identity number anywhere else in the text, whatever label stands
+# in front of it. The labelled lines above are the known shape; this is for the
+# one that is written some other way.
+PERSONNUMMER = re.compile(
+    r"\b(?:19|20)?\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[-+]\d{4}\b"
+)
 
 
 def swedish_time(utc: str) -> tuple[str, str]:
@@ -75,6 +96,15 @@ def cut(body: str) -> tuple[str, list[str]]:
     if BARE.search(body):
         body = BARE.sub("", body)
         omitted.append("en rad som inte var annat än en länk")
+    if IDENTITY.search(body):
+        body = IDENTITY.sub("[utelämnat]", body)
+        omitted.append(
+            "mina egna identitetsuppgifter ur överklagandets partsuppgifter, "
+            "alltså personnummer, bostadsadress och telefonnummer"
+        )
+    if PERSONNUMMER.search(body):
+        body = PERSONNUMMER.sub("[utelämnat]", body)
+        omitted.append("ett personnummer i löptexten")
     return body.strip(), omitted
 
 

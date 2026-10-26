@@ -365,6 +365,37 @@ class TestNoPersonalDataIsCommitted:
                 offenders.append(f"{path.name}: {found}")
         assert not offenders, f"a named person's address is committed: {offenders}"
 
+    # An organisation number is excluded by the date: a personal identity number
+    # opens with YYMMDD, and the state's own numbers carry a month of 20 or more
+    # for exactly that reason. The first version matched six digits and reported
+    # six authorities' organisation numbers, 202100-2270 among them.
+    # A personal identity number, in either of the two forms Swedish filings
+    # use. Built here rather than inline so that the pattern is one thing.
+    PERSONNUMMER: ClassVar[re.Pattern] = re.compile(
+        r"\b(?:19|20)?\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[-+]\d{4}\b"
+    )
+
+    def test_no_personal_identity_number_stands_in_a_tracked_file(self):
+        """Not even mine, and mine is the one that was about to go in.
+
+        The four appeals to the administrative courts of appeal carry the party
+        details a filing has to carry: a personal identity number, a home
+        address and a daytime telephone number. The outgoing register publishes
+        my letters as they were written, and on 26 October 2026 the first appeal
+        was about to be written into it with all three. Step 52 cuts them and
+        declares the cut. This test is here because a rule that lives only in
+        the step that happens to run is a rule that holds until someone writes a
+        row another way.
+        """
+        offenders = []
+        for path in tracked_files():
+            if path.suffix in {".png", ".jpg", ".ico", ".pbix", ".woff2"}:
+                continue
+            text = path.read_text("utf-8", errors="ignore")
+            for found in self.PERSONNUMMER.findall(text):
+                offenders.append(f"{path.name}: {found}")
+        assert not offenders, f"a personal identity number is committed: {offenders}"
+
     # The Swedish collection's own files. The DG SANTE datasets are excluded on
     # purpose: they quote published Commission audit reports, which name
     # authority contact addresses, and redacting a published source would be a
