@@ -58,6 +58,60 @@ recommendations with a citation graph resolved to the verbatim paragraph in
 an 81,292-paragraph corpus with a retrieval layer that can answer only in
 verbatim quotations. Sweden has 98 reports, 8 of them on animal welfare.
 
+## What the measurement found
+
+Every authority received its own figures on 2 October 2026 and had three weeks
+to reply before anything was published. None disputed a figure.
+
+**Inspection reports are redacted nearly three times as often as decisions.**
+109 of the 170 inspection reports in class A carry at least one redaction, 64.1
+percent, across 17 authorities. In class B, 32 of 140 injunction decisions carry
+one, 22.9 percent, across 18 authorities. The direction is the expected one:
+case law has accepted redaction in free-standing inspection reports, and the
+secrecy provision does not reach decisions. No claim about lawfulness follows
+from the class B figure, for the reason given under the unsettled law below.
+
+**Within the same authority the two classes come apart.** For the 17 counties
+that delivered in both, the median difference is 55.9 percentage points in the
+share of redacted documents and 1.95 percentage points in redacted area. Two
+counties, Blekinge and Dalarna, redact a larger share of their class B
+documents than of their class A documents, and no county redacts a larger area
+in class B. Both exceptions are named beside the median.
+
+**In one county the same cases sit in both classes.** Six counties put their
+own case numbers in the file names in both classes, and in one of them,
+Västernorrland, 20 cases appear in both. All 20 inspection reports are
+redacted. None of the 20 class B documents from those same cases carries one. The
+authority, the period and the cases are the same there, and what differs is the
+legal status of the document. The comparison cannot be repeated elsewhere,
+because 177 of the 310 files carry no case number in the name.
+
+**The order between counties mostly does not hold.** Ranked by share of
+redacted documents, the measure separates 39 of 136 county pairs in class A and
+28 of 153 in class B. Everywhere else the Wilson intervals overlap, and the
+measurement does not say which county redacts more. That is why the ranking on
+the site carries an interval on every row.
+
+**No fee was paid anywhere in the collection.** Where a fee remained after the
+protocol's narrowing, the copies were declined. Three counties ended there.
+They carry response time and fee data, and no redaction figures. The site
+names that reason on every panel where their figures are missing.
+
+**The register question was refused.** Request C asked the Board of Agriculture
+for the split between announced and unannounced inspections, which has never
+been published. It was refused, and the refusal is before the administrative
+court of appeal in Jönköping as case 3339-26.
+
+**Three pre-registered conditions fell, and the failures stand first.** The
+field half of the redaction measure cannot be computed over running prose, and
+ADR-0017 replaced it on 17 August 2026 with a measure of covered content. That
+measure returned a null result. The second half of the pre-registered
+hypothesis needs the notice field crossed with the deficiency field, and that
+extract was not released, so the pre-written null-result text asserts the
+outcome of a test that was never run. It is struck rather than reproduced. The
+half that could be tested does not separate a weak positive correlation from
+none.
+
 ## From figure to source
 
 Every number the project publishes carries its chain: aggregate to rows,
@@ -92,7 +146,7 @@ Stated here rather than in a footnote, because it governs how the results
 may be read.
 
 **The conditions layer is not national.** Five of twelve permit divisions
-carry 208 of the 237 decisions. Three have zero. Conclusions about
+carry 208 of the 237 links. Three have zero. Conclusions about
 conditions hold for the pig and poultry belt, not the country.
 
 **72 of the 236 permit files carried no text layer** and were read with OCR
