@@ -54,8 +54,8 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
       <footer className="mt-16 border-t border-border-soft">
         <div className="mx-auto max-w-4xl space-y-1 px-5 py-8 text-sm text-ink-secondary">
           <p className="text-base text-ink">
-            {copy.site.name}
-            <span className="ml-3 text-sm text-ink-secondary">
+            {copy.site.name}{" "}
+            <span className="text-sm text-ink-secondary">
               {copy.site.tagline}
             </span>
           </p>

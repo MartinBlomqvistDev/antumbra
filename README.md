@@ -278,15 +278,26 @@ English.
 
 ## Status
 
-As of 6 October 2026: the Swedish collection is closed. All 43 requests went
-out on 3 August 2026 and all 43 have reached a final status under the
-protocol; day 40 fell on 28 September, the last two deliveries arrived on day
+Published 26 October 2026. The Swedish collection is closed: all 43 requests
+went out on 3 August 2026 and all 43 reached a final status under the
+protocol. Day 40 fell on 28 September, the last two deliveries arrived on day
 41, and no fee was paid. Redaction is measured over 310 documents in the two
-classes. Each of the 22 authorities received its own figures on 2 October with
-three weeks to reply, which point P12 of the protocol requires, and the reply
-period ends on 23 October. No analytical result is published, and the
-repository stays private until then: opening it is itself publication, which
-the protocol settles in its eighth application note.
+classes, 170 in class A and 140 in class B. Eighteen of the twenty-one county
+administrative boards released documents into the measurement; three declined
+the copies once a fee remained after the protocol's narrowing, and they carry
+response time and fee data but no redaction figures.
+
+Each of the 22 authorities received its own figures on 2 October with three
+weeks to reply, which point P12 of the protocol requires, and the reply period
+ended on 23 October. Two authorities replied in substance and their replies
+are published verbatim beside their figures; no authority disputed a figure.
+Opening this repository is itself publication, which the protocol settles in
+its eighth application note, so nothing opened before the period had run.
+
+Four appeals are pending before the administrative courts of appeal, listed
+with case numbers on the method page. A pending case does not postpone
+publication, and no authority is described as breaking the law: the Supreme
+Administrative Court has not ruled on the question.
 
 ## License and citation
 
