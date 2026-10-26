@@ -23,6 +23,46 @@ registret samtliga inkomna meddelanden förteckningen känner. Arbetsgången ned
 gäller ändå oförändrad: nya meddelanden kommer in så länge ärendena lever, och
 de förs in på samma sätt.
 
+## Utgående register, 2026-10-26: mina egna brev på samma villkor
+
+Registret ovan bär bara inkommande. Myndigheternas brev stod därmed i sin
+helhet medan mina egna fanns som mallar i `BEGARANMALL.md`, som de 22
+arkiverade P12-paketen och i övrigt som noteringar i protokollloggen. På en
+mätning av öppenhet är det den asymmetri en kritiker namnger först, och den
+är inte försvarbar: den som begär ut andras handlingar och publicerar dem
+ordagrant ska tåla samma sak om sina egna.
+
+**Avgränsningen är densamma.** Begäran A, B och C och de fyra överklagandena.
+155 av mina utskick är knutna till en myndighet och en begäran i loggen.
+
+**Källan är Sent och ingenting annat.** En fil som pipelinen byggde före
+avsändningen är inte brevet som gick: steg 36 är rättat två gånger sedan
+P12-utskicket, vilket är hela skälet till att `data/p12_avsant/` finns med
+kontrollsumma per brev. Varje rad hämtas därför ur meddelandet som faktiskt
+skickades, råsvaret sparas orört i `data/korrespondens_raw_utgaende/` som är
+gitignorerat, och manifestet bär sha256 per råsvar.
+
+**Vad som utelämnas, och varför det skiljer sig från inkommande.**
+
+1. **Mottagarens adress återges aldrig när den är en namngiven tjänstemans.**
+   Flera av mina brev gick till handläggare som svarat från en personlig
+   adress, och att jag skrev till dem gör inte adressen till min att
+   publicera. Fältet `mottagare` bär därför samma tvåvärdesvokabulär som
+   `avsandare` gör för inkommande: `funktionsbrevlåda` eller
+   `namngiven tjänsteman`, aldrig adressen.
+2. **Den citerade historiken kapas**, alltså myndighetens meddelande under
+   mitt svar och min egen tidigare text. Den står redan i registren.
+3. **Länkmålen kapas**, och en rad som inte var annat än en länk.
+4. **Min egen signatur står kvar.** Namnet är mitt och adressen
+   cm.blomqvist@gmail.com är den avsändaradress hela mätningen vilar på; att
+   maska den vore att dölja vem som frågade.
+
+**Vad som aldrig görs.** Ingen uppgift om en enskild djurhållare förs in, och
+ingen tjänstemans namn återges, inte heller i en hälsningsfras där jag själv
+har skrivit ut det. Där jag tilltalat en handläggare med namn skrivs rollen i
+stället, på samma sätt som ADR-0018 föreskriver åt andra hållet, och raden
+säger i `utelamnat` att det gjorts.
+
 ## Stegen som gör arbetet
 
 Fyra steg i `pipeline/` sedan den 9 oktober 2026, och de låg i en temporär mapp

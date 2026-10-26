@@ -156,14 +156,17 @@ export const en: Copy = {
         "request had a cap and some authorities raised a fee that led to a " +
         "narrowing.",
       intervalNote:
-        "The interval is a 95 per cent Wilson interval. It treats one " +
-        "authority's documents as independent draws, which they are not, so " +
-        "it is a floor on the uncertainty and no statement about the " +
-        "authority's practice.",
+        "A county with five documents and five redactions and a county with " +
+        "twenty-three both read as a hundred per cent, while the intervals " +
+        "in the column beside them differ widely, so the same hundred means " +
+        "different things. The interval is a 95 per cent Wilson interval, " +
+        "and it is also a floor: a county's documents are not independent " +
+        "draws but consecutive cases, often handled by the same officer, so " +
+        "the real uncertainty is wider than the one printed.",
       separated:
-        "The measure separates {separated} of {pairs} pairs of counties; the " +
-        "remaining pairs have overlapping intervals and are held apart by " +
-        "nothing.",
+        "The measure separates only {separated} of {pairs} pairs of " +
+        "counties. For the rest there is no saying which county redacts " +
+        "more, because the intervals overlap.",
       headers: {
         place: "Place",
         authority: "Authority",

@@ -84,6 +84,7 @@ export const sv: Copy = {
     { href: "/metod/", label: "Metod" },
     { href: "/handlingar/", label: "Handlingar" },
     { href: "/data/", label: "Data" },
+    { href: "/om/", label: "Om" },
   ],
   languageSwitch: { href: "/en/", label: "English" },
   themeToggle: "Byt färgläge",
@@ -213,13 +214,17 @@ export const sv: Copy = {
         "tak och några myndigheter tog ut en avgift som ledde till en " +
         "avsmalning.",
       intervalNote:
-        "Intervallet är ett 95-procentigt Wilson-intervall. Det behandlar " +
-        "en myndighets dokument som oberoende dragningar, vilket de inte " +
-        "är, så det är ett golv för osäkerheten och inget påstående om " +
-        "myndighetens praxis.",
+        "Ett län med fem dokument och fem maskningar och ett län med " +
+        "tjugotre har båda hundra procent på raden, men intervallen i " +
+        "kolumnen bredvid skiljer sig kraftigt, och samma hundra betyder " +
+        "därför olika saker. Intervallet är ett 95-procentigt " +
+        "Wilson-intervall och dessutom ett golv: ett läns dokument är inte " +
+        "oberoende dragningar utan ärenden i följd, ofta hos samma " +
+        "handläggare, så den verkliga osäkerheten är större än den som står.",
       separated:
-        "Måttet skiljer {separated} av {pairs} länspar; de övriga paren har " +
-        "överlappande intervall och hålls isär av ingenting.",
+        "Måttet skiljer bara {separated} av {pairs} länspar. För de övriga " +
+        "går det inte att säga vilket län som maskar mest, eftersom " +
+        "intervallen överlappar.",
       headers: {
         place: "Plats",
         authority: "Myndighet",
@@ -485,6 +490,59 @@ export const sv: Copy = {
         note: "Notering",
       },
     },
+  },
+  om: {
+    title: "Om mätningen och vem som gjort den",
+    lead:
+      "Mätningen är gjord av en person, och vilken person det är hör till " +
+      "underlaget. Myndigheterna visste det hela tiden: varje begäran bar " +
+      "mitt namn och min adress.",
+    body: [
+      "Jag heter Martin Blomqvist och arbetar som data scientist. Jag " +
+        "skickade de 43 begärandena själv den 3 augusti 2026, läste och " +
+        "undertecknade varje brev innan det gick, och hanterade varje svar " +
+        "efter protokollet. Att insamlingen, loggföringen och analysen skett " +
+        "med AI-assistans står deklarerat med datum i metoden; ingen uppgift " +
+        "i materialet har en språkmodell som källa, och varje brev och varje " +
+        "publicerad siffra är granskad av mig innan den gick eller " +
+        "committades.",
+      "Att begäran gjordes namngiven var ett val och inte en slarvighet. Det " +
+        "står i projektets beslutslogg som vägval 3, skrivet innan något " +
+        "brev gick: ett överklagande kräver en part, en e-postadress är ändå " +
+        "inte anonym, och en identisk avsändare för alla 22 myndigheter tar " +
+        "bort avsändaren som variabel. Anonyma begäranden är en " +
+        "grundlagsskyddad möjlighet, men de hade gjort avslagsgrenen av " +
+        "mätningen omöjlig att driva.",
+      "Ingen har beställt eller finansierat arbetet. Budgeten är noll kronor, " +
+        "vilket är skälet till att ingen avgift godtogs oavsett belopp, och " +
+        "ingen avgift har betalats. Myndigheternas egna tjänstemän namnges " +
+        "aldrig någonstans i materialet; där ett beslut namnger " +
+        "beslutsfattare och föredragande skrivs rollen i stället.",
+      "Fel i materialet vill jag veta av. Hör av dig med den rättade " +
+        "uppgiften och var den kommer ifrån, så görs rättelsen i underlaget " +
+        "och inte bara i texten, och den loggas med datum som alla andra " +
+        "ändringar.",
+    ],
+    linksHeading: "Annat jag gjort",
+    links: [
+      {
+        label: "github.com/MartinBlomqvistDev",
+        href: "https://github.com/MartinBlomqvistDev",
+        note: "Kodarkiven, inklusive det här projektets.",
+      },
+      {
+        label: "linkedin.com/in/martin-blomqvist",
+        href: "https://www.linkedin.com/in/martin-blomqvist",
+        note: "Yrkesbakgrund och tidigare arbeten.",
+      },
+      {
+        label: "huggingface.co/MartinBlomqvist",
+        href: "https://huggingface.co/MartinBlomqvist",
+        note: "Dataset och modeller, bland dem den här mätningens aggregat.",
+      },
+    ],
+    contactHeading: "Kontakt",
+    contact: "cm.blomqvist@gmail.com",
   },
   handlingar: {
     title: "Handlingar",

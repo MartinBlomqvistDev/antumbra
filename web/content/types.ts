@@ -185,6 +185,13 @@ export type Copy = {
       };
     };
   };
+  om?: PageCopy & {
+    body: string[];
+    linksHeading: string;
+    links: { label: string; href: string; note: string }[];
+    contactHeading: string;
+    contact: string;
+  };
   handlingar?: PageCopy & {
     tavla: {
       heading: string;

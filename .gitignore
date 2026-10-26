@@ -87,3 +87,7 @@ data/bilagor.jsonl
 # Raw correspondence replies: they carry officials names and personal
 # addresses, so only the manifest with sha256 per file is committed (ADR-0024).
 data/korrespondens_raw/
+# The same for my own sent messages: the raw payloads carry the recipients’
+# addresses, including named officials’, which docs/KORRESPONDENS.md keeps out
+# of the register itself.
+data/korrespondens_raw_utgaende/

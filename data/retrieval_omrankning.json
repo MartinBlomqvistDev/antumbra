@@ -1,0 +1,40 @@
+{
+ "modell": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+ "djup": 50,
+ "fragor": 40,
+ "tak_recall": 0.675,
+ "resultat": [
+  {
+   "metod": "bm25/installning",
+   "fragor": 23,
+   "recall@1": 0.1304,
+   "recall@5": 0.3913,
+   "recall@10": 0.3913,
+   "mrr@10": 0.221
+  },
+  {
+   "metod": "bm25/undanhallen",
+   "fragor": 17,
+   "recall@1": 0.1176,
+   "recall@5": 0.4118,
+   "recall@10": 0.5294,
+   "mrr@10": 0.2633
+  },
+  {
+   "metod": "omrankad/installning",
+   "fragor": 23,
+   "recall@1": 0.1304,
+   "recall@5": 0.4348,
+   "recall@10": 0.5217,
+   "mrr@10": 0.2432
+  },
+  {
+   "metod": "omrankad/undanhallen",
+   "fragor": 17,
+   "recall@1": 0.1765,
+   "recall@5": 0.4706,
+   "recall@10": 0.5294,
+   "mrr@10": 0.2873
+  }
+ ]
+}

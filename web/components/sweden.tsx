@@ -77,10 +77,13 @@ export function ComparisonTable({
     <div className="space-y-2">
       <p className="max-w-2xl text-sm text-ink-secondary">{labels.caption}</p>
       <p className="max-w-2xl text-sm text-ink-secondary">
-        {labels.intervalNote}{" "}
+        {/* The finding comes first and the method after it. Set the other way
+            round, the statistician's caveat stood where the reader needed the
+            point: that most of the pairs in the table cannot be told apart. */}
         {labels.separated
           .replace("{separated}", count.format(separatedPairs))
-          .replace("{pairs}", count.format(pairs))}
+          .replace("{pairs}", count.format(pairs))}{" "}
+        {labels.intervalNote}
       </p>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[34rem] border-collapse text-sm">

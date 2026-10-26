@@ -1,0 +1,141 @@
+"""Build one row of the outgoing correspondence register from a sent message.
+
+The rules are in docs/KORRESPONDENS.md under the outgoing section, and they are
+here in code rather than in a judgement per letter. The step takes the payload
+of one message from the mailbox, cuts what the rules say to cut, and writes the
+row to ``data/korrespondens_utgaende.jsonl``.
+
+What it cuts: the quoted history under my own text, the link targets, and a
+line that was nothing but a link. What it never writes: the recipient's
+address. A letter to a named official is recorded as having gone to a named
+official and nothing more, because writing to someone does not make their
+address mine to publish.
+
+What it keeps: my own signature, name and address. The measurement rests on who
+asked, and masking that would hide the one thing the authorities could see.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+from datetime import datetime, timedelta
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "data" / "korrespondens_utgaende.jsonl"
+
+# Where an Outlook or Gmail quote begins. The authorities' clients write the
+# first, mine writes the second, and both start the block that is already in
+# the registers.
+# Where a quote begins. Every client writes the marker differently, and
+# Gmail breaks "On ... wrote:" across two lines, which an expression
+# anchored to one line silently misses: four of the first eight rows kept
+# their marker and the first quoted line until the reconciliation caught
+# it. A line starting with ">" is the last resort, since every client
+# prefixes the quoted block that way.
+QUOTE = re.compile(
+    r"^(?:Från: |From: |Den .{0,40} skrev |On\b[^\n]{0,80}\n?\s*wrote:"
+    r"|-{3,} ?Vidarebefordrat|>)",
+    re.M,
+)
+# A markdown-style link target the client appended after the text it labels.
+TARGET = re.compile(r"<(?:https?|mailto):[^>\s]+>")
+# A line that was nothing but a link once its target is gone.
+BARE = re.compile(r"^\s*(?:https?://\S+|\[cid:[^\]]+\])\s*$", re.M)
+
+
+def swedish_time(utc: str) -> tuple[str, str]:
+    """The message header's UTC turned into Swedish time, as date and clock.
+
+    August to October 2026 is summer time throughout, so the offset is two
+    hours for every message in this collection. The register says so rather
+    than carrying a library that would be right for dates it never sees.
+    """
+    stamp = datetime.fromisoformat(utc.replace("Z", "+00:00")) + timedelta(hours=2)
+    return stamp.strftime("%Y-%m-%d"), stamp.strftime("%H:%M:%S")
+
+
+def cut(body: str) -> tuple[str, list[str]]:
+    """The text as it was written, with the four cuts the rules require."""
+    omitted = []
+    quote = QUOTE.search(body)
+    if quote:
+        body = body[: quote.start()]
+        omitted.append("den citerade historiken under mitt meddelande")
+    if TARGET.search(body):
+        body = TARGET.sub("", body)
+        omitted.append("länkmålen bakom texten")
+    if BARE.search(body):
+        body = BARE.sub("", body)
+        omitted.append("en rad som inte var annat än en länk")
+    return body.strip(), omitted
+
+
+def main() -> int:
+    """Read a payload, write the row, and say what it left out."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("payload", type=Path, help="meddelandets nyttolast som JSON")
+    parser.add_argument("--myndighet", required=True, help="mottagande myndighet")
+    parser.add_argument("--begaran", required=True, help="A, B, C eller A+B")
+    parser.add_argument(
+        "--mottagare",
+        required=True,
+        choices=("funktionsbrevlåda", "namngiven tjänsteman"),
+        help="mottagarens art, aldrig adressen",
+    )
+    parser.add_argument("--handelse", required=True, help="loggens händelsetyp")
+    parser.add_argument(
+        "--anmarkning", default="", help="det som bara en läsare kan anmärka"
+    )
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    payload = json.loads(args.payload.read_text("utf-8"))
+    date, clock = swedish_time(payload["date"])
+    text, omitted = cut(payload["plaintextBody"])
+    if args.anmarkning:
+        omitted.append(args.anmarkning)
+
+    row = {
+        "datum": date,
+        "klockslag": clock,
+        "myndighet": args.myndighet,
+        "begaran": args.begaran,
+        "mottagare": args.mottagare,
+        "handelse": args.handelse,
+        "amnesrad": payload["subject"],
+        "meddelande": payload["id"],
+        "text": text,
+        "utelamnat": "; ".join(omitted) or None,
+        "storlek": payload["sizeEstimate"],
+        "kalla": (
+            "Gmail, meddelandets plaintext-del. Inget råsvar är arkiverat: "
+            "raden är byggd ur nyttolasten vid hämtningen, och meddelande-id "
+            "är det som gör den kontrollerbar mot brevlådan."
+        ),
+    }
+
+    print(json.dumps(row, ensure_ascii=False, indent=1))
+    if args.dry_run:
+        return 0
+
+    existing = set()
+    if OUT.exists():
+        existing = {
+            json.loads(line)["meddelande"]
+            for line in OUT.read_text("utf-8").splitlines()
+            if line.strip()
+        }
+    if row["meddelande"] in existing:
+        print("raden finns redan, ingenting skrivet")
+        return 0
+    with OUT.open("a", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+    print(f"skrivet till {OUT.relative_to(ROOT)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
