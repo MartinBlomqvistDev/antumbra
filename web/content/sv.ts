@@ -572,8 +572,9 @@ export const sv: Copy = {
         "efter avsmalningen, och de bär svarstid och avgiftsuppgift men " +
         "inga dokument. Talen är de som myndigheten själv fick före " +
         "publicering, och där ett svar har kommit in står det ordagrant " +
-        "under dem. Därunder står allt myndigheten själv skrev i ärendena, " +
-        "också ordagrant, vilket är vad breven inför publicering utfäste. " +
+        "under dem. Därunder står hela brevväxlingen i ärendena i " +
+        "tidsföljd och ordagrant, både myndighetens meddelanden och mina " +
+        "egna brev, vilket är vad breven inför publicering utfäste. " +
         "Namn på enskilda tjänstemän återges inte: där ett svar är " +
         "undertecknat skrivs rollen i stället.",
       classWord: "Klass",
