@@ -22,6 +22,9 @@ export type BoardLabels = {
   classWord: string;
   documents: string;
   masked: string;
+  rowDocuments: string;
+  rowMasked: string;
+  noFiguresShort: string;
   area: string;
   interval: string;
   place: string;
@@ -124,14 +127,33 @@ export function AuthorityBoard({
   const count = new Intl.NumberFormat(locale);
   const classes = Object.entries(authority.klasser);
   return (
-    <details className="-lg border border-border-soft">
-      <summary className="cursor-pointer p-3 text-sm font-semibold">
-        {authority.namn}
-        <span className="ml-2 font-normal text-ink-secondary">
-          {authority.svar_saknas
-            ? labels.reply.none
-            : labels.reply.kinds.substantiellt}
+    <details className="border border-border-soft">
+      {/* The closed row carries the measurement, because that is what the
+          page is about. An earlier version led with whether the authority
+          had answered the P12 packet, and twenty-one rows reading "no reply
+          has come in" made the page look as though nothing had been
+          delivered at all, which is the opposite of the record: twenty of
+          the twenty-one delivered. The reply state is still here, last and
+          in secondary ink, where it belongs. */}
+      <summary className="cursor-pointer p-3 text-sm">
+        <span className="font-semibold">{authority.namn}</span>
+        <span className="ml-2 text-ink-secondary">
+          {classes.length === 0
+            ? labels.noFiguresShort
+            : classes
+                .map(
+                  ([klass, figures]) =>
+                    `${klass}: ${count.format(figures!.dokument)} ${
+                      labels.rowDocuments
+                    }, ${figures!.andel_text} ${labels.rowMasked}`,
+                )
+                .join(" · ")}
         </span>
+        {authority.svar_saknas ? null : (
+          <span className="ml-2 text-ink-secondary">
+            · {labels.reply.kinds.substantiellt}
+          </span>
+        )}
       </summary>
       <div className="space-y-4 border-t border-border-soft p-3">
         {classes.length === 0 ? (

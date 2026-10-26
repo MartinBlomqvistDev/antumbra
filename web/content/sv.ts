@@ -89,7 +89,10 @@ export const sv: Copy = {
   themeToggle: "Byt färgläge",
   footer: {
     privacy: "Inga kakor, ingen spårning. Sökfrågor loggas inte.",
-    source: "Källdata: DG SANTE:s publicerade revisionsrapporter.",
+    source:
+      "Källdata: myndigheternas egna handlingar, begärda enligt " +
+      "offentlighetsprincipen, och DG SANTE:s publicerade " +
+      "revisionsrapporter.",
   },
   home: {
     title: "Antumbra",
@@ -485,12 +488,20 @@ export const sv: Copy = {
     tavla: {
       heading: "Myndigheterna, en i taget",
       note:
-        "Talen är de som myndigheten själv fick före publicering, och " +
-        "svaret står ordagrant under dem. Namn på enskilda tjänstemän " +
-        "återges inte: där ett svar är undertecknat skrivs rollen i stället.",
+        "Raden visar vad myndigheten lämnade ut och hur mycket av det som " +
+        "är maskat. Tjugo av de tjugoen länsstyrelserna levererade " +
+        "handlingar; tre avstod sedan en avgift kvarstod efter " +
+        "avsmalningen, och de bär svarstid och avgiftsuppgift men inga " +
+        "dokument i mätningen. Talen är de som myndigheten själv fick före " +
+        "publicering, och där ett svar har kommit in står det ordagrant " +
+        "under dem. Namn på enskilda tjänstemän återges inte: där ett svar " +
+        "är undertecknat skrivs rollen i stället.",
       classWord: "Klass",
       documents: "Dokument",
       masked: "Maskade",
+      rowDocuments: "dokument",
+      rowMasked: "maskade",
+      noFiguresShort: "inga dokument i maskningsmätningen",
       area: "Maskad yta",
       interval: "Intervall",
       place: "Plats",

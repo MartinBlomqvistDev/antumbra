@@ -24,7 +24,10 @@ export const en: Copy = {
   themeToggle: "Switch colour scheme",
   footer: {
     privacy: "No cookies, no tracking. Search queries are not logged.",
-    source: "Source data: DG SANTE's published audit reports.",
+    source:
+      "Source data: the authorities' own documents, obtained under the " +
+      "Swedish principle of public access, and DG SANTE's published " +
+      "audit reports.",
   },
   home: {
     title: "Antumbra",

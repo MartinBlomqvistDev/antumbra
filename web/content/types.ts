@@ -187,6 +187,9 @@ export type Copy = {
       classWord: string;
       documents: string;
       masked: string;
+      rowDocuments: string;
+      rowMasked: string;
+      noFiguresShort: string;
       area: string;
       interval: string;
       place: string;
