@@ -9,9 +9,15 @@ import {
 /**
  * The signature interaction, shown as four visible steps built from the
  * real Swedish underlag: aggregate, rows, verbatim paragraph, document
- * with checksum. Everything is chosen at build time from the newest audit
- * whose chain resolves, so the example is always live data, never a
- * mock-up.
+ * with checksum. Everything is chosen at build time, so the example is
+ * always live data and never a mock-up.
+ *
+ * The choice is the newest audit whose chain resolves, out of the audits
+ * whose own title names animal welfare. Without that restriction the newest
+ * resolving audit was one on plant protection products, which says nothing
+ * about the subject the site measures. The restriction reads the audit's own
+ * title and nothing else; if no welfare audit resolves, the rule falls back
+ * to the whole set rather than leaving the page without its example.
  */
 export function ChainExample({
   copy,
@@ -30,11 +36,15 @@ export function ChainExample({
   const audits = [...underlag.audits].sort(
     (a, b) => (b.year ?? 0) - (a.year ?? 0) || a.ref.localeCompare(b.ref),
   );
-  const audit = audits.find((candidate) =>
+  const resolves = (candidate: (typeof audits)[number]) =>
     candidate.recommendations.some((rec) =>
       rec.citations.some((citation) => citation.resolved),
-    ),
-  )!;
+    );
+  const onWelfare = (candidate: (typeof audits)[number]) =>
+    (candidate.title ?? "").toLowerCase().includes("welfare");
+  const audit =
+    audits.find((candidate) => onWelfare(candidate) && resolves(candidate)) ??
+    audits.find(resolves)!;
   const recommendation = audit.recommendations.find((rec) =>
     rec.citations.some((citation) => citation.resolved),
   )!;

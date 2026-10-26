@@ -82,11 +82,23 @@ därför gjord om, och besluten står här.
 hårfina linjer. Mörkt läge är samma sida inverterad och inte ett eget
 språk.
 
-**En röst för allt en människa skrivit.** Source Serif 4 i brödtext,
-rubriker och tal. Ingen andra brödtextfamilj; skillnaden mellan rubrik och
-text bärs av storlek och vikt. IBM Plex Mono används enbart för det ingen
-människa formulerat: filnamn, kontrollsummor, meddelande-id, klockslag,
-fältnamn. Den som ser monospace på sidan ser maskindata.
+**En röst för allt en människa skrivit.** Spectral i brödtext, rubriker och
+tal. Ingen andra brödtextfamilj; skillnaden mellan rubrik och text bärs av
+storlek och vikt. Fragment Mono används enbart för det ingen människa
+formulerat: filnamn, kontrollsummor, meddelande-id, klockslag, fältnamn. Den
+som ser monospace på sidan ser maskindata. Båda ligger som
+`@fontsource`-paket i bygget, alltså självvärdade: sidan hämtar ingenting
+från Google och löftet om ingen spårning gäller även typsnitten.
+
+*Tillagt 2026-10-26.* Första uppsättningen var Source Serif 4 och IBM Plex
+Mono, och den föll på samma invändning som den mörka produktytan: det är
+exakt de två familjer en genererad sajt väljer. Fem uppsättningar ställdes
+mot samma rubrik, samma sifferrader, samma tabell och samma kontrollsumma, och
+valet föll på Spectral med Fragment Mono. Spectral är ritad för skärm i
+stället för anpassad till den, och den är sval i detaljen där de andra
+kandidaterna var antingen litterära eller redaktionella. Brödtexten gick
+samtidigt från 17 till 18 pixlar, eftersom Spectral sätter mindre vid samma
+grad.
 
 **Inga kort.** Tal står i tabeller med hårlinjer, som i en statistisk
 bilaga: värdet till vänster, underlaget till höger. Ett kort med färgad

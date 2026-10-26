@@ -77,22 +77,21 @@
   --color-accent: var(--accent);
   --color-accent-warm: var(--accent-warm);
   /* One voice for everything a person wrote. The sans token maps to the
-     same stack, so a stray font-sans cannot reintroduce a second voice. */
-  --font-sans:
-    "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman",
-    serif;
-  --font-display:
-    "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman",
-    serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+     same stack, so a stray font-sans cannot reintroduce a second voice.
+     Spectral is drawn for the screen rather than adapted to it, and it is
+     not the face a generated page reaches for. */
+  --font-sans: Spectral, Georgia, "Times New Roman", serif;
+  --font-display: Spectral, Georgia, "Times New Roman", serif;
+  --font-mono:
+    "Fragment Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
 body {
   background: var(--surface);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 1.0625rem;
-  line-height: 1.62;
+  font-size: 1.125rem;
+  line-height: 1.6;
   font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
 }
