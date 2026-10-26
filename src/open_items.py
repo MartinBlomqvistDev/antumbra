@@ -232,6 +232,10 @@ INTERNAL = frozenset(
         # statute itself and written into docs/VERIFIERAT.md. Internal: it
         # closes a pledge of ours and asks nothing of any authority.
         "rättsfråga verifierad",
+        # A surface opened on publication day: the repository, the website, the
+        # dataset. Internal, since publication asks nothing of any authority
+        # and the reply period it waited for had already run.
+        "publicering",
         # A letter built and checked but not yet sent, logged so that the day
         # the text was fixed is readable apart from the day it went out.
         # Internal: nothing has reached an authority yet.

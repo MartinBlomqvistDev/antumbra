@@ -500,6 +500,34 @@ class TestNoPersonalDataIsCommitted:
         "jordbruksverket.se",
     }
 
+    def test_the_dataset_card_counts_the_files_it_publishes(self):
+        """Every row count on the dataset card is read back off the file.
+
+        The card is the thing a stranger recomputes the figures from, and two
+        of its twenty-four counts had drifted by publication day: the protocol
+        log and the correspondence register both grow, and both were written by
+        hand. A card that is wrong about its own row counts is wrong about the
+        one thing it exists to guarantee.
+        """
+        card = ROOT / "docs" / "DATASET.md"
+        if not card.exists():
+            return
+        rows = re.findall(
+            r"^\| `([^`]+)` \| ([\d\s]+) \|", card.read_text("utf-8"), re.M
+        )
+        assert rows, "the card lists no files"
+        wrong = []
+        for name, claimed in rows:
+            path = ROOT / "data" / name
+            if not path.exists():
+                continue
+            actual = sum(
+                1 for line in path.read_text("utf-8").splitlines() if line.strip()
+            )
+            if actual != int("".join(ch for ch in claimed if ch.isdigit())):
+                wrong.append(f"{name}: card says {claimed.strip()}, file has {actual}")
+        assert not wrong, "; ".join(wrong)
+
     def test_only_functional_mailboxes_in_the_reply_register(self):
         path = ROOT / "data" / "p12_svar.jsonl"
         if not path.exists():
