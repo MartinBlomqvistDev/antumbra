@@ -304,3 +304,8 @@ Administrative Court has not ruled on the question.
 Code is AGPL-3.0 (see `LICENSE`). Derived datasets in `data/` are CC BY
 4.0. Received authority documents are not redistributed at all. To cite the
 project, see `CITATION.cff`.
+
+The three surfaces the measurement was published on are this repository, the
+site at [antumbraprojektet.se](https://antumbraprojektet.se), and the Swedish
+aggregates as a dataset at [MartinBlomqvist/djurskyddstillsyn](https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn), whose card
+carries the schema per file and the declared gaps.

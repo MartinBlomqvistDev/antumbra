@@ -12,6 +12,55 @@ tags:
   - sweden
 size_categories:
   - 1K<n<10K
+configs:
+  - config_name: protokoll_logg
+    data_files: protokoll_logg.jsonl
+  - config_name: korrespondens
+    data_files: korrespondens.jsonl
+  - config_name: p12_avsant_manifest
+    data_files: p12_avsant_manifest.jsonl
+  - config_name: leveranser_manifest
+    data_files: leveranser_manifest.jsonl
+  - config_name: maskning
+    data_files: maskning.jsonl
+  - config_name: kontrast
+    data_files: kontrast.jsonl
+  - config_name: djurslag
+    data_files: djurslag.jsonl
+  - config_name: dold_text
+    data_files: dold_text.jsonl
+  - config_name: sekretessgrunder
+    data_files: sekretessgrunder.jsonl
+  - config_name: namnare
+    data_files: namnare.jsonl
+  - config_name: beslut
+    data_files: beslut.jsonl
+  - config_name: avgiftsskrivelser
+    data_files: avgiftsskrivelser.jsonl
+  - config_name: utlamningsgrad
+    data_files: utlamningsgrad.jsonl
+  - config_name: dubbelforekomst
+    data_files: dubbelforekomst.jsonl
+  - config_name: bristandel
+    data_files: bristandel.jsonl
+  - config_name: foranmalda
+    data_files: foranmalda.jsonl
+  - config_name: oanmald_hypotes
+    data_files: oanmald_hypotes.jsonl
+  - config_name: atagande
+    data_files: atagande.jsonl
+  - config_name: villkor
+    data_files: villkor.jsonl
+  - config_name: villkor_baseline
+    data_files: villkor_baseline.jsonl
+  - config_name: villkor_facit
+    data_files: villkor_facit.jsonl
+  - config_name: tillstand_manifest
+    data_files: tillstand_manifest.jsonl
+  - config_name: tillstand_typ
+    data_files: tillstand_typ.jsonl
+  - config_name: tillstand_ocr_index
+    data_files: tillstand_ocr_index.jsonl
 ---
 
 # Swedish animal welfare supervision, measured 2026
@@ -26,7 +75,8 @@ questions.
 
 The dataset is the Swedish layer of [Antumbra]. The European comparison layer,
 parsed from the Commission's audits of member state control systems, is a
-separate dataset with its own card in `docs/HF_DATASET.md`.
+separate dataset that is not published yet; its card is written and sits in
+`docs/HF_DATASET.md` in the repository.
 
 ## What it measures
 
@@ -45,7 +95,7 @@ comparable across the 21 counties.
 
 | File | Rows | Grain |
 | --- | --- | --- |
-| `protokoll_logg.jsonl` | 612 | one row per event: date, clock time read from the system, channel, authority, request and note |
+| `protokoll_logg.jsonl` | 613 | one row per event: date, clock time read from the system, channel, authority, request and note |
 | `korrespondens.jsonl` | 198 | the authorities' own messages verbatim, 262 messages in all, each row saying in `utelamnat` what it leaves out |
 | `p12_avsant_manifest.jsonl` | 22 | the packets sent to each authority before publication, with sha256 per letter |
 | `leveranser_manifest.jsonl` | 692 | one row per received file: path, byte size, sha256 and when it was recorded |
@@ -120,6 +170,8 @@ not redistributed at all.
 
 ## Citation
 
-See `CITATION.cff` in the Antumbra repository.
+See [`CITATION.cff`](https://github.com/MartinBlomqvistDev/antumbra/blob/main/CITATION.cff)
+in the repository. The measurement itself is at
+[antumbraprojektet.se](https://antumbraprojektet.se).
 
 [Antumbra]: https://github.com/MartinBlomqvistDev/antumbra

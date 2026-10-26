@@ -823,7 +823,10 @@ export const sv: Copy = {
         "myndighetshandlingar sprids inte vidare i någon form. Kommissionens " +
         "dokument är återanvändbara med attribution enligt beslut " +
         "2011/833/EU. Schemat för varje fil framgår av stegen i pipelinen, " +
-        "som är numrerade och körs i ordning.",
+        "som är numrerade och körs i ordning. De svenska aggregaten ligger " +
+        "också som ett eget dataset på HuggingFace, " +
+        "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn, med " +
+        "schema per fil och de deklarerade luckorna utskrivna.",
     },
   },
   building: "Sidan är under uppbyggnad.",

@@ -7,6 +7,8 @@ authors:
     given-names: Martin
     email: cm.blomqvist@gmail.com
 repository-code: "https://github.com/MartinBlomqvistDev/antumbra"
+url: "https://antumbraprojektet.se"
+repository: "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn"
 abstract: >-
   Sweden publishes the conditions it imposes on large livestock installations
   but discloses the outcome of its own inspections in redacted form, to varying
