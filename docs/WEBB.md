@@ -158,9 +158,16 @@ loggen utan att den som skrev raden kontrollerade vad loggen räknar.
    Kalmars avgift föll efter avsmalningen och båda klasserna kom in utan
    avgift. Varje rad bär nu sitt utfall, läst ur om klassen har tal och inte
    skrivet för hand.
-5. **Uppslag sade att livesöket öppnar tillsammans med sajten.** Det gör det
-   inte: tjänsten är inte driftsatt, och sidan säger numera att söket inte är
-   öppnat än och att exempelsvaren går genom samma kodväg.
+5. **Uppslag sade att livesöket öppnar tillsammans med sajten.** Det gjorde
+   det inte, så sidan fick först en rad om att söket inte var öppnat. Den raden
+   var i sin tur det svagaste på hela sajten, eftersom den gjorde ett i övrigt
+   färdigt material ofärdigt i läsarens ögon. Mitt första försök att rätta den
+   var att skriva om sidan till sex frågor med svar, alltså att måla om en
+   lucka till en funktion, vilket är precis vad projektet aldrig gör med sina
+   egna nollresultat. Det försöket är återtaget. Tjänsten byggdes i stället:
+   `antumbra-retrieval` i europe-north1, 2 GiB, skalar till noll, med modellen
+   och alla 81 292 stycken inbakade så att en kallstart inte behöver nät.
+   Söket svarar live på sidan sedan 2026-10-26.
 
 **Och en frånvaro som inte längre står naken.** Fyra myndigheter saknar tal i
 maskningsmätningen, och raden sade bara att dokument saknas. P5 kräver att
