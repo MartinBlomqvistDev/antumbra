@@ -102,7 +102,10 @@ export function FigureTable({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="caption">
+      {/* An ordinary section head, the same size as every other one on the
+          site. Set small and grey it was still the shape the whole redesign
+          exists to remove: little muted type sitting above big type. */}
+      <h2 className="text-2xl font-semibold tracking-tight">
         {href ? (
           <Link href={href} className="no-underline hover:text-ink">
             {caption}

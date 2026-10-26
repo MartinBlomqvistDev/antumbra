@@ -14,7 +14,7 @@ export default function Reference() {
   return (
     <div className="space-y-8">
       <PageIntro title={en.uppslag.title} lead={en.uppslag.lead} />
-      <p className="max-w-2xl -lg border border-border-soft p-4 text-sm">
+      <p className="max-w-2xl border border-border-soft p-4 text-sm">
         {en.uppslag.banner}
       </p>
       {apiBase ? (
@@ -32,7 +32,7 @@ export default function Reference() {
           <details
             key={example.question}
             open={index === 0}
-            className="-lg border border-border-soft"
+            className="border border-border-soft"
           >
             <summary className="cursor-pointer p-4 text-sm font-semibold">
               {example.question}

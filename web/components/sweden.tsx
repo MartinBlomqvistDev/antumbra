@@ -24,12 +24,15 @@ export type BoardLabels = {
   masked: string;
   rowDocuments: string;
   rowMasked: string;
-  noFiguresShort: string;
+  utanMatning: Record<
+    "avgiftsstoppad" | "statistik",
+    { short: string; long: string }
+  >;
+  merged: string;
   area: string;
   interval: string;
   place: string;
   placeOf: string;
-  noFigures: string;
   reply: {
     heading: string;
     none: string;
@@ -126,6 +129,13 @@ export function AuthorityBoard({
 }) {
   const count = new Intl.NumberFormat(locale);
   const classes = Object.entries(authority.klasser);
+  // An authority with no documents in the measurement is the row a reader is
+  // most likely to misread, so it never stands as a bare absence: the reason
+  // comes out of the event log in step 41 and is written out here, both in the
+  // closed row and opened. P5 requires the loss to be reported openly.
+  const reason = authority.utan_matning
+    ? labels.utanMatning[authority.utan_matning]
+    : null;
   return (
     <details className="border border-border-soft">
       {/* The closed row carries the measurement, because that is what the
@@ -136,10 +146,10 @@ export function AuthorityBoard({
           the twenty-one delivered. The reply state is still here, last and
           in secondary ink, where it belongs. */}
       <summary className="cursor-pointer p-3 text-sm">
-        <span className="font-semibold">{authority.namn}</span>
-        <span className="ml-2 text-ink-secondary">
+        <span className="font-semibold">{authority.namn}</span>{" "}
+        <span className="text-ink-secondary">
           {classes.length === 0
-            ? labels.noFiguresShort
+            ? (reason?.short ?? "")
             : classes
                 .map(
                   ([klass, figures]) =>
@@ -150,14 +160,17 @@ export function AuthorityBoard({
                 .join(" · ")}
         </span>
         {authority.svar_saknas ? null : (
-          <span className="ml-2 text-ink-secondary">
-            · {labels.reply.kinds.substantiellt}
+          <span className="text-ink-secondary">
+            {" · "}
+            {labels.reply.kinds.substantiellt}
           </span>
         )}
       </summary>
       <div className="space-y-4 border-t border-border-soft p-3">
         {classes.length === 0 ? (
-          <p className="text-sm text-ink-secondary">{labels.noFigures}</p>
+          <p className="max-w-2xl text-sm text-ink-secondary">
+            {reason?.long}
+          </p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-xs">
@@ -213,6 +226,11 @@ export function AuthorityBoard({
             </table>
           </div>
         )}
+        {authority.sammanslagen ? (
+          <p className="max-w-2xl text-sm text-ink-secondary">
+            {labels.merged}
+          </p>
+        ) : null}
 
         <div className="space-y-3">
           <h3 className="text-sm font-semibold">{labels.reply.heading}</h3>

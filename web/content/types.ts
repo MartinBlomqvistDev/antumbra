@@ -107,7 +107,12 @@ export type Copy = {
       note: string;
       items: { label: string; text: string }[];
     };
-    feeStopped: { heading: string; note: string };
+    feeStopped: {
+      heading: string;
+      note: string;
+      noCopies: string;
+      laterDelivered: string;
+    };
     toHandlingar: string;
   };
   jamforelse: PageCopy & {
@@ -189,12 +194,15 @@ export type Copy = {
       masked: string;
       rowDocuments: string;
       rowMasked: string;
-      noFiguresShort: string;
+      utanMatning: Record<
+        "avgiftsstoppad" | "statistik",
+        { short: string; long: string }
+      >;
+      merged: string;
       area: string;
       interval: string;
       place: string;
       placeOf: string;
-      noFigures: string;
       reply: {
         heading: string;
         none: string;
@@ -212,6 +220,7 @@ export type Copy = {
     deliveries: {
       heading: string;
       note: string;
+      fileWord: string;
       filesWord: string;
       headers: { file: string; bytes: string; sha256: string };
     };

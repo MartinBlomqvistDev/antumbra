@@ -1,5 +1,5 @@
 {
-  "byggd": "2026-10-22",
+  "byggd": "2026-10-26",
   "p12": {
     "avsant": "2026-10-02",
     "svar_senast": "2026-10-23",
@@ -539,17 +539,17 @@
     }
   },
   "bilagor": {
-    "mappar": 35,
-    "bilagefiler": 6,
-    "lan_med_bilagefil": 3,
-    "hanvisar_till_innehall": 114,
-    "endast_formell_hanvisning": 72,
+    "mappar": 0,
+    "bilagefiler": 0,
+    "lan_med_bilagefil": 0,
+    "hanvisar_till_innehall": 0,
+    "endast_formell_hanvisning": 0,
     "slag": {
-      "fotomening ur mallen": 42,
-      "den ifyllda checklistan": 12,
-      "annat": 60
+      "fotomening ur mallen": 0,
+      "den ifyllda checklistan": 0,
+      "annat": 0
     },
-    "utan_lasbar_text": 45
+    "utan_lasbar_text": 0
   },
   "par": {
     "lan": [
@@ -650,7 +650,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Dalarna",
@@ -758,7 +760,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Gotland",
@@ -833,7 +837,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Gävleborg",
@@ -960,7 +966,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Halland",
@@ -1053,7 +1061,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Jämtland",
@@ -1137,7 +1147,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Jönköping",
@@ -1154,7 +1166,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": "avgiftsstoppad",
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Kalmar",
@@ -1220,7 +1234,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Kronoberg",
@@ -1310,7 +1326,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Norrbotten",
@@ -1414,7 +1432,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": false
+      "svar_saknas": false,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Skåne",
@@ -1446,7 +1466,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": "avgiftsstoppad",
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Stockholm",
@@ -1530,7 +1552,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Södermanland",
@@ -1623,7 +1647,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Uppsala",
@@ -1740,7 +1766,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Värmland",
@@ -1830,7 +1858,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Västerbotten",
@@ -1929,7 +1959,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Västernorrland",
@@ -2028,7 +2060,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Västmanland",
@@ -2118,7 +2152,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": false
+      "svar_saknas": false,
+      "utan_matning": null,
+      "sammanslagen": true
     },
     {
       "myndighet": "Länsstyrelsen i Västra Götaland",
@@ -2199,7 +2235,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Örebro",
@@ -2231,7 +2269,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": "avgiftsstoppad",
+      "sammanslagen": false
     },
     {
       "myndighet": "Länsstyrelsen i Östergötland",
@@ -2306,7 +2346,9 @@
         "avsant": "2026-10-02"
       },
       "svar": [],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": null,
+      "sammanslagen": false
     },
     {
       "myndighet": "Jordbruksverket",
@@ -2338,7 +2380,9 @@
           "kalla": "Gmail, meddelandets plaintext-del"
         }
       ],
-      "svar_saknas": true
+      "svar_saknas": true,
+      "utan_matning": "statistik",
+      "sammanslagen": false
     }
   ]
 }

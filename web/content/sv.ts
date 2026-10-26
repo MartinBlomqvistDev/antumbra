@@ -284,7 +284,8 @@ export const sv: Copy = {
       heading: "Läget i siffror",
       sent: "begäranden avsända",
       files: "filer mottagna, verifierade med sha256",
-      deliveringAuthorities: "myndigheter har levererat handlingar",
+      deliveringAuthorities:
+        "av 22 myndigheter har levererat handlingar eller uppgifter",
       feeNotices: "myndigheter aviserade en avgift",
       feeStopped: "begäranden avgiftsstoppade",
       paid: "betald avgift",
@@ -310,6 +311,8 @@ export const sv: Copy = {
         "ingen avgift aviserades i 5, beslut meddelades i 2, beslut " +
         "vägrades i 1, ett län svarade med ett generellt styrdokument, " +
         "och inget län lämnade frågan obesvarad.",
+      noCopies: "inga kopior hämtades ut",
+      laterDelivered: "handlingarna kom in senare, utan avgift",
     },
     toHandlingar:
       "Varje mottagen fil är förtecknad med kontrollsumma på sidan " +
@@ -394,8 +397,9 @@ export const sv: Copy = {
       searching: "Söker",
       error: "Söket kunde inte nås. Exempelfrågorna nedan fungerar ändå.",
       note:
-        "Livesöket öppnar tillsammans med sajten. Exempelsvaren nedan är " +
-        "förberäknade genom samma kod som livesöket kör.",
+        "Livesöket är inte öppnat än. Exempelsvaren nedan är " +
+        "förberäknade genom samma kodväg som söket kör, så ordagrannheten " +
+        "och källhänvisningarna är desamma.",
     },
   },
   metod: {
@@ -489,10 +493,10 @@ export const sv: Copy = {
       heading: "Myndigheterna, en i taget",
       note:
         "Raden visar vad myndigheten lämnade ut och hur mycket av det som " +
-        "är maskat. Tjugo av de tjugoen länsstyrelserna levererade " +
-        "handlingar; tre avstod sedan en avgift kvarstod efter " +
-        "avsmalningen, och de bär svarstid och avgiftsuppgift men inga " +
-        "dokument i mätningen. Talen är de som myndigheten själv fick före " +
+        "är maskat. Arton av de tjugoen länsstyrelserna levererade " +
+        "handlingar in i mätningen; tre avstod sedan en avgift kvarstod " +
+        "efter avsmalningen, och de bär svarstid och avgiftsuppgift men " +
+        "inga dokument. Talen är de som myndigheten själv fick före " +
         "publicering, och där ett svar har kommit in står det ordagrant " +
         "under dem. Namn på enskilda tjänstemän återges inte: där ett svar " +
         "är undertecknat skrivs rollen i stället.",
@@ -501,15 +505,37 @@ export const sv: Copy = {
       masked: "Maskade",
       rowDocuments: "dokument",
       rowMasked: "maskade",
-      noFiguresShort: "inga dokument i maskningsmätningen",
+      utanMatning: {
+        avgiftsstoppad: {
+          short: "kopiorna avstods sedan avgiften kvarstod",
+          long:
+            "Myndigheten aviserade en avgift, och den kvarstod efter " +
+            "protokollets avsmalning. Kopiorna avstods då enligt punkt P5, " +
+            "och ett skriftligt beslut om avgiften begärdes. Begäran bär " +
+            "svarstid och avgiftsuppgift men inga dokument i " +
+            "maskningsmätningen, och bortfallet räknas aldrig som ett " +
+            "utlämnande eller som ett avslag.",
+        },
+        statistik: {
+          short: "begäran C avser antalsuppgifter, inte handlingar",
+          long:
+            "Begäran C avser antalsuppgifter ur " +
+            "djurskyddskontrollregistret och inga handlingar, så " +
+            "myndigheten ingår inte i maskningsmätningen. Uttaget " +
+            "levererades utom dimensionen oanmäld mot föranmäld, och " +
+            "avslaget i den delen är överklagat och prövas av Kammarrätten " +
+            "i Jönköping som mål 3339-26.",
+        },
+      },
+      merged:
+        "Myndigheten hanterar de två begärandena som ett ärende och svarade " +
+        "samlat, så leveransen ligger i sin helhet under klass B. P0b säger " +
+        "att ingen begäran om särskiljning skickas, eftersom det vore en " +
+        "signal som inte alla myndigheter får.",
       area: "Maskad yta",
       interval: "Intervall",
       place: "Plats",
       placeOf: "i jämförelsen",
-      noFigures:
-        "Inga dokument i maskningsmätningen. Myndigheten bär svarstid och " +
-        "avgiftsuppgift, och bortfallet räknas aldrig som ett utlämnande " +
-        "eller som ett avslag.",
       reply: {
         heading: "Myndighetens svar",
         none: "Inget svar har kommit in",
@@ -544,7 +570,16 @@ export const sv: Copy = {
       note:
         "Varje mottagen fil registreras med sin sha256-kontrollsumma i " +
         "ett manifest som är beständigt: en post kan läggas till men " +
-        "aldrig ändras.",
+        "aldrig ändras. Förteckningen är filer och inte mätta dokument. " +
+        "Maskningsmätningen läser mapparna med ändelsen _A och _B; övriga " +
+        "mappar bär det som också kom in i ärendena och inte mäts: " +
+        "avgiftsbeslut, avslagsbeslut, Jordbruksverkets statistikuttag, " +
+        "nämnarsvar och korrespondensen med kammarrätterna. Två av de " +
+        "mätta mapparna rymmer en fil mer än sitt antal dokument, " +
+        "Uppsalas 28 mot 27 och Kalmars 6 mot 5: Uppsalas extra post är " +
+        "zip-arkivet som handlingarna kom i, och Kalmars är länets " +
+        "avslagsbeslut i samma mapp.",
+      fileWord: "fil",
       filesWord: "filer",
       headers: { file: "Fil", bytes: "Byte", sha256: "sha256" },
     },

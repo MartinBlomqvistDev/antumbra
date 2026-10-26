@@ -68,6 +68,10 @@ export type Authority = {
   } | null;
   svar: Reply[];
   svar_saknas: boolean;
+  /** Why the authority carries no redaction figures, or null when it does. */
+  utan_matning: "avgiftsstoppad" | "statistik" | null;
+  /** P0b: the authority handled both requests as one case. */
+  sammanslagen: boolean;
 };
 
 export type Sweden = {

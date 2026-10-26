@@ -19,6 +19,23 @@ export default function Handlingar() {
     const folder = row.path.split("/")[0];
     folders.set(folder, [...(folders.get(folder) ?? []), row]);
   }
+  // The two measured classes first under each authority, then everything else
+  // that arrived in the same cases: fee decisions, refusals, court
+  // correspondence. Plain alphabetical order put kalmar_B after
+  // kalmar_avslagsbeslut, which reads as a list that lost its order.
+  const rank = (folder: string) => {
+    const suffix = folder.slice(folder.lastIndexOf("_") + 1);
+    return suffix === "A" ? 0 : suffix === "B" ? 1 : 2;
+  };
+  const order = ([a]: [string, unknown], [b]: [string, unknown]) => {
+    const stemA = a.slice(0, a.lastIndexOf("_"));
+    const stemB = b.slice(0, b.lastIndexOf("_"));
+    return (
+      stemA.localeCompare(stemB, "sv") ||
+      rank(a) - rank(b) ||
+      a.localeCompare(b, "sv")
+    );
+  };
 
   return (
     <div className="space-y-12">
@@ -50,16 +67,19 @@ export default function Handlingar() {
         </p>
         <div className="space-y-2">
           {[...folders.entries()]
-            .sort(([a], [b]) => a.localeCompare(b, "sv"))
+            .sort(order)
             .map(([folder, rows]) => (
               <details
                 key={folder}
-                className="-lg border border-border-soft"
+                className="border border-border-soft"
               >
                 <summary className="cursor-pointer p-3 text-sm font-semibold">
-                  {folder}
-                  <span className="ml-2 font-normal text-ink-secondary">
-                    {count.format(rows.length)} {copy.deliveries.filesWord}
+                  {folder}{" "}
+                  <span className="font-normal text-ink-secondary">
+                    {count.format(rows.length)}{" "}
+                    {rows.length === 1
+                      ? copy.deliveries.fileWord
+                      : copy.deliveries.filesWord}
                   </span>
                 </summary>
                 <div className="overflow-x-auto border-t border-border-soft p-3">

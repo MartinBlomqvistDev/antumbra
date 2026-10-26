@@ -115,6 +115,48 @@ som mäts.
 Allt i avsnittet Form ovan gäller fortfarande: inga kakor, ingen spårning,
 tabellalternativ, "Vad sidan inte visar", WCAG 2.1 AA, utskriftsstilmall.
 
+## Genomgången 2026-10-26, och de fem felen den hittade
+
+Hela regelverket läst om före snittet, och sidorna gångna igenom mot det.
+Formbesluten ovan stod sig; det som föll var sakuppgifter, och de står här
+eftersom de alla har samma orsak: ett tal eller en frånvaro som hämtats ur
+loggen utan att den som skrev raden kontrollerade vad loggen räknar.
+
+1. **Sidan Handlingar sade tjugo av tjugoen.** Arton av de tjugoen
+   länsstyrelserna har dokument i maskningsmätningen. Talet tjugo var hämtat
+   från sidan Sveriges egen rad, som räknar något annat.
+2. **Raden myndigheter har levererat handlingar räknade en rad för hela
+   insamlingen.** Projektets egna loggrader bär `samtliga` i myndighetsfältet,
+   och de räknades som en myndighet. Talet är nitton av tjugotvå, med
+   Jordbruksverkets statistikuttag inräknat, och etiketten säger numera det.
+3. **Avgiftsstoppade begäranden stod som tio och listade två rader som inte är
+   begäranden.** Samma orsak: `samtliga · A+B` och `samtliga · A+B+C` låg i
+   listan. Talet är åtta, fyra län med två begäranden var.
+4. **Listan dolde att ett av de fyra länen senare fick sina handlingar.**
+   Kalmars avgift föll efter avsmalningen och båda klasserna kom in utan
+   avgift. Varje rad bär nu sitt utfall, läst ur om klassen har tal och inte
+   skrivet för hand.
+5. **Uppslag sade att livesöket öppnar tillsammans med sajten.** Det gör det
+   inte: tjänsten är inte driftsatt, och sidan säger numera att söket inte är
+   öppnat än och att exempelsvaren går genom samma kodväg.
+
+**Och en frånvaro som inte längre står naken.** Fyra myndigheter saknar tal i
+maskningsmätningen, och raden sade bara att dokument saknas. P5 kräver att
+bortfallet redovisas öppet och aldrig döljs genom att nämnaren tystas ned, så
+steg 41 läser skälet ur händelseloggen, per myndighet: ett avstående enligt P5
+för de tre avgiftsstoppade länen, en avsändning av begäran C för
+Jordbruksverket. Västmanlands tavla bär på samma sätt P0b-flaggan, eftersom
+länet svarade samlat och hela leveransen därför ligger under klass B. Inget av
+detta är skrivet i contentfilen; sidan skriver ut det loggen säger.
+
+Formfel som rättats samtidigt: sju element bar klassen `-lg`, resten av ett
+`rounded-lg` som klippts bort, myndighetsnamnet satt ihop med sina tal i
+textinnehållet eftersom mellanrummet var en marginal och inget blanksteg,
+`1 filer` stod i singularfallen, mapplistan sorterade `kalmar_B` efter
+`kalmar_avslagsbeslut`, sidan Sverige hade kvar sifferkorten med svart
+överkant, och rubriken över varje sifferblock på Hem var fortfarande liten grå
+text ovanför stor text.
+
 ## Teknik
 
 Next.js statiskt på Cloudflare för allt utom söket, enligt samma mönster som

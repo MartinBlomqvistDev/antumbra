@@ -126,7 +126,7 @@ export function JamforelseView({
         locale={locale}
         hrefBase={hrefBase}
       />
-      <aside className="max-w-2xl -lg border border-border-soft p-4 text-sm">
+      <aside className="max-w-2xl border border-border-soft p-4 text-sm">
         <h2 className="font-semibold">{copy.jamforelse.notShown.title}</h2>
         <p className="mt-1 text-ink-secondary">
           {copy.jamforelse.notShown.body}

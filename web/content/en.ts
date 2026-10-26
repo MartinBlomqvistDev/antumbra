@@ -230,7 +230,8 @@ export const en: Copy = {
       heading: "The state of play in numbers",
       sent: "requests sent",
       files: "files received, verified with sha256",
-      deliveringAuthorities: "authorities have delivered documents",
+      deliveringAuthorities:
+        "of 22 authorities released documents or figures",
       feeNotices: "authorities raised a fee",
       feeStopped: "requests fee-stopped",
       paid: "fees paid",
@@ -258,6 +259,8 @@ export const en: Copy = {
         "announced in 5, a decision was issued in 2, a decision was " +
         "refused in 1, one county answered with a general policy " +
         "document, and no county left the question unanswered.",
+      noCopies: "no copies were collected",
+      laterDelivered: "the documents arrived later, without a fee",
     },
     toHandlingar:
       "Every received file is listed with its checksum on the Swedish " +
@@ -346,8 +349,9 @@ export const en: Copy = {
         "The search could not be reached. The example questions below " +
         "still work.",
       note:
-        "Live search opens with the site. The example answers below are " +
-        "precomputed by the same code the live search runs.",
+        "Live search is not open yet. The example answers below are " +
+        "precomputed through the same code path the search runs, so the " +
+        "verbatim guarantee and the source references are the same.",
     },
   },
   metod: {

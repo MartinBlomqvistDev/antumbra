@@ -97,16 +97,16 @@ export default function Sverige() {
         <h2 className="text-2xl font-semibold tracking-tight">
           {copy.overview.heading}
         </h2>
-        <dl className="grid gap-6 sm:grid-cols-3">
+        <dl className="divide-y divide-border-soft border-y border-border-soft">
           {overview.map((item) => (
             <div
               key={item.label}
-              className="border-t-2 border-ink p-5"
+              className="grid items-baseline gap-x-6 py-3 sm:grid-cols-[9rem_1fr]"
             >
-              <dd className="text-3xl font-semibold tabular-nums">
+              <dd className="text-2xl font-semibold tabular-nums tracking-tight">
                 {item.value}
               </dd>
-              <dt className="mt-2 text-sm text-ink-secondary">{item.label}</dt>
+              <dt className="text-ink-secondary">{item.label}</dt>
             </div>
           ))}
         </dl>
@@ -220,7 +220,7 @@ export default function Sverige() {
           {copy.wordings.items.map((item) => (
             <details
               key={item.label}
-              className="-lg border border-border-soft"
+              className="border border-border-soft"
             >
               <summary className="cursor-pointer p-3 text-sm font-semibold">
                 {item.label}
@@ -238,9 +238,27 @@ export default function Sverige() {
         </h2>
         <p className="text-sm text-ink-secondary">{copy.feeStopped.note}</p>
         <ul className="space-y-1 text-sm">
-          {stats.feeStopped.map((entry) => (
-            <li key={entry}>{entry}</li>
-          ))}
+          {stats.feeStopped.map((entry) => {
+            // Whether that class later arrived anyway, read from the figures
+            // rather than stated here: one county's fee fell away after the
+            // waiver and its documents came in, and a list that left that out
+            // would read as four counties that released nothing.
+            const delivered = Boolean(
+              sweden.myndigheter.find(
+                (item) => item.myndighet === entry.authority,
+              )?.klasser[entry.request as "A" | "B"],
+            );
+            return (
+              <li key={`${entry.authority} ${entry.request}`}>
+                {entry.authority} · {entry.request} ·{" "}
+                <span className="text-ink-secondary">
+                  {delivered
+                    ? copy.feeStopped.laterDelivered
+                    : copy.feeStopped.noCopies}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section className="max-w-2xl space-y-2">

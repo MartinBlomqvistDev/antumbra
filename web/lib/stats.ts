@@ -10,11 +10,15 @@ export type SwedenStats = {
   files: number;
   deliveringAuthorities: number;
   feeNotices: number;
-  feeStopped: string[];
+  feeStopped: { authority: string; request: string }[];
 };
 
 export function swedenStats(): SwedenStats {
   const log = readLog();
+  // Rows the project wrote about the whole collection carry "samtliga" in the
+  // authority field. Counted as an authority it put a twentieth deliverer on
+  // the page and two rows reading "samtliga · A+B" under the fee stops.
+  const authorities = log.filter((row) => row.myndighet !== "samtliga");
   const distinct = (rows: typeof log) =>
     new Set(rows.map((row) => row.myndighet)).size;
   return {
@@ -27,17 +31,22 @@ export function swedenStats(): SwedenStats {
     ).length,
     files: readDeliveryManifest().length,
     deliveringAuthorities: distinct(
-      log.filter((row) => row.handelse === "leverans"),
+      authorities.filter((row) => row.handelse === "leverans"),
     ),
     feeNotices: distinct(
-      log.filter((row) => (row.handelse ?? "").includes("avgiftsbesked")),
+      authorities.filter((row) => (row.handelse ?? "").includes("avgiftsbesked")),
     ),
     feeStopped: [
       ...new Set(
-        log
+        authorities
           .filter((row) => (row.notering ?? "").includes("avgiftsstoppad"))
-          .map((row) => `${row.myndighet} · ${row.begaran}`),
+          .map((row) => `${row.myndighet}|${row.begaran}`),
       ),
-    ].sort(),
+    ]
+      .sort()
+      .map((entry) => {
+        const [authority, request] = entry.split("|");
+        return { authority, request };
+      }),
   };
 }

@@ -45,6 +45,7 @@ CONTRAST = ROOT / "data" / "kontrast.jsonl"
 REPLIES = ROOT / "data" / "p12_svar.jsonl"
 SENT = ROOT / "data" / "p12_avsant_manifest.jsonl"
 ANNEXES = ROOT / "data" / "bilagor.jsonl"
+LOG = ROOT / "data" / "protokoll_logg.jsonl"
 PAIRS = ROOT / "data" / "dubbelforekomst.jsonl"
 OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 
@@ -174,6 +175,33 @@ def class_figures(
     }
 
 
+def without_measurement(log: list[dict], authority: str) -> str | None:
+    """Why an authority carries no redaction figures, read out of the log.
+
+    An authority with no documents in the measurement is the single most
+    misreadable row on the page: an empty cell looks like a finding about the
+    authority when it is a consequence of the protocol. P5 is explicit that the
+    loss is reported openly and never hidden by silencing the denominator, so
+    the reason is carried as a key and the page writes it out. The key is read
+    from the events, not decided here: a waiver is P5's ``avstående``, and a
+    request for figures is an ``avsändning`` of request C.
+    """
+    own = [row for row in log if row["myndighet"] == authority]
+    if any(row["handelse"] == "avsändning" and row["begaran"] == "C" for row in own):
+        return "statistik"
+    if any(row["handelse"] == "avstående" for row in own):
+        return "avgiftsstoppad"
+    return None
+
+
+def merged(log: list[dict], authority: str) -> bool:
+    """Whether P0b was flagged for this authority, so one class carries both."""
+    return any(
+        row["myndighet"] == authority and row["handelse"] == "sammanslagning enligt P0b"
+        for row in log
+    )
+
+
 def contrast_summary(authorities: list[dict]) -> dict:
     """The P1 contrast: the difference inside one authority, over counties with both.
 
@@ -217,6 +245,7 @@ def build() -> dict:
     contrast = read(CONTRAST)
     replies = read(REPLIES)
     sent = {row["slug"]: row for row in read(SENT)}
+    log = read(LOG)
 
     comparison = {klass: ranking_rows(step36, masking, klass) for klass in CLASSES}
     places = {
@@ -256,6 +285,12 @@ def build() -> dict:
                 "paket": sent.get(slug),
                 "svar": own,
                 "svar_saknas": not any(row["typ"] == "substantiellt" for row in own),
+                "utan_matning": (
+                    None
+                    if any(classes.values())
+                    else without_measurement(log, authority)
+                ),
+                "sammanslagen": merged(log, authority),
             }
         )
 

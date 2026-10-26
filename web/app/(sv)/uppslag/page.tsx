@@ -14,7 +14,7 @@ export default function Uppslag() {
   return (
     <div className="space-y-8">
       <PageIntro title={sv.uppslag.title} lead={sv.uppslag.lead} />
-      <p className="max-w-2xl -lg border border-border-soft p-4 text-sm">
+      <p className="max-w-2xl border border-border-soft p-4 text-sm">
         {sv.uppslag.banner}
       </p>
       {apiBase ? (
@@ -32,7 +32,7 @@ export default function Uppslag() {
           <details
             key={example.question}
             open={index === 0}
-            className="-lg border border-border-soft"
+            className="border border-border-soft"
           >
             <summary className="cursor-pointer p-4 text-sm font-semibold">
               {example.question}

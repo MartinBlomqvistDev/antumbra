@@ -67,7 +67,7 @@ function ChainRecommendation({
       ? `${recommendation.text.slice(0, 160)}…`
       : recommendation.text;
   return (
-    <details className="-lg border border-border-soft">
+    <details className="border border-border-soft">
       <summary className="cursor-pointer p-4 text-sm">
         <span className="font-semibold">
           {labels.recommendationLabel} {recommendation.number}.
