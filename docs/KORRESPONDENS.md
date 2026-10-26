@@ -185,3 +185,31 @@ Fem i `tests/test_repository_invariants.py`:
    händelse i protokollloggen.
 5. Registret mäts mot förteckningen, ingenting utanför avgränsningen står i
    det, och talet i `VERIFIERAT.md` stämmer med filerna.
+
+### Tillagt 2026-10-26: avstämningen frågade inte efter alla brev
+
+Steg 53 stämmer av registret mot protokollloggen. Den filtrerade loggen på en
+lista över avsända händelsetyper, och listan var ofullständig. Tre slag av brev
+stod utanför den: `avstående`, alltså de åtta brev som avstår från kopior när en
+avgift kvarstår efter avsmalningen, `beslutsbegäran och fråga om uttagets
+fullständighet`, alltså P8:s sju skrivelser, och det ena av femton
+`rättelse`-brev som faktiskt gick till en myndighet. Nämnaren var därför 160 när
+den skulle vara 176, och steget rapporterade myndigheter som klara vars brev det
+aldrig frågat efter.
+
+Steget hade en docstring som påstod att en ny typ skulle visa sig som okänd.
+Ingenting genomförde det. Nu står varje händelsetyp i loggen i en av två
+mängder, `SENDS` eller `NOT_SENDS`, och en typ i ingen av dem avbryter steget med
+exit 1. Den kontrollen hittade omedelbart sex interna typer som det första
+svepet missade, eftersom svepet filtrerade bort raderna med myndighet
+`samtliga`.
+
+`rättelse` står som icke-avsänd trots att ett av breven gick. Typen betecknar en
+rättelse, och fjorton av de femton rättar projektets egna anteckningar, loggen
+eller en oavsänd läskopia. En typ kan inte vara till hälften en avsändning, så
+typen är det inte, och det enskilda brevet står namngivet i `EXTRA`.
+
+Samma fel i en annan skepnad: nyckeln som parar en loggrad mot en registerrad
+bestod av datum och händelse. De två begärandena gick ut en minut isär den 3
+augusti, så en B-rad bockade av A-raden, och Gotlands saknade A-begäran
+rapporterades som närvarande. Nyckeln bär nu även begäran.

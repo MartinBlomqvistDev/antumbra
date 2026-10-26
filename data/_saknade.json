@@ -1,0 +1,704 @@
+[
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:00:17",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gotland",
+  "begaran": "A",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:00:52",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:01:27",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:01:38",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "A",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:01:42",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Östergötland",
+  "begaran": "A",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:01:47",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Dalarna",
+  "begaran": "B",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:02:01",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Jönköping",
+  "begaran": "B",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:02:04",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "B",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:02:47",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "B",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-03",
+  "klockslag": "10:03:24",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "avsändning",
+  "notering": ""
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:24",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gävleborg",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, begäran begränsad till de fem senast meddelade besluten; avstå-klausul vid kvarstående avgift"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:25",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gävleborg",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, begäran begränsad till de fem senast genomförda kontrollerna; avstå-klausul vid kvarstående avgift"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:35",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:35",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västerbotten",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västerbotten",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Östergötland",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Östergötland",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kronoberg",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Värmland",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Värmland",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Skåne",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Skåne",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Stockholm",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Norrbotten",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem beslut"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Norrbotten",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem kontroller"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem beslut"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem kontroller"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Jönköping",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem beslut"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "12:37",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Jönköping",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P4 och P5 i ett: omfångsfrågan besvarad genom avgränsningen ur ursprungsbegäran, avgift avböjd, avsmalning till fem kontroller"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "13:48",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gävleborg",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "bekräftelse plus upprepad avgränsning: fem kontroller respektive fem beslut, med färre-än-klausulen; myndighetens förslag om fyra varken godtaget eller avvisat, klausulen avgör beroende på hur många beslut som finns"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "15:03",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "B definierad genom begärans egna fragment: fem beslut med bilagor, oavsett djurslag bland de tre"
+ },
+ {
+  "datum": "2026-08-04",
+  "klockslag": "15:38",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Jönköping",
+  "begaran": "A+B",
+  "handelse": "förnyad begäran om avgiftsbeslut",
+  "notering": "särskilt skriftligt beslut enligt 23 § avgiftsförordningen begärt uttryckligen, enligt tillämpningsnot 2; avgick som eget utskick med matchande ämnesrad"
+ },
+ {
+  "datum": "2026-08-05",
+  "klockslag": "15:45",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten"
+ },
+ {
+  "datum": "2026-08-05",
+  "klockslag": "15:45",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna"
+ },
+ {
+  "datum": "2026-08-05",
+  "klockslag": "15:45",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västra Götaland",
+  "begaran": "B",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste besluten; den utökade frasen besvarar samtidigt djurslagsfrågan"
+ },
+ {
+  "datum": "2026-08-05",
+  "klockslag": "15:46",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västra Götaland",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senaste kontrollerna; den utökade frasen besvarar samtidigt djurslagsfrågan"
+ },
+ {
+  "datum": "2026-08-06",
+  "klockslag": "14:36",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "A+B",
+  "handelse": "beslutsbegäran upprepad",
+  "notering": "svar på riktlinjen: en riktlinje är inte ett särskilt skriftligt beslut enligt 23 § avgiftsförordningen (1992:191); begäran om beslut vidhålls"
+ },
+ {
+  "datum": "2026-08-07",
+  "klockslag": "10:34",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Östergötland",
+  "begaran": "A",
+  "handelse": "förtydligande",
+  "notering": "svar på leveransen av förelägganden i A-tråden: begäran A avser kontrollrapporter som egna handlingar, de fem senast genomförda kontrollerna räknat efter kontrolldatum; komponerat av begäranstextens fragment"
+ },
+ {
+  "datum": "2026-08-10",
+  "klockslag": "16:04",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Uppsala",
+  "begaran": "B",
+  "handelse": "påminnelse",
+  "notering": "P2, dag 5: ingen kontakt alls för begäran B sedan avsändningen 3/8, medan begäran A fick mottagningsbesked 4/8; ursprungsbrevet citerat i sin helhet"
+ },
+ {
+  "datum": "2026-08-11",
+  "klockslag": "11:33",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kronoberg",
+  "begaran": "A",
+  "handelse": "avsmalningssvar",
+  "notering": "P5: avgift avböjd, avsmalning till de fem senast genomförda kontrollerna"
+ },
+ {
+  "datum": "2026-08-12",
+  "klockslag": "11:42",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "B",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "omfånget återgivet ur begärans egna avgränsningar med tillägget att det är fem beslut sammanlagt och inte fem per djurslag; avståendet kvarstår och beslut enligt 23 § avgiftsförordningen begärs på nytt enligt tillämpningsnot 2"
+ },
+ {
+  "datum": "2026-08-12",
+  "klockslag": "11:43",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "A",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "omfånget upprepat ordagrant; avståendet och begäran om särskilt skriftligt beslut om avgiften kvarstår oförändrade"
+ },
+ {
+  "datum": "2026-08-12",
+  "klockslag": "11:43",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "B",
+  "handelse": "förtydligande",
+  "notering": "samma omfångsbekräftelse skickad i B-tråden trots att ingen fråga ställts där, eftersom avgiften vilar på en sammanräkning av båda begärandena och ett svar enbart om A kunde läsas som att B fallit bort"
+ },
+ {
+  "datum": "2026-08-13",
+  "klockslag": "07:42",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "B",
+  "handelse": "beslutsbegäran upprepad",
+  "notering": "svar på taxebeslutet och på myndighetens fråga om vad som är fel med beloppet: ingen invändning mot beräkningen, avgift kan inte betalas och kopior avstås alltjämt; det bifogade dokumentet identifieras med sitt eget datum och diarienummer och med att det enligt sin lydelse gäller alla utlämnanden från 1 januari 2026, alltså inte ett beslut i ärendet; begäran om särskilt skriftligt beslut enligt 23 § avgiftsförordningen vidhålls; P4-fristen hölls"
+ },
+ {
+  "datum": "2026-08-13",
+  "klockslag": "08:59",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "B",
+  "handelse": "svar på förtydligandefråga och accept av elektronisk leverans",
+  "notering": "besked om att den begärda prövningen gäller avgiften och att begäran om beslut förfaller om handlingarna lämnas ut elektroniskt utan avgift; elektronisk leverans accepteras uttryckligen, medan maskningen inte godtas i särskild ordning utan hanteras genom den stående meningen ur ursprungsbegäran om att handlingen önskas i övriga delar; formuleringen enligt ert förslag ströks medvetet för att maskningen inte ska bli beställd av sökanden och därmed ojämförbar med övriga län; flaggan avgiftsstoppad kvarstår till dess leverans skett utan avgift"
+ },
+ {
+  "datum": "2026-08-13",
+  "klockslag": "08:59",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "förfrågan om elektroniskt utlämnande",
+  "notering": "egen förfrågan, utan korshänvisning till erbjudandet i B-tråden enligt P0:s princip om separata brev: omfånget förankrat som de fem senast genomförda kontrollerna räknat efter kontrolldatum under samma period, och fråga om de kan lämnas ut elektroniskt utan avgift; avståendet från 4/8 och flaggan avgiftsstoppad kvarstår till dess frågan besvarats"
+ },
+ {
+  "datum": "2026-08-13",
+  "klockslag": "07:34",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "förfrågan om beskedets innebörd",
+  "notering": "egen fråga, deras mening citerad ordagrant: saknas uppgiften om föranmälan helt i djurskyddskontrollregistret, eller finns den registrerad men kan inte tas fram med rutinbetonade åtgärder; distinktionen avgör om bortfallet är ett faktiskt hinder eller ett prövbart avslag, och därmed om P8:s C-gren utlöses efter fredagens leverans"
+ },
+ {
+  "datum": "2026-08-14",
+  "klockslag": "16:09",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "förfrågan om länsuppdelning",
+  "notering": "fråga om antalet föranmälda respektive ej föranmälda kontroller kan lämnas per län, med tillägget att ett besked räcker om det inte går med rutinbetonade åtgärder"
+ },
+ {
+  "datum": "2026-08-14",
+  "klockslag": "16:14",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "förfrågan om fjäderfätäckning",
+  "notering": "tillägg fem minuter senare, avsiktligt skickat direkt så att båda frågorna kunde hanteras i samma arbetspass: begäran gällde fjäderfä medan filen omfattar checklistan Värphöns fler än 350 st, finns motsvarande för övrigt fjäderfä som slaktkyckling"
+ },
+ {
+  "datum": "2026-08-18",
+  "klockslag": "16:43",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "P4-svar inom fristen på erbjudandet om 168 länsvisa rapporter. Ja till uttaget, och begärans tre dimensioner upprepade ordagrant så att ingen släpps: oanmäld mot föranmäld, kontrolltyp, brist. Går dimension 1 inte att korsa med 2 och 3 tas den för sig, med delbarhetsmeningen åberopad för besked om vilken del som inte gick. Ingen ny dimension tillagd, ingen avgiftsfråga väckt, ingen ståndpunkt intagen om huruvida uttaget är rutinbetonat. Beslutsbegäran från 2026-08-17 nämns inte och kvarstår"
+ },
+ {
+  "datum": "2026-08-20",
+  "klockslag": "09:23",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "P4-svar inom fristen på frågan om åren ska hållas isär eller slås ihop. Valde 336 rapporter med åren åtskilda, eftersom år är en av begärans dimensioner och P4 inte tillåter att en dimension släpps i ett svar på en förtydligandefråga. Skälet angivet i brevet: slås åren ihop går uppdelningen inte att återskapa i efterhand. Delbarhetsmeningen åberopad på nytt. Ingen avgiftsfråga väckt, ingen ståndpunkt intagen om huruvida uttaget är rutinbetonat"
+ },
+ {
+  "datum": "2026-08-25",
+  "klockslag": "13:52",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "förfrågan om beskedets innebörd",
+  "notering": "Fråga om samma radnivåuttag kan köras med ett fält till för om kontrollen var föranmäld, alltså korsningen aviserad mot brist som punkt 1 och punkt 3 i begäran den 3 augusti efterfrågade och som hittills levererats var för sig. Ett nej anges uttryckligen som godtagbart svar. Brevet nämner också, som information utan begäran om åtgärd, att K_2024_oanmalda_gris.skv innehåller Länsbokstav W. Gick som eget meddelande med ämnet Re: Begärda hanlingar, inte i myndighetens tråd, eftersom utkastet tappade trådkopplingen"
+ },
+ {
+  "datum": "2026-08-25",
+  "klockslag": "14:10",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 6666-2026-2, i myndighetens egen dikterade lydelse. Myndigheten anger själv ordagrant: \"Det innebär inte att du godkänt beslutets innehåll.\" Delfåendet är därmed bekräftat till 2026-08-25. P9:s frist på 14 kalenderdagar löper till 2026-09-08, lagens tre veckor enligt 44 § förvaltningslagen till 2026-09-15"
+ },
+ {
+  "datum": "2026-08-25",
+  "klockslag": "15:04",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "överklagande",
+  "notering": "Första överklagandet i insamlingen, och det första av högst fem för A och B enligt P9. Utlöst av kriterium (b), prövat mot tillämpningsnot 6: beslutet namnger själv den maskerade uppgiftstypen, vilket är notens villkor för att kriteriet ska få drivas. Rangordningen enligt femtaket är räknad före avsändning: av de sex län som fått P8 ligger Kalmar tvåa i maskad yta i klass A, så överklagandet kan inte ta en plats ett starkare fall behöver. Ställt till Kammarrätten i Jönköping, som har Kalmar län i sin domkrets, och ingivet till Länsstyrelsen enligt 43 § förvaltningslagen. Två grunder: att myndigheten enligt sin egen formulering \"till övervägande del\" inte prövat varje uppgift för sig under det raka skaderekvisitet i 30 kap. 23 § första stycket 1 OSL, och att ett antagande om skada inte kan hämtas ur dokumenttypen, styrkt med att fem länsstyrelser lämnat ut 17 kontrollrapporter helt omaskade. Skrivelsen redovisar att jämförelsen finns; avsnitt 12 risk 0 slår fast att parningen inte ska döljas. Fristen enligt P9 var 2026-09-08"
+ },
+ {
+  "datum": "2026-08-28",
+  "klockslag": "10:14",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "beslutsbegäran",
+  "notering": "P8 tillämpad på C, efter beskedet 2026-08-26 att korsningen aviserad mot brist inte går att få fram. De två operativa meningarna är P8:s förskrivna lydelse ordagrant. Avvikelse från stommen: P8:s andra mening lyder \"Delar av innehållet har maskerats\", vilket är osant här eftersom ingenting maskats utan en del inte gått att ta fram, och protokollet medger bara att byta ordet handlingarna mot sammanställningen. Den faktiska meningen är därför omskriven till vad som hänt. Engångsanpassning, eftersom det finns en enda C-begäran; blir situationen återkommande skrivs en tillämpningsnot. Orden avslag och överklagande används inte i brevet"
+ },
+ {
+  "datum": "2026-08-28",
+  "klockslag": "10:47",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Halland",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 5556-2026. Meddelandet kom 2026-08-27 kl. 13:17 och kvitterades dagen efter, så delfåendet i faktisk mening är den 27:e medan den elektroniska delgivningen fullbordades den 28:e. P9:s frist på 14 kalenderdagar räknas från den tidigare av dem, alltså till 2026-09-10; lagens tre veckor löper till den 17:e räknat från den 27:e och till den 18:e räknat från den 28:e, och den tidigare används"
+ },
+ {
+  "datum": "2026-08-28",
+  "klockslag": "10:47",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Örebro",
+  "begaran": "A+B",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av avgiftsbeslutet dnr 13775-2026"
+ },
+ {
+  "datum": "2026-08-31",
+  "klockslag": "16:13",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kronoberg",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 4902-2026, med tack för de kompletterande handlingarna. Delfående 2026-08-31, så P9:s frist på 14 kalenderdagar löper till 2026-09-14 och lagens tre veckor till 2026-09-21"
+ },
+ {
+  "datum": "2026-08-31",
+  "klockslag": "16:28",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Halland",
+  "begaran": "A",
+  "handelse": "överklagande",
+  "notering": "Andra överklagandet av högst fem för A och B enligt P9. Utlöst av kriterium (b), prövat mot tillämpningsnot 6: beslutet namnger själv den maskerade uppgiftstypen. Halland ligger trea av sex i maskad yta i klass A, alltså tryggt innanför femtaket. Ställt till Kammarrätten i Göteborg, som har Hallands län i sin domkrets, och ingivet till Länsstyrelsen enligt beslutets egen anvisning. Tre grunder: att det maskerade är den uppgift kontrollrapporten upprättats för att redovisa, att det raka skaderekvisitet i 30 kap. 23 § första stycket 1 OSL ska prövas för varje uppgift medan beslutet namnger en kategori, och att fyra länsstyrelser lämnat ut tolv kontrollrapporter helt omaskade medan två andra omprövat sina maskningar och lämnat ut mer. Maskningen med stöd av 21 kap. 1 § överklagas uttryckligen inte, enligt tillämpningsnot 6. Två sakfel rättades i utkastet före avsändning: påståendet om 17 kontrollrapporter från fem län var fel, eftersom fem av de sjutton omaskade klass A-handlingarna är grundvillkor, klagomålskopior, en fotobilaga och en underrättelse; rätt tal är tolv från fyra län. Och påståendet att det maskerade var handlingens huvudsakliga innehåll ströks, eftersom Hallands maskade yta är 7,8 procent i medeltal och påståendet hade fallit vid en okulär kontroll. Att de tolv är omaskade vilar på fyra signaler: noll rutor och staplar, ingen maskningsmarkör i filnamn eller text, textlager i samtliga, och noll dolda tecken enligt steg 26; två av dem är dessutom öppnade för hand av Martin"
+ },
+ {
+  "datum": "2026-09-03",
+  "klockslag": "14:09",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "överklagande",
+  "notering": "Tredje överklagandet i insamlingen och det första utanför femtaket. P9 föreskriver det utan prövning av kriterierna: \"Ett avslag på C överklagas alltid och räknas utanför femtaket; frågan om rutinbetonade åtgärder är billig att driva och värd ett avgörande i sig.\" Ställt till Kammarrätten i Jönköping och ingivet till Jordbruksverket enligt beslutets egen anvisning. Fyra grunder: att beslutet bara prövar begärans mest omfattande form och inte den utan djurslag, att båda uppgifterna redan tagits fram ur samma register var för sig, att beslutet inte anger vad som hindrar sammanförandet, och att ingen sekretessbestämmelse är åberopad. Andrahandsyrkande om sammanställningen utan checklista. En grund ströks ur utkastet före avsändning: att myndighetens besked den 25 och 26 augusti går isär. Myndigheten rättade själv sitt första besked dagen därpå, och att driva den motsägelsen som argument hade varit att utnyttja en självrättelse. Brevet nämner i stället beskedet neutralt och säger uttryckligen att det inte åberopas. Skrivelsen slår också fast att överklagandet inte riktar sig mot handläggningen. Autosvaret från myndigheten upprepar det som avsnitt 12 risk 0 redan bygger på: \"I princip blir all post till Jordbruksverket allmän handling.\" Fristen enligt P9 var 2026-09-16 och enligt 44 § förvaltningslagen 2026-09-23"
+ },
+ {
+  "datum": "2026-09-03",
+  "klockslag": "14:07",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "delgivningskvitto",
+  "notering": "Bekräftelse på myndighetens fråga i mejlet med beslutet: \"Vänligen återkoppla om det fungerar för dig att öppna handlingen och ta del av beslutet.\" Svaret bekräftar att beslutet går att öppna och är läst. Skickat två minuter före överklagandet samma dag. Loggat i efterhand 2026-09-04, och hamnar därför efter överklagandet i loggens ordning trots att det gick före, enligt avsnitt 7"
+ },
+ {
+  "datum": "2026-09-05",
+  "klockslag": "13:25",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västra Götaland",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 33706-2026, skickad av Martin i myndighetens egen tråd som de bad om. Kvittot namnger mottagningsdatumet 4 september och inte beslutsdatumet, eftersom myndighetens egen text ger två olika datum, brödtexten 2026-09-01 och ämnesraden och beslutet 2026-09-04, och fristen räknas från delfåendet. Utkastet skrevs 2026-09-05 och skickades av Martin samma dag efter läsning. Fristerna är oförändrade: protokollets 2026-09-18, lagens 2026-09-25, och beslutet överklagas inte enligt tillämpningsnot 6"
+ },
+ {
+  "datum": "2026-09-08",
+  "klockslag": "15:13",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kalmar",
+  "begaran": "A",
+  "handelse": "yttrande till kammarrätten",
+  "notering": "Yttrande i mål 3249-26 avsänt av Martin efter läsning, ordagrant som utkastet, till kammarrättens registratur med målnumret i ämnesraden. Domstolens frist var 2026-09-15, alltså sju dagar före utgången. Vägen valdes framför svar inne i tjänsten Säker e-post, som inte lämnar någon kopia i brevlådan och raderar meddelandet efter 30 dagar; protokollloggens bevisvärde vilar på att varje utgående meddelande finns kvar med sitt meddelandehuvud. Domstolens eget brev anger samma adress för ändamålet. Yttrandet bestrider inte att maskad elektronisk leverans accepterats, godtar uttryckligen att personuppgiftsmaskningen ligger utanför målet, och avgränsar saken till maskningen enligt 30 kap. 23 § i de fem namngivna kontrollrapporterna"
+ },
+ {
+  "datum": "2026-09-14",
+  "klockslag": "12:51",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Södermanland",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 6102-2026, skickad av Martin i myndighetens egen tråd som de bad om. Kvittot namnger mottagningsdatumet 11 september och inte beslutsdatumet 8 september, i samma lydelse som kvittot till Västra Götaland. Delfåendet räknas från mottagandet, som för Halland, så fristerna är oförändrade: protokollets 2026-09-25 och lagens 2026-10-02. Beslutet överklagas inte enligt tillämpningsnot 6"
+ },
+ {
+  "datum": "2026-09-22",
+  "klockslag": "11:54",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gotland",
+  "begaran": "A",
+  "handelse": "delgivningskvitto",
+  "notering": "Mottagningsbekräftelse av beslutet dnr 3287-2026, skickad av Martin i myndighetens egen påminnelsetråd som de bad om, 17 arbetsdagar efter utskicket och 11 arbetsdagar efter myndighetens egen svarsfrist 2026-09-11. Kvittot bär två datum, till skillnad från kvittona till Västra Götaland och Södermanland där mejlet och läsningen skedde samma dag, ordagrant: \"Beslutet i ärende 3287-2026 kom till min e-post den 28 augusti 2026. Jag tog del av det den 22 september 2026 och bekräftar härmed mottagandet.\" Lydelsen valdes i tre varv. Den skriver inte att beslutet mottagits den 22 september, eftersom det kom den 28 augusti, och den anger inte från vilken dag överklagandefristen löper, eftersom det är myndighetens och domstolens bedömning och ett felaktigt påstående där skulle följa med genom målet"
+ },
+ {
+  "datum": "2026-09-22",
+  "klockslag": "11:57",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gotland",
+  "begaran": "A",
+  "handelse": "överklagande",
+  "notering": "Tredje överklagandet inom P9:s femtak, efter Kalmar och Halland; Jordbruksverkets C-överklagande räknas utanför taket. Ställt till Kammarrätten i Stockholm och ingivet till Länsstyrelsen enligt 43 § förvaltningslagen, i egen tråd med egen ämnesrad. Instansen är bestämd i primärkälla: 1 § 1 och 5 § förordningen (1977:937) om allmänna förvaltningsdomstolars behörighet m.m. lägger Gotlands län i Förvaltningsrätten i Stockholms domkrets, alltså Kammarrätten i Stockholm, vilket blir en fjärde domstol i insamlingen. Beslutet anger kammarrätten utan att namnge vilken. Fyra grunder: att det maskade är kontrollens eget resultat, att skaderekvisitet i 30 kap. 23 § första stycket 1 är rakt och ska prövas uppgift för uppgift, att sex län lämnat ut 47 A-handlingar helt omaskade varav 44 benämner sig kontrollrapport, och att Länsstyrelsen själv lämnade ut mer vid omprövningen den 27 augusti. Jämförelsetalen är omräknade ur data/maskning.jsonl och handlingarna 2026-09-22, eftersom mätningen 45 av 47 i VERIFIERAT saknar committat steg och alltså inte går att köra om; de verifierbara talen är 47 och 44. De fyra maskade rapporterna, 5027-2025, 5215-2025, 5238-2025 och 5296-2025, är lästa ur handlingarnas egna förstasidor, eftersom beslutet inte namnger någon av dem. Överklagandet innehåller inget påstående om från vilken dag fristen löper och inget yrkande om återställande av försutten tid; ett eget avsnitt anger utskickstiden, läsningsdagen och att bekräftelse inte lämnats tidigare. Prövningstillstånd krävs inte, verifierat samma dag mot 34 a § förvaltningsprocesslagen (1971:291), som bara gäller överklagande av ett beslut som förvaltningsrätten meddelat"
+ },
+ {
+  "datum": "2026-09-28",
+  "klockslag": "10:30:06",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A",
+  "handelse": "påminnelse",
+  "notering": "P10:s sista påminnelse, avsänd på dag 40 som tillämpningsnot 7 tillåter tidigast. Brevet är byggt av steg 37 ur protokollloggen, med den ursprungliga begäran citerad ordagrant ur mallen och länets egen historik återgiven ur loggen. Det begär inget överklagbart beslut, vilket är beslutslogg rad 5, och nämner ingenting om att något mäts, vilket är rad 8. Efter tio arbetsdagar, 2026-10-12, når en fortsatt obesvarad begäran slutstatus enligt not 7"
+ },
+ {
+  "datum": "2026-09-28",
+  "klockslag": "10:30:32",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Norrbotten",
+  "begaran": "A",
+  "handelse": "påminnelse",
+  "notering": "P10:s sista påminnelse, avsänd på dag 40 som tillämpningsnot 7 tillåter tidigast. Brevet är byggt av steg 37 ur protokollloggen, med den ursprungliga begäran citerad ordagrant ur mallen och länets egen historik återgiven ur loggen. Det begär inget överklagbart beslut, vilket är beslutslogg rad 5, och nämner ingenting om att något mäts, vilket är rad 8. Efter tio arbetsdagar, 2026-10-12, når en fortsatt obesvarad begäran slutstatus enligt not 7"
+ },
+ {
+  "datum": "2026-09-29",
+  "klockslag": "16:22:13",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Halland",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "Svar på länets två frågor om nämnarfrågans omfång, avsänt av Martin efter läsning, sex timmar och 23 minuter efter frågan och inom P4:s arbetsdag. Svaret upprepar frågans egna ord och lägger ingen gräns till, enligt tillämpningsnot 9: att frågan gäller anläggningar med nötkreatur, grisar respektive fjäderfä och inte innehåller någon gräns för besättningens storlek, att talen önskas per djurslag, och att perioderna är 1 januari 2024 till 31 december 2025 för kontrollerna och 1 januari 2022 till 31 december 2025 för besluten. Det sista är också en tyst rättelse av att länet återgav kontrollperioden som slutande 31 januari 2025. Ingen läsning föreskrivs, och den läsning länet väljer registreras i data/namnare.jsonl när svaret kommer"
+ },
+ {
+  "datum": "2026-09-29",
+  "klockslag": "16:22:21",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Kronoberg",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga",
+  "notering": "Svar på länets fråga om det går bra att de återkommer senare under dagen eller i morgon, avsänt av Martin efter läsning. Svaret lyder \"Ja, det går bra.\" och medger ingenting om omfång eller frist, eftersom frågan gällde tid"
+ },
+ {
+  "datum": "2026-09-30",
+  "klockslag": "12:05",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västerbotten",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga om nämnaren",
+  "notering": "Svar på länets fråga, avsänt av Martin efter läsning, tre timmar och 23 minuter efter frågan. Svaret följer tillämpningsnot 9 och upprepar frågans egna ord utan att lägga till någon gräns: att frågan gäller anläggningar med nötkreatur, grisar respektive fjäderfä, att den inte innehåller någon gräns för besättningens storlek och inte skiljer på verksamhet, produktion och hobby, och att vad som föranlett kontrollen inte har betydelse. Ingen läsning föreskrivs; länets egen läsning registreras i data/namnare.jsonl"
+ },
+ {
+  "datum": "2026-10-02",
+  "klockslag": "13:12:09",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gävleborg",
+  "begaran": "A+B",
+  "handelse": "svar på förtydligandefråga om nämnaren",
+  "notering": "Svar på länets fråga om delar av informationen är av intresse, avsänt som svar i nämnarfrågans egen tråd till den brevlåda länet skrev från, fem timmar och 17 minuter efter frågan och inom P4:s arbetsdag. Svaret följer tillämpningsnot 9: frågans egna ord upprepas, ingen gräns läggs till, och ingen läsning föreskrivs. Ordagrant om vad som tas emot: att delar av informationen är av intresse, att varje tal behöver säga vad det omfattar, att ett tal som räknar rutinkontroller men inte klagomålskontroller går bra så länge det står i svaret, och att ingenting uppskattas medan det som inte går att ta fram redovisas som att uppgiften saknas. Meddelande 1a0fc5085bbf59f9"
+ },
+ {
+  "datum": "2026-10-02",
+  "klockslag": "13:13:59",
+  "kanal": "e-post",
+  "myndighet": "Jordbruksverket",
+  "begaran": "C",
+  "handelse": "P12-paket avsänt",
+  "notering": "P12-paketet avsänt av Martin som brödtext i ett nytt meddelande till myndighetens officiella brevlåda, med den ämnesrad som är identisk för alla 22 och svarsdatum 2026-10-23, tre veckor enligt tillämpningsnot 8. Texten är den i data/p12/brev, jämförd rad för rad mot utkastet före avsändningen. Meddelande 1a0fc52324a3e04f"
+ },
+ {
+  "datum": "2026-10-02",
+  "klockslag": "20:24:55",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Gävleborg",
+  "begaran": "A+B",
+  "handelse": "rättelse av P12-paket",
+  "notering": "Rättelsen avsänd av Martin som svar i P12-tråden till den officiella brevlådan, sju timmar och tolv minuter efter paketet. Den säger vilken mening som är överspelad, att den gällde när paketet byggdes, att svaret på länets fråga gick till enheten för djurskydd 13.12 och 19 sekunder före paketet, och att inget annat i paketet ändras och svarsdatumet 23 oktober 2026 står. Inga siffror berörs. Avvikelsen som rättelsen gäller är loggad för sig samma dag. Meddelande 1a0fddcbc7534304"
+ },
+ {
+  "datum": "2026-10-05",
+  "klockslag": "19:44:47",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A",
+  "handelse": "rättelse av P12-paket",
+  "notering": "Rättelsen avsänd av Martin som svar i P12-tråden till den officiella brevlådan. Den säger vilken mening som var fel, att länet lämnade ut handlingarna dag 2 den 5 augusti, att datumet 30 september var en bokföringsrad hos projektet, och den citerar den rättade texten i sin helhet. Den bär också meningen Det var fel, och jag beklagar det, samma formulering som i rättelsen den 28 september. Brevet skrevs före länets invändning 18:26:49 och gick 78 minuter efter den, utan att nämna den; det som invändningen begär i sak är ändå gjort. Meddelande 1a10d2b1e50100a2"
+ },
+ {
+  "datum": "2026-10-05",
+  "klockslag": "20:37:39",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Västmanland",
+  "begaran": "A+B",
+  "handelse": "svar på invändning mot P12-paket",
+  "notering": "Svar på länets invändning, avsänt av Martin till enhetschefens adress som svar i P12-tråden, två timmar och elva minuter efter invändningen. Brevet ger länet rätt på båda punkterna, hänvisar till rättelsen tidigare samma kväll, slår fast att båda begärandena är avslutade dag 2 och att det är de talen som publiceras, och svarar på frågan om syftet med att det inte fanns något: A-spåret saknade egen leveransrad eftersom utlämnandet loggats under den andra begäran, och koden valde en bokföringsrad. Om tidslinjerna säger brevet att dag 40-raderna hör till nämnarfrågan, att tillämpningsnot 7 håller den utanför de 43 begärandena, att raderna är borta och att inget tal ändras. Om filskicket bekräftas att de två mejlen den 5 augusti är ett utlämnande och att ingen handling saknas. Om tillförlitligheten: två fel, båda projektets egna, båda rättade skriftligt och båda inskrivna i det protokoll som publiceras ordagrant. Metodbeskrivningen erbjuds i förväg. Två versioner var skrivna, en på 321 ord efter sex varv och en på 199 ord efter tolv varv; den längre gick, och den kortare blev aldrig avsänd. Den avsända texten är kontrollerad mot det som ligger i skickat och bär inget felaktigt påstående. Meddelande 1a10d5b82afee168"
+ },
+ {
+  "datum": "2026-10-22",
+  "klockslag": "13:13:39",
+  "kanal": "e-post",
+  "myndighet": "Länsstyrelsen i Norrbotten",
+  "begaran": "A+B",
+  "handelse": "svar på invändning mot P12-paket",
+  "notering": "Martin läste och skickade svaret på myndighetens invändning. Brevet säger att svaret publiceras oavkortat, att ingen svarstid per län publiceras på webbplatsen men att protokollloggen publiceras i sin helhet, att leveransen den 4 augusti är klass B och kontrollrapporterna kom den 29 september, och att de två begärandena därför står på dag 1 och dag 41. Det beskrev också orsaken till dröjsmålet som att avsmalningen för kontrollrapporterna gick till en brevlåda som inte deltog i samtalet. Brevet står i tråden 1a15979ad6a2579b"
+ }
+]
