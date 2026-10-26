@@ -65,7 +65,7 @@ export default function Handlingar() {
                 <div className="overflow-x-auto border-t border-border-soft p-3">
                   <table className="w-full min-w-[40rem] border-collapse text-xs">
                     <thead>
-                      <tr className="border-b border-border-soft text-left fieldname">
+                      <tr className="border-b border-border-soft text-left tablehead">
                         <th scope="col" className="py-1.5 pr-4">
                           {copy.deliveries.headers.file}
                         </th>

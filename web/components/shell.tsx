@@ -28,7 +28,7 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
           </Link>
           <nav
             aria-label={copy.site.navLabel}
-            className="fieldname flex flex-wrap gap-x-4"
+            className="flex flex-wrap gap-x-4 text-[0.9375rem] text-ink-secondary"
           >
             {copy.nav.slice(1).map((item) => (
               <Link
@@ -40,7 +40,7 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
               </Link>
             ))}
           </nav>
-          <span className="fieldname ml-auto flex items-baseline gap-4">
+          <span className="ml-auto flex items-baseline gap-4 text-[0.9375rem] text-ink-secondary">
             <ThemeToggle label={copy.themeToggle} />
             <a href={copy.languageSwitch.href} className="hover:text-ink">
               {copy.languageSwitch.label}
@@ -102,7 +102,7 @@ export function FigureTable({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="fieldname">
+      <h2 className="caption">
         {href ? (
           <Link href={href} className="no-underline hover:text-ink">
             {caption}

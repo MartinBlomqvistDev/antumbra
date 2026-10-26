@@ -41,7 +41,7 @@ export function EventLog({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[56rem] border-collapse text-sm">
           <thead>
-            <tr className="border-b-2 border-ink text-left fieldname">
+            <tr className="border-b-2 border-ink text-left tablehead">
               <th scope="col" className="py-2 pr-3">
                 {labels.headers.date}
               </th>

@@ -117,8 +117,8 @@ export function ChainExample({
               index < steps.length - 1 ? "pb-5" : ""
             }`}
           >
-            <p className="fieldname">
-              {index + 1} · {step.label}
+            <p className="caption">
+              {index + 1}. {step.label}
             </p>
             <div className="mt-1">{step.body}</div>
           </li>

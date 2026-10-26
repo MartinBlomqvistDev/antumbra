@@ -68,7 +68,7 @@ export function ComparisonTable({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>
-            <tr className="border-b border-border-soft text-left fieldname">
+            <tr className="border-b border-border-soft text-left tablehead">
               <th scope="col" className="py-1.5 pr-4">
                 {labels.headers.place}
               </th>
@@ -140,7 +140,7 @@ export function AuthorityBoard({
           <div className="overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-xs">
               <thead>
-                <tr className="border-b border-border-soft text-left fieldname">
+                <tr className="border-b border-border-soft text-left tablehead">
                   <th scope="col" className="py-1.5 pr-4">
                     {labels.classWord}
                   </th>

@@ -131,14 +131,25 @@ main a:hover {
   letter-spacing: -0.01em;
 }
 
-/* The running label above a section or a figure, in the register a form
-   uses for its field names. */
-.fieldname {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+/* A caption: what a table or a figure is, written the way a report writes
+   it. Not an eyebrow. The small capitalised label floating above a heading
+   is the single most recognisable tell of a generated site, so nothing on
+   this site sets type that way: a caption is a sentence in the same voice
+   as the text, one size down, and it sits with its table rather than over
+   the page. */
+.caption {
+  font-size: 0.9375rem;
   color: var(--ink-secondary);
+}
+
+/* Table heads, which a register does set apart, but in its own voice: the
+   same monospace the data below them is set in, at the same size, without
+   capitalisation. */
+.tablehead {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-secondary);
+  font-weight: 400;
 }
 
 /* The one ornament the project owns. A redaction covers the words and the

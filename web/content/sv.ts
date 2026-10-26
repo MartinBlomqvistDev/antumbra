@@ -98,9 +98,9 @@ export const sv: Copy = {
       "Två likalydande begäranden om allmänna handlingar till samtliga " +
       "21 länsstyrelser och en tredje till Jordbruksverket, förda efter " +
       "ett förskrivet protokoll: skillnaderna i svar är måttet. Som " +
-      "jämförelsegrund står EU:s revisioner av medlemsstaternas kontroll, " +
-      "där varje tal kan klickas ned till den exakta meningen i " +
-      "källdokumentet.",
+      "jämförelsegrund står EU:s revisioner av medlemsstaternas kontroll. " +
+      "Varje tal på sajten går att följa till sin källa, och i EU-lagret " +
+      "hela vägen till den exakta meningen i revisionsrapporten.",
     swedenHeading: "Sverige, insamlingen stängd",
     euHeading: "EU-jämförelsen, 1998–2026",
     swedenLabels: {

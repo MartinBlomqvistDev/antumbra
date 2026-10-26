@@ -47,9 +47,8 @@ export default function Home() {
   return (
     <div className="space-y-14">
       <div className="max-w-[34rem] space-y-5">
-        <p className="fieldname">{sv.home.kicker}</p>
-        <h1 className="text-[2.6rem] font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-          {sv.site.tagline}
+        <h1 className="text-[2.6rem] font-semibold leading-[1.15] tracking-tight sm:text-[3.1rem]">
+          {sv.home.kicker}
         </h1>
         <p className="text-lg text-ink-secondary">{sv.home.lead}</p>
       </div>

@@ -171,7 +171,7 @@ export function ChartSection({
         <div className="mt-2 overflow-x-auto">
           <table className="min-w-[24rem] border-collapse text-sm">
             <thead>
-              <tr className="border-b-2 border-ink text-left fieldname">
+              <tr className="border-b-2 border-ink text-left tablehead">
                 {table.headers.map((header) => (
                   <th key={header} scope="col" className="py-1.5 pr-6">
                     {header}

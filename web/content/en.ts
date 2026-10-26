@@ -34,8 +34,9 @@ export const en: Copy = {
       "county administrative boards and a third to the Swedish Board of " +
       "Agriculture, handled under a pre-written protocol: the differences " +
       "in the answers are the measurement. The baseline is the EU's audits " +
-      "of member state controls, where every figure can be clicked down to " +
-      "the exact sentence in the source document.",
+      "of member state controls. Every figure on the site can be followed " +
+      "to its source, and in the European layer all the way to the exact " +
+      "sentence in the audit report.",
     swedenHeading: "Sweden, collection closed",
     euHeading: "The EU comparison, 1998–2026",
     swedenLabels: {

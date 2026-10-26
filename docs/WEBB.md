@@ -97,6 +97,15 @@ validerade färgerna #2A78D6 och #EB6834 lever kvar, men bara i diagrammens
 märken, där validering mot färgblindhet gjordes. Chromet har noll färg, och
 betoning kommer ur storlek, linjer och vitrum.
 
+**Ingen etikett över rubriken.** Den lilla versala raden ovanför en
+rubrik, och dess variant i monospace, är den mest igenkännliga formen för
+en genererad sajt. Den finns inte någonstans här. En rubrik säger vad
+avsnittet handlar om, och det som förut stod som etikett är antingen
+rubriken själv eller en bildtext i samma röst som texten, en storlek ned,
+placerad intill sin tabell i stället för över sidan. Tabellhuvuden får vara
+egna, men i registrets röst: samma monospace som datan under dem, utan
+versaler.
+
 **Ett ornament, och det är projektets eget.** Den svarta rektangeln är vad
 mätningen räknar. Den används en enda gång, som märke före ordbilden i
 sidhuvudet, och ingen annanstans. CSS-klassen `.redaction` finns för text
