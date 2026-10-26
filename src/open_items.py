@@ -101,7 +101,6 @@ OURS = frozenset(
         "rättelse av P12-paket",
         "svar på invändning mot P12-paket",
         "påminnelse",
-        "svar på förtydligande",
         "svar på förtydligandefråga",
         "svar på förtydligandefråga och accept av elektronisk leverans",
         # P11's denominator question, sent on day 40 to all 21 county boards.
@@ -152,6 +151,11 @@ THEIRS = frozenset(
         "leverans",
         "manuellt svar",
         "svar på P12-paket",
+        # The court's judgment on an appeal. It ends the appeal track: the
+        # next instance is the Supreme Administrative Court and needs leave to
+        # appeal, which is the project's own move on its own clock and is
+        # tracked with the other obligations rather than here.
+        "dom i kammarrätten",
         # The court registering an appeal and giving it a case number. The
         # sender is the kammarrätt, not the county, but the event belongs to
         # the request whose decision was appealed, and nothing is asked of us.
@@ -172,6 +176,14 @@ THEIRS = frozenset(
         # An authority answering that the documents were already sent, in
         # response to P10's last reminder. It asks nothing on a protocol clock.
         "besked om tidigare leverans",
+        # The authority's reply to a clarification of ours. It stood in OURS
+        # until 26 October 2026, when the outgoing register began deriving its
+        # letter list from this set and asked the mailbox for a letter that was
+        # never sent. The one event of this type, Östergötland on 7 August 2026
+        # at 13:27, is message 19fdbfa9f82f4402, and the mailbox has it as
+        # incoming from the county's own functional address. The name of the
+        # event reads either way; the direction does not.
+        "svar på förtydligande",
         # An answer to P11's denominator question.
         "svar på nämnarfrågan",
         "mottagningsbesked",

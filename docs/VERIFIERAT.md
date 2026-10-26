@@ -3611,3 +3611,42 @@ kontrolltyp"*. Den satsen påstår resultatet av just den prövning som visade s
 omöjlig, och den måste strykas ur den publicerade texten i stället för att
 återges. Det är en brist i förregistreringen: den förutsatte att den korstabell
 som begärdes också skulle levereras.
+
+## Dom i Kammarrätten i Stockholm, mål 6901-26, verifierad 2026-10-26
+
+Kammarrätten i Stockholm, avdelning 03, meddelade dom den 23 oktober 2026 i mål
+6901-26. Målet är överklagandet av Länsstyrelsen i Gotlands läns beslut den 28
+augusti 2026, dnr 3287-2026, i den del begäran om uppgifter om brister avslogs.
+Domen levererades till brevlådan som zip och packades upp den 26 oktober 2026
+kl. 14:05. Den ligger i `data/leveranser/kammarratten_stockholm_6901-26/dom_2026-10-23/`
+med sha256
+`4c6a24643092dd3351109f76eeac3ecbba2e3f5af603bb5fd3ed06914377456f`
+i leveransmanifestet.
+
+**Avgörandet, ordagrant, sidan 1:** "Kammarrätten avslår överklagandet."
+
+**Skälen i sin helhet, ordagrant, sidan 2:** "Det som Martin Blomqvist har fört
+fram och det som i övrigt framgår av utredningen ger inte kammarrätten anledning
+att göra någon annan bedömning än den som Länsstyrelsen i Gotlands län har
+gjort. Överklagandet ska därför avslås."
+
+**Vad domen inte prövar.** Överklagandets grund var att skadeprövningen gjordes
+för ett uppgiftsslag, uppgifter om brister vid djurskyddskontroll, och inte för
+de uppgifter som faktiskt maskerats i de fyra handlingarna. Grunden återges
+under YRKANDEN M.M. på sidan 2, ordagrant: "Ingen skadeprövning av de maskerade
+uppgifterna i sig har gjorts." Skälen går inte in på den. Domen säger därmed
+ingenting om huruvida en prövning uppgift för uppgift krävs; den säger att
+utredningen inte ger anledning till en annan bedömning än länsstyrelsens.
+
+**Rätten.** En lagman som ordförande, ett kammarrättsråd och en tf. assessor som
+referent, med en föredragande jurist. Namnen står i domen och rollerna här,
+enligt ADR-0018.
+
+**Nästa instans.** Högsta förvaltningsdomstolen, med krav på prövningstillstånd,
+inom tre veckor från den dag domen togs del av. Domens bilaga B är anvisningen
+KR-02.
+
+**Följden för mätningen.** Tre av de fyra överklagandena är oavgjorda. Ytorna som
+sade fyra är rättade samma dag: `README.md`, metodsidans avsnitt om vad projektet
+inte påstår i båda språklagren, och `data/beslut.jsonl`, där raden för mål
+6901-26 nu bär domens datum, utfall och de två citaten.

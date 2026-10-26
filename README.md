@@ -300,7 +300,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 251 tests carry guarantees beyond ordinary unit testing: the generated
+The 252 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false
@@ -348,10 +348,14 @@ are published verbatim beside their figures; no authority disputed a figure.
 Opening this repository is itself publication, which the protocol settles in
 its eighth application note, so nothing opened before the period had run.
 
-Four appeals are pending before the administrative courts of appeal, listed
-with case numbers on the method page. A pending case does not postpone
-publication, and no authority is described as breaking the law: the Supreme
-Administrative Court has not ruled on the question.
+Four decisions were appealed to the administrative courts of appeal, listed
+with case numbers on the method page. The first was decided on 23 October 2026,
+and the ruling reached the project on 26 October: the Administrative Court of
+Appeal in Stockholm dismissed the appeal against Gotland's decision and found
+no reason to depart from the county's own assessment. Three are undecided. A
+pending case does not postpone publication, and no authority is described as
+breaking the law: the Supreme Administrative Court has not ruled on the
+question.
 
 ## License and citation
 

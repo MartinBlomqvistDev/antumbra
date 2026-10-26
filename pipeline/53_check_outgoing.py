@@ -6,133 +6,54 @@ have a row, and which do not. It is run between authorities rather than at the
 end, because a sweep that is only checked once is a sweep whose gaps are found
 too late to fix cheaply.
 
-A send in the log is an event the project performed. Every event type is listed
-below, as a send or as something else, and a type in neither list stops the
-step. The first version listed only the sends and filtered on that list, which
-is not the same thing: three types of letter were missing from it, and the step
-reported the register complete for authorities whose letters it had never asked
-for. The docstring claimed an unknown type would show up. Nothing made it.
+A send in the log is an event the project performed, and which events those are
+is settled in src/open_items.py rather than again here. This step subtracts
+from that set the few of our own events that send no letter, and names the one
+letter whose log row carries a type that is not a letter type.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "src"))
+
+import open_items  # noqa: E402  the project's own module, after the path
+
 LOG = ROOT / "data" / "protokoll_logg.jsonl"
 OUT = ROOT / "data" / "korrespondens_utgaende.jsonl"
 
-# Every event in the log that is a letter from the project to an authority.
-SENDS = frozenset(
+# Which events are the project's own is already settled, once, in
+# src/open_items.py, and an invariant in the test suite fails if a type in the
+# log is in none of its three sets. This step had its own copy of that list.
+# The copy was wrong: three kinds of letter were missing from it, so the
+# reconciliation reported authorities complete whose letters it had never asked
+# for, and the denominator stood at 160 when it was 176. The list is derived
+# here instead, and a new event type is classified in the one place.
+NOT_A_LETTER = frozenset(
     {
-        # Found missing on 26 October 2026, when a letter in the mailbox had no
-        # line in the reconciliation to belong to. Both are letters: the first
-        # declines the copies once a fee remains, which is P5, and the second is
-        # P8's request for an appealable decision.
-        "avstående",
-        "beslutsbegäran och fråga om uttagets fullständighet",
-        "avsändning",
-        "avsmalningssvar",
-        "svar på förtydligandefråga",
-        "svar på förtydligandefråga och accept av elektronisk leverans",
-        "svar på förtydligandefråga om nämnaren",
-        "överklagande",
-        "påminnelse",
-        "nämnarfråga",
-        "P12-paket avsänt",
-        "rättelse av P12-paket",
-        "förnyad begäran om avgiftsbeslut",
-        "beslutsbegäran",
-        "beslutsbegäran upprepad",
-        "delgivningskvitto",
-        "svar på invändning mot P12-paket",
-        "förtydligande",
-        "svar på besked om tidigare leverans",
-        "förfrågan om beskedets innebörd",
-        "förfrågan om länsuppdelning",
-        "förfrågan om fjäderfätäckning",
-        "förfrågan om elektroniskt utlämnande",
-        "yttrande till kammarrätten",
-    }
-)
-
-# Every other event type in the log: the authority's messages, the courts', and
-# the project's own notes to itself. Kept explicitly so that the step can tell
-# a type it has classified from a type nobody has looked at yet.
-#
-# "rättelse" sits here although one of its fifteen rows is a letter. The type
-# records a correction, and fourteen of them correct the project's own notes,
-# its log or an unsent read-copy. The fifteenth, to Västmanland on 28 September
-# 2026, is a letter that went. A type cannot be half a send, so the type is not
-# one, and that single letter is named in EXTRA below.
-NOT_SENDS = frozenset(
-    {
-        "arbetsbesked",
-        "autosvar",
-        "beslut",
-        "brevlådan genomgången",
-        "förberedelse",
-        "autosvar på P12-paket",
-        "avgift kvarstår",
-        "avgiftsbesked",
-        "avgiftsbesked och erbjudande om maskad elektronisk leverans",
-        "avgiftsbesked och förtydligande",
-        "avgiftsbeslut mottaget",
-        "avgiftsbeslut vägrat",
-        "avslagsbeslut mottaget",
+        # Ours, but no letter goes. It is the decision not to appeal a
+        # decision, taken under tillämpningsnot 6.
         "avstående från överklagande",
-        "besked",
-        "besked om att dimension 1 inte kan tas fram",
-        "besked om tidigare leverans",
-        "besked om uttagets omfattning",
-        "besked om uttagets omfattning och förtydligandefråga",
-        "besked om vidarebefordran",
+        # Ours, but no letter goes. A request for a decision that lapsed on a
+        # condition the earlier letter set itself.
         "beslutsbegäran förfallen",
-        "delvis avslag och kompletterande leverans",
-        "delvis avslagsbeslut mottaget",
-        "diarieföringsbesked",
-        "förnyat avgiftserbjudande",
-        "förregistrerat prövningsvillkor",
-        "förregistrering",
-        "förtydligandefråga",
-        "förtydligandefråga och avgiftsbesked",
-        "förtydligandefråga om nämnaren",
-        "förtydligandefråga upprepad",
-        "kompletterande leverans",
-        "kompletterande leverans arkiverad",
-        "leverans",
-        "leverans arkiverad",
-        "leverans fullgjord",
-        "manuellt svar",
-        "mottagningsbesked",
-        "målregistrering i kammarrätten",
-        "personuppgift",
-        "protokollavvikelse",
-        "publicering",
-        "påminnelse om delgivning",
-        "rättsfråga verifierad",
-        "riktlinje bifogad",
-        "rättad leverans",
+        # Ours, and one of the fifteen was a letter. The rest correct the
+        # project's own notes, its log or an unsent read-copy, so the type is
+        # not a letter type and the one letter stands in EXTRA below.
         "rättelse",
-        "sammanslagning enligt P0b",
-        "svar om uttagets uppbyggnad",
-        "svar på P12-paket",
-        "svar på förtydligande",
-        "svar på nämnarfrågan",
-        "taxebeslut bifogat",
-        "tillämpningsnot skriven",
-        "underrättelse från kammarrätten",
-        "utfall",
-        "överlämnande till kammarrätten",
     }
 )
+SENDS = frozenset(open_items.OURS) - NOT_A_LETTER
 
-# Letters whose log row carries a type that is not a send type. One so far: the
-# correction sent to Västmanland. It is keyed on the row that records it, so the
-# reconciliation asks for it like any other letter.
+# Letters whose log row carries a type that is not a letter type. One so far:
+# the correction sent to Västmanland. It is keyed on the row that records it,
+# so the reconciliation asks for it like any other letter.
 EXTRA = frozenset(
     {
         ("Länsstyrelsen i Västmanland", "2026-09-28", "rättelse", "A"),
@@ -158,13 +79,6 @@ def main() -> int:
     args = parser.parse_args()
 
     rows = read(LOG)
-    unknown = sorted({r["handelse"] for r in rows} - SENDS - NOT_SENDS)
-    if unknown:
-        print("okand handelsetyp, klassificera den i steg 53:")
-        for name in unknown:
-            print(f"  {name}")
-        return 1
-
     logged: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
         if row["myndighet"] == "samtliga":

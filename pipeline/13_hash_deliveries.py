@@ -17,13 +17,35 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from datetime import date
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent
 DELIVERIES = ROOT / "data" / "leveranser"
 MANIFEST = ROOT / "data" / "leveranser_manifest.jsonl"
+
+# An e-mail address inside a delivered file name. A court names its files
+# after the division that sent them, and Kammarrätten i Stockholm delivered
+# the judgment in case 6901-26 in a zip whose name ends in the division's own
+# functional address. The manifest records names verbatim, so the address went
+# into the protocol data and the invariant that keeps addresses out of it
+# failed. The name is recorded with the address replaced, and the replacement
+# stands in the name so that it is declared rather than quietly dropped.
+ADDRESS = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def screened(relative: str) -> str:
+    """The delivered path with any e-mail address in its name replaced.
+
+    Only the stem is screened. The pattern's domain part is greedy and eats a
+    trailing extension too, so screening the whole name turned a .zip into
+    nothing at all and the manifest no longer said what kind of file it had
+    recorded.
+    """
+    path = PurePosixPath(relative)
+    return str(path.with_name(ADDRESS.sub("[adress]", path.stem) + path.suffix))
 
 
 def sha256(path: Path) -> str:
@@ -55,7 +77,7 @@ def main() -> int:
         for path in sorted(DELIVERIES.rglob("*")):
             if not path.is_file():
                 continue
-            relative = path.relative_to(DELIVERIES).as_posix()
+            relative = screened(path.relative_to(DELIVERIES).as_posix())
             digest = sha256(path)
             if relative in recorded:
                 if recorded[relative] != digest:

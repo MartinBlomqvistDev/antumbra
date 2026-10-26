@@ -48,7 +48,7 @@ OUT = ROOT / "data" / "korrespondens_utgaende.jsonl"
 # expression allowing only a newline between them lets through, address
 # and all.
 QUOTE = re.compile(
-    r"^(?:Från: |From: |Den .{0,40} skrev "
+    r"^(?:Från: |From: |Den [^\n]{0,60} skrev[^\n]*:$"
     r"|On\b[^\n]{0,80}(?:\n[^\n]{0,80})?wrote:"
     r"|-{3,} ?Vidarebefordrat|>)",
     re.M,

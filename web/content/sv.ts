@@ -278,7 +278,7 @@ export const sv: Copy = {
       heading: "Vad sidan inte visar",
       items: [
         "Handlingarna själva. De innehåller personuppgifter och publiceras aldrig; förteckningen med kontrollsumma per fil står på sidan Handlingar.",
-        "Något påstående om att en myndighet brutit mot lag. Rättsläget är oavgjort, Högsta förvaltningsdomstolen har inte prövat frågan, och fyra mål ligger hos kammarrätterna.",
+        "Något påstående om att en myndighet brutit mot lag. Rättsläget är oavgjort och Högsta förvaltningsdomstolen har inte prövat frågan. Fyra beslut är överklagade, och det första avgjordes den 23 oktober 2026: Kammarrätten i Stockholm avslog överklagandet av Gotlands beslut och fann ingen anledning att göra någon annan bedömning än länsstyrelsens. Tre mål är oavgjorda.",
         "Tre län som avstod från kopiorna sedan en avgift kvarstod efter avsmalningen. De bär svarstid och avgiftsuppgift men inga dokument i maskningsmätningen, och bortfallet räknas aldrig som ett utlämnande eller som ett avslag.",
         "Gris som jämförelse. Sexton dokument har gris som dominerande djurslag, utspridda på tio län, så inget län har underlag på båda sidor.",
         "Vad ett dokument är när en myndighet buntar flera i en fil. Måttet räknar den levererade filen, och två av materialets 343 filer rymmer fem handlingar var. Den ena är Norrbottens leverans i klass B, som därför står på ett dokument där länet lämnade ut fem beslut; andelen maskade påverkas inte, eftersom alla fem är omaskade. Den andra ligger utanför klassernas tal.",

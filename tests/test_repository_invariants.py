@@ -369,6 +369,35 @@ class TestNoPersonalDataIsCommitted:
     # opens with YYMMDD, and the state's own numbers carry a month of 20 or more
     # for exactly that reason. The first version matched six digits and reported
     # six authorities' organisation numbers, 202100-2270 among them.
+    def test_every_outgoing_letter_ends_with_my_signature(self):
+        """A row that stops mid-letter is a letter the register misrepresents.
+
+        The quote cutter looks for the marker a mail client writes above the
+        quoted history. The Swedish one was matched as "Den " plus up to forty
+        characters plus " skrev ", which is also the shape of an ordinary
+        sentence, and Gotland's appeal says "Den 27 augusti 2026 skrev
+        Länsstyrelsen". The row went in at 3 445 of the letter's 4 543
+        characters, without one of its grounds and without its closing section,
+        declaring that quoted history had been cut and nothing else.
+
+        Every letter in this collection ends with the signature, so the end of
+        the text is what says the cut fell in the right place. A new marker that
+        matches prose will show up here as a letter that stops early rather than
+        as a letter nobody reads again.
+        """
+        register = ROOT / "data" / "korrespondens_utgaende.jsonl"
+        if not register.exists():
+            return
+        endings = ("Martin Blomqvist", "cm.blomqvist@gmail.com")
+        truncated = []
+        for line in register.read_text("utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if not row["text"].rstrip().endswith(endings):
+                truncated.append(f"{row['datum']} {row['myndighet']} {row['handelse']}")
+        assert not truncated, f"letters that stop before the signature: {truncated}"
+
     # A personal identity number, in either of the two forms Swedish filings
     # use. Built here rather than inline so that the pattern is one thing.
     PERSONNUMMER: ClassVar[re.Pattern] = re.compile(
