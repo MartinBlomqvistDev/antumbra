@@ -1,0 +1,36 @@
+{
+ "fragor": 2115,
+ "stycken": 81292,
+ "facit_per_fraga": 3.54,
+ "bm25_parametrar": {
+  "k1": 1.5,
+  "b": 0.75
+ },
+ "rrf_k": 60,
+ "resultat": [
+  {
+   "metod": "bm25",
+   "fragor": 2115,
+   "recall@1": 0.2038,
+   "recall@5": 0.4118,
+   "recall@10": 0.496,
+   "mrr@10": 0.2907
+  },
+  {
+   "metod": "dense",
+   "fragor": 2115,
+   "recall@1": 0.105,
+   "recall@5": 0.2388,
+   "recall@10": 0.3135,
+   "mrr@10": 0.1634
+  },
+  {
+   "metod": "hybrid",
+   "fragor": 2115,
+   "recall@1": 0.1664,
+   "recall@5": 0.348,
+   "recall@10": 0.452,
+   "mrr@10": 0.2462
+  }
+ ]
+}
