@@ -181,6 +181,7 @@ export type Copy = {
   };
   om?: PageCopy & {
     body: string[];
+    photoAlt: string;
     linksHeading: string;
     links: { label: string; href: string; note: string }[];
     contactHeading: string;

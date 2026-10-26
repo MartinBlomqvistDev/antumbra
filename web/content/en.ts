@@ -504,6 +504,7 @@ export const en: Copy = {
         note: "Datasets and models, among them this measurement's aggregates.",
       },
     ],
+    photoAlt: "Martin Blomqvist",
     contactHeading: "Contact",
     contact: "cm.blomqvist@gmail.com",
   },

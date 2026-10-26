@@ -549,6 +549,7 @@ export const sv: Copy = {
         note: "Dataset och modeller, bland dem den här mätningens aggregat.",
       },
     ],
+    photoAlt: "Martin Blomqvist",
     contactHeading: "Kontakt",
     contact: "cm.blomqvist@gmail.com",
   },
