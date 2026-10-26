@@ -14,10 +14,10 @@ export const en: Copy = {
       "source document.",
     navLabel: "Main navigation",
     cardAlt:
-      "Antumbra, a measurement of the equivalence of Swedish animal "
-      + "welfare supervision. 64.1 per cent of the inspection reports "
-      + "carry at least one redaction, and 22.9 per cent of the "
-      + "injunction decisions.",
+      "Antumbra, a measurement of the equivalence of Swedish animal " +
+      "welfare supervision. 64.1 per cent of the inspection reports " +
+      "carry at least one redaction, and 22.9 per cent of the " +
+      "injunction decisions.",
   },
   nav: [
     { href: "/en/", label: "Home" },
@@ -145,6 +145,31 @@ export const en: Copy = {
         "No county redacts more in class B than in class A, on either " +
         "measure.",
     },
+    kontrastDiagram: {
+      heading: "The difference between document types, county by county",
+      note:
+        "One row per county that delivered in both classes. The dot is the " +
+        "share of documents carrying at least one redaction, the grey bar " +
+        "behind it is a 95 per cent Wilson interval, and the rows are " +
+        "sorted by the size of the gap between the classes. The order " +
+        "follows the gap rather than the redaction share: ordering by share " +
+        "would rank the counties, and the measurement does not carry that.",
+      reports: "inspection reports",
+      decisions: "injunction decisions",
+      countsNote:
+        "Share of documents with at least one redaction, per county and " +
+        "class. The figures on the right are redacted out of released, " +
+        "inspection reports first.",
+      rowTitle:
+        "{county}: {reportsShare} of the inspection reports ({reports}), " +
+        "{decisionsShare} of the decisions ({decisions})",
+      limit:
+        "What the chart does not say: which county redacts most. A county " +
+        "with few documents gets a wide interval, and two rows whose " +
+        "intervals overlap are held apart by nothing. The chart shows the " +
+        "difference between document types within one authority, which is " +
+        "the comparison the measurement can establish.",
+    },
     lanJamforelse: {
       heading: "The counties in the order the measure gives",
       note:
@@ -240,8 +265,7 @@ export const en: Copy = {
       heading: "The state of play in numbers",
       sent: "requests sent",
       files: "files received, verified with sha256",
-      deliveringAuthorities:
-        "of 22 authorities released documents or figures",
+      deliveringAuthorities: "of 22 authorities released documents or figures",
       feeNotices: "authorities raised a fee",
       feeStopped: "requests fee-stopped",
       paid: "fees paid",

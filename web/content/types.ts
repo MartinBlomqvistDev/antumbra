@@ -65,6 +65,15 @@ export type Copy = {
       contrastException: string;
       contrastNoException: string;
     };
+    kontrastDiagram: {
+      heading: string;
+      note: string;
+      reports: string;
+      decisions: string;
+      countsNote: string;
+      rowTitle: string;
+      limit: string;
+    };
     lanJamforelse: {
       heading: string;
       note: string;

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/shell";
+import { ContrastChart } from "@/components/contrast-chart";
 import { ComparisonTable } from "@/components/sweden";
 import { sv } from "@/content/sv";
 import { swedenStats } from "@/lib/stats";
@@ -168,6 +169,24 @@ export default function Sverige() {
         <p className="max-w-2xl text-sm text-ink-secondary">{contrast}</p>
         <p className="max-w-2xl text-sm text-ink-secondary">{exception}</p>
       </section>
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {copy.kontrastDiagram.heading}
+        </h2>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.kontrastDiagram.note}
+        </p>
+        <div className="overflow-x-auto">
+          <ContrastChart
+            reports={sweden.jamforelse.A.rader}
+            decisions={sweden.jamforelse.B.rader}
+            labels={copy.kontrastDiagram}
+          />
+        </div>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.kontrastDiagram.limit}
+        </p>
+      </section>
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">
           {copy.lanJamforelse.heading}
@@ -218,10 +237,7 @@ export default function Sverige() {
         <p className="text-sm text-ink-secondary">{copy.wordings.note}</p>
         <div className="space-y-2">
           {copy.wordings.items.map((item) => (
-            <details
-              key={item.label}
-              className="border border-border-soft"
-            >
+            <details key={item.label} className="border border-border-soft">
               <summary className="cursor-pointer p-3 text-sm font-semibold">
                 {item.label}
               </summary>

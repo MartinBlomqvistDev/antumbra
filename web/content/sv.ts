@@ -201,6 +201,30 @@ export const sv: Copy = {
         "Inget län maskar mer i klass B än i klass A, i något av de två " +
         "måtten.",
     },
+    kontrastDiagram: {
+      heading: "Skillnaden mellan handlingstyperna, län för län",
+      note:
+        "En rad per län som levererat i båda klasserna. Pricken är andelen " +
+        "dokument med minst en maskning, den grå staven bakom den är " +
+        "95-procentigt Wilson-intervall, och raderna står sorterade efter " +
+        "hur stort gapet mellan klasserna är. Sorteringen följer alltså " +
+        "gapet och inte maskningsgraden: en ordning efter andel vore en " +
+        "rangordning av län, och den bär mätningen inte.",
+      reports: "kontrollrapporter",
+      decisions: "beslut om föreläggande",
+      countsNote:
+        "Andel dokument med minst en maskning per län och klass. Talen till " +
+        "höger är maskade av utlämnade, kontrollrapporter först.",
+      rowTitle:
+        "{county}: {reportsShare} av kontrollrapporterna ({reports}), " +
+        "{decisionsShare} av besluten ({decisions})",
+      limit:
+        "Vad diagrammet inte säger: vilket län som maskar mest. Ett län med " +
+        "få dokument får ett brett intervall, och två rader vars intervall " +
+        "överlappar hålls isär av ingenting. Diagrammet visar skillnaden " +
+        "mellan handlingstyper inom samma myndighet, vilket är den " +
+        "jämförelse mätningen kan belägga.",
+    },
     lanJamforelse: {
       heading: "Länen i den ordning måttet ger",
       note:
