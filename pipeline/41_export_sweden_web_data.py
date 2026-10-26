@@ -46,6 +46,7 @@ REPLIES = ROOT / "data" / "p12_svar.jsonl"
 SENT = ROOT / "data" / "p12_avsant_manifest.jsonl"
 ANNEXES = ROOT / "data" / "bilagor.jsonl"
 LOG = ROOT / "data" / "protokoll_logg.jsonl"
+CORRESPONDENCE = ROOT / "data" / "korrespondens.jsonl"
 PAIRS = ROOT / "data" / "dubbelforekomst.jsonl"
 OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 
@@ -246,6 +247,14 @@ def build() -> dict:
     replies = read(REPLIES)
     sent = {row["slug"]: row for row in read(SENT)}
     log = read(LOG)
+    # The P12 letters promise that the whole correspondence log is published,
+    # and it was, as a file on the data page. An authority's own board showed
+    # only its reply to the packet under the heading "the authority's reply",
+    # so a county that wrote nine letters appeared to have written one. The
+    # messages go on the board, where a reader looks for them.
+    letters: dict[str, list[dict]] = defaultdict(list)
+    for row in read(CORRESPONDENCE):
+        letters[row["myndighet"]].append(row)
 
     comparison = {klass: ranking_rows(step36, masking, klass) for klass in CLASSES}
     places = {
@@ -291,6 +300,10 @@ def build() -> dict:
                     else without_measurement(log, authority)
                 ),
                 "sammanslagen": merged(log, authority),
+                "brev": sorted(
+                    letters.get(authority, []),
+                    key=lambda row: (row["datum"], row["klockslag"]),
+                ),
             }
         )
 

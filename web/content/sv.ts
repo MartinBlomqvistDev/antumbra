@@ -498,8 +498,10 @@ export const sv: Copy = {
         "efter avsmalningen, och de bär svarstid och avgiftsuppgift men " +
         "inga dokument. Talen är de som myndigheten själv fick före " +
         "publicering, och där ett svar har kommit in står det ordagrant " +
-        "under dem. Namn på enskilda tjänstemän återges inte: där ett svar " +
-        "är undertecknat skrivs rollen i stället.",
+        "under dem. Därunder står allt myndigheten själv skrev i ärendena, " +
+        "också ordagrant, vilket är vad breven inför publicering utfäste. " +
+        "Namn på enskilda tjänstemän återges inte: där ett svar är " +
+        "undertecknat skrivs rollen i stället.",
       classWord: "Klass",
       documents: "Dokument",
       masked: "Maskade",
@@ -537,7 +539,7 @@ export const sv: Copy = {
       place: "Plats",
       placeOf: "i jämförelsen",
       reply: {
-        heading: "Myndighetens svar",
+        heading: "Myndighetens svar på underlaget",
         none: "Inget svar har kommit in",
         kinds: {
           autosvar: "autosvar",
@@ -554,6 +556,20 @@ export const sv: Copy = {
           "ovan? Varje händelse i ärendet, med datum och klockslag, står i " +
           "händelseloggen, och måttens gränser i metoden.",
         contextLink: "Metod och händelselogg",
+      },
+      letters: {
+        heading: "Myndighetens egna meddelanden i ärendena",
+        note:
+          "Allt myndigheten själv skrev i begäran A, B och C och i " +
+          "överklagandena, ordagrant: {messages} meddelanden på {rows} " +
+          "rader. Ett stående autosvar bärs av en rad och dess upprepningar " +
+          "listas under den. Varje rad säger själv vad den lämnar ute.",
+        none: "Inget meddelande från myndigheten finns i registret.",
+        subject: "Ämnesrad:",
+        omitted: "Återges inte:",
+        message: "Meddelande",
+        attachments: "Bilagor:",
+        repeats: "Samma text återkom:",
       },
       packet: {
         heading: "Underlaget myndigheten fick",

@@ -216,6 +216,16 @@ export type Copy = {
         contextLink: string;
       };
       packet: { heading: string; note: string; sent: string };
+      letters: {
+        heading: string;
+        note: string;
+        none: string;
+        subject: string;
+        omitted: string;
+        message: string;
+        attachments: string;
+        repeats: string;
+      };
     };
     deliveries: {
       heading: string;

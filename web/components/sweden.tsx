@@ -46,6 +46,16 @@ export type BoardLabels = {
     contextLink: string;
   };
   packet: { heading: string; note: string; sent: string };
+  letters: {
+    heading: string;
+    note: string;
+    none: string;
+    subject: string;
+    omitted: string;
+    message: string;
+    attachments: string;
+    repeats: string;
+  };
 };
 
 export function ComparisonTable({
@@ -136,6 +146,13 @@ export function AuthorityBoard({
   const reason = authority.utan_matning
     ? labels.utanMatning[authority.utan_matning]
     : null;
+  // A standing autoreply is carried by one row with its repeats listed, so the
+  // row count is lower than the message count. The board says messages, which
+  // is what a reader is counting.
+  const messages = authority.brev.reduce(
+    (total, letter) => total + 1 + (letter.forekomster?.length ?? 0),
+    0,
+  );
   return (
     <details className="border border-border-soft">
       {/* The closed row carries the measurement, because that is what the
@@ -274,6 +291,59 @@ export function AuthorityBoard({
               </a>
             </p>
           ) : null}
+        </div>
+
+        <div className="space-y-3">
+          <h3 className="text-sm font-semibold">{labels.letters.heading}</h3>
+          {authority.brev.length === 0 ? (
+            <p className="text-sm text-ink-secondary">{labels.letters.none}</p>
+          ) : (
+            <>
+              <p className="max-w-2xl text-sm text-ink-secondary">
+                {labels.letters.note
+                  .replace("{messages}", String(messages))
+                  .replace("{rows}", String(authority.brev.length))}
+              </p>
+              {authority.brev.map((letter) => (
+                <div key={letter.meddelande} className="space-y-1 text-xs">
+                  <p className="text-ink-secondary">
+                    {letter.datum} {letter.klockslag}
+                    {letter.roll ? `, ${labels.reply.from} ${letter.roll}` : ""}
+                  </p>
+                  <p className="text-ink-secondary">
+                    {labels.letters.subject} {letter.amnesrad}
+                  </p>
+                  <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+                    {letter.text}
+                  </pre>
+                  {letter.bilagor ? (
+                    <p className="text-ink-secondary">
+                      {labels.letters.attachments} {letter.bilagor}
+                    </p>
+                  ) : null}
+                  {letter.utelamnat ? (
+                    <p className="text-ink-secondary">
+                      {labels.letters.omitted} {letter.utelamnat}
+                    </p>
+                  ) : null}
+                  <p className="text-ink-secondary">
+                    {labels.letters.message} {letter.meddelande}
+                  </p>
+                  {letter.forekomster && letter.forekomster.length > 0 ? (
+                    <p className="text-ink-secondary">
+                      {labels.letters.repeats}{" "}
+                      {letter.forekomster
+                        .map(
+                          (again) =>
+                            `${again.datum} ${again.klockslag} (${again.meddelande})`,
+                        )
+                        .join(", ")}
+                    </p>
+                  ) : null}
+                </div>
+              ))}
+            </>
+          )}
         </div>
 
         {authority.paket ? (

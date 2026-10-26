@@ -45,6 +45,28 @@ export type Reply = {
   kalla: string;
 };
 
+export type Letter = {
+  datum: string;
+  klockslag: string;
+  myndighet: string;
+  avsandare: string;
+  roll: string | null;
+  amnesrad: string;
+  meddelande: string;
+  text: string;
+  bilagor: string | null;
+  utelamnat: string | null;
+  kalla: string;
+  /** A standing autoreply is carried once, with its repeats listed here. */
+  forekomster?: {
+    datum: string;
+    klockslag: string;
+    meddelande: string;
+    amnesrad: string;
+    storlek: number;
+  }[];
+};
+
 export type Authority = {
   myndighet: string;
   slug: string;
@@ -72,6 +94,8 @@ export type Authority = {
   utan_matning: "avgiftsstoppad" | "statistik" | null;
   /** P0b: the authority handled both requests as one case. */
   sammanslagen: boolean;
+  /** Everything the authority itself wrote in the cases, verbatim. */
+  brev: Letter[];
 };
 
 export type Sweden = {
