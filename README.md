@@ -16,7 +16,7 @@ obstructed, so the measurement happens around the edge.
 The Swedish state imposes detailed conditions on large livestock
 installations and publishes those conditions freely. The outcome of its own
 inspections it discloses in redacted form, to varying degrees depending on
-which county administrative board and which case officer answers.
+which county administrative board answers.
 
 The responsible agency reports, at the same time, a spread of **51
 percentage points** between the county with the lowest and the county with
@@ -54,7 +54,7 @@ Commission's directorate for health and food audits, 1998 to 2026, 165
 countries. The same auditor, the same legal basis, the same report template
 for every member state, so comparable by construction. Parsed into 11,999
 recommendations with a citation graph resolved to the verbatim paragraph in
-95.7 percent of edges, a dimensional model tested in dbt on BigQuery, and
+95.7 per cent of edges, a dimensional model tested in dbt on BigQuery, and
 an 81,292-paragraph corpus. Sweden has 98 reports, 8 of them on animal
 welfare.
 
@@ -72,9 +72,10 @@ Every authority received its own figures on 2 October 2026 and had three weeks
 to reply before anything was published. None disputed a figure.
 
 **Inspection reports are redacted nearly three times as often as decisions.**
-109 of the 170 inspection reports in class A carry at least one redaction, 64.1
-percent, across 17 authorities. In class B, 32 of 140 injunction decisions carry
-one, 22.9 percent, across 18 authorities. The direction is the expected one:
+109 of the 170 documents released as inspection reports with annexes carry
+at least one redaction, 64.1 per cent, across 17 authorities. In class B, 32 of
+140 documents released as injunction decisions with annexes carry one, 22.9 per
+cent, across 18 authorities. The direction is the expected one:
 case law has accepted redaction in free-standing inspection reports, and the
 secrecy provision does not reach decisions. No claim about lawfulness follows
 from the class B figure, for the reason given under the unsettled law below.
