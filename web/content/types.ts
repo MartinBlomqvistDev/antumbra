@@ -72,6 +72,7 @@ export type Copy = {
       decisions: string;
       countsNote: string;
       rowTitle: string;
+      versus: string;
       limit: string;
     };
     lanJamforelse: {

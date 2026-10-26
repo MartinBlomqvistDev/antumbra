@@ -163,6 +163,7 @@ export const en: Copy = {
       rowTitle:
         "{county}: {reportsShare} of the inspection reports ({reports}), " +
         "{decisionsShare} of the decisions ({decisions})",
+      versus: "against",
       limit:
         "What the chart does not say: which county redacts most. A county " +
         "with few documents gets a wide interval, and two rows whose " +

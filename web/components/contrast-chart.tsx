@@ -16,6 +16,8 @@ export type ContrastLabels = {
   decisions: string;
   countsNote: string;
   rowTitle: string;
+  /** Joins the two shares in the screen-reader description. */
+  versus: string;
 };
 
 const SURFACE = "var(--surface)";
@@ -75,12 +77,15 @@ export function ContrastChart({
       viewBox={`0 0 ${WIDTH} ${height}`}
       className="h-auto w-full min-w-[46rem]"
       role="img"
-      aria-labelledby="kontrast-titel kontrast-beskrivning"
+      aria-labelledby="contrast-title contrast-description"
     >
-      <title id="kontrast-titel">{labels.countsNote}</title>
-      <desc id="kontrast-beskrivning">
+      <title id="contrast-title">{labels.countsNote}</title>
+      <desc id="contrast-description">
         {rows
-          .map(({ a, b }) => `${a.namn}: ${a.andel_text} mot ${b.andel_text}`)
+          .map(
+            ({ a, b }) =>
+              `${a.namn}: ${a.andel_text} ${labels.versus} ${b.andel_text}`,
+          )
           .join(". ")}
       </desc>
 

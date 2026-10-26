@@ -218,6 +218,7 @@ export const sv: Copy = {
       rowTitle:
         "{county}: {reportsShare} av kontrollrapporterna ({reports}), " +
         "{decisionsShare} av besluten ({decisions})",
+      versus: "mot",
       limit:
         "Vad diagrammet inte säger: vilket län som maskar mest. Ett län med " +
         "få dokument får ett brett intervall, och två rader vars intervall " +
