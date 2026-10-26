@@ -494,34 +494,28 @@ export const sv: Copy = {
   om: {
     title: "Om mätningen och vem som gjort den",
     lead:
-      "Mätningen är gjord av en person, och vilken person det är hör till " +
-      "underlaget. Myndigheterna visste det hela tiden: varje begäran bar " +
-      "mitt namn och min adress.",
+      "Varje begäran bar mitt namn och min e-postadress, så myndigheterna " +
+      "har vetat vem som frågade sedan den 3 augusti 2026.",
     body: [
       "Jag heter Martin Blomqvist och arbetar som data scientist. Jag " +
-        "skickade de 43 begärandena själv den 3 augusti 2026, läste och " +
-        "undertecknade varje brev innan det gick, och hanterade varje svar " +
-        "efter protokollet. Att insamlingen, loggföringen och analysen skett " +
-        "med AI-assistans står deklarerat med datum i metoden; ingen uppgift " +
-        "i materialet har en språkmodell som källa, och varje brev och varje " +
-        "publicerad siffra är granskad av mig innan den gick eller " +
-        "committades.",
-      "Att begäran gjordes namngiven var ett val och inte en slarvighet. Det " +
-        "står i projektets beslutslogg som vägval 3, skrivet innan något " +
-        "brev gick: ett överklagande kräver en part, en e-postadress är ändå " +
-        "inte anonym, och en identisk avsändare för alla 22 myndigheter tar " +
-        "bort avsändaren som variabel. Anonyma begäranden är en " +
-        "grundlagsskyddad möjlighet, men de hade gjort avslagsgrenen av " +
-        "mätningen omöjlig att driva.",
+        "skickade de 43 begärandena, läste och undertecknade varje brev innan " +
+        "det gick, och hanterade varje svar efter protokollet. Insamlingen, " +
+        "loggföringen och analysen har skett med AI-assistans, deklarerad med " +
+        "datum i metoden. Ingen uppgift i materialet har en språkmodell som " +
+        "källa.",
+      "Namngiven begäran står som vägval 3 i beslutsloggen, skrivet innan " +
+        "något brev gick. Ett överklagande kräver en part, en e-postadress " +
+        "är ändå inte anonym, och samma avsändare till alla 22 myndigheter " +
+        "tar bort avsändaren som variabel. Anonyma begäranden är " +
+        "grundlagsskyddade, men hade gjort avslagsgrenen av mätningen " +
+        "omöjlig att driva.",
       "Ingen har beställt eller finansierat arbetet. Budgeten är noll kronor, " +
-        "vilket är skälet till att ingen avgift godtogs oavsett belopp, och " +
-        "ingen avgift har betalats. Myndigheternas egna tjänstemän namnges " +
-        "aldrig någonstans i materialet; där ett beslut namnger " +
-        "beslutsfattare och föredragande skrivs rollen i stället.",
-      "Fel i materialet vill jag veta av. Hör av dig med den rättade " +
-        "uppgiften och var den kommer ifrån, så görs rättelsen i underlaget " +
-        "och inte bara i texten, och den loggas med datum som alla andra " +
-        "ändringar.",
+        "och därför godtogs ingen avgift oavsett belopp. Ingen avgift har " +
+        "betalats. Tjänstemän namnges aldrig i materialet; där ett beslut " +
+        "namnger beslutsfattare och föredragande skrivs rollen i stället.",
+      "Fel i materialet vill jag veta av. Skicka den rättade uppgiften och " +
+        "var den kommer ifrån, så rättas underlaget och inte bara texten, och " +
+        "rättelsen loggas med datum.",
     ],
     linksHeading: "Annat jag gjort",
     links: [
@@ -534,6 +528,11 @@ export const sv: Copy = {
         label: "linkedin.com/in/martin-blomqvist",
         href: "https://www.linkedin.com/in/martin-blomqvist",
         note: "Yrkesbakgrund och tidigare arbeten.",
+      },
+      {
+        label: "kattochkod.se",
+        href: "https://kattochkod.se",
+        note: "Konsultbolaget jag driver. Det har inget med den här mätningen att göra.",
       },
       {
         label: "huggingface.co/MartinBlomqvist",
