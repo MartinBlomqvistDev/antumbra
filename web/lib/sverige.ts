@@ -45,6 +45,28 @@ export type Reply = {
   kalla: string;
 };
 
+/**
+ * One of my own letters, from the outgoing register. The recipient is a kind
+ * and never an address: writing to a named case officer does not make their
+ * address mine to publish. My own signature stays, because the measurement
+ * rests on who asked.
+ */
+export type Sent = {
+  datum: string;
+  klockslag: string;
+  myndighet: string;
+  begaran: string;
+  mottagare: "funktionsbrevlåda" | "namngiven tjänsteman";
+  handelse: string;
+  amnesrad: string;
+  /** Null on the two rows where no sent copy exists anywhere. */
+  meddelande: string | null;
+  text: string | null;
+  utelamnat: string | null;
+  storlek: number | null;
+  kalla: string;
+};
+
 export type Letter = {
   datum: string;
   klockslag: string;
@@ -98,6 +120,8 @@ export type Authority = {
   sammanslagen: boolean;
   /** Everything the authority itself wrote in the cases, verbatim. */
   brev: Letter[];
+  /** Everything I wrote to the authority in the same cases, verbatim. */
+  utgaende: Sent[];
 };
 
 export type Sweden = {

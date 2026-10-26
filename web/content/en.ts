@@ -13,6 +13,11 @@ export const en: Copy = {
       "Every figure can be clicked down to the exact sentence in the " +
       "source document.",
     navLabel: "Main navigation",
+    cardAlt:
+      "Antumbra, a measurement of the equivalence of Swedish animal "
+      + "welfare supervision. 64.1 per cent of the inspection reports "
+      + "carry at least one redaction, and 22.9 per cent of the "
+      + "injunction decisions.",
   },
   nav: [
     { href: "/en/", label: "Home" },

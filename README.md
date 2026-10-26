@@ -313,7 +313,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 252 tests carry guarantees beyond ordinary unit testing: the generated
+The 253 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false

@@ -1,4 +1,10 @@
-import type { Authority, Letter, RankingRow, Reply } from "@/lib/sverige";
+import type {
+  Authority,
+  Letter,
+  RankingRow,
+  Reply,
+  Sent,
+} from "@/lib/sverige";
 
 /**
  * The Swedish result surfaces: the comparison table for one class, and one
@@ -56,6 +62,18 @@ export type BoardLabels = {
     attachments: string;
     repeats: string;
     messagesWord: string;
+  };
+  sent: {
+    heading: string;
+    note: string;
+    none: string;
+    missing: string;
+    request: string;
+    to: string;
+    subject: string;
+    omitted: string;
+    message: string;
+    lettersWord: string;
   };
 };
 
@@ -210,6 +228,52 @@ function LetterList({
                     `${again.datum} ${again.klockslag} (${again.meddelande})`,
                 )
                 .join(", ")}
+            </p>
+          ) : null}
+        </div>
+      ))}
+    </>
+  );
+}
+
+/**
+ * My own letters, rendered on the same terms as the authorities': the whole
+ * text, the message id that makes it checkable against the mailbox, and a
+ * line saying what the row leaves out.
+ */
+function SentList({ sent, labels }: { sent: Sent[]; labels: BoardLabels }) {
+  return (
+    <>
+      {sent.map((letter) => (
+        <div
+          key={`${letter.datum} ${letter.klockslag} ${letter.begaran}`}
+          className="space-y-1 text-xs"
+        >
+          <p className="text-ink-secondary">
+            {letter.datum} {letter.klockslag}, {letter.handelse},{" "}
+            {labels.sent.request} {letter.begaran}, {labels.sent.to}{" "}
+            {letter.mottagare}
+          </p>
+          <p className="text-ink-secondary">
+            {labels.sent.subject} {letter.amnesrad}
+          </p>
+          {letter.text === null ? (
+            <p className="max-w-2xl border border-border-soft p-2 text-ink-secondary">
+              {labels.sent.missing} {letter.kalla}
+            </p>
+          ) : (
+            <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+              {letter.text}
+            </pre>
+          )}
+          {letter.utelamnat ? (
+            <p className="text-ink-secondary">
+              {labels.sent.omitted} {letter.utelamnat}
+            </p>
+          ) : null}
+          {letter.meddelande ? (
+            <p className="text-ink-secondary">
+              {labels.sent.message} {letter.meddelande}
             </p>
           ) : null}
         </div>
@@ -395,6 +459,23 @@ export function AuthorityBoard({
                   .replace("{rows}", String(authority.brev.length))}
               </p>
               <LetterList letters={authority.brev} labels={labels} />
+            </>
+          )}
+        </div>
+
+        <div className="space-y-3">
+          <h3 className="text-sm font-semibold">{labels.sent.heading}</h3>
+          {authority.utgaende.length === 0 ? (
+            <p className="text-sm text-ink-secondary">{labels.sent.none}</p>
+          ) : (
+            <>
+              <p className="max-w-2xl text-sm text-ink-secondary">
+                {labels.sent.note.replace(
+                  "{letters}",
+                  String(authority.utgaende.length),
+                )}
+              </p>
+              <SentList sent={authority.utgaende} labels={labels} />
             </>
           )}
         </div>

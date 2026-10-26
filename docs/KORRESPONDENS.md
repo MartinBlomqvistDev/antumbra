@@ -38,6 +38,14 @@ stod på 155 när registret påbörjades, och steg 53 räknade då 160; båda vi
 en ofullständig lista över vilka händelsetyper som är brev. Listan härleds nu ur
 `src/open_items.py`, och 176 är vad loggen bär.
 
+**Registret ligger på sidan, inte bara i filen.** Tillagt senare samma dag:
+tavlan per myndighet på sidan Handlingar bär avsnittet *Mina egna brev i samma
+ärenden* under myndighetens egna meddelanden, byggt av steg 41 ur det här
+registret. En fil i `data/` är publicerad i formell mening, men den läsare som
+jämför vad en myndighet skrev med vad jag skrev gör det på tavlan, och där stod
+bara den ena sidan. Testet
+`test_the_export_carries_every_letter_i_sent` håller exporten mot registret.
+
 **Källan är Sent och ingenting annat.** En fil som pipelinen byggde före
 avsändningen är inte brevet som gick: steg 36 är rättat två gånger sedan
 P12-utskicket, vilket är hela skälet till att `data/p12_avsant/` finns med

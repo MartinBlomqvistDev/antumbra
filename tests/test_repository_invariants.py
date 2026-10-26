@@ -695,6 +695,37 @@ class TestNoPersonalDataIsCommitted:
                     authority["slug"]
                 )
 
+    def test_the_export_carries_every_letter_i_sent(self):
+        """The asymmetry the outgoing register exists to end stays ended.
+
+        The board carried every word the authorities wrote while my own side of
+        the same cases was only a template in the protocol. Publishing one side
+        of a correspondence on a measurement of openness is the first thing a
+        critic names, so the page carries both, and this holds the export to
+        the register rather than to a memory of it.
+        """
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        register = ROOT / "data" / "korrespondens_utgaende.jsonl"
+        if not export.exists():
+            return
+        rows = [
+            json.loads(line)
+            for line in register.read_text("utf-8").splitlines()
+            if line.strip()
+        ]
+        data = json.loads(export.read_text("utf-8"))
+
+        def key(row: dict) -> tuple[str, str, str, str]:
+            return (row["datum"], row["klockslag"], row["begaran"], row["handelse"])
+
+        published = {
+            key(letter)
+            for authority in data["myndigheter"]
+            for letter in authority["utgaende"]
+        }
+        missing = sorted(key(row) for row in rows if key(row) not in published)
+        assert not missing, f"{len(missing)} of my own letters are off the page"
+
     def test_every_authority_in_the_export_has_a_reply_or_says_it_has_none(self):
         export = ROOT / "web" / "public" / "data" / "sverige.json"
         if not export.exists():

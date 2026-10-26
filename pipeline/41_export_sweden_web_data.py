@@ -48,6 +48,7 @@ SENT = ROOT / "data" / "p12_avsant_manifest.jsonl"
 ANNEXES = ROOT / "data" / "bilagor.jsonl"
 LOG = ROOT / "data" / "protokoll_logg.jsonl"
 CORRESPONDENCE = ROOT / "data" / "korrespondens.jsonl"
+OUTGOING = ROOT / "data" / "korrespondens_utgaende.jsonl"
 PAIRS = ROOT / "data" / "dubbelforekomst.jsonl"
 OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 
@@ -271,6 +272,15 @@ def build() -> dict:
     letters: dict[str, list[dict]] = defaultdict(list)
     for row in read(CORRESPONDENCE):
         letters[row["myndighet"]].append(row)
+    # And my own letters beside them. The board carried every word the
+    # authorities wrote while my side of the same cases stood as templates in
+    # the protocol, which is the first asymmetry a critic of an openness
+    # measurement names: whoever requests other people's documents and
+    # publishes them verbatim has to take the same treatment of their own.
+    # docs/KORRESPONDENS.md states the rule; this puts it on the page.
+    outgoing: dict[str, list[dict]] = defaultdict(list)
+    for row in read(OUTGOING):
+        outgoing[row["myndighet"]].append(row)
 
     comparison = {klass: ranking_rows(step36, masking, klass) for klass in CLASSES}
     places = {
@@ -318,6 +328,10 @@ def build() -> dict:
                 "sammanslagen": merged(log, authority),
                 "brev": sorted(
                     letters.get(authority, []),
+                    key=lambda row: (row["datum"], row["klockslag"]),
+                ),
+                "utgaende": sorted(
+                    outgoing.get(authority, []),
                     key=lambda row: (row["datum"], row["klockslag"]),
                 ),
             }

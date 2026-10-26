@@ -14,6 +14,7 @@ export type Copy = {
     tagline: string;
     description: string;
     navLabel: string;
+    cardAlt: string;
   };
   nav: { href: string; label: string }[];
   languageSwitch: { href: string; label: string };
@@ -228,6 +229,18 @@ export type Copy = {
         attachments: string;
         repeats: string;
         messagesWord: string;
+      };
+      sent: {
+        heading: string;
+        note: string;
+        none: string;
+        missing: string;
+        request: string;
+        to: string;
+        subject: string;
+        omitted: string;
+        message: string;
+        lettersWord: string;
       };
     };
     domstolar: { heading: string; note: string };

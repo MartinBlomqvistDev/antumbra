@@ -270,6 +270,19 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
     Ett pågående mål skjuter inte upp publiceringen, och en maskande myndighet
     beskrivs som avvikande från befintlig kammarrättspraxis för beslutsbilagor,
     aldrig som lagbrytare.
+15. **Mina egna brev står på tavlan, samma dag.** Registret över utgående post
+    var klart och låg som fil, medan sidan Handlingar bar varje ord
+    myndigheterna skrivit. En mätning av öppenhet som publicerar ena sidan av
+    en brevväxling faller på det först, så tavlan bär nu båda: myndighetens
+    meddelanden och mina 176 brev i samma ärenden, ordagrant, med
+    meddelande-id. Mottagaren står som funktionsbrevlåda eller namngiven
+    tjänsteman och aldrig som adress. En invariant håller exporten mot
+    registret, så att asymmetrin inte kan komma tillbaka tyst.
+16. **Delningskortet.** En länk till sajten vecklade ut sig som en grå
+    standardruta. Kortet är byggt ur sidans egna tokens, med märket, devisen
+    och de två talen, och ligger som `web/public/og.png` med Open
+    Graph-taggarna på båda språkytorna. Samma bild ligger i `web/assets/` för
+    GitHubs inställning Social preview, som inte går att sätta via API.
 
 ---
 
