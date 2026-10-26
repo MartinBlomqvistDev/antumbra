@@ -2,7 +2,7 @@
 
 Step 18 of the pipeline. The delivered documents live outside git in
 data/leveranser/ and contain personal data; this step reads them and writes
-only counts and flags to data/maskning.jsonl, never a character of their text.
+only counts and flags to data/maskning.jsonl, with no character of their text.
 
 Two methods, because the deliveries come in two shapes. Born-digital files are
 judged from the text layer: a filled rectangle is a redaction, and whether text
@@ -40,8 +40,9 @@ The image method was tested against the text method on all 248 born-digital
 documents before it was trusted; the result and its two failure modes are
 recorded in docs/VERIFIERAT.md. The floor it cannot see past: a scan of a page
 whose text was removed before printing looks exactly like a page that never
-carried the text, so `masked` false on a scan means no bar was found, not that
-nothing was withheld. The scan side has no equivalent of the header exclusion,
+carried the text, so `masked` false on a scan means no bar was found, which is
+a weaker claim than nothing having been withheld. The scan side has no
+equivalent of the header exclusion,
 because a rendered black band with white text in it cannot be told from a
 redaction without reading the pixels as text.
 
@@ -88,7 +89,8 @@ MARKER_IN_TEXT = re.compile(r"\b(?:" + "|".join(MARKERS) + r")", re.IGNORECASE)
 # 100 dpi, about 10 by 1.5 millimetres. Blocks covering more than a quarter of
 # the page must be almost perfectly solid, so that a dark photograph is not
 # read as a redaction while a blacked-out photo still is. Both thresholds were
-# chosen by testing three settings against the text method, not by taste.
+# chosen by testing three settings against the text method, where taste would
+# have decided nothing.
 DPI = 100
 DARK_LEVEL = 60
 MIN_BAR_W, MIN_BAR_H = 40, 6
@@ -359,7 +361,10 @@ def classify(record: dict) -> tuple[str, bool | None]:
 
 
 def analyse(path: Path) -> dict:
-    """Read one document and return its redaction record, never its text."""
+    """Read one document and return its redaction record.
+
+    The text itself is left behind.
+    """
     name = path.name.lower()
     record = {
         "path": path.relative_to(DELIVERIES).as_posix(),
@@ -397,7 +402,7 @@ def analyse(path: Path) -> dict:
                     record["pages_with_boxes"] += 1
                     record["chars_under_boxes"] += chars_inside(page, boxes)
                     covered += sum((x1 - x0) * (b - t0) for x0, t0, x1, b in boxes)
-    except Exception as exc:  # a corrupt file is a finding, not a crash
+    except Exception as exc:  # a corrupt file is a finding rather than a crash
         record["error"] = str(exc)[:200]
 
     if not record["error"] and record["pages_with_text"] == 0:

@@ -7,12 +7,13 @@ section 4 and P1. This step reads each delivered document, born-digital text
 from the file itself and scanned text from step 19, and counts the terms for
 each species.
 
-It writes counts, never text, to data/djurslag.jsonl.
+It writes counts to data/djurslag.jsonl, and no text at all.
 
-**The counts are evidence, not a verdict.** Swedish inspection reports are
+**The counts are evidence. A verdict they are not.** Swedish inspection reports are
 written on a template whose checklist names several species whether or not the
 holding keeps them, so a single mention is weak and the majority rule below is
-a baseline, not a classifier. It had to be checked against hand-read documents
+a baseline rather than a classifier. It had to be checked against hand-read
+documents
 before any figure derived from it was published, exactly as the DG SANTE annex
 classification was checked against forty hand-read annexes.
 
@@ -28,9 +29,9 @@ keep one, and the rule named it.
 **The deficiency flag is not species-split, and no reading can fix that.** One
 of the eighteen holds 60 birds and horses, and the deficiencies recorded at that
 control concern the horse facilities. `FINNS_BRISTER` in the request C extract
-sits on the control, not on the animal, so a deficiency share computed per
+sits on the control, where the animal is not, so a deficiency share computed per
 species can attribute another animal's fault to the species named here. That is
-a limit of the source, not of this step, and it is reported rather than
+a limit of the source rather than of this step, and it is reported rather than
 corrected.
 
 The rule: a species is registered as present when its terms appear at least

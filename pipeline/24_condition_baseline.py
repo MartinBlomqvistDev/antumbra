@@ -31,7 +31,7 @@ gave an empty text that was read as a finished sentence. The first of those had
 put an appended correction decision, and the two officials who signed it, inside
 a condition of `1c8347c55318`.
 
-**The conditions section is bounded, not searched for everywhere.** A first
+**The conditions section is bounded, and nothing is searched for outside it.** A first
 version segmented on any line opening with a number and a full stop, anywhere
 in the document, and 12 decisions of 144, 8 per cent, then produced an unbroken
 1..N series of condition numbers. Numbered lists live all over these decisions,
@@ -73,7 +73,7 @@ that a segmentation failure cannot carry the headline.
 
 **The check does not apply to amendment decisions, and the row says so.** An
 amendment that changes conditions 1, 3 and 8 in an earlier permit is correctly
-extracted as 1, 3 and 8, so a gap is the right answer and not a fault. Reading
+extracted as 1, 3 and 8, so a gap is the right answer rather than a fault. Reading
 seven amendments by hand on 4 September 2026 showed three shapes: a full set
 numbered from 1, a consecutive run appended after the base permit's last number,
 and a scattered set of the conditions being changed. Only the first is testable
@@ -86,14 +86,14 @@ applied, since that is the stricter reading.
 the scans, and every row records which source it came from. OCR breaks words
 across line ends and loses characters, so two identical conditions seldom
 survive as identical strings once one has been read by OCR. A pooled reuse share
-would therefore fall for an instrument reason and not a factual one. The
+would therefore fall for an instrument reason where a factual one is wanted. The
 born-digital figure is printed first and labelled as the headline, the OCR set
 is reported beside it, and the pooled figure is printed last carrying nothing.
 
 **A text layer is not believed just because it has characters.** One decision
 of the 236 carries a recognition that its producer pasted over fourteen scanned
 pages: the character count per page is met, a second library reads the same
-crippled characters, and not one å, ä or ö survives in its conditions. Since 10
+crippled characters, with no å, ä or ö surviving in its conditions. Since 10
 October 2026 the step measures that, on the conditions rather than on the page,
 and sends such a decision to the project's own OCR. The rule, the sweep behind
 it and what it did to the register are in ADR-0026 and ADR-0027.
@@ -209,7 +209,7 @@ SECTION_INTRO = re.compile(
 # 4 September 2026 it sat inside 54 of 2 347 conditions, one per decision, and
 # added about 150 characters to each. Dropping the line is safe because the
 # markers are page furniture: a condition that mentions an address states it in
-# prose, not in a column of labels.
+# prose, where a column of labels would be wrong.
 PAGE_FOOTER = re.compile(
     r"postadress|bes[öo]ksadress|bankgiro|plusgiro|telefax|v[äa]xel"
     r"|\borg\.? ?nr\b|organisationsnummer|\bwww\b|@|\bvx\b|hemsida|webbadress"
@@ -319,7 +319,7 @@ PAGE_HEAD_WORDS = frozenset(
 )
 PAGE_HEAD_TOKEN = re.compile(r"^[\d()./:,-]+$")
 # The cap on how many lines a head block may run to. Every line in it has to be
-# furniture already, so the cap is a backstop and not the test; it was six until
+# furniture already, so the cap is a backstop rather than the test; it was six until
 # the block above an appended correction decision turned out to be eight, which
 # left the correction, and the two officials who signed it, inside a condition,
 # and the tallest heads in the corpus put the authority, the word Beslut, the
@@ -386,7 +386,7 @@ def a_reading(text: str) -> bool:
     register publishes as quotation.
 
     The segmentation this calls is defined further down the module. The order
-    is the pipeline's and not the call graph's: this is a question about the
+    is the pipeline's rather than the call graph's: this is a question about the
     source, and it is answered where the source is chosen.
     """
     window = section(text.split("\n"))
@@ -533,8 +533,9 @@ def head_block(lines: list[str], start: int) -> int | None:
     """The first line after a running head, or None if there is no head here.
 
     The block between two pages is empty lines and the head the county board
-    prints on every one. It is identified, not judged: the caller decides
-    whether the condition goes on across it or ends at it. None means no head
+    prints on every one. It is identified, and judging it is left alone: the
+    caller decides whether the condition goes on across it or ends at it. None
+    means no head
     was found, either because the first line is ordinary text or because the
     run of furniture is longer than any head in the corpus.
     """
@@ -664,7 +665,8 @@ def group_concentration(
         for _ in range(PERMUTATIONS)
     )
     at_least = sum(1 for d in draws if d >= observed)
-    # No permutation reaching the observed count gives a bound, never a zero.
+    # No permutation reaching the observed count gives a bound, where a zero
+    # would overstate it.
     p = f"= {at_least / PERMUTATIONS:.4f}" if at_least else f"< {1 / PERMUTATIONS:.4f}"
     return (
         f"  inom en enda prövningsgrupp: {observed} av {len(shared)}\n"

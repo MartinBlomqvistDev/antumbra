@@ -280,7 +280,7 @@ class TestSchemaIsInSyncWithItsDocument:
 
 
 class TestNoPersonalDataIsCommitted:
-    """The project measures authorities, never named individuals."""
+    """The project measures authorities. Named individuals are outside it."""
 
     EMAIL = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}")
     # Martin's own address, and the courts' registry addresses. The latter are
@@ -450,7 +450,7 @@ class TestNoPersonalDataIsCommitted:
         # that stands in for a name has to be the one the letter gives.
         "administrativ handläggare",
         "arkivarie",
-        # Dalarna signs as a function and not a title, and the register
+        # Dalarna signs as a function where a title would be, and the register
         # writes the wording the letter uses rather than the nearest title.
         "arkivfunktionen",
         # Kalmar signs simply as the archive.
@@ -612,7 +612,8 @@ class TestNoPersonalDataIsCommitted:
             if not line:
                 continue
             record = json.loads(line)
-            # The decoded text, not the raw line: a JSONL escape would otherwise
+            # The decoded text rather than the raw line: a JSONL escape would
+            # otherwise
             # glue an n onto the local part and hide what is really there.
             fields = " ".join(
                 str(record.get(key) or "")
@@ -815,7 +816,7 @@ class TestNoPersonalDataIsCommitted:
     def test_the_correspondence_log_keeps_names_out(self):
         # The packets promise the authorities' own messages verbatim, and
         # ADR-0018 keeps the officials out of them. The register is built by
-        # hand from the mailbox, so the guard belongs here and not only in the
+        # hand from the mailbox, so the guard belongs here as well as in the
         # tool that appends rows.
         path = ROOT / "data" / "korrespondens.jsonl"
         if not path.exists():
@@ -1092,7 +1093,7 @@ class TestNoPersonalDataIsCommitted:
     def test_every_registered_message_is_also_a_logged_event(self):
         # Avsnitt 7: every event is logged. The correspondence log is built from
         # the mailbox and the protocol log from the handling, so a message in
-        # one and not the other means the watch missed something. Two such
+        # one where the other is absent means the watch missed something. Two such
         # messages were found on 7 October 2026 and logged the same day.
         korrespondens = ROOT / "data" / "korrespondens.jsonl"
         if not korrespondens.exists():
@@ -1222,7 +1223,7 @@ class TestOpenItemsKnowsEveryEvent:
         # "länsstyrelserna", and the report answered with a phantom item under a
         # P3 deadline 19 days overdue, first in the list of what to do next.
         # The log is append-only, so the guard belongs here and in the code that
-        # reads it, never in the rows.
+        # reads it, and nowhere in the rows.
         from open_items import NOT_A_REQUEST, load
 
         allowed = re.compile(r"^(Länsstyrelsen i .+|Jordbruksverket)$")
@@ -1235,7 +1236,7 @@ class TestOpenItemsKnowsEveryEvent:
         assert not strays, (
             f"myndighet values the report cannot place: {sorted(strays)}. Add a "
             "real authority to the pattern deliberately, or an aggregate word to "
-            "NOT_A_REQUEST, so that the choice is made and not inherited from a "
+            "NOT_A_REQUEST, so that the choice is made rather than inherited from a "
             "typo."
         )
 
@@ -1438,7 +1439,7 @@ class TestTheCitationGraphIsWhatTheReportsSay:
         assert len(recommendations) > 8000
 
     def test_numbering_runs_from_one_without_gaps(self, recommendations):
-        """Grouped by file, not by audit: 15 audits have two English reports.
+        """Grouped by file rather than by audit: 15 audits have two English reports.
 
         Where an audit was reissued, both files carry their own numbering
         from one, so grouping by reference would look like a gap.
@@ -1543,7 +1544,7 @@ class TestActionPlansAnswerRealRecommendations:
         assert with_text / len(action_plans) >= 0.8
 
     def test_a_confirmed_link_really_does_have_matching_text(self, action_plans):
-        """Confirmation rests on containment, not on a symmetric ratio.
+        """Confirmation rests on containment. A symmetric ratio is not what it rests on.
 
         The plans are two-column tables whose response column bleeds words
         into the restatement. A symmetric ratio punished that heavily even
@@ -1856,8 +1857,8 @@ class TestThePermitCorpusDecomposesAsDocumented:
     to annexes, and these pin what it found on 4 September 2026.
 
     The corpus grows as decisions are published, so a difference here is a
-    finding about the source and not a broken test. The right response is to
-    read the new documents and move the number, never to widen the assertion.
+    finding about the source, with the test intact. The right response is to
+    read the new documents and move the number. Widening the assertion is wrong.
     """
 
     def test_every_listed_decision_was_harvested(self, permit_types, permits):
@@ -2033,7 +2034,7 @@ class TestTheConditionBaselineHoldsItsClaim:
                 len(shared),
             )
         # The OCR set shares no document with the born-digital one, so its own
-        # concentration is a replication and not a restatement.
+        # concentration is a replication rather than a restatement.
         assert inside["text"] == (238, 253)
         assert inside["ocr"] == (52, 54)
 
@@ -2072,7 +2073,7 @@ class TestNoDocumentHidesBodyTextBehindALightCover:
         # class A delivery, in three documents that are page images carrying an
         # OCR text layer underneath: every glyph of that layer sits under the
         # picture, so the detector calls it hidden by construction. They are a
-        # property of the layer, not a redaction, and the documents carry no
+        # property of the layer rather than a redaction, and the documents carry no
         # redaction at all.
         assert sum(r["dolda"] for r in hidden_text) == 494
         assert max(r["längsta_körning"] for r in hidden_text) == 24
@@ -2407,7 +2408,7 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
             return stem in quote.casefold()
         if len(numbers) < 2:
             return numbers[0] in quote and stem in quote.casefold()
-        # Every occurrence, not only the first: a decision that cites two
+        # Every occurrence, the first among them: a decision that cites two
         # provisions from the same chapter puts "2 kap." in the quote more
         # than once, and stopping at the first match would call the second
         # provision invented.
@@ -2462,7 +2463,7 @@ class TestTheGroundsRegisterKnowsItsOwnGaps:
 
 
 class TestTheRegisterExtractCountsKeeperRows:
-    """A row in the request C extract is an animal keeper, not a control.
+    """A row in the request C extract is an animal keeper. A control it is not.
 
     The authority stated it on 24 August 2026: a control with two keepers becomes
     two rows. The extract carries four columns and no identifier, so nothing can

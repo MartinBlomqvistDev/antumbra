@@ -6,10 +6,11 @@ when that move is due. It exists because a list carried in someone's head
 fails silently, and because an event that was never logged is invisible to
 any check that starts from the log.
 
-That last point is the limitation to keep in view: this reads the log, not the
-mailbox. It answers "given what is logged, what is open", never "is the log
-complete". Completeness is established by walking the authority's threads and
-comparing them against the log, which is a human step.
+That last point is the limitation to keep in view: this reads the log, and the
+mailbox lies outside its reach. It answers the question "given what is logged,
+what is open". The question "is the log complete" it leaves alone, and
+completeness is established by walking the authority's threads and comparing
+them against the log, which is a human step.
 
 Deadlines follow docs/BEGARANMALL.md: P2 at day 5 and P3 at day 10 for a
 request with no contact at all, P4 within one working day of a clarifying
@@ -17,14 +18,15 @@ question, P5 within three working days of a fee notice, and P10 at day 40 for
 everything still open. Tillämpningsnot 4 made P8 selective, so a masked
 delivery is reported as information and never as a due item. Tillämpningsnot 5
 turns on conduct that cannot be read off an event name, so a general policy
-document sent instead of a decision is flagged for judgement, not scheduled.
+document sent instead of a decision is flagged for judgement, and nothing is
+scheduled from it.
 
 Tillämpningsnot 3 also decides when a request is finished, and a request whose
-decision has been asked for and not answered is not: delivery of the part that
+decision has been asked for and left unanswered is not: delivery of the part that
 could be delivered does not settle the part that was refused.
 
 Working days are Monday to Friday. Public holidays are not modelled, which
-matters from Christmas onwards and not at all in August; the effect is that a
+matters from Christmas onwards, with August untouched; the effect is that a
 deadline can be reported one or two days earlier than it truly falls.
 
 Usage:
@@ -74,7 +76,7 @@ OURS = frozenset(
     {
         "avsändning",
         # Our answer to an authority's question about the denominator. It sits
-        # on the P11 track and not on a request, since note 7 keeps the two
+        # on the P11 track rather than on a request, since note 7 keeps the two
         # apart, but it is still ours and must be placeable.
         "svar på förtydligandefråga om nämnaren",
         "avsmalningssvar",
@@ -157,7 +159,8 @@ THEIRS = frozenset(
         # tracked with the other obligations rather than here.
         "dom i kammarrätten",
         # The court registering an appeal and giving it a case number. The
-        # sender is the kammarrätt, not the county, but the event belongs to
+        # sender is the kammarrätt where the county would be, but the event
+        # belongs to
         # the request whose decision was appealed, and nothing is asked of us.
         "målregistrering i kammarrätten",
         # The court sending in what it has received and offering a chance to
@@ -171,7 +174,7 @@ THEIRS = frozenset(
         "överlämnande till kammarrätten",
         # The authority asking again for a delgivningskvitto it has not
         # had. It puts the receipt on us, but on the authority's own date
-        # and not on any protocol clock.
+        # and outside every protocol clock.
         "påminnelse om delgivning",
         # An authority answering that the documents were already sent, in
         # response to P10's last reminder. It asks nothing on a protocol clock.
@@ -204,8 +207,9 @@ THEIRS = frozenset(
         "delvis avslagsbeslut mottaget",
         "riktlinje bifogad",
         # The authority explaining how its own extract is built, here that a
-        # row is one animal keeper and not one control. It answers nothing that
-        # was asked, so it closes no open question, but it is their move.
+        # row is one animal keeper where a control would be the unit. It
+        # answers nothing that was asked, so it closes no open question, but it
+        # is their move.
         "svar om uttagets uppbyggnad",
         "taxebeslut bifogat",
     }
@@ -260,7 +264,7 @@ INTERNAL = frozenset(
     }
 )
 
-# Aggregate rows describe a batch or the project itself, not one request.
+# Aggregate rows describe a batch or the project itself, never a single request.
 # "länsstyrelserna" is the same thing under a word invented on 5 September 2026
 # for seven rows about the conditions layer. The log is append-only, so the word
 # stays and is read here; new internal rows use "samtliga".
@@ -303,7 +307,8 @@ DECISION_CLOSERS = frozenset(
     }
 )
 
-# P9 runs on calendar days, not working days: the appeal is sent within 14
+# P9 runs on calendar days where the rest runs on working days: the appeal is
+# sent within 14
 # calendar days of delfåendet although the statutory limit is three weeks.
 # Kept apart from ANSWER_DUE so that neither rule can borrow the other's
 # clock, which would move a deadline without anyone editing it.
@@ -389,7 +394,7 @@ def unmapped(rows: list[dict]) -> set[str]:
     return {row["handelse"] for row in rows if row["handelse"] not in known}
 
 
-# P11 is a follow-up question and not one of the 43 requests: tillämpningsnot 7
+# P11 is a follow-up question, outside the 43 requests: tillämpningsnot 7
 # says so in as many words, and adds that it carries no deadline of its own.
 # Logged under begaran "A+B" its events landed on the request tracks, where they
 # reopened requests that were delivered weeks ago and invented a P4 deadline the
@@ -429,9 +434,9 @@ def is_p11(row: dict) -> bool:
 
 
 # P12 is the packet sent to each authority before publication. It belongs to
-# the authority and not to one of the 43 requests: it carries both classes at
+# the authority rather than to one of the 43 requests: it carries both classes at
 # once, and its three weeks are the project's own undertaking in
-# tillämpningsnot 8 and not a P1 or P4 deadline. Logged on the request tracks
+# tillämpningsnot 8 rather than a P1 or P4 deadline. Logged on the request tracks
 # these events would reopen requests that closed in August, which is the error
 # tillämpningsnot 7 fixed for P11.
 P12_EVENTS = frozenset(
@@ -548,9 +553,9 @@ def state(events: list[dict], today: date) -> dict:
     fee_stopped = any("avgiftsstoppad" in (e.get("notering") or "") for e in events)
     # Not filtered on THEIRS: a decision track also ends when the request for a
     # decision lapses on a condition the applicant set in writing, which is our
-    # own event and not theirs.
+    # own event rather than theirs.
     decision_closed = any(e["handelse"] in DECISION_CLOSERS for e in events)
-    # A decision that has been asked for and not answered leaves the request
+    # A decision that has been asked for and left unanswered leaves the request
     # running, however much of it was delivered.
     asked = [e for e in events if e["handelse"] in DECISION_REQUESTS]
     answered_at = [
@@ -600,7 +605,7 @@ def state(events: list[dict], today: date) -> dict:
         (last_ours["datum"], last_ours["klockslag"])
         > (last_theirs["datum"], last_theirs["klockslag"])
     )
-    # The appeal clock belongs to the decision, not to whatever the authority
+    # The appeal clock belongs to the decision. Whatever the authority
     # happened to send last. A delgivningspåminnelse or an autosvar logged
     # after a refusal would otherwise stand as the last event and silence P9's
     # deadline: Gotland 3287-2026 was received on 28 August 2026, read on
@@ -708,7 +713,7 @@ def denominator_lines(rows: list[dict], today: date) -> list[str]:
 # out, counted from the day the packets went. Before the packets go, day 40 is
 # the only floor there is, and the report says so.
 REPLY_WEEKS = 21
-# Not 8 sets a floor and not a date. The day chosen on 7 October 2026 is the
+# Not 8 sets a floor rather than a date. The day chosen on 7 October 2026 is the
 # Monday after it, and the reasons are in docs/PUBLICERING.md.
 CHOSEN_DAY = "2026-10-26"
 

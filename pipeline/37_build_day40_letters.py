@@ -25,13 +25,16 @@ is what the masking measure rests on. The eighteen authorities that delivered
 were asked afterwards under P8. Asking the three that have not delivered would
 put the request before their first delivery and treat them differently.
 
-**The quoted request is read out of the protocol, not copied.** A copy drifts.
+**The quoted request is read out of the protocol, and copying it is wrong.**
+A copy drifts.
 The letter quotes the code block under section 2 or section 3 of
 docs/BEGARANMALL.md as it stands.
 
-**The recipient set is read against notes 3 and 7, not against a filter.** A
+**The recipient set is read against notes 3 and 7, where a filter would be
+blunter.** A
 request that is fee-stopped with a decision requested under note 2 reaches its
-final status through note 3 point 2, not through note 7's silence, however
+final status through note 3 point 2, where note 7's silence would be the wrong
+route, however
 literally it lacks both documents and a decision. Kalmar B is that shape and has
 answered eight times; a filter would have sent it the wrong letter.
 
@@ -49,7 +52,7 @@ refuses and names the rows, and a person writes that letter with the specifics
 in it.
 
 Writes data/dag40/, which is gitignored. Nothing is sent, and the sending date
-is set by the protocol, not by this step.
+is set by the protocol, and this step does not set it.
 
 Usage:
     python pipeline/37_build_day40_letters.py
@@ -72,7 +75,8 @@ from recipients import COUNTIES, address  # noqa: E402
 OUT = ROOT / "data" / "dag40"
 PROTOCOL = ROOT / "docs" / "BEGARANMALL.md"
 
-# Day 40 in the protocol, Monday. The letters are dated, not sent, here.
+# Day 40 in the protocol, Monday. The letters are dated here, and sent
+# elsewhere.
 DAY_40 = date(2026, 9, 28)
 
 DELIVERED = frozenset(
@@ -199,7 +203,7 @@ P11_QUESTION = (
 
 
 def swedish(iso: str) -> str:
-    """A date as a letter writes it, not as a file names it."""
+    """A date as a letter writes it, which is not how a file names it."""
     year, month, day = (int(part) for part in iso.split("-"))
     return f"{day} {MONTHS[month - 1]} {year}"
 
