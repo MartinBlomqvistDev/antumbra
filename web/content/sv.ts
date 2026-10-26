@@ -501,7 +501,7 @@ export const sv: Copy = {
         "skickade de 43 begärandena, läste och undertecknade varje brev innan " +
         "det gick, och hanterade varje svar efter protokollet. Insamlingen, " +
         "loggföringen och analysen har skett med AI-assistans, deklarerad med " +
-        "datum i metoden. Ingen uppgift i materialet har en språkmodell som " +
+        "datum på metodsidan. Ingen uppgift i materialet har en språkmodell som " +
         "källa.",
       "Namngiven begäran står som vägval 3 i beslutsloggen, skrivet innan " +
         "något brev gick. Ett överklagande kräver en part, en e-postadress " +

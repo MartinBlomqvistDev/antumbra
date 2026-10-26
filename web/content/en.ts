@@ -20,6 +20,7 @@ export const en: Copy = {
     { href: "/en/jamforelse/", label: "EU comparison" },
     { href: "/en/uppslag/", label: "Reference" },
     { href: "/en/metod/", label: "Method" },
+    { href: "/en/om/", label: "About" },
   ],
   languageSwitch: { href: "/", label: "Svenska" },
   themeToggle: "Switch colour scheme",
@@ -444,6 +445,60 @@ export const en: Copy = {
         note: "Note",
       },
     },
+  },
+  om: {
+    title: "About the measurement and who made it",
+    lead:
+      "Every request carried my name and my email address, so the " +
+      "authorities have known who was asking since 3 August 2026.",
+    body: [
+      "My name is Martin Blomqvist and I work as a data scientist. I sent " +
+        "the 43 requests, read and signed every letter before it went, and " +
+        "handled every reply under the protocol. The collection, the logging " +
+        "and the analysis were done with AI assistance, declared and dated on " +
+        "the method page. No fact in the material has a language model as its " +
+        "source.",
+      "A named request stands as decision 3 in the project log, written " +
+        "before any letter went out. An appeal requires a party, an email " +
+        "address is not anonymous in any case, and the same sender to all 22 " +
+        "authorities removes the sender as a variable. Anonymous requests are " +
+        "protected by the constitution, but they would have made the refusal " +
+        "branch of the measurement impossible to pursue.",
+      "Nobody commissioned or funded the work. The budget is zero kronor, so " +
+        "no fee was accepted whatever the amount, and none has been paid. " +
+        "Officials are never named in the material; where a decision names " +
+        "its decision-maker and its rapporteur, the role is written instead.",
+      "I want to know about errors in the material. Send the corrected fact " +
+        "and where it comes from, so that the underlying data is corrected " +
+        "and not only the text, and the correction is logged with its date.",
+    ],
+    linksHeading: "Other work",
+    links: [
+      {
+        label: "github.com/MartinBlomqvistDev",
+        href: "https://github.com/MartinBlomqvistDev",
+        note: "The code repositories, this project's among them.",
+      },
+      {
+        label: "linkedin.com/in/martin-blomqvist",
+        href: "https://www.linkedin.com/in/martin-blomqvist",
+        note: "Professional background and earlier work.",
+      },
+      {
+        label: "kattochkod.se",
+        href: "https://kattochkod.se",
+        note:
+          "The consultancy I run, unconnected to this measurement. " +
+          "The site is in Swedish.",
+      },
+      {
+        label: "huggingface.co/MartinBlomqvist",
+        href: "https://huggingface.co/MartinBlomqvist",
+        note: "Datasets and models, among them this measurement's aggregates.",
+      },
+    ],
+    contactHeading: "Contact",
+    contact: "cm.blomqvist@gmail.com",
   },
   building: "This page is under construction.",
 };
