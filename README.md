@@ -55,8 +55,16 @@ countries. The same auditor, the same legal basis, the same report template
 for every member state, so comparable by construction. Parsed into 11,999
 recommendations with a citation graph resolved to the verbatim paragraph in
 95.7 percent of edges, a dimensional model tested in dbt on BigQuery, and
-an 81,292-paragraph corpus with a retrieval layer that can answer only in
-verbatim quotations. Sweden has 98 reports, 8 of them on animal welfare.
+an 81,292-paragraph corpus. Sweden has 98 reports, 8 of them on animal
+welfare.
+
+The corpus was harvested in August 2026 and is a dated snapshot. A scheduled
+workflow watches the Commission's index and opens an issue when new reports
+appear; 37 have appeared since, and they are outside every figure above. The
+retrieval layer over the corpus was measured on 26 October 2026 and came third
+of three behind plain BM25, so the search box it answered is gone and the
+service is deleted. The six example answers on /uppslag stay, and the figures
+that removed the box are published beside them.
 
 ## What the measurement found
 
