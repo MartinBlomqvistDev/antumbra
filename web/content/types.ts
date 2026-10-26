@@ -215,7 +215,7 @@ export type Copy = {
         context: string;
         contextLink: string;
       };
-      packet: { heading: string; note: string; sent: string };
+      packet: { heading: string; note: string; sent: string; read: string };
       letters: {
         heading: string;
         note: string;

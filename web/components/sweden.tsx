@@ -45,7 +45,7 @@ export type BoardLabels = {
     context: string;
     contextLink: string;
   };
-  packet: { heading: string; note: string; sent: string };
+  packet: { heading: string; note: string; sent: string; read: string };
   letters: {
     heading: string;
     note: string;
@@ -406,6 +406,14 @@ export function AuthorityBoard({
             <p>
               <code className="break-all">{authority.paket.sha256}</code>
             </p>
+            <details>
+              <summary className="cursor-pointer text-ink-secondary">
+                {labels.packet.read}
+              </summary>
+              <pre className="mt-2 overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+                {authority.paket.text}
+              </pre>
+            </details>
           </div>
         ) : null}
       </div>

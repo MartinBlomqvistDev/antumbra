@@ -335,7 +335,7 @@ export const en: Copy = {
       "are always verbatim quotations with country, reference and " +
       "paragraph number.",
     banner:
-      "The search finds where a topic is discussed, never what was " +
+      "Retrieval finds where a topic is discussed, never what was " +
       "concluded. Always read the quotation.",
     examplesHeading: "Example questions",
     similarity: "similarity",
@@ -350,9 +350,12 @@ export const en: Copy = {
         "The search could not be reached. The example questions below " +
         "still work.",
       note:
-        "Live search is not open yet. The example answers below are " +
-        "precomputed through the same code path the search runs, so the " +
-        "verbatim guarantee and the source references are the same.",
+        "Retrieval runs from the repository rather than from here: one " +
+        "pipeline step rebuilds the embeddings and `src/retrieval.py` " +
+        "answers any question against the whole corpus. The answers below " +
+        "are those six questions run through that code. The assembler " +
+        "refuses text that is not character-identical to its source " +
+        "paragraph, and an empty answer is an empty answer.",
     },
   },
   metod: {

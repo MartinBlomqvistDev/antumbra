@@ -384,7 +384,7 @@ export const sv: Copy = {
       "Sök i 81 292 stycken ur DG SANTE:s revisionsrapporter. Svaren är " +
       "alltid ordagranna citat med land, referens och styckenummer.",
     banner:
-      "Sökningen hittar var ett ämne behandlas, aldrig vad som " +
+      "Hämtningen hittar var ett ämne behandlas, aldrig vad som " +
       "konstaterats. Läs alltid citatet.",
     examplesHeading: "Exempelfrågor",
     similarity: "likhet",
@@ -397,9 +397,12 @@ export const sv: Copy = {
       searching: "Söker",
       error: "Söket kunde inte nås. Exempelfrågorna nedan fungerar ändå.",
       note:
-        "Livesöket är inte öppnat än. Exempelsvaren nedan är " +
-        "förberäknade genom samma kodväg som söket kör, så ordagrannheten " +
-        "och källhänvisningarna är desamma.",
+        "Hämtningen körs ur kodarkivet och inte härifrån: embeddingarna " +
+        "byggs om med ett steg i pipelinen och `src/retrieval.py` svarar på " +
+        "vilken fråga som helst mot hela korpusen. Svaren nedan är de sex " +
+        "frågorna körda genom just den koden. Montören vägrar text som inte " +
+        "är teckenidentisk med källstycket, och ett tomt svar är ett tomt " +
+        "svar.",
     },
   },
   metod: {
@@ -575,11 +578,13 @@ export const sv: Copy = {
       packet: {
         heading: "Underlaget myndigheten fick",
         note:
-          "Brevet som skickades ligger arkiverat med kontrollsumma. Koden " +
-          "som bygger breven är rättad två gånger sedan utskicket, så ett " +
-          "brev byggt i dag är inte brevet som gick; rättelserna står i " +
-          "händelseloggen.",
+          "Brevet som skickades står här i sin helhet, läst ur arkivet och " +
+          "kontrollerat mot kontrollsumman nedan, så sidan inte kan visa ett " +
+          "annat brev än det som gick. Koden som bygger breven är rättad två " +
+          "gånger sedan utskicket, så ett brev byggt i dag är inte brevet som " +
+          "gick; rättelserna står i händelseloggen.",
         sent: "Avsänt",
+        read: "Läs brevet som det skickades",
       },
     },
     domstolar: {

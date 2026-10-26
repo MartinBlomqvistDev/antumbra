@@ -348,7 +348,16 @@ class TestNoPersonalDataIsCommitted:
         for path in tracked_files():
             if path.suffix in {".png", ".jpg", ".ico", ".pbix", ".woff2"}:
                 continue
-            for found in self.EMAIL.findall(path.read_text("utf-8", errors="ignore")):
+            text = path.read_text("utf-8", errors="ignore")
+            # JSON is scanned decoded, for the reason the reply register's own
+            # test gives: an escaped newline before an address glues an n onto
+            # the local part, and the scan then reports a name-shaped address
+            # that is not in the file. The site export carries the twenty-two
+            # sent packets, whose signature stands on a line of its own, so
+            # every one of them read as ncm.blomqvist until this was fixed.
+            if path.suffix in {".json", ".jsonl"}:
+                text = text.replace("\\n", "\n").replace("\\r", "\r")
+            for found in self.EMAIL.findall(text):
                 if not self.NAME_SHAPED.match(found):
                     continue
                 if found.lower() in {a.lower() for a in self.ALLOWED_EMAILS}:

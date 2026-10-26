@@ -27,6 +27,7 @@ Writes ``web/public/data/sverige.json``, beside the DG SANTE export.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import json
 import math
@@ -245,7 +246,21 @@ def build() -> dict:
     masking = read(MASKING)
     contrast = read(CONTRAST)
     replies = read(REPLIES)
-    sent = {row["slug"]: row for row in read(SENT)}
+    # The packet is the project's own letter, and it is the one every reply on
+    # the board is a reply to. Its checksum alone put our side behind a hash
+    # while the authorities' side stood in full, which is the asymmetry a
+    # reader of an openness measurement notices first. The text is read from
+    # the archived file and checked against the manifest's own hash, so the
+    # page cannot show a letter other than the one that was sent.
+    sent = {}
+    for row in read(SENT):
+        text = (ROOT / row["path"]).read_bytes()
+        digest = hashlib.sha256(text).hexdigest()
+        if digest != row["sha256"]:
+            raise SystemExit(
+                f"{row['path']} hashar till {digest}, manifestet säger {row['sha256']}"
+            )
+        sent[row["slug"]] = {**row, "text": text.decode("utf-8")}
     log = read(LOG)
     # The P12 letters promise that the whole correspondence log is published,
     # and it was, as a file on the data page. An authority's own board showed

@@ -87,6 +87,8 @@ export type Authority = {
     bytes: number;
     sha256: string;
     avsant: string;
+    /** The letter as it was sent, read from the archive and hash-checked. */
+    text: string;
   } | null;
   svar: Reply[];
   svar_saknas: boolean;
