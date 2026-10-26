@@ -157,8 +157,8 @@ export const sv: Copy = {
         "djurskyddskontrollregister. Varje svar hanteras efter ett i " +
         "förväg skrivet protokoll: samma avsmalning vid avgift, samma " +
         "begäran om beslut, samma frist. När frågorna är identiska och " +
-        "hanteringen förutbestämd speglar skillnaderna i utfall " +
-        "myndigheterna, inte frågorna.",
+        "hanteringen förutbestämd är det myndigheterna som skillnaderna i " +
+        "utfall speglar.",
     },
     processNote:
       "Insamlingen är stängd. Samtliga 43 begäranden har nått ett " +
@@ -175,7 +175,7 @@ export const sv: Copy = {
         "Ett dokument räknas som maskat när en fylld rektangel täcker text " +
         "eller när text saknas under rektangeln. Måttet är maskinellt och " +
         "beskrivet i sin helhet i metoden. Det mäter om myndigheten lämnade " +
-        "ut uppgiften, aldrig vad uppgiften är.",
+        "ut uppgiften. Vad uppgiften säger ligger utanför måttet.",
       classLabel: "Klass",
       documents: "Dokument",
       masked: "Med minst en maskning",
@@ -246,8 +246,8 @@ export const sv: Copy = {
         "båda. Där finns {pairs} sådana ärenden: {maskedA} av {documentsA} " +
         "kontrollrapporter i klass A är maskade, mot {maskedB} av " +
         "{documentsB} dokument ur samma ärenden i klass B. Klasserna bär " +
-        "olika handlingar ur samma ärende, inte samma handling mätt två " +
-        "gånger.",
+        "olika handlingar ur samma ärende. Samma handling är aldrig mätt " +
+        "två gånger.",
       limit:
         "Jämförelsen går inte att göra i övriga län. {unnumbered} av {files} " +
         "filer saknar ärendenummer i namnet, och utan det finns ingenting som " +
@@ -364,7 +364,8 @@ export const sv: Copy = {
         note:
           "Kedjan sluts när rekommendationen anger sin grund, grunden " +
           "upplöses till ett ordagrant stycke och en åtgärdsplan besvarar " +
-          "den. Allt annat räknas som en delvis kedja, aldrig uppåt.",
+          "den. Allt annat räknas som en delvis kedja, och en delvis kedja " +
+        "räknas nedåt.",
       },
       yearHeader: "År",
       shareHeader: "Andel",
@@ -389,13 +390,13 @@ export const sv: Copy = {
       "Sex frågor körda mot 81 292 stycken ur DG SANTE:s revisionsrapporter. " +
       "Svaren är alltid ordagranna citat med land, referens och styckenummer.",
     banner:
-      "Hämtningen hittar var ett ämne behandlas, aldrig vad som " +
-      "konstaterats. Läs alltid citatet.",
+      "Hämtningen hittar var ett ämne behandlas. Vad som konstaterats " +
+      "framgår bara av citatet, så läs det.",
     examplesHeading: "Exempelfrågor",
     similarity: "likhet",
     noAnswers:
-      "Inget stycke över likhetströskeln. Ett tomt svar är ett tomt " +
-      "svar, aldrig en gissning.",
+      "Inget stycke över likhetströskeln. Ett tomt svar står som ett tomt " +
+      "svar och fylls aldrig med en gissning.",
     matning: {
       heading: "Varför sökrutan är borta",
       body: [
@@ -407,7 +408,7 @@ export const sv: Copy = {
           "än ren BM25 på varje mått, och en omrankare ovanpå gjorde den " +
           "sämre än så.",
         "Villkoret skrevs före mätningen: en sökruta som inte slår ren BM25 " +
-          "ska bort. Den är borta, och sajten anropar ingenting längre. De " +
+          "ska bort. Den är borta, och tjänsten som svarade är raderad. De " +
           "sex exempelsvaren nedan står kvar, eftersom de är körda genom " +
           "samma kod och går att kontrollera mot källan.",
         "Ett konkret utfall: ordet debeaking står i tre stycken i korpusen, " +
@@ -454,7 +455,8 @@ export const sv: Copy = {
           title: "Ytmåttet pekar fel för en av maskningsteknikerna",
           body:
             "Där texten under svärtningen är borttagen mäter ytan hur " +
-            "rutorna ritats, inte hur mycket som hålls inne. För den " +
+            "rutorna ritats. Hur mycket som hålls inne säger den ingenting om. " +
+            "För den " +
             "tekniken är antalet tecken det bättre måttet. Gränsen gäller " +
             "det förregistrerade ytmåttet och ska läsas tillsammans med " +
             "varje ytsiffra.",
@@ -586,7 +588,7 @@ export const sv: Copy = {
             "utlämnande eller som ett avslag.",
         },
         statistik: {
-          short: "begäran C avser antalsuppgifter, inte handlingar",
+          short: "begäran C avser antalsuppgifter och inga handlingar",
           long:
             "Begäran C avser antalsuppgifter ur " +
             "djurskyddskontrollregistret och inga handlingar, så " +
@@ -665,9 +667,10 @@ export const sv: Copy = {
       note:
         "Varje mottagen fil registreras med sin sha256-kontrollsumma i " +
         "ett manifest som är beständigt: en post kan läggas till men " +
-        "aldrig ändras. Förteckningen är filer och inte mätta dokument. " +
+        "aldrig ändras. Förteckningen räknar filer, och mätningen räknar " +
+        "dokument. " +
         "Maskningsmätningen läser mapparna med ändelsen _A och _B; övriga " +
-        "mappar bär det som också kom in i ärendena och inte mäts: " +
+        "mappar bär det som också kom in i ärendena utan att mätas: " +
         "avgiftsbeslut, avslagsbeslut, Jordbruksverkets statistikuttag, " +
         "nämnarsvar och korrespondensen med kammarrätterna. Två av de " +
         "mätta mapparna rymmer en fil mer än sitt antal dokument, " +

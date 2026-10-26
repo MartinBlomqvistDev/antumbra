@@ -96,8 +96,8 @@ export const en: Copy = {
         "is handled under a protocol written in advance: the same " +
         "narrowing when a fee is raised, the same request for a formal " +
         "decision, the same deadlines. When the questions are identical " +
-        "and the handling predetermined, differences in outcome reflect " +
-        "the authorities, not the questions.",
+        "and the handling predetermined, it is the authorities that " +
+        "differences in outcome reflect.",
     },
     processNote:
       "The collection is closed. All 43 requests reached a final status, " +
@@ -115,7 +115,7 @@ export const en: Copy = {
         "A document counts as redacted when a filled rectangle covers text " +
         "or when text is missing under the rectangle. The measure is " +
         "machine-made and described in full in the method. It measures " +
-        "whether the authority released the information, never what the " +
+        "whether the authority released the information. What the " +
         "information is.",
       classLabel: "Class",
       documents: "Documents",
@@ -190,7 +190,7 @@ export const en: Copy = {
         "{documentsA} " +
         "inspection reports are redacted in class A, against {maskedB} of " +
         "{documentsB} documents from the same cases in class B. The classes " +
-        "hold different documents from one case, not the same document " +
+        "hold different documents from one case. The same document is never " +
         "measured twice.",
       limit:
         "The comparison cannot be made in the other counties. {unnumbered} of " +
@@ -339,13 +339,13 @@ export const en: Copy = {
       "reports. Answers are always verbatim quotations with country, " +
       "reference and paragraph number.",
     banner:
-      "Retrieval finds where a topic is discussed, never what was " +
-      "concluded. Always read the quotation.",
+      "Retrieval finds where a topic is discussed. What was concluded " +
+      "shows only in the quotation, so read it.",
     examplesHeading: "Example questions",
     similarity: "similarity",
     noAnswers:
-      "No paragraph above the similarity threshold. An empty answer is " +
-      "an empty answer, never a guess.",
+      "No paragraph above the similarity threshold. An empty answer stands " +
+      "as an empty answer and is never filled with a guess.",
     matning: {
       heading: "Why the search box is gone",
       body: [
@@ -357,8 +357,8 @@ export const en: Copy = {
           "here managed 45.2 percent, worse than plain BM25 on every figure, " +
           "and a reranker on top of it did worse still.",
         "The condition was written before the measurement: a search box that " +
-          "does not beat plain BM25 goes. It is gone, and the site no longer " +
-          "calls anything. The six example answers below remain, because " +
+          "does not beat plain BM25 goes. It is gone, and the service that " +
+          "answered is deleted. The six example answers below remain, because " +
           "they are run through the same code and can be checked against the " +
           "source.",
         "One concrete outcome: the word debeaking stands in three paragraphs " +
@@ -407,8 +407,8 @@ export const en: Copy = {
           title: "The area measure points the wrong way for one technique",
           body:
             "Where the text under the blacking has been removed, the area " +
-            "measures how the boxes were drawn and not how much is held " +
-            "back. For that technique the character count is the better " +
+            "measures how the boxes were drawn. How much is held back it does " +
+            "not say. For that technique the character count is the better " +
             "measure. The limit belongs to the pre-registered area figure " +
             "and is to be read beside every area number.",
         },

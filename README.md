@@ -32,7 +32,7 @@ and poultry installations, 2013 to 2026, published by the Swedish Board of
 Agriculture, harvested as 236 files under 237 links. 2,347 individual
 conditions have been read out of the 180 files whose conditions section can be
 located, and every one of the 160 permits that carries conditions is among
-them. The whole population, not a sample.
+them. That is the whole population, and no sample was drawn.
 
 **The openness layer.** Three freedom-of-information requests sent the same
 morning, A and B identically worded to all 21 county administrative boards
@@ -123,7 +123,7 @@ agree on.
 
 ## Method
 
-- **The subject is the state, not the animals and not the keeper.** The
+- **The subject is the state.** Neither the animals nor the keeper is. The
   project contains no evaluative sentence about animal husbandry.
 - **Never characterise, always quote.** The authority's own words, verbatim.
 - **Baseline first.** The trivial explanation runs before the interesting
@@ -137,30 +137,34 @@ agree on.
   built to be compared.
 - **No personal data is published.** Aggregated by county and legal person.
 - **AI assistance is declared, dated, in ADR-0014.** A language model is an
-  instrument here, never a cited source; every published figure traces to a
+  instrument here and is cited as a source nowhere; every published figure
+  traces to a
   source document.
 
 ## What the measurement cannot show
 
-Stated here rather than in a footnote, because it governs how the results
-may be read.
+Stated here in the running text, because it governs how the results may be
+read.
 
 **The conditions layer is not national.** Five of twelve permit divisions
 carry 208 of the 237 links. Three have zero. Conclusions about
-conditions hold for the pig and poultry belt, not the country.
+conditions hold for the pig and poultry belt, and stop at its edge.
 
 **72 of the 236 permit files carried no text layer** and were read with OCR
 in Swedish. OCR text segments worse than a text layer, so the two sources are
 reported apart and never pooled into a headline; the difference is measured
-against the documents that have a text layer, not assumed.
+against the documents that have a text layer, and nothing about it is
+assumed.
 
 **Validity dates are partly proxies.** A permit is replaced only when the
 new one is taken into use, and that date sits with the supervisory
-authority, not in the decisions. Decision dates are used as proxies, the
+authority, which is where the decisions do not record it. Decision dates are
+used as proxies, the
 error always points the same way, and every row carries its own date
 source.
 
-**The register extract counts animal keepers, not controls.** The row level
+**The register extract counts animal keepers.** A control is what it does not
+count. The row level
 extract behind the recomputed deficiency spread carries one row per animal
 keeper at a control, so a control with two keepers appears twice. The authority
 stated this on 24 August 2026, and the file carries four columns and no
@@ -172,7 +176,8 @@ deficiency flag.
 **The deficiency flag is not split by species.** Documents are assigned to an
 animal by counting terms, and that assignment was checked against eighteen
 hand-read documents on 25 August 2026 without a single wrong animal. The
-deficiency field, however, sits on the control and not on the animal, and one of
+deficiency field, however, sits on the control. The animal is not where it
+sits, and one of
 the eighteen records its faults in the horse facilities of a holding that also
 keeps birds. A deficiency share computed per species can therefore carry a fault
 found in an animal outside the three the project measures.
@@ -186,7 +191,8 @@ characters are a page header under the authority's own white box.
 
 **The area measure points the wrong way for one redaction technique.** Where
 the text under the blacking has been removed, the area measures how the boxes
-were drawn and not how much is held back; for that technique the character
+were drawn, and says nothing about how much is held back; for that technique
+the character
 count is the better measure. The limit belongs to the pre-registered area
 figure and is to be read beside it.
 
@@ -195,8 +201,7 @@ the correlation across counties and for the difference in deficiency share
 between unannounced and announced inspections within county, species and
 inspection type. The second needs the notice field crossed with the deficiency
 field, and that extract was not released. The pre-written null-result text
-asserts the outcome of that very test, so it is struck rather than reproduced,
-and the half that could be tested does not separate a weak positive
+asserts the outcome of that very test, so it is struck, and the half that could be tested does not separate a weak positive
 correlation from none.
 
 **The law on redaction is unsettled.** The appellate courts have ruled in

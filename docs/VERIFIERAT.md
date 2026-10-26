@@ -3672,9 +3672,9 @@ undanhållen, och sänkte recall@10 på den undanhållna halvan från 0,5129 til
 
 **Villkoret skrevs före mätningen och det föll.** En sökruta som inte slår ren
 BM25 ska bort. Sökrutan är borttagen från /uppslag i båda språklagren,
-och komponenten är raderad ur `web/components/`. Sajten anropar ingenting
-längre. Tjänsten `antumbra-retrieval` på Cloud Run står kvar tills Martin
-sagt till om den ska tas bort, och den skalar till noll. De sex exempelsvaren står kvar, eftersom de är körda genom samma
+och komponenten är raderad ur `web/components/`. Tjänsten
+`antumbra-retrieval` på Cloud Run är raderad på Martins besked samma dag, och
+URL:en svarar 404. De sex exempelsvaren står kvar, eftersom de är körda genom samma
 kod och varje citat går att kontrollera mot sitt källstycke.
 
 **Ett observerat utfall före avstängningen.** Sökning på ordet *debeaking* gav
