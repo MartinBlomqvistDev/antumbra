@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/shell";
-import { AuthorityBoard } from "@/components/sweden";
+import { AuthorityBoard, CourtBoard } from "@/components/sweden";
 import { sv } from "@/content/sv";
 import { readDeliveryManifest } from "@/lib/log";
 import { readSweden } from "@/lib/sverige";
@@ -52,6 +52,24 @@ export default function Handlingar() {
             <AuthorityBoard
               key={authority.slug}
               authority={authority}
+              labels={copy.tavla}
+              locale="sv-SE"
+            />
+          ))}
+        </div>
+      </section>
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {copy.domstolar.heading}
+        </h2>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.domstolar.note}
+        </p>
+        <div className="space-y-2">
+          {sweden.domstolar.map((court) => (
+            <CourtBoard
+              key={court.myndighet}
+              court={court}
               labels={copy.tavla}
               locale="sv-SE"
             />

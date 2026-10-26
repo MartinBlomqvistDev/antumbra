@@ -107,6 +107,8 @@ export type Sweden = {
     myndigheter: number;
     svarat_substantiellt: number;
   };
+  /** The courts' own letters in the four appeals; they carry no figures. */
+  domstolar: { myndighet: string; brev: Letter[] }[];
   klasser: Record<
     "A" | "B",
     {

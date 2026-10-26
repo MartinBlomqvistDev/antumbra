@@ -1,4 +1,4 @@
-import type { Authority, RankingRow, Reply } from "@/lib/sverige";
+import type { Authority, Letter, RankingRow, Reply } from "@/lib/sverige";
 
 /**
  * The Swedish result surfaces: the comparison table for one class, and one
@@ -55,6 +55,7 @@ export type BoardLabels = {
     message: string;
     attachments: string;
     repeats: string;
+    messagesWord: string;
   };
 };
 
@@ -125,6 +126,92 @@ export function ComparisonTable({
         </table>
       </div>
     </div>
+  );
+}
+
+/**
+ * A court's letters, with no figures beside them. The register's scope is
+ * requests A, B and C and the four appeals, so these belong to the published
+ * material; a court has no redaction measure, so it gets no class table.
+ */
+export function CourtBoard({
+  court,
+  labels,
+  locale,
+}: {
+  court: { myndighet: string; brev: Letter[] };
+  labels: BoardLabels;
+  locale: string;
+}) {
+  const count = new Intl.NumberFormat(locale);
+  const messages = court.brev.reduce(
+    (total, letter) => total + 1 + (letter.forekomster?.length ?? 0),
+    0,
+  );
+  return (
+    <details className="border border-border-soft">
+      <summary className="cursor-pointer p-3 text-sm">
+        <span className="font-semibold">{court.myndighet}</span>{" "}
+        <span className="text-ink-secondary">
+          {count.format(messages)} {labels.letters.messagesWord}
+        </span>
+      </summary>
+      <div className="space-y-3 border-t border-border-soft p-3">
+        <LetterList letters={court.brev} labels={labels} />
+      </div>
+    </details>
+  );
+}
+
+/** The verbatim letters, rendered the same way wherever they appear. */
+function LetterList({
+  letters,
+  labels,
+}: {
+  letters: Letter[];
+  labels: BoardLabels;
+}) {
+  return (
+    <>
+      {letters.map((letter) => (
+        <div key={letter.meddelande} className="space-y-1 text-xs">
+          <p className="text-ink-secondary">
+            {letter.datum} {letter.klockslag}
+            {letter.roll ? `, ${labels.reply.from} ${letter.roll}` : ""}
+          </p>
+          <p className="text-ink-secondary">
+            {labels.letters.subject} {letter.amnesrad}
+          </p>
+          <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+            {letter.text}
+          </pre>
+          {letter.bilagor ? (
+            <p className="text-ink-secondary">
+              {labels.letters.attachments} {letter.bilagor}
+            </p>
+          ) : null}
+          {letter.utelamnat ? (
+            <p className="text-ink-secondary">
+              {labels.letters.omitted} {letter.utelamnat}
+            </p>
+          ) : null}
+          <p className="text-ink-secondary">
+            {labels.letters.message} {letter.meddelande}
+          </p>
+          {letter.forekomster && letter.forekomster.length > 0 ? (
+            <p className="text-ink-secondary">
+              {labels.letters.repeats}{" "}
+              {letter.forekomster
+                .map(
+                  (again) =>
+                    `${again.datum} ${again.klockslag} (${again.meddelande})`,
+                )
+                .join(", ")}
+            </p>
+          ) : null}
+        </div>
+      ))}
+    </>
   );
 }
 
@@ -304,44 +391,7 @@ export function AuthorityBoard({
                   .replace("{messages}", String(messages))
                   .replace("{rows}", String(authority.brev.length))}
               </p>
-              {authority.brev.map((letter) => (
-                <div key={letter.meddelande} className="space-y-1 text-xs">
-                  <p className="text-ink-secondary">
-                    {letter.datum} {letter.klockslag}
-                    {letter.roll ? `, ${labels.reply.from} ${letter.roll}` : ""}
-                  </p>
-                  <p className="text-ink-secondary">
-                    {labels.letters.subject} {letter.amnesrad}
-                  </p>
-                  <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
-                    {letter.text}
-                  </pre>
-                  {letter.bilagor ? (
-                    <p className="text-ink-secondary">
-                      {labels.letters.attachments} {letter.bilagor}
-                    </p>
-                  ) : null}
-                  {letter.utelamnat ? (
-                    <p className="text-ink-secondary">
-                      {labels.letters.omitted} {letter.utelamnat}
-                    </p>
-                  ) : null}
-                  <p className="text-ink-secondary">
-                    {labels.letters.message} {letter.meddelande}
-                  </p>
-                  {letter.forekomster && letter.forekomster.length > 0 ? (
-                    <p className="text-ink-secondary">
-                      {labels.letters.repeats}{" "}
-                      {letter.forekomster
-                        .map(
-                          (again) =>
-                            `${again.datum} ${again.klockslag} (${again.meddelande})`,
-                        )
-                        .join(", ")}
-                    </p>
-                  ) : null}
-                </div>
-              ))}
+              <LetterList letters={authority.brev} labels={labels} />
             </>
           )}
         </div>

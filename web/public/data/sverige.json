@@ -24,6 +24,149 @@
       "myndigheter": 18
     }
   },
+  "domstolar": [
+    {
+      "myndighet": "Kammarrätten i Göteborg",
+      "brev": [
+        {
+          "datum": "2026-09-03",
+          "klockslag": "14:21:02",
+          "myndighet": "Kammarrätten i Göteborg",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Brev från Kammarrätten i Göteborg i 5937-26",
+          "meddelande": "1a067373df3ebc5c",
+          "text": "Säker e-post\n\nFrån / From: Kammarratten.Goteborg@dom.se\n\nÄmne / Subject: Brev från Kammarrätten i Göteborg i 5937-26\n\nDu får det här mejlet eftersom en domstol eller nämnd inom Sveriges Domstolar har skickat ett meddelande till dig via tjänsten \"Säker e-post\".\n\nVad behöver du göra?\n\nÖppna meddelandet så snart som möjligt. Det kan innehålla viktig information som du måste göra något med inom en viss tid.\n\nSpara filer och logga ut\n\n• Använd knappen ”Logga ut” när du vill gå ut ur tjänsten. Då kan du öppna meddelandet igen, ifrån vilken enhet du vill. Om du bara stänger webbläsaren kommer du inte åt meddelandet igen.\n\n• Meddelandet och eventuella bifogade filer raderas från tjänsten efter 30 dagar. Men innan dess kan du spara meddelande och filer till din egen enhet.\n\nÖppna ditt meddelande genom \"Säker e-post\"\n\nVill du veta mer om hur den här tjänsten fungerar? Mer information finns på domstol.se.\n\nDu kan inte svara på det här mejlet. Men när du har öppnat meddelandet kan du svara via tjänsten.",
+          "bilagor": null,
+          "utelamnat": "engångslänken till domstolens tjänst Säker e-post, som är en personlig åtkomstlänk och inte en publicerad adress. Domstolens avisering om att ett meddelande i mål 5937-26 ligger i tjänsten Säker e-post, och själva handlingen ligger alltså inte i mejlet. Ingen person namnges. Engångslänken är utelämnad av det skäl som står ovan, och den upphörde att gälla 30 dagar efter meddelandet, alltså före publiceringen",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "datum": "2026-09-10",
+          "klockslag": "10:09:05",
+          "myndighet": "Kammarrätten i Göteborg",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Autosvar: Begäran om allmän handling: avgöranden i målen 2605-18, 2803-18, 6077-19, 4309-20 och 3503-19",
+          "meddelande": "1a08a5cff40c2d8c",
+          "text": "Kammarrätten i Göteborg har tagit emot ditt meddelande. Kammarrätten läser inkommande e-post flera gånger varje dag och kommer att hantera ditt meddelande så snart som möjligt.\n\nFör information om kammarrättens personuppgiftsbehandling se:\nhttps://www.domstol.se/kammarratten-i-goteborg/behandling-av-personuppgifter/\n\nMed vänlig hälsning\n\nKammarrätten i Göteborg\n\n031-732 74 00 • kammarratten.goteborg@dom.se • Postadress: Box 1531, 401 50 Göteborg • Besöksadress: Stora Nygatan 21 • Fax: 031-732 76 00 • www.kammarratten.goteborg.se\n\nDetta meddelande går inte att svara på.",
+          "bilagor": null,
+          "utelamnat": "Domstolens stående automatsvar på begäran om de fem avgörandena, undertecknat med domstolens namn och utan att någon person namnges. Avsänt från domstolarnas gemensamma noreply-adress. Räknas inte som substantiellt besked enligt P1",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "datum": "2026-09-10",
+          "klockslag": "10:24:25",
+          "myndighet": "Kammarrätten i Göteborg",
+          "avsandare": "namngiven tjänsteman",
+          "roll": "registrator",
+          "amnesrad": "Sv: [Externt] Begäran om allmän handling: avgöranden i målen 2605-18, 2803-18, 6077-19, 4309-20 och 3503-19",
+          "meddelande": "1a08a6b49914f352",
+          "text": "Se bifogade filer.\n\nMed vänlig hälsning",
+          "bilagor": "fem PDF-filer med avgörandena i målen 2605-18, 2803-18, 6077-19, 4309-20 och 3503-19, förtecknade i data/leveranser_manifest.jsonl",
+          "utelamnat": "raderna som bara var länkar till myndighetens kontaktuppgifter; den citerade historiken under meddelandet; signaturblocket med tjänstemannens namn och det som följer det enligt ADR-0018. Domstolen expedierade handlingarna sexton minuter efter begäran. Signaturen namnger en registrator med enhet; namnet står i mejlet och återges inte här enligt ADR-0018. Handlingarna är praxis och hör inte till begärandena A, B eller C",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ]
+    },
+    {
+      "myndighet": "Kammarrätten i Jönköping",
+      "brev": [
+        {
+          "datum": "2026-09-01",
+          "klockslag": "13:00:36",
+          "myndighet": "Kammarrätten i Jönköping",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Brev från Kammarrätten i Jönköping i 3249-26",
+          "meddelande": "1a05ca0e189d104d",
+          "text": "Bifogat detta e-postmeddelande finns dokument med viktig information från en domstol eller en nämnd inom Sveriges Domstolar.\n\nVad behöver jag göra?\nLäs bifogade dokument så snart som möjligt. Där står vad du ska göra och om du ska göra det senast ett visst datum.\n\nI vissa dokument kan du bli uppmanad att bekräfta att du tagit emot dem. I så fall finns det också anvisningar för hur du kan göra detta. Det är viktigt att snarast kontrollera ifall du ska bekräfta mottagandet.\n\nPersonuppgifter\nDu kan läsa om vår behandling av personuppgifter och om dina rättigheter på www.domstol.se/personuppgifter.\n\nHar du frågor?\nKontakta aktuell domstol eller nämnd – kontaktuppgifter finns på https://www.kammarrattenijonkoping.domstol.se och i bifogade dokument. Du kan också svara på detta e-postmeddelande. Ange alltid målnummer vid kontakt.\n\nMålnummer: 3249-26\nDokument: Meddelande, Aktbilaga 9, DokId 405979\n\nVänliga hälsningar\n\nSveriges Domstolar\n\nAttached to this e-mail, you will find one or more documents containing important information from a court or board that forms part of the Swedish Court System.\n\nWhat do I need to do?\nPlease read these documents as soon as possible. Within the documents you will find instructions regarding what actions you are required to take and by what date. In certain cases, you are required to actively confirm that you have received the documents. If confirmation is required, please follow the instructions given. It is important that you check as soon as possible whether a confirmation is required.\n\nYour personal data\nFor more information regarding the processing of your personal data please visit our website www.domstol.se/personuppgifter.\n\nDo you have any questions or need more information?\nPlease feel free to contact the court or the board directly. Contact information may be found at https://www.kammarrattenijonkoping.domstol.se, or within the documents attached to this e-mail. It is also possible to reply to this e-mail.\n\nWhen contacting the court or board, please state the case number.\n\nCase number: 3249-26\nDocument: Meddelande, Aktbilaga 9, DokId 405979\n\nKind regards\nThe Swedish Court System",
+          "bilagor": "meddelandet i mål 3249-26, aktbilaga 9, DokId 405979, som PDF, 348 060 byte, sha256 49bcbc70587ec4a5fa2b71a9c5d67ba5975752ad1403fb4fb05b595639a58503, förtecknat i data/leveranser_manifest.jsonl",
+          "utelamnat": "Domstolens stående följebrev, undertecknat Sveriges Domstolar utan att någon person namnges, och det säger ingenting om målet utöver målnummer och aktbilaga. Hela den engelska halvan står kvar, eftersom den är domstolens egen text och inte en översättning gjord här. Avsändaren är Kammarrätten i Jönköping, inte länsstyrelsen, och målet rör länsstyrelsens avslag",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "datum": "2026-09-08",
+          "klockslag": "11:01:53",
+          "myndighet": "Kammarrätten i Jönköping",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Brev från Kammarrätten i Jönköping i 3249-26",
+          "meddelande": "1a08040bff79f0f0",
+          "text": "Säker e-post\n\nFrån / From: kammarrattenijonkoping@dom.se\n\nÄmne / Subject: Brev från Kammarrätten i Jönköping i 3249-26\n\nDu får det här mejlet eftersom en domstol eller nämnd inom Sveriges Domstolar har skickat ett meddelande till dig via tjänsten \"Säker e-post\".\n\nVad behöver du göra?\n\nÖppna meddelandet så snart som möjligt. Det kan innehålla viktig information som du måste göra något med inom en viss tid.\n\nSpara filer och logga ut\n\n• Använd knappen ”Logga ut” när du vill gå ut ur tjänsten. Då kan du öppna meddelandet igen, ifrån vilken enhet du vill. Om du bara stänger webbläsaren kommer du inte åt meddelandet igen.\n\n• Meddelandet och eventuella bifogade filer raderas från tjänsten efter 30 dagar. Men innan dess kan du spara meddelande och filer till din egen enhet.\n\nÖppna ditt meddelande genom \"Säker e-post\"\n\nVill du veta mer om hur den här tjänsten fungerar? Mer information finns på domstol.se.\n\nDu kan inte svara på det här mejlet. Men när du har öppnat meddelandet kan du svara via tjänsten.",
+          "bilagor": null,
+          "utelamnat": "engångslänken till domstolens tjänst Säker e-post, som är en personlig åtkomstlänk och inte en publicerad adress. Aviseringen om att ett meddelande i mål 3249-26 ligger i tjänsten Säker e-post, och själva handlingen ligger alltså inte i mejlet. Den handling som hämtades är aktbilaga 13, underrättelsen i målet. Ingen person namnges. Engångslänken är utelämnad av det skäl som står ovan",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "datum": "2026-09-08",
+          "klockslag": "15:13:22",
+          "myndighet": "Kammarrätten i Jönköping",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Autosvar: Yttrande i mål nr 3249-26",
+          "meddelande": "1a08126db514db0a",
+          "text": "Kammarrätten i Jönköping har tagit emot ditt meddelande.\n\nVi läser inkommande e-post varje arbetsdag. Om du har ställt frågor i meddelandet återkommer vi till dig så snart det är möjligt.\n\nI princip blir all post till domstolen allmän handling. Det innebär bland annat att allmänheten och massmedier normalt har rätt att ta del av innehållet i ditt meddelande.\n\nMer information om Kammarrätten i Jönköping finns på:\nwww.domstol.se/kammarratten-i-jonkoping\n\nBehandling av personuppgifter:\n\nFör att Kammarrätten i Jönköping (org.nr 202100-2742) ska kunna utföra sitt uppdrag kommer kammarrätten att behandla dina personuppgifter.\nFölj länken och läs om hur kammarrätten behandlar personuppgifter och vilka rättigheter du har som registrerad:\nwww.domstol.se/kammarratten-i-jonkoping/behandling-av-personuppgifter/sa-behandlar-vi-personuppgifter/\n\nMed vänliga hälsningar\n\nKammarrätten i Jönköping\n\nTel: 036-15 68 00 • kammarrattenijonkoping@dom.se • Postadress: 550 02 Jönköping • Besöksadress: Hamngatan 11• www.kammarrattenijonkoping.domstol.se\n\nDetta meddelande går inte att svara på.",
+          "bilagor": null,
+          "utelamnat": "Domstolens stående automatsvar, undertecknat med domstolens namn och utan att någon person namnges. Avsänt från domstolarnas gemensamma noreply-adress. Samma text kom tio sekunder senare som svar på begäran om de tre domarna, och den förekomsten står på den här raden. Räknas inte som substantiellt besked enligt P1",
+          "kalla": "Gmail, meddelandets plaintext-del",
+          "forekomster": [
+            {
+              "datum": "2026-09-08",
+              "klockslag": "15:13:32",
+              "meddelande": "1a08127031b35f8d",
+              "amnesrad": "Autosvar: Begäran om allmän handling: domar i målen 549-19, 1491-19 och 3900-18",
+              "storlek": 5112
+            }
+          ]
+        },
+        {
+          "datum": "2026-09-08",
+          "klockslag": "15:59:23",
+          "myndighet": "Kammarrätten i Jönköping",
+          "avsandare": "funktionsbrevlåda",
+          "roll": "registrator",
+          "amnesrad": "Sv: [Externt] Begäran om allmän handling: domar i målen 549-19, 1491-19 och 3900-18",
+          "meddelande": "1a08151203530bdb",
+          "text": "Hej,\n\nBifogar begärda handlingar.\n\nMed vänlig hälsning\nRegistrator\nKammarrätten i Jönköping\n\n036-15 68 00 • kammarrattenijonkoping@dom.se • Postadress: Box 2203, 550 02 Jönköping • Besöksadress: Hamngatan 11 • Kammarrätten i Jönköpings webbplats\n\nSå behandlar vi personuppgifter",
+          "bilagor": "tre PDF-filer med avgörandena i målen 549-19, 1491-19 och 3900-18, arkiverade som kammarratten_jonkoping_praxis och förtecknade i data/leveranser_manifest.jsonl",
+          "utelamnat": "den citerade historiken under meddelandet; länkmålen bakom texten. Domstolen expedierade handlingarna fyrtiosex minuter efter begäran. Signaturen anger rollen Registrator och ingen person namnges. Handlingarna är praxis och hör inte till någon av begärandena A, B eller C; de hämtades för att läsa avsnitt 11 i protokollet mot domstolens egna avgöranden",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        },
+        {
+          "datum": "2026-09-10",
+          "klockslag": "16:43:07",
+          "myndighet": "Kammarrätten i Jönköping",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Brev från Kammarrätten i Jönköping i 3339-26",
+          "meddelande": "1a08bc5d3d8718b9",
+          "text": "Bifogat detta e-postmeddelande finns dokument med viktig information från en domstol eller en nämnd inom Sveriges Domstolar.\n\nVad behöver jag göra?\nLäs bifogade dokument så snart som möjligt. Där står vad du ska göra och om du ska göra det senast ett visst datum.\n\nI vissa dokument kan du bli uppmanad att bekräfta att du tagit emot dem. I så fall finns det också anvisningar för hur du kan göra detta. Det är viktigt att snarast kontrollera ifall du ska bekräfta mottagandet.\n\nPersonuppgifter\nDu kan läsa om vår behandling av personuppgifter och om dina rättigheter på www.domstol.se/personuppgifter.\n\nHar du frågor?\nKontakta aktuell domstol eller nämnd – kontaktuppgifter finns på https://www.kammarrattenijonkoping.domstol.se och i bifogade dokument. Du kan också svara på detta e-postmeddelande. Ange alltid målnummer vid kontakt.\n\nMålnummer: 3339-26\nDokument: Meddelande, Aktbilaga 20, DokId 406658\n\nVänliga hälsningar\n\nSveriges Domstolar\n\nAttached to this e-mail, you will find one or more documents containing important information from a court or board that forms part of the Swedish Court System.\n\nWhat do I need to do?\nPlease read these documents as soon as possible. Within the documents you will find instructions regarding what actions you are required to take and by what date. In certain cases, you are required to actively confirm that you have received the documents. If confirmation is required, please follow the instructions given. It is important that you check as soon as possible whether a confirmation is required.\n\nYour personal data\nFor more information regarding the processing of your personal data please visit our website www.domstol.se/personuppgifter.\n\nDo you have any questions or need more information?\nPlease feel free to contact the court or the board directly. Contact information may be found at https://www.kammarrattenijonkoping.domstol.se, or within the documents attached to this e-mail. It is also possible to reply to this e-mail.\n\nWhen contacting the court or board, please state the case number.\n\nCase number: 3339-26\nDocument: Meddelande, Aktbilaga 20, DokId 406658\n\nKind regards\nThe Swedish Court System",
+          "bilagor": "meddelandet i mål 3339-26, aktbilaga 20, DokId 406658, som PDF, 346 660 byte, sha256 0d842430bbaa35839002f616a88b46bd3caf457e87ddeb7edcf4077db7abe619, förtecknat i data/leveranser_manifest.jsonl",
+          "utelamnat": "Domstolens stående följebrev, undertecknat Sveriges Domstolar utan att någon person namnges, och det säger ingenting om målet utöver målnummer och aktbilaga. Målet är överklagandet av Jordbruksverkets avslagsbeslut, och avsändaren är domstolen, inte myndigheten. Texten är densamma som i brevet den 1 september utom målnummer, aktbilaga och DokId, så raden står för sig",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ]
+    },
+    {
+      "myndighet": "Kammarrätten i Stockholm",
+      "brev": [
+        {
+          "datum": "2026-09-23",
+          "klockslag": "13:56:49",
+          "myndighet": "Kammarrätten i Stockholm",
+          "avsandare": "funktionsbrevlåda",
+          "roll": null,
+          "amnesrad": "Brev från Kammarrätten i Stockholm i 6901-26",
+          "meddelande": "1a0ce20384fec7fa",
+          "text": "Säker e-post\n\nFrån / From: avd3.kst@dom.se\n\nÄmne / Subject: Brev från Kammarrätten i Stockholm i 6901-26\n\nDu får det här mejlet eftersom en domstol eller nämnd inom Sveriges Domstolar har skickat ett meddelande till dig via tjänsten \"Säker e-post\".\n\nVad behöver du göra?\n\nÖppna meddelandet så snart som möjligt. Det kan innehålla viktig information som du måste göra något med inom en viss tid.\n\nSpara filer och logga ut\n\n• Använd knappen ”Logga ut” när du vill gå ut ur tjänsten. Då kan du öppna meddelandet igen, ifrån vilken enhet du vill. Om du bara stänger webbläsaren kommer du inte åt meddelandet igen.\n\n• Meddelandet och eventuella bifogade filer raderas från tjänsten efter 30 dagar. Men innan dess kan du spara meddelande och filer till din egen enhet.\n\nÖppna ditt meddelande genom \"Säker e-post\"\n\nVill du veta mer om hur den här tjänsten fungerar? Mer information finns på domstol.se.\n\nDu kan inte svara på det här mejlet. Men när du har öppnat meddelandet kan du svara via tjänsten.",
+          "bilagor": null,
+          "utelamnat": "engångslänken till domstolens tjänst Säker e-post, som är en personlig åtkomstlänk och inte en publicerad adress. Aviseringen om att ett meddelande i mål 6901-26 ligger i tjänsten Säker e-post, och själva handlingen ligger alltså inte i mejlet. Målet är överklagandet av Gotlands avslagsbeslut. Avsändaren är avdelning 3 vid Kammarrätten i Stockholm och ingen person namnges. Engångslänken är utelämnad av det skäl som står ovan",
+          "kalla": "Gmail, meddelandets plaintext-del"
+        }
+      ]
+    }
+  ],
   "kontrast": {
     "lan": 17,
     "median_dokumentandel": 55.89225589225588,

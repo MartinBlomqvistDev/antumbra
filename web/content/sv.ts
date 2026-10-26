@@ -570,6 +570,7 @@ export const sv: Copy = {
         message: "Meddelande",
         attachments: "Bilagor:",
         repeats: "Samma text återkom:",
+        messagesWord: "meddelanden",
       },
       packet: {
         heading: "Underlaget myndigheten fick",
@@ -580,6 +581,15 @@ export const sv: Copy = {
           "händelseloggen.",
         sent: "Avsänt",
       },
+    },
+    domstolar: {
+      heading: "Domstolarna",
+      note:
+        "Fyra av besluten om maskning är överklagade, och kammarrätternas egna " +
+        "meddelanden i de målen hör till samma korrespondenslogg som " +
+        "myndigheternas. De bär inga maskningstal, eftersom en domstol inte är " +
+        "mätt här. Målen redovisas som pågående; ett pågående mål skjuter inte " +
+        "upp publiceringen.",
     },
     deliveries: {
       heading: "Levererade handlingar",

@@ -321,6 +321,19 @@ def build() -> dict:
             "myndigheter": len({row["path"].split("/")[0] for row in rows}),
         }
 
+    # The register's scope is requests A, B and C and the four appeals, so the
+    # courts' own letters belong to the published material. They have no board,
+    # because a board carries an authority's figures and a court has none, and
+    # without a section of their own ten messages were readable only as a file.
+    courts = [
+        {
+            "myndighet": name,
+            "brev": sorted(rows, key=lambda r: (r["datum"], r["klockslag"])),
+        }
+        for name, rows in sorted(letters.items())
+        if name not in step36.SLUG
+    ]
+
     annexes = read(ANNEXES) if ANNEXES.exists() else []
     pairs = read(PAIRS) if PAIRS.exists() else []
     paired = [row for row in pairs if row["par"]]
@@ -338,6 +351,7 @@ def build() -> dict:
             ),
         },
         "klasser": totals,
+        "domstolar": courts,
         "kontrast": contrast_summary(authorities),
         "jamforelse": {
             klass: {

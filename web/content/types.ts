@@ -225,8 +225,10 @@ export type Copy = {
         message: string;
         attachments: string;
         repeats: string;
+        messagesWord: string;
       };
     };
+    domstolar: { heading: string; note: string };
     deliveries: {
       heading: string;
       note: string;
