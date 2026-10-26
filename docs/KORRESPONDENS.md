@@ -33,7 +33,10 @@ mätning av öppenhet är det den asymmetri en kritiker namnger först, och den
 ordagrant ska tåla samma sak om sina egna.
 
 **Avgränsningen är densamma.** Begäran A, B och C och de fyra överklagandena.
-155 av mina utskick är knutna till en myndighet och en begäran i loggen.
+176 av mina utskick är knutna till en myndighet och en begäran i loggen. Talet
+stod på 155 när registret påbörjades, och steg 53 räknade då 160; båda vilade på
+en ofullständig lista över vilka händelsetyper som är brev. Listan härleds nu ur
+`src/open_items.py`, och 176 är vad loggen bär.
 
 **Källan är Sent och ingenting annat.** En fil som pipelinen byggde före
 avsändningen är inte brevet som gick: steg 36 är rättat två gånger sedan
@@ -185,6 +188,30 @@ Fem i `tests/test_repository_invariants.py`:
    händelse i protokollloggen.
 5. Registret mäts mot förteckningen, ingenting utanför avgränsningen står i
    det, och talet i `VERIFIERAT.md` stämmer med filerna.
+
+### Tillagt 2026-10-26: registret fullt, och hålet som den sista raden visade
+
+Alla 176 utgående brev står i `data/korrespondens_utgaende.jsonl`, och
+avstämningen i steg 53 går ihop för samtliga 22 myndigheter. 174 rader bär ett
+meddelande-id ur brevlådan; två är redovisade luckor där den avsända kopian
+saknas.
+
+Den sista raden avslöjade ett hål i avstämningen. Jordbruksverkets P12-paket
+stod som begäran `A+B+C` mot en logg som säger `C`. Antalet rader och antalet
+avsändningar stämde ändå, tolv mot tolv, och myndigheten rapporterades KLAR.
+Skälet var att nyckelkontrollen bara kördes när registret hade färre rader än
+loggen hade avsändningar. En rad med fel begäran passerade därför i tysthet.
+
+Kontrollen körs nu alltid, och den rapporterar åt båda hållen: en avsändning
+utan matchande rad, och en rad som ingen avsändning svarar mot. Steget avslutas
+med exit 1 när något av det finns. Raden är rättad till `C`.
+
+Detta är tredje gången samma fel har rättats i det här steget. Först
+set-matchning, som lät en rad bocka av två avsändningar. Sedan en nyckel utan
+begäran, som lät B-raden bocka av A-raden. Nu ett villkor som avgjorde om
+kontrollen alls kördes. Felen har haft samma form: avstämningen har svarat på
+en enklare fråga än den som ställdes, och svaret har sett ut som ett godkänt
+resultat.
 
 ### Tillagt 2026-10-26: två brev som gick men inte finns kvar
 

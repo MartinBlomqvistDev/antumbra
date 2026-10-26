@@ -93,6 +93,8 @@ def main() -> int:
 
     names = [args.myndighet] if args.myndighet else sorted(logged)
     total_logged = total_done = 0
+    unmatched: list[str] = []
+    leftover: list[str] = []
     for name in names:
         sends = logged.get(name, [])
         rows = done.get(name, [])
@@ -100,7 +102,14 @@ def main() -> int:
         total_done += len(rows)
         state = "KLAR" if len(rows) >= len(sends) else f"{len(sends) - len(rows)} kvar"
         print(f"{name}: {len(rows)} av {len(sends)} — {state}")
-        if args.myndighet or len(rows) < len(sends):
+        if True:
+            # The key check runs always. It used to run only when the register
+            # held fewer rows than the log held sends, so a row whose request
+            # class did not match its send passed in silence: Jordbruksverket's
+            # P12 packet stood as A+B+C against a log that says C, the counts
+            # balanced at twelve, and the authority was reported KLAR. A verdict
+            # that rests on a count alone is a verdict about the count.
+            #
             # Counted and not set-matched: two narrowings on the same day, one
             # per request class, were both ticked off by a single row when the
             # check compared sets. A gap that the gap-finder hides is worse
@@ -116,12 +125,28 @@ def main() -> int:
                 known = have[key] > 0
                 if known:
                     have[key] -= 1
+                if not known:
+                    unmatched.append(
+                        f"{name}: {send['datum']} {send['klockslag']} "
+                        f"{send['begaran']} {send['handelse']}"
+                    )
                 mark = "  ok    " if known else "  SAKNAS "
                 print(
                     f"{mark}{send['datum']} {send['klockslag']} "
                     f"{send['begaran']} {send['handelse']}"
                 )
+            for key, count in have.items():
+                if count > 0:
+                    leftover.append(f"{name}: {count} x {key}")
     print(f"\ntotalt: {total_done} av {total_logged} brev i registret")
+    if unmatched or leftover:
+        print("")
+        print("nycklar som inte gar ihop:")
+        for row in unmatched:
+            print(f"  avsandning utan rad: {row}")
+        for row in leftover:
+            print(f"  rad utan avsandning: {row}")
+        return 1
     return 0
 
 
