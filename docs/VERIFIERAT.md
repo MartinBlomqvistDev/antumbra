@@ -289,7 +289,7 @@ text i mitten, Kronobergs och Jordbruksverkets, markerade det med tre punkter
 utan förklaring; markeringen är nu `[...]` och paketet säger vad den betyder.
 
 **Sex fel i sekretessgrundsregistret, alla av samma slag.** Registret hade
-lagrat följebrevets första stycke och inte brevets övriga egna stycken.
+lagrat följebrevets första stycke. Brevets övriga egna stycken föll bort.
 
 | Rad | Vad som saknades | Följd |
 | --- | --- | --- |
@@ -307,16 +307,16 @@ citatet visade sig teckenidentiskt med det. Raden bär nu meddelande-id, och
 paketet säger inte längre att källan saknas.
 
 **Två tal i tillämpningsnot 6 rättade, och två P8-skrivelser uteblev.** Nio
-län maskade klass A med stöd av 30 kap. 23 §, inte åtta, sedan Dalarna
-tillkommit. Åtta av dem erbjöd själva ett överklagbart beslut, inte sex, sedan
-Dalarna och Värmland tillkommit. Not 4:s konjunktion var alltså uppfylld för
+län maskade klass A med stöd av 30 kap. 23 §, där noten sade åtta, sedan
+Dalarna tillkommit. Åtta av dem erbjöd själva ett överklagbart beslut, där
+noten sade sex, sedan Dalarna och Värmland tillkommit. Not 4:s konjunktion var alltså uppfylld för
 två län som aldrig fick någon skrivelse, och orsaken var projektets eget
 register och ingen bedömning. Noten bär ett daterat tillägg med skälen till
 att skrivelserna inte skickas i efterhand.
 
 **Vad prövningen inte omfattar.** Citat ur protokollloggens noteringar, som
 inte går ut i något paket, och de delar av myndigheternas brev som är
-logistik, länkar och signaturer och aldrig citerats.
+logistik, länkar och signaturer utan att någonsin ha citerats.
 
 ## Tre fel i P12-paketen, funna 2 till 6 oktober 2026
 
@@ -461,9 +461,9 @@ augusti 2026 och framåt, med trådens eget meddelandeantal läst ur källan och
 jämfört mot hur många meddelanden sökningen faktiskt listade. Elva trådar visade
 sig trunkerade, eftersom en trådlistning bara återger fem meddelanden, och alla
 elva hämtades i sin helhet. Det är den mekaniska kontrollen som behövdes: att
-jämföra det hämtade mot det lästa, och inte lita på att en lista är hel bara för
-att den ser hel ut. Förteckningen bär meddelande-id, tidpunkt ur
-meddelandehuvudet, myndighet och avsändarkategori, aldrig en adress; för 32
+jämföra det hämtade mot det lästa, i stället för att lita på att en lista är
+hel bara för att den ser hel ut. Förteckningen bär meddelande-id, tidpunkt ur
+meddelandehuvudet, myndighet och avsändarkategori, men ingen adress; för 32
 meddelanden från en namngiven tjänsteman står myndigheten som okänd till dess
 brevet läses, eftersom den inte går att härleda utan att skriva ut adressen.
 
@@ -483,7 +483,8 @@ ingenting utanför avgränsningen står i registret och att varje undantag bär 
 skäl, och räknaren ovan räknar bara det som är inom den.
 
 **Vad detta inte rör.** Måtten i öppenhetslagret vilar på
-`data/protokoll_logg.jsonl` och leveransmanifestet, inte på det här registret.
+`data/protokoll_logg.jsonl` och leveransmanifestet. Det här registret bär dem
+inte.
 Protokollloggen har förts löpande sedan dag 0 och är genomgången tre gånger på
 oberoende vägar, senast den 7 oktober. Korrespondensregistret är en
 publiceringsyta som P12-paketen utfäster, och dess lucka ändrar inget tal om
@@ -500,7 +501,7 @@ rad med sitt eget datum, klockslag, meddelande-id och ämnesrad. Två texter sl�
 ihop bara när de är identiska tecken för tecken efter samma utelämnanden; skiljer
 de sig på en punkt är det två rader.
 
-Att en förekomst är identisk ska vara belagt och inte antaget. Den 8 oktober 2026
+Att en förekomst är identisk ska vara belagt. Ett antagande duger inte. Den 8 oktober 2026
 skrevs först två förekomster vars text aldrig hade hämtats, och när verktyget
 sedan fick jämföra texten gick det att kringgå genom att mata in bärarens egen
 text på båda sidor, vilket också skedde en gång. Alla tre kontrollerades i
@@ -549,7 +550,7 @@ nu i den invariant som vaktar att ingen roll hittas på.
 2. **Signaturblockets personuppgifter** när en namngiven tjänsteman skriver:
    namn, direktnummer och personlig adress byts mot rollen, enligt ADR-0018.
    Myndighetens egen funktionsbrevlåda, växel och webbadress står kvar, eftersom
-   de är en myndighets publicerade kontaktuppgifter och inte en enskilds.
+   de är en myndighets publicerade kontaktuppgifter och ingen enskilds.
 3. **Länkmålen** bakom texten, som e-postklienten renderar som adresser i
    vinkelparenteser mitt i meningarna.
 
@@ -571,7 +572,7 @@ hela tiden varit stavad rätt.
 
 Parningen mot protokollloggen tycktes fälla en tredje sak, och där blev rättelsen
 själv ett fel som fick återtas dagen därpå. Påståendet var att Västra Götalands
-autosvar på begäran A, loggat 2026-08-03 10:01:49, inte gick att belägga, eftersom
+autosvar på begäran A, loggat 2026-08-03 10:01:49, saknade belägg, eftersom
 brevlådan bara tycktes rymma ett autosvar från länet i augusti. A-autosvaret finns,
 meddelande 19fc6a4bf66af543 med meddelandehuvudet 08:01:49 UTC, alltså 10:01:49
 svensk tid och med ämnesraden för begäran A. Loggraden var riktig på båda punkterna.
@@ -581,11 +582,11 @@ stället för ur brevlådan, alltså samma fel som listan själv bär, och det �
 när det sker i en rättelse än i en vanlig rad. Både den felaktiga rättelsen och
 återtagandet står kvar i loggen enligt ADR-0003, och inget mått rör sig: autosvar
 räknas inte som kontakt enligt P1. Lärdomen är skriven in i arbetsordningen: en
-rättelse ska vila på källan, läst i sin helhet, och aldrig på en förteckning över
-källan.
+rättelse ska vila på källan, läst i sin helhet. En förteckning över källan
+duger inte.
 
-**Källan är brevlådan, inte protokollet.** Registret byggs tråd för tråd ur
-Gmail och inte ur protokollloggen, av samma skäl som bevakningsregeln: en
+**Källan är brevlådan.** Registret byggs tråd för tråd ur Gmail. Att bygga det
+ur protokollloggen vore fel av samma skäl som bevakningsregeln vilar på: en
 händelse som aldrig loggades syns inte i loggen. Två meddelanden hittades på det
 sättet den 7 oktober och fördes in i protokollloggen samma dag.
 
@@ -620,8 +621,8 @@ Länsstyrelsen i Västra Götaland skriver den 6 augusti 2026, ordagrant: *"På
 grund av att du vill begränsa din begäran för att inte komma upp i det antal
 som innebär en avgift så har bilagor till besluten, till exempel
 kontrollrapporter och fotobilagor inte tagits med."* Där är den uteblivna
-bilagan en följd av projektets egen avsmalning enligt P5, inte av ett
-undanhållande. Brevet står i sin helhet i korrespondensloggen.
+bilagan en följd av projektets egen avsmalning enligt P5. Något undanhållande
+är den alltså inte. Brevet står i sin helhet i korrespondensloggen.
 
 **Ett fjärde skäl, också myndighetens eget.** Länsstyrelsen i Östergötland
 skriver den 7 augusti 2026, ordagrant: *"Det finns kontrollrapporter och foton
@@ -731,7 +732,8 @@ Förordningstexten är läst i regeringens egen författningssamling: 4 § 8 gä
 verksamhet *"av tillfällig natur eller av mindre omfattning"*, medan 16 §
 avslutas med att dess stycken *"gäller även när en handling sänds till
 beställaren via telefax"*. HFD 2013 ref. 21 är läst i original och avgör
-överklagandevägen, inte avgiftens storlek; avgiften i målet togs ut med stöd av
+överklagandevägen. Avgiftens storlek avgörs inte där; avgiften i målet togs ut
+med stöd av
 4 § och motsvarade beloppsmässigt papperskopior.
 
 **Vad länen aviserade, mätt mot det.** Varje begäran i den här insamlingen bad
@@ -744,7 +746,7 @@ avgiftsspåret anger vilken paragraf avgiften vilar på; de som nämner en
 författning nämner avgiftsförordningen som helhet. Det är allt som går att mäta
 ur skrivelserna, och projektet drar inte slutsatsen att något län tagit ut en
 avgift i strid med förordningen: vilken paragraf en myndighet tillämpat går inte
-att läsa ur ett belopp, och ESV:s vägledning är vägledning och inte prejudikat.
+att läsa ur ett belopp, och ESV:s vägledning är vägledning utan prejudikatvärde.
 Vad som kan sägas är att taxan i 16 § enligt den vägledning förordningen vilar
 på inte är tillgänglig för ett elektroniskt utlämnande, och att beloppen i
 avgiftsspåret ändå är den taxans.
@@ -775,7 +777,8 @@ genomgång av ett omfattande material."*
 *"[e]n viss fördröjning kan vara godtagbar om den är hänförlig till själva
 sekretessprövningen, men tidsåtgången får inte bero på formerna för myndighetens
 arbete"*, och att ett stort antal framställningar inte sänker kraven. Undantaget
-gäller alltså den tid prövningen kräver, inte den tid organisationen kräver.
+gäller alltså den tid prövningen kräver. Den tid organisationen kräver faller
+utanför.
 
 **Mätt mot den normen, och med måttets eget förbehåll utskrivet.** Projektets
 T1, första substantiella besked enligt P1, är inte samma sak som JO:s besked i
@@ -897,7 +900,8 @@ strikt bättre än de två andra. **De två avvikelserna är kända och förklar
 
 **Golvet metoden inte ser förbi:** en skanning av en sida vars text togs bort
 före utskrift ser likadan ut som en sida som aldrig bar texten. `masked` falskt
-på en skanning betyder att ingen balk hittades, inte att ingenting undanhållits.
+på en skanning betyder att ingen balk hittades. Om något undanhållits säger
+det ingenting.
 
 **Rättelse 2026-09-01: två sorters svarta rektanglar var inte maskningar.**
 Här stod att en fylld rektangel i textlagret är en maskning, utan förbehåll. Den
@@ -1026,7 +1030,8 @@ Uppräkningen om fem län och 17 dokument längre ned i detta dokument är från
 september, Blekinge och Norrbotten den 29 september. Kriteriet kräver tre.
 
 **Kontrastmåttet enligt P1 räknat om:** sjutton län har levererat i båda
-klasserna, inte femton. Medianskillnaden är **1,95 procentenheter maskerad yta**
+klasserna, där talet förut var femton. Medianskillnaden är **1,95
+procentenheter maskerad yta**
 och **55,89 procentenheter andel maskade dokument**, och inget av de sjutton har
 högre maskad yta i B än i A. Blekinges egen cell är den starkaste motsägelsen
 hittills mellan de två måtten: andelen maskade dokument är 80 procentenheter
@@ -1070,7 +1075,8 @@ vänder på andelsmåttet: Dalarna med 20 procent av A mot 80 procent av B, och
 Gävleborg med 0 mot 25 procent.
 
 *Tillägg 2026-09-28, efter Kalmars B-leverans:* femton län har levererat i
-båda klasserna, inte fjorton. Medianskillnaden är **2,12 procentenheter
+båda klasserna, där talet förut var fjorton. Medianskillnaden är **2,12
+procentenheter
 maskerad yta** och **60 procentenheter andel maskade dokument**. Inget av de
 femton har högre maskad yta i B än i A, vilket står kvar. Kalmars egen cell
 drar medianerna åt olika håll: andelen maskade dokument är 100 procent i båda
@@ -1083,7 +1089,8 @@ olika saker.
 annat sätt än planerat.** Maskningsgrad är förregistrerad som andel maskerad yta
 **plus andel maskerade fält**, och ska enligt avsnitt 4 och P1 redovisas per
 djurslag. Fältmåttet visade sig inte gå att beräkna bokstavligt, eftersom
-handlingarna är prosa och inte formulär, och ersattes 2026-08-17 av ett mått på
+handlingarna är löpande prosa utan fältstruktur, och ersattes 2026-08-17 av
+ett mått på
 täckt innehåll enligt ADR-0017; utfallet blev ett nollresultat. Djurslag krävde
 klassning per handling, och den finns sedan steg 20, prövad mot handläsning
 2026-08-25. Talen i det här avsnittet är ändå poolade över djurslag, eftersom de
@@ -1151,7 +1158,7 @@ metoden blind för maskning som läggs över ett fotografi, vilket är en vanlig
 maskning i det här materialet. Att lämna de 45 skannade handlingarna omätta är
 sämre än att mäta dem med en deklarerad felmarginal, vilket ADR-0016 avgjorde
 redan när metoden infördes. Det som åtagandet efterfrågade är därför gjort på
-redovisningens sida och inte i instrumentet: talen står kvar uppdelade per
+redovisningens sida, medan instrumentet står orört: talen står kvar uppdelade per
 metod, falsklarmsfrekvensen är omräknad och daterad, missarna är utskrivna, och
 robusthetsraderna visar vad som händer med slutsatsen om metoden misstros.
 Ingen publicerad siffra ändras av det här avsnittet.
@@ -1170,7 +1177,8 @@ behålla, innan steget kördes.
 Medianskillnaden är fortfarande **1,95 procentenheter maskerad yta** och
 **55,89 procentenheter andel maskade dokument** över sjutton län, och inget av
 dem har högre maskad yta i B än i A. Två län vänder nu på andelsmåttet,
-Blekinge och Dalarna, inte tre: Gävleborgs cell är 0 av 5 i A mot 0 av 4 i B,
+Blekinge och Dalarna, där talet förut var tre: Gävleborgs cell är 0 av 5 i A
+mot 0 av 4 i B,
 alltså noll mot noll, där den förut var 0 mot 25 procent.
 
 **Sekretessgrundsregistret får en tredje rad som överlevt sin population.**
@@ -1661,8 +1669,8 @@ dokument som har textlager. Beslutet att ersätta det förregistrerade fältmåt
 med ett mått på täckt innehåll, och skälen till det, står i ADR-0017.
 
 **Instrumentet jämför textlagret mot den renderade sidan.** Ett tecken är dolt
-när dess glyfruta, renderad i 150 dpi gråskala, inte innehåller en enda pixel
-mörkare än 200. Ingenting antas om vad som täcker, så en vit rektangel, en ljus
+när dess glyfruta, renderad i 150 dpi gråskala, saknar varje pixel mörkare än
+200. Ingenting antas om vad som täcker, så en vit rektangel, en ljus
 bild och en täckande annotering fångas av samma test.
 
 **Den negativa kontrollen kom före resultatet.** Ett färgbaserat mått prövades
@@ -1670,7 +1678,8 @@ först och gav mörk text under en ljus ruta i 39 av 60 dokument. **27 av dem ga
 exakt samma tal, 2 701 tecken**, i skilda län och skilda ärenden. Den identiska
 siffran avslöjade ett mallelement: kontrollrapporten ritar en vit bottenplatta
 bakom brödtexten. Samtliga dessa tecken renderas synligt, alltså ligger plattan
-bakom texten och inte över den, och det färgbaserade måttet hade flaggat alla 39
+bakom texten snarare än ovanpå den, och det färgbaserade måttet hade flaggat
+alla 39
 fel.
 
 **Utfallet är ett nollresultat.**
@@ -1690,12 +1699,14 @@ Noll dokument döljer brödtext bakom en ljus täckning.
 
 **Att alla 41 ligger i klass B är inget maskningsfynd.** Det följer av att
 föreläggandenas mall ritar den vita sidhuvudrutan och kontrollrapporternas inte
-gör det. Talet mäter mallar, inte myndighetsbeteende, och får inte läsas som att
+gör det. Talet mäter mallar. Myndighetsbeteende mäter det inte, och det får inte läsas
+som att
 B skulle vara mer maskat än A; kontrasten går åt andra hållet och mäts i steg 18
 och 21.
 
 **Nollresultatet beror inte på tröskeln.** Gränsen på tio sammanhängande tecken
-valdes för att en maskning täcker en sträng och inte ett tecken, men den längsta
+valdes för att en maskning täcker en sträng snarare än ett ensamt tecken, men
+den längsta
 dolda strängen i brödtext över hela materialet är **noll tecken**. Utfallet blir
 alltså detsamma för varje tröskel från ett och uppåt, och tröskelvalet kan inte
 ha skapat resultatet.
@@ -1703,12 +1714,13 @@ ha skapat resultatet.
 Tillsammans med steg 18:s resultat att noll dokument har läsbar text kvar under
 en svärtad ruta är bilden entydig i en avgränsad fråga: **den maskning som
 gjorts är tekniskt äkta, och ingen myndighet har dolt innehåll med en teknik som
-ytmåttet missar.** Påståendet gäller maskningens teknik, aldrig dess omfattning;
+ytmåttet missar.** Påståendet gäller maskningens teknik. Om dess omfattning
+säger det ingenting;
 hur mycket som maskats mäts på annat håll och är det som skiljer länen åt.
 
 **Gränsen, utskriven.** Text som raderats före utlämnandet lämnar ingenting kvar
 att jämföra mot och kan inte upptäckas ur handlingen ensam. Måttet visar att
-ingenting täcks utan att synas, aldrig att ingenting saknas. Skannade handlingar
+ingenting täcks utan att synas. Att ingenting saknas visar det aldrig. Skannade handlingar
 ingår inte, eftersom de saknar textlager att jämföra renderingen mot.
 
 ---
@@ -1877,8 +1889,8 @@ den inte prövad, eftersom det beslutet inte överklagas enligt tillämpningsnot
 6, och raden är därför en härledning och ingenting mer.
 
 **Detta ersätter en svagare kontroll.** Avsnittet om HFD-praxis skriver att
-Kronobergs domkrets är kontrollerad mot två andrahandskällor och inte mot
-domstolens egen förteckning. Den frågan är nu avgjord i primärkällan, och
+Kronobergs domkrets är kontrollerad mot två andrahandskällor, där domstolens
+egen förteckning hade varit den rätta. Den frågan är nu avgjord i primärkällan, och
 svaret är detsamma.
 
 **Följden för öppenhetslagret.** Gotland ger en tredje kammarrätt med ett av
@@ -1958,7 +1970,8 @@ mot varje maskad B-leverans i stället för mot sökningar.** Tio län maskade i
 klass B och inget av dem åberopar bestämmelsen. Västra Götaland undanhåller två
 beslut helt med stöd av 18 kap. 1 och 3 §§. Stockholm, Dalarna och Halland
 maskar personuppgifter, Dalarna och Halland uttryckligen med stöd av
-dataskyddsförordningen och inte av OSL; enligt avsnitt 11 i mallen är sådan
+dataskyddsförordningen som grund i stället för OSL; enligt avsnitt 11 i mallen
+är sådan
 maskning i ett B-svar ingen avvikelse enligt P9 och får inte räknas som en.
 Blekinge anger sekretess utan bestämmelse. **Fem län maskade i klass B utan att
 ange någon grund alls:** Gävleborg, Kronoberg, Södermanland, Uppsala och
@@ -2099,7 +2112,7 @@ handlingarna, och antalet tecken i textlagret har stigit i var och en:
 lämnats ut i samtliga fem, mellan 8 och 33 procent fler tecken. Den maskade
 ytan sjunker ändå bara i tre av dem och stiger i två. Gotlands maskning har
 sorten `text_removed`, alltså att texten under svärtningen är borttagen, och då
-mäter ytmåttet hur rutorna ritats och inte hur mycket som hålls inne. **För den
+mäter ytmåttet hur rutorna ritats. Hur mycket som hålls inne mäter det då inte. **För den
 maskningstekniken är antalet tecken det bättre måttet, och ytmåttet kan peka åt
 fel håll.** Det gäller det förregistrerade ytmåttet i P1 och ska stå som en
 gräns när ytsiffror används. Ingen siffra räknas om här: omprövningen ligger
@@ -2114,7 +2127,7 @@ kontrollrapporterna, dnr 6666-2026, beslutat av en enhetschef med en
 djurskyddshandläggare som föredragande. **Deras namn står i beslutet men
 inte här.** Projektets subjekt är myndigheten, rollnivån bär det som mäts,
 att beslutet fattades på enhetschefsnivå, och beslutet självt ligger kvar
-med sin kontrollsumma. Utelämnandet är alltså deklarerat och inte tyst. Skickat som elektronisk
+med sin kontrollsumma. Utelämnandet är alltså deklarerat och står utskrivet. Skickat som elektronisk
 delgivning 2026-08-25 kl. 13:46 med begäran om mottagningsbekräftelse. Det är
 svaret på P8-skrivelsen den 23 augusti kl. 22:00, alltså två dagar. Registrerat
 i `data/beslut.jsonl`.
@@ -2144,7 +2157,7 @@ skada om uppgifterna lämnas ut."* Skaderekvisitet i 30 kap. 23 § är rakt, all
 med presumtion för offentlighet, och gäller varje uppgift. En bedömning som
 stannar vid *"till övervägande del"* säger att en del av det maskerade inte bär
 rekvisitet. Formuleringen är myndighetens egen och citeras oförändrad; vad den
-innebär rättsligt är en fråga för ett överklagande, inte för den här filen.
+innebär rättsligt är en fråga för ett överklagande och avgörs inte här.
 
 **Besvärshänvisningen anger fel instans.** Beslutet skriver *"Om du inte är nöjd
 med Länsstyrelsens beslut, kan du skriftligen överklaga beslutet hos
@@ -2240,7 +2253,8 @@ hållet.
 | Slaktkyckling 2025 | 19 | 26 | +7 | 19 |
 
 **Tillägg 2026-09-29: nämnaren och täljaren räknar inte samma fjäderfä, och
-det är mätt och inte antaget.** Frågan väcktes av Länsstyrelsen i Hallands län
+det är mätt.** Antagandet är alltså prövat. Frågan väcktes av Länsstyrelsen i
+Hallands län
 den 29 september, som innan de svarar på P11:s nämnarfråga undrar *"om du även
 vill att hobbybesättningar ingår i statistiken"*. Tre saker är kontrollerade mot
 materialet.
@@ -2265,7 +2279,8 @@ tabellerna ovan vilar på, och de nationella talen för värphöns är 42 kontro
 färre än 350 st 425"* för perioden. Ett rikstal på 42 är oförenligt med att
 småbesättningarna skulle ligga i samma population.
 
-**Följden, som är en gräns och inte ett fel.** För fjäderfä finns ingen gemensam
+**Följden är en gräns i materialet.** Något fel är den inte. För fjäderfä finns
+ingen gemensam
 nämnare att dividera med: täljaren är utan storleksgräns, den nationella
 nämnaren är över 350 värphöns, och länens egna svar följer olika läsningar.
 Gotland svarade med *"checklistan för över 350 värphöns har använts 4 gånger"*
@@ -2292,14 +2307,15 @@ Blekinges tal saknas helt i leveransen, vilket förklarar 4 av de 27. Resterande
 23 är oförklarade. Filantalet stämmer, 336, så felet syns bara i innehållet:
 läst per länsbokstav har K femton rapporter och W sjutton.
 
-Detta är slutsatser av jämförelsen mellan källorna och inte besked från
-myndigheten.
+Detta är slutsatser av jämförelsen mellan källorna. Myndigheten har inte
+lämnat dem som besked.
 
 ---
 
 ## Begäran C: vad en rad i uttaget är, besked 2026-08-24
 
-**En rad är en djurhållare vid en kontroll, inte en kontroll.** Frågorna om de
+**En rad är en djurhållare vid en kontroll.** En kontroll är den alltså inte.
+Frågorna om de
 två avvikelserna ställdes 2026-08-22 kl. 09:21 och besvarades 2026-08-24 kl.
 09:09. Myndigheten skriver ordagrant: *"Anledningen till att det skiljer sig är
 att i den sammanställda Excelfilen du fick del av först kan det finnas dubbletter
@@ -2313,7 +2329,7 @@ KONTROLLTYP, CHECKLISTA och FINNS_BRISTER, och ingen identifierare, inget datum
 och ingen plats. Två rader från samma kontroll är därmed inte skiljbara från två
 rader från två kontroller, och raderna går inte att lägga ihop till kontroller.
 Steg 22 räknar alltså djurhållarrader, vilket är varför fältet i
-`data/bristandel.jsonl` heter `rader` och inte `kontroller`.
+`data/bristandel.jsonl` heter `rader` i stället för `kontroller`.
 
 **Vad det gör med måtten.** Andelen med brist över raderna är lika med andelen
 över kontrollerna endast där dubblerade djurhållare bär samma bristmarkering, och
@@ -2329,7 +2345,7 @@ checklistanvändning är detsamma som en kontroll står ingenstans i leveransen,
 frågan är ställd till myndigheten. Indicierna talar för att de följs åt:
 radnivåuttaget bär en rad per djurhållare, och om en checklista användes en gång
 per djurhållare skulle de två källorna stämma överens i stället för att uttaget
-ligger 5 till 6 procent högre. Det är ett argument och inte ett besked, så fältet
+ligger 5 till 6 procent högre. Det är ett argument, och något besked har inte lämnats, så fältet
 i `data/foranmalda.jsonl` heter `anvandningar` tills det finns ett.
 
 **Uttaget svarar därmed inte på begäran som den är formulerad.** Begäran C i
@@ -2341,7 +2357,8 @@ källorna skiljer sig åt.
 **Beskedet besvarar ingen av de två frågorna, men täcker riktningen i den ena.**
 Fråga 2 gällde om aviseringsfältet saknas för en del kontroller. Förklaringen om
 flera djurhållare gäller den riktningen, men säger bara att skillnaden inte
-behöver bero på tomma aviseringsfält, inte att fältet är fullständigt ifyllt.
+behöver bero på tomma aviseringsfält. Att fältet är fullständigt ifyllt följer
+inte av det.
 Fråga 1 gällde de två blad där rapporterna anger fler kontroller än bladet har
 rader, alltså den motsatta riktningen, och den frågan är obesvarad.
 
@@ -2349,8 +2366,8 @@ rader, alltså den motsatta riktningen, och den frågan är obesvarad.
 
 ## Djurslagsregeln prövad mot handläsning, 2026-08-25
 
-Steg 20 säger om sig självt att termräkningen är en baslinje och inte en
-klassificerare, och att den måste kontrolleras mot handlästa dokument innan
+Steg 20 säger om sig självt att termräkningen bara är en baslinje, och att den
+måste kontrolleras mot handlästa dokument innan
 någon djurslagsuppdelad siffra publiceras. Steg 30 drar den kontrollen: tre
 dokument ur var och en av regelns fyra utfallsklasser, sorterade på sökväg, utan
 att läsaren ser vad regeln svarat eller vilken klass dokumentet kom ur. Frö
@@ -2367,7 +2384,8 @@ Sammanlagt 18 handlästa dokument.
 
 **Rättelse 2026-08-25 av den första redovisningen.** Här stod först att regeln
 såg blandbesättningar i endast 3 av 6 fall, och att tre dokument var missar. Det
-var fel, och felet satt i läsformuläret och inte i regeln: svarsordet *flera* var
+var fel, och felet satt i läsformuläret. Regeln bar det inte: svarsordet
+*flera* var
 tillåtet utan att läsaren behövde skriva vilka djur, och fyra av de sju
 blandbesättningarna visade sig blanda med djurslag projektet inte mäter. Steg 30
 avvisar numera ett flera-svar som inte namnger djuren.
@@ -2386,7 +2404,8 @@ I alla tre registrerade regeln båda djurslagen och avstod från att utse ett
 dominerande.
 
 **Klassen `ingen` är alltså inget fel utan regeln som fungerar.** Namnet är
-missvisande: `ingen` betyder inget dominerande djurslag, inte inget djurslag.
+missvisande: `ingen` betyder inget dominerande djurslag, vilket är något annat
+än inget djurslag alls.
 
 **Stickprovet drogs ur 293 dokument och dras inte om.** Ett södermanlandsdokument
 som kom in den 17 augusti saknades i steg 20 när dragningen gjordes, och kom in
@@ -2404,8 +2423,8 @@ orörda och inget dokument ströks.
 
 **En begränsning som handläsningen avslöjade, och som ingen letade efter.** I
 gävleborgsdokumentet fanns ingen anmärkning på de 60 fåglarna; bristerna gällde
-hästutrymmena. Fältet `FINNS_BRISTER` sitter på kontrollen och inte på
-djurslaget, så en djurslagsuppdelad bristandel kan skriva en hästbrist på
+hästutrymmena. Fältet `FINNS_BRISTER` sitter på kontrollen. Djurslaget är inte vad det
+sitter på, så en djurslagsuppdelad bristandel kan skriva en hästbrist på
 fjäderfäkontot. Det gäller både radnivåuttaget i begäran C och varje uppdelning
 byggd på steg 20, och det går inte att åtgärda ur materialet. Redovisas som
 gräns.
@@ -2456,7 +2475,7 @@ tidigare i dag: inget beslut fick tappa villkor. Utfallet: noll borta, noll
 tillkomna, och exakt 54 villkor blev kortare, median 149 tecken borttagna och
 som mest 263.
 
-**Förutsägelsen slog in på ena halvan och inte på den andra.** Jag väntade att
+**Förutsägelsen slog in på ena halvan. Den andra höll inte.** Jag väntade att
 andelen delad text skulle stiga något, eftersom 54 villkor kommer närmare sina
 motsvarigheter. Huvudsiffran rörde sig inte alls och står kvar på 1 762 villkor,
 615 delade, 35 procent, 206 av 220 inom en prövningsgrupp. Den OCR-lästa
@@ -2541,7 +2560,8 @@ på sidorna 21 till 33. Textlagret på de inskannade sidorna är alltså inte fi
 eget utan en teckenläsning som någon annan har klistrat in, och den läsningen
 tappade diakriterna.
 
-**Felen i det inklistrade lagret är en teckenläsares och inte ett typsnitts.**
+**Felen i det inklistrade lagret är en teckenläsares. Något typsnitt bär dem
+inte.**
 Sju ord i blocket bär q där svenska har g, `Orqanisationsnummer`,
 `Ostqotaqatan`, `avfatlsfraqor`, `hansynsreqler`, och ett av dem bär tre fel på
 en gång: `bedornnlnq` för *bedömning*, med rn för m, l för i och q för g. Ett
@@ -2596,7 +2616,8 @@ ger den raka läsningen 0,945 och den vikta 0,636.
 
 **Sex villkor i `data/villkor.jsonl` bar två tjänstemäns för- och efternamn och
 deras e-postadresser.** Sikten som hittade dem letade efter webbadresser i
-sidfoten, inte efter namn. Alla sex är OCR-lästa beslut från Länsstyrelsen i
+sidfoten. Efter namn letade den inte. Alla sex är OCR-lästa beslut från
+Länsstyrelsen i
 Halland, och alla bar raden `Kontakta i detta ärende:` som tredje rad i
 sidfotsblocket. De två raderna ovanför den fångas av befintliga markörer; den
 tredje saknar postnummer och telefonnummer, och OCR har läst snabel-a som
@@ -2671,7 +2692,7 @@ slutsats dragen ur en korrelation.
 registret; varje tappat ord finns i handlingen och är bara inte nåbart för en
 markör som bara går framåt. Villkoret för kontroll 3 är uppfyllt i båda lägena,
 och ingen publicerad siffra om maskning, villkor eller baseline rör sig. Det
-måttet mäter är alltså delvis sammanhang och inte bara trohet, och det straffar
+måttet mäter är alltså delvis sammanhang utöver trohet, och det straffar
 den rättelse det byggdes för att tillåta. Om steg 34 ska återanknyta efter ett
 hål i stället för att gå vidare framåt är en egen fråga; den avgörs inte här,
 och talet 0,9974 står som det är mätt.
@@ -2714,8 +2735,8 @@ OCR av det beslutet att flytta dem till.
 Inget annat beslut byter villkorstext och inget annat byter källa. De fyra
 texter som byter bär 8, 10, 21 och 24 diakriter efter bytet, mot noll före.
 
-**Antalet steg därför att den gamla läsningen var stympad, inte bara
-felstavad.** Villkorsfönstret ur textlagret är 39 rader och slutar i beslutets
+**Antalet steg därför att den gamla läsningen var stympad.** Felstavad var den
+också, men det var inte det som sänkte talet. Villkorsfönstret ur textlagret är 39 rader och slutar i beslutets
 egen sidfot, läst som `Ostqotaqatan 3` och `E-DOSt:`. ADR-0021:s regel bär ett
 villkor över en sidbrytning genom att känna igen sidhuvudet som block, och ett
 huvud vars ord är förvanskade känns inte igen, så fönstret stängde vid den
@@ -2822,8 +2843,8 @@ inte kontroll, medan kontroll används för kontrollprogram, besiktning och
 journalföring som saknar eget ämne. Den andra: ett block som segmenteringen
 fogat samman av flera villkor med olika ämne och utan ett som dominerar får
 svaret kan inte avgöra. Den tredje: ett ämne som vokabulären inte namnger får
-Övrigt med ämnet antecknat, eftersom det är ett fynd om typologin och inte om
-texten. Inget av de trettio första svaren berördes av den tredje regeln, så
+Övrigt med ämnet antecknat, eftersom det är ett fynd om typologin. Om texten
+säger det ingenting. Inget av de trettio första svaren berördes av den tredje regeln, så
 inget svar har skrivits om.
 
 **Villkoret för att facit skulle vara användbart höll.** Det skrevs före
@@ -2848,7 +2869,7 @@ stället **Allmänt: 6 av 9**, följd av Djurstall med 3 av 4.
 
 **De 23 oenigheterna delar sig i två familjer.** Den uppdelningen gjordes med
 rubrikerna synliga och är därför inte blind; den redovisas som en efterhandsläsning
-av utfallet och inte som en del av mätningen. I tio fall namnger rubriken en
+av utfallet, utanför mätningen. I tio fall namnger rubriken en
 plats eller ett kapitel och texten ett annat ämne: en gödslingsplan under
 Allmänt, en skyddszon under Ålbhnänt, en gödselstuka under Stallarna, ett
 avvecklingsvillkor under Övrigt. I tretton fall är båda placeringarna
@@ -2857,7 +2878,7 @@ stallrengöring under gödsel eller vatten, en bevuxen skyddszon under gödsel
 eller vatten, markkartering under kontroll eller gödsel, ventilation som
 motiveras med både lukt och buller. **Hårda rubrikfel är alltså 10 av 59, 17
 procent, och gränsdragningar 13 av 59, 22 procent.** Den andra siffran är ett
-fynd om schemat och inte om rubriken.
+fynd om schemat. Om rubriken säger den ingenting.
 
 **Allmänt är inte instrumentets fel.** Rubriken kunde ha släpat efter i
 segmenteringen, och det prövades: i `486f0758082c`, `c357ac195bc7`,
@@ -2887,7 +2908,7 @@ saknas för nästan vart tredje villkor, medan texten räcker för 98 procent.
 inget mått på hur två bedömare skulle skilja sig åt. Mina egna svar är
 referensen, och i de tretton gränsfallen kan de vara fel utan att någon
 upptäcker det. 120 villkor av 2 347 är 5,1 procent, och talen ovan bär
-stickprovets osäkerhet. Bedömningarna är MANUAL enligt avsnitt 2.8, aldrig RULE.
+stickprovets osäkerhet. Bedömningarna är MANUAL enligt avsnitt 2.8, med ingen enda RULE bland dem.
 
 ---
 
@@ -2930,9 +2951,10 @@ skulle falla till övrigt om bara de nio används. Det blev sex ämnen, alltså 
 tröskeln föll.
 
 **Två placeringar är rena bedömningar och står utskrivna i koden.** Skyddszoner
-ligger under vatten och inte under gödsel, eftersom villkoret läggs på marken
+ligger under vatten i stället för under gödsel, eftersom villkoret läggs på
+marken
 intill vattnet och motiveras med vattnet, trots att det reglerar spridning.
-Biogasanläggningen ligger under energi och inte under gödsel, trots att
+Biogasanläggningen ligger under energi i stället för under gödsel, trots att
 substratet är gödsel. Båda går att invända mot, och det är därför de står som
 kommentarer på sina rader.
 
@@ -2943,7 +2965,8 @@ tillsammans är rökgasen ämnet, och de raderna ligger kvar under luft.
 
 **Femton villkor bär rubriken Delegation** och räknas inte som en typ, eftersom
 avsnitt 2.4 ger de delegerade frågorna en egen tabell: en delegation är
-myndigheten som håller en fråga öppen, inte ett krav på verksamhetsutövaren.
+myndigheten som håller en fråga öppen, vilket är något annat än ett krav på
+verksamhetsutövaren.
 Rubriken syntes först sedan de påklistrade meningsförleden lossats samma dag.
 
 **Kartan säger ingenting om innehållet.** Schemat säger själv att rubrik och sak
@@ -3097,7 +3120,7 @@ för rad, och en andra invariant söker registret efter samma tre sorters
 uppgifter som steget gör, så att garantin inte vilar på att någon körde
 screeningen en gång.
 
-**Vad registret bär och inte bär.** Det bär texten, rubriken och
+**Vad registret bär, och vad det saknar.** Det bär texten, rubriken och
 proveniensfälten. Det bär ännu ingen villkorstyp, inga kvantifierade krav, ingen
 tidsdimension och inga länkar mellan beslut. De fyra är nästa steg i schemat och
 kräver var för sig samma ordning som allt annat i dag: villkoret skrivet före
@@ -3166,8 +3189,8 @@ villkor 6 ... Villkoret ges följande lydelse: 6. Lagring av stallgödsel ska sk
 i gödselhus med tak, väggar och stängningsbara portar ...". Det är ett villkor
 med en ny lydelse och ett datum, alltså precis vad ett register med
 tidsdimension enligt VILLKORSSCHEMA avsnitt 2.5 ska bära. Rätt formulering är
-att besluten ligger utanför vad segmenteraren är byggd att hitta, inte att de
-saknar villkor.
+att besluten ligger utanför vad segmenteraren är byggd att hitta. Att de saknar
+villkor följer inte av det.
 
 **Åtta av nio skriver ut minst ett villkors text.** Bara ett gör det inte.
 
@@ -3282,7 +3305,8 @@ egna villkor och 9 som inte går att placera med de mönstren. Räkningen är et
 sökuttryck och ingen läsning; den säger var de återstående läsningarna ska
 göras.
 
-**Det viktigaste fyndet gäller kontroll 1, inte täckningen.** De sex som ser ut
+**Det viktigaste fyndet gäller kontroll 1.** Täckningen är det inte. De sex som
+ser ut
 att bära egna villkor numrerar dem 7 till 11, 12 till 15, 17 till 21 och 30 till
 32. **Inget av dem börjar på 1.** Kontroll 1 i VILLKORSSCHEMA avsnitt 5 kräver en
 obruten serie 1 till N, och det kravet är rätt för ett tillstånd och fel för ett
@@ -3680,4 +3704,4 @@ kod och varje citat går att kontrollera mot sitt källstycke.
 **Ett observerat utfall före avstängningen.** Sökning på ordet *debeaking* gav
 noll träffar, med beskedet att inget stycke nådde likhetströskeln. Ordet står i
 tre stycken i `data/dgsante_paragraphs.jsonl`, med åtta förekomster. Det är ett
-enskilt fall och inte måttet, men det visar vad måttet mäter.
+enskilt fall snarare än måttet, men det visar vad måttet mäter.
