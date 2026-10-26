@@ -34,9 +34,14 @@ OUT = ROOT / "data" / "korrespondens_utgaende.jsonl"
 # anchored to one line silently misses: four of the first eight rows kept
 # their marker and the first quoted line until the reconciliation caught
 # it. A line starting with ">" is the last resort, since every client
-# prefixes the quoted block that way.
+# prefixes the quoted block that way. A second miss, found by CI on the
+# first commit of the outgoing register: Gmail wraps the marker so that
+# the sender's address lands on its own line before "wrote:", which an
+# expression allowing only a newline between them lets through, address
+# and all.
 QUOTE = re.compile(
-    r"^(?:Från: |From: |Den .{0,40} skrev |On\b[^\n]{0,80}\n?\s*wrote:"
+    r"^(?:Från: |From: |Den .{0,40} skrev "
+    r"|On\b[^\n]{0,80}(?:\n[^\n]{0,80})?wrote:"
     r"|-{3,} ?Vidarebefordrat|>)",
     re.M,
 )

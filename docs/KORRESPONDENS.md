@@ -109,6 +109,14 @@ innan dess, vilket var samma kostnad ADR-0024 skrevs för att slippa:
    `git add data/` lämnar talet kvar och CI faller på invarianten fast
    pytest var grön lokalt.
 
+   *Tillägg 2026-10-26.* **Kör `git add -A -N` före grindarna när en ny fil
+   har tillkommit.** Invarianterna läser `git ls-files`, alltså bara spårade
+   filer, så en nyskapad datafil är osynlig för dem tills den är stegad.
+   Första gången det utgående registret committades var pytest grön lokalt
+   och CI röd en minut senare, på en funktionsbrevlåda som stod kvar i en
+   avhuggen citatmarkör. En grön grind som inte läste filen du nyss skrev är
+   ingen grind.
+
 ## Reglerna per fält
 
 **`datum` och `klockslag`** är meddelandehuvudets tid omräknad till svensk,
