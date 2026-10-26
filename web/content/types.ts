@@ -273,5 +273,4 @@ export type Copy = {
     }[];
     licence: { heading: string; body: string };
   };
-  building: string;
 };

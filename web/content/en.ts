@@ -10,8 +10,8 @@ export const en: Copy = {
     description:
       "A measurement of Swedish animal welfare supervision, with the " +
       "EU's audits of member state control systems as its baseline. " +
-      "Every figure can be clicked down to the exact sentence in the " +
-      "source document.",
+      "Every figure can be followed to its source, and in the European " +
+      "layer all the way to the exact sentence in the audit report.",
     navLabel: "Main navigation",
     cardAlt:
       "Antumbra, a measurement of the equivalence of Swedish animal " +
@@ -121,7 +121,7 @@ export const en: Copy = {
         "or when text is missing under the rectangle. The measure is " +
         "machine-made and described in full in the method. It measures " +
         "whether the authority released the information. What the " +
-        "information is.",
+        "information says lies outside the measure.",
       classLabel: "Class",
       documents: "Documents",
       masked: "With at least one redaction",
@@ -175,7 +175,8 @@ export const en: Copy = {
       heading: "The counties in the order the measure gives",
       note:
         "The order is the one every authority received in its own material " +
-        "before publication. Authorities with the same share share a place, " +
+        "before publication. Authorities with the same share hold the same " +
+        "place, " +
         "because the measure does not separate them, and the order implies " +
         "no judgement of their handling.",
       classHeading: {
@@ -255,7 +256,7 @@ export const en: Copy = {
       heading: "What this page does not show",
       items: [
         "The documents themselves. They contain personal data and are never published; the listing with a checksum per file is on the Swedish page Handlingar.",
-        "Any claim that an authority has broken the law. The law is unsettled and the Supreme Administrative Court has not decided the question. Four decisions were appealed, and the first was decided on 23 October 2026: the Administrative Court of Appeal in Stockholm dismissed the appeal against Gotland's decision and found no reason to depart from the county's own assessment. Three are undecided.",
+        "Any claim that an authority has broken the law. The law is unsettled and the Supreme Administrative Court has not decided the question. Four decisions were appealed, and the first was decided on 23 October 2026: the Administrative Court of Appeal in Stockholm rejected the appeal against Gotland's decision and found no reason to depart from the county's own assessment. Three are undecided.",
         "Three counties that declined the copies once a fee remained after the narrowing. They carry a response time and a fee figure but no documents in the redaction measure, and the loss is never counted as a release or as a refusal.",
         "Pigs as a comparison. Sixteen documents have pigs as their dominant animal, spread across ten counties, so no county has material on both sides.",
         "What a document is when an authority bundles several into one file. The measure counts the delivered file, and two of the 343 files hold five documents each. One is Norrbotten's class B delivery, which therefore stands at one document where the county released five decisions; the redaction share is unaffected, since all five are unredacted. The other sits outside the class figures.",
@@ -382,9 +383,10 @@ export const en: Copy = {
         "Retrieval was measured on 26 October 2026 against 2,115 questions " +
           "built from the citation graph, each with 3.54 correct paragraphs " +
           "on average. Three methods were tried. BM25 finds at least one " +
-          "correct paragraph among ten for 49.6 percent of the questions. " +
-          "Dense vector search manages 31.4 percent. The hybrid that stood " +
-          "here managed 45.2 percent, worse than plain BM25 on every figure, " +
+          "correct paragraph among ten for 49.6 per cent of the questions. " +
+          "Dense vector search manages 31.4 per cent. The hybrid that " +
+          "stood here managed 45.2 per cent, worse than plain BM25 on " +
+          "every figure, " +
           "and a reranker on top of it did worse still.",
         "The condition was written before the measurement: a search box that " +
           "does not beat plain BM25 goes. It is gone, and the service that " +
@@ -437,7 +439,7 @@ export const en: Copy = {
           title: "The area measure points the wrong way for one technique",
           body:
             "Where the text under the blacking has been removed, the area " +
-            "measures how the boxes were drawn. How much is held back it does " +
+            "measures how the boxes were drawn. It does not say how much is " +
             "not say. For that technique the character count is the better " +
             "measure. The limit belongs to the pre-registered area figure " +
             "and is to be read beside every area number.",
@@ -538,5 +540,4 @@ export const en: Copy = {
     contactHeading: "Contact",
     contact: "cm.blomqvist@gmail.com",
   },
-  building: "This page is under construction.",
 };

@@ -23,7 +23,10 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
           >
             {/* The mark is the thing being measured: a redaction. It is the
                 only ornament on the site, and it appears once. */}
-            <span aria-hidden className="inline-block h-[0.6em] w-[1.5em] bg-redaction" />
+            <span
+              aria-hidden
+              className="inline-block h-[0.6em] w-[1.5em] bg-redaction"
+            />
             {copy.site.name}
           </Link>
           <nav
@@ -68,20 +71,11 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
 }
 
 /** Title and lead for a page that is routed but not yet built out. */
-export function PageIntro({
-  title,
-  lead,
-  building,
-}: {
-  title: string;
-  lead: string;
-  building?: string;
-}) {
+export function PageIntro({ title, lead }: { title: string; lead: string }) {
   return (
     <div className="max-w-[34rem] space-y-4">
       <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
       <p className="text-lg text-ink-secondary">{lead}</p>
-      {building ? <p className="text-sm text-ink-secondary">{building}</p> : null}
     </div>
   );
 }

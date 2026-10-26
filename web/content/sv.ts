@@ -72,8 +72,9 @@ export const sv: Copy = {
     description:
       "En mätning av den svenska djurskyddstillsynen, med EU:s " +
       "revisioner av medlemsstaternas kontrollsystem som " +
-      "jämförelsegrund. Varje tal kan klickas ned till den exakta " +
-      "meningen i källdokumentet.",
+      "jämförelsegrund. Varje tal går att följa till sin källa, och i " +
+      "EU-lagret hela vägen till den exakta meningen i " +
+      "revisionsrapporten.",
     navLabel: "Huvudnavigering",
     cardAlt:
       "Antumbra, en mätning av den svenska djurskyddskontrollens " +
@@ -960,5 +961,4 @@ export const sv: Copy = {
         "schema per fil och de deklarerade luckorna utskrivna.",
     },
   },
-  building: "Sidan är under uppbyggnad.",
 };
