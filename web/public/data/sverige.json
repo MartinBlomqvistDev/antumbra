@@ -539,17 +539,17 @@
     }
   },
   "bilagor": {
-    "mappar": 0,
-    "bilagefiler": 0,
-    "lan_med_bilagefil": 0,
-    "hanvisar_till_innehall": 0,
-    "endast_formell_hanvisning": 0,
+    "mappar": 35,
+    "bilagefiler": 6,
+    "lan_med_bilagefil": 3,
+    "hanvisar_till_innehall": 114,
+    "endast_formell_hanvisning": 72,
     "slag": {
-      "fotomening ur mallen": 0,
-      "den ifyllda checklistan": 0,
-      "annat": 0
+      "fotomening ur mallen": 42,
+      "den ifyllda checklistan": 12,
+      "annat": 60
     },
-    "utan_lasbar_text": 0
+    "utan_lasbar_text": 45
   },
   "par": {
     "lan": [

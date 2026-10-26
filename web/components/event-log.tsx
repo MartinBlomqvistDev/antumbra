@@ -5,7 +5,13 @@ import type { Copy } from "@/content/types";
 import type { LogRow } from "@/lib/log";
 
 /**
- * The protocol log as a filterable table. The full table is what the
+ * The protocol log as a filterable table. It carries no minimum width: the
+ * note column is prose, and a floor of 56rem inside a 56rem column with its
+ * own gutters put a horizontal scrollbar under the table and clipped the
+ * notes on an ordinary laptop. The short columns hold their line; the note
+ * wraps.
+ *
+ * The full table is what the
  * server renders, so without JavaScript every row is simply visible and
  * only the filter control is inert.
  */
@@ -39,7 +45,7 @@ export function EventLog({
         </select>
       </label>
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[56rem] border-collapse text-sm">
+        <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="border-b-2 border-ink text-left tablehead">
               <th scope="col" className="py-2 pr-3">
@@ -74,7 +80,9 @@ export function EventLog({
                 <td className="py-2 pr-3 whitespace-nowrap tabular-nums">
                   {row.datum}
                 </td>
-                <td className="py-2 pr-3 tabular-nums">{row.klockslag}</td>
+                <td className="py-2 pr-3 whitespace-nowrap tabular-nums">
+                  {row.klockslag}
+                </td>
                 <td className="py-2 pr-3">{row.kanal}</td>
                 <td className="py-2 pr-3">{row.myndighet}</td>
                 <td className="py-2 pr-3">{row.begaran}</td>

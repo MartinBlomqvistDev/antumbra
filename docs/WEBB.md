@@ -18,6 +18,16 @@ designas före varje diagram, och återanvänds på Hem, /jamforelse och
 /handlingar. Varje ny visualisering blir därmed billig och automatiskt
 belagd.
 
+*Tillagt 2026-10-26.* Tesen ovan står kvar för EU-lagret, där kedjan går hela
+vägen till den exakta meningen. **Den duger inte längre som sajtens devis.**
+Den svenska halvan är sajtens fokus sedan 2026-08-07, och där slutar kedjan i
+kontrollsumman: handlingarna bär personuppgifter och publiceras aldrig, så
+"från siffra till källa på två klick" lovar för den halva som betyder mest
+något som inte går att inlösa. Sidfotens devis är därför *Ett
+kunskapsunderlag om djurskyddskontrollens likvärdighet*, alltså samma ord som
+de 22 P12-breven använde om projektet, och likvärdighet är regeringens eget ord
+i Statskontorets uppdrag.
+
 ## Struktur
 
 Omdisponerad 2026-08-07: den svenska undersökningen är sajtens fokus och

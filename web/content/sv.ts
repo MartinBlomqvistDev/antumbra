@@ -68,7 +68,7 @@ export const sv: Copy = {
   locale: "sv",
   site: {
     name: "Antumbra",
-    tagline: "Från siffra till källa på två klick.",
+    tagline: "Ett kunskapsunderlag om djurskyddskontrollens likvärdighet.",
     description:
       "En mätning av den svenska djurskyddstillsynen, med EU:s " +
       "revisioner av medlemsstaternas kontrollsystem som " +

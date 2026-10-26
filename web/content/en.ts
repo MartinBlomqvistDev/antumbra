@@ -5,7 +5,8 @@ export const en: Copy = {
   locale: "en",
   site: {
     name: "Antumbra",
-    tagline: "From figure to source in two clicks.",
+    tagline:
+      "An evidence base on the equivalence of animal welfare supervision.",
     description:
       "A measurement of Swedish animal welfare supervision, with the " +
       "EU's audits of member state control systems as its baseline. " +
