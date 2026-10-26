@@ -58,7 +58,7 @@ där, fast det hela tiden legat ordagrant i protokollloggen och i
 korrespondensregistret. Skälet att rätta det före snittet var inte
 fullständigheten utan likabehandlingen: Gävleborgs likartade manuella svar låg i
 registret och Jordbruksverkets inte. Ingen publicerad siffra rör sig av
-tillägget, eftersom raden är ett besked och inte ett svar i sak.
+tillägget, eftersom raden är ett besked utan svar i sak.
 
 ---
 
@@ -98,13 +98,13 @@ var och en har en yta som måste finnas den 24 oktober.
    Det kräver en yta per myndighet där talen och myndighetens eget svar står
    bredvid varandra, och där tystnad skrivs ut som tystnad.
 2. *"Den omfattar ett publikt kodarkiv på GitHub, en webbplats och ett
-   dataset."* Tre ytor, inte en.
+   dataset."* Tre ytor, där en skulle ha varit för få.
 3. *"I materialet ingår hela handläggningsprotokollet och hela
    korrespondensloggen, alltså också de mejl ni har skickat i de här ärendena,
    ordagrant."* Handläggningsprotokollet finns committat i
    `data/protokoll_logg.jsonl`, 542 rader den 7 oktober 2026. En korrespondenslogg med
    myndigheternas egna meddelanden i sin helhet finns inte; loggens noteringar
-   bär ordagranna utdrag, inte hela meddelanden.
+   bär ordagranna utdrag ur meddelandena, med hela meddelanden utelämnade.
 4. *"Namn på enskilda tjänstemän återges inte någonstans: där ett beslut
    namnger beslutsfattare och föredragande skrivs rollen i stället."* ADR-0018,
    bevakad av en invariant i testsviten. Den invarianten måste gälla även varje
@@ -165,7 +165,7 @@ språkversionerna.
 
 Beslutslogg rad 10: nollresultat publiceras överst, i förskriven text. Tre delar
 av förregistreringen gick inte att genomföra som skrivet, och de ska stå i
-metoden, inte i en fotnot.
+metoden, i löptext snarare än i en fotnot.
 
 1. **Fältmåttet gick inte att räkna bokstavligt.** Maskningsgrad
    förregistrerades som andel maskerad yta plus andel maskerade fält.
@@ -175,8 +175,8 @@ metoden, inte i en fotnot.
    bakom en ljus täckning, och de 236 dolda tecknen är sidhuvud under
    myndighetens egen vita ruta.
 2. **Ytmåttet pekar fel för en av maskningsteknikerna.** Där texten under
-   svärtningen är borttagen mäter ytan hur rutorna ritats, inte hur mycket som
-   hålls inne; för den tekniken är antalet tecken det bättre måttet. Gränsen
+   svärtningen är borttagen mäter ytan hur rutorna ritats. Hur mycket som hålls
+   inne mäter den då inte; för den tekniken är antalet tecken det bättre måttet. Gränsen
    gäller det förregistrerade ytmåttet och ska läsas tillsammans med varje
    ytsiffra.
 3. **Halva oanmäld-hypotesen går inte att pröva.** Avsnitt 10 begär både
@@ -192,7 +192,7 @@ metoden, inte i en fotnot.
 
 Avsnitt 9:s andra förskrivna text, den vid konsekvent maskning, publiceras inte,
 eftersom dess villkor inte är uppfyllt: maskningen är inte konsekvent. Att
-texten var skriven i förväg och inte utlöstes skrivs ut, så att läsaren ser
+texten var skriven i förväg och ändå inte utlöstes skrivs ut, så att läsaren ser
 vilken av de två som gällde.
 
 ---
@@ -202,7 +202,7 @@ vilken av de två som gällde.
 Risk 10 i avsnitt 12 har ett motmedel: *"intervall redovisas alltid; indexet
 rangordnar inte myndigheter vars intervall överlappar."* P12-breven bär en ordnad
 tabell över de län som levererat i klassen, utan intervall. Tabellen säger själv
-att ordningen följer måttet och inte innebär någon bedömning, och att
+att ordningen följer måttet utan att innebära någon bedömning, och att
 myndigheter med samma andel delar plats.
 
 Den publicerade tabellen ska därför vara **samma tabell som breven bär**, så att
@@ -221,17 +221,18 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
 
 **Före snittet, den 22 och 23 oktober, och en sista kontroll den 26:e**
 
-1. Sista brevlådegenomgången, från posten till loggen och aldrig tvärtom, tråd
+1. Sista brevlådegenomgången, från posten till loggen i den riktningen, tråd
    för tråd per myndighet. Ett svar som kommer den 23 oktober är ett svar i tid
    och ska vara inne i materialet innan något öppnas. Genomgången görs om på
    morgonen den 26:e, eftersom helgen ligger mellan fristen och snittet.
-2. PII-svep över hela ytlistan, inte bara repot: varje committad `data/*.jsonl`,
+2. PII-svep över hela ytlistan, där repot bara är en del: varje committad `data/*.jsonl`,
    varje fil i `docs/`, webbplatsens exporterade JSON, dataset-kortet, README.
    Sökningen gäller namn, adresser, telefonnummer, personnummer och filnamn.
-3. Författarskapsrevision över **hela** historiken, inte sessionens commitar:
+3. Författarskapsrevision över **hela** historiken, där sessionens commitar
+   bara är slutet:
    `git log --format='%an <%ae>' | sort -u` ska ge en enda rad.
-4. De tre grindarna körda var för sig med varje avslutskod läst, aldrig i samma
-   kedja som en commit. Webbygget körs separat.
+4. De tre grindarna körda var för sig med varje avslutskod läst, utanför den
+   kedja som en commit ligger i. Webbygget körs separat.
 5. **`antumbraprojektet.se` är registrerad 2026-10-23** hos One.com, med
    namnservrarna ns01 och ns02 hos One.com och utgång 2027-10-23. Domänen är
    en förberedelse och ingen yta. `antumbra.org` stod i planen till samma dag,
@@ -247,7 +248,7 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
 7. Webbplatsen deployas.
 8. Datasetet publiceras.
 9. Varje steg loggas som en egen rad med klockslag läst ur systemet i samma
-   åtgärd som raden skrivs, aldrig ur minnet.
+   åtgärd som raden skrivs, med källan framför sig.
 10. Först därefter inlägget på LinkedIn. Ett inlägg före de andra ytorna är
     publicering utan att det finns något att läsa.
 
@@ -255,8 +256,8 @@ som ligger sent i ordningen en kortare faktisk svarstid än de tidiga.
 
 11. Ett svar som kommer efter den 23 oktober publiceras också, oavkortat, som en
     egen rad med sitt datum. Svarstiden löper inte om.
-12. Den 26 oktober redovisas nämnarens läge, som en lucka och aldrig som ett
-    avslag, enligt not 7 och not 9. **Mätt 2026-10-10 har samtliga 21 län
+12. Den 26 oktober redovisas nämnarens läge som en lucka, och ett avslag är det
+    aldrig, enligt not 7 och not 9. **Mätt 2026-10-10 har samtliga 21 län
     svarat**, nitton med tal och två med att talet inte går att ta fram: Skåne
     därför att djurskyddskontrollerna inte registreras kopplat till djurslag, och
     Norrbotten med hänvisning till serviceskyldigheten i förvaltningslagen. Vad
@@ -316,7 +317,7 @@ med källa. Inget påstående om lagbrott. Nollresultaten överst.
    det de berörda myndigheterna fick siffror om är den svenska mätningen. DG
    SANTE-korpusen är kommissionens eget publicerade material; projektets bidrag
    där är parsningen och modellen, och den ligger kvar som ett eget dataset med
-   eget kort i `docs/HF_DATASET.md`, publicerat på egna villkor och inte bundet
+   eget kort i `docs/HF_DATASET.md`, publicerat på egna villkor utan bindning
    till snittet. Följden för den 26:e: de svenska aggregaten behöver ett eget
    kort med schema per fil och licens, så att vem som helst kan räkna om talen.
 3. **Publiceringsdagen. Avgjord 2026-10-12: måndag den 26 oktober.** Den 24:e

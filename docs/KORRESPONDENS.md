@@ -2,8 +2,8 @@
 
 Registret är `data/korrespondens.jsonl`. Den här filen finns för att reglerna
 annars ligger i fem: projektets CLAUDE.md, `BEGARANMALL.md` avsnitt 7,
-`VERIFIERAT.md`, ADR-0003 och ADR-0018. **Läs den här filen, inte de fem, när
-du arbetar i registret.** Ändras en regel ändras den här och på sitt
+`VERIFIERAT.md`, ADR-0003 och ADR-0018. **Läs den här filen när du arbetar i
+registret; de fem räcker inte.** Ändras en regel ändras den här och på sitt
 ursprungliga ställe.
 
 ## Vad registret är och vad som binder det
@@ -52,7 +52,7 @@ gitignorerat, och manifestet bär sha256 per råsvar.
    adress, och att jag skrev till dem gör inte adressen till min att
    publicera. Fältet `mottagare` bär därför samma tvåvärdesvokabulär som
    `avsandare` gör för inkommande: `funktionsbrevlåda` eller
-   `namngiven tjänsteman`, aldrig adressen.
+   `namngiven tjänsteman`, med adressen utelämnad.
 2. **Den citerade historiken kapas**, alltså myndighetens meddelande under
    mitt svar och min egen tidigare text. Den står redan i registren.
 3. **Länkmålen kapas**, och en rad som inte var annat än en länk.
@@ -61,7 +61,7 @@ gitignorerat, och manifestet bär sha256 per råsvar.
    maska den vore att dölja vem som frågade.
 
 **Vad som aldrig görs.** Ingen uppgift om en enskild djurhållare förs in, och
-ingen tjänstemans namn återges, inte heller i en hälsningsfras där jag själv
+ingen tjänstemans namn återges. Det gäller också en hälsningsfras där jag själv
 har skrivit ut det. Där jag tilltalat en handläggare med namn skrivs rollen i
 stället, på samma sätt som ADR-0018 föreskriver åt andra hållet, och raden
 säger i `utelamnat` att det gjorts.
@@ -95,7 +95,7 @@ innan dess, vilket var samma kostnad ADR-0024 skrevs för att slippa:
    steget: ordet kan vara ett förnamn, en titel eller enheten själv, och
    bedömningen skrivs som en rad i `data/korrespondens_signaturer.jsonl`
    med `signaturen` satt till `namn` eller `befattning eller enhet`. Filen
-   bär bedömningen och aldrig ordet (ADR-0024).
+   bär bedömningen utan att bära ordet (ADR-0024).
 5. **Skriv raden** med det som är omdöme: myndighet, roll, bilagor och de
    anmärkningar som bara en läsare kan göra, till exempel att en felstavning
    står som myndigheten skrev den.
@@ -134,7 +134,7 @@ och ingenting annat.
 
 **`roll`** är den befattning eller funktion brevet självt undertecknas med, med
 brevets egen lydelse. Den översätts inte till närmaste befattning: Västmanland
-skriver *Administrativ handläggare*, inte *administratör*. Namnges ingen person
+skriver *Administrativ handläggare*, där *administratör* vore en omskrivning. Namnges ingen person
 är rollen ändå myndighetens egen uppgift om vem som hanterar ärendet.
 
 **`text`** är ordagrann. Ingen sammanfattning, ingen karaktärisering, ingen
@@ -144,7 +144,7 @@ rättning av stavning eller av myndighetens egna tal.
 regelmässigt: den citerade historiken, signaturblockets personuppgifter enligt
 ADR-0018, länkmålen, och en rad som inte var något annat än en länk.
 Myndighetens egen funktionsbrevlåda, växel och webbadress står kvar när de står
-som text, eftersom de är publicerade kontaktuppgifter och inte en enskilds.
+som text, eftersom de är publicerade kontaktuppgifter och ingen enskilds.
 
 Den fjärde regeln kom den 8 oktober 2026 och den har ett skäl som väger mer än
 prydlighet. En rad som bara bar en länk, till exempel `Central e-post` med sitt
@@ -166,7 +166,8 @@ fäller en rad som gör det.
 
 **`forekomster`** bär en brevlådas stående autosvar när texten är identisk
 tecken för tecken. En förekomst måste bära meddelandets `sizeEstimate` ur
-API-svaret, som bevis på att meddelandet är hämtat och inte antaget identiskt.
+API-svaret, som bevis på att meddelandet är hämtat, med ingenting antaget om
+likheten.
 
 ## Vad som aldrig görs
 

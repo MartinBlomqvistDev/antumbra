@@ -1,7 +1,7 @@
 # DG SANTE-korpusen
 
 Kommissionens direktorat för hälso- och livsmedelsrevision granskar
-**medlemsstaternas kontrollsystem**, inte enskilda anläggningar. Det gör
+**medlemsstaternas kontrollsystem**. Enskilda anläggningar granskas inte. Det gör
 korpusen till projektets jämförelselager: samma revisor, samma rättsliga grund,
 samma rapportmall för alla medlemsstater, alltså **jämförbara till sin
 konstruktion**.
@@ -21,7 +21,7 @@ Ingen inloggning. `robots.txt` på ec.europa.eu spärrar `/food/archive/` men in
 | Bilaga | `.../audit-report/annex/download/<id>` |
 | Landprofil | `.../country/profile/download/<id>` |
 
-Sökningen är ett **serverrenderat Symfony-formulär**, inte en SPA. En POST per
+Sökningen är ett **serverrenderat Symfony-formulär** utan SPA. En POST per
 årtal med färsk CSRF-token ger en strukturerad träfflista. Se
 `pipeline/01_harvest_index.py`.
 
@@ -199,8 +199,8 @@ Att slå ihop dem skulle överdriva hur ofta kedjan rekommendation till åtagand
 faktiskt sluts.
 
 **Träffsäkerhet.** Klassningen mättes mot 40 bilagor som lästes för hand, i
-stickprov dragna **efter** att reglerna skrivits och aldrig använda för att
-justera dem: **34 av 40 rätt, 85 procent.** Facit ligger i
+stickprov dragna **efter** att reglerna skrivits, utan att någonsin ha använts
+för att justera dem: **34 av 40 rätt, 85 procent.** Facit ligger i
 `data/dgsante_annex_labels.jsonl` och kontrolleras av testsviten. Fem av de sex
 avvikelserna är dokument som lämnats oklassade fast de går att klassa, alltså
 ett försiktigt fel; **noll dokument klassades som plan utan att vara det.**
@@ -222,29 +222,29 @@ texten ligger under `ocr/`, som är gitignorerad.
 | 50 till 69 | 99 |
 | under 50 | 24 |
 
-**Två filer går inte att läsa, och båda är trasiga hos kommissionen, inte hos
-oss.** `annex/download/2603` är en avkortad GIF som avkodar till en helsvart
+**Två filer går inte att läsa, och båda är trasiga hos kommissionen.** Hos oss
+är de hela. `annex/download/2603` är en avkortad GIF som avkodar till en helsvart
 sida; den nedladdade filen är byte-identisk med vad servern levererar, så
 skadan finns i källan. `annex/download/3339` heter `.pdf` men innehåller ett
 OLE-dokument från Office.
 
 **OCR avslöjade inga nya åtgärdsplaner.** Bland de 1 017 nylästa filerna finns
 noll dokument som namnger sig som plan. Slutsatsen ovan står alltså kvar efter
-att materialet lästs, inte bara efter att det räknats.
+att materialet lästs, utöver att det räknats.
 
-## Bilagorna är sidor, inte dokument
+## Bilagorna är sidor snarare än dokument
 
 Klassningen träffar bara 45 procent av filerna, och det beror inte i första
 hand på OCR-kvaliteten: även bland filer med konfidens över 90 klassas bara
 41 procent. Förklaringen syns i texten. **41 procent av de OCR-lästa
 bilagorna inleds med ett faxhuvud**, och de numrerade bilagorna till en
 revision från den äldre eran är i regel **sidorna i en och samma faxade
-inlaga**, inte separata dokument. Bara sida ett bär rubriken som säger vad
+inlaga**. Separata dokument är de inte. Bara sida ett bär rubriken som säger vad
 inlagan är; sida fyra fortsätter mitt i en mening.
 
-**Rätt analysenhet är därför revisionen, inte filen.** Räknat per revision
+**Rätt analysenhet är därför revisionen.** Filen duger inte som enhet. Räknat per revision
 namnger minst en bilaga dokumentet i **831 av 1 034 fall, alltså 80 procent.**
-Den siffran, inte 45 procent, är den som ska stå i metoden, och parsningen
+Den siffran är den som ska stå i metoden, där 45 procent förut stod, och parsningen
 ska sätta ihop bilagorna per revision innan den läser dem.
 
 ## Citatgrafen: vad den faktiskt täcker
@@ -526,11 +526,11 @@ samma typ av brist i olika länder och år. Styckena är rapporternas egna
 citeringsenheter, så sökningen återanvänder exakt den struktur citatgrafen
 redan vilar på.
 
-**Vad sökningen inte kan:** modellen matchar ämne, inte polaritet. Frågan
+**Vad sökningen inte kan:** modellen matchar ämne. Polaritet matchar den inte. Frågan
 "kontroller utfördes men dokumenterades inte" returnerar även stycken som
 berömmer dokumentationen, eftersom en bi-encoder inte skiljer ett
 konstaterande från dess negation. Lagret är därför en uppslagsapparat som
-hittar var ett ämne behandlas, aldrig ett facit över vad som konstaterats;
+hittar var ett ämne behandlas utan att ge något facit över vad som konstaterats;
 läsningen av citaten är alltid människans. En väljare som förstår polaritet
 kan sättas in i Selector-protokollet utan att retrieval ändras.
 
@@ -563,7 +563,7 @@ projektet skulle avslöja den svenska mätningen mitt i insamlingen.
 
 ## Nästa steg
 
-1. **Svansen är i huvudsak äkta, inte fel.** Stickprov om 60 av de rapporter
+1. **Svansen är i huvudsak äkta.** Något fel är den inte. Stickprov om 60 av de rapporter
    som saknar igenkänt avsnitt visar att 87 procent nämner rekommendationer
    bara i löptext eller i förbigående, och 8 procent inte alls. Att pressa
    dem vidare vore att gissa, vilket projektets metod förbjuder. Kvar som

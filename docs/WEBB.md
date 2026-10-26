@@ -42,7 +42,7 @@ resultaten kommer när insamlingen är stängd.
 | Hem | Svensk kicker, tesen, två sifferrader: den svenska insamlingen (levande ur loggen) och EU-lagret; kedjeexemplet interaktivt: klicka talet, se raderna, klicka raden, se stycket markerat med referens och hash |
 | /sverige | Undersökningens uppbyggnad (tre likalydande begäranden, protokollstyrd hantering), läget i siffror ur loggen, begärandenas exakta lydelser, avgiftsstoppen; länsjämförelsens resultat när insamlingen stängts |
 | /jamforelse | Hela BI-vyn: land/år/ämnes-matris, small multiples, citeringsgrafen som egen vy (96 % upplösta citeringar över 4 690 revisioner, uppföljningskedjor land för land); tabellvy, "visa underlaget" och "Vad sidan inte visar" vid varje diagram; länsdimensionen läggs ovanpå samma komponenter i fas 2 |
-| /uppslag | Retrieval som uppslagsverk, inte chatt: sökruta, land- och årsfilter, bakade exempelfrågor; svar är alltid ordagranna citat med land, referens och styckenummer, och länkar vidare till revisionens post; omgivande stycken på begäran, fortfarande ordagrant; stående banderoll om att sökningen hittar var ett ämne behandlas, aldrig vad som konstaterats |
+| /uppslag | Retrieval som uppslagsverk utan chatt: sökruta, land- och årsfilter, bakade exempelfrågor; svar är alltid ordagranna citat med land, referens och styckenummer, och länkar vidare till revisionens post; omgivande stycken på begäran, fortfarande ordagrant; stående banderoll om att sökningen hittar var ett ämne behandlas, medan vad som konstaterats bara framgår av citatet |
 | /metod | Protokollet, händelseloggen renderad som filtrerbar tidslinje per län, ADR-indexet, AI-deklarationen, de förskrivna nollresultaten, korrigeringsloggen |
 | /handlingar | Leveransmanifestet, och en statustavla per län: dagar till leverans, avgiftshållning, maskningspraxis, bilagepraxis; tavlan är mätningen, och blir i fas 2 det svenska resultatets hemvist |
 | /data | Nedladdningsbara aggregat, schemadokumentation, licens, länk till HF-datasetet; granskningsbar utifrån betyder att vem som helst kan räkna om |
@@ -56,7 +56,7 @@ svenska myndigheter.
 
 **Portal med verktygen i flikar:** tre verktyg utan berättelse är ingens
 sida, och en chatt-UI bjuder in till den läsning retrievallagret inte tål,
-eftersom modellen matchar ämne och inte polaritet (docs/DGSANTE.md).
+eftersom modellen matchar ämne utan att matcha polaritet (docs/DGSANTE.md).
 
 **Berättelsedriven scrollsida:** berättelsen får inte skrivas före datan; de
 svenska svaren är inte inne och analysen inte gjord. Hemsidans berättelse
@@ -64,7 +64,7 @@ skrivs i fas 2, efter resultaten.
 
 **Nedskalad fas 1** (färre sidor, bantad BI-vy, avvägd mot jobbsökandets
 kalender): avfärdad 2026-08-06. Sajten byggs på projektets premisser i full
-omfattning; jobb- och nätverksmålen följer av det, inte tvärtom.
+omfattning; jobb- och nätverksmålen följer av det, i den riktningen.
 
 ## Form
 
@@ -72,7 +72,7 @@ Inga kakor, ingen spårning, ljust och mörkt läge, den validerade paletten
 (#2A78D6/#EB6834 med mörklägesvarianter), tabellalternativ till varje
 visualisering, och "Vad sidan inte visar" på varje resultatsida. Frånvaron
 av spårning och närvaron av begränsningar är trovärdighetssignaler mot
-myndighetsläsaren, inte bara etik.
+myndighetsläsaren, utöver etik.
 
 Kvalitetsribbor utöver detta: WCAG 2.1 AA uttryckligen, eftersom en sajt
 riktad till myndigheter som själv uppfyller DOS-lagens nivå är en
@@ -88,9 +88,8 @@ produktyta, tre kort i rad med ett blått streck över och en stor siffra i
 varje. Den säger SaaS, och materialet är myndighetshandlingar. Formen är
 därför gjord om, och besluten står här.
 
-**Papper, inte produktmörkt.** Ljus varm yta som grund, svart bläck,
-hårfina linjer. Mörkt läge är samma sida inverterad och inte ett eget
-språk.
+**Papper utan produktmärkning.** Ljus varm yta som grund, svart bläck,
+hårfina linjer. Mörkt läge är samma sida inverterad, utan eget språk.
 
 **En röst för allt en människa skrivit.** Spectral i brödtext, rubriker och
 tal. Ingen andra brödtextfamilj; skillnaden mellan rubrik och text bärs av
@@ -171,7 +170,7 @@ loggen utan att den som skrev raden kontrollerade vad loggen räknar.
 
 **Och en frånvaro som inte längre står naken.** Fyra myndigheter saknar tal i
 maskningsmätningen, och raden sade bara att dokument saknas. P5 kräver att
-bortfallet redovisas öppet och aldrig döljs genom att nämnaren tystas ned, så
+bortfallet redovisas öppet, utan att nämnaren tystas ned, så
 steg 41 läser skälet ur händelseloggen, per myndighet: ett avstående enligt P5
 för de tre avgiftsstoppade länen, en avsändning av begäran C för
 Jordbruksverket. Västmanlands tavla bär på samma sätt P0b-flaggan, eftersom

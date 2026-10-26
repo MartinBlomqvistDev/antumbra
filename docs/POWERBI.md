@@ -1,8 +1,9 @@
 # Power BI: så byggs .pbix
 
-Den här filen är en byggbeskrivning, inte en idéskiss. `docs/dashboard.html` är
+Den här filen är en byggbeskrivning. Någon idéskiss är den inte. `docs/dashboard.html` är
 redan byggd ur samma data med samma mått och samma formuleringar, så arbetet i
-Power BI är att återskapa något som finns, inte att bestämma vad som ska visas.
+Power BI är att återskapa något som finns, där vad som ska visas redan är
+bestämt.
 
 Öppna `docs/dashboard.html` i en flik bredvid medan du bygger.
 
@@ -84,7 +85,8 @@ Andel kanter som resolverar = DIVIDE([Kanter som resolverar], [Kanter])
 Revisioner = DISTINCTCOUNT('Rekommendation'[audit_key])
 ```
 
-`DIVIDE` och inte snedstreck: en division med noll ska ge tomt, inte ett fel,
+`DIVIDE` i stället för snedstreck: en division med noll ska ge tomt, där ett
+fel vore fel svar,
 och tomt är rätt svar för ett land utan rekommendationer det året.
 
 ## 4. Sidor
