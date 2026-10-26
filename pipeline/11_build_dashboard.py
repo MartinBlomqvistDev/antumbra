@@ -10,8 +10,8 @@ something that already exists rather than deciding what to show.
 
 Every chart carries a table view, because a value a reader can only reach by
 hovering is a value some readers cannot reach at all. The limitations section
-is part of the page, not a footnote: what the measurement cannot show decides
-how its results may be read.
+is part of the page, where a footnote would bury it: what the measurement
+cannot show decides how its results may be read.
 
 Writes docs/dashboard.html.
 

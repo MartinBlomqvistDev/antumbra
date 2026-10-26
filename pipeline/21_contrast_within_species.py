@@ -16,7 +16,7 @@ Two components, both from the pre-registration in docs/BEGARANMALL.md: the
 share of documents carrying any redaction, and the share of page area covered.
 The third component, the share of redacted fields, is not built.
 
-**The threshold is a presentation choice, not the protocol's.** Every cell is
+**The threshold is a presentation choice. The protocol sets none.** Every cell is
 written to the file whatever its size; the printed summary shows cells with at
 least MIN_CELL documents in both classes, because a contrast computed on one
 document against one document is noise with a decimal point.

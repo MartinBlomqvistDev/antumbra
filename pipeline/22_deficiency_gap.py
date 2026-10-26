@@ -10,7 +10,7 @@ recomputed from the rows instead of quoted from the text.
 
 Three restrictions, all forced by the data rather than chosen.
 
-**A row is one animal keeper at one control, not one control.** The authority
+**A row is one animal keeper at one control.** A control it is not. The authority
 stated this itself on 24 August 2026, after being asked why its two deliveries
 disagree: "i de fall det är fler än en djurhållare på kontrollplatsen så blir
 varje djurhållare en egen rad (dvs. en kontroll där det finns två djurhållare
@@ -22,7 +22,7 @@ field is named. A share over them equals the share over controls only where
 duplicated keepers carry the same deficiency flag, and how often they do cannot
 be measured from this file.
 
-**The deficiency flag belongs to the control, not to the animal.** The output
+**The deficiency flag belongs to the control. The animal does not carry it.** The output
 is grouped by species, and one of the eighteen documents hand-read for step 30
 records deficiencies in the horse facilities of a holding that also keeps 60
 birds. A share computed for a species can therefore carry a fault found in an
@@ -81,7 +81,8 @@ OUT = ROOT / "data" / "bristandel.jsonl"
 MIN_ROWS = 20
 
 # The authority's own grouping, quoted from its e-mail of 2026-08-14. Types in
-# the file that appear in none of the three lists are reported, never bucketed
+# the file that appear in none of the three lists are reported, and bucketing
+# them is wrong
 # by guess.
 ROUTINE = {
     "Fullständig gv-kontroll",
@@ -106,7 +107,7 @@ FOLLOW_UP = {
 }
 
 # Types whose name states the outcome, so that a deficiency share over them
-# measures the classification and not the inspection.
+# measures the classification rather than the inspection.
 OUTCOME_IN_NAME = {t for t in COMPLAINT if "brister" in t}
 
 

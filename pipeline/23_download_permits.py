@@ -206,7 +206,7 @@ def main() -> int:
             time.sleep(DELAY)
 
     # Two different URLs can serve the same bytes, which is a property of the
-    # page and not an error; it is reported so the count of distinct decisions
+    # page rather than an error; it is reported so the count of distinct decisions
     # is never confused with the count of links.
     digests: dict[str, list[str]] = {}
     for line in MANIFEST.read_text("utf-8").splitlines():

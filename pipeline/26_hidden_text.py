@@ -18,7 +18,7 @@ test, and no reasoning about drawing order is needed.
 template draws a white panel behind the body text, and 39 of the first 60
 documents put dark characters inside it, 27 of them exactly 2 701 characters in
 counties that share nothing else. Every one of those characters renders visibly,
-so the panel is correctly read as lying behind the text and not over it. A
+so the panel is correctly read as lying behind the text rather than over it. A
 colour-based measure flagged all 39, and only this comparison exposes that as
 wrong.
 

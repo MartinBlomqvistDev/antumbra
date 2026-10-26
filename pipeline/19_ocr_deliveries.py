@@ -2,7 +2,8 @@
 
 Step 19 of the pipeline. Some authorities answer by scanning paper, so those
 documents carry no text layer and nothing downstream can read them: not the
-animal species behind a comparison within species, not the fields a redaction
+animal species behind a comparison within species, leaving aside the fields a
+redaction
 covers. This step renders those pages and runs Tesseract in Swedish over them.
 
 Two outputs, and the split matters. The recognised text goes to ocr/leveranser/

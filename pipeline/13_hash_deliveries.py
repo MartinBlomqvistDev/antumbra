@@ -7,7 +7,7 @@ later that a cited document is the one received, without redistributing it.
 
 Resumable: files already in the manifest are skipped, so the step can be run
 after every new delivery. A file whose hash changes under an existing name is
-an error, never a silent update.
+an error, and a silent update it never is.
 
 Usage:
     python pipeline/13_hash_deliveries.py

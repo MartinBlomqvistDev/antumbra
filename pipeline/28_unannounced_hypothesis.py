@@ -16,11 +16,12 @@ covering "Alla kontrolltypgrupper", so no crossing exists. Only the association
 across counties can be computed. The within-county contrast is not weakened
 here, it is absent, and no substitute is offered for it.
 
-**The denominator is the sum of announced and unannounced, never the row
+**The denominator is the sum of announced and unannounced, and never the row
 count.** The row level extract holds more rows than the two reports add up to,
 by five to six per cent for cattle and by 27 per cent for broilers in 2025. The
 authority explained that difference on 24 August 2026: a control with two animal
-keepers becomes two rows in the extract, so the excess is duplication and not a
+keepers becomes two rows in the extract, so the excess is duplication rather
+than a
 count of controls. Dividing by the row count would divide by keepers.
 
 **The two sides of the correlation are not the same unit, and cannot be made

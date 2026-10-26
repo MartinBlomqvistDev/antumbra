@@ -3,7 +3,7 @@
 Step 25 of the pipeline. The baseline test in step 24 reaches 120 of the 236
 permit files, and the single largest reason is that 72 of them are scans with
 no text layer at all. Nothing in the conditions layer can see those decisions:
-not the condition texts, not the reuse measure, not the permit division
+leaving aside the condition texts, the reuse measure and the permit division
 comparison. This step renders their pages and runs Tesseract in Swedish over
 them, on the same terms as step 19 does for the Swedish deliveries.
 
@@ -61,7 +61,8 @@ RENDER_DPI = 300
 TIMEOUT = 300
 # Tesseract failed on three decisions in the first run and then read every one
 # of their pages without error when retried alone, so the failure is transient
-# and not a property of the file. One lost page discards the whole decision, so
+# rather than a property of the file. One lost page discards the whole decision,
+# so
 # the call is retried rather than left to the next run.
 RETRIES = 3
 

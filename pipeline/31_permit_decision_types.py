@@ -8,7 +8,7 @@ reading the listing, and nothing in the repository held it: the manifest from
 step 23 carries an identifier, a permit division, a size and a hash, and no type
 at all. A check cannot run against a figure nobody stored.
 
-**The label is the publisher's own word, not a reading of the document.** Every
+**The label is the publisher's own word. Reading the document gives another.** Every
 decision on the Board of Agriculture's page sits behind a link whose text names
 the decision type: "Tillstånd", "Ändringstillstånd", "Förlängning", "Dom MMD".
 Taking the type from there follows ADR-0007, which classifies on the document's
@@ -22,14 +22,14 @@ Kommun_Bolag_Djurslag_Typ_Datum and at least three name natural persons. The
 link text carries the type, the format and the file size, and nothing else, so
 the label is kept verbatim while the file name stays outside git.
 
-**The fourteen labels are mapped one by one, never by keyword.** The page uses
-fourteen distinct wordings for seven kinds of decision, including one that is
-split by a soft hyphen and one that merges a permit with a revocation. Each is
-written out below with the type it maps to. A wording that is not in the table is
-typed as "annat" and withheld from the file, because an unknown wording is the
-one place a party's name could enter through this route; it is printed to the
-console so that a reader can see it before it is mapped. The table only ever
-grows, in the sense VILLKORSSCHEMA section 2.2 requires.
+**The fourteen labels are mapped one by one, and keyword matching is wrong.**
+The page uses fourteen distinct wordings for seven kinds of decision, including
+one that is split by a soft hyphen and one that merges a permit with a
+revocation. Each is written out below with the type it maps to. A wording that
+is not in the table is typed as "annat" and withheld from the file, because an
+unknown wording is the one place a party's name could enter through this route;
+it is printed to the console so that a reader can see it before it is mapped.
+The table only ever grows, in the sense VILLKORSSCHEMA section 2.2 requires.
 
 **A difference against the harvest is reported as a finding.** The page is
 live and the corpus grows. This step joins on the same identifier step 23 used,
@@ -89,7 +89,7 @@ LABELS: dict[str, str] = {
 }
 
 # What VILLKORSSCHEMA section 5 says the corpus should look like, so that the
-# comparison is against the written figure and not against a memory of it.
+# comparison is against the written figure rather than a memory of it.
 DOCUMENTED = {"tillstånd": 160, "ändring": 38, "förlängning": 15, "dom": 14}
 
 

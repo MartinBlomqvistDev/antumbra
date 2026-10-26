@@ -53,10 +53,12 @@ IMAGE_FORMATS = {".gif", ".jpg", ".jpeg", ".tif", ".tiff"}
 ADDRESS = re.compile(r"[\w.\-]+@[\w.-]+\.[a-z]{2,}", re.IGNORECASE)
 MIN_CHARS = 40
 
-# A document is classed on how it introduces itself, not on words that happen
+# A document is classed on how it introduces itself, leaving aside words that
+# happen
 # to appear somewhere inside it. Only this many leading characters are matched:
 # "action plan" in the body of a member state's comments is the discussion of a
-# plan, not a plan, and matching the whole text would silently turn one into the
+# plan where a plan is wanted, and matching the whole text would silently turn
+# one into the
 # other. That is exactly the miscount docs/DGSANTE.md warns against.
 HEAD_CHARS = 800
 
@@ -85,11 +87,13 @@ DRAFT_WORDS = (
 # Order matters: the first pattern that matches wins, so the most specific
 # comes first. Each rule carries its own window: action_plan gets a narrow
 # title zone because a letter that says it is "preparing an action plan" is
-# correspondence about a plan, not the plan, and a wide window turns one into
+# correspondence about a plan where the plan is wanted, and a wide window turns
+# one into
 # the other. Two such false positives were found by held-out sampling.
 TITLE_CHARS = 200
 
-# Rules are tried in this order, not in the order they are written below. The
+# Rules are tried in this order, which is not the order they are written in
+# below. The
 # two response classes go first so that a document titled "actions taken in
 # response to draft report" is read as a response rather than as comments:
 # the word "comments" is broad enough to swallow them otherwise.

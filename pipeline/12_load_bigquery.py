@@ -2,11 +2,11 @@
 
 Step 12 of the pipeline; run 10_build_warehouse.py first. Uploads the Parquet
 tables into the raw dataset that the dbt project reads from. The cloud copy is
-a publication of the local model, never a second source of truth: this step
+a publication of the local model, and a second source of truth it is not: this step
 replaces the tables outright rather than merging into them, so a run can never
 leave the two out of step.
 
-Credentials are read from the environment, never from the repository:
+Credentials are read from the environment, and the repository holds none:
 
     ANTUMBRA_GCP_PROJECT    the project id
     GOOGLE_APPLICATION_CREDENTIALS   path to the service account key file

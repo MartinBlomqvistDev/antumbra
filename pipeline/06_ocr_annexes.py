@@ -9,7 +9,7 @@ writes one text file per annex.
 Quality varies with the scan, from clean typed pages to degraded fax
 transmissions, so every record carries Tesseract's mean word confidence.
 Read that before trusting a given file: this step produces evidence of
-varying quality, not uniform text.
+varying quality, far from uniform text.
 
 The text itself lands under ocr/, which is gitignored; the committed index
 records what was produced and how well.
@@ -181,7 +181,7 @@ def salvage_image(path: Path, workdir: Path) -> Path:
 
 
 def work(row: dict) -> dict | None:
-    """OCR one annex; failures are recorded, not raised."""
+    """OCR one annex; failures are recorded and never raised."""
     global _done, _failed
     source = ROOT / row["path"]
     target = OCR_DIR / (source.stem + ".txt")
@@ -215,7 +215,8 @@ def work(row: dict) -> dict | None:
             target.write_text(joined, encoding="utf-8")
             mean = round(sum(confidences) / len(confidences), 1) if confidences else 0.0
             if not joined.split():
-                # An empty result is a failure to report, not a quiet success:
+                # An empty result is a failure to report, far from a quiet
+                # success:
                 # one annex in the corpus is truncated at source and decodes
                 # to a blank page.
                 raise RuntimeError("no text recognised; page blank or unreadable")

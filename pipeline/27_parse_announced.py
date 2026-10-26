@@ -14,7 +14,8 @@ than from the file name, because one file name spells the county letter in lower
 case and a name is a weaker source than the report's own header.
 
 **The number is checklist uses, and the report says so.** The single figure
-each report carries is labelled "Antal gånger checklista använd", not a number of
+each report carries is labelled "Antal gånger checklista använd", which is not
+a number of
 controls, so it is stored under that name. Whether the two are the same is not
 stated anywhere in the delivery and has been put to the authority. The evidence
 so far says they behave alike: the row level extract holds one row per animal
@@ -25,7 +26,8 @@ one.
 
 **The grouping is not crossed with anything.** Every report says
 "Alla kontrolltypgrupper", so the announced dimension arrives per county,
-species and year, and not per control type or against the deficiency flag. That
+species and year, with no split by control type and no join against the
+deficiency flag. That
 is the limit of what request C's first dimension can support, and it is checked
 here rather than assumed: a report with any other group would be reported.
 

@@ -111,7 +111,7 @@ def fetch(detail_id: str) -> str:
 
 
 def work(row: dict, fh: TextIO) -> None:
-    """Fetch, parse and append one audit; failures are recorded, not raised."""
+    """Fetch, parse and append one audit; failures are recorded and never raised."""
     global _done
     try:
         rec = {**row, **parse(fetch(row["detail_id"])), "error": None}

@@ -51,7 +51,7 @@ ROW = re.compile(r"^[ \t\f]{0,8}(\d{1,2})[.)]?[ \t]+(?=\S)", re.M)
 # English. Such a plan cannot be confirmed by comparing wording, and counting
 # it as a failed match would blame the parser for a translation. The share of
 # very common English words separates the two cases well enough to say which
-# is which; it is recorded, not used to alter the comparison.
+# is which; it is recorded, and altering the comparison is left alone.
 ENGLISH_MARKERS = frozenset(
     "the of to and in that for is are be with by on as it not this which "
     "shall should ensure carried out official controls".split()
@@ -181,7 +181,8 @@ def containment(needle: str, haystack: str) -> float:
     """How much of one passage is found inside another.
 
     The question this layer asks is whether the plan restates the report's
-    recommendation, not whether the two strings are the same length. The
+    recommendation. Whether the two strings are the same length is a different
+    question. The
     plans are two-column tables and the response column bleeds words into the
     restatement, which a symmetric ratio punishes heavily even where every
     word of the recommendation is present. Measuring containment asks the

@@ -119,7 +119,7 @@ def fetch(url: str) -> tuple[dict[str, str], bytes]:
 
 
 def work(task: tuple[str, Path, str]) -> None:
-    """Download one file to its stem; failures are recorded, not raised.
+    """Download one file to its stem; failures are recorded and never raised.
 
     Args:
         task: Download URL, target directory and file stem (name without

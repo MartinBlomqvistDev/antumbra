@@ -48,7 +48,7 @@ HEADING_LOOSE = re.compile(
 )
 
 # An audit that found nothing worth recommending says so in plain words. This
-# is a result, not a parse failure, and the two must never be merged.
+# is a result rather than a parse failure, and the two must never be merged.
 NO_RECOMMENDATION = re.compile(
     r"does not (?:make|contain) any recommendation"
     r"|no recommendations? (?:are|were|is) made"
@@ -129,7 +129,8 @@ REFERENCE_ONLY = re.compile(
 DASHES = "-" + chr(0x2013)  # hyphen-minus and en dash; the reports use both
 RANGE = re.compile(rf"(\d{{1,3}})\s*[{DASHES}]\s*(\d{{1,3}})|(\d{{1,3}})")
 
-# The reference list has to be matched as a list, not as a run of characters
+# The reference list has to be matched as a list, where a run of characters
+# would be wrong
 # that happen to be digits and separators. A character class would keep
 # eating: past the full stop, through the next line of a numbered table, and
 # into legal citations such as "2017/625", inventing edges out of article
@@ -143,7 +144,7 @@ CONCLUSIONS = re.compile(
     rf"based on conclusions?\s*(?:Nos?\b\.?)?\s*:?\s*({LIST})", re.I
 )
 FINDINGS = re.compile(rf"associated findings?\s*(?:Nos?\b\.?)?\s*:?\s*({LIST})", re.I)
-# The capture stops where the next metadata line starts, not only at a blank
+# The capture stops where the next metadata line starts, as well as at a blank
 # line: the layouts often run "Legal basis: ... Recommendation based on
 # conclusion: 40" without one, and the field used to swallow the references.
 _NEXT_METADATA = (

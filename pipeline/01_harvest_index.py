@@ -1,7 +1,7 @@
 """Harvest the DG SANTE audit report index, one search per year.
 
 The search at ec.europa.eu/food/audits-analysis/audit-report is a
-server-rendered Symfony form, not a SPA. One POST per year returns a
+server-rendered Symfony form without a SPA. One POST per year returns a
 result table with reference, country, audit period, subject and a link
 to the detail page.
 
