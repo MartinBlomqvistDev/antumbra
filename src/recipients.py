@@ -13,8 +13,13 @@ packet builder's own list of what ends a request had drifted from the measure's.
 # letter in the same correspondence cannot address the authority by another
 # name than the first one did, and the quoted request must carry the line the
 # recipient actually holds. Every line below is read out of the sent mail.
-# Kalmar's own 3 August message is not returned by any mailbox search, so its
-# line is read from the copy quoted inside the reply of 4 August instead.
+# Kalmar's line was read from the copy quoted inside the reply of 4 August,
+# because the 3 August message was thought to be missing from the mailbox. It
+# is not: it is message 19fc6a3d539a4541, the first in thread 19fc690073e9ee8d,
+# found on 26 October 2026 while the outgoing register was being built. A search
+# listing shows at most five messages per thread, and the earliest drop out of a
+# longer thread; the claim of a gap rested on such a listing rather than on
+# get_thread. The line itself was right, and is now read from the message.
 COUNTIES = {
     "Blekinge": "Länsstyrelsen i Blekinge län",
     "Dalarna": "Länsstyrelsen i Dalarnas län",

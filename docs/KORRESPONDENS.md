@@ -186,6 +186,32 @@ Fem i `tests/test_repository_invariants.py`:
 5. Registret mäts mot förteckningen, ingenting utanför avgränsningen står i
    det, och talet i `VERIFIERAT.md` stämmer med filerna.
 
+### Tillagt 2026-10-26: två brev som gick men inte finns kvar
+
+Två av de 176 utgående breven går inte att återge. Den avsända kopian finns
+inte i brevlådan, varken bland skickat eller i papperskorgen, och ingen sökning
+på datum, mottagare eller ämnesrad återfinner den.
+
+**Uppsala, begäran B, påminnelse den 10 augusti 2026 klockan 16.04.** Att brevet
+gick framgår av myndighetens autosvar 29 sekunder senare, meddelande
+19febfd50e283f22.
+
+**Kronoberg, begäran A, avsmalningssvar den 11 augusti 2026 klockan 11.33.** Att
+brevet gick framgår av att myndigheten dagen därpå levererade fem handlingar
+enligt den avsmalnade begäran.
+
+Båda raderna står i registret med texten saknad och skälet utskrivet i
+`utelamnat`. Loggens noteringar säger vad breven gjorde, men inte deras lydelse,
+och lydelsen gissas inte. Invarianten som kräver att varje brev slutar med
+underskriften hoppar över en rad utan text, av samma skäl.
+
+Motsatsen gäller Kalmars begäran A den 3 augusti. `src/recipients.py` har sagt
+att meddelandet inte återfanns i någon brevlådesökning. Det är fel: meddelandet
+är 19fc6a3d539a4541 och ligger först i tråden 19fc690073e9ee8d. En tråds
+meddelanden räknas upp med get_thread; en söklista visar högst fem per tråd, och
+för en tråd med fler faller de tidigaste bort. Påståendet om en lucka vilade på
+den söklistan.
+
 ### Tillagt 2026-10-26: mina egna identitetsuppgifter stannar utanför registret
 
 Ett överklagande till kammarrätt måste bära partsuppgifter. De fyra

@@ -394,6 +394,12 @@ class TestNoPersonalDataIsCommitted:
             if not line.strip():
                 continue
             row = json.loads(line)
+            # Two letters are recorded as gaps: the log has them and the
+            # authorities' own replies prove they went, but no sent copy is in
+            # the mailbox, so the text is absent rather than guessed. A row
+            # without text has no signature to end with.
+            if row["text"] is None:
+                continue
             if not row["text"].rstrip().endswith(endings):
                 truncated.append(f"{row['datum']} {row['myndighet']} {row['handelse']}")
         assert not truncated, f"letters that stop before the signature: {truncated}"
