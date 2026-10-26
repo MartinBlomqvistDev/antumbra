@@ -407,7 +407,7 @@ export const sv: Copy = {
           "än ren BM25 på varje mått, och en omrankare ovanpå gjorde den " +
           "sämre än så.",
         "Villkoret skrevs före mätningen: en sökruta som inte slår ren BM25 " +
-          "ska bort. Den är borta, och tjänsten som svarade är avstängd. De " +
+          "ska bort. Den är borta, och sajten anropar ingenting längre. De " +
           "sex exempelsvaren nedan står kvar, eftersom de är körda genom " +
           "samma kod och går att kontrollera mot källan.",
         "Ett konkret utfall: ordet debeaking står i tre stycken i korpusen, " +

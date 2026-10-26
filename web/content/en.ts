@@ -357,8 +357,8 @@ export const en: Copy = {
           "here managed 45.2 percent, worse than plain BM25 on every figure, " +
           "and a reranker on top of it did worse still.",
         "The condition was written before the measurement: a search box that " +
-          "does not beat plain BM25 goes. It is gone, and the service behind " +
-          "it is shut down. The six example answers below remain, because " +
+          "does not beat plain BM25 goes. It is gone, and the site no longer " +
+          "calls anything. The six example answers below remain, because " +
           "they are run through the same code and can be checked against the " +
           "source.",
         "One concrete outcome: the word debeaking stands in three paragraphs " +
