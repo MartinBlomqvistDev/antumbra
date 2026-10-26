@@ -264,7 +264,8 @@ INTERNAL = frozenset(
     }
 )
 
-# Aggregate rows describe a batch or the project itself, never a single request.
+# Aggregate rows describe a batch or the project itself, with no single request
+# among them.
 # "länsstyrelserna" is the same thing under a word invented on 5 September 2026
 # for seven rows about the conditions layer. The log is append-only, so the word
 # stays and is read here; new internal rows use "samtliga".

@@ -9,7 +9,7 @@ Verified against four full-text decisions; see VILLKORSSCHEMA.md.
 
 Swedish loanwords kept deliberately:
     dnr: diarienummer, the registrar's case number. Unique per county
-        administrative board, not nationally.
+        administrative board, with no nationwide figure.
     mpd: miljoprovningsdelegation, the environmental permit delegation
         within a county administrative board that issues these permits.
     orgnr: organisationsnummer, the Swedish company registration number.
@@ -312,7 +312,7 @@ class Decision(BaseModel):
     Attributes:
         decision_id: "{mpd_slug}:{normalised_dnr}", e.g.
             "skane:551-7167-2022". A dnr is unique per county
-            administrative board, not nationally, hence the prefix.
+            administrative board, with no nationwide figure, hence the prefix.
         dnr: Diarienummer verbatim, the registrar's case number. The
             format drifts: Skane wrote "551-7167-2022" in 2022 and
             "26665-2025" in 2026.

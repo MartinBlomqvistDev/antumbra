@@ -43,7 +43,7 @@ CUTS = (1, 5, 10)
 # fusion on rank one alone.
 RRF_K = 60
 MRR_AT = 10
-# The standard parameters, fixed before the run and not tuned afterwards.
+# The standard parameters, fixed before the run and left untuned afterwards.
 K1 = 1.5
 B = 0.75
 
@@ -184,7 +184,7 @@ def main() -> int:
 
     questions = read(EVAL)
     # Whitespace in the question is collapsed, because a paragraph's own line
-    # breaks are a feature of the PDF and not of the language.
+    # breaks are a feature of the PDF rather than of the language.
     queries = [re.sub(r"\s+", " ", row["text"]).strip() for row in questions]
     gold = [
         {index[(row["ref"], number)] for number in row["facit"]} for row in questions

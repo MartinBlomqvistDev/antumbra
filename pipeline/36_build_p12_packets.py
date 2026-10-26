@@ -103,7 +103,8 @@ SLUG = {
     "Jordbruksverket": "jordbruksverket",
 }
 
-# The county name to print, since a packet is a letter and not a file listing.
+# The county name to print, since a packet is a letter rather than a file
+# listing.
 NAME = {
     slug: authority.replace("Länsstyrelsen i ", "") for authority, slug in SLUG.items()
 }
@@ -266,7 +267,7 @@ def timeline(events: list[dict]) -> list[str]:
     """The correspondence, dated, with whose move each event was.
 
     Internal events are left out. That a delivery was filed with a checksum is
-    the project's own bookkeeping and belongs in the published log, not in a
+    the project's own bookkeeping and belongs in the published log, where a
     letter to the authority that sent it.
 
     The P12 correspondence is left out too. This letter is the P12 packet, and
@@ -379,7 +380,7 @@ def denominator_lines(record: dict | None, events: list[dict]) -> list[str]:
         missing = add_working_days(reminder, P11_SILENCE_DAYS)
         # The authority's own question and our answer to it are separate events
         # on the P11 track, and both carry the word förtydligande. They are told
-        # apart by name and not by substring: a letter that said the question
+        # apart by name rather than by substring: a letter that said the question
         # was answered when it was not would be a claim about my own handling
         # that the log does not carry.
         back = [

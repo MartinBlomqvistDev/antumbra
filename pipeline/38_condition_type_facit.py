@@ -7,12 +7,12 @@ that it "klassar fel och kraschar på rubriklösa beslut", and the evidence is a
 single example: Motala 2021 condition 12 sits under Övrigt and is in substance a
 decommissioning condition. There are now 2 359 conditions to measure it on.
 
-**The blindness is mechanical, not an intention.** With no flag, the step prints
-the identifier, the position and the condition text, never the heading, in an
-order shuffled across decisions with a fixed seed. The reader assigns a type to
-each. Only with `--score`, and only after the answers exist, is the heading
-joined back on. A reader who has seen the heading first is not reading the text,
-and a facit produced that way measures nothing.
+**The blindness is mechanical, and intention has no part in it.** With no flag,
+the step prints the identifier, the position and the condition text, with the
+heading withheld, in an order shuffled across decisions with a fixed seed. The
+reader assigns a type to each. Only with `--score`, and only after the answers
+exist, is the heading joined back on. A reader who has seen the heading first
+is not reading the text, and a facit produced that way measures nothing.
 
 **The sample is deliberately not proportional.** Four strata of thirty, crossing
 the source, text layer against OCR, with whether the condition carries a
@@ -21,7 +21,7 @@ weights are reported when the figures are.
 
 **A derived field carries its own method.** Section 2.8 requires it: a perfectly
 extracted text can be wrongly classed and the reverse. These judgements are
-MANUAL, never RULE, and the file records that.
+MANUAL, with no RULE among them, and the file records that.
 
 Usage:
     python pipeline/38_condition_type_facit.py            # emit the blind sample

@@ -60,7 +60,7 @@ HISTORY = (
     re.compile(r"^Till (Länsstyrelsen i |Jordbruksverket)", re.MULTILINE),
 )
 # The courts' Säker e-post notice carries a one-time link with a token that
-# opens the message as the addressee. It is a personal access link, not a
+# opens the message as the addressee. It is a personal access link, far from a
 # published address, so it is taken out and the omission is declared. The link
 # expires 30 days after the message, and the register says so rather than
 # leaving a credential standing in a published file.
@@ -124,7 +124,7 @@ A_NAME = "namn"
 NOT_A_PERSON = "befattning eller enhet"
 NEWLINE = chr(10)
 # An inline image the mail client renders as a placeholder on its own line:
-# the authority's logo, not its words.
+# the authority's logo rather than its words.
 IMAGE_LINE = re.compile(r"^\[(?:cid:)?[^\]]*\]$", re.MULTILINE)
 NOT_A_NAME = (
     "Alla",
@@ -217,7 +217,7 @@ def strip_signature(
     """
     for found in INLINE_SIGN.finditer(text):
         # "Med vänliga hälsningar Länsstyrelsen i Jönköpings län" is the
-        # authority signing itself, not a person, and it stays.
+        # authority signing itself rather than a person, and it stays.
         rest = found.group(1).strip()
         if not rest.startswith(NOT_A_NAME):
             return text[: found.start()].rstrip(), True

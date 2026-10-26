@@ -158,7 +158,7 @@ def assemble(selected: list[Candidate], corpus: set[Paragraph]) -> list[Answer]:
 
     The check is the guarantee the whole module exists for: no selector,
     present or future, can smuggle rewritten text past this point. It
-    validates the whole paragraph, not only its text, because a correct
+    validates the whole paragraph, its text among the parts, because a correct
     quotation under a fabricated citation would put one member state's words
     in another's mouth. That is a worse failure than a paraphrase, and 801
     paragraphs in the corpus share their text with another paragraph, so

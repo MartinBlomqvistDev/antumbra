@@ -16,7 +16,7 @@ the same file the segmenter read and reported as the weaker check it is: it can
 still catch a fault in the joining and in the footer removal, and it cannot
 replicate the reading.
 
-**A condition is matched as fragments, not as one string.** A page footer
+**A condition is matched as fragments, where one string would miss.** A page footer
 removed from the middle of a condition leaves the stored text as two pieces of
 the document with a hole between them, so a plain substring test would fail on
 exactly the decisions where the footer rule did its job. The stored text is
@@ -142,7 +142,7 @@ def coverage(
     the register, so it is named and set aside rather than scored as nothing
     found. That separation was written into the pre-registration before the
     run, because pdfplumber returning an empty page is a property of the
-    library and not of the text stored.
+    library rather than of the text stored.
     """
     totals: dict[str, list[int]] = defaultdict(lambda: [0, 0])
     weak: list[dict] = []

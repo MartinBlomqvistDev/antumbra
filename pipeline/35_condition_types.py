@@ -5,12 +5,12 @@ The schema fixes nine condition types from four decisions. The register now
 holds 148 distinct headings out of 180 decisions, so the first question is
 whether nine is enough, and it is asked before any classifier is written.
 
-**Every heading is placed by hand.** The map below is data, not a rule: each
-heading is written out and given a type, so that a reader can disagree with one
-placement without having to reverse-engineer a pattern. A word-matching rule
-would have been shorter and would have hidden exactly the judgements that need
-to be visible, such as whether a buffer strip along a ditch is a manure
-condition or a water condition.
+**Every heading is placed by hand.** The map below is data, where a rule would
+decide: each heading is written out and given a type, so that a reader can
+disagree with one placement without having to reverse-engineer a pattern. A
+word-matching rule would have been shorter and would have hidden exactly the
+judgements that need to be visible, such as whether a buffer strip along a
+ditch is a manure condition or a water condition.
 
 **The vocabulary is short, and the map says where.** Nine types cover the four
 decisions the schema was designed from. The corpus adds recurring subjects that
@@ -115,7 +115,7 @@ HEADING_TYPE: dict[str, str] = {
     "Avyttring av organiska gödselmedel": "manure",
     "Spridning av organiska gödselmedel och förorenat vatten": "manure",
     "Spridning av stallgödsel/rötrest": "manure",
-    "Stallbalans": "manure",  # the nutrient balance of the house, not the house
+    "Stallbalans": "manure",  # the nutrient balance of the house rather than the house
     "Växtnäring": "manure",
     "Lagring och hantering av stallgödsel": "manure",
     "Lagring och annan hantering av organiska gödselmedel": "manure",

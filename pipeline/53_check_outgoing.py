@@ -110,7 +110,7 @@ def main() -> int:
             # balanced at twelve, and the authority was reported KLAR. A verdict
             # that rests on a count alone is a verdict about the count.
             #
-            # Counted and not set-matched: two narrowings on the same day, one
+            # Counted rather than set-matched: two narrowings on the same day, one
             # per request class, were both ticked off by a single row when the
             # check compared sets. A gap that the gap-finder hides is worse
             # than no gap-finder. The request class belongs in the key for the

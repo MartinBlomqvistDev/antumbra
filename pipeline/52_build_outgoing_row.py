@@ -18,7 +18,8 @@ all twenty-two authorities could see.
 What it removes even though it is mine: the identity block an appeal to an
 administrative court of appeal has to carry, which is a personal identity
 number, a home address and a daytime telephone number. Those were written for
-one court, not for a public register, and a line that makes sense in a filing
+one court, where a public register is a different audience, and a line that
+makes sense in a filing
 does not become publishable because the person who wrote it is the one
 publishing. The cut is declared in the row like every other.
 """

@@ -95,7 +95,7 @@ def wilson(successes: int, total: int) -> tuple[float, float]:
 
     The interval treats one authority's documents as independent draws, which
     they are not: they are consecutive cases, often from the same officer. It is
-    therefore a floor on the uncertainty and not a statement about the
+    therefore a floor on the uncertainty rather than a statement about the
     authority's practice, and the site says so where it prints it.
     """
     if total == 0:
@@ -185,7 +185,8 @@ def without_measurement(log: list[dict], authority: str) -> str | None:
     authority when it is a consequence of the protocol. P5 is explicit that the
     loss is reported openly and never hidden by silencing the denominator, so
     the reason is carried as a key and the page writes it out. The key is read
-    from the events, not decided here: a waiver is P5's ``avstående``, and a
+    from the events, where deciding it here would be wrong: a waiver is P5's
+    ``avstående``, and a
     request for figures is an ``avsändning`` of request C.
     """
     own = [row for row in log if row["myndighet"] == authority]
@@ -377,7 +378,8 @@ def build() -> dict:
             for klass, rows in comparison.items()
         },
         # The annex measures are a gap, so what the site carries is the
-        # evidence for the gap and not a figure per county: the files that came,
+        # evidence for the gap rather than a figure per county: the files that
+        # came,
         # and what the documents' own references turned out to be.
         "bilagor": {
             "mappar": len(annexes),

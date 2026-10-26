@@ -14,7 +14,7 @@ geometry: a word box 81 points tall, and words split as `Tillstån` and
 belongs, so the reading order cannot be trusted from the text layer alone.
 
 **A second shape of the same defect reads the page without its letters.**
-`13df613f9802` carries no å, ä or ö at all, not one in 981 letters, where the
+`13df613f9802` carries no å, ä or ö at all, with none in 981 letters, where the
 median decision is at 5,4 per cent and the next lowest at 4,3. Swedish
 administrative prose without them does not exist, so that text layer is not a
 reading of the page either. It passes step 24's character count and a second

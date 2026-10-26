@@ -77,7 +77,7 @@ class TestAskOverHttp:
         assert response.status_code == 422
 
     def test_a_tampering_selector_fails_loudly_instead_of_serving(self):
-        """The verbatim guarantee must hold through HTTP, not only in-process."""
+        """The verbatim guarantee must hold through HTTP as well as in-process."""
         from dataclasses import replace
 
         class Paraphraser:

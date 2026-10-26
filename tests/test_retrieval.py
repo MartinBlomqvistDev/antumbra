@@ -124,7 +124,7 @@ class TestStaleEmbeddingsAreRefused:
 
 class TestNothingMeansNothing:
     def test_below_threshold_returns_the_empty_answer(self):
-        """An empty corpus match must be an empty answer, never an invention."""
+        """An empty corpus match must be an empty answer, with nothing invented."""
         paragraphs = corpus()
         answers = ask(
             question="volcanic eruptions on Mars",

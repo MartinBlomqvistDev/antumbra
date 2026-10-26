@@ -26,7 +26,7 @@ def sql_files() -> list[Path]:
     """Every model and singular test in the project itself.
 
     Running dbt materialises installed packages and compiled output under
-    dbt/; those are build artefacts, not part of the project under test.
+    dbt/; those are build artefacts, outside the project under test.
     """
     return sorted(
         path
@@ -114,7 +114,7 @@ class TestNoCredentialsAreCommitted:
         assert "private_key" not in text
 
     def test_no_service_account_key_is_tracked(self):
-        """The invariant guards the repository, not the local build.
+        """The invariant guards the repository, and the local build is outside it.
 
         Running dbt writes lockfiles and manifests under dbt/ on disk, so the
         check asks git what is tracked rather than sweeping the filesystem.
