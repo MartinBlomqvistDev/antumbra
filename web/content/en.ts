@@ -335,9 +335,9 @@ export const en: Copy = {
   uppslag: {
     title: "Reference",
     lead:
-      "Search 81,292 paragraphs from DG SANTE's audit reports. Answers " +
-      "are always verbatim quotations with country, reference and " +
-      "paragraph number.",
+      "Six questions run against 81,292 paragraphs from DG SANTE's audit " +
+      "reports. Answers are always verbatim quotations with country, " +
+      "reference and paragraph number.",
     banner:
       "Retrieval finds where a topic is discussed, never what was " +
       "concluded. Always read the quotation.",
@@ -346,20 +346,27 @@ export const en: Copy = {
     noAnswers:
       "No paragraph above the similarity threshold. An empty answer is " +
       "an empty answer, never a guess.",
-    search: {
-      label: "Search the corpus",
-      button: "Search",
-      searching: "Searching",
-      error:
-        "The search could not be reached. The example questions below " +
-        "still work.",
-      note:
-        "Retrieval runs from the repository rather than from here: one " +
-        "pipeline step rebuilds the embeddings and `src/retrieval.py` " +
-        "answers any question against the whole corpus. The answers below " +
-        "are those six questions run through that code. The assembler " +
-        "refuses text that is not character-identical to its source " +
-        "paragraph, and an empty answer is an empty answer.",
+    matning: {
+      heading: "Why the search box is gone",
+      body: [
+        "Retrieval was measured on 26 October 2026 against 2,115 questions " +
+          "built from the citation graph, each with 3.54 correct paragraphs " +
+          "on average. Three methods were tried. BM25 finds at least one " +
+          "correct paragraph among ten for 49.6 percent of the questions. " +
+          "Dense vector search manages 31.4 percent. The hybrid that stood " +
+          "here managed 45.2 percent, worse than plain BM25 on every figure, " +
+          "and a reranker on top of it did worse still.",
+        "The condition was written before the measurement: a search box that " +
+          "does not beat plain BM25 goes. It is gone, and the service behind " +
+          "it is shut down. The six example answers below remain, because " +
+          "they are run through the same code and can be checked against the " +
+          "source.",
+        "One concrete outcome: the word debeaking stands in three paragraphs " +
+          "of the corpus, and the box returned nothing for it. The figures " +
+          "are in data/retrieval_matning.json and " +
+          "data/retrieval_omrankning.json, the questions in " +
+          "data/retrieval_eval.jsonl.",
+      ],
     },
   },
   metod: {
@@ -469,8 +476,8 @@ export const en: Copy = {
         "Officials are never named in the material; where a decision names " +
         "its decision-maker and its rapporteur, the role is written instead.",
       "I want to know about errors in the material. Send the corrected fact " +
-        "and where it comes from, so that the underlying data is corrected " +
-        "and not only the text, and the correction is logged with its date.",
+        "and where it comes from, so that the correction is made in the " +
+        "underlying data and reaches the text from there, logged with its date.",
     ],
     linksHeading: "Other work",
     links: [

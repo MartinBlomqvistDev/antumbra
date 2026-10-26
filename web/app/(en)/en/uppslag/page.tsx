@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import { AnswerList } from "@/components/answers";
-import { Search } from "@/components/search";
 import { PageIntro } from "@/components/shell";
 import { en } from "@/content/en";
 import { readExamples } from "@/lib/data";
 
 export const metadata: Metadata = { title: en.uppslag.title };
 
-const apiBase = process.env.NEXT_PUBLIC_ANTUMBRA_API;
-
-export default function Reference() {
+/**
+ * The six baked answers, and why the search box above them is gone.
+ *
+ * Retrieval was measured on 26 October 2026 against questions built from the
+ * citation graph. The hybrid that answered here came third of three, behind
+ * plain BM25 on every figure, and the condition written before the measurement
+ * said such a box goes. The examples stay: they run through the same code and
+ * every quotation can be checked against its source paragraph.
+ */
+export default function Uppslag() {
   const examples = readExamples();
   return (
     <div className="space-y-8">
@@ -17,13 +23,16 @@ export default function Reference() {
       <p className="max-w-2xl border border-border-soft p-4 text-sm">
         {en.uppslag.banner}
       </p>
-      {apiBase ? (
-        <Search apiBase={apiBase} labels={en.uppslag} locale="en-GB" />
-      ) : (
-        <p className="max-w-2xl text-sm text-ink-secondary">
-          {en.uppslag.search.note}
-        </p>
-      )}
+      <section className="max-w-2xl space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {en.uppslag.matning.heading}
+        </h2>
+        {en.uppslag.matning.body.map((paragraph) => (
+          <p key={paragraph.slice(0, 40)} className="text-sm text-ink-secondary">
+            {paragraph}
+          </p>
+        ))}
+      </section>
       <section className="max-w-2xl space-y-3">
         <h2 className="text-2xl font-semibold tracking-tight">
           {en.uppslag.examplesHeading}

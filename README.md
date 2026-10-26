@@ -108,7 +108,7 @@ ADR-0017 replaced it on 17 August 2026 with a measure of covered content. That
 measure returned a null result. The second half of the pre-registered
 hypothesis needs the notice field crossed with the deficiency field, and that
 extract was not released, so the pre-written null-result text asserts the
-outcome of a test that was never run. It is struck rather than reproduced. The
+outcome of a test that was never run, so it is struck. The
 half that could be tested does not separate a weak positive correlation from
 none.
 

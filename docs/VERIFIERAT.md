@@ -3650,3 +3650,33 @@ KR-02.
 sade fyra är rättade samma dag: `README.md`, metodsidans avsnitt om vad projektet
 inte påstår i båda språklagren, och `data/beslut.jsonl`, där raden för mål
 6901-26 nu bär domens datum, utfall och de två citaten.
+
+## Hämtningen mätt och sökrutan borttagen, 2026-10-26
+
+Hämtningens kvalitet mättes mot 2 115 frågor byggda ur citatgrafen i
+`data/retrieval_eval.jsonl`, där varje fråga i snitt har 3,54 rätta stycken ur
+de 81 292. Tre metoder kördes över hela korpusen, och talen står i
+`data/retrieval_matning.json`:
+
+| Metod | recall@1 | recall@5 | recall@10 | mrr@10 |
+| --- | --- | --- | --- | --- |
+| BM25 | 0,2038 | 0,4118 | **0,4960** | 0,2907 |
+| tät vektorsökning | 0,1050 | 0,2388 | 0,3135 | 0,1634 |
+| hybrid, den utplacerade | 0,1664 | 0,3480 | 0,4520 | 0,2462 |
+
+Den hybrid som svarade på sajten ligger under ren BM25 på varje mått. En
+omrankning med `cross-encoder/ms-marco-MiniLM-L-6-v2` över de 50 översta
+prövades därefter på en delad korpus, hälften för inställning och hälften
+undanhållen, och sänkte recall@10 på den undanhållna halvan från 0,5129 till
+0,4557. Talen står i `data/retrieval_omrankning.json`.
+
+**Villkoret skrevs före mätningen och det föll.** En sökruta som inte slår ren
+BM25 ska bort. Sökrutan är borttagen från /uppslag i båda språklagren,
+komponenten är raderad ur `web/components/`, och tjänsten på Cloud Run är
+avstängd. De sex exempelsvaren står kvar, eftersom de är körda genom samma
+kod och varje citat går att kontrollera mot sitt källstycke.
+
+**Ett observerat utfall före avstängningen.** Sökning på ordet *debeaking* gav
+noll träffar, med beskedet att inget stycke nådde likhetströskeln. Ordet står i
+tre stycken i `data/dgsante_paragraphs.jsonl`, med åtta förekomster. Det är ett
+enskilt fall och inte måttet, men det visar vad måttet mäter.

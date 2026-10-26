@@ -386,8 +386,8 @@ export const sv: Copy = {
   uppslag: {
     title: "Uppslag",
     lead:
-      "Sök i 81 292 stycken ur DG SANTE:s revisionsrapporter. Svaren är " +
-      "alltid ordagranna citat med land, referens och styckenummer.",
+      "Sex frågor körda mot 81 292 stycken ur DG SANTE:s revisionsrapporter. " +
+      "Svaren är alltid ordagranna citat med land, referens och styckenummer.",
     banner:
       "Hämtningen hittar var ett ämne behandlas, aldrig vad som " +
       "konstaterats. Läs alltid citatet.",
@@ -396,18 +396,25 @@ export const sv: Copy = {
     noAnswers:
       "Inget stycke över likhetströskeln. Ett tomt svar är ett tomt " +
       "svar, aldrig en gissning.",
-    search: {
-      label: "Sök i korpusen",
-      button: "Sök",
-      searching: "Söker",
-      error: "Söket kunde inte nås. Exempelfrågorna nedan fungerar ändå.",
-      note:
-        "Hämtningen körs ur kodarkivet och inte härifrån: embeddingarna " +
-        "byggs om med ett steg i pipelinen och `src/retrieval.py` svarar på " +
-        "vilken fråga som helst mot hela korpusen. Svaren nedan är de sex " +
-        "frågorna körda genom just den koden. Montören vägrar text som inte " +
-        "är teckenidentisk med källstycket, och ett tomt svar är ett tomt " +
-        "svar.",
+    matning: {
+      heading: "Varför sökrutan är borta",
+      body: [
+        "Hämtningen mättes den 26 oktober 2026 mot 2 115 frågor byggda ur " +
+          "citatgrafen, där varje fråga i snitt har 3,54 rätta stycken. Tre " +
+          "metoder prövades. BM25 hittar minst ett rätt stycke bland tio för " +
+          "49,6 procent av frågorna. Den täta vektorsökningen klarar 31,4 " +
+          "procent. Den hybrid som låg här klarade 45,2 procent, alltså sämre " +
+          "än ren BM25 på varje mått, och en omrankare ovanpå gjorde den " +
+          "sämre än så.",
+        "Villkoret skrevs före mätningen: en sökruta som inte slår ren BM25 " +
+          "ska bort. Den är borta, och tjänsten som svarade är avstängd. De " +
+          "sex exempelsvaren nedan står kvar, eftersom de är körda genom " +
+          "samma kod och går att kontrollera mot källan.",
+        "Ett konkret utfall: ordet debeaking står i tre stycken i korpusen, " +
+          "och rutan gav noll träffar på det. Talen ligger i " +
+          "data/retrieval_matning.json och data/retrieval_omrankning.json, " +
+          "och frågorna i data/retrieval_eval.jsonl.",
+      ],
     },
   },
   metod: {
@@ -514,8 +521,8 @@ export const sv: Copy = {
         "betalats. Tjänstemän namnges aldrig i materialet; där ett beslut " +
         "namnger beslutsfattare och föredragande skrivs rollen i stället.",
       "Fel i materialet vill jag veta av. Skicka den rättade uppgiften och " +
-        "var den kommer ifrån, så rättas underlaget och inte bara texten, och " +
-        "rättelsen loggas med datum.",
+        "var den kommer ifrån, så att rättelsen görs i underlaget och syns i " +
+        "texten därifrån, och loggas med datum.",
     ],
     linksHeading: "Annat jag gjort",
     links: [

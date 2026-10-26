@@ -152,13 +152,7 @@ export type Copy = {
     examplesHeading: string;
     similarity: string;
     noAnswers: string;
-    search: {
-      label: string;
-      button: string;
-      searching: string;
-      error: string;
-      note: string;
-    };
+    matning: { heading: string; body: string[] };
   };
   metod: PageCopy & {
     ai: { heading: string; body: string };
