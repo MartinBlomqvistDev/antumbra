@@ -76,9 +76,9 @@ export const sv: Copy = {
       "meningen i källdokumentet.",
     navLabel: "Huvudnavigering",
     cardAlt:
-      "Antumbra, en mätning av den svenska djurskyddskontrollens "
-      + "likvärdighet. 64,1 % av kontrollrapporterna bär minst en "
-      + "maskning, av besluten om föreläggande 22,9 %.",
+      "Antumbra, en mätning av den svenska djurskyddskontrollens " +
+      "likvärdighet. 64,1 % av kontrollrapporterna bär minst en " +
+      "maskning, av besluten om föreläggande 22,9 %.",
   },
   nav: [
     { href: "/", label: "Hem" },
@@ -369,7 +369,7 @@ export const sv: Copy = {
           "Kedjan sluts när rekommendationen anger sin grund, grunden " +
           "upplöses till ett ordagrant stycke och en åtgärdsplan besvarar " +
           "den. Allt annat räknas som en delvis kedja, och en delvis kedja " +
-        "räknas nedåt.",
+          "räknas nedåt.",
       },
       yearHeader: "År",
       shareHeader: "Andel",
@@ -631,14 +631,22 @@ export const sv: Copy = {
           "händelseloggen, och måttens gränser i metoden.",
         contextLink: "Metod och händelselogg",
       },
-      letters: {
-        heading: "Myndighetens egna meddelanden i ärendena",
+      thread: {
+        heading: "Brevväxlingen i ärendena, i tidsföljd",
         note:
-          "Allt myndigheten själv skrev i begäran A, B och C och i " +
-          "överklagandena, ordagrant: {messages} meddelanden på {rows} " +
-          "rader. Ett stående autosvar bärs av en rad och dess upprepningar " +
-          "listas under den. Varje rad säger själv vad den lämnar ute.",
-        none: "Inget meddelande från myndigheten finns i registret.",
+          "Allt som skrevs i begäran A, B och C och i överklagandena, " +
+          "ordagrant och i den ordning det skickades: {messages} meddelanden " +
+          "från myndigheten och {sent} brev från mig. Ett stående autosvar " +
+          "bärs av en rad och dess upprepningar listas under den. " +
+          "Myndighetens signaturblock återges inte, och inte heller " +
+          "adressen till en namngiven tjänsteman jag skrivit till; min egen " +
+          "signatur står kvar, eftersom mätningen vilar på vem som " +
+          "frågade. Varje rad säger själv vad den lämnar ute.",
+        none: "Inget meddelande i de här ärendena finns i registret.",
+        fromAuthority: "Från myndigheten",
+        fromMe: "Från mig",
+      },
+      letters: {
         subject: "Ämnesrad:",
         omitted: "Återges inte:",
         message: "Meddelande",
@@ -647,17 +655,6 @@ export const sv: Copy = {
         messagesWord: "meddelanden",
       },
       sent: {
-        heading: "Mina egna brev i samma ärenden",
-        note:
-          "Allt jag själv skrev till myndigheten i begäran A, B och C och i " +
-          "överklagandena, ordagrant: {letters} brev. Mottagaren står som " +
-          "funktionsbrevlåda eller namngiven tjänsteman och aldrig som " +
-          "adress, eftersom att jag skrev till en handläggare inte gör " +
-          "adressen min att publicera. Min egen signatur står kvar: " +
-          "mätningen vilar på vem som frågade. Den citerade historiken " +
-          "under mina svar är kapad, och varje rad säger själv vad den " +
-          "lämnar ute.",
-        none: "Inget brev från mig till myndigheten finns i registret.",
         missing:
           "Brevet går inte att återge ordagrant och gissas inte. Att det " +
           "gick framgår av källan, och raden står därför som en lucka:",
@@ -666,7 +663,6 @@ export const sv: Copy = {
         subject: "Ämnesrad:",
         omitted: "Återges inte:",
         message: "Meddelande",
-        lettersWord: "brev",
       },
       packet: {
         heading: "Underlaget myndigheten fick",

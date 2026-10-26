@@ -1,10 +1,4 @@
-import type {
-  Authority,
-  Letter,
-  RankingRow,
-  Reply,
-  Sent,
-} from "@/lib/sverige";
+import type { Authority, Letter, RankingRow, Reply, Sent } from "@/lib/sverige";
 
 /**
  * The Swedish result surfaces: the comparison table for one class, and one
@@ -52,10 +46,14 @@ export type BoardLabels = {
     contextLink: string;
   };
   packet: { heading: string; note: string; sent: string; read: string };
-  letters: {
+  thread: {
     heading: string;
     note: string;
     none: string;
+    fromAuthority: string;
+    fromMe: string;
+  };
+  letters: {
     subject: string;
     omitted: string;
     message: string;
@@ -64,16 +62,12 @@ export type BoardLabels = {
     messagesWord: string;
   };
   sent: {
-    heading: string;
-    note: string;
-    none: string;
     missing: string;
     request: string;
     to: string;
     subject: string;
     omitted: string;
     message: string;
-    lettersWord: string;
   };
 };
 
@@ -184,7 +178,105 @@ export function CourtBoard({
   );
 }
 
-/** The verbatim letters, rendered the same way wherever they appear. */
+/** One letter from an authority, verbatim. */
+function IncomingLetter({
+  letter,
+  labels,
+}: {
+  letter: Letter;
+  labels: BoardLabels;
+}) {
+  return (
+    <div className="space-y-1 text-xs">
+      <p className="text-ink-secondary">
+        <span className="font-semibold">{labels.thread.fromAuthority}</span>
+        {", "}
+        {letter.datum} {letter.klockslag}
+        {letter.roll ? `, ${labels.reply.from} ${letter.roll}` : ""}
+      </p>
+      <p className="text-ink-secondary">
+        {labels.letters.subject} {letter.amnesrad}
+      </p>
+      <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+        {letter.text}
+      </pre>
+      {letter.bilagor ? (
+        <p className="text-ink-secondary">
+          {labels.letters.attachments} {letter.bilagor}
+        </p>
+      ) : null}
+      {letter.utelamnat ? (
+        <p className="text-ink-secondary">
+          {labels.letters.omitted} {letter.utelamnat}
+        </p>
+      ) : null}
+      <p className="text-ink-secondary">
+        {labels.letters.message} {letter.meddelande}
+      </p>
+      {letter.forekomster && letter.forekomster.length > 0 ? (
+        <p className="text-ink-secondary">
+          {labels.letters.repeats}{" "}
+          {letter.forekomster
+            .map(
+              (again) =>
+                `${again.datum} ${again.klockslag} (${again.meddelande})`,
+            )
+            .join(", ")}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * One of my own letters, on the same terms as the authorities': the whole
+ * text, the message id that makes it checkable against the mailbox, and a
+ * line saying what the row leaves out. Two rows carry no letter, because no
+ * sent copy exists anywhere, and they say so instead of standing empty.
+ */
+function OutgoingLetter({
+  letter,
+  labels,
+}: {
+  letter: Sent;
+  labels: BoardLabels;
+}) {
+  return (
+    <div className="space-y-1 text-xs">
+      <p className="text-ink-secondary">
+        <span className="font-semibold">{labels.thread.fromMe}</span>
+        {", "}
+        {letter.datum} {letter.klockslag}, {letter.handelse},{" "}
+        {labels.sent.request} {letter.begaran}, {labels.sent.to}{" "}
+        {letter.mottagare}
+      </p>
+      <p className="text-ink-secondary">
+        {labels.sent.subject} {letter.amnesrad}
+      </p>
+      {letter.text === null ? (
+        <p className="max-w-2xl border border-border-soft p-2 text-ink-secondary">
+          {labels.sent.missing} {letter.kalla}
+        </p>
+      ) : (
+        <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
+          {letter.text}
+        </pre>
+      )}
+      {letter.utelamnat ? (
+        <p className="text-ink-secondary">
+          {labels.sent.omitted} {letter.utelamnat}
+        </p>
+      ) : null}
+      {letter.meddelande ? (
+        <p className="text-ink-secondary">
+          {labels.sent.message} {letter.meddelande}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/** A court's letters, which run in one direction only. */
 function LetterList({
   letters,
   labels,
@@ -195,88 +287,48 @@ function LetterList({
   return (
     <>
       {letters.map((letter) => (
-        <div key={letter.meddelande} className="space-y-1 text-xs">
-          <p className="text-ink-secondary">
-            {letter.datum} {letter.klockslag}
-            {letter.roll ? `, ${labels.reply.from} ${letter.roll}` : ""}
-          </p>
-          <p className="text-ink-secondary">
-            {labels.letters.subject} {letter.amnesrad}
-          </p>
-          <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
-            {letter.text}
-          </pre>
-          {letter.bilagor ? (
-            <p className="text-ink-secondary">
-              {labels.letters.attachments} {letter.bilagor}
-            </p>
-          ) : null}
-          {letter.utelamnat ? (
-            <p className="text-ink-secondary">
-              {labels.letters.omitted} {letter.utelamnat}
-            </p>
-          ) : null}
-          <p className="text-ink-secondary">
-            {labels.letters.message} {letter.meddelande}
-          </p>
-          {letter.forekomster && letter.forekomster.length > 0 ? (
-            <p className="text-ink-secondary">
-              {labels.letters.repeats}{" "}
-              {letter.forekomster
-                .map(
-                  (again) =>
-                    `${again.datum} ${again.klockslag} (${again.meddelande})`,
-                )
-                .join(", ")}
-            </p>
-          ) : null}
-        </div>
+        <IncomingLetter
+          key={letter.meddelande}
+          letter={letter}
+          labels={labels}
+        />
       ))}
     </>
   );
 }
 
 /**
- * My own letters, rendered on the same terms as the authorities': the whole
- * text, the message id that makes it checkable against the mailbox, and a
- * line saying what the row leaves out.
+ * The correspondence as it happened: both sides in one order, oldest first,
+ * so a reader can follow the exchange instead of reading one party's half and
+ * then the other's. A standing autoreply stays with its carrier, which is how
+ * the register holds it, and its repeats are listed under it.
  */
-function SentList({ sent, labels }: { sent: Sent[]; labels: BoardLabels }) {
+function Thread({
+  letters,
+  sent,
+  labels,
+}: {
+  letters: Letter[];
+  sent: Sent[];
+  labels: BoardLabels;
+}) {
+  const entries = [
+    ...letters.map((letter) => ({
+      at: `${letter.datum} ${letter.klockslag}`,
+      key: `in ${letter.meddelande}`,
+      node: <IncomingLetter letter={letter} labels={labels} />,
+    })),
+    ...sent.map((letter) => ({
+      at: `${letter.datum} ${letter.klockslag}`,
+      key: `ut ${letter.datum} ${letter.klockslag} ${letter.begaran}`,
+      node: <OutgoingLetter letter={letter} labels={labels} />,
+    })),
+  ].sort((first, second) => first.at.localeCompare(second.at));
+
   return (
     <>
-      {sent.map((letter) => (
-        <div
-          key={`${letter.datum} ${letter.klockslag} ${letter.begaran}`}
-          className="space-y-1 text-xs"
-        >
-          <p className="text-ink-secondary">
-            {letter.datum} {letter.klockslag}, {letter.handelse},{" "}
-            {labels.sent.request} {letter.begaran}, {labels.sent.to}{" "}
-            {letter.mottagare}
-          </p>
-          <p className="text-ink-secondary">
-            {labels.sent.subject} {letter.amnesrad}
-          </p>
-          {letter.text === null ? (
-            <p className="max-w-2xl border border-border-soft p-2 text-ink-secondary">
-              {labels.sent.missing} {letter.kalla}
-            </p>
-          ) : (
-            <pre className="overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
-              {letter.text}
-            </pre>
-          )}
-          {letter.utelamnat ? (
-            <p className="text-ink-secondary">
-              {labels.sent.omitted} {letter.utelamnat}
-            </p>
-          ) : null}
-          {letter.meddelande ? (
-            <p className="text-ink-secondary">
-              {labels.sent.message} {letter.meddelande}
-            </p>
-          ) : null}
-        </div>
+      {entries.map((entry) => (
+        <div key={entry.key}>{entry.node}</div>
       ))}
     </>
   );
@@ -339,9 +391,7 @@ export function AuthorityBoard({
       </summary>
       <div className="space-y-4 border-t border-border-soft p-3">
         {classes.length === 0 ? (
-          <p className="max-w-2xl text-sm text-ink-secondary">
-            {reason?.long}
-          </p>
+          <p className="max-w-2xl text-sm text-ink-secondary">{reason?.long}</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-xs">
@@ -448,34 +498,21 @@ export function AuthorityBoard({
         </div>
 
         <div className="space-y-3">
-          <h3 className="text-sm font-semibold">{labels.letters.heading}</h3>
-          {authority.brev.length === 0 ? (
-            <p className="text-sm text-ink-secondary">{labels.letters.none}</p>
+          <h3 className="text-sm font-semibold">{labels.thread.heading}</h3>
+          {authority.brev.length === 0 && authority.utgaende.length === 0 ? (
+            <p className="text-sm text-ink-secondary">{labels.thread.none}</p>
           ) : (
             <>
               <p className="max-w-2xl text-sm text-ink-secondary">
-                {labels.letters.note
+                {labels.thread.note
                   .replace("{messages}", String(messages))
-                  .replace("{rows}", String(authority.brev.length))}
+                  .replace("{sent}", String(authority.utgaende.length))}
               </p>
-              <LetterList letters={authority.brev} labels={labels} />
-            </>
-          )}
-        </div>
-
-        <div className="space-y-3">
-          <h3 className="text-sm font-semibold">{labels.sent.heading}</h3>
-          {authority.utgaende.length === 0 ? (
-            <p className="text-sm text-ink-secondary">{labels.sent.none}</p>
-          ) : (
-            <>
-              <p className="max-w-2xl text-sm text-ink-secondary">
-                {labels.sent.note.replace(
-                  "{letters}",
-                  String(authority.utgaende.length),
-                )}
-              </p>
-              <SentList sent={authority.utgaende} labels={labels} />
+              <Thread
+                letters={authority.brev}
+                sent={authority.utgaende}
+                labels={labels}
+              />
             </>
           )}
         </div>

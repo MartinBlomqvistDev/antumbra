@@ -219,10 +219,14 @@ export type Copy = {
         contextLink: string;
       };
       packet: { heading: string; note: string; sent: string; read: string };
-      letters: {
+      thread: {
         heading: string;
         note: string;
         none: string;
+        fromAuthority: string;
+        fromMe: string;
+      };
+      letters: {
         subject: string;
         omitted: string;
         message: string;
@@ -231,16 +235,12 @@ export type Copy = {
         messagesWord: string;
       };
       sent: {
-        heading: string;
-        note: string;
-        none: string;
         missing: string;
         request: string;
         to: string;
         subject: string;
         omitted: string;
         message: string;
-        lettersWord: string;
       };
     };
     domstolar: { heading: string; note: string };
