@@ -95,7 +95,7 @@ comparable across the 21 counties.
 
 | File | Rows | Grain |
 | --- | --- | --- |
-| `protokoll_logg.jsonl` | 613 | one row per event: date, clock time read from the system, channel, authority, request and note |
+| `protokoll_logg.jsonl` | 615 | one row per event: date, clock time read from the system, channel, authority, request and note |
 | `korrespondens.jsonl` | 198 | the authorities' own messages verbatim, 262 messages in all, each row saying in `utelamnat` what it leaves out |
 | `p12_avsant_manifest.jsonl` | 22 | the packets sent to each authority before publication, with sha256 per letter |
 | `leveranser_manifest.jsonl` | 692 | one row per received file: path, byte size, sha256 and when it was recorded |
