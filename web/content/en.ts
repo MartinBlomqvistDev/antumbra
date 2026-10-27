@@ -116,8 +116,9 @@ export const en: Copy = {
       "and every authority concerned received its own figures on 2 October " +
       "2026 with three weeks to reply. The authorities' replies stand " +
       "verbatim beside the figures on the Swedish page Handlingar, and a " +
-      "missing reply is written out as a missing reply. The refusal of " +
-      "request C by the Swedish Board of Agriculture is under appeal " +
+      "missing reply is written out as a missing reply. The refusal by the " +
+      "Swedish Board of Agriculture of the cross-tabulation in request C, " +
+      "notice status against deficiency, is under appeal " +
       "before the Administrative Court of Appeal in Jönköping, " +
       "registered on 10 September 2026 as case 3339-26 and not yet " +
       "decided.",
@@ -258,6 +259,75 @@ export const en: Copy = {
         "{unreadable} files have no text layer to read. Finding out which " +
         "applies would take a question to the authorities, and it is not " +
         "asked.",
+    },
+    register: {
+      heading:
+        "The Board of Agriculture's register: unannounced inspections and the share finding a deficiency",
+      note:
+        "Request C asked for counts from the animal welfare inspection " +
+        "register: inspections per county, year and species, split by " +
+        "unannounced against announced, by inspection type, and by whether a " +
+        "deficiency was found. The Board released the extract in two parts: " +
+        "a spreadsheet with inspection type and deficiency, and {reports} " +
+        "reports with the notice status per county, species and year, " +
+        "delivered on 21 August 2026 after first stating that the figure " +
+        "could not be produced per county. The cross between notice and " +
+        "deficiency was refused in a decision, on the ground that it would " +
+        "take processing beyond routine measures, and the refusal is under " +
+        "appeal.",
+      reading:
+        "The table carries two figures per county and year. The unannounced " +
+        "share is taken over all inspection types, because every report " +
+        "covers all of them. The deficiency share is taken over routine " +
+        "inspections, because five inspection types carry the outcome in " +
+        "their own name, such as complaint with deficiencies, and would let " +
+        "the mix of inspection types decide a county's deficiency share. " +
+        "The counts beside each share are its basis: inspections for the " +
+        "notice status, keeper rows for the deficiency.",
+      hypothesis:
+        "The hypothesis was written before any request went out: " +
+        "unannounced inspections find deficiencies more often than announced " +
+        "ones, and the unannounced share explains part of the spread between " +
+        "counties. Only the second half could be tested, as a rank " +
+        "correlation across counties, and only cattle has enough counties " +
+        "reaching the floor on both sides.",
+      outcome:
+        "In the clean measure, routine inspections, there is no support: " +
+        "2024 gives nothing and 2025 a positive association short of " +
+        "significance. The only significant association sits in the measure " +
+        "over all inspection types, where the mix of types can produce the " +
+        "pattern mechanically. The test does not separate a weak positive " +
+        "association from none.",
+      limits: [
+        "A row in the extract is one animal keeper at an inspection. An inspection with two keepers becomes two rows, and the file carries no identifier that would let them be collapsed. The deficiency share is a share over keeper rows.",
+        "The deficiency flag sits on the inspection. An inspection covering several species can carry a deficiency found in an animal other than the one the row is counted under.",
+        "The difference in deficiency share between unannounced and announced inspections within the same county cannot be computed, because the notice status was never crossed with the deficiency in the extract.",
+        "No intervals are shown here, because the rows are not independent inspections. Two counties with different shares are not to be read as separated just because the figures differ.",
+      ],
+      species: {
+        nötkreatur: "Cattle",
+        gris: "Pigs",
+        ">350 värphöns": "Laying hens, more than 350",
+        slaktkyckling: "Broilers",
+      },
+      categories: { rutin: "routine inspections", alla: "all inspection types" },
+      headers: {
+        county: "County",
+        unannounced: "Unannounced",
+        deficiency: "Deficiency, routine",
+        n: "n",
+      },
+      associations: {
+        heading: "The association across counties, as step 28 tested it",
+        headers: {
+          species: "Species",
+          year: "Year",
+          category: "Category",
+          counties: "Counties",
+          rho: "Spearman's rho",
+          p: "p, permutation",
+        },
+      },
     },
     notShown: {
       heading: "What this page does not show",

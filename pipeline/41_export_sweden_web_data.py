@@ -63,6 +63,12 @@ PUBLICATION_DAY = "2026-10-26"
 
 CLASSES = ("A", "B")
 
+# The register extract behind request C: cells per county, species, year and
+# control category out of step 28, and the associations the same step tested.
+HYPOTHESIS = ROOT / "data" / "oanmald_hypotes.jsonl"
+ASSOCIATIONS = ROOT / "data" / "oanmald_samband.jsonl"
+ANNOUNCED = ROOT / "data" / "foranmalda.jsonl"
+
 
 def load_step36() -> Any:
     """Import step 36, whose name starts with a digit, the way steps 33 and 38 do."""
@@ -74,6 +80,80 @@ def load_step36() -> Any:
     sys.modules["p12_packets"] = module
     spec.loader.exec_module(module)
     return module
+
+
+def load_step28() -> Any:
+    """Import step 28 for its county and species names, the same way as step 36."""
+    path = ROOT / "pipeline" / "28_unannounced_hypothesis.py"
+    spec = importlib.util.spec_from_file_location("unannounced", path)
+    if spec is None or spec.loader is None:  # pragma: no cover - import guard
+        raise SystemExit(f"kan inte importera {path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules["unannounced"] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def register_block(authorities: list[dict]) -> dict:
+    """The register extract as the page shows it, one flat cell per county.
+
+    A cell is one county, species and year, carrying the unannounced share
+    over all control types and the deficiency share over routine controls;
+    the associations step 28 tested ride along.
+
+    The announced split exists only over all control types, because every one
+    of the 336 reports says "Alla kontrolltypgrupper"; the deficiency share is
+    taken over routine controls because five complaint types carry the outcome
+    in their own name. The two halves of a cell therefore rest on different
+    denominators, and the page says so.
+    """
+    step28 = load_step28()
+    long_to_short = {long: short for short, long in step28.COUNTY.items()}
+    slug_by_name = {row["namn"]: row["slug"] for row in authorities}
+    by_key: dict[tuple[str, str, int], dict] = {}
+    for row in read(HYPOTHESIS):
+        short = long_to_short[row["myndighet"]]
+        key = (short, row["djurslag"], row["år"])
+        cell = by_key.setdefault(
+            key,
+            {
+                "slug": slug_by_name[short],
+                "namn": short,
+                "djurslag": row["djurslag"],
+                "ar": row["år"],
+                "aviserade": None,
+                "oaviserade": None,
+                "andel_oanmalda": None,
+                "rutin_rader": None,
+                "rutin_brist": None,
+                "rutin_andel": None,
+            },
+        )
+        if row["kategori"] == "alla":
+            cell["aviserade"] = row["aviserade"]
+            cell["oaviserade"] = row["oaviserade"]
+            cell["andel_oanmalda"] = row["andel_oanmalda"]
+        elif row["kategori"] == "rutin":
+            cell["rutin_rader"] = row["rader_brist"]
+            cell["rutin_brist"] = row["med_brist"]
+            cell["rutin_andel"] = row["andel_brist"]
+    return {
+        "rapporter": len(read(ANNOUNCED)),
+        "djurslag": ["nötkreatur", "gris", ">350 värphöns", "slaktkyckling"],
+        "ar": [2024, 2025],
+        "celler": [by_key[key] for key in sorted(by_key)],
+        "samband": [
+            {
+                "djurslag": row["djurslag"],
+                "ar": row["år"],
+                "kategori": row["kategori"],
+                "lan": row["lan"],
+                "rho": row["rho"],
+                "p": row["p"],
+            }
+            for row in read(ASSOCIATIONS)
+        ],
+    }
 
 
 def read(path: Path) -> list[dict]:
@@ -433,6 +513,7 @@ def build() -> dict:
             "filer": sum(row["filer"] for row in pairs),
         },
         "myndigheter": authorities,
+        "register": register_block(authorities),
     }
 
 

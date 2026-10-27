@@ -178,7 +178,8 @@ export const sv: Copy = {
       "oktober 2026 med tre veckors svarstid. Myndigheternas svar står " +
       "ordagrant vid sidan av siffrorna på sidan Handlingar, och uteblivet " +
       "svar skrivs ut som uteblivet svar. Jordbruksverkets avslag på " +
-      "begäran C är överklagat och prövas av Kammarrätten i Jönköping som " +
+      "korsningen i begäran C, avisering mot brist, är överklagat och " +
+      "prövas av Kammarrätten i Jönköping som " +
       "mål 3339-26, registrerat den 10 september 2026 och ännu inte " +
       "avgjort.",
     resultat: {
@@ -310,6 +311,72 @@ export const sv: Copy = {
         "är därmed ett golv, och {unreadable} filer saknar läsbart textlager. " +
         "Att ta reda på vilket som gäller kräver en fråga till myndigheterna, " +
         "och den ställs inte.",
+    },
+    register: {
+      heading:
+        "Jordbruksverkets register: oanmälda kontroller och andel med brist",
+      note:
+        "Begäran C gällde antalsuppgifter ur djurskyddskontrollregistret: " +
+        "kontroller per län, år och djurslag, fördelade på oanmälda och " +
+        "föranmälda, på kontrolltyp och på om en brist konstaterades. " +
+        "Jordbruksverket lämnade uttaget i två delar: en excelfil med " +
+        "kontrolltyp och brist, och {reports} rapporter med aviseringen per " +
+        "län, djurslag och år, levererade den 21 augusti 2026 efter beskedet " +
+        "att den uppgiften inte gick att få ut per län. Korsningen mellan " +
+        "avisering och brist avslogs i beslut, med skälet att den kräver " +
+        "bearbetning utöver rutinbetonade åtgärder, och avslaget är " +
+        "överklagat.",
+      reading:
+        "Tabellen bär två tal per län och år. Andelen oanmälda räknas över " +
+        "alla kontrolltyper, eftersom varje rapport avser alla " +
+        "kontrolltypgrupper. Andelen med brist räknas över rutinkontroller, " +
+        "eftersom fem kontrolltyper bär utfallet i sitt eget namn, till " +
+        "exempel klagomål med brister, och skulle låta kontrolltypsmixen " +
+        "avgöra länets bristandel. Talen bredvid är underlaget: kontroller för " +
+        "aviseringen, djurhållarrader för bristen.",
+      hypothesis:
+        "Hypotesen skrevs innan någon begäran gick: oanmälda kontroller ger " +
+        "oftare konstaterade brister än föranmälda, och andelen oanmälda " +
+        "förklarar en del av spridningen mellan länen. Bara den andra halvan " +
+        "gick att pröva, som ett rangsamband över länen, och bara för " +
+        "nötkreatur når tillräckligt många län golvet på båda måtten.",
+      outcome:
+        "I det rena måttet, rutinkontroller, finns inget stöd: 2024 ger " +
+        "ingenting och 2025 ett positivt samband som inte når signifikans. " +
+        "Det enda signifikanta sambandet ligger i måttet över alla " +
+        "kontrolltyper, där kontrolltypsmixen kan ge mönstret mekaniskt. " +
+        "Prövningen skiljer inte ett svagt positivt samband från inget " +
+        "samband.",
+      limits: [
+        "En rad i uttaget är en djurhållare vid en kontroll. En kontroll med två djurhållare blir två rader, och filen bär ingen identifierare som gör att de kan läggas ihop. Andelen med brist är en andel över djurhållarrader.",
+        "Bristflaggan sitter på kontrollen. En kontroll som rör flera djurslag kan bära en brist som gäller ett annat djur än det raden räknas på.",
+        "Skillnaden i bristandel mellan oanmälda och föranmälda kontroller inom samma län går inte att räkna, eftersom aviseringen aldrig korsades med bristen i uttaget.",
+        "Inga intervall redovisas här, eftersom raderna inte är oberoende kontroller. Två län med olika andel ska inte läsas som åtskilda bara för att talen skiljer sig.",
+      ],
+      species: {
+        nötkreatur: "Nötkreatur",
+        gris: "Gris",
+        ">350 värphöns": "Värphöns, fler än 350",
+        slaktkyckling: "Slaktkyckling",
+      },
+      categories: { rutin: "rutinkontroller", alla: "alla kontrolltyper" },
+      headers: {
+        county: "Län",
+        unannounced: "Oanmälda",
+        deficiency: "Med brist, rutin",
+        n: "n",
+      },
+      associations: {
+        heading: "Sambandet över länen, som steg 28 prövade det",
+        headers: {
+          species: "Djurslag",
+          year: "År",
+          category: "Kategori",
+          counties: "Län",
+          rho: "Spearmans rho",
+          p: "p, permutation",
+        },
+      },
     },
     notShown: {
       heading: "Vad sidan inte visar",
@@ -632,9 +699,11 @@ export const sv: Copy = {
             "Begäran C avser antalsuppgifter ur " +
             "djurskyddskontrollregistret och inga handlingar, så " +
             "myndigheten ingår inte i maskningsmätningen. Uttaget " +
-            "levererades utom dimensionen oanmäld mot föranmäld, och " +
-            "avslaget i den delen är överklagat och prövas av Kammarrätten " +
-            "i Jönköping som mål 3339-26.",
+            "levererades i två delar, den andra som 336 rapporter om " +
+            "aviseringen per län, djurslag och år; korsningen mellan " +
+            "avisering och brist avslogs, och avslaget är överklagat och " +
+            "prövas av Kammarrätten i Jönköping som mål 3339-26. Talen " +
+            "står på sidan Sverige.",
         },
       },
       merged:
@@ -876,6 +945,13 @@ export const sv: Copy = {
             beskrivning:
               "Aviserade och oaviserade kontroller per län, år och djurslag, " +
               "ur myndighetens eget uttag.",
+          },
+          {
+            path: "data/oanmald_samband.jsonl",
+            beskrivning:
+              "Sambandet över länen mellan andelen oanmälda kontroller och " +
+              "andelen med brist: Spearmans rho per djurslag, år och " +
+              "kontrollkategori, med p ur permutation.",
           },
           {
             path: "data/oanmald_hypotes.jsonl",

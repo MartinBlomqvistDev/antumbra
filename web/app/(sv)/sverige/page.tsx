@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/shell";
 import { ContrastChart } from "@/components/contrast-chart";
+import { AssociationTable, RegisterTables } from "@/components/register";
 import { ComparisonTable } from "@/components/sweden";
 import { sv } from "@/content/sv";
 import { swedenStats } from "@/lib/stats";
@@ -229,6 +230,44 @@ export default function Sverige() {
             count.format(sweden.bilagor.utan_lasbar_text),
           )}
         </p>
+      </section>
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          {copy.register.heading}
+        </h2>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.note.replace(
+            "{reports}",
+            count.format(sweden.register.rapporter),
+          )}
+        </p>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.reading}
+        </p>
+        <RegisterTables
+          cells={sweden.register.celler}
+          species={sweden.register.djurslag}
+          years={sweden.register.ar}
+          labels={copy.register}
+          locale={LOCALE}
+        />
+        <h3 className="pt-2 text-base font-semibold">
+          {copy.register.associations.heading}
+        </h3>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.hypothesis}
+        </p>
+        <AssociationTable
+          rows={sweden.register.samband}
+          labels={copy.register}
+          locale={LOCALE}
+        />
+        <p className="max-w-2xl text-sm">{copy.register.outcome}</p>
+        <ul className="max-w-2xl list-disc space-y-1 pl-5 text-sm text-ink-secondary">
+          {copy.register.limits.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </section>
       <section className="max-w-2xl space-y-3">
         <h2 className="text-2xl font-semibold tracking-tight">

@@ -3636,6 +3636,17 @@ omöjlig, och den måste strykas ur den publicerade texten i stället för att
 återges. Det är en brist i förregistreringen: den förutsatte att den korstabell
 som begärdes också skulle levereras.
 
+**Tillagt 2026-10-27: uttaget står på sidan Sverige.** Registeruttaget var insamlat,
+prövat och sedan inte visat någonstans: sajten bar maskningsmåttet medan
+andelen oanmälda och andelen med brist per län, djurslag och år låg i två
+datafiler. Sidan Sverige bär nu en tabell per djurslag med båda talen per län och
+år, aviseringen över alla kontrolltyper och bristen över rutinkontroller, med
+underlaget bredvid varje tal och utan intervall, eftersom raderna räknar
+djurhållare och ett intervall förutsätter oberoende kontroller. Sambandstalen i tabellen ovan
+skrevs tidigare bara till terminalen; steg 28 skriver dem nu till
+`data/oanmald_samband.jsonl`, och sidan läser dem därifrån. En invariant håller
+exporten mot båda filerna.
+
 ## Dom i Kammarrätten i Stockholm, mål 6901-26, verifierad 2026-10-26
 
 Kammarrätten i Stockholm, avdelning 03, meddelade dom den 23 oktober 2026 i mål

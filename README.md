@@ -106,10 +106,15 @@ protocol's narrowing, the copies were declined. Three counties ended there.
 They carry response time and fee data, and no redaction figures. The site
 names that reason on every panel where their figures are missing.
 
-**The register question was refused.** Request C asked the Board of Agriculture
-for the split between announced and unannounced inspections, which has never
-been published. It was refused, and the refusal is before the administrative
-court of appeal in Jönköping as case 3339-26.
+**The cross-tabulation in the register question was refused.** Request C asked
+the Board of Agriculture for inspections per county, year and species, split by
+notice status, by inspection type and by whether a deficiency was found. The
+split by notice status, which had never been published, was delivered as 336
+reports after the Board had first said it could not be produced per county. The
+cross between notice status and deficiency was refused as beyond routine
+measures, and that refusal is before the administrative court of appeal in
+Jönköping as case 3339-26. What was released is published on the site as a
+table per county, species and year, with the pre-registered test beside it.
 
 **Three pre-registered conditions fell, and the failures stand first.** The
 field half of the redaction measure cannot be computed over running prose, and
@@ -314,7 +319,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 253 tests carry guarantees beyond ordinary unit testing: the generated
+The 254 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false

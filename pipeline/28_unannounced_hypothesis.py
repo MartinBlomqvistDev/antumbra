@@ -61,6 +61,9 @@ ROOT = Path(__file__).resolve().parent.parent
 ANNOUNCED = ROOT / "data" / "foranmalda.jsonl"
 DEFICIENCY = ROOT / "data" / "bristandel.jsonl"
 OUT = ROOT / "data" / "oanmald_hypotes.jsonl"
+# The associations the step used to print and nothing kept: the site reads
+# them from here, so that no figure on a page is typed in by hand.
+ASSOCIATIONS = ROOT / "data" / "oanmald_samband.jsonl"
 
 PERMUTATIONS = 2000
 SEED = 20260821
@@ -206,6 +209,7 @@ def main() -> int:
         "respektive rader i båda måtten"
     )
     print(f"{'djurslag':16} {'år':>5} {'kategori':10} {'län':>4} {'rho':>7} {'p':>8}")
+    associations = []
     for species in ("nötkreatur", "gris", ">350 värphöns", "slaktkyckling"):
         for year in (2024, 2025):
             for category in ("rutin", "alla"):
@@ -228,6 +232,22 @@ def main() -> int:
                     f"{species:16} {year:>5} {category:10} {len(cells):>4} "
                     f"{rho:>7.3f} {p:>8.4f}"
                 )
+                associations.append(
+                    {
+                        "djurslag": species,
+                        "år": year,
+                        "kategori": category,
+                        "lan": len(cells),
+                        "minsta_underlag": MIN_ROWS,
+                        "rho": round(rho, 4),
+                        "p": round(p, 4),
+                        "permutationer": PERMUTATIONS,
+                    }
+                )
+    with ASSOCIATIONS.open("w", encoding="utf-8", newline="\n") as out:
+        for record in associations:
+            out.write(json.dumps(record, ensure_ascii=False) + "\n")
+    print(f"\n{len(associations)} samband -> {ASSOCIATIONS.name}")
     return 0
 
 

@@ -108,6 +108,33 @@ export type Copy = {
       finding: string;
       limit: string;
     };
+    register: {
+      heading: string;
+      note: string;
+      reading: string;
+      hypothesis: string;
+      outcome: string;
+      limits: string[];
+      species: Record<string, string>;
+      categories: Record<"rutin" | "alla", string>;
+      headers: {
+        county: string;
+        unannounced: string;
+        deficiency: string;
+        n: string;
+      };
+      associations: {
+        heading: string;
+        headers: {
+          species: string;
+          year: string;
+          category: string;
+          counties: string;
+          rho: string;
+          p: string;
+        };
+      };
+    };
     notShown: { heading: string; items: string[] };
     overview: {
       heading: string;

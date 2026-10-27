@@ -726,6 +726,53 @@ class TestNoPersonalDataIsCommitted:
         missing = sorted(key(row) for row in rows if key(row) not in published)
         assert not missing, f"{len(missing)} of my own letters are off the page"
 
+    def test_the_export_carries_the_whole_register_extract(self):
+        """Every cell step 28 wrote is on the page, and every association too.
+
+        The extract behind request C was collected, tested and then shown
+        nowhere: the site carried the redaction measure while the counts of
+        unannounced inspections and deficiencies per county sat in two data
+        files only. This holds the export to those files, so that the register
+        cannot fall off the page again without a test saying so.
+        """
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        cells = ROOT / "data" / "oanmald_hypotes.jsonl"
+        associations = ROOT / "data" / "oanmald_samband.jsonl"
+        if not export.exists():
+            return
+        data = json.loads(export.read_text("utf-8"))["register"]
+        rows = [
+            json.loads(line) for line in cells.read_text("utf-8").splitlines() if line
+        ]
+        expected = {(row["myndighet"], row["djurslag"], row["år"]) for row in rows}
+        published = {
+            (cell["namn"], cell["djurslag"], cell["ar"]) for cell in data["celler"]
+        }
+        assert len(published) == len(expected), "a cell is missing or doubled"
+        for row in rows:
+            cell = next(
+                c
+                for c in data["celler"]
+                if row["myndighet"].startswith(c["namn"])
+                and c["djurslag"] == row["djurslag"]
+                and c["ar"] == row["år"]
+            )
+            if row["kategori"] == "alla":
+                assert cell["oaviserade"] == row["oaviserade"], row
+            else:
+                assert cell["rutin_brist"] == row["med_brist"], row
+        tested = [
+            json.loads(line)
+            for line in associations.read_text("utf-8").splitlines()
+            if line
+        ]
+        shown = [
+            (a["djurslag"], a["ar"], a["kategori"], a["rho"]) for a in data["samband"]
+        ]
+        assert shown == [
+            (t["djurslag"], t["år"], t["kategori"], t["rho"]) for t in tested
+        ]
+
     def test_every_authority_in_the_export_has_a_reply_or_says_it_has_none(self):
         export = ROOT / "web" / "public" / "data" / "sverige.json"
         if not export.exists():

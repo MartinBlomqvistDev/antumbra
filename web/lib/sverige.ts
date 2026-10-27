@@ -124,8 +124,40 @@ export type Authority = {
   utgaende: Sent[];
 };
 
+export type RegisterCell = {
+  slug: string;
+  namn: string;
+  djurslag: string;
+  ar: number;
+  /** The announced split, over all control types. */
+  aviserade: number | null;
+  oaviserade: number | null;
+  andel_oanmalda: number | null;
+  /** The deficiency share, over routine controls and in keeper rows. */
+  rutin_rader: number | null;
+  rutin_brist: number | null;
+  rutin_andel: number | null;
+};
+
+export type RegisterAssociation = {
+  djurslag: string;
+  ar: number;
+  kategori: "rutin" | "alla";
+  lan: number;
+  rho: number;
+  p: number;
+};
+
 export type Sweden = {
   byggd: string;
+  /** The register extract behind request C, as the Board of Agriculture released it. */
+  register: {
+    rapporter: number;
+    djurslag: string[];
+    ar: number[];
+    celler: RegisterCell[];
+    samband: RegisterAssociation[];
+  };
   p12: {
     avsant: string;
     svar_senast: string;
