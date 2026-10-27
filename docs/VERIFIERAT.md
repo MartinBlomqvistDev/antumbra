@@ -425,15 +425,15 @@ Meddelandets id, så att varje rad går att kontrollera mot källan. Texten
 ordagrant. Vad som utelämnats och varför.
 
 **Registret är komplett mot förteckningen sedan den 9 oktober 2026.** Registret
-bär 262 av de 262 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
-198 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
+bär 264 av de 264 inkomna meddelanden förteckningen känner, alltså 0 kvar, på
+200 rader: ett stående autosvar bärs av en rad och dess upprepningar ligger som
 förekomster hos den. Talen står inte i prosan på förtroende: en invariant i
 `tests/` läser dem ur `data/korrespondens.jsonl` och
 `data/korrespondens_forteckning.jsonl` och faller om den här meningen inte
 stämmer med filerna.
 
-**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 109 av
-de 262 meddelandena har sitt råsvar sparat och sin sha256 i
+**Proveniensen är ojämn, och det redovisas i stället för att jämnas ut.** 111 av
+de 264 meddelandena har sitt råsvar sparat och sin sha256 i
 `data/korrespondens_manifest.jsonl`. De övriga skrevs för hand innan ADR-0024
 fattades och kan inte byggas om utan att hämtas igen. Manifestet säger därför
 vilka rader som har proveniens och vilka som inte har det.

@@ -158,6 +158,10 @@ THEIRS = frozenset(
         # appeal, which is the project's own move on its own clock and is
         # tracked with the other obligations rather than here.
         "dom i kammarrätten",
+        # The court's notice that the judgment counts as served on a stated
+        # day. Nothing is asked of us by the protocol; the appeal clock it
+        # starts is the project's own and sits with the other obligations.
+        "meddelande om förenklad delgivning",
         # The court registering an appeal and giving it a case number. The
         # sender is the kammarrätt where the county would be, but the event
         # belongs to

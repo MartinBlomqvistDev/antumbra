@@ -29,8 +29,9 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "korrespondens_utgaende.jsonl"
@@ -76,11 +77,13 @@ PERSONNUMMER = re.compile(
 def swedish_time(utc: str) -> tuple[str, str]:
     """The message header's UTC turned into Swedish time, as date and clock.
 
-    August to October 2026 is summer time throughout, so the offset is two
-    hours for every message in this collection. The register says so rather
-    than carrying a library that would be right for dates it never sees.
+    The first version added a constant two hours, since every letter so far
+    had gone in summer time; the clocks went back on 25 October 2026 and the
+    zone is the rule now, as in step 44.
     """
-    stamp = datetime.fromisoformat(utc.replace("Z", "+00:00")) + timedelta(hours=2)
+    stamp = datetime.fromisoformat(utc.replace("Z", "+00:00")).astimezone(
+        ZoneInfo("Europe/Stockholm")
+    )
     return stamp.strftime("%Y-%m-%d"), stamp.strftime("%H:%M:%S")
 
 

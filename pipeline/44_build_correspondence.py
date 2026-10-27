@@ -19,20 +19,20 @@ import argparse
 import hashlib
 import json
 import re
-from datetime import UTC, datetime, timedelta
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "korrespondens_raw"
 MANIFEST = ROOT / "data" / "korrespondens_manifest.jsonl"
 SIGNATURES = ROOT / "data" / "korrespondens_signaturer.jsonl"
 
-# The header time is UTC and the register is Swedish local time. August to
-# October 2026 is CEST throughout, so the offset is a constant two hours; a
-# message outside that window would need the rule rewritten, and the step says
-# so instead of guessing.
-SWEDISH_OFFSET = timedelta(hours=2)
-CEST = (datetime(2026, 3, 29, tzinfo=UTC), datetime(2026, 10, 25, tzinfo=UTC))
+# The header time is UTC and the register is Swedish local time. The first
+# rule was a constant two hours inside a summer-time window, with a refusal
+# outside it; the refusal fired on 27 October 2026, two days after the clocks
+# went back, on a court's notice of service. The zone itself is the rule now.
+SWEDEN = ZoneInfo("Europe/Stockholm")
 
 # A link target the mail client renders after the link text, and an address in
 # angle brackets. Both are dropped; the text that carried them stays.
@@ -186,11 +186,7 @@ NOT_A_NAME = (
 def swedish_time(stamp: str) -> tuple[str, str]:
     """The header's UTC stamp as a Swedish date and clock time."""
     utc = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
-    if not CEST[0] <= utc <= CEST[1]:
-        raise SystemExit(
-            f"{stamp} ligger utanfor CEST-fonstret; regeln maste skrivas om"
-        )
-    local = utc + SWEDISH_OFFSET
+    local = utc.astimezone(SWEDEN)
     return local.date().isoformat(), local.time().isoformat()
 
 
