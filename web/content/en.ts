@@ -7,6 +7,7 @@ export const en: Copy = {
     name: "Antumbra",
     tagline:
       "An evidence base on the equivalence of animal welfare supervision.",
+    repo: "https://github.com/MartinBlomqvistDev/antumbra",
     description:
       "A measurement of Swedish animal welfare supervision, with the " +
       "EU's audits of member state control systems as its baseline. " +
@@ -35,6 +36,12 @@ export const en: Copy = {
       "Source data: the authorities' own documents, obtained under the " +
       "Swedish principle of public access, and DG SANTE's published " +
       "audit reports.",
+    repo: { label: "Code repository", text: "github.com/MartinBlomqvistDev/antumbra" },
+    dataset: {
+      label: "Dataset",
+      text: "huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+      href: "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+    },
   },
   home: {
     title: "Antumbra",

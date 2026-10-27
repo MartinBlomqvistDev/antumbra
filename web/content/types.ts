@@ -15,11 +15,17 @@ export type Copy = {
     description: string;
     navLabel: string;
     cardAlt: string;
+    repo: string;
   };
   nav: { href: string; label: string }[];
   languageSwitch: { href: string; label: string };
   themeToggle: string;
-  footer: { privacy: string; source: string };
+  footer: {
+    privacy: string;
+    source: string;
+    repo: { label: string; text: string };
+    dataset: { label: string; text: string; href: string };
+  };
   home: {
     title: string;
     kicker: string;

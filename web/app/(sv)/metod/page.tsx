@@ -44,7 +44,14 @@ export default function Metod() {
         <p className="text-sm text-ink-secondary">{sv.metod.adr.note}</p>
         <ol className="space-y-1 text-sm">
           {adr.map((entry) => (
-            <li key={entry.id}>{entry.title}</li>
+            <li key={entry.id}>
+              <a
+                href={`${sv.site.repo}/blob/main/docs/adr/${entry.id}.md`}
+                rel="noopener"
+              >
+                {entry.title}
+              </a>
+            </li>
           ))}
         </ol>
       </section>

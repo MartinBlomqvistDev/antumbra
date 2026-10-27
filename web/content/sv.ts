@@ -69,6 +69,7 @@ export const sv: Copy = {
   site: {
     name: "Antumbra",
     tagline: "Ett kunskapsunderlag om djurskyddskontrollens likvärdighet.",
+    repo: "https://github.com/MartinBlomqvistDev/antumbra",
     description:
       "En mätning av den svenska djurskyddstillsynen, med EU:s " +
       "revisioner av medlemsstaternas kontrollsystem som " +
@@ -99,6 +100,12 @@ export const sv: Copy = {
       "Källdata: myndigheternas egna handlingar, begärda enligt " +
       "offentlighetsprincipen, och DG SANTE:s publicerade " +
       "revisionsrapporter.",
+    repo: { label: "Kodarkiv", text: "github.com/MartinBlomqvistDev/antumbra" },
+    dataset: {
+      label: "Dataset",
+      text: "huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+      href: "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+    },
   },
   home: {
     title: "Antumbra",

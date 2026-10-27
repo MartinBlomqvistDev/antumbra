@@ -64,6 +64,17 @@ export function Shell({ copy, children }: { copy: Copy; children: ReactNode }) {
           </p>
           <p>{copy.footer.privacy}</p>
           <p>{copy.footer.source}</p>
+          <p>
+            {copy.footer.repo.label}:{" "}
+            <a href={copy.site.repo} rel="noopener">
+              {copy.footer.repo.text}
+            </a>
+            {" · "}
+            {copy.footer.dataset.label}:{" "}
+            <a href={copy.footer.dataset.href} rel="noopener">
+              {copy.footer.dataset.text}
+            </a>
+          </p>
         </div>
       </footer>
     </>
