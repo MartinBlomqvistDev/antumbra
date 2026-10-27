@@ -13,6 +13,13 @@ export default function DataPage() {
     <div className="space-y-12">
       <PageIntro title={copy.title} lead={copy.lead} />
       <p className="max-w-2xl text-sm text-ink-secondary">{copy.note}</p>
+      <p className="max-w-2xl text-sm text-ink-secondary">
+        {copy.repo.before}{" "}
+        <a href={copy.repo.href} rel="noopener">
+          {copy.repo.label}
+        </a>
+        {copy.repo.after}
+      </p>
       {copy.groups.map((group) => (
         <section key={group.heading} className="space-y-3">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -46,7 +53,12 @@ export default function DataPage() {
                       className="border-b border-border-soft align-top"
                     >
                       <td className="py-1.5 pr-4">
-                        <code>{file.path.replace("data/", "")}</code>
+                        <a
+                          href={`${copy.repo.href}/blob/main/${file.path}`}
+                          rel="noopener"
+                        >
+                          <code>{file.path.replace("data/", "")}</code>
+                        </a>
                       </td>
                       <td className="py-1.5 pr-4 text-right tabular-nums">
                         {measured ? count.format(measured.rows) : ""}
@@ -72,6 +84,13 @@ export default function DataPage() {
           {copy.licence.heading}
         </h2>
         <p className="text-sm text-ink-secondary">{copy.licence.body}</p>
+        <p className="text-sm text-ink-secondary">
+          {copy.licence.dataset.before}{" "}
+          <a href={copy.licence.dataset.href} rel="noopener">
+            {copy.licence.dataset.label}
+          </a>
+          {copy.licence.dataset.after}
+        </p>
       </section>
     </div>
   );

@@ -264,6 +264,7 @@ export type Copy = {
   };
   data?: PageCopy & {
     note: string;
+    repo: { before: string; label: string; href: string; after: string };
     headers: { file: string; rows: string; bytes: string; description: string };
     missing: string;
     groups: {
@@ -271,6 +272,10 @@ export type Copy = {
       note: string;
       files: { path: string; beskrivning: string }[];
     }[];
-    licence: { heading: string; body: string };
+    licence: {
+      heading: string;
+      body: string;
+      dataset: { before: string; label: string; href: string; after: string };
+    };
   };
 };

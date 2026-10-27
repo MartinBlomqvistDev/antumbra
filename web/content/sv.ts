@@ -743,6 +743,12 @@ export const sv: Copy = {
       "och det som publiceras om dem är förteckningen med kontrollsumma per " +
       "fil. Namn på enskilda tjänstemän återges ingenstans; där en källa " +
       "namnger en person skrivs rollen i stället.",
+    repo: {
+      before: "Kodarkivet är",
+      label: "github.com/MartinBlomqvistDev/antumbra",
+      href: "https://github.com/MartinBlomqvistDev/antumbra",
+      after: ", och varje filnamn nedan länkar till filen där.",
+    },
     headers: {
       file: "Fil",
       rows: "Rader",
@@ -964,10 +970,13 @@ export const sv: Copy = {
         "myndighetshandlingar sprids inte vidare i någon form. Kommissionens " +
         "dokument är återanvändbara med attribution enligt beslut " +
         "2011/833/EU. Schemat för varje fil framgår av stegen i pipelinen, " +
-        "som är numrerade och körs i ordning. De svenska aggregaten ligger " +
-        "också som ett eget dataset på HuggingFace, " +
-        "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn, med " +
-        "schema per fil och de deklarerade luckorna utskrivna.",
+        "som är numrerade och körs i ordning.",
+      dataset: {
+        before: "De svenska aggregaten ligger också som ett eget dataset på HuggingFace,",
+        label: "huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+        href: "https://huggingface.co/datasets/MartinBlomqvist/djurskyddstillsyn",
+        after: ", med schema per fil och de deklarerade luckorna utskrivna.",
+      },
     },
   },
 };
