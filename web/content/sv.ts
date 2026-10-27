@@ -775,6 +775,15 @@ export const sv: Copy = {
               "funktionsbrevlåda och växel står kvar.",
           },
           {
+            path: "data/korrespondens_utgaende.jsonl",
+            beskrivning:
+              "Mina egna brev i samma ärenden, ordagrant, med meddelande-id " +
+              "ur brevlådan. Mottagaren står som funktionsbrevlåda eller " +
+              "namngiven tjänsteman och aldrig som adress; den citerade " +
+              "historiken och länkmålen är kapade, och min egen signatur " +
+              "står kvar. Två rader är redovisade luckor utan meddelande-id.",
+          },
+          {
             path: "data/p12_avsant_manifest.jsonl",
             beskrivning:
               "De 22 paket som skickades före publicering, med kontrollsumma " +

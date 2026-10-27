@@ -17,6 +17,8 @@ configs:
     data_files: protokoll_logg.jsonl
   - config_name: korrespondens
     data_files: korrespondens.jsonl
+  - config_name: korrespondens_utgaende
+    data_files: korrespondens_utgaende.jsonl
   - config_name: p12_avsant_manifest
     data_files: p12_avsant_manifest.jsonl
   - config_name: leveranser_manifest
@@ -65,7 +67,7 @@ configs:
 
 # Swedish animal welfare supervision, measured 2026
 
-Twenty-four files holding what 43 freedom-of-information requests to Sweden's
+Twenty-five files holding what 43 freedom-of-information requests to Sweden's
 21 county administrative boards and the Board of Agriculture produced, the
 measurement built from them, and the complete record of how every request was
 handled. The requests went out on 3 August 2026, worded identically, and were
@@ -95,8 +97,9 @@ comparable across the 21 counties.
 
 | File | Rows | Grain |
 | --- | --- | --- |
-| `protokoll_logg.jsonl` | 628 | one row per event: date, clock time read from the system, channel, authority, request and note |
+| `protokoll_logg.jsonl` | 629 | one row per event: date, clock time read from the system, channel, authority, request and note |
 | `korrespondens.jsonl` | 198 | the authorities' own messages verbatim, 262 messages in all, each row saying in `utelamnat` what it leaves out |
+| `korrespondens_utgaende.jsonl` | 176 | my own letters in the same cases, verbatim, with the message id; the recipient as a functional mailbox or a named official and never an address, and two rows declared as gaps |
 | `p12_avsant_manifest.jsonl` | 22 | the packets sent to each authority before publication, with sha256 per letter |
 | `leveranser_manifest.jsonl` | 698 | one row per received file: path, byte size, sha256 and when it was recorded |
 | `maskning.jsonl` | 343 | one row per measured document: pages, characters, bars, boxes, covered area and which method measured it |

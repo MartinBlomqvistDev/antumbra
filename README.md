@@ -125,8 +125,8 @@ none.
 
 Every number the project publishes carries its chain: aggregate to rows,
 rows to verbatim paragraphs, paragraphs to documents with checksums. The
-website under `web/` renders that chain as the interface, the retrieval
-service in `src/webapi.py` enforces it over HTTP, and the export step
+website under `web/` renders that chain as the interface, the HTTP service
+in `src/webapi.py` enforced it while it ran, and the export step
 refuses to write anything the cloud model and a local recomputation do not
 agree on.
 
@@ -365,7 +365,7 @@ its eighth application note, so nothing opened before the period had run.
 Four decisions were appealed to the administrative courts of appeal, listed
 with case numbers on the method page. The first was decided on 23 October 2026,
 and the ruling reached the project on 26 October: the Administrative Court of
-Appeal in Stockholm dismissed the appeal against Gotland's decision and found
+Appeal in Stockholm rejected the appeal against Gotland's decision and found
 no reason to depart from the county's own assessment. Three are undecided. A
 pending case does not postpone publication, and no authority is described as
 breaking the law: the Supreme Administrative Court has not ruled on the
