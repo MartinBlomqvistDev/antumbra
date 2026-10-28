@@ -3686,6 +3686,16 @@ sade fyra är rättade samma dag: `README.md`, metodsidans avsnitt om vad projek
 inte påstår i båda språklagren, och `data/beslut.jsonl`, där raden för mål
 6901-26 nu bär domens datum, utfall och de två citaten.
 
+**Tillägg 2026-10-28: domen överklagas inte.** Beslutet är Martins, fattat
+på rekommendation, och skälen står i sin helhet i loggraden samma dag med
+händelsen avstående från överklagande: kammarrättens skäl består av en
+mening utan ställningstagande till överklagandets grund, bestämmelsen är
+den som RÅ 2010 ref. 77 redan tillämpar på uppgifter om djurhållning, och
+P9 slutar vid kammarrätten. Det oavgjorda rättsläget i avsnitt 11 gäller
+klass B, och alla tre överklagade beslut i projektet gäller klass A.
+Åtagandet `hfd-6901-26` är stängt, och fristen 2026-11-16 lämnas att löpa
+ut.
+
 ## Hämtningen mätt och sökrutan borttagen, 2026-10-26
 
 Hämtningens kvalitet mättes mot 2 115 frågor byggda ur citatgrafen i

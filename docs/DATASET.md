@@ -99,7 +99,7 @@ comparable across the 21 counties.
 
 | File | Rows | Grain |
 | --- | --- | --- |
-| `protokoll_logg.jsonl` | 634 | one row per event: date, clock time read from the system, channel, authority, request and note |
+| `protokoll_logg.jsonl` | 635 | one row per event: date, clock time read from the system, channel, authority, request and note |
 | `korrespondens.jsonl` | 200 | the authorities' own messages verbatim, 264 messages in all, each row saying in `utelamnat` what it leaves out |
 | `korrespondens_utgaende.jsonl` | 176 | my own letters in the same cases, verbatim, with the message id; the recipient as a functional mailbox or a named official and never an address, and two rows declared as gaps |
 | `p12_avsant_manifest.jsonl` | 22 | the packets sent to each authority before publication, with sha256 per letter |
