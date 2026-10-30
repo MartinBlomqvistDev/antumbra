@@ -3647,6 +3647,57 @@ skrevs tidigare bara till terminalen; steg 28 skriver dem nu till
 `data/oanmald_samband.jsonl`, och sidan läser dem därifrån. En invariant håller
 exporten mot båda filerna.
 
+## Andelen oanmälda följer kontrollmixen, prövat 2026-10-30
+
+Läsningen är inte förregistrerad. Den gjordes efter publiceringen, när
+spridningen i andelen oanmälda skulle användas som ett fynd om länen, och den
+redovisas som utforskande. `pipeline/54_inspection_mix.py` skriver
+`data/kontrollmix.jsonl` och `data/kontrollmix_samband.jsonl`. Allt gäller
+nötkreatur, det enda djurslaget med tillräckligt underlag i alla län.
+
+| Jämförelse | År | Län | Spearman rho | p, tvåsidigt |
+| --- | --- | --- | --- | --- |
+| andel utanför rutin mot andel oanmälda | 2024 | 21 | 0,796 | 0,0005 |
+| andel utanför rutin mot andel oanmälda | 2025 | 21 | 0,865 | 0,0005 |
+| andel uppföljningar mot andel oanmälda | 2024 | 21 | 0,738 | 0,0005 |
+| andel uppföljningar mot andel oanmälda | 2025 | 21 | 0,826 | 0,0005 |
+| andel klagomål mot andel oanmälda | 2024 | 21 | 0,416 | 0,0645 |
+| andel klagomål mot andel oanmälda | 2025 | 21 | 0,390 | 0,0850 |
+| andel med brist, rutin, mot andel uppföljningar | 2024 | 20 | 0,299 | 0,2084 |
+| andel med brist, rutin, mot andel uppföljningar | 2025 | 19 | 0,488 | 0,0385 |
+
+Talet 0,0005 är det lägsta värde 2 000 permutationer kan ge. Steg 28 räknar en
+svans, eftersom riktningen var förregistrerad; här stod ingen riktning i förväg,
+så båda svansarna räknas.
+
+**Vad det gör med spridningen.** Varje rapport avser "Alla kontrolltypgrupper",
+så andelen oanmälda är räknad över rutinkontroller, klagomål och uppföljningar
+tillsammans. Den följer hur stor del av kontrollerna som låg utanför rutin och
+kan inte läsas som hur ofta ett län väljer att komma oanmält.
+
+**Vad det gör med hypotesprövningen ovan.** Sambandet i rutinmåttet jämför
+bristandelen i rutinkontroller med en andel oanmälda som mest mäter
+kontrollmixen. Prövningen säger därför lite om vad en oanmäld rutinkontroll
+hittar, utöver det som redan står under den.
+
+**Sambandet kan gå åt motsatt håll.** Mönstret kommer mer från uppföljningar än
+från klagomål, och uppföljningar följer på tidigare kontroller. Ett län som
+hittar fler brister kan behöva fler uppföljningar, och uppföljningar kan oftare
+vara oanmälda. De två åren ger olika besked, så det är en möjlighet som
+uppgifterna inte kan avgöra.
+
+**Andelen bland rutinkontroller går att ringa in.** Rutinandelen kommer ur
+excelfilen och andelen oanmälda ur rapporterna, och ingen korsning finns. Golvet
+antar att alla kontroller utanför rutin var oanmälda, taket att ingen av dem
+var det. Spannet är oftast brett och skiljer 11 av 210 länspar 2024 och 17 år
+2025. Det förutsätter att dubbletterna i excelfilen fördelar sig jämnt mellan
+kontrolltyperna. Rapporterna bär fältet Kontrolltypgrupp, och en leverans
+filtrerad på rutinkontroller skulle ersätta spannet med ett tal.
+
+**Mixen rör sig mellan åren.** I Skåne gick rutinraderna från 44 av 148 till 118
+av 166 mellan 2024 och 2025. Kategorierna är desamma båda åren, så förändringen
+ligger i uttaget, och orsaken framgår inte av det.
+
 ## Dom i Kammarrätten i Stockholm, mål 6901-26, verifierad 2026-10-26
 
 Kammarrätten i Stockholm, avdelning 03, meddelade dom den 23 oktober 2026 i mål

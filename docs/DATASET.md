@@ -51,6 +51,10 @@ configs:
     data_files: oanmald_hypotes.jsonl
   - config_name: oanmald_samband
     data_files: oanmald_samband.jsonl
+  - config_name: kontrollmix
+    data_files: kontrollmix.jsonl
+  - config_name: kontrollmix_samband
+    data_files: kontrollmix_samband.jsonl
   - config_name: atagande
     data_files: atagande.jsonl
   - config_name: villkor
@@ -69,7 +73,7 @@ configs:
 
 # Swedish animal welfare supervision, measured 2026
 
-Twenty-six files holding what 43 freedom-of-information requests to Sweden's
+Twenty-eight files holding what 43 freedom-of-information requests to Sweden's
 21 county administrative boards and the Board of Agriculture produced, the
 measurement built from them, and the complete record of how every request was
 handled. The requests went out on 3 August 2026, worded identically, and were
@@ -99,7 +103,7 @@ comparable across the 21 counties.
 
 | File | Rows | Grain |
 | --- | --- | --- |
-| `protokoll_logg.jsonl` | 635 | one row per event: date, clock time read from the system, channel, authority, request and note |
+| `protokoll_logg.jsonl` | 637 | one row per event: date, clock time read from the system, channel, authority, request and note |
 | `korrespondens.jsonl` | 200 | the authorities' own messages verbatim, 264 messages in all, each row saying in `utelamnat` what it leaves out |
 | `korrespondens_utgaende.jsonl` | 176 | my own letters in the same cases, verbatim, with the message id; the recipient as a functional mailbox or a named official and never an address, and two rows declared as gaps |
 | `p12_avsant_manifest.jsonl` | 22 | the packets sent to each authority before publication, with sha256 per letter |
@@ -118,6 +122,8 @@ comparable across the 21 counties.
 | `foranmalda.jsonl` | 336 | announced against unannounced inspections per county and year |
 | `oanmald_hypotes.jsonl` | 259 | the pre-registered hypothesis on unannounced inspections, with its outcome |
 | `oanmald_samband.jsonl` | 4 | the rank correlation across counties between the unannounced share and the deficiency share, per species, year and control category, with its permutation p |
+| `kontrollmix.jsonl` | 42 | exploratory: cattle per county and year, the mix of inspection types beside the notice status, with a range for the unannounced share among routine inspections |
+| `kontrollmix_samband.jsonl` | 8 | exploratory: rank correlations across counties between the mix, the notice status and the deficiency share, with a two-sided permutation p |
 | `atagande.jsonl` | 17 | every open commitment the project made to itself, with the date it closed |
 | `villkor.jsonl` | 2 359 | one row per permit condition, verbatim, under the heading the decision itself wrote |
 | `villkor_baseline.jsonl` | 2 359 | the same conditions as hashes, for the test of whether permit conditions are standard text |

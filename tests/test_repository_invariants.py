@@ -726,6 +726,38 @@ class TestNoPersonalDataIsCommitted:
         missing = sorted(key(row) for row in rows if key(row) not in published)
         assert not missing, f"{len(missing)} of my own letters are off the page"
 
+    def test_the_export_carries_the_inspection_mix(self):
+        """The chart and its table show what step 54 wrote, and every range holds.
+
+        The unannounced share is a reading of the mix of inspections as much
+        as of anything a county chose, so the page must keep the mix beside
+        it. A range for routine inspections that ran backwards, or left the
+        unit interval, would be a figure no margin can produce.
+        """
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        mix = ROOT / "data" / "kontrollmix.jsonl"
+        tested = ROOT / "data" / "kontrollmix_samband.jsonl"
+        if not export.exists():
+            return
+        data = json.loads(export.read_text("utf-8"))["register"]["mix"]
+        rows = [
+            json.loads(line) for line in mix.read_text("utf-8").splitlines() if line
+        ]
+        assert len(data["lan"]) == len(rows) == 42, "21 counties over two years"
+        for row in rows:
+            match = next(
+                c
+                for c in data["lan"]
+                if row["myndighet"].startswith(c["namn"]) and c["ar"] == row["ar"]
+            )
+            assert match["oaviserade"] == row["oaviserade"], row
+            assert match["rutin_rader"] == row["rutin_rader"], row
+            low = row["oanmalda_bland_rutin_min"]
+            high = row["oanmalda_bland_rutin_max"]
+            assert 0 <= low <= high <= 1, row
+        lines = tested.read_text("utf-8").splitlines()
+        assert len(data["samband"]) == len(lines) == 8
+
     def test_the_export_carries_the_whole_register_extract(self):
         """Every cell step 28 wrote is on the page, and every association too.
 

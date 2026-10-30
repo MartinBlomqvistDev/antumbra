@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/shell";
 import { ContrastChart } from "@/components/contrast-chart";
+import { MixAssociations, MixChart, MixTable } from "@/components/mix";
 import { AssociationTable, RegisterTables } from "@/components/register";
 import { ComparisonTable } from "@/components/sweden";
 import { en } from "@/content/en";
 import { swedenStats } from "@/lib/stats";
-import { readSweden } from "@/lib/sverige";
+import { mixBounds, mixSwing, readSweden } from "@/lib/sverige";
 
 const copy = en.sverige!;
 
@@ -235,6 +236,7 @@ export default function Sweden() {
         <h2 className="text-2xl font-semibold tracking-tight">
           {copy.register.heading}
         </h2>
+        <p className="max-w-2xl text-sm">{copy.register.lead}</p>
         <p className="max-w-2xl text-sm text-ink-secondary">
           {copy.register.note.replace(
             "{reports}",
@@ -244,6 +246,47 @@ export default function Sweden() {
         <p className="max-w-2xl text-sm text-ink-secondary">
           {copy.register.reading}
         </p>
+        <h3 className="pt-2 text-base font-semibold">
+          {copy.register.mix.heading}
+        </h3>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.mix.reading}
+        </p>
+        <MixChart
+          rows={sweden.register.mix.lan}
+          years={sweden.register.ar}
+          labels={copy.register.mix}
+          locale={LOCALE}
+        />
+        <p className="max-w-2xl text-sm">
+          {mixSwing(copy.register.mix.swing, sweden, LOCALE)}
+        </p>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {mixBounds(copy.register.mix.bounds, sweden)}
+        </p>
+        <MixTable
+          rows={sweden.register.mix.lan}
+          years={sweden.register.ar}
+          labels={copy.register.mix}
+          locale={LOCALE}
+        />
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.mix.direction}
+        </p>
+        <h3 className="pt-2 text-base font-semibold">
+          {copy.register.mix.associations.heading}
+        </h3>
+        <p className="max-w-2xl text-sm text-ink-secondary">
+          {copy.register.mix.associations.note}
+        </p>
+        <MixAssociations
+          rows={sweden.register.mix.samband}
+          labels={copy.register.mix}
+          locale={LOCALE}
+        />
+        <h3 className="pt-2 text-base font-semibold">
+          {copy.register.tablesHeading}
+        </h3>
         <RegisterTables
           cells={sweden.register.celler}
           species={sweden.register.djurslag}

@@ -114,7 +114,9 @@ export const en: Copy = {
     processNote:
       "The collection is closed. All 43 requests reached a final status, " +
       "and every authority concerned received its own figures on 2 October " +
-      "2026 with three weeks to reply. The authorities' replies stand " +
+      "2026 with three weeks to reply. The register table on the Sweden page " +
+      "was added after that, which the method page states. " +
+      "The authorities' replies stand " +
       "verbatim beside the figures on the Swedish page Handlingar, and a " +
       "missing reply is written out as a missing reply. The refusal by the " +
       "Swedish Board of Agriculture of the cross-tabulation in request C, " +
@@ -263,6 +265,12 @@ export const en: Copy = {
     register: {
       heading:
         "The Board of Agriculture's register: unannounced inspections and the share finding a deficiency",
+      tablesHeading: "All four species, per county and year",
+      lead:
+        "The share of unannounced cattle inspections differs widely between " +
+        "counties, and the difference tracks closely how many of a county's " +
+        "inspections fell outside routine. It should therefore not be read as " +
+        "how often a county chooses to arrive unannounced.",
       note:
         "Request C asked for counts from the animal welfare inspection " +
         "register: inspections per county, year and species, split by " +
@@ -282,8 +290,8 @@ export const en: Copy = {
         "inspections, because five inspection types carry the outcome in " +
         "their own name, such as complaint with deficiencies, and would let " +
         "the mix of inspection types decide a county's deficiency share. " +
-        "The counts beside each share are its basis: inspections for the " +
-        "notice status, keeper rows for the deficiency.",
+        "The counts beside each share are its basis: uses of the checklist " +
+        "for the notice status, keeper rows for the deficiency.",
       hypothesis:
         "The hypothesis was written before any request went out: " +
         "unannounced inspections find deficiencies more often than announced " +
@@ -297,13 +305,89 @@ export const en: Copy = {
         "significance. The only significant association sits in the measure " +
         "over all inspection types, where the mix of types can produce the " +
         "pattern mechanically. The test does not separate a weak positive " +
-        "association from none.",
+        "association from none. The unannounced share is also taken over all " +
+        "inspection types and tracks the mix, so the test mostly measures how " +
+        "many of a county's inspections fell outside routine. It therefore " +
+        "says little about what an unannounced routine inspection finds.",
       limits: [
         "A row in the extract is one animal keeper at an inspection. An inspection with two keepers becomes two rows, and the file carries no identifier that would let them be collapsed. The deficiency share is a share over keeper rows.",
         "The deficiency flag sits on the inspection. An inspection covering several species can carry a deficiency found in an animal other than the one the row is counted under.",
         "The difference in deficiency share between unannounced and announced inspections within the same county cannot be computed, because the notice status was never crossed with the deficiency in the extract.",
         "No intervals are shown here, because the rows are not independent inspections. Two counties with different shares are not to be read as separated just because the figures differ.",
+        "The figure in the reports is labelled Antal gånger checklista använd, the number of times a checklist was used. Whether that equals the number of inspections is not stated in the delivery, and the question has been put to the Board without an answer.",
+        "The mix is counted in keeper rows from the spreadsheet and the notice status from the reports. The range for routine inspections assumes the duplicated rows are spread evenly across inspection types, which cannot be checked here.",
       ],
+      mix: {
+        heading: "The unannounced share tracks the mix of inspections",
+        reading:
+          "Each dot is a county. The horizontal axis shows how many of the " +
+          "cattle inspections fell outside routine: complaints, follow-ups and " +
+          "other types. The vertical axis shows the unannounced share. A county " +
+          "on the dashed line has as many unannounced inspections as inspections " +
+          "outside routine. The mix comes from the spreadsheet " +
+          "and the notice status from the reports, two separate fields. This " +
+          "reading was not pre-registered: it was made on 30 October 2026, " +
+          "after publication, and is reported as exploratory.",
+        swing:
+          "The mix can change a great deal in a year. In Skåne the routine rows " +
+          "went from {routineFrom} to {routineTo} between 2024 and 2025, while " +
+          "the unannounced share fell from {shareFrom} to {shareTo}.",
+        bounds:
+          "The extract does not say how often routine inspections specifically " +
+          "were unannounced, because the reports do not split the notice status " +
+          "by inspection type. A range can still be calculated: the lowest " +
+          "figure applies if every inspection outside routine was unannounced, " +
+          "the highest if none of them was. The range is usually wide. It " +
+          "separates {parted2024} of {pairs} county pairs in 2024 and " +
+          "{parted2025} in 2025, and says nothing about the others.",
+        direction:
+          "The pattern comes more from follow-ups than from complaints, and " +
+          "follow-ups come after earlier inspections. The association may " +
+          "therefore run the opposite way to the hypothesis: a county finding " +
+          "more deficiencies may need more follow-ups, and follow-ups may more " +
+          "often be unannounced. The deficiency share and the follow-up share " +
+          "are linked with different strength in the two years, so this is a " +
+          "possibility the data cannot settle.",
+        axisX: "Share of inspections outside routine",
+        axisY: "Unannounced share",
+        line: "equal shares",
+        chartLabel:
+          "{year}: the unannounced share against the share of inspections " +
+          "outside routine, one dot per county. The dots follow the dashed " +
+          "line. Every figure is in the table under the chart.",
+        dotTitle: "{county}: {outside} outside routine, {unannounced} unannounced",
+        summary: "The figures per county, cattle",
+        headers: {
+          county: "County",
+          routine: "Routine",
+          unannounced: "Unannounced",
+          range: "Unannounced among routine",
+          n: "n",
+        },
+        rangeFormat: "{low} to {high}%",
+        associations: {
+          heading: "The associations across counties, cattle",
+          note:
+            "Spearman's rho measures whether the counties stand in the same " +
+            "order on two lists: 1 means the same order and 0 no link. The " +
+            "figure p shows how easily chance gives an association this strong, " +
+            "in either direction. The lowest value 2,000 permutations can give " +
+            "is 0.0005.",
+          headers: {
+            measure: "Comparison",
+            year: "Year",
+            counties: "Counties",
+            rho: "Spearman's rho",
+            p: "p, permutation",
+          },
+          measures: {
+            ej_rutin: "Share outside routine against unannounced share",
+            klagomal: "Share of complaints against unannounced share",
+            uppfoljning: "Share of follow-ups against unannounced share",
+            brist_uppfoljning: "Deficiency share, routine, against share of follow-ups",
+          },
+        },
+      },
       species: {
         nötkreatur: "Cattle",
         gris: "Pigs",
@@ -533,6 +617,20 @@ export const en: Copy = {
             "very test, so it is struck rather than reproduced. The half " +
             "that could be tested does not separate a weak positive " +
             "correlation from none.",
+        },
+        {
+          title: "The register table was not in the packets",
+          body:
+            "The extract from the Board of Agriculture's register was put on " +
+            "the Sweden page on 27 October 2026, the day after publication, and " +
+            "the reading of the inspection mix followed on 30 October. The data " +
+            "files were public from the first day. The packets of 2 October said " +
+            "they carried what would be published about each authority. The " +
+            "counties' rows from the register were not among it, so the counties " +
+            "have not received them with time to reply. The figures come from " +
+            "the Board's own extract, the table carries no assessment of any " +
+            "county, and the decision is logged. If a county writes, its reply " +
+            "is published in full.",
         },
       ],
     },

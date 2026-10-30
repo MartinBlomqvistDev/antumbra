@@ -34,6 +34,7 @@ import math
 import sys
 from collections import defaultdict
 from datetime import date
+from itertools import combinations
 from pathlib import Path
 from statistics import median
 from typing import Any
@@ -68,6 +69,8 @@ CLASSES = ("A", "B")
 HYPOTHESIS = ROOT / "data" / "oanmald_hypotes.jsonl"
 ASSOCIATIONS = ROOT / "data" / "oanmald_samband.jsonl"
 ANNOUNCED = ROOT / "data" / "foranmalda.jsonl"
+MIX = ROOT / "data" / "kontrollmix.jsonl"
+MIX_ASSOCIATIONS = ROOT / "data" / "kontrollmix_samband.jsonl"
 
 
 def load_step36() -> Any:
@@ -80,6 +83,33 @@ def load_step36() -> Any:
     sys.modules["p12_packets"] = module
     spec.loader.exec_module(module)
     return module
+
+
+def mix_block(authorities: list[dict]) -> dict:
+    """The inspection mix from step 54, with how many county pairs its ranges part.
+
+    A pair is parted when the two ranges for the unannounced share among
+    routine inspections do not overlap; every other pair is one the bounds
+    say nothing about.
+    """
+    step28 = load_step28()
+    long_to_short = {long: short for short, long in step28.COUNTY.items()}
+    slug_by_name = {row["namn"]: row["slug"] for row in authorities}
+    rows = []
+    for row in read(MIX):
+        short = long_to_short[row["myndighet"]]
+        rest = {key: value for key, value in row.items() if key != "myndighet"}
+        rows.append({"slug": slug_by_name[short], "namn": short, **rest})
+    pairs = []
+    for year in sorted({row["ar"] for row in rows}):
+        own = [row for row in rows if row["ar"] == year]
+        parted = sum(
+            first["oanmalda_bland_rutin_max"] < second["oanmalda_bland_rutin_min"]
+            or second["oanmalda_bland_rutin_max"] < first["oanmalda_bland_rutin_min"]
+            for first, second in combinations(own, 2)
+        )
+        pairs.append({"ar": year, "skilda": parted, "par": math.comb(len(own), 2)})
+    return {"lan": rows, "samband": read(MIX_ASSOCIATIONS), "par": pairs}
 
 
 def load_step28() -> Any:
@@ -142,6 +172,7 @@ def register_block(authorities: list[dict]) -> dict:
         "djurslag": ["nötkreatur", "gris", ">350 värphöns", "slaktkyckling"],
         "ar": [2024, 2025],
         "celler": [by_key[key] for key in sorted(by_key)],
+        "mix": mix_block(authorities),
         "samband": [
             {
                 "djurslag": row["djurslag"],

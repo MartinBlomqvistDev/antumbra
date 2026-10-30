@@ -148,6 +148,33 @@ export type RegisterAssociation = {
   p: number;
 };
 
+/** One county and year from step 54: exploratory, cattle only. */
+export type MixCounty = {
+  slug: string;
+  namn: string;
+  ar: number;
+  rader: number;
+  rutin_rader: number;
+  klagomal_rader: number;
+  uppfoljning_rader: number;
+  okategoriserad_rader: number;
+  andel_rutin: number;
+  aviserade: number;
+  oaviserade: number;
+  andel_oanmalda: number;
+  rutinkontroller_skattade: number;
+  oanmalda_bland_rutin_min: number;
+  oanmalda_bland_rutin_max: number;
+};
+
+export type MixAssociation = {
+  matt: string;
+  ar: number;
+  lan: number;
+  rho: number;
+  p: number;
+};
+
 export type Sweden = {
   byggd: string;
   /** The register extract behind request C, as the Board of Agriculture released it. */
@@ -157,6 +184,11 @@ export type Sweden = {
     ar: number[];
     celler: RegisterCell[];
     samband: RegisterAssociation[];
+    mix: {
+      lan: MixCounty[];
+      samband: MixAssociation[];
+      par: { ar: number; skilda: number; par: number }[];
+    };
   };
   p12: {
     avsant: string;
@@ -218,4 +250,30 @@ export type Sweden = {
 export function readSweden(): Sweden {
   const path = join(process.cwd(), "public", "data", "sverige.json");
   return JSON.parse(readFileSync(path, "utf-8")) as Sweden;
+}
+
+/** The Skåne sentence, with its four figures read from the data. */
+export function mixSwing(template: string, sweden: Sweden, locale: string): string {
+  const percent = new Intl.NumberFormat(locale, {
+    style: "percent",
+    maximumFractionDigits: 0,
+  });
+  const own = sweden.register.mix.lan.filter((row) => row.namn === "Skåne");
+  const [first, second] = [...own].sort((a, b) => a.ar - b.ar);
+  return template
+    .replace("{routineFrom}", String(first.rutin_rader))
+    .replace("{routineTo}", String(second.rutin_rader))
+    .replace("{shareFrom}", percent.format(first.andel_oanmalda))
+    .replace("{shareTo}", percent.format(second.andel_oanmalda));
+}
+
+/** The bounds paragraph, with how many county pairs the ranges part each year. */
+export function mixBounds(template: string, sweden: Sweden): string {
+  const pairs = sweden.register.mix.par;
+  const parted = (year: number) =>
+    String(pairs.find((row) => row.ar === year)?.skilda ?? 0);
+  return template
+    .replace("{parted2024}", parted(2024))
+    .replace("{parted2025}", parted(2025))
+    .replace("{pairs}", String(pairs[0]?.par ?? 0));
 }

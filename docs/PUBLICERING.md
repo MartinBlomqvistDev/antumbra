@@ -88,6 +88,29 @@ som ett påstående ändå.
 
 ---
 
+## 0c. Beslut 2026-10-30: registertabellen och paketen
+
+Registertabellen lades på sidan Sverige den 27 oktober, dagen efter
+publiceringen, utan det beslut mått för mått som avsnitt 0b kräver. Länens rader
+ur registret fanns inte i paketen den 2 oktober, och breven inleds med *"Det här
+är vad som kommer att publiceras om er myndighet"*. Datafilerna bakom tabellen
+låg publika från publiceringsdagen.
+
+**Beslut: tabellen står kvar, inga fler brev skickas, och bristen redovisas på
+metodsidan.** P12 gäller före publicering, så ett brev nu kan inte uppfylla den.
+Beslutet den 7 oktober att inga fler brev skickas gäller också här. Talen kommer
+ur Jordbruksverkets eget uttag, och breven sade att länens svar på
+nämnarfrågan jämförs med Jordbruksverkets uppgifter. Tabellen rangordnar inte
+och bär ingen bedömning. Hör ett län av sig publiceras svaret oavkortat.
+
+**Förkastat: 21 nya brev med tre veckors svarstid.** Det hade gett en fördröjd
+svarsrätt utan att ändra att tabellen redan var ute, och en ny våg att hantera.
+
+Spannen för oanmälda bland rutinkontroller räknas fram ur samma publika tal och
+tillför ingen ny uppgift om länet. De omfattas av samma beslut.
+
+---
+
 ## 1. Vad de avsända breven binder projektet till
 
 Breven är skickade och kan inte ändras. Fem meningar i dem är utfästelser, och

@@ -1,3 +1,4 @@
+import type { MixLabels } from "@/components/mix";
 /**
  * The shape both languages must fill. The rule of the house: never edit one
  * language without the other, and never put copy in components.
@@ -110,11 +111,20 @@ export type Copy = {
     };
     register: {
       heading: string;
+      lead: string;
+      tablesHeading: string;
       note: string;
       reading: string;
       hypothesis: string;
       outcome: string;
       limits: string[];
+      mix: MixLabels & {
+        heading: string;
+        reading: string;
+        swing: string;
+        bounds: string;
+        direction: string;
+      };
       species: Record<string, string>;
       categories: Record<"rutin" | "alla", string>;
       headers: {

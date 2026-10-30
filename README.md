@@ -69,7 +69,9 @@ that removed the box are published beside them.
 ## What the measurement found
 
 Every authority received its own figures on 2 October 2026 and had three weeks
-to reply before anything was published. None disputed a figure.
+to reply before anything was published. None disputed a figure. The register
+table on the Sweden page was added after that and was not in those packets,
+which the method page states.
 
 **Inspection reports are redacted nearly three times as often as decisions.**
 109 of the 170 documents released as inspection reports with annexes carry
@@ -115,6 +117,15 @@ cross between notice status and deficiency was refused as beyond routine
 measures, and that refusal is before the administrative court of appeal in
 Jönköping as case 3339-26. What was released is published on the site as a
 table per county, species and year, with the pre-registered test beside it.
+
+**The unannounced share mostly tracks the mix of inspections.** Across the 21
+counties the share of unannounced cattle inspections follows the share of
+inspections outside routine, at a rank correlation of 0.796 in 2024 and 0.865
+in 2025. Every report covers all inspection types, so the share cannot be read
+as how often a county chooses to arrive unannounced, and the pre-registered
+test says little about what an unannounced routine inspection finds. The
+share among routine inspections can only be given as a range. This reading was
+not pre-registered and is reported as exploratory.
 
 **Three pre-registered conditions fell, and the failures stand first.** The
 field half of the redaction measure cannot be computed over running prose, and
@@ -267,6 +278,7 @@ python pipeline/25_ocr_permits.py          # Swedish OCR over the scanned permit
 python pipeline/26_hidden_text.py          # text covered by something that is not black
 python pipeline/27_parse_announced.py      # announced or not, per county and year
 python pipeline/28_unannounced_hypothesis.py  # the pre-registered hypothesis
+python pipeline/54_inspection_mix.py       # the mix behind the unannounced share
 python pipeline/29_check_grounds.py        # is the register of cited grounds closed?
 python pipeline/30_draw_species_sample.py  # the blind sample the species rule is checked against
 python pipeline/31_permit_decision_types.py   # what the publisher calls each permit decision
@@ -319,7 +331,7 @@ ruff check . && ruff format --check .
 pytest
 ```
 
-The 254 tests carry guarantees beyond ordinary unit testing: the generated
+The 255 tests carry guarantees beyond ordinary unit testing: the generated
 schema module must match its design document, the figures in the
 documentation must hold against the data files, no personal data may exist
 in the repository, the retrieval layer must refuse paraphrases, false

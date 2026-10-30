@@ -175,7 +175,9 @@ export const sv: Copy = {
     processNote:
       "Insamlingen är stängd. Samtliga 43 begäranden har nått ett " +
       "slutstatus, och varje berörd myndighet fick sina egna tal den 2 " +
-      "oktober 2026 med tre veckors svarstid. Myndigheternas svar står " +
+      "oktober 2026 med tre veckors svarstid. Registertabellen på sidan " +
+      "Sverige tillkom efter det, och metodsidan redovisar det. " +
+      "Myndigheternas svar står " +
       "ordagrant vid sidan av siffrorna på sidan Handlingar, och uteblivet " +
       "svar skrivs ut som uteblivet svar. Jordbruksverkets avslag på " +
       "korsningen i begäran C, avisering mot brist, är överklagat och " +
@@ -315,6 +317,12 @@ export const sv: Copy = {
     register: {
       heading:
         "Jordbruksverkets register: oanmälda kontroller och andel med brist",
+      tablesHeading: "Alla fyra djurslag, per län och år",
+      lead:
+        "Andelen oanmälda kontroller av nötkreatur skiljer stort mellan länen, " +
+        "och skillnaden följer tätt hur stor del av länets kontroller som låg " +
+        "utanför rutin. Den ska därför inte läsas som hur ofta länet väljer " +
+        "att komma oanmält.",
       note:
         "Begäran C gällde antalsuppgifter ur djurskyddskontrollregistret: " +
         "kontroller per län, år och djurslag, fördelade på oanmälda och " +
@@ -332,8 +340,8 @@ export const sv: Copy = {
         "kontrolltypgrupper. Andelen med brist räknas över rutinkontroller, " +
         "eftersom fem kontrolltyper bär utfallet i sitt eget namn, till " +
         "exempel klagomål med brister, och skulle låta kontrolltypsmixen " +
-        "avgöra länets bristandel. Talen bredvid är underlaget: kontroller för " +
-        "aviseringen, djurhållarrader för bristen.",
+        "avgöra länets bristandel. Talen bredvid är underlaget: användningar " +
+        "av checklistan för aviseringen, djurhållarrader för bristen.",
       hypothesis:
         "Hypotesen skrevs innan någon begäran gick: oanmälda kontroller ger " +
         "oftare konstaterade brister än föranmälda, och andelen oanmälda " +
@@ -346,13 +354,87 @@ export const sv: Copy = {
         "Det enda signifikanta sambandet ligger i måttet över alla " +
         "kontrolltyper, där kontrolltypsmixen kan ge mönstret mekaniskt. " +
         "Prövningen skiljer inte ett svagt positivt samband från inget " +
-        "samband.",
+        "samband. Andelen oanmälda är dessutom räknad över alla kontrolltyper " +
+        "och följer kontrollmixen, så prövningen mäter i praktiken mest hur " +
+        "stor del av länets kontroller som låg utanför rutin. Den säger därför " +
+        "lite om vad en oanmäld rutinkontroll hittar.",
       limits: [
         "En rad i uttaget är en djurhållare vid en kontroll. En kontroll med två djurhållare blir två rader, och filen bär ingen identifierare som gör att de kan läggas ihop. Andelen med brist är en andel över djurhållarrader.",
         "Bristflaggan sitter på kontrollen. En kontroll som rör flera djurslag kan bära en brist som gäller ett annat djur än det raden räknas på.",
         "Skillnaden i bristandel mellan oanmälda och föranmälda kontroller inom samma län går inte att räkna, eftersom aviseringen aldrig korsades med bristen i uttaget.",
         "Inga intervall redovisas här, eftersom raderna inte är oberoende kontroller. Två län med olika andel ska inte läsas som åtskilda bara för att talen skiljer sig.",
+        "Rapporternas tal heter i filen Antal gånger checklista använd. Om det är samma sak som antalet kontroller står inte i leveransen, och frågan är ställd till myndigheten utan att något besked kommit.",
+        "Kontrollmixen räknas på djurhållarrader ur excelfilen och aviseringen på rapporterna. Spannet för rutinkontroller förutsätter att dubbletterna fördelar sig jämnt mellan kontrolltyperna, och det går inte att kontrollera här.",
       ],
+      mix: {
+        heading: "Andelen oanmälda följer kontrollmixen",
+        reading:
+          "Varje punkt är ett län. Den vågräta axeln visar hur stor del av " +
+          "nötkreaturskontrollerna som låg utanför rutin, alltså klagomål, " +
+          "uppföljningar och övriga typer. Den lodräta visar andelen oanmälda. " +
+          "Ett län på den streckade linjen har lika många oanmälda kontroller " +
+          "som kontroller utanför rutin. Mixen kommer ur excelfilen och " +
+          "aviseringen ur rapporterna, två skilda fält. Läsningen var inte " +
+          "förregistrerad: den gjordes den 30 oktober 2026, efter " +
+          "publiceringen, och redovisas som utforskande.",
+        swing:
+          "Mixen kan ändras mycket på ett år. I Skåne gick rutinraderna från " +
+          "{routineFrom} till {routineTo} mellan 2024 och 2025, medan andelen " +
+          "oanmälda föll från {shareFrom} till {shareTo}.",
+        bounds:
+          "Uttaget säger inte hur ofta just rutinkontroller var oanmälda, " +
+          "eftersom rapporterna inte delar aviseringen på kontrolltyp. Ett " +
+          "spann går ändå att räkna: det lägsta talet gäller om alla kontroller " +
+          "utanför rutin var oanmälda, det högsta om ingen av dem var det. " +
+          "Spannet är oftast brett. Det skiljer {parted2024} av {pairs} länspar " +
+          "2024 och {parted2025} år 2025, och om övriga par säger det ingenting.",
+        direction:
+          "Mönstret kommer mer från uppföljningar än från klagomål, och " +
+          "uppföljningar följer på tidigare kontroller. Sambandet kan därför " +
+          "gå åt motsatt håll mot hypotesen: ett län som hittar fler brister " +
+          "kan behöva fler uppföljningar, och uppföljningar kan oftare vara " +
+          "oanmälda. Bristandelen och uppföljningsandelen hänger ihop olika " +
+          "starkt de två åren, så förklaringen är en möjlighet som uppgifterna " +
+          "inte kan avgöra.",
+        axisX: "Andel kontroller utanför rutin",
+        axisY: "Andel oanmälda",
+        line: "lika andelar",
+        chartLabel:
+          "{year}: andelen oanmälda mot andelen kontroller utanför rutin, ett " +
+          "län per punkt. Punkterna följer den streckade linjen. Alla tal står " +
+          "i tabellen under diagrammet.",
+        dotTitle: "{county}: {outside} utanför rutin, {unannounced} oanmälda",
+        summary: "Talen per län, nötkreatur",
+        headers: {
+          county: "Län",
+          routine: "Rutin",
+          unannounced: "Oanmälda",
+          range: "Oanmälda bland rutin",
+          n: "n",
+        },
+        rangeFormat: "{low} till {high} %",
+        associations: {
+          heading: "Sambanden över länen, nötkreatur",
+          note:
+            "Spearmans rho mäter om länen står i samma ordning på två listor: " +
+            "1 betyder samma ordning och 0 ingen koppling. Talet p visar hur " +
+            "lätt slumpen ger ett lika starkt samband, i endera riktningen. Det " +
+            "lägsta värde 2 000 permutationer kan ge är 0,0005.",
+          headers: {
+            measure: "Jämförelse",
+            year: "År",
+            counties: "Län",
+            rho: "Spearmans rho",
+            p: "p, permutation",
+          },
+          measures: {
+            ej_rutin: "Andel utanför rutin mot andel oanmälda",
+            klagomal: "Andel klagomål mot andel oanmälda",
+            uppfoljning: "Andel uppföljningar mot andel oanmälda",
+            brist_uppfoljning: "Andel med brist, rutin, mot andel uppföljningar",
+          },
+        },
+      },
       species: {
         nötkreatur: "Nötkreatur",
         gris: "Gris",
@@ -576,6 +658,19 @@ export const sv: Copy = {
             "utfallet av just den prövningen och är struken i stället för " +
             "återgiven. Den del som gick att pröva skiljer inte ett svagt " +
             "positivt samband från inget samband.",
+        },
+        {
+          title: "Registertabellen fanns inte i paketen",
+          body:
+            "Uttaget ur Jordbruksverkets register lades på sidan Sverige den " +
+            "27 oktober 2026, dagen efter publiceringen, och läsningen av " +
+            "kontrollmixen tillkom den 30 oktober. Datafilerna låg publika från " +
+            "första dagen. Paketen den 2 oktober sade att de bar det som skulle " +
+            "publiceras om varje myndighet. Länens rader ur registret fanns " +
+            "inte med, så länen har inte fått dem med svarstid. Talen kommer ur " +
+            "Jordbruksverkets eget uttag, tabellen bär ingen bedömning av något " +
+            "län, och beslutet är loggat. Hör ett län av sig publiceras svaret " +
+            "oavkortat.",
         },
       ],
     },
@@ -952,6 +1047,18 @@ export const sv: Copy = {
               "Sambandet över länen mellan andelen oanmälda kontroller och " +
               "andelen med brist: Spearmans rho per djurslag, år och " +
               "kontrollkategori, med p ur permutation.",
+          },
+          {
+            path: "data/kontrollmix.jsonl",
+            beskrivning:
+              "Kontrollmixen per län och år för nötkreatur, bredvid aviseringen, " +
+              "med spannet för oanmälda bland rutinkontroller. Utforskande.",
+          },
+          {
+            path: "data/kontrollmix_samband.jsonl",
+            beskrivning:
+              "Sambanden över länen mellan kontrollmix, avisering och brist, " +
+              "med tvåsidigt p ur permutation. Utforskande.",
           },
           {
             path: "data/oanmald_hypotes.jsonl",
