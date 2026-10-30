@@ -465,7 +465,7 @@ export const sv: Copy = {
       items: [
         "Handlingarna själva. De innehåller personuppgifter och publiceras aldrig; förteckningen med kontrollsumma per fil står på sidan Handlingar.",
         "Något påstående om att en myndighet brutit mot lag. Rättsläget är oavgjort och Högsta förvaltningsdomstolen har inte prövat frågan. Fyra beslut är överklagade, och det första avgjordes den 23 oktober 2026: Kammarrätten i Stockholm avslog överklagandet av Gotlands beslut och fann ingen anledning att göra någon annan bedömning än länsstyrelsens. Tre mål är oavgjorda.",
-        "Tre län som avstod från kopiorna sedan en avgift kvarstod efter avsmalningen. De bär svarstid och avgiftsuppgift men inga dokument i maskningsmätningen, och bortfallet räknas aldrig som ett utlämnande eller som ett avslag.",
+        "Tre län som avstod från kopiorna sedan en avgift kvarstod efter avsmalningen. De bär en avgiftsuppgift men inga dokument i maskningsmätningen, och bortfallet räknas aldrig som ett utlämnande eller som ett avslag.",
         "Gris som jämförelse. Sexton dokument har gris som dominerande djurslag, utspridda på tio län, så inget län har underlag på båda sidor.",
         "Vad ett dokument är när en myndighet buntar flera i en fil. Måttet räknar den levererade filen, och två av materialets 343 filer rymmer fem handlingar var. Den ena är Norrbottens leverans i klass B, som därför står på ett dokument där länet lämnade ut fem beslut; andelen maskade påverkas inte, eftersom alla fem är omaskade. Den andra ligger utanför klassernas tal.",
         "De gränser måttet har. De står i metoden, tillsammans med avvikelserna från förregistreringen och de fel som rättats under arbetet.",
@@ -764,7 +764,7 @@ export const sv: Copy = {
         "Raden visar vad myndigheten lämnade ut och hur mycket av det som " +
         "är maskat. Arton av de tjugoen länsstyrelserna levererade " +
         "handlingar in i mätningen; tre avstod sedan en avgift kvarstod " +
-        "efter avsmalningen, och de bär svarstid och avgiftsuppgift men " +
+        "efter avsmalningen, och de bär en avgiftsuppgift men " +
         "inga dokument. Talen är de som myndigheten själv fick före " +
         "publicering, och där ett svar har kommit in står det ordagrant " +
         "under dem. Därunder står hela brevväxlingen i ärendena i " +
@@ -784,7 +784,7 @@ export const sv: Copy = {
             "Myndigheten aviserade en avgift, och den kvarstod efter " +
             "protokollets avsmalning. Kopiorna avstods då enligt punkt P5, " +
             "och ett skriftligt beslut om avgiften begärdes. Begäran bär " +
-            "svarstid och avgiftsuppgift men inga dokument i " +
+            "en avgiftsuppgift men inga dokument i " +
             "maskningsmätningen, och bortfallet räknas aldrig som ett " +
             "utlämnande eller som ett avslag.",
         },
@@ -839,7 +839,9 @@ export const sv: Copy = {
           "Myndighetens signaturblock återges inte, och inte heller " +
           "adressen till en namngiven tjänsteman jag skrivit till; min egen " +
           "signatur står kvar, eftersom mätningen vilar på vem som " +
-          "frågade. Varje rad säger själv vad den lämnar ute.",
+          "frågade. Paketen och dagtalen i mina brev står i kodarkivet, " +
+          "eftersom ingen svarstid per län publiceras på webbplatsen. Varje " +
+          "rad säger själv vad den lämnar ute.",
         none: "Inget meddelande i de här ärendena finns i registret.",
         fromAuthority: "Från myndigheten",
         fromMe: "Från mig",
@@ -856,6 +858,8 @@ export const sv: Copy = {
         missing:
           "Brevet går inte att återge ordagrant och gissas inte. Att det " +
           "gick framgår av källan, och raden står därför som en lucka:",
+        packet: "Brevet står i kodarkivet, eftersom det bär tidsförlopp per län.",
+        days: "dagtal per län, som står i kodarkivet.",
         request: "begäran",
         to: "till",
         subject: "Ämnesrad:",
@@ -865,13 +869,14 @@ export const sv: Copy = {
       packet: {
         heading: "Underlaget myndigheten fick",
         note:
-          "Brevet som skickades står här i sin helhet, läst ur arkivet och " +
-          "kontrollerat mot kontrollsumman nedan, så sidan inte kan visa ett " +
-          "annat brev än det som gick. Koden som bygger breven är rättad två " +
-          "gånger sedan utskicket, så ett brev byggt i dag är inte brevet som " +
-          "gick; rättelserna står i händelseloggen.",
+          "Brevet som gick ligger i kodarkivet, och kontrollsumman nedan visar " +
+          "att det är samma brev. Det står inte på den här sidan, eftersom det " +
+          "bär tidsförlopp per län och ingen svarstid per län publiceras på " +
+          "webbplatsen. Koden som bygger breven är rättad två gånger sedan " +
+          "utskicket, så ett brev byggt i dag är inte brevet som gick. " +
+          "Rättelserna står i händelseloggen.",
         sent: "Avsänt",
-        read: "Läs brevet som det skickades",
+        read: "Läs brevet i kodarkivet",
       },
     },
     domstolar: {

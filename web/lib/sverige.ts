@@ -64,6 +64,10 @@ export type Sent = {
   text: string | null;
   utelamnat: string | null;
   storlek: number | null;
+  /** A packet: its text stays in the repository, at this path. */
+  kodarkiv?: string;
+  /** Day figures are masked here and stand in the outgoing register. */
+  dagtal_maskade?: boolean;
   kalla: string;
 };
 
@@ -109,8 +113,6 @@ export type Authority = {
     bytes: number;
     sha256: string;
     avsant: string;
-    /** The letter as it was sent, read from the archive and hash-checked. */
-    text: string;
   } | null;
   svar: Reply[];
   svar_saknas: boolean;

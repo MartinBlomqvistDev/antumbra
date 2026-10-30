@@ -46,6 +46,12 @@ jämför vad en myndighet skrev med vad jag skrev gör det på tavlan, och där 
 bara den ena sidan. Testet
 `test_the_export_carries_every_letter_i_sent` håller exporten mot registret.
 
+**Sidan visar inga dagtal per län.** Sedan den 30 oktober 2026 står paketens
+text i kodarkivet med länk från tavlan, och dagtal i övriga brev maskas av steg
+41. Registret i `data/` är oförändrat. Skälet står i `docs/PUBLICERING.md`
+avsnitt 0d, och `test_no_response_time_per_county_stands_on_the_website` håller
+det.
+
 **Källan är Sent och ingenting annat.** En fil som pipelinen byggde före
 avsändningen är inte brevet som gick: steg 36 är rättat två gånger sedan
 P12-utskicket, vilket är hela skälet till att `data/p12_avsant/` finns med

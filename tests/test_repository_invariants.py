@@ -726,6 +726,27 @@ class TestNoPersonalDataIsCommitted:
         missing = sorted(key(row) for row in rows if key(row) not in published)
         assert not missing, f"{len(missing)} of my own letters are off the page"
 
+    def test_no_response_time_per_county_stands_on_the_website(self):
+        """The promise to Norrbotten holds on every board.
+
+        On 22 October 2026 the county was told "Ingen svarstid per län
+        publiceras på webbplatsen". Four days later each packet went on the
+        page in full, timeline included, and the sweep before launch did not
+        read them. The log and the repository carry the figures, as the same
+        letter said they would; the boards do not.
+        """
+        export = ROOT / "web" / "public" / "data" / "sverige.json"
+        if not export.exists():
+            return
+        data = json.loads(export.read_text("utf-8"))
+        day = re.compile(r"\bdag \d{1,2}\b|Arbetsdag")
+        for authority in data["myndigheter"]:
+            packet = authority["paket"]
+            assert packet is None or "text" not in packet, authority["namn"]
+            for letter in authority["utgaende"] + authority["brev"]:
+                text = letter["text"] or ""
+                assert not day.search(text), (authority["namn"], letter["datum"])
+
     def test_the_export_carries_the_inspection_mix(self):
         """The chart and its table show what step 54 wrote, and every range holds.
 

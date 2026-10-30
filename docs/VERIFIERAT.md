@@ -1320,6 +1320,12 @@ myndighetens eget svar ordagrant. Svarstiderna finns i protokollloggen, som
 publiceras i sin helhet, med varje händelse och varje klockslag, inklusive
 projektets egna två avsmalningssvar och vilken brevlåda var och en gick till.
 
+**Tillägg 2026-10-30: meningen ovan var inte sann från den 26 till den 30
+oktober.** Paketen lades ut i sin helhet på sidan Handlingar på
+publiceringsdagen, och de bär ett tidsförlopp i arbetsdagar per län. Tre av
+projektets övriga brev bar också dagtal. Pakettexterna står nu i kodarkivet med en länk från
+sidan, dagtalen i breven är maskade på sidan, och en invariant håller det.
+
 ---
 
 ## Måttets enhet är den levererade filen, och två filer rymmer fler, mätt 2026-10-22

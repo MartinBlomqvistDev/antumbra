@@ -289,6 +289,8 @@ export type Copy = {
       };
       sent: {
         missing: string;
+        packet: string;
+        days: string;
         request: string;
         to: string;
         subject: string;

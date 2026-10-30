@@ -111,6 +111,25 @@ tillför ingen ny uppgift om länet. De omfattas av samma beslut.
 
 ---
 
+## 0d. Beslut 2026-10-30: ingen svarstid per län på webbplatsen
+
+Den 22 oktober skrev projektet till Länsstyrelsen i Norrbotten: *"Ingen svarstid
+per län publiceras på webbplatsen"*. Den 26 oktober lades paketen ut i sin
+helhet på sidan Handlingar, och de bär ett tidsförlopp i arbetsdagar per län.
+
+**Beslut: pakettexterna tas bort från webbplatsen och ligger kvar i kodarkivet,
+med kontrollsumma och länk på sidan.** Dagtalen i projektets övriga brev maskas
+på sidan. Korrespondensregistret, protokollloggen och datasetet är oförändrade,
+eftersom breven lovar att de publiceras i sin helhet och samma mening till
+Norrbotten säger att loggen publiceras. Löftet gällde webbplatsen, och dit
+sträcker sig åtgärden.
+
+**Förkastat: att låta texterna stå, eftersom paketen själva sade att de var det
+som skulle publiceras.** Det senare och mer precisa beskedet till
+en enskild myndighet väger tyngre. Ingen ny rad skickas till Norrbotten.
+
+---
+
 ## 1. Vad de avsända breven binder projektet till
 
 Breven är skickade och kan inte ändras. Fem meningar i dem är utfästelser, och

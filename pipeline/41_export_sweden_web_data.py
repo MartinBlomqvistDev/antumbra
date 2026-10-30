@@ -21,6 +21,11 @@ The third is the checksum of the letter the authority was actually sent, from
 packets went out, so the letters it writes today are not the letters that were
 sent; the sent ones are archived and both corrections are in the log.
 
+**No response time per county stands on the website.** Norrbotten was told so
+in writing on 22 October 2026. The packets carry a timeline in working days per
+county, so their text stays in the repository and the page links to it; day
+figures in my other letters are masked here and stand in the outgoing register.
+
 Writes ``web/public/data/sverige.json``, beside the DG SANTE export.
 """
 
@@ -31,6 +36,7 @@ import hashlib
 import importlib.util
 import json
 import math
+import re
 import sys
 from collections import defaultdict
 from datetime import date
@@ -57,6 +63,9 @@ OUT = ROOT / "web" / "public" / "data" / "sverige.json"
 # on 2 October 2026 and the letters name 23 October as the last day to reply.
 # Tillämpningsnot 8 puts the earliest publication the day after.
 P12_SENT = "2026-10-02"
+PACKET_EVENT = "P12-paket avsänt"
+DAY_FIGURE = re.compile(r"\bdag \d{1,2}\b")
+DAY_MASK = "[dagtal]"
 P12_DEADLINE = "2026-10-23"
 PUBLICATION_FLOOR = "2026-10-24"
 # The floor is the rule, the chosen day is the decision; see docs/PUBLICERING.md.
@@ -83,6 +92,22 @@ def load_step36() -> Any:
     sys.modules["p12_packets"] = module
     spec.loader.exec_module(module)
     return module
+
+
+def for_the_page(row: dict, sent: dict, slugs: dict) -> dict:
+    """One of my letters as the website shows it, with no day figure per county.
+
+    A packet leaves its text in the repository and carries the path instead.
+    Any other letter stays, with its day figures masked. The register itself
+    is untouched: the promise was about the website.
+    """
+    if row["handelse"] == PACKET_EVENT:
+        path = sent[slugs[row["myndighet"]]]["path"]
+        return {**row, "text": None, "kodarkiv": path}
+    text = row["text"] or ""
+    if DAY_FIGURE.search(text):
+        return {**row, "text": DAY_FIGURE.sub(DAY_MASK, text), "dagtal_maskade": True}
+    return row
 
 
 def mix_block(authorities: list[dict]) -> dict:
@@ -362,9 +387,10 @@ def build() -> dict:
     # The packet is the project's own letter, and it is the one every reply on
     # the board is a reply to. Its checksum alone put our side behind a hash
     # while the authorities' side stood in full, which is the asymmetry a
-    # reader of an openness measurement notices first. The text is read from
-    # the archived file and checked against the manifest's own hash, so the
-    # page cannot show a letter other than the one that was sent.
+    # reader of an openness measurement notices first. The archived file is
+    # checked against the manifest's own hash, so the page cannot point at a
+    # letter other than the one that was sent. Its text stays off the page:
+    # see for_the_page.
     sent = {}
     for row in read(SENT):
         text = (ROOT / row["path"]).read_bytes()
@@ -373,7 +399,7 @@ def build() -> dict:
             raise SystemExit(
                 f"{row['path']} hashar till {digest}, manifestet säger {row['sha256']}"
             )
-        sent[row["slug"]] = {**row, "text": text.decode("utf-8")}
+        sent[row["slug"]] = row
     log = read(LOG)
     # The P12 letters promise that the whole correspondence log is published,
     # and it was, as a file on the data page. An authority's own board showed
@@ -391,7 +417,7 @@ def build() -> dict:
     # docs/KORRESPONDENS.md states the rule; this puts it on the page.
     outgoing: dict[str, list[dict]] = defaultdict(list)
     for row in read(OUTGOING):
-        outgoing[row["myndighet"]].append(row)
+        outgoing[row["myndighet"]].append(for_the_page(row, sent, step36.SLUG))
 
     comparison = {klass: ranking_rows(step36, masking, klass) for klass in CLASSES}
     places = {

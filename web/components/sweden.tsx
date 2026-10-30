@@ -1,3 +1,4 @@
+import { sv } from "@/content/sv";
 import type { Authority, Letter, RankingRow, Reply, Sent } from "@/lib/sverige";
 
 /**
@@ -63,6 +64,8 @@ export type BoardLabels = {
   };
   sent: {
     missing: string;
+    packet: string;
+    days: string;
     request: string;
     to: string;
     subject: string;
@@ -253,7 +256,14 @@ function OutgoingLetter({
       <p className="text-ink-secondary">
         {labels.sent.subject} {letter.amnesrad}
       </p>
-      {letter.text === null ? (
+      {letter.kodarkiv ? (
+        <p className="max-w-2xl border border-border-soft p-2 text-ink-secondary">
+          {labels.sent.packet}{" "}
+          <a href={`${sv.site.repo}/blob/main/${letter.kodarkiv}`}>
+            {labels.packet.read}
+          </a>
+        </p>
+      ) : letter.text === null ? (
         <p className="max-w-2xl border border-border-soft p-2 text-ink-secondary">
           {labels.sent.missing} {letter.kalla}
         </p>
@@ -262,6 +272,11 @@ function OutgoingLetter({
           {letter.text}
         </pre>
       )}
+      {letter.dagtal_maskade ? (
+        <p className="text-ink-secondary">
+          {labels.sent.omitted} {labels.sent.days}
+        </p>
+      ) : null}
       {letter.utelamnat ? (
         <p className="text-ink-secondary">
           {labels.sent.omitted} {letter.utelamnat}
@@ -527,14 +542,11 @@ export function AuthorityBoard({
             <p>
               <code className="break-all">{authority.paket.sha256}</code>
             </p>
-            <details>
-              <summary className="cursor-pointer text-ink-secondary">
+            <p>
+              <a href={`${sv.site.repo}/blob/main/${authority.paket.path}`}>
                 {labels.packet.read}
-              </summary>
-              <pre className="mt-2 overflow-x-auto whitespace-pre-wrap border border-border-soft p-2 font-mono text-xs">
-                {authority.paket.text}
-              </pre>
-            </details>
+              </a>
+            </p>
           </div>
         ) : null}
       </div>
