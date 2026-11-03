@@ -81,6 +81,9 @@ läge; allt utom livesöket fungerar utan JavaScript; utskriftsstilmall,
 eftersom läsekretsen skriver ut; sökfrågor loggas inte, och det sägs på
 sidan.
 
+*Tillägg 2026-11-03:* sökrutan togs bort den 26 oktober 2026, och meningen om
+sökfrågor stod kvar i sidfoten till den 3 november. Den är struken på båda språken.
+
 ## Formen om, 2026-10-25: handlingen i stället för instrumentpanelen
 
 Den första formen var teknikens standardutseende: IBM Plex Sans, mörk

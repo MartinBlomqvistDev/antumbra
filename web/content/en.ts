@@ -31,7 +31,7 @@ export const en: Copy = {
   languageSwitch: { href: "/", label: "Svenska" },
   themeToggle: "Switch colour scheme",
   footer: {
-    privacy: "No cookies, no tracking. Search queries are not logged.",
+    privacy: "No cookies, no tracking.",
     source:
       "Source data: the authorities' own documents, obtained under the " +
       "Swedish principle of public access, and DG SANTE's published " +

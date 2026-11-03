@@ -95,7 +95,7 @@ export const sv: Copy = {
   languageSwitch: { href: "/en/", label: "English" },
   themeToggle: "Byt färgläge",
   footer: {
-    privacy: "Inga kakor, ingen spårning. Sökfrågor loggas inte.",
+    privacy: "Inga kakor, ingen spårning.",
     source:
       "Källdata: myndigheternas egna handlingar, begärda enligt " +
       "offentlighetsprincipen, och DG SANTE:s publicerade " +
